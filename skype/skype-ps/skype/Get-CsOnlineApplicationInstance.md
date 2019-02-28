@@ -11,7 +11,7 @@ ms.reviewer:
 # Get-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Get application instance for the tenant from AAD.
+Get application instance for the tenant from Azure Active Directory.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-ResultSize] <int>] [-T
 ```
 
 ## DESCRIPTION
-This cmdlet is used to get application instance for the tenant from AAD.
+This cmdlet is used to get application instance for the tenant.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ This cmdlet is used to get application instance for the tenant from AAD.
 Get-CsOnlineApplicationInstance -Identity appinstance01@contoso.com
 ```
 
-This example returns the metadata of application instance with UserPrincipalName "appinstance01@contoso.com".
+This example returns the application instance with identity "appinstance01@contoso.com".
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
@@ -40,15 +40,15 @@ This example returns the first 10 application instances.
 
 ### -------------------------- Example 3 --------------------------
 ```powershell
-Get-CsOnlineApplicationInstance -Tenant 00000000-0000-0000-0000-000000000000
+Get-CsOnlineApplicationInstance
 ```
 
-This example returns the metadata of application instance with TenantId "00000000-0000-0000-0000-000000000000".
+This example returns all the application instances of the tenant.
 
 ## PARAMETERS
 
 ### -Identity
-The URI of the application instance to retrieve. If this parameter is not provided, it'll retrieve all application instances in the tenant (bulk get).
+The URI or the object ID of the application instance to retrieve. If this parameter is not provided, it will retrieve all application instances in the tenant.
 
 ```yaml
 Type: System.String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-The GUID for the tenant.
+The Tenant ID.
 
 ```yaml
 Type: System.Guid

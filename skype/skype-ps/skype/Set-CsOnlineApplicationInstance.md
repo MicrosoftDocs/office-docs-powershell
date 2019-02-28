@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Updates an application instance in AAD. The update will be sync'ed into LyncAD or BVD after it's made in AAD.
+Updates an application instance in Azure Active Directory. The update will be sync'ed into LyncAD or BVD after it's made in Azure Active Directory.
 
 ## SYNTAX
 
@@ -21,14 +21,14 @@ Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <stri
 ```
 
 ## DESCRIPTION
-This cmdlet is used to update an application instance in AAD. The update will be sync'ed into LyncAD or BVD after it's made in AAD.
+This cmdlet is used to update an application instance in Azure Active Directory. The update will be sync'ed into LyncAD or BVD after it's made in Azure Active Directory.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber tel:+14250000000 -ApplicationId 00000000-0000-0000-0000-000000000000 -DisplayName "AppInstance01" -Tenant 00000000-0000-0000-0000-000000000001
+Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber tel:+14250000000 -ApplicationId d08bb60d-d198-4ee5-80d5-03e000aa4290 -DisplayName "AppInstance01" -Tenant c1951a6e-c6eb-43de-9eea-0112b79d6303
 ```
 
 This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName, and Tenant information for an existing application instance with Identity(UserPrincipalName) "appinstance01@contoso.com".
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnpremPhoneNumber
-Assign a hybrid (onprem) telephone number to the application instance.
+Assigns a hybrid (on-premise) telephone number to the application instance.
 
 ```yaml
 Type: System.String

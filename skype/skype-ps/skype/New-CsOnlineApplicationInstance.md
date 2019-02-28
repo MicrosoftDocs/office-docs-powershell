@@ -11,7 +11,7 @@ ms.reviewer:
 # New-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Creates an application instance in AAD. The application instance will be sync'ed into LyncAD and BVD after it's created.
+Creates an application instance in Azure Active Directory. The application instance will be sync'ed into LyncAD and BVD after it's created.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ New-CsOnlineApplicationInstance [-UserPrincipalName] <string> [[-ApplicationId] 
 ```
 
 ## DESCRIPTION
-This cmdlet is used to create an application instance in AAD. The application instance will be sync'ed into LyncAD and BVD after it's created.
+This cmdlet is used to create an application instance in Azure Active Directory. The application instance will be sync'ed into LyncAD and BVD after it's created.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-New-CsOnlineApplicationInstance -UserPrincipalName appinstance01@contoso.com -ApplicationId 00000000-0000-0000-0000-000000000000 -DisplayName "AppInstance01" -Tenant 00000000-0000-0000-0000-000000000001
+New-CsOnlineApplicationInstance -UserPrincipalName appinstance01@contoso.com -ApplicationId 4092daf3-a649-47f2-856e-e2902218cf9d -DisplayName "AppInstance01"
 ```
 
-This example creates a new application instance with UserPrincipalName "appinstance01@contoso.com", ApplicationId "00000000-0000-0000-0000-000000000000", DisplayName "AppInstance01", and Tanant "00000000-0000-0000-0000-000000000001"
+This example creates a new application instance with UserPrincipalName "appinstance01@contoso.com", ApplicationId "4092daf3-a649-47f2-856e-e2902218cf9d", DisplayName "AppInstance01" for the tenant.
 
 ## PARAMETERS
 
 ### -UserPrincipalName
-The user principal name. It will be sync as the SIP URI too.
+The user principal name. It will be used as the SIP URI too.
 
 ```yaml
 Type: System.String
