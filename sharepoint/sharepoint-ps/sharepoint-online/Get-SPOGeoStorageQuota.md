@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOGeoStorageQuota
 
 ## SYNOPSIS
-This Cmdlet gets the Storage quota on a multi-geo tenant
+This Cmdlet gets the Storage quota on a multi-geo tenant.
 
 
 ## SYNTAX
@@ -18,7 +18,8 @@ Get-SPOGeoStorageQuota [-AllLocations] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This Cmdlet shows the storage on the current location or all locations in a multi-geo SPO tenant
+This Cmdlet shows the storage on the current location or all locations in a multi-geo SPO tenant. Also, it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to check the compatibility between sites and locations.
+
 
 
 ## EXAMPLES
