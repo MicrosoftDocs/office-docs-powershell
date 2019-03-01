@@ -32,6 +32,8 @@ In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter s
 
 If you use these parameters in scheduled commands or scripts, we recommend that you review them and make any necessary changes.
 
+For more information, see Messaging Records Management (MRM) and Retention Policies in Office 365 (https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -161,8 +163,7 @@ Accept wildcard characters: False
 
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
-
-The InactiveMailbox specifies whether the command runs only on inactive mailboxes. You don't need to specify a value with this switch..
+he InactiveMailbox specifies whether the command runs only on inactive mailboxes. You don't need to specify a value with this switch..
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed
 
@@ -211,6 +212,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-[Messaging Records Management (MRM) and Retention Policies in Office 365](https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365)
-
 [Export-MailboxDiagnosticLogs](https://docs.microsoft.com/powershell/module/exchange/mailboxes/Export-MailboxDiagnosticLogs)
