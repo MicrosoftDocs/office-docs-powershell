@@ -373,6 +373,16 @@ New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:
 
 This example creates a migration endpoint for the connection settings to the IMAP server. Then an IMAP migration batch is created that uses the CSV migration file IMAPmigration\_1.csv and excludes the contents of the Deleted Items and Junk Email folders. This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
+### -------------------------- Example 8 --------------------------
+```
+$Credentials = Get-Credential; 
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"; 
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+This example is the same as example 3 with the particularity that the -CompleteAfter parameter was added. In this case data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. It's help you to start a migration and then leave it to complete after business hours.
+
 ## PARAMETERS
 
 ### -Name
