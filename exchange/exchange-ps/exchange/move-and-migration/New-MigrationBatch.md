@@ -381,7 +381,7 @@ $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $M
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-This example is the same as example 3 with the particularity that the -CompleteAfter parameter was added. In this case data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. It's help you to start a migration and then leave it to complete after business hours.
+This example is the same as example 3 with the particularity that the -CompleteAfter parameter was added. In this case data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. It helps you to start a migration and then leave it to complete after business hours.
 
 ## PARAMETERS
 
