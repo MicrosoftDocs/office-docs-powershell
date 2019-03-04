@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-{{Fill ClientAdalAuthOverride Description}}
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
 
 ```yaml
 Type: ClientAdalAuthOverride
