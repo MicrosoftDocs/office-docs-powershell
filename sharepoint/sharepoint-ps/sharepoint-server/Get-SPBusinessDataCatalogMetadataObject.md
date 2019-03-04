@@ -42,7 +42,7 @@ This example gets a metadata object of type Model with the name ContosoModel fro
 ### -BdcObjectType
 Specifies the type of the metadata object to return.
 
-The type must be one of the following valid metadata object types: BdcCatalog, Model, LobSystem, LobSystemInstance, or Entity.
+The type must be one of the following valid metadata object types: Catalog, Model, LobSystem, LobSystemInstance, or Entity.
 
 ```yaml
 Type: PSBdcObjectType
