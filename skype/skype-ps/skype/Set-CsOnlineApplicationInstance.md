@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Updates an application instance in Azure Active Directory. The update will be sync'ed into LyncAD or BVD after it's made in Azure Active Directory.
+Updates an application instance in Azure Active Directory. 
 
 ## SYNTAX
 
@@ -21,17 +21,17 @@ Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <stri
 ```
 
 ## DESCRIPTION
-This cmdlet is used to update an application instance in Azure Active Directory. The update will be sync'ed into LyncAD or BVD after it's made in Azure Active Directory.
+This cmdlet is used to update an application instance in Azure Active Directory. 
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber tel:+14250000000 -ApplicationId d08bb60d-d198-4ee5-80d5-03e000aa4290 -DisplayName "AppInstance01" -Tenant c1951a6e-c6eb-43de-9eea-0112b79d6303
+Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber tel:+14250000000 -ApplicationId d08bb60d-d198-4ee5-80d5-03e000aa4290 -DisplayName "AppInstance01"
 ```
 
-This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName, and Tenant information for an existing application instance with Identity(UserPrincipalName) "appinstance01@contoso.com".
+This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName information for an existing application instance with Identity "appinstance01@contoso.com".
 
 ## PARAMETERS
 

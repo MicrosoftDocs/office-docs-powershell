@@ -11,7 +11,7 @@ ms.reviewer:
 # New-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Creates an application instance in Azure Active Directory. The application instance will be sync'ed into LyncAD and BVD after it's created.
+Creates an application instance in Azure Active Directory. 
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-CsOnlineApplicationInstance [-UserPrincipalName] <string> [[-ApplicationId] 
 ```
 
 ## DESCRIPTION
-This cmdlet is used to create an application instance in Azure Active Directory. The application instance will be sync'ed into LyncAD and BVD after it's created.
+This cmdlet is used to create an application instance in Azure Active Directory. 
 
 ## EXAMPLES
 
