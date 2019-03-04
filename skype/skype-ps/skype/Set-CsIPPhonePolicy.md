@@ -431,7 +431,8 @@ Microsoft.Rtc.Management.ADConnect.Schema.ADUser
 
 ## OUTPUTS
 
-The `Set-CsIPPhonePolicy` cmdlet does not return a value or object.
+### System.Object
+The `Set-CsIPPhonePolicy` cmdlet does not return a value or object. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 
