@@ -20,7 +20,7 @@ Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-ResultSize] <int>] [-T
 ```
 
 ## DESCRIPTION
-This cmdlet is used to get application instance for the tenant.
+This cmdlet is used to get details of an application instance.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ This example returns the first 10 application instances.
 Get-CsOnlineApplicationInstance
 ```
 
-This example returns all the application instances of the tenant.
+This example returns the details of all application instances.
 
 ## PARAMETERS
 
