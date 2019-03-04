@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationTargetedPackage
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # ConvertTo-SPOMigrationTargetedPackage
@@ -38,7 +41,7 @@ Use this Cmdlets to create a migration package from one Library to Another Libra
 ## EXAMPLES
 
 ### Example 1 
-This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the –ParallelImport parameter to boost file share migration performance.
+This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the ï¿½ParallelImport parameter to boost file share migration performance.
 ```Powershell
 $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFilesPath $sourceFiles -SourcePackagePath $sourcePackage -OutputPackagePath $targetPackage -Credentials $cred -TargetWebUrl $targetWeb -TargetDocumentLibraryPath $targetDocLib
 ```
