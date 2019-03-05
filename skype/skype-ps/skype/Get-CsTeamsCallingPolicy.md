@@ -38,7 +38,7 @@ Teams calling policies help determine which users are able to use calling functi
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
+Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
 ```
 
 Retrieves the calling policy with name "SalesCallingPolicy"
