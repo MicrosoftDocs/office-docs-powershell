@@ -33,8 +33,8 @@ If the user is enabled for a third-party audio conferencing provider (ACP) and t
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:> Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
+```powershell
+Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
 ```
 
 This example disables user "Pilar Ackerman" from using audio conferencing and will prompt you to confirm the operation.
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
-Send an email to the user that contains his Audio Conference information.
+Send an email to the user containing their Audio Conference information.
 
 ```yaml
 Type: SwitchParameter
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
