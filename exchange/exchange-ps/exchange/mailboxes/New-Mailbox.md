@@ -1258,7 +1258,7 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 Type: String
 Parameter Sets: User, Arbitration, AuditLog, RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
