@@ -38,8 +38,6 @@ PS> Get-Team -User johndoe@example.com
 ### -User
 User's UPN (user principal name - e.g. johndoe@example.com).   If not specified, this cmdlet will return all groups that have been Teams-enabled in an organization. 
 
-Note: we are still backfilling existing teams to get returned by this command.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
