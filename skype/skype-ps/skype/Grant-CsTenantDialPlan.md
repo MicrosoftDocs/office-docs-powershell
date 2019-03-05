@@ -21,7 +21,7 @@ Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-The Grant-DsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
+The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
 A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
@@ -37,6 +37,15 @@ Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUse
 ```
 
 This example grants the Vt1tenantDialPlan9 dial plan to Vt1_User1.
+
+### -------------------------- Example 2 -------------------------- 
+```
+Grant-CsTenantDialPlan -Identity "Ken Myer" -PolicyName $Null
+```
+
+In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
+To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
+
 
 
 ## PARAMETERS
