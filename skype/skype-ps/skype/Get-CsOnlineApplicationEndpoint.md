@@ -11,7 +11,7 @@ ms.reviewer:
 # Get-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
-It is used to fetch the application endpoints for the tenants.
+It is used to fetch the application endpoints for a tenant.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-CsOnlineApplicationEndpoint [-Uri] <String> [-PhoneNumber <String>] [-Tenant
 ```
 
 ## DESCRIPTION
-This cmdlet is used to fetch the application endpoints for the tenants.
+This cmdlet is used to fetch the application endpoints for a tenant.
 
 ## EXAMPLES
 
