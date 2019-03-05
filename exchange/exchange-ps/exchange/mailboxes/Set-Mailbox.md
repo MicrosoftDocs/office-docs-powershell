@@ -2357,8 +2357,6 @@ The EnableRoomMailboxAccount parameter specifies whether to enable the disabled 
 
 - $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
 
-You need to use this parameter with the Room switch.
-
 Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Lync Room System or the Skype for Business Room System.
 
 In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
