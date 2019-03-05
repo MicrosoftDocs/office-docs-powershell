@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-MailContact [-Name] <String> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
+New-MailContact -Name <String> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-FirstName <String>] [-Initials <String>] [-LastName <String>]
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
