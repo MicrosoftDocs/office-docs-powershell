@@ -36,7 +36,7 @@ Returns information about the GuestCallingConfiguration, which specifies what op
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsGuestCallingConfiguration
+Get-CsTeamsGuestCallingConfiguration
 ```
 
 Returns the results 
