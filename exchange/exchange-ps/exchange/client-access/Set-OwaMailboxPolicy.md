@@ -275,9 +275,9 @@ To add or remove one or more values without affecting any existing entries, use 
 
 If the same file types are specified in multiple lists:
 
-- The Allow list overrides the Block list and the Force Save list.
+- The Block list overrides the Allow list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Force Save list overrides the Allow list. 
 
 ```yaml
 Type: MultiValuedProperty
