@@ -34,7 +34,7 @@ TeamsGuestMessagingConfiguration determines the messaging settings for the guest
 
 ### Example 1
 ```
-Get-CsTeamsGuestMessagingConfiguration
+PS C:\> Get-CsTeamsGuestMessagingConfiguration
 ```
 
 The command shown in Example 1 returns teams guest messaging configuration information for the current tenant
