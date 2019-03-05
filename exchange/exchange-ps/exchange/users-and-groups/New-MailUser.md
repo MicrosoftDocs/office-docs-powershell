@@ -212,22 +212,10 @@ In on-premises environments, you can use the PrimarySMTPAddress parameter to set
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: DisabledUser, EnabledUser
+Parameter Sets: DisabledUser, EnabledUser, MicrosoftOnlineServicesID, FederatedUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ProxyAddress
-Parameter Sets: MicrosoftOnlineServicesID, FederatedUser
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
