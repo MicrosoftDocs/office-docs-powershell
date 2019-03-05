@@ -102,7 +102,7 @@ This example sets the quota for the site.
 
 
 > [!NOTE] 
-> If it is a Groups Site collection, Below are the valid parameters
+> The following parameters are valid for a Group Site Collection.
 
 ### ParamSet5
 ```
