@@ -36,7 +36,7 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallParkPolicy
+Get-CsTeamsCallParkPolicy
 ```
 
 Retrieve all policies that are available in your organization.
