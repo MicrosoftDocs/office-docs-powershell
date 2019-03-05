@@ -32,8 +32,8 @@ For comprehensive documentation on this policy and its settings, see [Migration 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsTeamsInteropPolicy
+```powershell
+Get-CsTeamsInteropPolicy
 ```
 
 List all available instances of TeamsInteropPolicy.
