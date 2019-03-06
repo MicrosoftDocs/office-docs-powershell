@@ -49,9 +49,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
 ```
-## NOTE
-
-The following parameters are valid for a Group Site Collection.
+//Note: The following parameters are valid for a Group Site Collection.
 
 ### ParamSet5
 ```
