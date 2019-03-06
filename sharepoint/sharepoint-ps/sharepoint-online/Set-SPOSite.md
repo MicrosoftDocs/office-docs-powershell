@@ -58,7 +58,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
  [<CommonParameters>]
 ```
-NOTE: The above parameters are valid for a Group Site Collection.
+```NOTE: The above parameters are valid for a Group Site Collection.```
 
 ## DESCRIPTION
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
