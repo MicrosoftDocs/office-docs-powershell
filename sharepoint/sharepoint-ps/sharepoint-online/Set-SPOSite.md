@@ -49,7 +49,17 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
 ```
+NOTE: The following parameters are valid for a Group Site Collection.
 
+### ParamSet5
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+ [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+ [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+ [<CommonParameters>]
+```
 
 ## DESCRIPTION
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
@@ -103,19 +113,6 @@ This example sets the quota for the site.
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
-
-> [!NOTE] 
-> The following parameters are valid for a Group Site Collection.
-
-### ParamSet5
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
- [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
- [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
- [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
- [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [<CommonParameters>]
-```
 ## PARAMETERS
 
 ### -EnablePWA
