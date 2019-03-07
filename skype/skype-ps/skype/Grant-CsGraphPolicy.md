@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsGraphPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsGraphPolicy
@@ -32,7 +35,7 @@ Use the Grant-CsGraphPolicy cmdlet to assign a predefined graph policy to users 
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}`
 
 ## EXAMPLES
 
@@ -51,10 +54,10 @@ Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
 Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled"`.
 
 Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled"`.
 
 ```yaml
 Type: String

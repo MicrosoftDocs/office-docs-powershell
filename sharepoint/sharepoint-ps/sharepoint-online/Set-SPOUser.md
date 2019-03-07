@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOUser
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOUser
@@ -21,7 +24,7 @@ Set-SPOUser -IsSiteCollectionAdmin <Boolean> -LoginName <String> -Site <SpoSiteP
 Use the `Set-SPOUser` cmdlet to configure properties of an existing user.
 That is, to add or remove a user as a SharePoint Online site collection administrator.
 
-You must have the SharePoint Online global administrator permission to run the cmdlet.
+You must have the SharePoint Online Administrator or Global Administrator role to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 

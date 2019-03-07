@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsConferencingPolicy
@@ -424,8 +427,7 @@ Users are allowed to share a single application.
 None.
 Users are not allowed to share applications or their desktop.
 
-This setting is enforced at the per-user level.
-That means that some users in a conference might be allowed to share their desktop or applications while other users in the same conference might not be allowed to do so.
+
 
 The default value is Desktop.
 

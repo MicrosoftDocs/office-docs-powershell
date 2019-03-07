@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Register-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Register-SPMTMigration
@@ -15,7 +18,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-SPOCredentials<PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>][-MigrateAllSiteFieldsAndContentTypes<bool>][-WorkingFolder <string>][-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>]  [-DuplicatePageBehavior <string>] [-MigrateNavigation <Nullable`1>] [-MigrateTermGroups <Nullable`1>] -Force
+Register-SPMTMigration [-SPOCredentials<PSCredential>][-Incremental <bool>] [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>]  [-DuplicatePageBehavior <string>] [-MigrateNavigation <Nullable`1>] [-MigrateTermGroups <Nullable`1>] -Force
 ```
 
 ## DESCRIPTION

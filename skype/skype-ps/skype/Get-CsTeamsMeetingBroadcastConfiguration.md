@@ -5,6 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Get-CsTeamsMeetingBroadcastConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsMeetingBroadcastConfiguration

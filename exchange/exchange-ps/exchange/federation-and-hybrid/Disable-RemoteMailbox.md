@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Disable-RemoteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to disconnect the cloud-based archive mailbox from the associated cloud-based mailbox.
+The Archive switch specifies whether to disconnect the cloud-based archive mailbox from the associated cloud-based mailbox. You don't need to specify a value with this switch.
 
 The on-premises mail user and its associated cloud-based mailbox aren't removed if you use this switch.
 

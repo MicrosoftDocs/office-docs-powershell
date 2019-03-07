@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Get-Team
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-Team
@@ -12,7 +15,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Gets all the teams that the user belongs to or all teams in an organization
+Gets all the teams that a user belongs to or all teams in an organization
 
 ## SYNTAX
 
@@ -21,21 +24,19 @@ Get-Team [-User <String>]
 ```
 
 ## DESCRIPTION
-Gets all the teams in an organization, or all teams that you belong to. The user must be you - you can only get information on yourself or all teams in the organization.  Note: we are still backfilling existing teams to get returned by this command.
+Gets all the teams in an organization, or all teams that a particular user belongs to.
 
 ## EXAMPLES
 
 ### --------------------------  Example 1  --------------------------
 ```
-PS> Get-Team -User dmx1@example.com
+PS> Get-Team -User johndoe@example.com
 ```
 
 ## PARAMETERS
 
 ### -User
-User's UPN (user principal name - e.g. johndoe@example.com).  This can only be your own UPN.  If not specified, this cmdlet will return all groups that have been Teams-enabled in an organization. 
-
-Note: we are still backfilling existing teams to get returned by this command.
+User's UPN (user principal name - e.g. johndoe@example.com).   If not specified, this cmdlet will return all groups that have been Teams-enabled in an organization. 
 
 ```yaml
 Type: String

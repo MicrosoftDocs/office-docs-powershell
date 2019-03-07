@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsWebServiceConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsWebServiceConfiguration
@@ -14,7 +17,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
 Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccessToLWAConference <Boolean>]
  [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>]
@@ -29,6 +32,7 @@ Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccess
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
+ [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
 ```
 
@@ -47,6 +51,7 @@ Set-CsWebServiceConfiguration [-Instance <PSObject>] [-AllowAnonymousAccessToLWA
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
+ [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
 ```
 
@@ -814,6 +819,38 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideAuthTypeForExternalClients
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to 
+https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideAuthTypeForInternalClients
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to 
+https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

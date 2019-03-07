@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-RemoteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -139,7 +142,9 @@ Accept wildcard characters: False
 ### -Equipment
 The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
 
-You can't use the Equipment switch if you specified the Room switch.
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
+
+You can't use this switch with the Room switch.
 
 ```yaml
 Type: SwitchParameter
@@ -307,9 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox that's created in the service.
-
-You don't have to specify a value with this switch.
+The Archive switch specifies whether to also create an archive mailbox in the service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

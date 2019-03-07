@@ -5,6 +5,9 @@ online version:
 applicable: SharePoint Online
 title: Export-SPOQueryLogs
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 

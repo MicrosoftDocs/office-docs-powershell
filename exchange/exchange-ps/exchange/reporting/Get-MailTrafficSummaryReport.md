@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficSummaryReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -25,6 +28,14 @@ Get-MailTrafficSummaryReport [-Category <String>] [-DlpPolicy <MultiValuedProper
 ```
 
 ## DESCRIPTION
+This cmdlet has C1, C2 and C3 as header names and the meaning of them depends on the category you choose. Next you can see an explanation about each category:
+
+* InboundTransportRuleHits and OutboundTransportRuleHits: C1 is the transport rule name, C2 the audit level and C3 the hits.
+
+* TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of emails.
+
+* TopMalware: C1 is the malware name and C2 the quantity of appearances.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -39,7 +50,7 @@ This example shows the top spam recipient statistics between June 13, 2015 and J
 ## PARAMETERS
 
 ### -Category
-The Category parameter filters the report by category. Value values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient or TopMalware.
+The Category parameter filters the report by category. Valid values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient or TopMalware.
 
 ```yaml
 Type: String
