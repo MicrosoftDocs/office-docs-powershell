@@ -35,7 +35,7 @@ If the bridge information isn't provided and the tenant uses multiple audio conf
 The audio conferencing provider name and domain information is automatically set for the user when they are enabled for audio conferencing.
 
 > [!NOTE]
-> If your conferencing provider is Microsoft, your users' conference IDs are set to Dynamic Only by default. Unfortunately, there's no ability to change it in the Skype for Business Admin Center or using Windows Powershell to become static, as this is now unsupported. Conference IDs are automatically set only for Skype for Business users enabled for Audio Conferencing. 
+> If your conferencing provider is Microsoft, your users' conference IDs are set to Dynamic Only. This cannot be changed. Conference IDs are automatically set only for Skype for Business users enabled for Audio Conferencing. 
 
 ## EXAMPLES
 
