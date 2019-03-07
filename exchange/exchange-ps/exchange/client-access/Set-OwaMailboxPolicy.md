@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OwaMailboxPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -272,9 +275,9 @@ To add or remove one or more values without affecting any existing entries, use 
 
 If the same file types are specified in multiple lists:
 
-- The Allow list overrides the Block list and the Force Save list.
+- The Block list overrides the Allow list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Force Save list overrides the Allow list. 
 
 ```yaml
 Type: MultiValuedProperty

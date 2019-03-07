@@ -36,7 +36,7 @@ Use in conjunction with Set-CsTeamsClientConfiguration to update the settings in
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsClientConfiguration
+Get-CsTeamsClientConfiguration
 ```
 
 Retrieves the effective client configuration in the tenant.
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

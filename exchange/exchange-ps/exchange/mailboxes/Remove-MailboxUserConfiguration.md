@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MailboxUserConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -32,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
 ```
 
-This example removes the specified user configuration item from the mailbox lila@contoso.com.
+This example removes the specified user configuration item from the mailbox julia@contoso.com.
 
 ## PARAMETERS
 

@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOSite
@@ -45,6 +48,16 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 ### ParamSet4
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
+```
+
+### ParamSet5 (valid for Group Site Collection)
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+ [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+ [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+ [<CommonParameters>]
 ```
 
 
@@ -99,7 +112,6 @@ This example sets the quota for the site.
 
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
-
 
 ## PARAMETERS
 
@@ -664,7 +676,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
 
 
 ```yaml

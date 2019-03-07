@@ -3134,3 +3134,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
 
 ### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+
+### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+
+### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Update-PublicFolderMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,19 +22,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### InvokeSynchronizer
 ```
-Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> [-ForceOnlineSync] [-FullSync] [-ReconcileFolders] [-SuppressStatus]
+Update-PublicFolderMailbox [-Identity] <MailboxIdParameter>
+ [-ForceOnlineSync]
+ [-FullSync]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-InvokeSynchronizer]
+ [-ReconcileFolders]
+ [-SuppressStatus]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### InvokeSingleFolderSynchronizer
 ```
-Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFolderIdParameter> [-CreateAssociatedDumpster]
+Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFolderIdParameter> -InvokeSynchronizer
+ [-CreateAssociatedDumpster]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-InvokeSynchronizer]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -44,17 +51,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Update-PublicFolderMailbox -Identity PF_marketing -SuppressStatus
+Update-PublicFolderMailbox -Identity PF_marketing
 ```
 
-This example updates the public folder hierarchy on the public folder mailbox PF\_marketing and suppresses the command's output.
+This example updates the public folder hierarchy on the public folder mailbox PF\_marketing.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-Mailbox -PublicFolder | Update-PublicFolderMailbox -SuppressStatus
+Get-Mailbox -PublicFolder | Update-PublicFolderMailbox
 ```
 
-This example updates all public folder mailboxes and suppresses the command's output.
+This example updates all public folder mailboxes.
 
 ## PARAMETERS
 
@@ -232,7 +239,9 @@ Accept wildcard characters: False
 ### -SuppressStatus
 The SuppressStatus switch specifies that the output of this cmdlet is suppressed and that the command will run asynchronously in the background from the Exchange Management Shell. You don't need to specify a value with this switch.
 
-If you don't use this switch, the output will display status messages every 3 seconds for up to one minute. Until the minute passes, you can't use that instance of the Exchange Management Shell.
+You can only use this switch with the InvokeSynchronizer switch.
+
+If you don't use this switch, the output will display status messages every 3 seconds for up to one minute. Until the minute passes, you can't use the PowerShell Window for other commands.
 
 ```yaml
 Type: SwitchParameter

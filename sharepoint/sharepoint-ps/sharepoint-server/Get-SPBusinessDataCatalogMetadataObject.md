@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPBusinessDataCatalogMetadataObject
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPBusinessDataCatalogMetadataObject
@@ -42,7 +45,7 @@ This example gets a metadata object of type Model with the name ContosoModel fro
 ### -BdcObjectType
 Specifies the type of the metadata object to return.
 
-The type must be one of the following valid metadata object types: BdcCatalog, Model, LobSystem, LobSystemInstance, or Entity.
+The type must be one of the following valid metadata object types: Catalog, Model, LobSystem, LobSystemInstance, or Entity.
 
 ```yaml
 Type: PSBdcObjectType
