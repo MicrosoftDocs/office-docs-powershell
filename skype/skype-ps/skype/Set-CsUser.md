@@ -1,18 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online<sup>*, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUser
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
 ms.reviewer:
 ---
-
+<sup>*</sup> Only those parameters indicated with an <sup>* below apply to Skype for Business Online.
+ 
 # Set-CsUser
 
 ## SYNOPSIS
-Modifies Skype for Business Server properties for an existing user account.
-Properties can be modified only for accounts that have been enabled for use with Skype for Business Server.
+Modifies Skype for Business Server or Skype for Business Online properties for an existing user account.
+Properties can be modified only for accounts that have been enabled for use with Skype for Business Server or Skype for Business Online.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -20,17 +21,17 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm]
- [-OnPremLineURI <String>] [-LineServerURI <String>] [-AudioVideoDisabled <Boolean>]
+ [-OnPremLineURI <String>]<sup>*</sup> [-LineServerURI <String>] [-AudioVideoDisabled <Boolean>]
  [-RemoteCallControlTelephonyEnabled <Boolean>] [-PrivateLine <String>] [-AcpInfo <AcpInfo>]
- [-HostedVoiceMail <Boolean>] [-EnterpriseVoiceEnabled <Boolean>]
+ [-HostedVoiceMail <Boolean>]<sup>*</sup> [-EnterpriseVoiceEnabled <Boolean>]<sup>*</sup>
  [-ExchangeArchivingPolicy <ExchangeArchivingPolicyOptionsEnum>] [-LineURI <String>] [-SipAddress <String>]
  [-Enabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Set-CsUser` cmdlet enables you to modify the Skype for Business Server related user account attributes that are stored in Active Directory Domain Services.
+The `Set-CsUser` cmdlet enables you to modify the Skype for Business Server related user account attributes that are stored in Active Directory Domain Services, or Azure AD if modifying an online user with Skype for Business Remote PowerShell. 
 For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers.
-The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business Server.
+The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business Server, or Skype for Business Online. 
 
 The only attributes you can modify using the `Set-CsUser` cmdlet are attributes related to Skype for Business Server.
 Other user account attributes, such as the user's job title or department, cannot be modified by using this cmdlet.
@@ -145,7 +146,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnterpriseVoiceEnabled
+### -EnterpriseVoiceEnabled <sup>*</sup>
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
@@ -163,8 +164,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HostedVoiceMail
-When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
+### -HostedVoiceMail <sup>*</sup>
+When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server or Cloud Voicemail services. 
 In addition, setting this option to True enables Skype for Business users to directly place a call to another user's voice mail.
 
 
@@ -386,8 +387,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OnPremLineURI
-Specifies the phone number assigned to the user if no number is assigned to that user in the Skype for Business hybrid environment.
+### -OnPremLineURI <sup>*</sup>
+Use with Skype for Business Online Remote Powershell only. Specifies the phone number assigned to the user if no number is assigned to that user in the Skype for Business hybrid environment.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
 For example: TEL:+14255551297.
 Any extension number should be added to the end of the line URI, for example: TEL:+14255551297;ext=51297.
