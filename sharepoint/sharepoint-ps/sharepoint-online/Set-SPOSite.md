@@ -45,12 +45,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
  [<CommonParameters>]
 ```
 
-### ParamSet4
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
-```
-
-### ParamSet5 (valid for Group Site Collection)
+### ParamSet4 (valid for Group Site Collection)
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
@@ -566,23 +561,6 @@ PARAMVALUE: Unknown | Disabled | NotDisabled
 ```yaml
 Type: FlowsPolicy
 Parameter Sets: ParamSet1
-Aliases: 
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NewUrl
-PARAMVALUE: String
-
-
-```yaml
-Type: String
-Parameter Sets: ParamSet4
 Aliases: 
 Applicable: SharePoint Online
 
