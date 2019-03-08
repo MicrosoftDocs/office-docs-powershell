@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Exchange.UM.TroubleshootingTool.dll-Help.xml
 Module Name: Microsoft.Exchange.UM.TroubleshootingTool.dll
 online version: https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx
