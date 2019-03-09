@@ -18,10 +18,10 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ```
 New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-Description <String>]
  [-AllowUserChat <Boolean>] [[-Identity] <XdsIdentity>] [-InMemory] [-AllowUserDeleteMessage <Boolean>]
- [-ChannelsInChatListEnabledType <Object>] [-Force] [-AllowStickers <Boolean>] [-AllowUrlPreviews <Boolean>]
- [-Tenant <Guid>] [-AllowImmersiveReader <Object>] [-AllowUserTranslation <Boolean>]
- [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <Object>] [-AllowRemoveUser <Object>]
- [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Object>]
+ [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-Force] [-AllowStickers <Boolean>] [-AllowUrlPreviews <Boolean>]
+ [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
+ [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
+ [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
  [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-AsJob]
  ```
 
@@ -43,7 +43,7 @@ All other policy properties will use the default values.
 ## PARAMETERS
 
 ### -AllowGiphy
-Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMemes
-Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOwnerDeleteMessage
-Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowStickers
-Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserChat
-Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat
+Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat.
 
 ```yaml
 Type: Boolean
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserDeleteMessage
-Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserEditMessage
-Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserTranslation
-Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -274,10 +274,10 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelsInChatListEnabledType
-This parameter is reserved for internal Microsoft use.
+Possible values are: DisabledUserOverride,EnabledUserOverride.
 
 ```yaml
-Type: Object
+Type: ChannelsInChatListEnabledTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -289,10 +289,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowImmersiveReader
-This parameter is reserved for internal Microsoft use.
+Determines whether a user is allowed to use Immersive Reader for reading conversation messages. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -304,10 +304,10 @@ Accept wildcard characters: False
 ```
 
 ### -AudioMessageEnabledType
-This parameter is reserved for internal Microsoft use.
+Determines whether a user is allowed to send audio messages. Possible values are: ChatsAndChannels,ChatsOnly,Disabled.
 
 ```yaml
-Type: Object
+Type: AudioMessageEnabledTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -319,10 +319,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRemoveUser
-This parameter is reserved for internal Microsoft use.
+Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -334,10 +334,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPriorityMessages
-This parameter is reserved for internal Microsoft use.
+Determines whether a user is allowed to send priorities messages. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
