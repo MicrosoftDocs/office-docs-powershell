@@ -222,16 +222,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: ProxyAddress
-Parameter Sets: MicrosoftOnlineServicesID, FederatedUser
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+```yaml 
+Type: ProxyAddress 
+Parameter Sets: MicrosoftOnlineServicesID, FederatedUser 
+Aliases: 
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
 ```
 
 ### -FederatedIdentity
@@ -827,5 +827,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
 [Online Version](https://technet.microsoft.com/library/128467a7-b8b8-4fa6-bca9-1131301f18ce.aspx)
