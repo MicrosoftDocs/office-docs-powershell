@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCommandSize
-The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 40 through 1024. The default value is 512.
+The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 1024 through 16384. The default value is 10240.
 
 ```yaml
 Type: Int32
