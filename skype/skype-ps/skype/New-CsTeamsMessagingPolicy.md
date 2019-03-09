@@ -16,14 +16,12 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ## SYNTAX
 
 ```
-New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-Description <String>]
- [-AllowUserChat <Boolean>] [[-Identity] <XdsIdentity>] [-InMemory] [-AllowUserDeleteMessage <Boolean>]
- [-ChannelsInChatListEnabledType <Object>] [-Force] [-AllowStickers <Boolean>] [-AllowUrlPreviews <Boolean>]
- [-Tenant <Guid>] [-AllowImmersiveReader <Object>] [-AllowUserTranslation <Boolean>]
- [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <Object>] [-AllowRemoveUser <Object>]
- [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Object>]
- [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-AsJob]
- ```
+New-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
+ [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ## DESCRIPTION
  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet creates a new Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
@@ -193,7 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -238,7 +235,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet’s matching Set-.
 
 ```yaml
 Type: SwitchParameter
@@ -253,13 +249,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: Guid
@@ -269,100 +258,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ChannelsInChatListEnabledType
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowImmersiveReader
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AudioMessageEnabledType
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowRemoveUser
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowPriorityMessages
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
