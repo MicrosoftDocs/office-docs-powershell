@@ -124,5 +124,5 @@ The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more 
 
 - [Set-ExecutionPolicy](https://go.microsoft.com/fwlink/p/?LinkId=389623)
 
-For more information about managing Office 365, see [Manage Office 365](https://docs.microsoft.com/en-us/Office365/).
+For more information about managing Office 365, see [Manage Office 365](https://docs.microsoft.com/Office365/).
 

@@ -23,7 +23,7 @@ New-PnPUPABulkImportJob -Folder <String>
 ```
 
 ## DESCRIPTION
-See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
+See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
 
 ## EXAMPLES
 

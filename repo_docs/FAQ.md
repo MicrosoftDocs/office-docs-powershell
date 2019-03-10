@@ -72,7 +72,7 @@ Some examples are:
 
 Every folder must have this TOC file.
 When you browse the list of cmdlets in the Reference folder this is the file you see.
-For example, https://docs.microsoft.com/en-us/powershell/module/skype/?view=skype-ps.
+For example, https://docs.microsoft.com/powershell/module/skype/?view=skype-ps.
 Note that docs.microsoft.com automatically strips out the note about manually entering a description.
 It ONLY strips this out if it is in the exact format given. 
 Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
