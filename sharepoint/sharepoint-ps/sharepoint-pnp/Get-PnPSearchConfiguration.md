@@ -136,4 +136,4 @@ Does not return a string when the -Path parameter has been specified.
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
