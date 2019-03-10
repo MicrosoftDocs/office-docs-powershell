@@ -8,11 +8,13 @@ schema: 2.0.0
 # Update-SPRepopulateMicroblogFeedCache
 
 ## SYNOPSIS
+
 Refreshes the microblog feed cache.
 
 ## SYNTAX
 
-###  (Default)
+### (Default)
+
 ```
 Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
@@ -21,6 +23,7 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 ```
 
 ### Default
+
 ```
 Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
@@ -29,6 +32,7 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 ```
 
 ### FollowableList
+
 ```
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind> -ListId <Guid>
@@ -36,6 +40,7 @@ Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPService
 ```
 
 ## DESCRIPTION
+
 Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user.
 It can be used in scenarios where the automatic refresh has failed or when reverting to an old version of a user's personal site.
 
@@ -46,6 +51,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------EXAMPLE 1------------
+
 ```
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
@@ -54,7 +60,8 @@ Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -Ac
 This example refreshes the feed for a specific user by using the AccountName parameter.
 
 ### ------------EXAMPLE 2------------
-```
+
+```powershell
 $site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
 $context = Get-SPServiceContext $site
 $upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
@@ -62,26 +69,29 @@ $profiles = $upm.GetEnumerator()
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 while($profiles.MoveNext()) {
     $profile = $profiles.Current
-	   Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
+    Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
 ```
 
 This example refreshes the feeds for all users in the User Profile Service Application.
 
 ### ------------EXAMPLE 3------------
-```
+
+```powershell
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
 ```
+
 This example refreshes the feed on the site https://sharepoint.contoso.com.
 
 ## PARAMETERS
 
 ### -AccountName
+
 Specifies the user's account name for the User Profile Service application.
 
 ```yaml
 Type: String
 Parameter Sets: (All), Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
@@ -92,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
+
 Specifies the User Profile Service application proxy to update.
 
 The type must be in one of the following forms:
@@ -103,7 +114,7 @@ The type must be in one of the following forms:
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -114,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -125,7 +137,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
@@ -136,13 +148,14 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
 Specifies the account under which this service should run.
 This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All), Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
@@ -155,7 +168,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: FollowableList
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -166,12 +179,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteUrl
+
 Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
 
 ```yaml
 Type: String
 Parameter Sets: (All), Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
@@ -182,12 +196,13 @@ Accept wildcard characters: False
 ```
 
 ### -ListId
+
 The ListId of the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -198,12 +213,13 @@ Accept wildcard characters: False
 ```
 
 ### -ListRootFolderUrl
+
 The RootFolderUrl of the FollowableList.
 
 ```yaml
 Type: String
 Parameter Sets: FollowableList
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -214,12 +230,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteId
+
 The SiteId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -230,12 +247,13 @@ Accept wildcard characters: False
 ```
 
 ### -WebId
+
 The WebId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
@@ -246,6 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
