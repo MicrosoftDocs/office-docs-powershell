@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsUpgradePolicy
@@ -74,12 +77,62 @@ PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName UpgradeToTeams -Identity mike@con
 
 The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have an on-premises Skype for Business account. 
 
-### Example 2: Grant Policy to the entire tenant 
+### Example 2: Remove Policy for an individual user
+```
+PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName $null -Identity mike@contoso.com
+```
+
+The above cmdlet removes any policy changes made to user Mike@contoso.com and effectively Inherits the global tenant setting for teams Upgrade. 
+
+### Example 3: Grant Policy to the entire tenant 
 ```
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
 To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+
+
+### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
+
+
+You can get the output on the screen, on CSV or Html format. For Screen Report
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+```
+
+### Example 5 Get a report on existing TeamsUpgradePolicy users (CSV Report)
+
+```
+$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+$objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
+```
+This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+
+### Example 6 Get a report on existing TeamsUpgradePolicy users (HTML Report)
+
+```
+$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+$objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
+
+```
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
+
+### Example 7 Get a report on existing TeamsUpgradePolicy users (CSV Report - Oneliner version)
+
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
+```
+This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+
+### Example 8 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
+
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
+
+```
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
+
+
 
 ## PARAMETERS
 
@@ -185,7 +238,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineDialInConferencingUser
@@ -28,15 +31,15 @@ The see a list of users with conferencing providers other than Microsoft use the
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:> Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
+```powershell
+Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
 ```
 
 This example uses the LdapFilter parameter to limit the returned data to users who work in the Finance department.
 
 ### -------------------------- Example 2 --------------------------
-```
-PS C:> Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
+```powershell
+Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
 ```
 
 This example returns users who have been enabled for audio conferencing provided by Microsoft, and are assigned to the specified service number.
@@ -249,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

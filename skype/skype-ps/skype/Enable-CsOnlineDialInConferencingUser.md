@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Enable-CsOnlineDialInConferencingUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Enable-CsOnlineDialInConferencingUser
@@ -30,6 +33,9 @@ If the bridge information (BridgeID or BridgeName) isn't provided and the tenant
 If the bridge information isn't provided and the tenant uses multiple audio conferencing bridges, the user is then assigned to the default bridge.
 
 The audio conferencing provider name and domain information is automatically set for the user when they are enabled for audio conferencing.
+
+> [!NOTE]
+> If your conferencing provider is Microsoft, your users' conference IDs are set to Dynamic Only. This cannot be changed. Conference IDs are automatically set only for Skype for Business users enabled for Audio Conferencing. 
 
 ## EXAMPLES
 
@@ -86,8 +92,6 @@ Specifies the ConferenceId that will be used by the user for dial-in meetings. T
 The ConferenceId is already being used in the bridge where the user is assigned, or to which the user would be assigned.
 
 The ConferenceId doesn't meet the ConferenceId format requirements.
-
-ConferenceId and ResetConferenceId are mutually exclusive. When ConferenceId is specified the new ConferenceId will be assigned to the user. When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
 
 ```yaml
 Type: Int32
@@ -172,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
+This property has been deprecated.
 
 ```yaml
 Type: String
@@ -188,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
+This property has been deprecated.
 
 ```yaml
 Type: String

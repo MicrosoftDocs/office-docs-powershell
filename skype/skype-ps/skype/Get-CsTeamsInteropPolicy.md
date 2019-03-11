@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsInteropPolicy
@@ -29,8 +32,8 @@ For comprehensive documentation on this policy and its settings, see [Migration 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsTeamsInteropPolicy
+```powershell
+Get-CsTeamsInteropPolicy
 ```
 
 List all available instances of TeamsInteropPolicy.

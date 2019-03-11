@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Set-Team
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-Team

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAddressBookNormalizationRule
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsAddressBookNormalizationRule
