@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxImportRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -11,9 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive. You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request \<Alias\>\\MailboxImportX (where X = 0-9).
-
-By default, the import checks for duplication of items and doesn't copy the data from the .pst file into the mailbox or archive if a matching item exists in the target mailbox or target archive.
+Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive that's hosted in on-premises Exchange. Importing .pst files is not possible in Exchange Online.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
@@ -157,9 +158,11 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request \<Alias\>\\MailboxImportX (where X = 0-9).
 
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+By default, the import checks for duplication of items and doesn't copy the data from the .pst file into the mailbox or archive if a matching item exists in the target mailbox or target archive.
+
+In on-premises Exchange, you need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
 - To import PST files from the share: Read permission
 

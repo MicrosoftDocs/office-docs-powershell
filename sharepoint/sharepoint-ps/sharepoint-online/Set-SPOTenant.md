@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenant
@@ -42,6 +45,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
+ [-CustomizedExternalSharingServiceUrl <String>]
  [<CommonParameters>]
 ```
 
@@ -1161,7 +1165,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.
 
 
 ```yaml
@@ -1206,6 +1210,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
+This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
 > [!NOTE] 
 > When set to $true, users aren't able to share with security groups or SharePoint groups.  
@@ -1238,6 +1243,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomizedExternalSharingServiceUrl
+Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "https://www.contoso.com/sharingpolicies".
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

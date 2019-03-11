@@ -1,5 +1,6 @@
 const shortId = require('shortid');
 const of = require('await-of').default;
+const { errorColor } = require('../helpers/colors');
 
 class ModuleController {
 	constructor(
@@ -83,7 +84,7 @@ class ModuleController {
 				});
 
 				if (err) {
-					console.log(err);
+					console.log(errorColor(err));
 
 					errors = [...errors, err];
 					continue;

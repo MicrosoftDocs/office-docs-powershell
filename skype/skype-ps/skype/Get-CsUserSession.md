@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsUserSession
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsUserSession
@@ -19,9 +22,7 @@ Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTime
 ## DESCRIPTION
 Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
-
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
+You have to be assigned Skype For Business admin role to run this cmdlet.
 
 ## EXAMPLES
 

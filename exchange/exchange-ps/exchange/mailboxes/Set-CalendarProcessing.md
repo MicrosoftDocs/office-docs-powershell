@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CalendarProcessing
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,23 +21,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-CalendarProcessing [-Identity] <MailboxIdParameter> [-AddAdditionalResponse <$true | $false>]
- [-AdditionalResponse <String>] [-AddNewRequestsTentatively <$true | $false>]
- [-AddOrganizerToSubject <$true | $false>] [-AllBookInPolicy <$true | $false>]
- [-AllowConflicts <$true | $false>] [-AllowRecurringMeetings <$true | $false>]
- [-AllRequestInPolicy <$true | $false>] [-AllRequestOutOfPolicy <$true | $false>]
- [-AutomateProcessing <None | AutoUpdate | AutoAccept>] [-BookingType <Standard | Reserved>] [-BookingWindowInDays <Int32>]
- [-BookInPolicy <RecipientIdParameter[]>] [-Confirm] [-ConflictPercentageAllowed <Int32>]
- [-DeleteAttachments <$true | $false>] [-DeleteComments <$true | $false>]
- [-DeleteNonCalendarItems <$true | $false>] [-DeleteSubject <$true | $false>] [-DomainController <Fqdn>]
- [-EnableResponseDetails <$true | $false>] [-EnforceSchedulingHorizon <$true | $false>]
- [-ForwardRequestsToDelegates <$true | $false>] [-IgnoreDefaultScope] [-MaximumConflictInstances <Int32>]
- [-MaximumDurationInMinutes <Int32>] [-OrganizerInfo <$true | $false>]
- [-ProcessExternalMeetingMessages <$true | $false>] [-RemoveForwardedMeetingNotifications <$true | $false>]
- [-RemoveOldMeetingMessages <$true | $false>] [-RemovePrivateProperty <$true | $false>]
- [-RequestInPolicy <RecipientIdParameter[]>] [-RequestOutOfPolicy <RecipientIdParameter[]>]
- [-ResourceDelegates <RecipientIdParameter[]>] [-ScheduleOnlyDuringWorkHours <$true | $false>]
- [-TentativePendingApproval <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-CalendarProcessing [-Identity] <MailboxIdParameter>
+ [-AddAdditionalResponse <$true | $false>]
+ [-AdditionalResponse <String>]
+ [-AddNewRequestsTentatively <$true | $false>]
+ [-AddOrganizerToSubject <$true | $false>]
+ [-AllBookInPolicy <$true | $false>]
+ [-AllowConflicts <$true | $false>]
+ [-AllowRecurringMeetings <$true | $false>]
+ [-AllRequestInPolicy <$true | $false>]
+ [-AllRequestOutOfPolicy <$true | $false>]
+ [-AutomateProcessing <None | AutoUpdate | AutoAccept>]
+ [-BookingType <Standard | Reserved>]
+ [-BookingWindowInDays <Int32>]
+ [-BookInPolicy <RecipientIdParameter[]>]
+ [-Confirm]
+ [-ConflictPercentageAllowed <Int32>]
+ [-DeleteAttachments <$true | $false>]
+ [-DeleteComments <$true | $false>]
+ [-DeleteNonCalendarItems <$true | $false>]
+ [-DeleteSubject <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-EnableResponseDetails <$true | $false>]
+ [-EnforceSchedulingHorizon <$true | $false>]
+ [-ForwardRequestsToDelegates <$true | $false>]
+ [-IgnoreDefaultScope]
+ [-MaximumConflictInstances <Int32>]
+ [-MaximumDurationInMinutes <Int32>]
+ [-OrganizerInfo <$true | $false>]
+ [-ProcessExternalMeetingMessages <$true | $false>]
+ [-RemoveForwardedMeetingNotifications <$true | $false>]
+ [-RemoveOldMeetingMessages <$true | $false>]
+ [-RemovePrivateProperty <$true | $false>]
+ [-RequestInPolicy <RecipientIdParameter[]>]
+ [-RequestOutOfPolicy <RecipientIdParameter[]>]
+ [-ResourceDelegates <RecipientIdParameter[]>]
+ [-ScheduleOnlyDuringWorkHours <$true | $false>]
+ [-TentativePendingApproval <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -673,7 +697,7 @@ Accept wildcard characters: False
 ### -RemovePrivateProperty
 The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
 
-By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set tthis parameter to $false.
+By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set this parameter to $false.
 
 ```yaml
 Type: $true | $false

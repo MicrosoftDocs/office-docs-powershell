@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTenantDialPlan
@@ -18,12 +21,12 @@ Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-The Grant-DsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
+The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
 A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "\<user name\>" | Select-Object TenantDialPlan.`
+You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "<user name>" | Select-Object TenantDialPlan.`
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -34,6 +37,15 @@ Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUse
 ```
 
 This example grants the Vt1tenantDialPlan9 dial plan to Vt1_User1.
+
+### -------------------------- Example 2 -------------------------- 
+```
+Grant-CsTenantDialPlan -Identity "Ken Myer" -PolicyName $Null
+```
+
+In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
+To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
+
 
 
 ## PARAMETERS
@@ -137,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +165,12 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs]( https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs]( https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

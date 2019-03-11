@@ -17,7 +17,7 @@ SharePoint Patterns and Practices (PnP) contains a library of PowerShell command
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
-_**Applies to:** SharePoint Online | SharePoint 2016 | SharePoint 2013_
+_**Applies to:** SharePoint Online | SharePoint 2019 | SharePoint 2016 | SharePoint 2013_
 
 ## Installation #
 
@@ -29,6 +29,7 @@ If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
 |SharePoint Online|```Install-Module SharePointPnPPowerShellOnline ```|
+|SharePoint 2019|```Install-Module SharePointPnPPowerShell2019```|
 |SharePoint 2016|```Install-Module SharePointPnPPowerShell2016```|
 |SharePoint 2013|```Install-Module SharePointPnPPowerShell2013```|
 
@@ -236,7 +237,7 @@ Cmdlet|Description|Platform
 **[Set&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Set-PnPField.md)** |Changes one or more properties of a field in a specific list or for the whole web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Add&#8209;PnPFieldFromXml](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldFromXml.md)** |Adds a field to a list or as a site column based upon a CAML/XML field definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Add&#8209;PnPTaxonomyField](../../sharepoint-ps/sharepoint-pnp/Add-PnPTaxonomyField.md)** |Add a taxonomy field|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+
 
 
 ### Files and Folders 
@@ -296,7 +297,7 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Add-PnPView.md)** |Adds a view to a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Get-PnPView.md)** |Returns one or all views from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Remove-PnPView.md)** |Deletes a view from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-
+**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 ### Microsoft Graph 
 Cmdlet|Description|Platform

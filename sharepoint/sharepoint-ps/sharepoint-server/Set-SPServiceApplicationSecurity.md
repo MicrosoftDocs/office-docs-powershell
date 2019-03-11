@@ -30,9 +30,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
+$sa = Get-SPServiceApplication -Identity <ID>
+$security = Get-SPServiceApplicationSecurity $sa -Admin
+$principal = New-SPClaimsPrincipal contoso\johndoe -IdentityType WindowsSamAccountName
 Grant-SPObjectSecurity $security $principal "Full Control"
-Set-SPServiceApplicationSecurity $serviceApp -Admin $security
+Set-SPServiceApplicationSecurity $sa -Admin $security
 ```
 
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application and adds a new user principal to that ACL.

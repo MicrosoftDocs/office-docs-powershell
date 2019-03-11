@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOAuthConfiguration
@@ -240,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -256,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -272,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-{{Fill ClientAdalAuthOverride Description}}
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
 
 ```yaml
 Type: ClientAdalAuthOverride

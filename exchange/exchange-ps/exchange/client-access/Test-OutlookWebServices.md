@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Test-OutlookWebServices
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 

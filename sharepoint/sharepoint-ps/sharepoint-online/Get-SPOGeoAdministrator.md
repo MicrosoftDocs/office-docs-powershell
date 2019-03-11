@@ -3,12 +3,15 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOGeoAdministrator
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOGeoAdministrator
 
 ## SYNOPSIS
-This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current Multi-Geographics tenant
+This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current Multi-Geographics tenant.
 
 ## SYNTAX
 
@@ -21,10 +24,11 @@ Get-SPOGeoAdministrator [<CommonParameters>]
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The `Get-SPOGeoAdministrator` cmdlet a single parameter set and matches a user or a list of users which has the ability to do changes globally in the SharePoint Organization.
-Running this Cmdlet on a single tenant organization will lead to a error -4, which means that you're not in a multi-Geo Tenant.
+The `Get-SPOGeoAdministrator` cmdlet has a single parameter set and matches a user or a list of users which has the ability to do changes globally in the geo location that you are connected to.
 
-You must be a SharePoint Online global administrator and you must have a Multi-Geo Tenant to run the `Get-SPOGeoAdministrator` cmdlet.
+Running this cmdlet on a non-multi-geo tenant organization will return error -4.
+
+You must be a SharePoint Online or global administrator and you must have a the Multi-Geo Capabilities in Office 365 service plan to run the `Get-SPOGeoAdministrator` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
@@ -35,8 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 Get-SPOGeoAdministrator 
 ```
-You will get a SharePoint Online User user or security group that are Multi-Geographic administrators on the current multi-geo Tenant
-
+This cmdlet will output a SharePoint Online user or security group that is Multi-Geographic administrators on the current multi-geo tenant.
 
 ## PARAMETERS
 
@@ -46,6 +49,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+
+[Add or remove a geo administrator ](https://docs.microsoft.com/Office365/Enterprise/add-a-sharepoint-geo-admin)
 
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 

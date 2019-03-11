@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOfficeStoreAppsDefaultActivation

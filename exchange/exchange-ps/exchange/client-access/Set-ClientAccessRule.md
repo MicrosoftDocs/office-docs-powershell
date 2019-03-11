@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2019, Exchange Online
 title: Set-ClientAccessRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -468,7 +471,7 @@ The UserRecipientFilter parameter specifies a condition for the client access ru
 
 - CountryOrRegion
 
-- CustomAttribute1-15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 

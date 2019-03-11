@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsEdgeAllowList
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsEdgeAllowList
@@ -70,8 +73,6 @@ With the allowed domain list created, the final command in the example can then 
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-$newAllowList = New-CsEdgeAllowList -AllowedDomain $x,$y
-
 $x = New-CsEdgeDomainPattern -Domain "contoso.com"
 
 $y = New-CsEdgeDomainPattern -Domain "fabrikam.com"
