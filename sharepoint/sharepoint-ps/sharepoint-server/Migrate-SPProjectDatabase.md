@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPProjectDatabase
