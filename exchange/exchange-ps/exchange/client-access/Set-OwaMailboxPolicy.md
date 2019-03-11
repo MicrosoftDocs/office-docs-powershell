@@ -12,7 +12,6 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 # Set-OwaMailboxPolicy
 
 ## SYNOPSIS
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-OwaMailboxPolicy cmdlet to configure existing Outlook on the web mailbox policies.
@@ -21,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-```powershell
+```
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ActionForUnknownFileAndMIMETypes <Allow | ForceSave | Block>]
  [-ActiveSyncIntegrationEnabled <$true | $false>]
@@ -128,7 +127,6 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-
 In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Office 365, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
 Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
@@ -172,7 +170,6 @@ This example disables Outlook UserVoice for the default mailbox policy in Office
 ## PARAMETERS
 
 ### -Identity
-
 The Identity parameter specifies the Outlook on the web mailbox policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -194,7 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActionForUnknownFileAndMIMETypes
-
 The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists for file types and MIME types. Valid values are:
 
 - Allow (This is the default value.)
@@ -216,7 +212,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSyncIntegrationEnabled
-
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
 - $true: ActiveSync is available in Outlook on the web. This is the default value.
@@ -236,7 +231,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllAddressListsEnabled
-
 The AllAddressListsEnabled parameter specifies which address lists are available in Outlook on the web. Valid values are:
 
 - $true: All address lists are visible in Outlook on the web. This is the default value.
@@ -256,7 +250,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCopyContactsToDeviceAddressBook
-
 The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can copy the contents of their Contacts folder to a mobile device's native address book when using Outlook on the web for devices. Valid values are:
 
 - $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This is the default value.
@@ -276,7 +269,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedFileTypes
-
 The AllowedFileTypes parameter specifies the attachment file types (file extensions) that can be saved locally or viewed from Outlook on the web. The default values are:
 
 .avi, .bmp, .doc, .docm, .docx, .gif, .jpg, .mp3, .one, .pdf, .png, .ppsm, .ppsx, .ppt, .pptm, .pptx, .pub, .rpmsg, .rtf, .tif, .tiff, .txt, .vsd, .wav, .wma, .wmv, .xls, .xlsb, .xlsm, .xlsx, .zip
@@ -304,7 +296,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedMimeTypes
-
 The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
 - image/bmp
@@ -338,7 +329,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-
 The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
@@ -362,7 +352,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedFileTypes
-
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
 .ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .chm, .cmd, .com, .cpl, .csh, .exe, .fxp, .gadget, .hlp, .hta, .htc, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
@@ -390,7 +379,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedMimeTypes
-
 The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
 - application/hta
@@ -432,7 +420,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook on the web. Valid values are:
 
 - $true: The Calendar is available in Outlook on the web. This is the default value.
@@ -452,7 +439,6 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-
 This parameter is available or functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
@@ -474,7 +460,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClassicAttachmentsEnabled
-
 The ClassicAttachmentsEnabled parameter specifies whether users can attach local files as regular email attachments in Outlook on the web. Valid values are:
 
 - $true: Users can attach local files to email messages in Outlook on the web. This is the default value.
@@ -494,7 +479,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalAccessPolicy
-
 This parameter is available only in the cloud-based service.
 
 The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additionally configure a Conditional Access policy in the Azure Active Directory Portal.
@@ -520,7 +504,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
@@ -540,7 +523,6 @@ Accept wildcard characters: False
 ```
 
 ### -ContactsEnabled
-
 The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook on the web. Valid values are:
 
 - $true: Contacts are available in Outlook on the web. This is the default value.
@@ -560,7 +542,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultClientLanguage
-
 This parameter has been deprecated and is no longer used.
 
 ```yaml
@@ -576,7 +557,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
-
 The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
 Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
@@ -594,7 +574,6 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
@@ -616,7 +595,6 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPrivateComputersEnabled
-
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for private computer sessions. Valid values are:
 
 - $true: Open is available for attachments in Outlook on the web for private computer sessions. This is the default value.
@@ -638,7 +616,6 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPublicComputersEnabled
-
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
 
 - $true: Open is available for attachments in Outlook on the web for public computer sessions. This is the default value.
@@ -660,7 +637,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFacebook
-
 This parameter is available only in the cloud-based service.
 
 The DisableFacebook switch specifies whether users can synchronize their Facebook contacts to their Contacts folder in Outlook on the web. By default, Facebook integration is enabled.
@@ -684,7 +660,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPhotosEnabled
-
 The DisplayPhotosEnabled parameter specifies whether users see sender photos in Outlook on the web. Valid values are:
 
 - $true: Users see sender photos in Outlook on the web. This is the default value.
@@ -704,7 +679,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
@@ -722,7 +696,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitLogonEnabled
-
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
 - $true: A user with the required permissions is able to open someone else's mailbox in Outlook on the web. This is the default value.
@@ -742,7 +715,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalSPMySiteHostURL
-
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
@@ -760,7 +732,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveAttachmentFilteringEnabled
-
 The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are filtered before they can be saved from Outlook on the web. Valid values are:
 
 - $true: The attachments specified by the ForceSaveFileTypes parameter are filtered before they can be saved from Outlook on the web.
@@ -780,7 +751,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveFileTypes
-
 The ForceSaveFileTypes parameter specifies the attachment file types (file extensions) that can only be saved from Outlook on the web (not opened). The default values are:
 
 .ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dcr, .dir, .exe, .fxp, .gadget, .hlp, .hta, .htm, .html, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msh, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .spl, .swf, .tmp, .url, .vb, .vbe, .vbs, .vsmacro, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
@@ -808,7 +778,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveMimeTypes
-
 The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
 - Application/futuresplash
@@ -844,7 +813,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWacViewingFirstOnPrivateComputers
-
 The ForceWacViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) before opening the file in the local application. Valid values are:
 
 - $true: Private computers must first preview an Office file as a web page in Office Online Server before opening the file.
@@ -866,7 +834,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWacViewingFirstOnPublicComputers
-
 The ForceWacViewingFirstOnPublicComputers parameter specifies whether public computers must first preview an Office file as a web page in Office Online Server before opening the file in the local application. Valid values are:
 
 - $true: Public computers must first preview an Office file as a web page in Office Online Server before opening the file.
@@ -888,7 +855,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWebReadyDocumentViewingFirstOnPrivateComputers
-
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The ForceWebReadyDocumentViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
@@ -912,7 +878,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWebReadyDocumentViewingFirstOnPublicComputers
-
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The ForceWebReadyDocumentViewingFirstOnPublicComputers parameter specifies whether Public computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
@@ -936,7 +901,6 @@ Accept wildcard characters: False
 ```
 
 ### -FreCardsEnabled
-
 This parameter is available only in the cloud-based service.
 
 The FreCardsEnabled parameter specifies whether the theme, signature, and phone cards are available in Outlook on the web. Valid values are:
@@ -958,7 +922,6 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalAddressListEnabled
-
 The GlobalAddressListEnabled parameter specifies whether the global address list is available in Outlook on the web. Valid values are:
 
 - $true: The global address list is visible in Outlook on the web. This is the default value.
@@ -978,7 +941,6 @@ Accept wildcard characters: False
 ```
 
 ### -GroupCreationEnabled
-
 This parameter is available or functional only in the cloud-based service.
 
 The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook on the web. Valid values are:
@@ -1000,7 +962,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingEnabled
-
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. Valid values are:
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
@@ -1020,7 +981,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingType
-
 The InstantMessagingType parameter specifies the type of instant messaging provider in Outlook on the web. Valid values are:
 
 - None: This is the default value in on-premises Exchange.
@@ -1040,7 +1000,6 @@ Accept wildcard characters: False
 ```
 
 ### -InterestingCalendarsEnabled
-
 This parameter is available only in the cloud-based service.
 
 The InterestingCalendarsEnabled parameter specifies whether interesting calendars are available in Outlook on the web. Valid values are:
@@ -1062,7 +1021,6 @@ Accept wildcard characters: False
 ```
 
 ### -InternalSPMySiteHostURL
-
 The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
@@ -1080,7 +1038,6 @@ Accept wildcard characters: False
 ```
 
 ### -IRMEnabled
-
 The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
 - $true: IRM is available in Outlook on the web. This is the default value.
@@ -1100,7 +1057,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-
 The IsDefault switch specifies whether the Outlook on the web policy is the default policy that's used to configure the Outlook on the web settings for new mailboxes. You don't need to specify a value with this switch.
 
 If another policy is currently set as the default, this switch replaces the old default policy with this policy.
@@ -1118,7 +1074,6 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEnabled
-
 The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
 - $true: The Journal folder is visible in Outlook on the web. This is the default value.
@@ -1138,7 +1093,6 @@ Accept wildcard characters: False
 ```
 
 ### -JunkEmailEnabled
-
 This parameter is available only in on-premises Exchange.
 
 The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
@@ -1160,7 +1114,6 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedInEnabled
-
 This parameter is available only in the cloud-based service.
 
 The LinkedInEnabled parameter specifies whether users can synchronize their LinkedIn contacts to their Contacts folder. Valid values are:
@@ -1182,7 +1135,6 @@ Accept wildcard characters: False
 ```
 
 ### -LocalEventsEnabled
-
 This parameter is available only in the cloud-based service.
 
 The LocalEventsEnabled parameter specifies whether local events calendars are available in Outlook on the web. Valid values are:
@@ -1204,7 +1156,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogonAndErrorLanguage
-
 The LogonAndErrorLanguage parameter specifies the language that used in Outlook on the web for forms-based authentication and for error messages when a user's current language setting can't be read.
 
 A valid value is a supported Microsoft Windows Language Code Identifier (LCID). For example, 1033 is US English.
@@ -1224,7 +1175,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
 The Name parameter specifies the unique name for the policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
@@ -1240,7 +1190,6 @@ Accept wildcard characters: False
 ```
 
 ### -NotesEnabled
-
 The NotesEnabled parameter specifies whether the Notes folder is available in Outlook on the web. Valid values are:
 
 - $true: The Notes folder is visible in Outlook on the web. This is the default value.
@@ -1260,7 +1209,6 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled
-
 The OneDriveAttachmentsEnabled parameter specifies whether to allow OneDrive attachments in Outlook on the web. Valid values are:
 
 - $true: OneDrive attachments are enabled. This is the default value.
@@ -1280,7 +1228,6 @@ Accept wildcard characters: False
 ```
 
 ### -OnSendAddinsEnabled
-
 The OnSendAddinsEnabled parameter specifies whether to enable or disable on send add-ins in Outlook on the web (add-ins that support events when a user clicks Send). Valid values are:
 
 - $true: On send add-ins are enabled.
@@ -1300,7 +1247,6 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationEnabled
-
 When the OrganizationEnabled parameter is set to $false, the Automatic Reply option doesn't include external and internal options, the address book doesn't show the organization hierarchy, and the Resources tab in Calendar forms is disabled. The default value is $true.
 
 ```yaml
@@ -1316,7 +1262,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutboundCharset
-
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
 - AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This is the default value.
@@ -1338,7 +1283,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookBetaToggleEnabled
-
 This parameter is available only in the cloud-based service.
 
 The OutlookBetaToggleEnabled parameter specifies whether to enable or disable the Outlook on the web Preview toggle. The Preview toggle allows users to try the new Outlook on the web experience. Valid values are:
@@ -1360,7 +1304,6 @@ Accept wildcard characters: False
 ```
 
 ### -OWALightEnabled
-
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
 - $true: The light version of Outlook on the web is available. This is the default value.
@@ -1380,7 +1323,6 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
@@ -1402,7 +1344,6 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneticSupportEnabled
-
 The PhoneticSupportEnabled parameter specifies phonetically spelled entries in the address book. This parameter is available for use in Japan.
 
 ```yaml
@@ -1418,7 +1359,6 @@ Accept wildcard characters: False
 ```
 
 ### -PlacesEnabled
-
 This parameter is available only in the cloud-based service.
 
 The PlacesEnabled parameter specifies whether to enable or disable Places in Outlook on the web. Places lets users search, share, and map location details by using Bing. Valid values are:
@@ -1440,7 +1380,6 @@ Accept wildcard characters: False
 ```
 
 ### -PremiumClientEnabled
-
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
 - $true: The full version of Outlook Web App is available for supported browsers. This is the default value.
@@ -1460,7 +1399,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrintWithoutDownloadEnabled
-
 This parameter is available only in the cloud-based service.
 
 The PrintWithoutDownloadEnabled specifies whether to allow printing of supported files without downloading the attachment in Outlook on the web. Valid values are:
@@ -1482,7 +1420,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFoldersEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The PublicFoldersEnabled parameter specifies whether a user can browse or read items in public folders in Outlook Web App. Valid values are:
@@ -1504,7 +1441,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoverDeletedItemsEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
@@ -1526,7 +1462,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReferenceAttachmentsEnabled
-
 The ReferenceAttachmentsEnabled parameter specifies whether users can attach files from the cloud as linked attachments in Outlook on the web. Valid values are:
 
 - $true: Users can attach files that are stored in the cloud as linked attachments. If the file hasn't been uploaded to the cloud yet, the users can attach and upload the file in the same step. This is the default value.
@@ -1546,7 +1481,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemindersAndNotificationsEnabled
-
 The RemindersAndNotificationsEnabled parameter specifies whether notifications and reminders are enabled in Outlook on the web. Valid values are:
 
 - $true: Notifications and reminders are enabled in Outlook on the web. This is the default value.
@@ -1568,7 +1502,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-
 The ReportJunkEmailEnabled parameter specifies whether users can report messages to Microsoft or unsubscribe from messages in Outlook on the web. Valid values are:
 
 - $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
@@ -1590,7 +1523,6 @@ Accept wildcard characters: False
 ```
 
 ### -RulesEnabled
-
 The RulesEnabled parameter specifies whether a user can view, create, or modify server-side rules in Outlook on the web. Valid values are:
 
 - $true: Users can view, create, or modify server-side rules in Outlook on the web. This is the default value.
@@ -1610,7 +1542,6 @@ Accept wildcard characters: False
 ```
 
 ### -SatisfactionEnabled
-
 The SatisfactionEnabled parameter specifies whether to enable or disable the satisfaction survey. Valid values are:
 
 - $true: The satisfaction survey is enabled. This is the default value.
@@ -1630,7 +1561,6 @@ Accept wildcard characters: False
 ```
 
 ### -SaveAttachmentsToCloudEnabled
-
 The SaveAttachmentsToCloudEnabled parameter specifies whether users can save regular email attachments to the cloud. Valid values are:
 
 - $true: Users can save regular email attachments to the cloud. This is the default value.
@@ -1650,7 +1580,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFoldersEnabled
-
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
 - $true: Search Folders are visible in Outlook on the Web. This is the default value.
@@ -1670,7 +1599,6 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoEnabled
-
 The SetPhotoEnabled parameter specifies whether users can add, change, and remove their sender photo in Outlook on the web. Valid values are:
 
 - $true: Users can manage their photos in Outlook on the web. This is the default value.
@@ -1690,7 +1618,6 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoURL
-
 The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
 
 ```yaml
@@ -1706,7 +1633,6 @@ Accept wildcard characters: False
 ```
 
 ### -SignaturesEnabled
-
 The SignaturesEnabled parameter specifies whether to enable or disable the use of signatures in Outlook on the web. Valid values are:
 
 - $true: Signatures are available in Outlook on the web. This is the default value.
@@ -1726,7 +1652,6 @@ Accept wildcard characters: False
 ```
 
 ### -SilverlightEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The SilverlightEnabled parameter specifies whether a user can use Microsoft Silverlight features in Outlook Web App. Valid values are:
@@ -1748,7 +1673,6 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
-
 This parameter is available only in the cloud-based service.
 
 The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
@@ -1770,7 +1694,6 @@ Accept wildcard characters: False
 ```
 
 ### -SMimeEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. Valid values are:
@@ -1794,7 +1717,6 @@ Accept wildcard characters: False
 ```
 
 ### -SpellCheckerEnabled
-
 This parameter is available or functional only in Exchange Server 2010.
 
 The SpellCheckerEnabled parameter specifies whether to enable or disable the built-in Outlook Web App spell checker in the full version of Outlook Web App. Valid values are:
@@ -1818,7 +1740,6 @@ Accept wildcard characters: False
 ```
 
 ### -TasksEnabled
-
 The TasksEnabled parameter specifies whether Tasks folder is available in Outlook on the web. Valid values are:
 
 - $true: The Tasks folder is available in Outlook on the web. This is the default value.
@@ -1840,7 +1761,6 @@ Accept wildcard characters: False
 ```
 
 ### -TextMessagingEnabled
-
 The TextMessagingEnabled parameter specifies whether users can send and receive text messages in Outlook on the web. Valid values are:
 
 - $true: Text messaging is available in Outlook on the web. This is the default value.
@@ -1862,7 +1782,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThemeSelectionEnabled
-
 The ThemeSelectionEnabled parameter specifies whether users can change the theme in Outlook on the web. Valid values are:
 
 - $true: Users can specify the theme in Outlook on the web. This is the default value.
@@ -1882,7 +1801,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAttachmentsEnabled
-
 This parameter is available only in the cloud-based service.
 
 This parameter has been deprecated and is no longer used.
@@ -1902,7 +1820,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyFileProvidersEnabled
-
 This parameter is available only in the cloud-based service.
 
 The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
@@ -1924,7 +1841,6 @@ Accept wildcard characters: False
 ```
 
 ### -UMIntegrationEnabled
-
 The UMIntegrationEnabled parameter specifies whether Unified Messaging (UM) integration is enabled in Outlook on the web. Valid values are:
 
 - $true: UM integration is enabled in Outlook on the web. This is the default value.
@@ -1948,7 +1864,6 @@ Accept wildcard characters: False
 ```
 
 ### -UNCAccessOnPrivateComputersEnabled
-
 This parameter is available only in on-premises Exchange.
 
 This parameter has been deprecated and is no longer used.
@@ -1966,7 +1881,6 @@ Accept wildcard characters: False
 ```
 
 ### -UNCAccessOnPublicComputersEnabled
-
 This parameter is available only in on-premises Exchange.
 
 This parameter has been deprecated and is no longer used.
@@ -1984,7 +1898,6 @@ Accept wildcard characters: False
 ```
 
 ### -UseGB18030
-
 The UseGB18030 parameter specifies whether to use the GB18030 character set instead of GB2312 in Outlook on the web. Valid values are:
 
 - $true: GB18030 is used wherever GB2312 would have been used in Outlook on the web.
@@ -2004,7 +1917,6 @@ Accept wildcard characters: False
 ```
 
 ### -UseISO885915
-
 The UseISO885915 parameter specifies whether to use the character set ISO8859-15 instead of ISO8859-1 in Outlook on the web. Valid values are:
 
 - $true: ISO8859-15 is used wherever ISO8859-1 would have been used in Outlook on the web.
@@ -2024,7 +1936,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserVoiceEnabled
-
 This parameter is available only in the cloud-based service.
 
 The UserVoiceEnabled parameter specifies whether to enable or disable Outlook UserVoice in Outlook on the web. Outlook UserVoice is a customer feedback area that's available in Office 365. Valid values are:
@@ -2046,7 +1957,6 @@ Accept wildcard characters: False
 ```
 
 ### -WacEditingEnabled
-
 The WacEditingEnabled parameter specifies whether to enable or disable editing documents in Outlook on the web by using Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). Valid values are:
 
 - $true: Users can edit supported documents in Outlook on the web. This is the default value.
@@ -2066,7 +1976,6 @@ Accept wildcard characters: False
 ```
 
 ### -WacExternalServicesEnabled
-
 The WacExternalServicesEnabled parameter specifies whether to enable or disable external services when viewing documents in Outlook on the web (for example, machine translation) by using Office Online Server. Valid values are:
 
 - $true: External services are enabled when viewing supported documents in Outlook on the web. This is the default value.
@@ -2086,7 +1995,6 @@ Accept wildcard characters: False
 ```
 
 ### -WacOMEXEnabled
-
 The WacOMEXEnabled parameter specifies whether to enable or disable apps for Outlook in Outlook on the web in Office Online Server. Valid values are:
 
 - $true: apps for Outlook are enabled in Outlook on the web.
@@ -2106,7 +2014,6 @@ Accept wildcard characters: False
 ```
 
 ### -WacViewingOnPrivateComputersEnabled
-
 The WacViewingOnPrivateComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents private computer sessions in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). By default, all Outlook on the web sessions are considered to be on private computers. Valid values are:
 
 - $true: In private computer sessions, users can view supported Office documents in the web browser. This is the default value.
@@ -2128,7 +2035,6 @@ Accept wildcard characters: False
 ```
 
 ### -WacViewingOnPublicComputersEnabled
-
 The WacViewingOnPublicComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents in public computer sessions in Office Online Server. Valid values are:
 
 - $true: In public computer sessions, users can view supported Office documents in the web browser. This is the default value.
@@ -2150,7 +2056,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherEnabled
-
 This parameter is available only in the cloud-based service.
 
 The WeatherEnabled parameter specifies whether to enable or disable weather information in the calendar in Outlook on the web. Valid values are:
@@ -2172,7 +2077,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebPartsFrameOptionsType
-
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
 - None: There are no restrictions on displaying Outlook on the web content in a frame.
@@ -2194,7 +2098,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyDocumentViewingForAllSupportedTypes
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
@@ -2216,7 +2119,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyDocumentViewingOnPrivateComputersEnabled
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
@@ -2240,7 +2142,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyDocumentViewingOnPublicComputersEnabled
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
@@ -2264,7 +2165,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyDocumentViewingSupportedFileTypes
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 This is a read-only parameter that can't be modified; use the WebReadyFileTypes parameter instead.
@@ -2282,7 +2182,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyDocumentViewingSupportedMimeTypes
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead.
@@ -2300,7 +2199,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyFileTypes
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 The WebReadyFileTypes parameter specifies the attachment file types (file extensions) that can be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported file types:
@@ -2346,7 +2244,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebReadyMimeTypes
-
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
 The WebReadyMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
@@ -2390,7 +2287,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
@@ -2406,7 +2302,6 @@ Accept wildcard characters: False
 ```
 
 ### -WSSAccessOnPrivateComputersEnabled
-
 This parameter has been deprecated and is no longer used.
 
 ```yaml
@@ -2422,7 +2317,6 @@ Accept wildcard characters: False
 ```
 
 ### -WSSAccessOnPublicComputersEnabled
-
 This parameter has been deprecated and is no longer used.
 
 ```yaml
@@ -2438,15 +2332,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
+###  
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
+###  
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
