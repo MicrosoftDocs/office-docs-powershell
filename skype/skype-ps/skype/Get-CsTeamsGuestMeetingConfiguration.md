@@ -5,6 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Get-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsGuestMeetingConfiguration
@@ -35,7 +38,7 @@ The TeamsGuestMeetingConfiguration designates which meeting features guests leve
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsGuestMeetingConfiguration
+Get-CsTeamsGuestMeetingConfiguration
 ```
 
 Returns the TeamsGuestMeetingConfiguration set in your organization.
@@ -104,7 +107,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

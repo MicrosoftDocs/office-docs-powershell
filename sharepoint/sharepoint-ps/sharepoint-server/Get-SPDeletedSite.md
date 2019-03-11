@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDeletedSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPDeletedSite
@@ -30,7 +33,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Use the Get-SPDeletedSite cmdlet to display a list of deleted site collections by using the Identity parameter.
-If no parameter is specified, then all deleted site collections in the farm are displayed.
+If no parameter is specified, then all deleted site collections in the farm are displayed. Deleted Sites are sites in the process of gradual delete. For more information on gradual delete, see [Remove-SPSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/remove-spsite?view=sharepoint-ps).
 
 Unlike the Get-SPSite cmdlet that uses the host name and scheme for the Identity parameter (that is, http://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
 Typically, the forward slash character (/) begins the relative URL and also denotes the root site.

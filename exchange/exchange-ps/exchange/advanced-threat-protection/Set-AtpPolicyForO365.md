@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AtpPolicyForO365
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -22,10 +25,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [-AllowClickThrough <$true | $false>]
- [-BlockUrls <MultiValuedProperty>] [-Confirm] [-EnableATPForSPOTeamsODB <$true | $false>]
- [-EnableSafeLinksForClients <$true | $false>] [-EnableSafeLinksForWebAccessCompanion <$true | $false>]
- [-TrackClicks <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
+ [-AllowClickThrough <$true | $false>]
+ [-BlockUrls <MultiValuedProperty>]
+ [-Confirm]
+ [-EnableATPForSPOTeamsODB <$true | $false>]
+ [-EnableSafeLinksForClients <$true | $false>]
+ [-TrackClicks <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +52,21 @@ Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $
 This example enables Safe Links for Office 365 ProPlus clients and ATP for SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the ATP policy that you want to modify. There's only one policy named Default.
+
+```yaml
+Type: AtpPolicyForO365IdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AllowClickThrough
 The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Office 365 ProPlus. Valid values are:
@@ -138,36 +160,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForWebAccessCompanion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ATP policy that you want to modify. There's only one policy named Default.
-
-```yaml
-Type: AtpPolicyForO365IdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -TrackClicks
 The TrackClicks parameter specifies whether to track user clicks related to blocked URLs. Valid values are:
 
@@ -208,12 +200,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

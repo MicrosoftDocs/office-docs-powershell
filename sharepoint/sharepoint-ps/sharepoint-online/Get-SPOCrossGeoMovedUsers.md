@@ -3,12 +3,15 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMovedUsers
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOCrossGeoMovedUsers
 
 ## SYNOPSIS
-In a multi-geo tenant returns the SharePoint Online user (or users) that had been moved
+In a multi-geo tenant returns the SharePoint Online user (or users) that had been moved.
 
 
 ## SYNTAX
@@ -18,8 +21,7 @@ Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to get the moved users out and in the current SPO Site
-
+This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the moved users out and in the current SPO site.
 
 ## EXAMPLES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ImapSettings
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -404,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCommandSize
-The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 40 through 1024. The default value is 512.
+The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 1024 through 16384. The default value is 10240.
 
 ```yaml
 Type: Int32

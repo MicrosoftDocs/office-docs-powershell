@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -275,9 +278,9 @@ Note: You should only modify this parameter under the direction of Microsoft Cus
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Sender names are displayed in messages sent to reicpients in the remote domain. This is the default value.
+- $true: Sender names are displayed in messages sent to recipients in the remote domain. This is the default value.
 
-- $false. Sender names aren't displayed in messages sent to reicpients in the remote domain. 
+- $false. Sender names aren't displayed in messages sent to recipients in the remote domain. 
 
 ```yaml
 Type: $true | $false
@@ -568,7 +571,7 @@ Accept wildcard characters: False
 ### -TrustedMailInboundEnabled
 The TrustedMailInboundEnabled parameter specifies whether messages from senders in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Inbound messages from senders in the romte domain are considered safe and will bypass content filtering and recipient filtering.
+- $true: Inbound messages from senders in the remote domain are considered safe and will bypass content filtering and recipient filtering.
 
 - $false: Inbound messages from senders in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
@@ -585,9 +588,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedMailOutboundEnabled
-The TrustedMailInboundEnabled parameter specifies whether messages sent to recipients in the remote domain are treated as trusted messages. Valid values are:
+The TrustedMailOutboundEnabled parameter specifies whether messages sent to recipients in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Outbound messages to recipients in the romte domain are considered safe and will bypass content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
+- $true: Outbound messages to recipients in the remote domain are considered safe and will bypass content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
 
 - $false: Outbound messages to recipients in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
