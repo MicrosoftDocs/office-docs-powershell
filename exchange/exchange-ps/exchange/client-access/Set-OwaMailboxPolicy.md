@@ -1281,8 +1281,6 @@ Accept wildcard characters: False
 
 ### -OnSendAddinsEnabled
 
-This parameter is available or functional only in the cloud-based service.
-
 The OnSendAddinsEnabled parameter specifies whether to enable or disable on send add-ins in Outlook on the web (add-ins that support events when a user clicks Send). Valid values are:
 
 - $true: On send add-ins are enabled.
@@ -1293,7 +1291,7 @@ The OnSendAddinsEnabled parameter specifies whether to enable or disable on send
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1753,7 +1751,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom Sharepoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
 
 - $true: The custom SharePoint page is skipped when a user creates an Office 365 group in Outlook on the web. This is the default value.
 
