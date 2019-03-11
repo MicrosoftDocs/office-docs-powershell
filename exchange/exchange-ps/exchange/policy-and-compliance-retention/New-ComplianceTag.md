@@ -21,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-ComplianceTag [-Name] <String> [-Comment <String>] [-Confirm] [-EventType <ComplianceRuleIdParameter>]
- [-IsRecordLabel <$true | $false>] [-RetentionAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionType <String>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+New-ComplianceTag [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-IsRecordLabel <$true | $false>]
+ [-Notes <String>]
+ [-RetentionAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionType <String>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -127,6 +135,21 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameter specifies an optional note. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is a user note".
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
