@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -Universal
-The Universal swtich changes the scope of the group from Global or DomainLocal to Universal. You don't need to specify a value with this switch.
+The Universal switch changes the scope of the group from Global or DomainLocal to Universal. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
