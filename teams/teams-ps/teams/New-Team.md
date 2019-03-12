@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-Use this parameter to specify the GroupId of a group you would like to convert to a team.
+Use this parameter to specify the ExternalDirectoryObjectId of a group you would like to convert to a team.
 If you are using this parameter, do not specify other parameters.
 
 ```yaml
