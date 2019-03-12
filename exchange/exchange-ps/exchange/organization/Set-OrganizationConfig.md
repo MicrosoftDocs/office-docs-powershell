@@ -575,7 +575,11 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsPaymentsEnabled Description}}
+The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+
+- $true: Online payments are enabled.
+
+- $false: Online payments are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -592,7 +596,11 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsSocialSharingRestricted Description}}
+The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+
+- $true: Social sharing options are restricted.
+
+- $false: Users can see social sharing options inside Bookings. This is the default value.
 
 ```yaml
 Type: $true | $false

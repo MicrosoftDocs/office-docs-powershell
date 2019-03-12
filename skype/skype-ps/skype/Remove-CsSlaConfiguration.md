@@ -116,6 +116,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
+[Get-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
 
-[Set-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-csslaconfiguration?view=skype-ps)
+[Set-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/set-csslaconfiguration?view=skype-ps)

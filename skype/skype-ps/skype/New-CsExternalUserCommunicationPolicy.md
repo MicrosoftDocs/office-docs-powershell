@@ -213,10 +213,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Get-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
+[Get-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)

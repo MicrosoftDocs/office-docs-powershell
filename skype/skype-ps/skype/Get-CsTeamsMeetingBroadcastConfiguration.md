@@ -32,7 +32,7 @@ Get-CsTeamsMeetingBroadcastConfiguration [-Tenant <Guid>] [-ExposeSDNConfigurati
 ```
 
 ## DESCRIPTION
-Tenant level configuration for broadcast events in Teams
+Tenant level configuration for broadcast events in Teams
 
 ## EXAMPLES
 
