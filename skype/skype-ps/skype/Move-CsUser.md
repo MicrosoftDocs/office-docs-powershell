@@ -35,9 +35,9 @@ The Move-CsUser cmdlet enables you to move a user account enabled for Skype for 
 The Move-CsUser cmdlet affects only the user's Skype for Business Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.  
 
 When moving a user to or from Office 365 (either Skype for Business Online or Teams):
- - Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/en-us/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
-  - To move a user to Office 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments there will be variants of this address. For more details, see [Move users between on-premises and cloud](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
- - When migrating from on-premises to the cloud, meetings are migrated from Skype for Business Server to online. If the `MoveToTeams` switch is specified, the meetings will be migrated to Teams meetings. Otherwise, meeetings are migrated to Skype for Business Online. Teams-only users can still join meetings hosted in Skype for Business. For details see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+ - Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
+  - To move a user to Office 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments there will be variants of this address. For more details, see [Move users between on-premises and cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
+ - When migrating from on-premises to the cloud, meetings are migrated from Skype for Business Server to online. If the `MoveToTeams` switch is specified, the meetings will be migrated to Teams meetings. Otherwise, meeetings are migrated to Skype for Business Online. Teams-only users can still join meetings hosted in Skype for Business. For details see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 - Moving a user to Teams is achieved by specifying the MoveToTeams switch. This performs the same operations as a move to Skype for Business Online (without the specifying -MoveToTeams) and also performs the following actions:
        - TeamsUpgradePolicy with Mode=TeamsOnly is assigned to the online user account. 
        - Meeting migration is triggered to move meetings to Teams instead of Skype for Business Online. This functionality is currently available to TAP customers only. For customers not in TAP, meetings are always migrated to Skype for Business Online. 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -HostedMigrationOverrideUrl
 
-The hosted migration service is the service in Office 365 that performs user moves. By default, there is no need to specify a value for this parameter, as long as the hosting provider has its AutoDiscover URL properly configured and you are using an admin account the ends in .onmicrosoft.com. If you are using a user account from on-premises that synchronized to the cloud, you must specify this parameter.  See [Required administrative credentials](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud#required-administrative-credentials).
+The hosted migration service is the service in Office 365 that performs user moves. By default, there is no need to specify a value for this parameter, as long as the hosting provider has its AutoDiscover URL properly configured and you are using an admin account the ends in .onmicrosoft.com. If you are using a user account from on-premises that synchronized to the cloud, you must specify this parameter.  See [Required administrative credentials](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud#required-administrative-credentials).
 
 
 
@@ -346,11 +346,11 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 ## RELATED LINKS
 
-[Move users between on-premises and cloud](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
+[Move users between on-premises and cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
 
-[Skype for Business Hybrid Solutions](https://docs.microsoft.com/en-us/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
+[Skype for Business Hybrid Solutions](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 

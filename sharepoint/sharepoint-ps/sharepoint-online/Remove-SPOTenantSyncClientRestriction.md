@@ -36,7 +36,7 @@ The `Remove-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
 ```
 Remove-SPOTenantSyncClientRestriction
 ```
-This example returns  the value of False for the TenantRestrictionEnabled property.
+This example returns  the value of False for the TenantRestrictionEnabled property.
 
 
 ## PARAMETERS

@@ -6,12 +6,14 @@ author: vesajuvonen
 ms.author: vesaj
 ms.reviewer:
 ---
+
 # New-PnPUPABulkImportJob
 
 ## SYNOPSIS
+
 Submit up a new user profile bulk import job.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPUPABulkImportJob -Folder <String>
@@ -23,24 +25,25 @@ New-PnPUPABulkImportJob -Folder <String>
 ```
 
 ## DESCRIPTION
-See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
+See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 PS C:\>Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
-@" 
+@"
  {
   "value": [
     {
       "IdName": "mikaels@contoso.com",
       "Department": "PnP",
     },
-	{
+  {
       "IdName": "vesaj@contoso.com",
       "Department": "PnP",
-    }    
+    }
   ]
 }
 "@ > profiles.json
@@ -56,6 +59,7 @@ This will submit a new user profile bulk import job to SharePoint Online.
 ## PARAMETERS
 
 ### -Folder
+
 Site or server relative URL of the folder to where you want to store the import job file.
 
 ```yaml
@@ -68,6 +72,7 @@ Accept pipeline input: False
 ```
 
 ### -IdProperty
+
 The name of the identifying property in your file.
 
 ```yaml
@@ -80,6 +85,7 @@ Accept pipeline input: False
 ```
 
 ### -IdType
+
 The type of profile identifier (Email/CloudId/PrincipalName). Defaults to Email.
 
 ```yaml
@@ -92,6 +98,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
+
 The local file path.
 
 ```yaml
@@ -104,6 +111,7 @@ Accept pipeline input: False
 ```
 
 ### -UserProfilePropertyMapping
+
 Specify user profile property mapping between the import file and UPA property names.
 
 ```yaml
@@ -116,6 +124,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
+
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml

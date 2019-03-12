@@ -333,13 +333,13 @@ After you're done editing the TOC file:
 
 ### Reference
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-6
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-6
 
 - https://github.com/PowerShell/platyPS
 
-- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
 
 
 ### Install platyPS on older versions of Windows

@@ -31,7 +31,7 @@ Get-CsOnlineDialInConferencingUserInfo [-Tenant <Guid>] [-Skip <Int32>] [-First 
 ## DESCRIPTION
 This cmdlet will return users that have been enabled for audio conferencing using Microsoft or a third-party as the audio conferencing provider. If there are no users in the organization that have been enabled for audio conferencing, then the cmdlet will return no results.
 
-You can use [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet to return only users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
+You can use [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet to return only users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
 
 ## EXAMPLES
 
@@ -239,4 +239,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)

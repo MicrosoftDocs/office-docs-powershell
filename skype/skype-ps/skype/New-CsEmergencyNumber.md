@@ -96,6 +96,6 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[New-CsLocationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-cslocationpolicy?view=skype-ps)
+[New-CsLocationPolicy](https://docs.microsoft.com/powershell/module/skype/new-cslocationpolicy?view=skype-ps)
 
-[Set-CsLocationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-cslocationpolicy?view=skype-ps)
+[Set-CsLocationPolicy](https://docs.microsoft.com/powershell/module/skype/set-cslocationpolicy?view=skype-ps)
