@@ -16,13 +16,8 @@ Sets or updates one or more properties' values for a site collection.
 
 ## SYNTAX
 
-### ParamSet2
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
 ### ParamSet1
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
@@ -38,15 +33,21 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
 ```
+### ParamSet2
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+
 
 ### ParamSet3
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwners] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ParamSet4 (valid for Group Site Collection)
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
@@ -67,7 +68,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
 ```
 
@@ -75,7 +76,7 @@ Example 1 updates the owner of site collection https://contoso.sharepoint.com/si
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 15000
 ```
 
@@ -83,7 +84,7 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 3000 -StorageQuotaWarningLevel 2000
 ```
 
@@ -91,7 +92,7 @@ This example updates the settings of site collection https://contoso.sharepoint.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
 ```
 
@@ -99,14 +100,24 @@ Example 4 prevents non-owners of a site from inviting new users to the site.
 
 
 ### -----------------------EXAMPLE 5-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
 ```
 
 This example sets the quota for the site.
 
+
+
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+
+
+### -----------------------EXAMPLE 6-----------------------------
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
+```
+
+Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
 ## PARAMETERS
 
