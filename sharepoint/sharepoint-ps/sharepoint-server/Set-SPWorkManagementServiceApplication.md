@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWorkManagementServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWorkManagementServiceApplication
