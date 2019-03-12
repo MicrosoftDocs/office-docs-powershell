@@ -829,7 +829,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForExternalClients
 The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to 
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+https://docs.microsoft.com/powershell/module/skype/set-csauthconfig?view=skype-ps.
 
 ```yaml
 Type: String
@@ -845,7 +845,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForInternalClients
 The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to 
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+https://docs.microsoft.com/powershell/module/skype/set-csauthconfig?view=skype-ps.
 
 ```yaml
 Type: String

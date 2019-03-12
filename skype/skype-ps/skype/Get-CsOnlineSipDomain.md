@@ -90,4 +90,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md) 
-[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/cloud-consolidation)
+[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

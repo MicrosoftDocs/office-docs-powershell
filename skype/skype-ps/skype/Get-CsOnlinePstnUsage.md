@@ -125,4 +125,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlinePstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinepstnusage?view=skype-ps)
+[Set-CsOnlinePstnUsage](https://docs.microsoft.com/powershell/module/skype/set-csonlinepstnusage?view=skype-ps)

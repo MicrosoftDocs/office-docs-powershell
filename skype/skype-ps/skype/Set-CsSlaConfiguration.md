@@ -222,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
+[Get-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
 
-[Remove-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csslaconfiguration?view=skype-ps)
+[Remove-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/remove-csslaconfiguration?view=skype-ps)
 
