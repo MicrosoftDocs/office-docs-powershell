@@ -254,9 +254,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsBusyOptions](Get-CsBusyOptions.md)
 {{Manually Enter Get-CsBusyOptions Description Here}}
 
-### [Get-CsCallerIdPolicy](Get-CsCallerIdPolicy.md)
-{{Manually Enter Get-CsCallerIdPolicy Description Here}}
-
 ### [Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 {{Manually Enter Get-CsCallingLineIdentity Description Here}}
 
@@ -917,9 +914,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsBroadcastMeetingPolicy](Grant-CsBroadcastMeetingPolicy.md)
 {{Manually Enter Grant-CsBroadcastMeetingPolicy Description Here}}
 
-### [Grant-CsCallerIdPolicy](Grant-CsCallerIdPolicy.md)
-{{Manually Enter Grant-CsCallerIdPolicy Description Here}}
-
 ### [Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
 {{Manually Enter Grant-CsCallingLineIdentity Description Here}}
 
@@ -1162,9 +1156,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [New-CsBlockedDomain](New-CsBlockedDomain.md)
 {{Manually Enter New-CsBlockedDomain Description Here}}
-
-### [New-CsCallerIdPolicy](New-CsCallerIdPolicy.md)
-{{Manually Enter New-CsCallerIdPolicy Description Here}}
 
 ### [New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
 {{Manually Enter New-CsCallingLineIdentity Description Here}}
@@ -1712,9 +1703,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Remove-CsBusyOptions](Remove-CsBusyOptions.md)
 {{Manually Enter Remove-CsBusyOptions Description Here}}
 
-### [Remove-CsCallerIdPolicy](Remove-CsCallerIdPolicy.md)
-{{Manually Enter Remove-CsCallerIdPolicy Description Here}}
-
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 {{Manually Enter Remove-CsCallingLineIdentity Description Here}}
 
@@ -2233,9 +2221,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Set-CsBusyOptions](Set-CsBusyOptions.md)
 {{Manually Enter Set-CsBusyOptions Description Here}}
-
-### [Set-CsCallerIdPolicy](Set-CsCallerIdPolicy.md)
-{{Manually Enter Set-CsCallerIdPolicy Description Here}}
 
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 {{Manually Enter Set-CsCallingLineIdentity Description Here}}
