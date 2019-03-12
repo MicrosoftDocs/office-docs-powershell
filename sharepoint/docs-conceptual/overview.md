@@ -31,7 +31,7 @@ The TechNet Scripting Center includes many resources to help you learn the basic
 
 |**Page**|**Description**|
 |------------------|------------------|
-|[Windows PowerShell Documentation on TechNet ](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-5.1)|This section of the TechNet Library contains web copies of the core PowerShell Get-Help topics. The section also has web copies of the PowerShell Getting Started document, the PowerShell.exe help, and a PowerShell primer.|
+|[Windows PowerShell Documentation on TechNet ](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-5.1)|This section of the TechNet Library contains web copies of the core PowerShell Get-Help topics. The section also has web copies of the PowerShell Getting Started document, the PowerShell.exe help, and a PowerShell primer.|
 |[Scripting With Windows PowerShell ](https://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx)| The home page for PowerShell scripting learning resources.|
 |[Windows PowerShell Owner's Manual ](https://technet.microsoft.com/en-us/library/ee221100.aspx)|Web-based guide for getting started with PowerShell.|
 |[Windows PowerShell Quick Reference ](https://www.microsoft.com/en-us/download/details.aspx?id=30002)|Downloadable copy of the Quick Reference document that is installed with PowerShell.|

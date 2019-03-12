@@ -116,8 +116,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
+[New-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
 
-[Get-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csplatformservicesettings?view=skype-ps)
+[Get-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/get-csplatformservicesettings?view=skype-ps)
 
-[Set-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+[Set-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
