@@ -47,9 +47,9 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-    ```
-    Set-ExecutionPolicy RemoteSigned
-    ```
+  ```
+  Set-ExecutionPolicy RemoteSigned
+  ```
 
   You need to configure this setting only once on your computer, not every time you connect.
 
@@ -60,9 +60,10 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
 1. On your local computer, open Windows PowerShell and run the following command.
 
-    ```
-    $UserCredential = Get-Credential
-    ```
+   ```
+   $UserCredential = Get-Credential
+   ```
+
    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
 
 2. Run the following command.
@@ -71,23 +72,25 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
    ```
 
-    **Notes**:
+   **Notes**:
 
-    - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
+   - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
 
-    - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
+   - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
     
-    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
+   - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`
+
+   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
       
-      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
+     Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
       
-      For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+     For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command.
 
-    ```
-    Import-PSSession $Session -DisableNameChecking
-    ```
+   ```
+   Import-PSSession $Session -DisableNameChecking
+   ```
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command. 
@@ -108,7 +111,7 @@ If you receive errors, check the following requirements:
 
 - The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](../disable-access-to-exchange-online-powershell.md).
 
-- TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
+- TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
 ## See also
 
@@ -124,5 +127,4 @@ The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more 
 
 - [Set-ExecutionPolicy](https://go.microsoft.com/fwlink/p/?LinkId=389623)
 
-For more information about managing Office 365, see [Manage Office 365](https://docs.microsoft.com/en-us/Office365/).
-
+For more information about managing Office 365, see [Manage Office 365](https://docs.microsoft.com/Office365/).
