@@ -17,7 +17,7 @@ For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets](sharepoin
 Verify that you have the following administrative permissions:
 
 * You must be assigned the global administrator role on the SharePoint Online site on which you are running the PowerShell cmdlet. 
-  For more information, see [Default administrative roles and user groups](https://support.office.com/en-us/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US).
+  For more information, see [Default administrative roles and user groups](https://support.office.com/en-us/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US).
 
 **IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/en-us/library/fp161362(v=office.16).aspx).
 

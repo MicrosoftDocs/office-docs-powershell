@@ -31,7 +31,7 @@ Grant-CsTeamsMeetingBroadcastPolicy [-PolicyName] <String> [-Tenant <Guid>] [-Do
 ```
 
 ## DESCRIPTION
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to assign a policy to a user.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to assign a policy to a user.
 
 ## EXAMPLES
 

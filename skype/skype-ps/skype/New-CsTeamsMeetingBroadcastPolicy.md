@@ -24,8 +24,7 @@ New-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ## DESCRIPTION
-
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to create a new policy.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to create a new policy.
 
 ## EXAMPLES
 
@@ -41,8 +40,7 @@ Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which c
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
-
-Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
+Specifies whether this user can create broadcast events in Teams.  This settng impacts broadcasts that use both self-service and external encoder production methods. 
 
 ```yaml
 Type: Boolean
@@ -57,8 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBroadcastTranscription
-
-Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
 Type: Boolean
@@ -73,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastAttendeeVisibilityMode
-
 Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
@@ -89,8 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastRecordingMode
-
-Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
 Type: String
