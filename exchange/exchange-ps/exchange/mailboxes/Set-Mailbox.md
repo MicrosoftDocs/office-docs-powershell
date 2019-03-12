@@ -2156,7 +2156,7 @@ The DefaultAuditSet parameter specifies whether to revert the mailbox operations
 
 - Admin: Reverts the mailbox operations to log for administrators back to the default list of operations.
  
-- Delgate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
+- Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
 
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
 
