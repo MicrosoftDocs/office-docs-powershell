@@ -8,10 +8,10 @@ ms.author: kenwith
 ms.reviewer:
 ---
 
-
 # New-CsTeamsMeetingBroadcastPolicy
 
 ## SYNOPSIS
+
 New-CsTeamsMeetingBroadcastPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowBroadcastScheduling \<bool\>\] \[-AllowBroadcastTranscription \<bool\>\] \[-BroadcastAttendeeVisibilityMode \<string\>\] \[-BroadcastRecordingMode \<string\>\] \[-InMemory\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
@@ -24,11 +24,13 @@ New-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ## DESCRIPTION
+
 User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to create a new policy.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> New-CsTeamsMeetingBroadcastPolicy -Identity Students -AllowBroadcastScheduling $false 
 ```
@@ -39,7 +41,8 @@ Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which c
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
-Specifies whether this user can create broadcast events in Teams.  This settng impacts broadcasts that use both self-service and external encoder production methods. 
+
+Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
 
 ```yaml
 Type: Boolean
@@ -54,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBroadcastTranscription
+
 Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
@@ -69,8 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastAttendeeVisibilityMode
-Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
+Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
 Type: String
@@ -85,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastRecordingMode
+
 Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
@@ -100,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -115,6 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies why this policy is being created.
 
 ```yaml
@@ -130,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
@@ -145,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
 Specifies the name of the policy being created
 
 ```yaml
@@ -160,6 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
+
 Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 ```yaml
@@ -175,6 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
 Not applicable, you can only specify policies for your own logged-in tenant.
 
 ```yaml
@@ -190,6 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -206,16 +218,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-
