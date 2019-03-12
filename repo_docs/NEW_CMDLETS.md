@@ -14,7 +14,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 - You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
-- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](http://aka.ms/wmf5download) and installed on these versions of Windows:
+- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](https://aka.ms/wmf5download) and installed on these versions of Windows:
   
   - Windows Server 2012 R2
 
