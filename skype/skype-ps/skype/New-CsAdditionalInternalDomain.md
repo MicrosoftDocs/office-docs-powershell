@@ -156,7 +156,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csadditionalinternaldomain?view=skype-ps)
+[Remove-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/remove-csadditionalinternaldomain?view=skype-ps)
 
-[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
+[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
 

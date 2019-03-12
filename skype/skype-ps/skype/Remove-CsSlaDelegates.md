@@ -143,4 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Add-CsSlaDelegates](https://docs.microsoft.com/en-us/powershell/module/skype/add-cssladelegates?view=skype-ps)
+[Add-CsSlaDelegates](https://docs.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)
