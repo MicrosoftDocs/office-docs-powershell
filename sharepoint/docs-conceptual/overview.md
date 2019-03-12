@@ -6,11 +6,11 @@ By default,  Powershell is located at the following path:  <%SystemRoot%>\System
 
 PowerShell can be used by authorized admins to perform a wide variety of tasks in SharePoint on-premises and SharePoint Online. Microsoft provides the cmdlets used for these 2 systems and the Patterns and Practices (PnP) group has created an additional set of modules that provide many additional capabilities.
 
-For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets](sharepoint-server\sharepoint-server-cmdlets.md)
+For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets](sharepoint-server/sharepoint-server-cmdlets.md)
 
-For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online\sharepoint-online-cmdlets.md)
+For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online/sharepoint-online-cmdlets.md)
 
-For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets](sharepoint-pnp\sharepoint-pnp-cmdlets.md)
+For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets](sharepoint-pnp/sharepoint-pnp-cmdlets.md)
 
 #### SharePoint Online ####
 
