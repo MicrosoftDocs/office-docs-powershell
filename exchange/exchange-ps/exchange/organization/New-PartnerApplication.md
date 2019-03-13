@@ -25,9 +25,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
  [-AcceptSecurityIdentifierInformation <$true | $false>]
  [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <$true | $false>]
+ [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -37,9 +40,12 @@ New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm 
 New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
  [-AcceptSecurityIdentifierInformation <$true | $false>]
  [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <$true | $false>]
+ [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -61,6 +67,21 @@ New-PartnerApplication -Name HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac0
 This example creates a new HRApp partner application named HRApp.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies a name for the partner application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApplicationIdentifier
 The ApplicationIdentifier parameter specifies a unique application identifier for the partner application that uses an authorization server. When specifying a value for the ApplicationIdentifier parameter, you must also use the UseAuthServer parameter.
@@ -94,21 +115,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies a name for the partner application.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AcceptSecurityIdentifierInformation
 The AcceptSecurityIdentifierInformation parameter specifies whether Exchange should accept security identifiers (SIDs) from another trusted Active Directory forest for the partner application. By default, new partner applications are configured to not accept SIDs from another forest. If you're in deployment with a trusted forest, set the parameter to $true.
 
@@ -127,7 +133,7 @@ Accept wildcard characters: False
 ### -AccountType
 The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
 
-- OrganizationalAccount: This is the default value
+- OrganizationalAccount (This is the default value)
 
 - ConsumerAccount
 
@@ -136,6 +142,40 @@ Type: OrganizationalAccount | ConsumerAccount
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActAsPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppOnlyPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +227,23 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IssuerIdentifier
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
