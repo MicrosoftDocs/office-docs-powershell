@@ -89,9 +89,10 @@ Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defi
 
 The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the Get-MonitoringItemIdentity (https://go.microsoft.com/fwlink/p/?LinkId=510841) cmdlet to see what probes are active.
 
-This example lists the probes running in the backend services on a Mailbox server.
+This example lists the probes running in the backend services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook.protocol | ?{$_.Name -like '*probe'}`.
 
-This example lists the probes running in the client access services on a Mailbox server.
+
+This example lists the probes running in the client access services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook | ?{$_.Name -like '*probe'}`.
 
 For more information on probes and the monitoring framework, see Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510838), Managed Availability and Server Health (https://go.microsoft.com/fwlink/p/?LinkId=510839), and Customizing Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510840)
 
