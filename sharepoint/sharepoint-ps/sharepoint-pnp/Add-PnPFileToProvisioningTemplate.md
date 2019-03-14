@@ -20,6 +20,7 @@ Add-PnPFileToProvisioningTemplate -Path <String>
                                   [-Container <String>]
                                   [-FileLevel <FileLevel>]
                                   [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+                                  [-Web <WebPipeBind>]
                                   [-FileOverwrite [<SwitchParameter>]]
 ```
 
@@ -136,6 +137,19 @@ Parameter Sets: (All)
 
 Required: False
 Position: 4
+Accept pipeline input: False
+```
+
+
+### -Web
+Allows you to optionally apply the cmdlet action to a subweb within the current web. 
+
+```yaml
+Type: WebPipeBind[]
+Parameter Sets: (All)
+
+Required: False
+Position: named
 Accept pipeline input: False
 ```
 
