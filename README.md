@@ -2,17 +2,18 @@
 
 # Overview
 This repository holds reference content of Office PowerShell cmdlets for help purpose. The expert knowledge around Office PowerShell is distributed among customers, MVPs, partners, product teams, support, and other community members. Consumers have various preferences when consuming knowledge such as a website, PowerShell Get-Help, Windows app, iOS app, Android app, and others. The following diagram illustrates the point.
+
 ![Contribution and Consumption model for Office PowerShell reference content](images/contrib-consumption-model.png)
 
-# Learn How To Contribute
+## Learn How To Contribute
 Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics.
 Your contributions will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
 
 > Notice that if you are looking into contributing for the **PnP PowerShell cmdlets**, their documentation is automatically generated from the code, and you should be submitting your change towards the original code at https://github.com/SharePoint/PnP-powershell. See, for example, how the attributes are used in the code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.
 
-# Quick Start
+## Quick Start
 
-## Contribute using the GitHub website
+### Contribute using the GitHub website
 
 [![Image of Quick Start video](images/edit_video_capture.jpg)](https://support.office.com/en-us/article/edit-powershell-cmdlet-in-github-dcd20227-3764-48ce-ad6e-763af8b48daf?ui=en-US&rs=en-US&ad=US)
 
@@ -42,9 +43,9 @@ Looking for more in-depth content? Check out the following:
 * [Using more advanced tools with the PowerShell GitHub repo](repo_docs/ADVANCED.md)
 * [Creating content for brand new cmdlets](repo_docs/NEW_CMDLETS.md)
 
-# Microsoft Open Source Code of Conduct
+## Microsoft Open Source Code of Conduct
 
-## Contributing
+### Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
