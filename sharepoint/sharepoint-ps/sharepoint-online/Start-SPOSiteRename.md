@@ -53,11 +53,7 @@ Starts the **simulation** rename of the SPO site with name "samplesite" to "rena
 
 
 ## PARAMETERS
-<!--```Powershell
-Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
-    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [[-Reserved] <string>] [-WhatIf] [-Confirm]
-    [<CommonParameters>]
--->
+
 
 ### -Identity
 PARAMVALUE: String
