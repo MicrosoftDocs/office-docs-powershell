@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPSubWebs
@@ -76,7 +76,7 @@ Accept pipeline input: False
 ```
 
 ### -Recurse
-If provided, recursion through all subsites and their childs will take place to return them as well
+If provided, recursion through all subsites and their children will take place to return them as well
 
 ```yaml
 Type: SwitchParameter

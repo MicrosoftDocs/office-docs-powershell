@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPNavigationNode
@@ -67,7 +67,7 @@ Will remove all the navigation nodes from the quick launch bar in the current we
 ## PARAMETERS
 
 ### -All
-Specifying the All parameter will remove all the nodes from specifed Location.
+Specifying the All parameter will remove all the nodes from specified Location.
 
 ```yaml
 Type: SwitchParameter

@@ -18,7 +18,7 @@ Add-PnPTenantTheme -Identity <ThemePipeBind>
 ```
 
 ## DESCRIPTION
-Adds or updates atheme to the tenant.
+Adds or updates a theme to the tenant.
 
 ## EXAMPLES
 

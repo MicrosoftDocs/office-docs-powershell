@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Enable-PnPPowerShellTelemetry
@@ -25,6 +25,13 @@ Enable-PnPPowerShellTelemetry
 ```
 
 Will prompt you to confirm to enable telemetry tracking.
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Enable-PnPPowerShellTelemetry -Force
+```
+
+Will enable telemetry tracking without prompting.
 
 ## PARAMETERS
 

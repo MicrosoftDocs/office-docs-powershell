@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Disable-PnPFeature
@@ -19,7 +19,7 @@ Disable-PnPFeature -Identity <GuidPipeBind>
 ```
 
 ## DESCRIPTION
-Deactives a feature that was active on a site
+Deactivates a feature that was active on a site
 
 ## EXAMPLES
 

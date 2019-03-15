@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPListItemPermission
@@ -15,6 +15,7 @@ Sets list item permissions
 Set-PnPListItemPermission -List <ListPipeBind>
                           -Identity <ListItemPipeBind>
                           [-InheritPermissions [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -27,6 +28,7 @@ Set-PnPListItemPermission -Group <GroupPipeBind>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -39,6 +41,7 @@ Set-PnPListItemPermission -User <String>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -153,6 +156,20 @@ The role that must be removed from the group or user
 ```yaml
 Type: String
 Parameter Sets: User, Group
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SystemUpdate
+Update the item permissions without creating a new version or triggering MS Flow.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 
 Required: False
 Position: Named

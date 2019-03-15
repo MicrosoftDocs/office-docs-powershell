@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPSiteCollectionAdmin
@@ -51,7 +51,7 @@ This will remove all existing site collection administrators from the site colle
 ## PARAMETERS
 
 ### -Owners
-Specifies owner(s) to remove as site collection adminstrators. Can be both users and groups.
+Specifies owner(s) to remove as site collection administrators. Can be both users and groups.
 
 ```yaml
 Type: UserPipeBind

@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPList
@@ -235,7 +235,7 @@ Accept pipeline input: False
 ```
 
 ### -ListExperience
-Set the list experience: Auto, NewExperience or ClassExperience
+Set the list experience: Auto, NewExperience or ClassicExperience
 
 Only applicable to: SharePoint Online
 

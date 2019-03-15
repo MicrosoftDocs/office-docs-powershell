@@ -58,7 +58,7 @@ Accept pipeline input: False
 ```
 
 ### -BlockEdit
-Block edititing of items in the library.
+Block editing of items in the library.
 
 ```yaml
 Type: Boolean

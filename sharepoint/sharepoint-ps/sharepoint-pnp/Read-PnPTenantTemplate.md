@@ -22,7 +22,7 @@ Read-PnPTenantTemplate -Path <String>
 Read-PnPTenantTemplate -Path template.pnp
 ```
 
-Reads a PnP tenant templatey file from the file system and returns an in-memory instance
+Reads a PnP tenant template file from the file system and returns an in-memory instance
 
 ## PARAMETERS
 

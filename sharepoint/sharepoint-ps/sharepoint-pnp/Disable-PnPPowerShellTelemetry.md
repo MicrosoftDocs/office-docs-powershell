@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Disable-PnPPowerShellTelemetry
@@ -25,6 +25,13 @@ Disable-PnPPowerShellTelemetry
 ```
 
 Will prompt you to confirm to disable telemetry tracking.
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Disable-PnPPowerShellTelemetry -Force
+```
+
+Will disable telemetry tracking without prompting.
 
 ## PARAMETERS
 

@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
 # Get-PnPApp
@@ -37,12 +37,14 @@ This will return all available apps from the site collection scoped app catalog.
 Get-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
 ```
 
-This willr retrieve the specific app from the app catalog.
+This will retrieve the specific app from the app catalog.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the Id of an app which is available in the app catalog
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: AppMetadataPipeBind
@@ -56,6 +58,8 @@ Accept pipeline input: True
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppCatalogScope
 Parameter Sets: (All)
@@ -67,6 +71,8 @@ Accept pipeline input: False
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection

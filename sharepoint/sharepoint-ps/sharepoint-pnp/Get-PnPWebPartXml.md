@@ -1,12 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPWebPartXml
 
 ## SYNOPSIS
-Returns the webpart XML of a webpart registered on a site
+Returns the web part XML of a web part registered on a site
 
 ## SYNTAX 
 
@@ -24,12 +24,12 @@ Get-PnPWebPartXml -ServerRelativePageUrl <String>
 Get-PnPWebPartXml -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
-Returns the webpart XML for a given webpart on a page.
+Returns the web part XML for a given web part on a page.
 
 ## PARAMETERS
 
 ### -Identity
-Id or title of the webpart. Use Get-PnPWebPart to retrieve all webpart Ids
+Id or title of the web part. Use Get-PnPWebPart to retrieve all web part Ids
 
 ```yaml
 Type: WebPartPipeBind
@@ -41,7 +41,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Full server relative url of the webpart page, e.g. /sites/mysite/sitepages/home.aspx
+Full server relative url of the web part page, e.g. /sites/mysite/sitepages/home.aspx
 
 ```yaml
 Type: String

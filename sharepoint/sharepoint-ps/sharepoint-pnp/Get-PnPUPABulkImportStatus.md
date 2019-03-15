@@ -17,7 +17,7 @@ Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]
 ```
 
 ## DESCRIPTION
-Retreieve information about the status of submitted user profile bulk upload jobs.
+Retrieve information about the status of submitted user profile bulk upload jobs.
 
 ## EXAMPLES
 
