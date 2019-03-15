@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOUserAndContentMoveState
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOUserAndContentMoveState
@@ -33,12 +36,12 @@ This command gets the information and the status of a move request of a user bet
 
 The following are the available move states:
 
-|Status	|Description|
+|Status|Description|
 | --- | --- |
-|NotStarted|	The move has not started. |
-|InProgress| 	The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
-|Success|	The move has completed successfully.|
-|Failed	|The move failed.|
+|NotStarted| The move has not started. |
+|InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
+|Success| The move has completed successfully.|
+|Failed|The move failed.|
 
 ## EXAMPLES
 ### Example 1 
@@ -51,7 +54,7 @@ Obtain the move state by OneDrive Move Job ID
 ### Example 2
 
 ```Powershell
-Get-SPOUserAndContentMoveState -movestate NotStarted
+Get-SPOUserAndContentMoveState -MoveState NotStarted
 ```
 Getting which moves are being done in a particular state
 ###Example 3
@@ -202,7 +205,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

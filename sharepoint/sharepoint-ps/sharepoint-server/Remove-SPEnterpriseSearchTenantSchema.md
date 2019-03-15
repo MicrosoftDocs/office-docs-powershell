@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchTenantSchema
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchTenantSchema
@@ -31,9 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>[Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
-PS C:\>Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+[Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
+Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
 ```
 
 This example removes the search schema for the tenant with GUID 909b84cb-90f2-4a1b-8df4-22547a9b2227.

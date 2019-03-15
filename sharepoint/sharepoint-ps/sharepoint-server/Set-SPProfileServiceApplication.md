@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPProfileServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProfileServiceApplication
@@ -51,8 +54,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE---------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-PS C:\>Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
+Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
 ```
 
 This example purges objects from the Profile database which are not in scope of the User Profile import.

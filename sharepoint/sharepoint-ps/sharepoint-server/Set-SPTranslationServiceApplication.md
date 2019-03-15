@@ -3,6 +3,9 @@ external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTranslationServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTranslationServiceApplication
@@ -37,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE---------------
 ```
-PS C:\>Set-SPTranslationServiceApplication TranslationService -JobExpirationDays 14 -TotalActiveProcesses 3
+Set-SPTranslationServiceApplication TranslationService -JobExpirationDays 14 -TotalActiveProcesses 3
 ```
 
 This example sets the job expiration to 14 days and the number of worker processes per server to 3 for the Machine Translation Service application named TranslationService.

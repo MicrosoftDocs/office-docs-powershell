@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRoutingMachineInfo
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRoutingMachineInfo
@@ -29,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$wa = Get-SPWebApplication -Identity http://webAppUrl
-PS C:\>$rm = Get-SPRequestManagementSettings -Identity $wa
-PS C:\>$m = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
-PS C:\>Set-SPRoutingMachineInfo -Identity $m -Availability Unavailable
+$wa = Get-SPWebApplication -Identity http://webAppUrl
+$rm = Get-SPRequestManagementSettings -Identity $wa
+$m = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
+Set-SPRoutingMachineInfo -Identity $m -Availability Unavailable
 ```
 
 This example sets the "Availability" routing target property to Unavailable for a specified identity.

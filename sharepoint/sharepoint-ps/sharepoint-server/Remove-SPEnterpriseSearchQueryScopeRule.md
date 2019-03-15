@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchQueryScopeRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchQueryScopeRule
@@ -36,9 +39,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
-PS C:\>$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-PS C:\>Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSite | Remove-SPEnterpriseSearchQueryScopeRule -Url http://criticalSite
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
+$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
+Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSite | Remove-SPEnterpriseSearchQueryScopeRule -Url http://criticalSite
 ```
 
 This example removes a scope rule for the URL http://criticalSite from a search service application named MySSA.

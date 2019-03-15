@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelBIServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelBIServer
@@ -27,8 +30,8 @@ Use the Set-SPExcelBIServer cmdlet to specify a description for an existing BI s
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
 ```
 
 ## PARAMETERS

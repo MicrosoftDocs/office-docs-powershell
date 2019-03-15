@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPProcessAccount
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProcessAccount
@@ -44,14 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService
+Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
+Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```
 
 This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.

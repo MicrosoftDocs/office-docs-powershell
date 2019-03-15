@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Upgrade-SPSite
@@ -35,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1----------
 ```
-PS C:\>Upgrade-SPSite http://<site name>/sites/testsite
+Upgrade-SPSite http://<site name>/sites/testsite
 ```
 
 This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
@@ -43,7 +46,7 @@ The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```
-PS C:\>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
+Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
 ```
 
 This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPEnterpriseSearchServiceApplicationIndex
@@ -44,9 +47,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-PS C:\>Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
+Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
 ```
 
 This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
@@ -54,8 +57,8 @@ This example starts a restore of the search index in the default search service 
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-PS C:\>Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
+$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
+Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
 ```
 
 This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .

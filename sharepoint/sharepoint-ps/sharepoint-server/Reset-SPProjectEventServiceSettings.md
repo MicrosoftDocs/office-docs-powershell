@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2016, Project Server 2019
 title: Reset-SPProjectEventServiceSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Reset-SPProjectEventServiceSettings
@@ -25,7 +28,7 @@ Resets the Microsoft Project Server Events Service 2016 settings to the default 
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Reset-SPProjectEventServiceSettings
+Reset-SPProjectEventServiceSettings
 ```
 
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.

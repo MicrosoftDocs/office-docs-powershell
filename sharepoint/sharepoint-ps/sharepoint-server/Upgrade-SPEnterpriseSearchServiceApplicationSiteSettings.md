@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$site= Get-SPSite http://test
 
-PS C:\>Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
+Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 
 This example upgrades the search settings for the site collection referenced by $site.

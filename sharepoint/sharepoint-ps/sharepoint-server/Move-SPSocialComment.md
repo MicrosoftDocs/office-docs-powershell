@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPSocialComment
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Move-SPSocialComment
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Move-SPSocialComments -ProfileServiceApplicationProxy $proxy -OldUrl "http://contoso/Pages/oldtest.aspx" -NewUrl "http://contoso/Pages/newtest.aspx"
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Move-SPSocialComments -ProfileServiceApplicationProxy $proxy -OldUrl "http://contoso/Pages/oldtest.aspx" -NewUrl "http://contoso/Pages/newtest.aspx"
 ```
 
 This example moves social comments from oldtest.aspx to newtest.aspx.

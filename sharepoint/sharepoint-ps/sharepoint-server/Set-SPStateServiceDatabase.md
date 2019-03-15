@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPStateServiceDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPStateServiceDatabase
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
+Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
 ```
 
 This example updates the database weight to the maximum (10).
@@ -36,7 +39,7 @@ This example updates the database weight to the maximum (10).
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
+Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
 ```
 
 This example updates the associated service application for a state service database.
@@ -46,7 +49,7 @@ This example updates the associated service application for a state service data
 ```
 C:\PS>$cred = Get-Credential
 
-PS C:\>Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
+Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
 ```
 
 This example updates the SQL Authentication credentials that are used for a given database.

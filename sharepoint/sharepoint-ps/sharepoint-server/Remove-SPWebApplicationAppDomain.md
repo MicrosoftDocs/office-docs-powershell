@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWebApplicationAppDomain
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWebApplicationAppDomain
@@ -26,13 +29,13 @@ This cmdlet also deletes the Internet Information Services (IIS) port binding if
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
 ```
 Removes all of the app domains for the specified web application.
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
 ```
 Removes the app domains for the internet zone for the specified web application.
 

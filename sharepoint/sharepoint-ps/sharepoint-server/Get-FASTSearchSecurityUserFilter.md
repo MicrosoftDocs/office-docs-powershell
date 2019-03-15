@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityUserFilter
 ---
 
@@ -26,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityUserFilter -Identity ln1 -User user1
+Get-FASTSearchSecurityUserFilter -Identity ln1 -User user1
 ```
 
 This example gets the search security filter for user "user1" in user store "ln1".

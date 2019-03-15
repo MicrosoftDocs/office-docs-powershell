@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: Set-OfficeWebAppsFarm
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-OfficeWebAppsFarm

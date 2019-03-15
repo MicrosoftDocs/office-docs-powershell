@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchLinksDatabase
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication $ssa
 ```
 
 This example adds a new links database LinksDB_1 to the search service application.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchCrawlExtension
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchCrawlExtension
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Add code example. 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchCrawlExtension -Identity 'pdf' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchCrawlExtension -Identity 'pdf' -SearchApplication $ssa
 ```
 
 This example checks whether the pdf file type is included in the file types to be included in the content index.

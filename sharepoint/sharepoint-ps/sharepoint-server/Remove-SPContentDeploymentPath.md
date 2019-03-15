@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPContentDeploymentPath
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPContentDeploymentPath
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPContentDeploymentPath -Path1
+Remove-SPContentDeploymentPath -Path1
 ```
 
 This example removes a content path named Path1.

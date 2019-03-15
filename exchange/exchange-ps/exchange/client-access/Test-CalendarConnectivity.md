@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-CalendarConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -41,7 +44,7 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 
 - LocalSite: The name of the local Active Directory site.
 
-- Scenario: The operations that are tested. Values are: Logon, CalendaICS and CalendarHTML.
+- Scenario: The operations that are tested. Values are: Logon, CalendarICS and CalendarHTML.
 
 - Result: The values returned are typically Success, Skipped or Failure.
 

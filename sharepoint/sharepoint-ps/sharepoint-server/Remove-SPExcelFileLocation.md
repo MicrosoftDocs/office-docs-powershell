@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelFileLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelFileLocation
@@ -33,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -ne "http://"} | Remove-SPExcelFileLocation
+Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -ne "http://"} | Remove-SPExcelFileLocation
 ```
 
 This example removes all nondefault trusted file locations from every Excel Services Application Web service application in the farm.

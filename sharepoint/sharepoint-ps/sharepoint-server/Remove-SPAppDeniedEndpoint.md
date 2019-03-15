@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPAppDeniedEndpoint
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPAppDeniedEndpoint
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
+Remove-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
 ```
 
 This example removes the "/_vti_bin/contoso/service.asmx" endpoint from the list of denied endpoints for apps.

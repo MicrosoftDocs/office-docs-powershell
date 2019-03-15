@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlExtension
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlExtension
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchCrawlExtension -Name "pdf" -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlExtension -Name "pdf" -SearchApplication $ssa
 ```
 
 This example adds the PDF file type to the list of file name extensions to include in the index.

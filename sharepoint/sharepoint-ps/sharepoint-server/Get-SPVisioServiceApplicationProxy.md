@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPVisioServiceApplicationProxy
@@ -27,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplicationProxy
+Get-SPVisioServiceApplicationProxy
 ```
 
 This example returns a list of Visio Services application proxies.
 
 ### ----------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplicationProxy "Connection to VGS2"
+Get-SPVisioServiceApplicationProxy "Connection to VGS2"
 ```
 
 This example returns settings for a Visio Services application proxy.

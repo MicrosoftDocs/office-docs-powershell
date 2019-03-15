@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Connect-SPConfigurationDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Connect-SPConfigurationDatabase
@@ -37,8 +40,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd" -AsPlainText -Force)
-PS C:\>Start-Service SPTimerv4
+Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd" -AsPlainText -Force)
+Start-Service SPTimerv4
 ```
 
 This example joins the local server computer to a farm that is configured to use the database SharePointConfigurationDatabase on an instance of SQL Server by using the name ServerName\InstanceName with the passphrase MyP@ssw0rd.

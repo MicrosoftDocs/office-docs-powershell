@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelBlockedFileType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelBlockedFileType
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove-SPExcelBlockedExcelFileType -FileType XLSX
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove-SPExcelBlockedExcelFileType -FileType XLSX
 ```
 
 This example removes the .xlsx file name extensions from the list of file types that are prevented from loading by Excel Services Application.

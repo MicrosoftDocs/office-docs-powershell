@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWOPIZone
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWOPIZone
@@ -33,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Set-SPWOPIZone -Zone "external-https"
+Set-SPWOPIZone -Zone "external-https"
 ```
 
 This example configures the current SharePoint farm to use external connections through HTTPS to the WOPI application (such as a server that runs Office Web Apps Server).

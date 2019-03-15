@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Grant-SPBusinessDataCatalogMetadataObject
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Grant-SPBusinessDataCatalogMetadataObject
@@ -31,9 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
-PS C:\>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -ServiceContext http://contoso -Name "ContosoModel"
-PS C:\>Grant-SPBusinessDataCatalogMetadataObject -Identity $Model -Principal $claimJohn -Right Edit
+$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
+$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -ServiceContext http://contoso -Name "ContosoModel"
+Grant-SPBusinessDataCatalogMetadataObject -Identity $Model -Principal $claimJohn -Right Edit
 ```
 
 This example gives Edit permissions to the user with the identity johndoe on domain CONTOSO, for the model metadata object with the name ContosoModel.

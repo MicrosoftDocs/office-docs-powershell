@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
@@ -44,9 +47,9 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ###   ------------ Example 1 --------------------
 ```
-PS C:\>$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
-PS C:\>[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
-PS C:\>Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
+$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
+[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
+Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
 ```
 
 Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Directory groups and adds them to the Active Directory Enterprise Resource Pool Synchronization on the Project Web Apps site, http://pwa_site.

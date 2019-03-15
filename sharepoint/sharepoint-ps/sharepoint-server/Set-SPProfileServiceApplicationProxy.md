@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPProfileServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProfileServiceApplicationProxy
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE---------------------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
+$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
 ```
 
 This example sets the User Profile Service Application Proxy to use a site naming conflict resolution to use domain names prefixed to usernames.

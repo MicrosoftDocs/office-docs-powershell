@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchQueryKeyword
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchQueryKeyword
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site http://myserver/sites/team
+New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site http://myserver/sites/team
 ```
 
 This example creates a new query keyword for the site http://myserver/sites/team with the term Tangible.

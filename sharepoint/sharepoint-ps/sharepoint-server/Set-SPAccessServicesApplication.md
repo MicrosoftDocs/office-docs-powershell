@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAccessServicesApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAccessServicesApplication
@@ -28,7 +31,7 @@ Set-SPAccessServicesApplication [-Identity] <SPServiceApplicationPipeBind>
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+ {{ Add example code here }}
 ```
 
 {{ Add example description here }}

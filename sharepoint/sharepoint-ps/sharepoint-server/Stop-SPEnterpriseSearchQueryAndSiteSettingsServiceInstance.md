@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
@@ -27,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
-PS C:\>Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
+$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
+Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
 ```
 
 This example stops the local query and site settings service instance.

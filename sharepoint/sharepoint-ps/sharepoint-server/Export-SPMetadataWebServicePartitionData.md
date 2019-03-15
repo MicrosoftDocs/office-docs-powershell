@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPMetadataWebServicePartitionData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPMetadataWebServicePartitionData
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE-------------- 
 ```
-PS C:\>Export-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -Path "\\server_name\folder_name\file_name.cab"
+Export-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -Path "\\server_name\folder_name\file_name.cab"
 ```
 
 This example creates a backup of data for a specific site subscription on a Metadata Service application.

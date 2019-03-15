@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAzureAccessControlServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAzureAccessControlServiceApplicationProxy
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------- 
 ```
-PS C:\>New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
+New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
 ```
 
 This example creates a proxy group named ACS which will be added to the default proxy group.

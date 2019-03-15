@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPUserLicenseMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPUserLicenseMapping
@@ -36,8 +39,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1------------------- 
 ```
-PS C:\>$a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
-PS C:\>Add-SPUserLicenseMapping -Mapping $a
+$a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
+Add-SPUserLicenseMapping -Mapping $a
 ```
 
 This example adds user mappings for the entire farm.

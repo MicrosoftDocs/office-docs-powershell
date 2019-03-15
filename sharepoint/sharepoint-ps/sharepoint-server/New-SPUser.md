@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPUser
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------
 ```
-PS C:\>New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web http://contoso.com
+New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web http://contoso.com
 ```
 
 This example adds a new user named Jane Dow to the Contoso domain.
@@ -42,7 +45,7 @@ This example adds a new user named Jane Dow to the Contoso domain.
 
 ### ------------------EXAMPLE 2----------------------
 ```
-PS C:\>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
+Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
 ```
 
 This example adds Contoso\Jdow to all webs in the http://sitename site collection.

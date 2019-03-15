@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchPropertyRuleCollection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchPropertyRuleCollection
@@ -27,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\>$ruleCollection.Add($rule)
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
 ```
 
 This example returns a rule for the result property "ContentTypeId", the rule specifies that this property must start with the value "0x010063C2F478ACC511DFB869B5BFDFD720851252".

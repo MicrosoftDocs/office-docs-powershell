@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchLanguageResourcePhrase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchLanguageResourcePhrase
@@ -28,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $ssa -Language 'en-us' -Type QuerySuggestionBlockList
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $ssa -Language 'en-us' -Type QuerySuggestionBlockList
 ```
 
 This example returns all language resource entries for the en-us language in the QuerySuggestionBlockList type.

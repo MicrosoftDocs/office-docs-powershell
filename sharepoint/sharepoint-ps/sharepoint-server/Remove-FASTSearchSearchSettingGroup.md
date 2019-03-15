@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchSearchSettingGroup
 ---
 
@@ -25,21 +28,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup
+Remove-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
 
 This example deletes the "marketinggroup" search setting group.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
+Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
 ```
 
 This example deletes the "marketinggroup" search setting group without being prompted to confirm the operation.
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
+Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
 ```
 
 This example describes what would happen if you executed the Remove-FASTSearchSearchSettingGroup cmdlet.

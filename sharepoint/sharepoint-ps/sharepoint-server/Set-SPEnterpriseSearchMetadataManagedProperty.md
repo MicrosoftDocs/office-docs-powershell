@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchMetadataManagedProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchMetadataManagedProperty
@@ -35,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
 ```
 
 This example sets the EnabledForScoping property to true for the managed property named UserName in the default search service application.

@@ -58,9 +58,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}
 
-### [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
-{{Manually Enter Get-SPO365LinkSettings Description Here}}
-
 ### [Get-SPOAppErrors](Get-SPOAppErrors.md)
 {{Manually Enter Get-SPOAppErrors Description Here}}
 
@@ -307,9 +304,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 {{Manually Enter Revoke-SPOUserSession Description Here}}
 
-### [Set-SPO365LinkSettings](Set-SPO365LinkSettings.md)
-{{Manually Enter Set-SPO365LinkSettings Description Here}}
-
 ### [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
 {{Manually Enter Set-SPODataConnectionSetting Description Here}}
 
@@ -386,4 +380,4 @@ The following cmdlet references are for SharePoint Online.
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
 
-<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->

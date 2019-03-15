@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsRgsQueue
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsRgsQueue

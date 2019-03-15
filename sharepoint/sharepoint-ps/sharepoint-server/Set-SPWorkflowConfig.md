@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWorkflowConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWorkflowConfig
@@ -41,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPWorkflowConfig -webapplication http://sitename DeclarativeWorkflowsEnabled $true -EmailNoPermissionParticipantsEnabled $true -SendDocumentToExternalParticipants $false
+Set-SPWorkflowConfig -webapplication http://sitename DeclarativeWorkflowsEnabled $true -EmailNoPermissionParticipantsEnabled $true -SendDocumentToExternalParticipants $false
 ```
 
 This example sets the workflow settings for the specified Web application to turn on declarative workflows, turn on e-mail to participants who do not have permissions to the site and turn off the functionality to send e-mail messages as attachments to external participants.

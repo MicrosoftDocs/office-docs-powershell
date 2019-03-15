@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPPerformancePointContent
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPPerformancePointContent
@@ -24,7 +27,7 @@ The Export-SPPerformancePointContent exports a PPS dashboard and its dependencie
 
 ### Example 1 
 ```
-PS C:\>Export-SPPerformancePointContent -ItemUrls http://contoso/sites/marketing/default.aspx -ExportFileURL "http://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
+Export-SPPerformancePointContent -ItemUrls http://contoso/sites/marketing/default.aspx -ExportFileURL "http://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
 ```
 
 This example exports a dashboard at the location specified with the ItemUrls parameter.

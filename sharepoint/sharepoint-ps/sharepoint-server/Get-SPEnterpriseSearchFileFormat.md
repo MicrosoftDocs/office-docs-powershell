@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchFileFormat
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchFileFormat
@@ -42,8 +45,8 @@ This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all parseable
 
 ### -------------EXAMPLE 2------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
 ```
 
 This example uses the Get-SPEnterpriseSearchFileFormat cmdlet to retrieve information about the file format DOCX in the search service application referenced by `$ssa`.

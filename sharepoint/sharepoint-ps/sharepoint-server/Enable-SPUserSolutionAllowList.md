@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPUserSolutionAllowList
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPUserSolutionAllowList
@@ -24,7 +27,7 @@ Enables the user managed solutions gallery capability on the farm.
 
 ### Example 1 
 ```
-PS C:\>Enable-SPUserSolutionAllowList
+Enable-SPUserSolutionAllowList
 ```
 
 This example enables a user managed solutions gallery on the entire farm.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPCustomLayoutsPage
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPCustomLayoutsPage
@@ -42,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "http://server_name/mywebapp"
+Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "http://server_name/mywebapp"
 ```
 
 This example maps the specified path for the AccessDenied layout page in the Web application "http://server_name/mywebapp".

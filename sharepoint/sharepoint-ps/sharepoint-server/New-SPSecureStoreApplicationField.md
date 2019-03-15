@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSecureStoreApplicationField
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSecureStoreApplicationField
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
+New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
 ```
 
 This example creates a new credential field of type WindowsUserName with the name UserName and the masked property (which when true will hide characters as they are typed in by the user) set to false.

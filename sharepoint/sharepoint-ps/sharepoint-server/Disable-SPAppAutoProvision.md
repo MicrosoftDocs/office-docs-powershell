@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPAppAutoProvision
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPAppAutoProvision
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-PS C:\>Disable-SPAppAutoProvision
+Disable-SPAppAutoProvision
 ```
 
 This example disables app auto provisioning for the farm.
@@ -40,7 +43,7 @@ This setting overrides site subscription level setting.
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
 
-PS C:\>Disable-SPAppAutoProvision -SiteSubscription $subscription
+Disable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example disables app auto provisioning for the site subscription for Contoso.Com site.

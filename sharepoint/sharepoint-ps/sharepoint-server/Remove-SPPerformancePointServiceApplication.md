@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPPerformancePointServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPPerformancePointServiceApplication
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------
 ```
-PS C:\>Remove-SPPerformancePointServiceApplication -Identity PPSApp_01
+Remove-SPPerformancePointServiceApplication -Identity PPSApp_01
 ```
 
 This example removes the PPSApp_01 PerformancePoint Service application.

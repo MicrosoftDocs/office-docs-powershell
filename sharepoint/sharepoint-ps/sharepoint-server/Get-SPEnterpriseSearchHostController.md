@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchHostController
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchHostController
@@ -28,15 +31,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchHostController
+Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>$ssi = Get-SPEnterpriseSearchServiceInstance -Local
-PS C:\>Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
+$ssi = Get-SPEnterpriseSearchServiceInstance -Local
+Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
 ```
 
 This example retrieves the status information for the SearchHostController on the local server.

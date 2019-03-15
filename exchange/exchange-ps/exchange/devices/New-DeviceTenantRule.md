@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-DeviceTenantRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -40,10 +43,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-DeviceTenantRule -ExclusionList
+New-DeviceTenantRule -ExclusionList "e10214c1-49b6-47d2-b5e6-466e918648b1","6e3931bd-a716-4bb9-9a2f-093aa2c967b4"
 ```
 
-This example creates a new mobile device tenant rule with the security groups named Engineering and Research and Development on the exclusion list. Members of these groups are allowed access even if they use non-compliant devices
+This example creates a new mobile device tenant rule with GUIDs of the security groups named Engineering and Research and Development on the exclusion list. Members of these groups are allowed access even if they use non-compliant devices
 
 You can have only one mobile device tenant rule in your organization.
 
@@ -163,12 +166,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

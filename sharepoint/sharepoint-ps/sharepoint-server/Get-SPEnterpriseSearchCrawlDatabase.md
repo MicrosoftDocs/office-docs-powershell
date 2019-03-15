@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchCrawlDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchCrawlDatabase
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------- 
 ```
-PS C:\>Get-SPEnterpriseSearchCrawlDatabase -SearchApplication 'Search Service Application' -Identity CrawlDB_1
+Get-SPEnterpriseSearchCrawlDatabase -SearchApplication 'Search Service Application' -Identity CrawlDB_1
 ```
 
 This example gets a reference to the crawl database CrawlDB_1 from the search service application named 'Search Service Application'.

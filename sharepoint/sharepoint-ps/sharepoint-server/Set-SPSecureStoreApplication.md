@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecureStoreApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSecureStoreApplication
@@ -32,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$targetApp.FriendlyName = "Updated Contoso Target App"
 
-PS C:\>Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
+Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
 ```
 
 This example sets a new display name Updated Contoso Target App for the target application.

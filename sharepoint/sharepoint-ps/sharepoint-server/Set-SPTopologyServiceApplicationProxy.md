@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.TopologyService-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTopologyServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTopologyServiceApplicationProxy
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPTopologyServiceApplicationProxy 67877d63-bff4-4521-867a-ef4979ba07ce -BadListPeriod 1234
+Set-SPTopologyServiceApplicationProxy 67877d63-bff4-4521-867a-ef4979ba07ce -BadListPeriod 1234
 ```
 
 This example sets the bad list period for the given topology service application proxy.

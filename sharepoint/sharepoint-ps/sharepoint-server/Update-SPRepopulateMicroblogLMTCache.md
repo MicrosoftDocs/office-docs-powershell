@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPRepopulateMicroblogLMTCache
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPRepopulateMicroblogLMTCache
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-----------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
 ```
 
 This example refreshes the cache for the specified proxy.

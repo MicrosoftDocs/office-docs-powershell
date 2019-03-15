@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Test-SPProjectServiceApplication
@@ -25,8 +28,8 @@ This cmdlet runs a series of health checks against the Project Service Applicati
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>Test-SPProjectServiceApplication -Identity $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+Test-SPProjectServiceApplication -Identity $sa
 ```
 
 This example runs all health checks again the service application named "Project Service Application."
@@ -74,7 +77,7 @@ Valid rules are:
 
 All, CalcServiceWorkerState, QueueInFlightJobs, QueueServiceInternalState
 
-Project Server 2013 has this additonal rule which is not available in Project Server 2016, Project Server 2019:
+Project Server 2013 has this additional rule which is not available in Project Server 2016, Project Server 2019:
 
 QueueSiteCheck
 

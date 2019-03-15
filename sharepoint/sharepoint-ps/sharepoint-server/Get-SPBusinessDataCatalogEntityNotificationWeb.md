@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPBusinessDataCatalogEntityNotificationWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPBusinessDataCatalogEntityNotificationWeb
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------EXAMPLE----------- 
 ```
-PS C:\>Get-SPBusinessDataCatalogEntityNotificationWeb -ServiceContext "http://contoso"
+Get-SPBusinessDataCatalogEntityNotificationWeb -ServiceContext "http://contoso"
 ```
 
 This example returns the entity notification site for the site collection at http://contoso.

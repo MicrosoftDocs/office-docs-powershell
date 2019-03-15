@@ -1,11 +1,5 @@
 const container = require('./helpers/di.container')();
 
-(async function() {
-	try {
-		const markdownController = container.resolve('markdownController');
+const cliController = container.resolve('cliController');
 
-		await markdownController.updateMarkdown();
-	} catch (e) {
-		console.log(e);
-	}
-})();
+cliController.start(process.argv);

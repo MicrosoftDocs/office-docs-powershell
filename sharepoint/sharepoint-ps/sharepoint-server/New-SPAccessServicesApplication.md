@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServicesApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAccessServicesApplication
@@ -38,7 +41,7 @@ Creates an Access Services Service Application.
 
 ### Example 1 
 ```
-PS C:\>New-SPAccessServicesApplication -DatabaseServer SQLServerName -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
+New-SPAccessServicesApplication -DatabaseServer SQLServerName -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
 ```
 
 Creates an Access Services Service Application.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchSiteHitRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchSiteHitRule
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE------------------
 ```
-PS C:\>New-SPEnterpriseSearchSiteHitRule -Name myHost -Behavior 0 -HitRate 40
+New-SPEnterpriseSearchSiteHitRule -Name myHost -Behavior 0 -HitRate 40
 ```
 
 This example creates a new site hit rule on the myHost host that limits to 40 the number of simultaneous requests.

@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2016
 title: Mount-SPSiteMapDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Mount-SPSiteMapDatabase
@@ -25,7 +28,7 @@ Do not use.
 
 ### Example 1 
 ```
-PS C:\>#Do not use.
+#Do not use.
 ```
 
 Do not use.

@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPPerformancePointServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPPerformancePointServiceApplication
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPPerformancePointServiceApplication "PPSApp_01"
+Get-SPPerformancePointServiceApplication "PPSApp_01"
 ```
 
 This example gets a PerformancePoint Service application named PPSApp_01.

@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchDocumentProcessingPipeline
 ---
 
@@ -28,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchDocumentProcessingPipeline
+Get-FASTSearchDocumentProcessingPipeline
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint document processing pipelines.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
+Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
 ```
 
 This example retrieves a single FAST Search Server 2010 for SharePoint document processing pipeline named "Office14 (webcluster)".

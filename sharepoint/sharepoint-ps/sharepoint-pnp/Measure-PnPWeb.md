@@ -2,6 +2,9 @@
 external help file:
 applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 # Measure-PnPWeb
 
@@ -93,4 +96,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPClaimProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPClaimProvider
@@ -29,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -AllWebApplications
+New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -AllWebApplications
 ```
 
 This example registers a claim provider in the farm.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Scope (Get-SPWebApplication http://test)
+New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Scope (Get-SPWebApplication http://test)
 ```
 
 This example registers a claim provider scoped to a given Web application.

@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectOdataConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectOdataConfiguration
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPProjectOdataConfiguration
+Get-SPProjectOdataConfiguration
 ```
 
 This example returns the OData configuration for the instance of Project Web App.

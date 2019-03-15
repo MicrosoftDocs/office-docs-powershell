@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPWebPartPack
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Uninstall-SPWebPartPack
@@ -28,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>Uninstall-SPWebPartPack  "mypart.wpp" -WebApplication http://portal
+Uninstall-SPWebPartPack  "mypart.wpp" -WebApplication http://portal
 ```
 
 This example uninstalls mypart.wpp to from the Web application http://portal.
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Get-SPWebPartPack -WebApplication http://portal | Uninstall-SPWebPartPack
+Get-SPWebPartPack -WebApplication http://portal | Uninstall-SPWebPartPack
 ```
 
 This example uninstalls all Web part packages from the Web application http://portal.

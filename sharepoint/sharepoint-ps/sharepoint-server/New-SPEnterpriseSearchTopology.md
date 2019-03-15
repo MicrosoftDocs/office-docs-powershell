@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchTopology
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchTopology
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchTopology -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
 
 This example creates a new, empty search topology in the search service application referenced by $ssa.
@@ -40,9 +43,9 @@ This example creates a new, empty search topology in the search service applicat
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
 ```
 
 This example creates a new search topology in the search service application referenced by $ssa by cloning the existing topology referenced by $topology.

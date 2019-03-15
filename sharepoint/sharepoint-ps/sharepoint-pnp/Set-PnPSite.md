@@ -2,6 +2,9 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 # Set-PnPSite
 
@@ -75,7 +78,7 @@ Enables Flows for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Set-PnPSite -SiteLogoPath c:\images\mylogo.png
+Set-PnPSite -LogoFilePath c:\images\mylogo.png
 ```
 
 Sets the logo if the site is a modern team site
@@ -362,4 +365,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

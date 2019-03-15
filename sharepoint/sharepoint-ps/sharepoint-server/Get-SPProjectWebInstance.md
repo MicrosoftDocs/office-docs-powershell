@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectWebInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectWebInstance
@@ -38,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE----------------------- 
 ```
-PS C:\>Get-SPProjectWebInstance -Url http://server/pwa
+Get-SPProjectWebInstance -Url http://server/pwa
 ```
 
 This example returns the properties for a Project Web App instance at http://server/pwa.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPMetadataWebServicePartitionData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPMetadataWebServicePartitionData
@@ -35,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE--------------- 
 ```
-PS C:\>Clear-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
+Clear-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
 ```
 
 This example removes data for a site subscription on a Metadata Service application.

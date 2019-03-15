@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInfoPathFormTemplate
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPInfoPathFormTemplate
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPInfoPathFormTemplate
+Get-SPInfoPathFormTemplate
 ```
 
 This example lists the Identity, DisplayName, and FormTemplateStatus property for each admininstrator-deployed InfoPath form template.

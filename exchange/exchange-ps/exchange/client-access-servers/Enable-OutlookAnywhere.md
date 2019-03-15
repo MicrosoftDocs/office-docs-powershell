@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Enable-OutlookAnywhere
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -70,7 +73,7 @@ This example enables Outlook Anywhere on the server that has the Client Access r
 
 ### -------------------------- Example 3 --------------------------
 ```
-Enable-Outlookanywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
+Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
 ```
 
 This example enables the Exchange Client Access server for Outlook Anywhere. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is set to mail.contoso.com, the IISAuthenticationMethods parameter is set to NTLM, and the ClientAuthenticationMethod parameter is set to Basic.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPBusinessDataCatalogAclToChildren
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Copy-SPBusinessDataCatalogAclToChildren
@@ -55,7 +58,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ExternalSystem = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
+$ExternalSystem = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
 ```
 
 This example looks at the principals (users) and their corresponding rights given for the External System metadata object, and overwrites the permissions of its child metadata objects with these same principals and rights.

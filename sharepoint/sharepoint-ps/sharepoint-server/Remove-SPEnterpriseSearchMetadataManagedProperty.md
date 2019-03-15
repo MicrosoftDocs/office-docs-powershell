@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchMetadataManagedProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchMetadataManagedProperty
@@ -30,9 +33,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$searchapp = Get-SPEnterpriseSearchServiceApplication 
-PS C:\>$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity AboutMeUpdate 
-PS C:\>Remove-SPEnterpriseSearchMetadataManagedProperty -Identity $mp
+$searchapp = Get-SPEnterpriseSearchServiceApplication 
+$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity AboutMeUpdate 
+Remove-SPEnterpriseSearchMetadataManagedProperty -Identity $mp
 ```
 
 This example removes the managed property AboutMeUpdate from the default search service application.

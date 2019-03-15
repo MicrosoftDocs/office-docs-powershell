@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchSecurityLogLevel
 ---
 
@@ -28,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
+Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
 ```
 
 This example sets the default log level to the "Debug" level and enables the setting to include the exception stack in the log.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
+Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
 ```
 
 This example sets the log level setting for the "Microsoft" namespace to the "Warning" level.

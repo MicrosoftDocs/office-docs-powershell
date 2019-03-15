@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPUserLicenseMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPUserLicenseMapping
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE---------------
 ```
-PS C:\>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
+Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
 ```
 
 This example removes the claim-to-license mapping that has the unique ID, e69ba7cc-4be0-4723-ad63-58d06173afff.

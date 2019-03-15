@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPMetadataServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPMetadataServiceApplicationProxy
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
 ```
 
 This example enables content type syndication and enables content type pushdown on an existing connection to a managed metadata service application.
@@ -38,7 +41,7 @@ This example enables content type syndication and enables content type pushdown 
 
 ### -----------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
 ```
 
 This example disables content type syndication and disables content type pushdown on an existing connection to a managed metadata service application.
@@ -46,7 +49,7 @@ This example disables content type syndication and disables content type pushdow
 
 ### -----------------EXAMPLE 3---------------------
 ```
-PS C:\>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
 ```
 
 This example configures an existing connection to a managed metadata service application to be the default location for storing enterprise keywords and prevents it from being the default location for storing column-specific term sets.

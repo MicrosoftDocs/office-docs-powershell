@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPClaimProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPClaimProvider
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
+Set-SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
 ```
 
 This example turns off the specified claim provider.

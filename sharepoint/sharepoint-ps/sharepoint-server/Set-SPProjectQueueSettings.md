@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectQueueSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectQueueSettings
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
+Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
 ```
 
 This example sets a maximum of 6 for the number of jobs that can be processed at one time by the specified service application.

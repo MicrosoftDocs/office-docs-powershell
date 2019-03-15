@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-App
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -340,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -MarketplaceQueryMarket
-The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value isen-US.
+The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value is en-US.
 
 ```yaml
 Type: String
@@ -385,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationAppswitch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
+The OrganizationApp switch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -451,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can usean organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
+The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
 
 For example:
 

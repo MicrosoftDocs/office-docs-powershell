@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchMetadataManagedProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchMetadataManagedProperty
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
 ```
 
 This example retrieves the managed property UserName from the default search service application.

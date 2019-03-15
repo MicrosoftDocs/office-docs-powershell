@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchFileFormatState
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchFileFormatState
@@ -32,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
 ```
 
 This example uses the `Set-SPEnterpriseSearchFileFormatState` cmdlet to disable the parser for the file format "PDF".

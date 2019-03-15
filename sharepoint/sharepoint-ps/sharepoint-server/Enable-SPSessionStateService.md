@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPSessionStateService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPSessionStateService
@@ -38,14 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Enable-SPSessionStateService -DefaultProvision
+Enable-SPSessionStateService -DefaultProvision
 ```
 
 This example enables a ASP.NET session state on a SharePoint Server farm that uses the defaults (database hosted on the configuration database SQL Server, using Windows authentication, 60-minute session time-out).
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Enable-SPSessionStateService -DatabaseName "Session State Database" -DatabaseServer "localhost" -SessionTimeout 120
+Enable-SPSessionStateService -DatabaseName "Session State Database" -DatabaseServer "localhost" -SessionTimeout 120
 ```
 
 This example enables a ASP.NET session state on a SharePoint Server farm that uses a custom database name, database server, session time-out of 120 minutes, and Windows credentials (due to the lack of a DatabaseCredentials parameter).

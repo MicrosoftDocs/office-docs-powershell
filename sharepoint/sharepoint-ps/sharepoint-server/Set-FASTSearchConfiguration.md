@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchConfiguration
 ---
 
@@ -29,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Set-FastSearchConfiguration -LogFile C:\log.txt
+Set-FastSearchConfiguration -LogFile C:\log.txt
 ```
 
 This example configures the local machine and writes the log output to C:\log.txt.

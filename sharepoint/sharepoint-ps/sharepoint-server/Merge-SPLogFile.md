@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Merge-SPLogFile
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Merge-SPLogFile
@@ -35,56 +38,56 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite
 ```
 
 This example merges the last hour of log data from all farm computers with no filtering.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area Search
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area Search
 ```
 
 This example merges the last hour of log data from the Search area.
 
 ### --------------EXAMPLE 3----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area "SharePoint Foundation","Web Analytics Services"
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area "SharePoint Foundation","Web Analytics Services"
 ```
 
 This example merges the last hour of log data from the SharePoint Foundation and Web Analytics Services areas.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Level High
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Level High
 ```
 
 This example merges the log data of level High or higher.
 
 ### --------------EXAMPLE 5----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" -EndTime "06/09/2008 16:15"
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" -EndTime "06/09/2008 16:15"
 ```
 
 This example merges the log data for events in a particular time range, which is culture-specific to the United States.
 
 ### --------------EXAMPLE 6----------------- 
 ```
-PS C:\>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Message "*permission changed*"
+Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Message "*permission changed*"
 ```
 
 This example merges the log data for events with permission changed in the message text.
 
 ### --------------EXAMPLE 7----------------- 
 ```
-PS C:\>Merge-SPLogFile -Overwrite -Path d:\1.log -ContextFilter "name=timer job*" -Area "*search*"
+Merge-SPLogFile -Overwrite -Path d:\1.log -ContextFilter "name=timer job*" -Area "*search*"
 ```
 
 This example merges the log data for all search timer jobs.
 
 ### --------------EXAMPLE 8----------------- 
 ```
-PS C:\>Merge-SPLogFile -Overwrite -Path d:\2.log -ContextFilter "user=contoso?joeuser"
+Merge-SPLogFile -Overwrite -Path d:\2.log -ContextFilter "user=contoso?joeuser"
 ```
 
 This example shows how to merge the log data for all user names that have a contoso\joeuser or Contoso/joeuser format.

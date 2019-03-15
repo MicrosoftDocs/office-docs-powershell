@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchCrawlRule
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-PS C:\>Remove-SPEnterpriseSearchCrawlRule -Identity http://mySPSite -SearchApplication $searchApp
+$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
+Remove-SPEnterpriseSearchCrawlRule -Identity http://mySPSite -SearchApplication $searchApp
 ```
 
 This example removes a crawl rule pertaining to the path http://mySPSite from the mySearchServiceApp search service application.

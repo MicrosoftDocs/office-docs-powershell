@@ -3,16 +3,16 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPAppDeniedEndpointList
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPAppDeniedEndpointList
 
 ## SYNOPSIS
 
-Applies to:
-
-
-
+Remove all app-denied endpoints in the farm.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE--------- 
 ```
-PS C:\>Clear-SPAppDeniedEndpoint
+Clear-SPAppDeniedEndpoint
 ```
 
 This example removes all app-denied endpoints from the farm.

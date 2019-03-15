@@ -3,6 +3,9 @@ external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTranslationServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTranslationServiceApplicationProxy
@@ -25,7 +28,7 @@ Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a
 
 ### -------------EXAMPLE---------
 ```
-PS C:\>Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
+Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
 
 This example adds the Machine Translation Service application proxy named TranslationServiceProxy to the default proxy group.

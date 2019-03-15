@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteSubscriptionMetadataConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSiteSubscriptionMetadataConfig
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------
 ```
-PS C:\>Remove-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
+Remove-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
 ```
 
 This example removes the site subscription-specific settings from an existing partitioned Metadata Service application.

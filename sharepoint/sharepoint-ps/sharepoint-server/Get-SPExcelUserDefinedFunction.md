@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelUserDefinedFunction
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelUserDefinedFunction
@@ -31,14 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf
 ```
 
 This example displays the user-defined function named SampleCompany.SampleApplication.SampleUdf from the list of user-defined functions that is in the Excel Services Application Web service application named MyExcelService.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-PS C:\>Get-SPExcelServiceApplication | Get-SPExcelUserDefinedFunction | format-list
+Get-SPExcelServiceApplication | Get-SPExcelUserDefinedFunction | format-list
 ```
 
 This example displays every user-defined function for every Excel Services Application Web service application in the farm, and then displays the results in a list.

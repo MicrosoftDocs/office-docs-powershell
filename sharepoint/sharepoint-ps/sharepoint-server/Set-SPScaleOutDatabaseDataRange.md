@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPScaleOutDatabaseDataRange
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPScaleOutDatabaseDataRange
@@ -35,7 +38,7 @@ C:\PS>$database = $databases[0]
 
 C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
 
-PS C:\>Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
+Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
 ```
 
 This example extends the data range end point of the first database in the specified service application up to the maximum range point.

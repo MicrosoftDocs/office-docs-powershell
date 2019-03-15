@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-FrontendTransportService
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -611,7 +614,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntraOrgConnectorProtocolLoggingLevel
-The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport servicee. Valid values are:
+The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport service. Valid values are:
 
 - None: Protocol logging is disabled for the intra-organization Send connector in the Front End Transport service.
 

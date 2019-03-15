@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Disable-ProjectServerLicense
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-ProjectServerLicense
@@ -23,7 +26,7 @@ Disables Project Server functionality across the farm.
 
 ### Example 1 
 ```
-PS C:\> Disable-ProjectServerLicense
+ Disable-ProjectServerLicense
 ```
 
 This example disables Project Server functionality for the entire farm.

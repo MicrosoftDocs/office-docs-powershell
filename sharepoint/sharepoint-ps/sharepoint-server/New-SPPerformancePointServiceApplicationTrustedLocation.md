@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPPerformancePointServiceApplicationTrustedLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPPerformancePointServiceApplicationTrustedLocation
@@ -32,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------
 ```
-PS C:\>New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
+New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
 ```
 
 This example creates a new TrustedLocation for the PPSApp_01 service application.

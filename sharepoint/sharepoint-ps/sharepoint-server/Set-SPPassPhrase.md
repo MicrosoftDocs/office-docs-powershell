@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPassPhrase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPPassPhrase
@@ -43,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$passphrase = ConvertTo-SecureString -asPlainText -Force
-PS C:\>Set-SPPassPhrase -PassPhrase $passphrase -Confirm
+$passphrase = ConvertTo-SecureString -asPlainText -Force
+Set-SPPassPhrase -PassPhrase $passphrase -Confirm
 ```
 
 This example queries for a string to use as a passphrase and sets the farm passphrase to a new value.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPO365LinkSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPO365LinkSettings
@@ -27,7 +30,7 @@ To run this cmdlet requires farm administrator permission and that the user acco
 
 ### EXAMPLE 1
 ```powershell
-PS C:\> Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
+ Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
 ```
 
 This example sets the mysite host URL to contoso-my.sharepoint.com

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUser
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
+Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
 ```
 
 This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
@@ -39,14 +42,14 @@ This example returns all members of the SharePoint group Viewers on the site htt
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Classic Windows authentication on the site https://sharepoint.contoso.com.

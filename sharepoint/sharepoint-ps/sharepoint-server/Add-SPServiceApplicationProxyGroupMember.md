@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPServiceApplicationProxyGroupMember
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPServiceApplicationProxyGroupMember
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -match 'User Profile Service Application Proxy'}
-PS C:\>Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -match 'User Profile Service Application Proxy'}
+Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member $proxy
 ```
 
 This example adds a select service application proxy to the service application proxy group named RemoteProxyGroup.

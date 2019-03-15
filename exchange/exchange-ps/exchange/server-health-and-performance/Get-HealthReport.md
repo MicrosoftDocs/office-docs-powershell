@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-HealthReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -132,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RollupGroup
-The RollupGroupswitch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
+The RollupGroup switch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPAppPackage
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPAppPackage
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------- 
 ```
-PS C:\>Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
 ```
 
 This example imports an app package.

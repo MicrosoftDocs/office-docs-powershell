@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelUserDefinedFunction
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelUserDefinedFunction
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
+Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
 ```
 
 This example changes the description of the user-defined function (UDF) to the UDF SampleCompany.SampleApplication.SampleUdf file for the Excel Services Application Web service application named My Excel Service.
@@ -42,7 +45,7 @@ This example changes the description of the user-defined function (UDF) to the U
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
+Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
 ```
 
 This example disables the sample UDF SampleCompany.SampleApplication.SampleUdf file from the Excel Services Application named My Excel Service.

@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectServiceApplication
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
+Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
 ```
 
 This example updates the application pool and re-registers the timer job for a Project Server Service application.

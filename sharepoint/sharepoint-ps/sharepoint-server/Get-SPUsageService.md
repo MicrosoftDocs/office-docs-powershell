@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUsageService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUsageService
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------------- 
 ```
-PS C:\>Get-SPUsageService -Identity 57055d99-9914-4af6-a3bf-7b76e3f231c2
+Get-SPUsageService -Identity 57055d99-9914-4af6-a3bf-7b76e3f231c2
 ```
 
 This example returns a SPUsageService object of the specified ID.

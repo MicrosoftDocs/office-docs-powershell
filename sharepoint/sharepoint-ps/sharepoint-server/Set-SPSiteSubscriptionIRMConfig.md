@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSiteSubscriptionIRMConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSiteSubscriptionIRMConfig
@@ -29,11 +32,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>site = Get-SPSite  HYPERLINK "http://<myspserver>" http:// <myspserver>
+site = Get-SPSite  HYPERLINK "http://<myspserver>" http:// <myspserver>
 
 C:\PS>$subscription = $site.SiteSubscription
 
-PS C:\>Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl http:// <rmsserver>
+Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl http:// <rmsserver>
 ```
 
 This example enables IRM for the tenant and configures it to use the specified RMS server.
@@ -41,11 +44,11 @@ This example enables IRM for the tenant and configures it to use the specified R
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>site = Get-SPSite  HYPERLINK "http://myspserver" http:// <myspserver>
+site = Get-SPSite  HYPERLINK "http://myspserver" http:// <myspserver>
 
 C:\PS>$subscription = $site.SiteSubscription
 
-PS C:\>Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
+Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
 
 This example disables IRM for the tenant.

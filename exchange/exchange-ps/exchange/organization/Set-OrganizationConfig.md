@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OrganizationConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -40,6 +43,7 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
  [-CustomerLockboxEnabled <$true | $false>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
@@ -74,7 +78,8 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
- [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookMobileGCCRestrictionsEnabled <$true | $false>]
+ [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -173,7 +178,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### AdfsAuthenticationParameter
 ```
 Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled <true | $false>]
+ [-ACLableSyncedObjectEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -296,9 +301,9 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
 ### -------------------------- Example 6 -------------------------- 
-``` 
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15 
-``` 
+```
+Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
@@ -376,7 +381,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsAudienceUris parameter specifies one or more external URLs that are used for Active Directory Federation Services (AD FS) claims-based authentication. For example, the external Outlook on the web and external Exchange admin center (EAC) URLs.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -454,7 +459,7 @@ The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-s
 
 To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see Get-ADFSCertificate (https://go.microsoft.com/fwlink/p/?linkid=392706).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -509,7 +514,7 @@ This parameter is available only in the cloud-based service.
 
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
-- $true: Mailbox auditing is disabled for the organization. 
+- $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
 
@@ -570,7 +575,11 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsPaymentsEnabled Description}}
+The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+
+- $true: Online payments are enabled.
+
+- $false: Online payments are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -587,7 +596,11 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsSocialSharingRestricted Description}}
+The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+
+- $true: Social sharing options are restricted.
+
+- $false: Users can see social sharing options inside Bookings. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -738,7 +751,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForSharepoint
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForSharepoint Description}}
+The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on Sharepoint. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
@@ -755,7 +772,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForTeams
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForTeams Description}}
+The ConnectorsEnabledForTeams parameter specifies whether to enable or disable connected apps on Teams. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
@@ -772,7 +793,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForYammer
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForYammer Description}}
+The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Yammer. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
@@ -836,6 +861,29 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultAuthenticationPolicy
+The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+
+```yaml
+Type: AuthPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1181,7 +1229,7 @@ Accept wildcard characters: False
 ### -EwsAllowList
 The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1251,7 +1299,7 @@ Accept wildcard characters: False
 ### -EwsBlockList
 The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1274,7 +1322,7 @@ The EwsEnabled parameter specifies whether to globally enable or disable EWS acc
 
 - $false: All EWS access is disabled.
 
-- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the releated EWS parameters (for example EwsAllowEntourage). This is the default value.
+- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This is the default value.
 
 This parameter has no affect on access to REST.
 
@@ -1429,9 +1477,11 @@ This parameter accepts IPv4 or IPv6 addresses in the following formats:
 
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+This parameter has a limit of approximately 1200 entries.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1789,7 +1839,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 - $true: Modern authentication is enabled.
 
-- $false: Modern authentication is disabled. 
+- $false: Modern authentication is disabled.
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
@@ -1824,14 +1874,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutlookMobileHelpShiftEnabled
+### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill OutlookMobileHelpShiftEnabled Description}}
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+
+- $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
+
+- $false: Enable features that aren't FedRAMP compliant for GCC customers.
+
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+
+- Multi-account support
+
+- Third-party services
+
+- HelpShift and in-app support
+
+- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+
+ For a full list of Features and services that are not FedRAMP compliant for GCC customers, see Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users (https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
 ```yaml
-Type: Boolean
-Parameter Sets: $true | $false
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookPayEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
+
+- $true: Payments in Outlook are enabled.
+
+- $False: Payments in Outlook are disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -1854,7 +1941,7 @@ A message that's permanently deleted can't be recovered by using the Recoverable
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
+Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -2257,7 +2344,9 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-This parameter is reserved for internal Microsoft use.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+
+Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
 ```yaml
 Type: String

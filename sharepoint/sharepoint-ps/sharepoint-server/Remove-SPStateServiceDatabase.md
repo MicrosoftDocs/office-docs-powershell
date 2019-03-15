@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPStateServiceDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPStateServiceDatabase
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Remove-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+Remove-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example removes the specified database from a SharePoint Server farm and drops the database from the SQL Server (data loss).

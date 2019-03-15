@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPSiteSubscriptionSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPSiteSubscriptionSettings
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Export-SPSiteSubscriptionSettings -Identity "http://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+Export-SPSiteSubscriptionSettings -Identity "http://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
 The example backs up the subscription settings store of http://siteCollection.
@@ -38,7 +41,7 @@ The example backs up the subscription settings store of http://siteCollection.
 ### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>$site = Get-SPSite http://siteCollection
-PS C:\>Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
 The example backs up the subscription settings store of http://siteCollection using the Site Subscription object.

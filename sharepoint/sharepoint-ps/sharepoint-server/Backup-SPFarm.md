@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPFarm
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Backup-SPFarm
@@ -43,21 +46,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
+Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
 ```
 
 This example backs up the configuration settings of the farm to the \\\\file_server\share\Backup directory.
 
 ### --------------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example shows which components of the farm would be backed up under the "Microsoft SharePoint Foundation Web Application" node, but do not actually back them up.
 
 ### --------------------EXAMPLE 3--------------------- 
 ```
-PS C:\>Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
+Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPStateServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPStateServiceApplicationProxy
@@ -27,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPStateServiceApplicationProxy
+Get-SPStateServiceApplicationProxy
 ```
 
 This example displays all the state service application proxies on the farm.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
+Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
 ```
 
 This example displays a specific state service application proxy on the farm.

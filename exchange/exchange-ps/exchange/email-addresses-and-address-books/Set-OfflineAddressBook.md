@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OfflineAddressBook
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -101,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyMandatoryProperties
-The ApplyMandatoryPropertiesswitch specifies whether to update the mandatory properties of a legacy OAB. You don't need to specify a value with this switch.
+The ApplyMandatoryProperties switch specifies whether to update the mandatory properties of a legacy OAB. You don't need to specify a value with this switch.
 
 This switch was used in coexistence environments when an OAB was migrated from Exchange 2003.
 
@@ -118,9 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredAttributes
-The ConfiguredAttributes parameter specifies the recipient MAPI propertiesthat are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
+The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -373,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultAttributes
-The UseDefaultAttributesswitch specifies whether to revert the recipient MAPI properties that are available in the OAB to the default list. You don't need to specify a value with this switch.
+The UseDefaultAttributes switch specifies whether to revert the recipient MAPI properties that are available in the OAB to the default list. You don't need to specify a value with this switch.
 
 You can use this switch to undo changes that you've made to the default list by using the ConfiguredAttributes parameter.
 

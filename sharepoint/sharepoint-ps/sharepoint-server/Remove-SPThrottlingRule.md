@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPThrottlingRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPThrottlingRule
@@ -36,7 +39,7 @@ C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchTyp
 
 C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 
-PS C:\>Remove-SPThrottlingRule -Identity $throttlingrule
+Remove-SPThrottlingRule -Identity $throttlingrule
 ```
 
 This example removes a throttling rule for a specified identity by using the $throttlingrule variable.

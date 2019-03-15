@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2019
 title: Get-SPContentDatabaseOrphanedData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPContentDatabaseOrphanedData
@@ -26,7 +29,7 @@ Use the **Get-SPContentDatabaseOrphanedData** to display orphaned objects.
 
 ### EXAMPLE 1
 ```powershell
-PS C:\> Get-SPContentDatabase "WSS_Content" | Get-SPContentDatabaseOrphanedData
+ Get-SPContentDatabase "WSS_Content" | Get-SPContentDatabaseOrphanedData
 ```
 This example gets orphan objects in content database named "WSS_Content".
 

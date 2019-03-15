@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityUserStoreGroupExpansion
 ---
 
@@ -26,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
+Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
 ```
 
 This example gets all the groups in the "ln1" user store that are parents, grand-parents, etc.
@@ -34,7 +37,7 @@ of the "user1" user.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
+Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
 ```
 
 This example gets all the groups in the "ln2" user store from the worker with a server name of "workerserver" that are parents, grand-parents, etc.

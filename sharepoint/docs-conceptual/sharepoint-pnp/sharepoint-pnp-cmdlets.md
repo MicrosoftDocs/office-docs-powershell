@@ -1,3 +1,16 @@
+---
+title: 
+author: 
+ms.author: 
+manager: 
+audience: ITPro 
+ms.topic: article 
+localization_priority: Priority
+description: 
+ms.custom: 
+ms.collection: 
+---
+
 # PnP PowerShell overview
 
 SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
@@ -89,14 +102,14 @@ See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-us
 ### Apps 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Add&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Online, SharePoint 2019
-**[Get&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPApp.md)** |Returns the available apps from the app catalog|SharePoint Online, SharePoint 2019
-**[Install&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Install-PnPApp.md)** |Installs an available app from the app catalog|SharePoint Online, SharePoint 2019
-**[Publish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Publish-PnPApp.md)** |Publishes/Deploys/Trusts an available app in the app catalog|SharePoint Online, SharePoint 2019
-**[Remove&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPApp.md)** |Removes an app from the app catalog|SharePoint Online, SharePoint 2019
+**[Add&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPApp.md)** |Returns the available apps from the app catalog|SharePoint Server 2019, SharePoint Online
+**[Install&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Install-PnPApp.md)** |Installs an available app from the app catalog|SharePoint Server 2019, SharePoint Online
+**[Publish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Publish-PnPApp.md)** |Publishes/Deploys/Trusts an available app in the app catalog|SharePoint Server 2019, SharePoint Online
+**[Remove&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPApp.md)** |Removes an app from the app catalog|SharePoint Server 2019, SharePoint Online
 **[Uninstall&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPApp.md)** |Uninstalls an available add-in from the site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Unpublish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Unpublish-PnPApp.md)** |Unpublishes/retracts an available add-in from the app catalog|SharePoint Online, SharePoint 2019
-**[Update&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPApp.md)** |Updates an available app from the app catalog|SharePoint Online, SharePoint 2019
+**[Unpublish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Unpublish-PnPApp.md)** |Unpublishes/retracts an available add-in from the app catalog|SharePoint Server 2019, SharePoint Online
+**[Update&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPApp.md)** |Updates an available app from the app catalog|SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online

@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Connect-SPOService
@@ -53,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
 ```
 
-Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
+Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -62,11 +65,18 @@ Example 1 shows how a SharePoint Online global administrator with credential adm
 $username = "admin@contoso.sharepoint.com"
 $password = "password"
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
-Connect-SPOService -Url https://contoso-admin.sharepoint.com/ -Credential $cred
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credential $cred
 ```
 
-Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
+Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
 
+### -----------------------EXAMPLE 3-----------------------------
+
+```
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+```
+
+Prompts for credentials. This is required if the account is using multi-factor authentication.
 
 ## PARAMETERS
 
@@ -176,6 +186,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Disconnect-SPOService](Disconnect-SPOService.md)

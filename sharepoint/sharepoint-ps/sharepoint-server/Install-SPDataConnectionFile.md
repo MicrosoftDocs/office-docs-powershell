@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPDataConnectionFile
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Install-SPDataConnectionFile
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```
-PS C:\>Install-SPDataConnectionFile -Path 'C:\folder\sample.udcx' -Category "Install" -WebAccessible $true
+Install-SPDataConnectionFile -Path 'C:\folder\sample.udcx' -Category "Install" -WebAccessible $true
 ```
 
 This example uploads a data connection file to a specified category.

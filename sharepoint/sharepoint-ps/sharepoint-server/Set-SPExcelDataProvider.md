@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelDataProvider
@@ -32,9 +35,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB" } 
-PS C:\>Set-SPExcelDataProvider $provider -Description "The SQLOLEDB provider description has changed."
-PS C:\>$provider | format-table
+$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB" } 
+Set-SPExcelDataProvider $provider -Description "The SQLOLEDB provider description has changed."
+$provider | format-table
 ```
 
 This example retrieves the SQLOLEDB data provider from the list of safe data providers that is on the Excel Services Application Web service application named MyExcelService, as an object, adds a new display description and then displays the provider output in a Command Prompt window, formatted as a table.

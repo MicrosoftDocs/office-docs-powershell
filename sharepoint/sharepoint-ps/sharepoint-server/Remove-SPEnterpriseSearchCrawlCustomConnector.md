@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchCrawlCustomConnector
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchCrawlCustomConnector
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication MySearchServiceApp" - Identity "dctm://" | Remove-SPEnterpriseSearchCrawlCustomConnector
+Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication MySearchServiceApp" - Identity "dctm://" | Remove-SPEnterpriseSearchCrawlCustomConnector
 ```
 
 This example removes a custom connector for the dctm:// protocol from the MySearchServiceApp search service application.

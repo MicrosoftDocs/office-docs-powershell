@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Word.Server.dll-Help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPWordConversionServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPWordConversionServiceApplication
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
+New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
 ```
 
 This example creates a new Word Automation Services application named Word Conversion Services in an existing application pool named SharePoint Web Services Default.

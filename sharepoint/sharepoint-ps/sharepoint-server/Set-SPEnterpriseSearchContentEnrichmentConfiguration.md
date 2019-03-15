@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchContentEnrichmentConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchContentEnrichmentConfiguration
@@ -31,12 +34,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1 ------------------
 ```
-PS C:\>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-PS C:\>$config.Endpoint = "http://server/service"
-PS C:\>$config.InputProperties = "Title", "Url"
-PS C:\>$config.OutputProperties = "Title", "Url"
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
+$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+$config.Endpoint = "http://server/service"
+$config.InputProperties = "Title", "Url"
+$config.OutputProperties = "Title", "Url"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
 ```
 
 This example creates a new ContentEnrichmentConfiguration object.

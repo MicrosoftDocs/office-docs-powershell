@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchPrimaryHostController
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchPrimaryHostController
@@ -27,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local 
-PS C:\>Set-SPEnterpriseSearchPrimaryHostController $si
+$si = Get-SPEnterpriseSearchServiceInstance -Local 
+Set-SPEnterpriseSearchPrimaryHostController $si
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.
@@ -39,8 +42,8 @@ If you choose a SearchHostController that is not running the latest version of t
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local 
-PS C:\>Set-SPEnterpriseSearchPrimaryHostController $si -Force
+$si = Get-SPEnterpriseSearchServiceInstance -Local 
+Set-SPEnterpriseSearchPrimaryHostController $si -Force
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.

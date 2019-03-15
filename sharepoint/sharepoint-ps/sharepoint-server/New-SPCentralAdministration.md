@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
+New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
 ```
 
 This example creates the Central Administration site at port 8080 on the local farm using NTLM authentication.
@@ -38,7 +38,7 @@ This example creates the Central Administration site at port 8080 on the local f
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
+New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
 ```
 
 This example creates the Central Administration site using SSL on port 443 with Kerberos authentication.

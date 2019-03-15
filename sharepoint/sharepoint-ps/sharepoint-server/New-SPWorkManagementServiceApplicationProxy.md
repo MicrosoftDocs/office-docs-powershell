@@ -3,12 +3,15 @@ external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPWorkManagementServiceApplicationProxy
 
 ## SYNOPSIS
-Creates a new service application proxy group.
+Creates a new Work Management Service application proxy.
 
 
 ## SYNTAX
@@ -30,8 +33,8 @@ Note: This functionality has been removed from SharePoint Server 2016, SharePoin
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$sa = New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
-PS C:\>New-SPWorkManagementServiceApplicationProxy -name 'Work Management Service Application Proxy' -ServiceApplication $sa
+$sa = New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
+New-SPWorkManagementServiceApplicationProxy -name 'Work Management Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new SPWorkManagementServiceApplicationProxy called Work Management Service Application Proxy mapped to the "Work Management Service Application" Service Application.

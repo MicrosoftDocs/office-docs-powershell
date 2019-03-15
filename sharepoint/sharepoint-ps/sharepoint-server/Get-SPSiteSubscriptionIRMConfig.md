@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteSubscriptionIRMConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteSubscriptionIRMConfig
@@ -29,11 +32,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```
-PS C:\>site = Get-SPSite http://myspserver
+site = Get-SPSite http://myspserver
 
 C:\PS>$subscription = $site.SiteSubscription
 
-PS C:\>Get-SPSiteSubscriptionIRMConfig -Identity $subscription
+Get-SPSiteSubscriptionIRMConfig -Identity $subscription
 ```
 
 This example gets the IRM settings for a specified tenant by using the Identity parameter.

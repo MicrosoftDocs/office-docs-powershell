@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteSubscriptionFeaturePack
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteSubscriptionFeaturePack
@@ -42,14 +45,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get- SPSiteSubscriptionFeaturePack
+Get- SPSiteSubscriptionFeaturePack
 ```
 
 This example returns all defined Feature sets in the local farm.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPSiteSubscriptionFeaturePack -SiteSubscription http://contoso.com | ForEach{ $_.FeatureDefinitions }
+Get-SPSiteSubscriptionFeaturePack -SiteSubscription http://contoso.com | ForEach{ $_.FeatureDefinitions }
 ```
 
 This example returns the list (name, ID, and scope) of all Features allowed in the Feature set that is currently assigned to the site subscription of http://contoso.com.

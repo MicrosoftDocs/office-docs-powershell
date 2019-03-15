@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchAdministrationComponent
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchAdministrationComponent
@@ -31,9 +34,9 @@ For permissions and the most current information about search cmdlets, see the o
 
 ### --------------------EXAMPLE---------------------
 ```
- PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication "Search Service Application" 
- PS C:\>$admin = Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
- PS C:\>$admin | Set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance SP02 -Force
+ $ssa = Get-SPEnterpriseSearchServiceApplication "Search Service Application" 
+ $admin = Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
+ $admin | Set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance SP02 -Force
 ```
 
 This example moves the administration component to a different server.

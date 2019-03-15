@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPIBinding
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWOPIBinding
@@ -47,7 +50,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Remove-SPWOPIBinding -Application "Excel"
+Remove-SPWOPIBinding -Application "Excel"
 ```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
@@ -55,7 +58,7 @@ This example removes all bindings for Excel on the current SharePoint farm where
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Remove-SPWOPIBinding -All:$true
+Remove-SPWOPIBinding -All:$true
 ```
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
@@ -63,7 +66,7 @@ This example removes all bindings on the current SharePoint farm where this cmdl
 
 ### --------------EXAMPLE 3-----------------
 ```
-PS C:\>Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.

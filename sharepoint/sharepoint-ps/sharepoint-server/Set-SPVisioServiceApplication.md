@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPVisioServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPVisioServiceApplication
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1----------------------
 ```
-PS C:\>Set-SPVisioServiceApplication -identity "VGS1" -ServiceApplicationPool "SharePoint Web Services System Default"
+Set-SPVisioServiceApplication -identity "VGS1" -ServiceApplicationPool "SharePoint Web Services System Default"
 ```
 
 This example changes the application pool of the VGS1 service application.
@@ -36,7 +39,7 @@ This example changes the application pool of the VGS1 service application.
 
 ### -----------------EXAMPLE 2----------------------
 ```
-PS C:\>Get-SPServiceApplicationPool "SharePoint Web Services Default" | Set-SPVisioServiceApplication VGS1
+Get-SPServiceApplicationPool "SharePoint Web Services Default" | Set-SPVisioServiceApplication VGS1
 ```
 
 This example changes the application pool of the VGS1 service application.

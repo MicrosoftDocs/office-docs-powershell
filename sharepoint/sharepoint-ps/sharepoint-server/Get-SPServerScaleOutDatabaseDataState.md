@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServerScaleOutDatabaseDataState
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServerScaleOutDatabaseDataState
@@ -48,7 +51,7 @@ C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceAppl
 
 C:\PS>$database = $databases[0]
 
-PS C:\>Get-SPServerScaleOutDatabaseDataState -Database $database
+Get-SPServerScaleOutDatabaseDataState -Database $database
 ```
 
 This example gets the data state of the scale-out database for the first scale-out database of the given service application.

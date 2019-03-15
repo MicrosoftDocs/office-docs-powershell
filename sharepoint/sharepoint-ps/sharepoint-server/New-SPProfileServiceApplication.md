@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPProfileServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPProfileServiceApplication
@@ -51,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
+New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
 ```
 
 This example creates a new User Profile Service application.

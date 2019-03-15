@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioSafeDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPVisioSafeDataProvider
@@ -28,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1---------------------- 
 ```
-PS C:\>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
+Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
 ```
 
 This example returns a list of safe data providers for a specific Visio Services application.
 
 ### -------------------EXAMPLE 2---------------------- 
 ```
-PS C:\>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
+Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
 ```
 
 This example returns information about a specified safe data provider for a specific Visio Services application.

@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsTenantFederationConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsTenantFederationConfiguration
@@ -249,7 +252,7 @@ Accept wildcard characters: False
 
 ### -SharedSipAddressSpace
 When set to True, indicates that the users homed on Skype for Business Online use the same SIP domain as users homed on the on-premises version of Skype for Business Server.
-The default value is False, meaning that the two sets of users gave have different SIP domains.
+The default value is False, meaning that the two sets of users have different SIP domains.
 
 ```yaml
 Type: Boolean

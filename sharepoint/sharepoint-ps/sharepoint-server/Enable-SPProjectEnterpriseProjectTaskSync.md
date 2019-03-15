@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPProjectEnterpriseProjectTaskSync
@@ -28,7 +31,7 @@ Enables task sync between Project Web App and the associated project site.
 
 ### Example 1 
 ```
-PS C:\>Enable-SPProjectEnterpriseProjectTaskSync -Url http://pwa_site
+Enable-SPProjectEnterpriseProjectTaskSync -Url http://pwa_site
 ```
 
 Enables Project Task sync on the Project Web Apps site, http://pwa_site.

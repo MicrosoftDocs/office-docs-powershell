@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPBusinessDataCatalogDotNetAssembly
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPBusinessDataCatalogDotNetAssembly
@@ -30,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1---------------- 
 ```
-PS C:\>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll"
+Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll"
 ```
 
 This example imports the assembly Assembly.
 
 ### -----------------EXAMPLE 2---------------- 
 ```
-PS C:\>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll" -DependentAssemblyPaths "c:\Folder\Assembly2.dll","c:\Folder\Assembly3.dll"
+Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll" -DependentAssemblyPaths "c:\Folder\Assembly2.dll","c:\Folder\Assembly3.dll"
 ```
 
 This example imports the assembly Assembly, and also imports the dependent assemblies Assembly2 and Assembly3.

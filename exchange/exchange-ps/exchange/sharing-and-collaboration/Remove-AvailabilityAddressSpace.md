@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-AvailabilityAddressSpace
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -34,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AvailabilityAddressSpace -Identity Contoso.com
 ```
 
-This example removes the availability address space objectnamed Contoso.com.
+This example removes the availability address space object named Contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Remove-AvailabilityAddressSpace -Identity Contoso.com -Confirm:$false
 ```
 
-This example immediately removes the availability address space objectnamed Contoso.com without displaying the confirmation prompt.
+This example immediately removes the availability address space object named Contoso.com without displaying the confirmation prompt.
 
 ## PARAMETERS
 

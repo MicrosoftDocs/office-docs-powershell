@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchMetadataMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchMetadataMapping
@@ -28,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
-PS C:\>Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
+Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp
 ```
 
 This example lists all crawled properties mapped to the managed property UserName for the default search service application.

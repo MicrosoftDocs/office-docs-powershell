@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPContentDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPContentDatabase
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1---------------
 ```
-PS C:\>Get-SPContentDatabase http://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
+Get-SPContentDatabase http://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
 ```
 
 This example sets the MaxSiteCount for the content database that contains contoso.com to 1.
@@ -37,7 +40,7 @@ This example sets the MaxSiteCount for the content database that contains contos
 
 ### ---------------EXAMPLE 2---------------
 ```
-PS C:\>Get-SPContentDatabase -WebApplication http://sitename | Set-SPContentDatabase -WarningSiteCount $null
+Get-SPContentDatabase -WebApplication http://sitename | Set-SPContentDatabase -WarningSiteCount $null
 ```
 
 This example clears the WarningSiteCount for all databases in the sitename Web application.

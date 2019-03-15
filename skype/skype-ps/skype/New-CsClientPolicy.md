@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsClientPolicy
@@ -2007,6 +2010,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallAllowCustomUserFeedback
+When set to True, a free-text input field will be displayed in the Rate My Call window for users to submit custom feedback.
 
 ```yaml
 Type: Boolean
@@ -2022,6 +2026,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallDisplayPercentage
+This parameter controls how often the form is shown.
 
 ```yaml
 Type: UInt16

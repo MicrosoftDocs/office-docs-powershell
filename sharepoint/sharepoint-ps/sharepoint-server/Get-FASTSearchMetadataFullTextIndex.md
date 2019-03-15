@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataFullTextIndex
 ---
 
@@ -29,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataFullTextIndex -Name content
+Get-FASTSearchMetadataFullTextIndex -Name content
 ```
 
 This example retrieves the full text index named "content".

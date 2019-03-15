@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchFileFormat
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchFileFormat
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Remove-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity foo
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Remove-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity foo
 ```
 
 This example uses the `Remove-SPEnterpriseSearchFileFormat` cmdlet to remove the file format with the belonging file name extension foo in the search service application referenced by $ssa.

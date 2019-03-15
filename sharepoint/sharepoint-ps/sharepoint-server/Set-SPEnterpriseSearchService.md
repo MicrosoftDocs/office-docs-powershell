@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchService
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$password = Read-Host -AsSecureString
-PS C:\>Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
+$password = Read-Host -AsSecureString
+Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
 ```
 
 This example configures the search service to ignore SSL warnings and changes the service account for the search service.
@@ -189,15 +192,15 @@ Accept wildcard characters: False
 ```
 
 ### -PerformanceLevel
-Specifies the relative number of threads for the indexer performance:
+Specifies the relative number of threads for the crawl component performance.
+The type must be one of the following values: Reduced, PartlyReduced, or Maximum. The default value is Maximum.
+ 
+* Reduced: Total number of threads = number of processors, Max Threads/host = number of processors. Threads are assigned Below Normal priority.
+ 
+* Partly Reduced: Total number of threads = 16 times the number of processors , Max Threads/host = 8 plus the number of processors. Threads are assigned Below Normal priority.
+ 
+* Maximum: Total number of threads = 32 times the number of processors, Max Threads/host = 8 plus the number of processors. Threads are assigned Normal priority.  
 
-Reduced: Total number of threads = number of processors, Max Threads/host =  number of processors
-
-Partly Reduced:  Total number of threads = 4 times the number of processors , Max Threads/host = 16 time the number of processors
-
-Maximum: Total number of threads = number of processors
-
-The type must be one of the following values: Reduced, PartlyReduced, or Maximum.
 
 
 ```yaml

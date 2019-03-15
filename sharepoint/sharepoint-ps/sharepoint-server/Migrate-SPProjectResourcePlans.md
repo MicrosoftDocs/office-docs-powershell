@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectResourcePlans
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPProjectResourcePlans
@@ -24,7 +27,7 @@ Migrates the published resource plan assignment data to engagements. Run after d
 
 ### Example 1 
 ```
-PS C:\>Migrate-SPProjectResourcePlans -Url http://pwa_site
+Migrate-SPProjectResourcePlans -Url http://pwa_site
 ```
 Migrates the Project Resource Plans on the Project Web App site http://pwa_site.
 

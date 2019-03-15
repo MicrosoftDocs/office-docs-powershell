@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsPersistentChatConfiguration
@@ -94,7 +97,7 @@ The Filter and Identity parameters cannot be used in the same command.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -125,7 +128,7 @@ If neither the Identity parameter nor the Filter parameter are included in a com
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: 2
@@ -141,7 +144,7 @@ Retrieves the Persistent Chat configuration data from the local replica of the C
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named

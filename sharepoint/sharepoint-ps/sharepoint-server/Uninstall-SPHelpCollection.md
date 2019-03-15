@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPHelpCollection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Uninstall-SPHelpCollection
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Uninstall-SPHelpCollection -Name "OSSAdmin.1033"
+Uninstall-SPHelpCollection -Name "OSSAdmin.1033"
 ```
 
 This example uninstalls a Help collection.
