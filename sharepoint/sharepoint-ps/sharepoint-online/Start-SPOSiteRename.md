@@ -39,7 +39,8 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" without mo
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
 $NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
-Start-SPOSiteRename-Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle "New Title"
+$newTitle="New Title"
+Start-SPOSiteRename-Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
 ```
 Starts the rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title"
 
@@ -47,7 +48,8 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" modifying 
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
 $NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed" 
-Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle "New Title" -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
+$newTitle="New Title"
+Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
 ```
 Starts the **simulation** rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title" without MarketPlaceAppCheck and without WorkFlow2013Check
 
