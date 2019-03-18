@@ -198,6 +198,12 @@
         "src": "exchange-ps/exchange/o365scc-ps",
         "version": "o365scc-ps",
         "dest": "module/exchange-ps"
+      },
+      {
+        "files": ["**/*.md"],
+        "src": "exchange-ps/redirect",
+        "version": "exchange-ps",
+        "dest": "module/exchange"
       }
     ],
     "resource": [
@@ -286,6 +292,9 @@
       },
       "o365scc-ps": {
         "dest": "o365scc-ps"
+      },
+      "exchange-ps": {
+        "dest": "exchange-ps"
       }
     },
     "overwrite": [],
