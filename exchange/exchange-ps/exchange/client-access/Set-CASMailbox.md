@@ -57,6 +57,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-MAPIEnabled <$true | $false>]
  [-MapiHttpEnabled <$true | $false>]
  [-Name <String>]
+ [-OutlookMobileEnabled <$true | $false>]
  [-OWAEnabled <$true | $false>]
  [-OWAforDevicesEnabled <$true | $false>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
@@ -876,6 +877,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookMobileEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookMobileEnabled parameter enables or disables access to the mailbox by using Outlook for iOS and Android. Valid values are:
+
+- $true: Access to the mailbox using Outlook for iOS and Android is enabled. This is the default value.
+
+- $false: Access to the mailbox using Outlook for iOS and Android is disabled.
+
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OWAEnabled
 The OWAEnabled parameter enables or disables access to the mailbox by using Outlook on the web.
 
@@ -1210,11 +1233,11 @@ Accept wildcard characters: False
 ### -UniversalOutlookEnabled
 This parameter is available only in the cloud-based service.
 
-The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Mail and Calendar. Valid values are:
+The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Windows 10 Mail and Calendar. Valid values are:
 
-- $true: Access to the mailbox in Mail and Calendar is enabled. This is the default value.
+- $true: Access to the mailbox using Windows 10 Mail and Calendar is enabled. This is the default value.
 
-- $false: Access to the mailbox in Mail and Calendar is disabled.
+- $false: Access to the mailbox using Windows 10 Mail and Calendar is disabled.
 
 ```yaml
 Type: $true | $false
