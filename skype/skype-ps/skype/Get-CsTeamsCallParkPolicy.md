@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsTeamsCallParkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsCallParkPolicy
@@ -11,7 +14,7 @@ schema: 2.0.0
 
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different Teams phone.  The Get-CsTeamsCallParkPolicy cmdlet returns the policies that are available for your organization.
 
-NOTE: the call park feature currently only available in desktop and web clients.  Call Park functionality is currently completely disabled in mobile clients.
+NOTE: the call park feature is currently only available in the desktop and web clients.  Call Park functionality is currently completely disabled in mobile clients.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallParkPolicy
+Get-CsTeamsCallParkPolicy
 ```
 
 Retrieve all policies that are available in your organization.

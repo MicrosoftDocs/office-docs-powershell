@@ -13,7 +13,9 @@ class CmdletDependenciesService {
 
 		switch (cmdletName) {
 			case 'teams': {
-				await this.preInstallTeams();
+				const { login, pass } = this._getCredentialsFromConfig();
+
+				await this.preInstallTeams({ login, pass });
 				break;
 			}
 			case 'skype': {
@@ -41,7 +43,6 @@ class CmdletDependenciesService {
 				break;
 			}
 			default: {
-
 			}
 		}
 	}
@@ -65,10 +66,11 @@ class CmdletDependenciesService {
 		}
 	}
 
-	async preInstallTeams() {
-		// TODO: check if user already auth
-
+	async preInstallTeams({ login, pass }) {
+		await this._createCredInPs({ login, pass });
+		//await this.ps.invokeCommand(commands.GET_TEAMS_CREDENTIALS);
 		await this.ps.invokeCommand(commands.INSTALL_MICROSOFT_TEAM);
+		await this.ps.invokeCommand(commands.IMPORT_MICROSOFT_TEAM);
 		await this.ps.invokeCommand(commands.CONNECT_MICROSOFT_TEAM);
 	}
 
@@ -79,16 +81,20 @@ class CmdletDependenciesService {
 	async preInstallSkype({ login, pass }) {
 		await this._createCredInPs({ login, pass });
 
-		await this.ps.invokeCommandAndIgnoreError({
-			command: commands.SKYPE_ENABLE_WIN_RM,
-			printError: true
-		});
+		try {
+			await this.ps.invokeCommandAndIgnoreError({
+				command: commands.SKYPE_ENABLE_WIN_RM,
+				printError: true
+			});
 
-		//await this.ps.invokeCommand(commands.SKYPE_GET_CRED);
-		await this.ps.invokeCommand(commands.SKYPE_INSTALL_LYNC_MODULE);
-		await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
-		await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
-		await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
+			//await this.ps.invokeCommand(commands.SKYPE_GET_CRED);
+			await this.ps.invokeCommand(commands.SKYPE_INSTALL_LYNC_MODULE);
+			await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
+			await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
+			await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
+		} catch (e) {
+			throw errors.powerShellErrors.SKYPE_INSTALL_ERROR;
+		}
 	}
 
 	async preInstallWhiteboard() {
@@ -98,14 +104,18 @@ class CmdletDependenciesService {
 	async preInstallExchange({ login, pass }) {
 		await this._createCredInPs({ login, pass });
 
-		await this.ps.invokeCommandAndIgnoreError({
-			command: commands.SKYPE_ENABLE_WIN_RM,
-			printError: true
-		});
+		try {
+			await this.ps.invokeCommandAndIgnoreError({
+				command: commands.SKYPE_ENABLE_WIN_RM,
+				printError: true
+			});
 
-		//await this.ps.invokeCommand(commands.EXCHANGE_INSTALL_MODULE);
-		await this.ps.invokeCommand(commands.EXCHANGE_GET_SESSION);
-		await this.ps.invokeCommand(commands.EXCHANGE_SESSION_IMPORT);
+			await this.ps.invokeCommand(commands.EXCHANGE_INSTALL_MODULE);
+			await this.ps.invokeCommand(commands.EXCHANGE_GET_SESSION);
+			await this.ps.invokeCommand(commands.EXCHANGE_SESSION_IMPORT);
+		} catch (e) {
+			throw errors.powerShellErrors.EXCHANGE_INSTALL_ERROR;
+		}
 	}
 
 	async preInstallStuffHub() {

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-MailContact
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -18,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-MailContact [-Name] <String> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
+New-MailContact -Name <String> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-FirstName <String>] [-Initials <String>] [-LastName <String>]
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]

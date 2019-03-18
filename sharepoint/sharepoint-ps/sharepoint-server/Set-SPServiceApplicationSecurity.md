@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPServiceApplicationSecurity
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPServiceApplicationSecurity
@@ -30,9 +33,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
+$sa = Get-SPServiceApplication -Identity <ID>
+$security = Get-SPServiceApplicationSecurity $sa -Admin
+$principal = New-SPClaimsPrincipal contoso\johndoe -IdentityType WindowsSamAccountName
 Grant-SPObjectSecurity $security $principal "Full Control"
-Set-SPServiceApplicationSecurity $serviceApp -Admin $security
+Set-SPServiceApplicationSecurity $sa -Admin $security
 ```
 
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application and adds a new user principal to that ACL.

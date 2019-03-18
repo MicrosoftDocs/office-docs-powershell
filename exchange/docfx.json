@@ -304,10 +304,8 @@
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "apiPlatform": {
-        "exchange-ps/exchange": [
-          "PowerShell"
-        ]
+      "apiPlatform":{
+        "exchange-ps/exchange/**/*.md" : [ "powershell" ]
       }
     },
     "template": [],

@@ -1,9 +1,11 @@
 module.exports = {
 	GET_TEAM: 'Get-Team',
+	GET_TEAMS_CREDENTIALS: '$credentials=Get-Credential',
 	INSTALL_PS_GALLERY: 'Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted',
 	INSTALL_PACKAGE_PROVIDER: 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force',
+	IMPORT_MICROSOFT_TEAM: 'Import-Module MicrosoftTeams',
 	INSTALL_MICROSOFT_TEAM: 'Install-Module MicrosoftTeams -SkipPublisherCheck -Force',
-	CONNECT_MICROSOFT_TEAM: 'Connect-MicrosoftTeams',
+	CONNECT_MICROSOFT_TEAM: 'Connect-MicrosoftTeams -Credential $cred',
 	INSTALL_PLATYPS: 'Install-Module -Name platyPS -SkipPublisherCheck -Scope CurrentUser -Force',
 	IMPORT_PLATYPS: 'Import-Module platyPS',
 	UPDATE_MARKDOWN: 'Update-MarkdownHelp -Path "{}" -LogPath "{}" -Session $Session',
