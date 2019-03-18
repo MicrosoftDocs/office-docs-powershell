@@ -294,7 +294,7 @@
         "dest": "o365scc-ps"
       },
       "exchange-ps": {
-        "dest": "exchange-ps"
+        "dest": "exchserver-ps-2016"
       }
     },
     "overwrite": [],
