@@ -6,7 +6,7 @@
       "build_output_subfolder": "exchange-ps",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": ["exchserver-ps-2016", "exchserver-ps-2013", "exchserver-ps-2010", "exchonline-ps", "eop-ps", "o365scc-ps"],
+      "moniker_ranges": ["exchserver-ps-2016", "exchserver-ps-2013", "exchserver-ps-2010", "exchonline-ps", "eop-ps", "o365scc-ps", "exchange-ps"],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
