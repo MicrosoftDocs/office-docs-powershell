@@ -66,7 +66,7 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
+Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
