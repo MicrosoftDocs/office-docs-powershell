@@ -50,5 +50,14 @@
         "conceptualTocUrl": "/powershell/exchange/toc.json",
         "referenceToc": "exchange-ps/exchange/o365scc-ps/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
+    },
+
+    "exchange-ps": {
+        "serviceMap": "mapping/exchangeallmapping.json",
+        "packageRoot": "exchange-ps/exchange",
+        "conceptualToc":"docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/exchange-ps/toc.yml",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     }
 }
