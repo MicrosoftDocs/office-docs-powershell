@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Add-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter> -Links <RecipientIdParameter[]>
- -LinkType <Members | Owners | Subscribers | Aggregators | EventSubscribers> [-Confirm] [-WhatIf]
+ -LinkType <Members | Owners | Subscribers | Aggregators> [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -111,8 +111,6 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Office 365 Group property that you want to modify. Valid values are:
 
-- EventSubscribers
-
 - Members
 
 - Owners
@@ -120,7 +118,7 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 - Subscribers
 
 ```yaml
-Type: Members | Owners | Subscribers | Aggregators | EventSubscribers
+Type: Members | Owners | Subscribers | Aggregators
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
