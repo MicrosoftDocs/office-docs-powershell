@@ -22,9 +22,9 @@ After creating the `"Custom Cyan"` theme, hiding the default themes leaves only 
 
 Specify the setting as either `$true` to hide the default themes, or `$false` (the default setting) to allow use of the default themes. 
 
->[!Note] that this cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+**NOTE:** This cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
->[!tip] This Cmdlet allows you to hide or show *ALL*  default themes, no any particular ones.
+**TIP:** Also, this Cmdlet allows you to hide or show **ALL**  default themes, no any particular ones.
 
 ## EXAMPLES
 
