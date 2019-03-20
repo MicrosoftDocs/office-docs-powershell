@@ -110,6 +110,33 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 This example stops publishing content types to OneDrive for Business sites. 
 
+
+### -----------------------EXAMPLE 8-------------------------------
+
+```powershell
+Set-SPOTenant -SearchResolveExactEmailOrUPN $true
+```
+
+This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
+
+
+### -----------------------EXAMPLE 9-------------------------------
+
+```powershell
+Set-SPOTenant -UseFindPeopleInPeoplePicker $true
+```
+
+This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
+
+
+### -----------------------EXAMPLE 10-------------------------------
+
+```powershell
+Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
+```
+
+This example enable the option to search for existing guest users at Tenant Level.
+
 ## PARAMETERS
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
@@ -357,7 +384,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
-True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
 
 ```yaml
