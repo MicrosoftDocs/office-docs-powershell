@@ -503,7 +503,7 @@ Specifies the home realm discovery value to be sent to Azure Active Directory (A
 When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
-Acceleration will not occur on site collections that are shared externally.
+Acceleration will not occur on site collections that are shared externally. 
 
 This value should be configured with the login domain that is used by your company (that is, example@contoso.com).
 
