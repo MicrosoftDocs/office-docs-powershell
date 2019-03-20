@@ -9,7 +9,10 @@ ms.reviewer:
 # Add-PnPListItem
 
 ## SYNOPSIS
-Adds an item to a list with the creation time as the current date and the author name is the one executing the Cmdlet. It cannot be customized.
+Adds an item to a list with the creation time as the current date and the author name is the one executing the Cmdlet.
+
+> [!NOTE] 
+> The author or datetime can't be customized or set by this parameter.
 
 ## SYNTAX 
 
@@ -169,8 +172,11 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Remove-PnPListItem](Remove-PnPListItem.md)
 
 [SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

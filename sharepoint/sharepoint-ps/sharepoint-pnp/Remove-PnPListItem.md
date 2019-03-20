@@ -114,4 +114,9 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Add-PnPListItem](Add-PnPListItem.md)
+
 [SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+
