@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Submit-PnPSearchQuery
 
@@ -127,7 +124,7 @@ Accept pipeline input: False
 ```
 
 ### -CollapseSpecification
-Limit the number of items per the collapse specification. See https://docs.microsoft.com/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property for more information.
+Limit the number of items per the collapse specification. See https://docs.microsoft.com/en-us/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property for more information.
 
 ```yaml
 Type: String

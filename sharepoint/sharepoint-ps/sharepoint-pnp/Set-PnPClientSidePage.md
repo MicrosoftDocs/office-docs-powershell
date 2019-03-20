@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPClientSidePage
 
@@ -26,6 +23,7 @@ Set-PnPClientSidePage -Identity <ClientSidePagePipeBind>
                       [-CommentsEnabled [<SwitchParameter>]]
                       [-Publish [<SwitchParameter>]]
                       [-HeaderType <ClientSidePageHeaderType>]
+                      [-ContentType <ContentTypePipeBind>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -83,6 +81,20 @@ Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -ContentType
+Specify either the name, ID or an actual content type.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: ContentTypePipeBind
 Parameter Sets: (All)
 
 Required: False
