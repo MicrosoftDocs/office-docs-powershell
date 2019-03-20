@@ -9,7 +9,7 @@ ms.reviewer:
 # Add-PnPListItem
 
 ## SYNOPSIS
-Adds an item to a list
+Adds an item to a list with the creation time as the current date and the author name is the one executing the Cmdlet. It cannot be customized.
 
 ## SYNTAX 
 
@@ -51,6 +51,7 @@ Add-PnPListItem -List "Demo List" -Values @{"Title"="Sales Report"} -Folder "pro
 ```
 
 Adds a new list item to the "Demo List". It will add the list item to the europe folder which is located in the projects folder. Folders will be created if needed.
+
 
 ## PARAMETERS
 
@@ -163,6 +164,8 @@ Required: False
 Position: Named
 Accept pipeline input: False
 ```
+
+
 
 ## OUTPUTS
 
