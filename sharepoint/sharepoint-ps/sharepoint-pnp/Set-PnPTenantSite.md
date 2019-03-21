@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPTenantSite
 
@@ -25,6 +22,8 @@ Set-PnPTenantSite -Url <String>
                   [-AllowSelfServiceUpgrade [<SwitchParameter>]]
                   [-Owners <String>]
                   [-NoScriptSite [<SwitchParameter>]]
+                  [-DefaultLinkPermission <SharingPermissionType>]
+                  [-DefaultSharingLinkType <SharingLinkType>]
                   [-Wait [<SwitchParameter>]]
                   [-Connection <SPOnlineConnection>]
 ```
@@ -91,6 +90,30 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -DefaultLinkPermission
+Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
+
+```yaml
+Type: SharingPermissionType
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DefaultSharingLinkType
+Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -LockState
 Sets the lockstate of a site
 
@@ -116,7 +139,7 @@ Accept pipeline input: False
 ```
 
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
 Type: String
@@ -128,7 +151,7 @@ Accept pipeline input: False
 ```
 
 ### -Sharing
-Specifies what the sharing capablilites are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
 
 ```yaml
 Type: SharingCapabilities
