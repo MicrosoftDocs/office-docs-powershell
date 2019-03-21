@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPHubSite
 
@@ -14,7 +11,8 @@ Sets hubsite properties
 ## SYNTAX 
 
 ```powershell
-Set-PnPHubSite [-Connection <SPOnlineConnection>]
+Set-PnPHubSite [-SiteDesignId <GuidPipeBind>]
+               [-Connection <SPOnlineConnection>]
 ```
 
 ## EXAMPLES
@@ -27,6 +25,18 @@ Set-PnPHubSite -Identity https://tenant.sharepoint.com/sites/myhubsite -Title "M
 Sets the title of the hubsite
 
 ## PARAMETERS
+
+### -SiteDesignId
+
+
+```yaml
+Type: GuidPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
