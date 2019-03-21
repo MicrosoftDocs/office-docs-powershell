@@ -19,7 +19,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter> [-Description <String>] [-Confirm] [-WhatIf]
+New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-ApplicationAcessPolicy -AccessRight DenyAccess -AppId 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5,6ac794ca-2697-4137-8754-d2a78ae47d93 PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5,6ac794ca-2697-4137-8754-d2a78ae47d93 PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
 ```
 
 This example creates a new application access policy with the following settings:
@@ -47,7 +50,7 @@ This example creates a new application access policy with the following settings
 ## PARAMETERS
 
 ### -AccessRight
-The AccessRight parameter specifies the permission that you want to assing in the application access policy. Valid values are:
+The AccessRight parameter specifies the permission that you want to assign in the application access policy. Valid values are:
 
 - RestrictAccess
 
@@ -107,21 +110,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Description
-The Description parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -134,6 +122,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The Description parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -162,12 +165,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

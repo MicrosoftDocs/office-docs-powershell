@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String>
+Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Test-ApplicationAcessPolicy -Identity "Engineering Staff" -AppID 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5
+Test-ApplicationAccessPolicy -Identity "Engineering Staff" -AppID 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5
 ```
 
 This example tests access to the specified app for the group "Engineering Staff".
@@ -86,12 +86,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

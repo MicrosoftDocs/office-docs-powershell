@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>]
+Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-ApplicationAcessPolicy | Format-Table -Auto Description,ScopeName,AccessRight
+Get-ApplicationAccessPolicy | Format-Table -Auto Description,ScopeName,AccessRight
 ```
 
 This example returns a summary list of all application access policies in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-ApplicationAcessPolicy -Identity "596ade3a-1abe-4c5b-b7d5-a169c4b05d4a\7a774f0c-7a6f-11e0-85ad-07fb4824019b:S-1-5-21-724521725-2336880675-2689004279-1821338;8b6ce428-cca2-459a-ac50-d38bcc932258"
+Get-ApplicationAccessPolicy -Identity "596ade3a-1abe-4c5b-b7d5-a169c4b05d4a\7a774f0c-7a6f-11e0-85ad-07fb4824019b:S-1-5-21-724521725-2336880675-2689004279-1821338;8b6ce428-cca2-459a-ac50-d38bcc932258"
 ```
 
 This example returns detailed information for the specified policy.
@@ -66,12 +66,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
