@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # New-PnPTenantSequenceTeamNoGroupSite
 
@@ -28,7 +25,7 @@ New-PnPTenantSequenceTeamNoGroupSite -Url <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$site = New-PnPTenantSequenceTeamNoGroupSite -Alias "MyTeamSite" -Title "My Team Site"
+$site = New-PnPTenantSequenceTeamNoGroupSite -Url "/sites/MyTeamSite" -Title "My Team Site"
 ```
 
 Creates a new team site object with the specified variables
