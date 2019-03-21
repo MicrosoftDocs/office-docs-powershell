@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPSite
 
@@ -78,7 +75,7 @@ Enables Flows for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Set-PnPSite -LogoFilePath c:\images\mylogo.png
+Set-PnPSite -SiteLogoPath c:\images\mylogo.png
 ```
 
 Sets the logo if the site is a modern team site
@@ -268,7 +265,7 @@ Accept pipeline input: False
 ```
 
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
 Type: String
@@ -292,7 +289,7 @@ Accept pipeline input: False
 ```
 
 ### -Sharing
-Specifies what the sharing capablilites are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
 
 ```yaml
 Type: SharingCapabilities

@@ -210,4 +210,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
+[Start-SPOSiteRename](Start-SPOSiteRename.md)
+
+[Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
+
 [Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)

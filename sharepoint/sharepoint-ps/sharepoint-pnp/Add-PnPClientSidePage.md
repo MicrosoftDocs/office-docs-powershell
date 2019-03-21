@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Add-PnPClientSidePage
 
@@ -17,6 +14,7 @@ Adds a Client-Side Page
 Add-PnPClientSidePage -Name <String>
                       [-LayoutType <ClientSidePageLayoutType>]
                       [-PromoteAs <ClientSidePagePromoteType>]
+                      [-ContentType <ContentTypePipeBind>]
                       [-CommentsEnabled [<SwitchParameter>]]
                       [-Publish [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
@@ -34,15 +32,17 @@ Creates a new Client-Side page named 'NewPage'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Add-PnPClientSidePage "NewPage"
+Add-PnPClientSidePage -Name "NewPage" -ContentType "MyPageContentType"
 ```
 
-Creates a new Client-Side page named 'NewPage'
+Creates a new Client-Side page named 'NewPage' and sets the content type to the content type specified
 
 ## PARAMETERS
 
 ### -CommentsEnabled
 Enables or Disables the comments on the page
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -53,8 +53,24 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -ContentType
+Specify either the name, ID or an actual content type.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: ContentTypePipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -LayoutType
 Specifies the layout type of the page.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: ClientSidePageLayoutType
@@ -68,6 +84,8 @@ Accept pipeline input: False
 ### -Name
 Specifies the name of the page.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -79,6 +97,8 @@ Accept pipeline input: False
 
 ### -PromoteAs
 Allows to promote the page for a specific purpose (HomePage | NewsPage)
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: ClientSidePagePromoteType
@@ -92,6 +112,8 @@ Accept pipeline input: False
 ### -Publish
 Publishes the page once it is saved. Applicable to libraries set to create major and minor versions.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -104,6 +126,8 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SPOnlineConnection
 Parameter Sets: (All)
@@ -115,6 +139,8 @@ Accept pipeline input: False
 
 ### -Web
 This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: WebPipeBind
