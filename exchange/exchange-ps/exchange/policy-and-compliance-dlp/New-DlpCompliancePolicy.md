@@ -22,12 +22,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-DlpCompliancePolicy [-Name] <String> [-Comment <String>] [-Confirm]
- [-ExchangeLocation <MultiValuedProperty>] [-ExchangeOnPremisesLocation <MultiValuedProperty>] [-Force]
+ [-ExchangeLocation <MultiValuedProperty>] [-Force]
  [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
  [-OneDriveLocation <MultiValuedProperty>] [-OneDriveLocationException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>] [-SharePointLocationException <MultiValuedProperty>]
- [-SharePointOnPremisesLocationException <MultiValuedProperty>]
- [-SharePointServerLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-TeamsLocation <MultiValuedProperty>] [-TeamsLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,21 +102,6 @@ Accept wildcard characters: False
 
 ### -ExchangeLocation
 The ExchangeLocation parameter specifies Exchange Online mailboxes to include in the DLP policy. You can only use the value All for this parameter to include all mailboxes.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeOnPremisesLocation
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -236,35 +221,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SharePointOnPremisesLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointServerLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -WhatIf
 The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
