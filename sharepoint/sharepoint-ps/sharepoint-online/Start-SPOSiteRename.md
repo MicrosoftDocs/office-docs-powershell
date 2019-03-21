@@ -1,75 +1,69 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Start-SPOSiteContentMove
+title: Start-SPOSiteRename
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: joseOrtega
+ms.author: j0rt3g4
 ms.reviewer:
 ---
 
-# Start-SPOSiteContentMove
+# Start-SPOSiteRename
 
 ## SYNOPSIS
-Start a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command
+Starts a job to rename a site. You can change Renames a particular site on a SharePoint Online collection
 
 
 ## SYNTAX
-
-### UrlAndDestinationDataLocation
-```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
- [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
- [-ValidationOnly] [<CommonParameters>]
+```Powershell
+Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
+    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [[-Reserved] <string>] [-WhatIf] [-Confirm]
+    [<CommonParameters>]
 ```
 
-### GroupNameAndDestinationDataLocation
-```powershell
-Start-SPOSiteContentMove [-GroupName] <String> [-DestinationDataLocation] <String>
- [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
- [-ValidationOnly] [<CommonParameters>]
-```
-
-### UrlAndDestinationUrl
-```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
- [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
-```
 
 ## DESCRIPTION
-This command starts the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
-
+This command starts a rename of a site on a SharePoint Online site into a new title, name and url. Also allows you to simulate the run using the -WhatIf parameter as well as -SuppressWorkflow2013Check and SuppressMarketplaceAppCheck switch parameters.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
-Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
+$url="https://<tenant>.sharepoint.com/site/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
+Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl
 ```
-Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
+Starts the rename of the SPO site with name "samplesite" to "renamed" without modifying the title.
 
 ### EXAMPLE 2
 ```powershell
-Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation  $destlocation
+$url="https://<tenant>.sharepoint.com/site/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
+$newTitle="New Title"
+Start-SPOSiteRename-Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
 ```
-Starts the movement of a group of users called group@contoso.com to the destination location called $destlocation
+Starts the rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title"
 
 ### EXAMPLE 3
 ```powershell
-Start-SPOSiteContentMove -Url $url -DestinationUrl $destlocation
+$url="https://<tenant>.sharepoint.com/site/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed" 
+$newTitle="New Title"
+Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
 ```
-Starts the movement from a $url and set it to the location defined on $destlocation
+Starts the **simulation** rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title" without MarketPlaceAppCheck and without WorkFlow2013Check
 
 
 ## PARAMETERS
 
-### -DestinationDataLocation
+
+### -Identity
 PARAMVALUE: String
 
 
 ```yaml
 Type: String
-Parameter Sets: UrlAndDestinationDataLocation, GroupNameAndDestinationDataLocation
+Parameter Sets: Default
 Aliases: 
 Applicable: SharePoint Online
 
@@ -80,69 +74,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DestinationUrl
+### -NewSiteUrl
 PARAMVALUE: String
 
 
 ```yaml
 Type: String
-Parameter Sets: UrlAndDestinationUrl
-Aliases: 
+Parameter Sets: Default
 Applicable: SharePoint Online
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupName
-PARAMVALUE: String
-
-
-```yaml
-Type: String
-Parameter Sets: GroupNameAndDestinationDataLocation
-Aliases: 
-Applicable: SharePoint Online
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreferredMoveBeginDate
-PARAMVALUE: DateTime
-
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
-
-Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PreferredMoveEndDate
-PARAMVALUE: DateTime
+### -NewSiteTitle
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressMarketplaceAppCheck
+PARAMVALUE: SwitchParameter
 
 
 ```yaml
-Type: DateTime
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
 Required: False
-Position: 3
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressWorkflow2013Check
+PARAMVALUE: SwitchParameter
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -165,9 +157,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Url
-Destination URL where the move will take place
-
+### -WhatIf
+Simulation of what would happend if you run the script without modifying anything.
 
 ```yaml
 Type: String
@@ -182,7 +173,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ValidationOnly
+### -Confirm
 PARAMVALUE: SwitchParameter
 
 
@@ -210,8 +201,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
-[Start-SPOSiteRename](Start-SPOSiteRename.md)
+[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 
 [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
 [Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
+
