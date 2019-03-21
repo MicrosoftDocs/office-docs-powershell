@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: New-InboundConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -36,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true
+New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainsToIPAddresses $true
 ```
 
 This example creates the Inbound connector named Contoso Inbound Connector with the following properties:
@@ -47,7 +50,7 @@ This example creates the Inbound connector named Contoso Inbound Connector with 
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-InboundConnector -Name "Contoso Inbound Secure Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true -RequireTLS $true -TlsSenderCertificateName *.contoso.com
+New-InboundConnector -Name "Contoso Inbound Secure Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainsToIPAddresses $true -RequireTLS $true -TlsSenderCertificateName *.contoso.com
 ```
 
 This example creates the Inbound connector named Contoso Inbound Secure Connector and requires TLS transmission for all messages.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-OutlookAnywhere
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -50,7 +53,7 @@ This example returns all Outlook Anywhere virtual directories on the server name
 Get-OutlookAnywhere -Identity "EXCH01\Rpc (Default Web Site)"
 ```
 
-This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web siteof the server named EXCH01.
+This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web site of the server named EXCH01.
 
 ## PARAMETERS
 

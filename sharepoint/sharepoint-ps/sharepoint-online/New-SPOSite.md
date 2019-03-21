@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: New-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # New-SPOSite
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies the user name of the site collection’s primary owner. The owner must be a user instead of a security group or an email-enabled security group.
+Specifies the user name of the site collection’s primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
 
 
 ```yaml
@@ -239,7 +242,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOSite](Get-SPOSite.md)
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPushNotificationConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsPushNotificationConfiguration
@@ -255,9 +258,9 @@ The New-CsPushNotificationConfiguration cmdlet creates new instances of the Micr
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
+[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
 
-[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)
+[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)
 
-[Remove-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)
+[Remove-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)
 

@@ -5,12 +5,15 @@ applicable: Microsoft Teams
 title: New-Team
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-Team
 
 ## SYNOPSIS
-This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team.  Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default.  If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false. 
+This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team.  Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default.  If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false. 
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected. 
 Note: This cmdlet is currently in Beta and functionality may change.
@@ -88,7 +91,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the alias for the associated Office 365 Group. This value will be used for the mail enabled object and will be used as _PrimarySmtpAddress_ for this Office 365 Group. The value of the Alias parameter has to be unique across your tenant.
 
-For more details about the naming conventions see here: [New-UnifiedGroup, Parameter: -Alias](https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/new-unifiedgroup?view=exchange-ps#optional-parameters).
+For more details about the naming conventions see here: [New-UnifiedGroup, Parameter: -Alias](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-unifiedgroup?view=exchange-ps#optional-parameters).
 
 ```yaml
 Type: String
@@ -150,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-Use this parameter to specify the GroupId of a group you would like to convert to a team.
+Use this parameter to specify the ExternalDirectoryObjectId of a group you would like to convert to a team.
 If you are using this parameter, do not specify other parameters.
 
 ```yaml

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OwaMailboxPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -109,7 +112,7 @@ Accept wildcard characters: False
 ### -IsDefault
 This parameter is available only in the cloud-based service.
 
-The IsDefaultswitch specifies whether the policy is the default policy. You don't need to specify a value with this switch.
+The IsDefault switch specifies whether the policy is the default policy. You don't need to specify a value with this switch.
 
 If another policy is currently set as the default, using this switch replaces the old default policy with this policy.
 

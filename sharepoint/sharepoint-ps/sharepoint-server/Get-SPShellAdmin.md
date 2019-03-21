@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPShellAdmin
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPShellAdmin
@@ -37,7 +40,7 @@ This example returns the name of each user who has the SharePoint_Shell_Access r
 ## PARAMETERS
 
 ### -database
-Specifies the GUID of the database or the Databse Object that includes the SharePoint_Shell_Access role whose user names you want to display.
+Specifies the GUID of the database or the Database Object that includes the SharePoint_Shell_Access role whose user names you want to display.
 If the database parameter is not specified, the configuration database is used.
 
 ```yaml

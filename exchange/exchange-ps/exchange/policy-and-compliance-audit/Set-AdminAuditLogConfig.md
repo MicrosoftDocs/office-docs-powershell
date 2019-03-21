@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-AdminAuditLogConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -107,7 +110,7 @@ Accept wildcard characters: False
 ### -AdminAuditLogEnabled
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $false. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
+The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $true. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
 
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 

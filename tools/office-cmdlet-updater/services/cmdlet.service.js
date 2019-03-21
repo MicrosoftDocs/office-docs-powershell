@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const { ciEquals, ciEndWith } = require('../helpers/strings');
 
 const mdExt = '.md';
 
@@ -11,7 +12,7 @@ class CmdletService {
 	ensureModuleExist(moduleName) {
 		const modules = this.config.get('platyPS.docs');
 
-		const isExist = modules.find(({ name }) => name === moduleName);
+		const isExist = modules.find(({ name }) => ciEquals(name, moduleName));
 
 		if (!isExist) {
 			throw new Error(`Module with name "${moduleName}" didn't exist`);
@@ -117,7 +118,7 @@ class CmdletService {
 			return true;
 		}
 
-		return filePath.endsWith(`${cliCmdletName}${mdExt}`);
+		return ciEndsWith(`${cliCmdletName}${mdExt}`, filePath);
 	}
 
 	// endregion

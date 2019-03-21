@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantContentTypeReplicationParameters
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenantContentTypeReplicationParameters
@@ -24,7 +27,7 @@ Set-SPOTenantContentTypeReplicationParameters -ReplicatedContentTypes <String[]>
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use “Connect-SPOService” to connect to SharePoint Online first.
+Before you run the cmdlets, please use ï¿½Connect-SPOServiceï¿½ to connect to SharePoint Online first.
 By default, all published content types in primary location will be replicated to satellite. 
 
 

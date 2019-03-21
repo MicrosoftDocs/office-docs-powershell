@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Start-ManagedFolderAssistant
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -28,6 +31,8 @@ The Managed Folder Assistant uses the retention policy settings of users' mailbo
 In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter specifies the Mailbox server to start the assistant and process all mailboxes on that server, and the Mailbox parameter specifies the mailbox to process. In Exchange 2010 Service Pack 1 (SP1) and later, the Mailbox parameter has been removed, and the Identity parameter accepts the mailbox or mail user to process.
 
 If you use these parameters in scheduled commands or scripts, we recommend that you review them and make any necessary changes.
+
+For more information, see Messaging Records Management (MRM) and Retention Policies in Office 365 (https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -158,8 +163,7 @@ Accept wildcard characters: False
 
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
-
-The InactiveMailbox specifies whether the command runs only on inactive mailboxes. You don't need to specify a value with this switch..
+he InactiveMailbox specifies whether the command runs only on inactive mailboxes. You don't need to specify a value with this switch..
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed
 
@@ -208,5 +212,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/75d840ea-5abc-44bb-b361-e81561fa1b04.aspx)
+[Export-MailboxDiagnosticLogs](https://docs.microsoft.com/powershell/module/exchange/mailboxes/Export-MailboxDiagnosticLogs)

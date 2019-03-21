@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsBusyOptions
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsBusyOptions
@@ -113,6 +116,6 @@ This cmdlet does not return any objects.
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/get-csbusyoptions?view=skype-ps)
+[Get-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/get-csbusyoptions?view=skype-ps)
 
-[Set-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/set-csbusyoptions?view=skype-ps)
+[Set-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)

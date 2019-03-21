@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-App
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -128,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationAppswitch includes apps that are installed for the organization (not bound to a specific user) in the results. You don't need to specify a value with this switch.
+The OrganizationApp switch includes apps that are installed for the organization (not bound to a specific user) in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

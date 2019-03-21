@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Unregister-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Unregister-SPMTMigration

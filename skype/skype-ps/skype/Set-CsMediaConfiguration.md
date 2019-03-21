@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMediaConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsMediaConfiguration
@@ -97,9 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-QoS monitors the quality of voice signals over a network.
-The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
-
+QoS monitors the quality of voice signals over a network. When set to True, enables call Quality of Service (QoS) settings.
 
 ```yaml
 Type: Boolean
@@ -291,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInCallQoS
-PARAMVALUE: $true | $false
+Enables or disables the ability of Skype for Business clients to send the raw data that's required to generate InCallQuality messages.
 
 ```yaml
 Type: Boolean
@@ -323,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -InCallQoSIntervalSeconds
-PARAMVALUE: UInt16
+Specifies the interval between call QoS actions.
 
 ```yaml
 Type: UInt16

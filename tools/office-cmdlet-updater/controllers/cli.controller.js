@@ -1,3 +1,6 @@
+const { errorColor } = require('../helpers/colors');
+const checkWindowPlatformType = require('../helpers/os');
+
 class CliController {
 	constructor(
 		cliService,
@@ -12,10 +15,12 @@ class CliController {
 	}
 	start(argv) {
 		try {
+			checkWindowPlatformType();
+
 			this.startCli(argv);
 		} catch (e) {
 			this.powerShellService.dispose();
-			console.error(e.message);
+			console.error(errorColor(e));
 		}
 	}
 
@@ -65,12 +70,18 @@ class CliController {
 				createPr: isNeedPullRequest
 			} = cli;
 
-			await this.markdownController.updateMarkdown({
-				cliModuleName,
-				cliCmdletName,
-				isNeedPullRequest,
-				isNeedEmail
-			});
+			await this.markdownController
+				.updateMarkdown({
+					cliModuleName,
+					cliCmdletName,
+					isNeedPullRequest,
+					isNeedEmail
+				})
+				.catch((err) => {
+					console.error(errorColor(err));
+
+					this.powerShellService.dispose();
+				});
 		});
 	}
 }

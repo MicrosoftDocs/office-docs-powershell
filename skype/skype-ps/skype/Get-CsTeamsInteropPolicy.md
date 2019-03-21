@@ -3,15 +3,17 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsInteropPolicy
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
-If TeamsUpgradePolicy has mode=Legacy, TeamsInteropPolicy  determines how calls are routed between Skype for Business and Microsoft Teams. *Otherwise TeamsInteropPolicy is ignored.* Granting TeamsUpgradePolicy with mode=Legacy is now blocked. Customers with exisitng configurations using Legacy mode must update their configuration to use a mode other than Legacy.
 
 
 ## SYNTAX
@@ -21,21 +23,17 @@ Get-CsTeamsInteropPolicy  [-Identity] <Object>] [-Tenant <Object>] [-Filter <Obj
 ```
 
 ## DESCRIPTION
-
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. TeamsInteropPolicy is only honored if TeamsUpgradePolicy mode=Legacy.  However, Legacy mode has been deprecated and TeamsInteropPolicy will be removed in the near future.  Any customer still using TeamsUpgradePolicy with mode=Legacy must update their configuration of TeamsUpgradePolicy to use a different mode.
-
-For any user that is still assigned TeamsInteropPolicy and in Legacy mode, these users must be assigned only one of these three built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are not longer valid configurations, are not supported and will be removed. 
-
+Previously, TeamsInteropPolicy could determined how calls are routed between Skype for Business and Microsoft Teams, if TeamsUpgradePolicy had mode=Legacy. However, TeamsInteropPolicy and Legacy mode are both now fully retired. Instead, use TeamsUpgradePolicy to manage routing.
 
  
-For comprehensive documentation on this policy and its settings, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+For comprehensive documentation on this policy and its settings, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsTeamsInteropPolicy
+```powershell
+Get-CsTeamsInteropPolicy
 ```
 
 List all available instances of TeamsInteropPolicy.
@@ -116,9 +114,9 @@ Accept wildcard characters: False
 ### System.Object
 
 ## NOTES
-TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is not honored except if TeamsUpgradePolicy mode=Legacy. Legacy mode is being deprecated so customers should update their configuration of TeamsUpgradePolicy to use modes other than Legacy. 
+TeamsInteropPolicy is no longer honored by the system and has been replaced by TeamsUpgradePolicy. 
 
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype)

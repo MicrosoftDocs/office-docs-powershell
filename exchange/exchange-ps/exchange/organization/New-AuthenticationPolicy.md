@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: New-AuthenticationPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -66,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthActiveSync
-The AllowBasicAuthActiveSync switch specifies whther to allow Basic authentication with Exchange Active Sync. You don't need to specify a value with this switch.
+The AllowBasicAuthActiveSync switch specifies whether to allow Basic authentication with Exchange Active Sync. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -83,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthAutodiscover
-The AllowBasicAuthAutodiscover switch specifies whther to allow Basic authentication with Autodiscover. You don't need to specify a value with this switch.
+The AllowBasicAuthAutodiscover switch specifies whether to allow Basic authentication with Autodiscover. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -100,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthImap
-The AllowBasicAuthImap switch specifies whther to allow Basic authentication with IMAP. You don't need to specify a value with this switch.
+The AllowBasicAuthImap switch specifies whether to allow Basic authentication with IMAP. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -117,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthMapi
-The AllowBasicAuthMapi switch specifies whther to allow Basic authentication with MAPI. You don't need to specify a value with this switch.
+The AllowBasicAuthMapi switch specifies whether to allow Basic authentication with MAPI. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -134,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOfflineAddressBook
-The AllowBasicAuthOfflineAddressBook switch specifies whther to allow Basic authentication with Offline Address Books. You don't need to specify a value with this switch.
+The AllowBasicAuthOfflineAddressBook switch specifies whether to allow Basic authentication with Offline Address Books. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -151,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOutlookService
-The AllowBasicAuthOutlookService switch specifies whther to allow Basic authentication with the Outlook service. You don't need to specify a value with this switch.
+The AllowBasicAuthOutlookService switch specifies whether to allow Basic authentication with the Outlook service. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -168,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPop
-The AllowBasicAuthPop switch specifies whther to allow Basic authentication with POP. You don't need to specify a value with this switch.
+The AllowBasicAuthPop switch specifies whether to allow Basic authentication with POP. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPowershell
-The AllowBasicAuthPowerShell switch specifies whther to allow Basic authentication with PowerShell. You don't need to specify a value with this switch.
+The AllowBasicAuthPowerShell switch specifies whether to allow Basic authentication with PowerShell. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -202,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthReportingWebServices
-The AllowBasicAuthReporting Web Services switch specifies whther to allow Basic authentication with reporting web services. You don't need to specify a value with this switch.
+The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic authentication with reporting web services. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -219,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthRpc
-The AllowBasicAuthRpc switch specifies whther to allow Basic authentication with RPC. You don't need to specify a value with this switch.
+The AllowBasicAuthRpc switch specifies whether to allow Basic authentication with RPC. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -236,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthSmtp
-The AllowBasicAuthSmtp switch specifies whther to allow Basic authentication with SMTP. You don't need to specify a value with this switch.
+The AllowBasicAuthSmtp switch specifies whether to allow Basic authentication with SMTP. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -253,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthWebServices
-The AllowBasicAuthWebServices switch specifies whther to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
+The AllowBasicAuthWebServices switch specifies whether to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 
@@ -309,12 +312,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-SiteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-FullSync]
+Update-SiteMailbox [-Identity] <RecipientIdParameter>
+ [-BypassOwnerCheck]
+ [-Confirm]
+ [-FullSync]
+ [-Organization <OrganizationIdParameter>]
  [-Server <String>]
- [-Target <All | Document | Membership | Maintenance>] [-WhatIf] [<CommonParameters>]
+ [-Target <All | Document | Membership | Maintenance>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,6 +119,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-ComplianceTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -18,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-ComplianceTag [-Name] <String> [-Comment <String>] [-Confirm] [-EventType <ComplianceRuleIdParameter>]
- [-IsRecordLabel <$true | $false>] [-RetentionAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionType <String>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+New-ComplianceTag [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-IsRecordLabel <$true | $false>]
+ [-Notes <String>]
+ [-RetentionAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionType <String>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -134,6 +145,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Notes
+The Notes parameter specifies an optional note. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is a user note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetentionAction
 The RetentionAction parameter specifies the action for the label. Valid values are:
 
@@ -233,12 +259,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

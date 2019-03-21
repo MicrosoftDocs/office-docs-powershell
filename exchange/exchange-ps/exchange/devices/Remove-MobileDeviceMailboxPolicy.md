@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MobileDeviceMailboxPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -41,7 +44,7 @@ This example removes the mobile device mailbox policy SalesPolicy.
 Remove-MobileDeviceMailboxPolicy -Identity Engineering -Confirm:$false
 ```
 
-This example removes the mobile device mailbox policy named Engineeringand hides the confirmation prompt.
+This example removes the mobile device mailbox policy named Engineering and hides the confirmation prompt.
 
 ### -------------------------- Example 3 --------------------------
 ```

@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenant
@@ -42,6 +45,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
+ [-CustomizedExternalSharingServiceUrl <String>]
  [<CommonParameters>]
 ```
 
@@ -55,7 +59,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
 Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
@@ -63,28 +67,28 @@ This example blocks access to https://contoso.sharepoint.com/sites/team1 and red
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false 
 ```
 This example hides the "Everyone Except External Users" claim in People Picker.
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowAllUsersClaim $false 
 ```
 This example hides the "All Users" claim group in People Picker.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
 ### -----------------------EXAMPLE 5-----------------------------
 
-```
+```powershell
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 ```
 
@@ -92,19 +96,46 @@ This example enables legacy authentication protocols on the tenant. This can hel
 
 ### -----------------------EXAMPLE 6------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
 ```
 
-This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behaviour for other sites.
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
 
 ### -----------------------EXAMPLE 7-------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
 This example stops publishing content types to OneDrive for Business sites. 
+
+
+### -----------------------EXAMPLE 8-------------------------------
+
+```powershell
+Set-SPOTenant -SearchResolveExactEmailOrUPN $true
+```
+
+This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
+
+
+### -----------------------EXAMPLE 9-------------------------------
+
+```powershell
+Set-SPOTenant -UseFindPeopleInPeoplePicker $true
+```
+
+This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
+
+
+### -----------------------EXAMPLE 10-------------------------------
+
+```powershell
+Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
+```
+
+This example enable the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
 
@@ -113,7 +144,7 @@ When the feature is enabled, all guest users are subject to conditional access p
 
 The valid values are:  
 False (default) - Guest access users are exempt from conditional access policy.  
-True - Conditional access policy is applieda also to guest users.
+True - Conditional access policy is also applied to guest users.
 
 
 ```yaml
@@ -353,7 +384,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
-True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
 
 ```yaml
@@ -396,7 +427,7 @@ Accept wildcard characters: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users (authenticated) group is equivalent to the Everyone claim, and shows as Everyone.
 To change this, see -ShowEveryoneClaim.
@@ -472,7 +503,7 @@ Specifies the home realm discovery value to be sent to Azure Active Directory (A
 When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
-Acceleration will not occur on site collections that are shared externally.
+Acceleration will not occur on site collections that are shared externally. 
 
 This value should be configured with the login domain that is used by your company (that is, example@contoso.com).
 
@@ -1161,7 +1192,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.
 
 
 ```yaml
@@ -1206,6 +1237,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
+This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
 > [!NOTE] 
 > When set to $true, users aren't able to share with security groups or SharePoint groups.  
@@ -1242,16 +1274,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomizedExternalSharingServiceUrl
+Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "https://www.contoso.com/sharingpolicies".
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
 In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
 ```
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
@@ -1266,7 +1315,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 
