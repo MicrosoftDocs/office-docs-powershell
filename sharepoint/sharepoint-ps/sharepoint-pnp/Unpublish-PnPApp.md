@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Unpublish-PnPApp
 
@@ -40,6 +37,8 @@ This will retract, but not remove, the specified app from the site collection ap
 ### -Identity
 Specifies the Id of the Addin Instance
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppMetadataPipeBind
 Parameter Sets: (All)
@@ -52,6 +51,8 @@ Accept pipeline input: True
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppCatalogScope
 Parameter Sets: (All)
@@ -63,6 +64,8 @@ Accept pipeline input: False
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection

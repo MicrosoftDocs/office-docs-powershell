@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-This parameter is reserved for internal Microsoft use..
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
