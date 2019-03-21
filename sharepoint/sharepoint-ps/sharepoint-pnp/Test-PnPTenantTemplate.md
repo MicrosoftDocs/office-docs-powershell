@@ -1,15 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Test-PnPTenantTemplate
 
 ## SYNOPSIS
-Tests a provisioning hierarchy for invalid references
+Tests a tenant template for invalid references
 
 ## SYNTAX 
 
@@ -22,7 +19,7 @@ Test-PnPTenantTemplate -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Test-PnPProvisioningHierarchy -Hierarchy $myhierarchy
+Test-PnPTenantTemplate -Template $myTemplate
 ```
 
 Checks for valid template references

@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Update-PnPSiteClassification
 
@@ -46,7 +43,7 @@ Sets the default classification value to "LBI". This value needs to be present i
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-Update-PnPSiteClassification -UsageGuidelinesUrl https://aka.ms/sppnp
+Update-PnPSiteClassification -UsageGuidelinesUrl http://aka.ms/sppnp
 ```
 
 sets the usage guideliness URL to the specified URL.

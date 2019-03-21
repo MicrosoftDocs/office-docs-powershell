@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Get-PnPWebPartProperty
 
@@ -28,19 +25,19 @@ Get-PnPWebPartProperty -ServerRelativePageUrl <String>
 Get-PnPWebPartProperty -ServerRelativePageUrl /sites/demo/sitepages/home.aspx -Identity ccd2c98a-c9ae-483b-ae72-19992d583914
 ```
 
-Returns all properties of the webpart.
+Returns all properties of the web part.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Get-PnPWebPartProperty -ServerRelativePageUrl /sites/demo/sitepages/home.aspx -Identity ccd2c98a-c9ae-483b-ae72-19992d583914 -Key "Title"
 ```
 
-Returns the title property of the webpart.
+Returns the title property of the web part.
 
 ## PARAMETERS
 
 ### -Identity
-The id of the webpart
+The id of the web part
 
 ```yaml
 Type: GuidPipeBind
@@ -64,7 +61,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Full server relative URL of the webpart page, e.g. /sites/mysite/sitepages/home.aspx
+Full server relative URL of the web part page, e.g. /sites/mysite/sitepages/home.aspx
 
 ```yaml
 Type: String

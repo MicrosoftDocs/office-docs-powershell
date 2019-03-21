@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Get-PnPEventReceiver
 
@@ -67,7 +64,7 @@ This will return all registered event receivers in the provided "ProjectList" li
 Get-PnPEventReceiver -List "ProjectList" -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
-This will return the event receiver in the provided "ProjectList" list with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22"
+This will return the event receiver in the provided "ProjectList" list with with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22"
 
 ### ------------------EXAMPLE 6------------------
 ```powershell

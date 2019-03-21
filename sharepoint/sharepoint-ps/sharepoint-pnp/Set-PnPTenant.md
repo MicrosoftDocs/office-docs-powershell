@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPTenant
 
@@ -151,11 +148,11 @@ Accept pipeline input: False
 ```
 
 ### -BccExternalSharingInvitations
-When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
+When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingInvitationsList.
 
 The valid values are:
 False (default) - BCC for external sharing is disabled.
-True - All external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
+True - All external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingInvitationsList.
 
 ```yaml
 Type: Boolean
@@ -826,7 +823,7 @@ Accept pipeline input: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users(authenticated) group is equivalent to the Everyone claim, and shows as Everyone.To change this, see - ShowEveryoneClaim.
 
