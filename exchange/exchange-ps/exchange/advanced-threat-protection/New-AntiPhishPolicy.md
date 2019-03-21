@@ -434,7 +434,6 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -496,7 +495,6 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
