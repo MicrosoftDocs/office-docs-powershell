@@ -1,15 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Add-PnPRoleDefinition
 
 ## SYNOPSIS
-Adds a Role Definition (Permission Level) to the site collection in the current context
+Adds a Role Defintion (Permission Level) to the site collection in the current context
 
 ## SYNTAX 
 
@@ -23,7 +20,7 @@ Add-PnPRoleDefinition -RoleName <String>
 ```
 
 ## DESCRIPTION
-This command allows adding a custom Role Definition (Permission Level) to the site collection in the current context. It does not replace or remove existing Role Definitions.
+This command allows adding a custom Role Defintion (Permission Level) to the site collection in the current context. It does not replace or remove existing Role Definitions.
 
 ## EXAMPLES
 

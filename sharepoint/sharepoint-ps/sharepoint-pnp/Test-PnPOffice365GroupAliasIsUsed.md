@@ -2,14 +2,11 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Test-PnPOffice365GroupAliasIsUsed
 
 ## SYNOPSIS
-Tests if a given alias is already used
+Tests if a given alias is already used used
 
 ## SYNTAX 
 
