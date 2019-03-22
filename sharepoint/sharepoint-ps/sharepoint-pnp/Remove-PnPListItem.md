@@ -18,7 +18,6 @@ Remove-PnPListItem -List <ListPipeBind>
                    [-Web <WebPipeBind>]
                    [-Connection <SPOnlineConnection>]
 ```
-
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
