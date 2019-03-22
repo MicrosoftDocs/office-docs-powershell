@@ -449,7 +449,7 @@ The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public
 Type: SwitchParameter
 Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None

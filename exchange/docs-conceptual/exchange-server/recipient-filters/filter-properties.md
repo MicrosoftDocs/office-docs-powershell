@@ -13,65 +13,66 @@ description: "Learn about the filterable properties for the Filter parameter in 
 ---
 
 # Filterable properties for the Filter parameter
+
 You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016. The _Filter_ parameter is available on these recipient cmdlets:
-  
+
 - [Get-CASMailbox](../../../exchange-ps/exchange/client-access/get-casmailbox.md)
-    
+
 - [Get-Contact](../../../exchange-ps/exchange/users-and-groups/get-contact.md)
-    
+
 - [Get-DistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-distributiongroup.md)
-    
+
 - [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-dynamicdistributiongroup.md)
-    
+
 - [Get-Group](../../../exchange-ps/exchange/users-and-groups/get-group.md)
-    
+
 - [Get-LinkedUser](../../../exchange-ps/exchange/users-and-groups/get-linkeduser.md)
-    
+
 - [Get-Mailbox](../../../exchange-ps/exchange/mailboxes/get-mailbox.md)
-    
+
 - [Get-MailContact](../../../exchange-ps/exchange/users-and-groups/get-mailcontact.md)
-    
+
 - [Get-MailPublicFolder](../../../exchange-ps/exchange/sharing-and-collaboration/get-mailpublicfolder.md)
-    
+
 - [Get-MailUser](../../../exchange-ps/exchange/users-and-groups/get-mailuser.md)
-    
+
 - [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md)
-    
+
 - [Get-RemoteMailbox](../../../exchange-ps/exchange/federation-and-hybrid/get-remotemailbox.md)
-    
+
 - [Get-SecurityPrincipal](../../../exchange-ps/exchange/users-and-groups/get-securityprincipal.md)
-    
+
 - [Get-UMMailbox](../../../exchange-ps/exchange/unified-messaging/get-ummailbox.md)
-    
+
 - [Get-User](../../../exchange-ps/exchange/users-and-groups/get-user.md)
-    
+
 For more information, see [Recipient filters in Exchange Management Shell commands](recipient-filters.md).
-  
- **Note**: The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message** ). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
-  
+
+ **Note**: The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
+
 ## Filterable properties
 
 The properties that have been _confirmed_ to work with the _Filter_ parameter in user and group cmdlets are described in the following table.
-  
+
  **Notes**:
-  
+
 - The list might include:
-    
+
   - Properties that are only used in one type of environment: Microsoft Office 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or `None`) in one type of environment.
-    
+
   - Properties that are present, but correspond to features that are no longer used in Exchange 2016.
-    
+
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property calculated (likely by Exchange).
-    
+
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `Property -like '*abc'`).
-    
+
 - To look for blank or non-blank property values, use the value `$null` (for example, `{Property -eq $null}` or `{Property -ne $null`}).
-    
+
 - For more information about creating filters in recipient commands, see [Additional OPATH syntax information](https://technet.microsoft.com/library/b22affa2-ef51-4e4e-b59c-a58620baf8aa.aspx#OPATH).
-    
+
 |**Property name**|**LDAP display name**|**Available on cmdlets**|**Value**|**Comments**|
 |:-----|:-----|:-----|:-----|:-----|
-|_AcceptMessagesOnlyFrom_|_authOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter {AcceptMessagesOnlyFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'}` or `Get-DistributionGroup -Filter {AcceptMessagesOnlyFrom -eq 'contoso.com/Users/Angela Gruber'}`. <br/> To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: Get-Recipient -Identity "\<RecipientIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
+|_AcceptMessagesOnlyFrom_|_authOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter {AcceptMessagesOnlyFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'}` or `Get-DistributionGroup -Filter {AcceptMessagesOnlyFrom -eq 'contoso.com/Users/Angela Gruber'}`. <br/> To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_AcceptMessagesOnlyFromDLMembers_|_dLMemSubmitPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter {AcceptMessagesOnlyFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'}`. or `Get-Mailbox -Filter {AcceptMessagesOnlyFromDLMembers -eq 'contoso.com/Users/Marketing Department'}`. <br/> To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: Get-DistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName or Get-DynamicDistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_ActiveSyncAllowedDeviceIDs_|_msExchMobileAllowedDeviceIds_|**Get-CASMailbox**|String (wildcards accepted) or `null`|A device ID is a text string that uniquely identifies the device. Use the **Get-MobileDevice** cmdlet to see the devices that have ActiveSync partnerships with a mailbox. To see the device IDs on a mailbox, replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run this command: Get-MobileDevice -Mailbox \<MailboxIdentity\> \| Format-List. <br/> After you have the device ID value, you can use it in the filter. For example, `Get-CasMailbox -Filter {(ActiveSyncAllowedDeviceIDs -like '*text1') -or (ActiveSyncAllowedDeviceIDs -eq 'text2'}`.|
 |_ActiveSyncBlockedDeviceIDs_|_msExchMobileBlockedDeviceIds_|**Get-CASMailbox**|String (wildcards accepted) or `$null`|A device ID is a text string that uniquely identifies the device. Use the **Get-MobileDevice** cmdlet to see the devices that have ActiveSync partnerships with a mailbox. To see the device IDs on a mailbox, replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run this command: Get-MobileDevice -Mailbox \<MailboxIdentity\> \| Format-List. <br/> After you have the device ID value, you can use it in a filter. For example, `Get-CasMailbox -Filter {(ActiveSyncBlockedDeviceIDs -like '*text1') -or (ActiveSyncBlockedDeviceIDs -eq 'text2'}`.|
@@ -140,7 +141,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_ForwardingSmtpAddress_|_msExchGenericForwardingAddress_|**Get-Mailbox**|String (wildcards accepted) or `$null`|For example, `Get-Mailbox -Filter {ForwardingSmtpAddress -like '*@fabrikam.com'}`. <br/> When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `{ForwardingSmtpAddress -eq 'lila@fabrikam.com'}` returns a match, `{ForwardingSmtpAddress -like 'lila*'}` won't return a match, but `{ForwardingSmtpAddress -like '*lila*'}` or `{ForwardingSmtpAddress -like 'smtp:lila*'}` will return a match.|
 |_GeneratedOfflineAddressBooks_|_msExchOABGeneratingMailboxBL_|**Get-Mailbox**|String or `$null`|This property is only meaningful on arbitration mailboxes, so you need to use the _Arbitration_ switch in the filter command. Also, This filter requires the distinguished name of the offline address book. For example, `Get-Mailbox -Arbitration -Filter {GeneratedOfflineAddressBooks -eq 'CN=OAB 1,CN=Offline Address Lists,CN=Address Lists Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'}`. <br/> You can find the distinguished names of offline address books by running this command: Get-OfflineAddressBook \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_GrantSendOnBehalfTo_|_publicDelegates_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name or canonical distinguished name of the mail-enabled security principal (mailbox, mail user, or mail-enabled security group). For example, `Get-Mailbox -Filter {GrantSendOnBehalfTo -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'}` or `Get-Mailbox -Filter {GrantSendOnBehalfTo -eq 'contoso.com/Users/Angela Gruber'}`. <br/> To find the distinguished name of a mail-enabled security principal, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: Get-Recipient -Identity "\<RecipientIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
-|_GroupType_|_groupType_|**Get-DistributionGroup** <br/> **Get-Group**|`None` (0), `Global` (2), `DomainLocal` (4), `BuiltinLocal` (5), `Universal` (8), or `SecurityEnabled` (-2147483648).|Distribution groups have the value `Universal`, and mail-enabled security groups have the value `Universal, SecurityEnabled`. You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-DistributionGroup -Filter {GroupType -eq 'Universal,SecurityEnabled'}` returns the same results as `Get-DistributionGroup -Filter {GroupType -eq 'SecurityEnabled,Universal'}`. <br/> This multivalued property will only return a match if the property  *equals*  the specified value.|
+|_GroupType_|_groupType_|**Get-DistributionGroup** <br/> **Get-Group**|`None` (0), `Global` (2), `DomainLocal` (4), `BuiltinLocal` (5), `Universal` (8), or `SecurityEnabled` (-2147483648).|Distribution groups have the value `Universal`, and mail-enabled security groups have the value `Universal, SecurityEnabled`. You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-DistributionGroup -Filter {GroupType -eq 'Universal,SecurityEnabled'}` returns the same results as `Get-DistributionGroup -Filter {GroupType -eq 'SecurityEnabled,Universal'}`. <br/> This multivalued property will only return a match if the property *equals* the specified value.|
 |_Guid_|_objectGuid_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMMailbox** <br/> **Get-User**|String|For example, `Get-Recipient -Filter {Guid -eq '8a68c198-be28-4a30-83e9-bffb760c65ba'}`. <br/> You can find the GUIDs of recipients by running this command: Get-Recipient \| Format-List Name,RecipientType,Guid. <br/> Note that an object's GUID value is different than its Exchange GUID value.|
 |_HasActiveSyncDevicePartnership_|Not applicable|**Get-CASMailbox** <br/> **Get-Recipient**|Boolean (`$true` or `$false`)|For example, `Get-Recipient -Filter {HasActiveSyncDevicePartnership -eq $true}`.|
 |_HiddenFromAddressListsEnabled_|_msExchHideFromAddressLists_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|For example, `Get-Recipient -Filter {HiddenFromAddressListsEnabled -eq $true}`.|
@@ -176,7 +177,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_LegacyExchangeDN_|_legacyExchangeDN_|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-User**|String (wildcards accepted)|For example, `Get-User -Filter {LegacyExchangeDN -like '*-Osca'}`. <br/> You can find LegacyExchangeDN values for users by running this command: Get-User \| Format-List Name,LegacyExchangeDN|
 |_MailboxContainerGUID_|_msExchMailboxContainerGuid_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|For example, `Get-Mailbox -Filter {MailboxContainerGUID -ne $null}`.|
 |_MailboxMoveBatchName_|_msExchMailboxMoveBatchName_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|This property includes the name of the migration batch. For example, `Get-Mailbox -Filter {MailboxMoveBatchName -like '*LocalMove 01*'}`. <br/> You can find the names of migration batches by running the **Get-MigrationBatch** command. Note that migration batches that you create in the Exchange admin center use the naming convention `MigrationService:<MigrationBatchName>`.|
-|_MailboxMoveFlags_|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in[Get-MoveRequest](../../../exchange-ps/exchange/move-and-migration/get-moverequest.md).|For example, `Get-Mailbox -Filter {MailboxMoveFlags -ne 'None'}`. <br/> You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-Recipient -Filter {MailboxMoveFlags -eq 'IntraOrg,Pull'}` returns the same results as `Get-Recipient -Filter {MailboxMoveFlags -eq 'Pull,IntraOrg'}`. <br/> This multivalued property will only return a match if the property  *equals*  the specified value.|
+|_MailboxMoveFlags_|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in[Get-MoveRequest](../../../exchange-ps/exchange/move-and-migration/get-moverequest.md).|For example, `Get-Mailbox -Filter {MailboxMoveFlags -ne 'None'}`. <br/> You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-Recipient -Filter {MailboxMoveFlags -eq 'IntraOrg,Pull'}` returns the same results as `Get-Recipient -Filter {MailboxMoveFlags -eq 'Pull,IntraOrg'}`. <br/> This multivalued property will only return a match if the property *equals* the specified value.|
 |_MailboxMoveRemoteHostName_|_msExchMailboxMoveRemoteHostName_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|For example, `Get-Mailbox -Filter {MailboxMoveRemoteHostName -ne $null}`.|
 |_MailboxMoveSourceMDB_|_msExchMailboxMoveSourceMDBLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name of the source mailbox database. For example, `Get-Mailbox -Filter {MailboxMoveSourceMDB -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'}`. <br/> You can find the distinguished names of mailbox databases by running this command: Get-MailboxDatabase \| Format-List Name,DistinguishedName.|
 |_MailboxMoveStatus_|_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in[Get-MoveRequest](../../../exchange-ps/exchange/move-and-migration/get-moverequest.md).|For example, `Get-Mailbox -Filter {MailboxMoveStatus -eq 'Completed'}`.|
@@ -239,7 +240,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_RecoverableItemsQuota_|_msExchDumpsterQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|You can only use the _Filter_ parameter to look for the value `Unlimited` for this property. For example, `Get-Mailbox -Filter {RecoverableItemsQuota -eq 'Unlimited'}` or `Get-Mailbox -Filter {RecoverableItemsQuota -ne 'Unlimited'}`. <br/> You can't use the _Filter_ parameter to look for size values of this property. Instead, use this syntax: Get-Mailbox \| where {$\_.RecoverableItemsQuota -\<Operator\> '\<Size\>'`. For example, Get-Mailbox \| where {$\_.RecoverableItemsQuota -gt '35GB'}.|
 |_RecoverableItemsWarningQuota_|_msExchDumpsterWarningQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|You can only use the _Filter_ parameter to look for the value `Unlimited` for this property. For example, `Get-Mailbox -Filter {RecoverableItemsWarningQuota -eq 'Unlimited'}` or `Get-Mailbox -Filter {RecoverableItemsWarningQuota -ne 'Unlimited'}`. <br/> You can't use the _Filter_ parameter to look for size values of this property. Instead, use this syntax: Get-Mailbox \| where {$\_.RecoverableItemsWarningQuota -\<Operator\> '\<Size\>'}. For example, Get-Mailbox \| where {$\_.RecoverableItemsWarningQuota -gt '25GB'}.|
 |_RejectMessagesFrom_|_unauthOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter {RejectMessagesFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'}` or `Get-DistributionGroup -Filter {RejectMessagesFrom -eq 'contoso.com/Users/Angela Gruber'}`. <br/> To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: Get-Recipient -Identity "\<RecipientIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
-|_RejectMessagesFromDLMembers_|_dLMemRejectPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter {RejectMessagesFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'}`. or `Get-Mailbox -Filter {RejectMessagesFromDLMembers -eq 'contoso.com/Users/Marketing Department'}`. <br/> To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: Get-DistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName or Get-DynamicDistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
+|_RejectMessagesFromDLMembers_|_dLMemRejectPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter {RejectMessagesFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'}` or `Get-Mailbox -Filter {RejectMessagesFromDLMembers -eq 'contoso.com/Users/Marketing Department'}`. <br/> To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: Get-DistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName or Get-DynamicDistributionGroup -Identity "\<GroupIdentity\>" \| Format-List Name,DistinguishedName. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_RemoteAccountPolicy_|_msExchSyncAccountsPolicyDN_|**Get-Mailbox**|String or `$null`|This filter requires the distinguished name of the remote account policy. For example, `Get-Mailbox -Filter {RemoteAccountPolicy -eq 'CN=Contoso Remote Account Policy,CN=Remote Accounts Policies Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'}`.|
 |_RemotePowerShellEnabled_|n/a|**Get-User**|Boolean (`$true` or `$false`)|For example, `Get-User -Filter {RemotePowerShellEnabled -eq $false}`.|
 |_RemoteRecipientType_|_msExchRemoteRecipientType_|**Get-Mailbox** <br/> **Get-RemoteMailbox**|`None` (0), `ProvisionMailbox` (1), `ProvisionArchive` (2), `Migrated` (4), `DeprovisionMailbox` (8), `DeprovisionArchive` (16), `RoomMailbox` (32), `EquipmentMailbox` (64), `SharedMailbox` (96), `TeamMailbox` (128), or `$null`.|For example, `Get-RemoteMailbox -Filter {RemoteRecipientType -eq 'ProvisionMailbox'}`.|
@@ -288,7 +289,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_UpgradeStatus_|n/a|**Get-User**|`None` (0), `NotStarted` (1), `InProgress` (2), `Warning` (3), `Error` (4), `Cancelled` (5), `Complete` (6), or `ForceComplete` (7).|For example, `Get-User -Filter {UpgradeStatus -ne 'None'}`.|
 |_UsageLocation_|_msExchUsageLocation_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient**|String or `$null`|This filter requires the ISO 3166-1 country name (for example, `United States`), or two-letter country code (for example `US`) for the user in Office 365. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779). <br/> For example, `Get-Recipient -Filter {UsageLocation -ne $null}`.|
 |_UseDatabaseQuotaDefaults_|_mDBUseDefaults_|**Get-Mailbox**|Boolean (`$true` or `$false`)|For example, `Get-Mailbox -Filter {UseDatabaseQuotaDefaults -eq $false}`.|
-|_UserAccountControl_|_userAccountControl_|**Get-LinkedUser** <br/> **Get-User**|`AccountDisabled`, `DoNotExpirePassword`, or `NormalAccount`|For example, `Get-User -Filter {UserAccountControl -eq 'NormalAccount'}`. <br/> You can specify multiple values separated by commas, but the order matters. For example, `Get-User -Filter {UserAccountControl -eq 'AccountDisabled,NormalAccount'}` returns different results than `Get-User -Filter {UserAccountControl -eq 'NormalAccount,AccountDisabled'}`. <br/> This multivalued property will only return a match if the property  *equals*  the specified value.|
+|_UserAccountControl_|_userAccountControl_|**Get-LinkedUser** <br/> **Get-User**|`AccountDisabled`, `DoNotExpirePassword`, or `NormalAccount`|For example, `Get-User -Filter {UserAccountControl -eq 'NormalAccount'}`. <br/> You can specify multiple values separated by commas, but the order matters. For example, `Get-User -Filter {UserAccountControl -eq 'AccountDisabled,NormalAccount'}` returns different results than `Get-User -Filter {UserAccountControl -eq 'NormalAccount,AccountDisabled'}`. <br/> This multivalued property will only return a match if the property *equals* the specified value.|
 |_UserPrincipalName_|_userPrincipalName_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted)|For example, `Get-User -Filter {UserPrincipalName -like 'julia@*'}`.|
 |_VoiceMailSettings_|_msExchUCVoiceMailSettings_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String or `$null`|For example, `Get-User -Filter {VoiceMailSettings -ne $null}`.|
 |_WebPage_|_wWWHomePage_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|For example, `Get-User -Filter {WebPage -like 'https://intranet.contoso.com/*'}`.|
@@ -300,11 +301,9 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|A date/time value|This filter requires the _SoftDeleted_ switch in the command for mailboxes. <br/> For example, `Get-Mailbox -SoftDeleted -Filter {WhenChanged -gt '8/1/2017 2:00:00 PM'}`.|
 |_WindowsEmailAddress_|_mail_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`.|For example, `Get-Mailbox -Filter {WindowsEmailAddress -like '*@fabrikam.com'}`.|
 |_WindowsLiveID_|_msExchWindowsLiveID_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`.|For example, `Get-Mailbox -Filter {WindowsEmailAddress -like '*@fabrikam.onmicrosoft.com'}`.|
-   
+
 ## For more information
 
 Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://go.microsoft.com/fwlink/p/?LinkId=88854).
-  
-For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](../exchange-cmdlet-syntax.md).
-  
 
+For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](../exchange-cmdlet-syntax.md).
