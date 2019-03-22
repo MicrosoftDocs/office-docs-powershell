@@ -83,6 +83,14 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
  [-WhatIf] [<CommonParameters>]
 ```
 
+### Gmail
+```
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+ [-Confirm]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
 ### Compliance
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance] [-RemoteServer <Fqdn>]
@@ -109,13 +117,6 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
 ### MrsProxyPublicFolder
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Other
-```
-Test-MigrationServerAvailability [-EmailAddress <SmtpAddress>] [-TestMailbox <MailboxIdParameter>]
- [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -253,7 +254,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExchangeOutlookAnywhere, Other
+Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -335,6 +336,23 @@ The Imap parameter specifies an IMAP migration as the migration type. This param
 ```yaml
 Type: SwitchParameter
 Parameter Sets: IMAP
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Gmail
+This parameter is available only in the cloud-based service.
+
+The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a G Suite tenant to Exchange Online mailboxes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -464,6 +482,25 @@ The RPCProxyServer parameter specifies the FQDN of the RPC proxy server for the 
 ```yaml
 Type: Fqdn
 Parameter Sets: ExchangeOutlookAnywhere, PublicFolder, LegacyPublicFolderToUnifiedGroup
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceAccountKeyFileData
+This parameter is available only in the cloud-based service.
+
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -604,7 +641,7 @@ The TestMailbox parameter specifies a mailbox on the target server. Use the prim
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup, Other
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
 Required: False

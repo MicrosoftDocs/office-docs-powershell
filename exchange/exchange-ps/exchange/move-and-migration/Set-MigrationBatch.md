@@ -42,6 +42,8 @@ The Set-MigrationBatch cmdlet configures your existing migration batches to migr
 
 - IMAP migration
 
+- G Suite migration
+
 Some settings can be applied both to the batch as well as to individual users within the batch. It is important to note that when a setting is applied to a user it will override any corresponding setting on the batch.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
@@ -419,6 +421,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SyncNow
 The SyncNow switch starts an immediate sync for users that have already reached Synced status, but doesn't resume any Failed users. You don't need to specify a value with this switch.
 

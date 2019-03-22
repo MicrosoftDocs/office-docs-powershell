@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users. You use this cmdlet to:
+Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -184,32 +184,6 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### XO1
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <System.DateTime>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [<CommonParameters>]
-```
-
 ### PublicFolderToUnifiedGroup
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
@@ -231,28 +205,6 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Abch
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <Timespan>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <DateTime>]
- [-TargetDatabases <MultiValuedProperty>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -301,6 +253,8 @@ Onboarding and offboarding in Exchange Online
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
 
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
+
+- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -379,7 +333,7 @@ Use the following format for the value of this parameter: ([System.IO.File]::Rea
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
+Parameter Sets: Local, LocalPublicFolder, Offboarding, PublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -596,7 +550,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, XO1, PublicFolderToUnifiedGroup
+Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -892,7 +846,7 @@ The SkipMerging parameter specifies the stages of the migration that you want to
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: LocalPublicFolder, Onboarding, Offboarding, XO1
+Parameter Sets: LocalPublicFolder, Onboarding, Offboarding
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -1039,7 +993,7 @@ You can only use this parameter for local moves and remote move migrations.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Local, Onboarding, Offboarding, XO1, Abch
+Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -1136,7 +1090,7 @@ Don't use this parameter unless you're directed to do so by Microsoft Customer S
 
 ```yaml
 Type: MigrationWorkflowControlFlags
-Parameter Sets: Local, Onboarding, XO1
+Parameter Sets: Local, Onboarding
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
