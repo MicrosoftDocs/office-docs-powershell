@@ -44,7 +44,7 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
 
-- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create the cloud-based mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
+- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
 
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
