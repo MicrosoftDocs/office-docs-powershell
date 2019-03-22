@@ -169,6 +169,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
+### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
 
