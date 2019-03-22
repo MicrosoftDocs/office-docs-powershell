@@ -27,6 +27,14 @@ New-SPOMigrationPackage [-SourceFilesPath] <String> [-OutputPackagePath] <String
 ## DESCRIPTION
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
+>[!NOTE]
+>
+>| Limit | Max Size (Gb) | Description |
+>| :---:         |     :---:      |          :---: |
+>| Package Size   | 2-4      | The whole package can't exceed 4Gb    |
+>| File Size     | 2        | A single file inside the source folder can't exceed 2 Gb.      |
+>| Target Size | -| target site should remain non-accessible to end user until migration is complete|
+>
 
 ## EXAMPLES
 
@@ -47,6 +55,9 @@ This example creates a new set of migration source package metadata files in the
 
 
 ## PARAMETERS
+
+
+
 
 ### -IgnoreHidden
 Switch to ignore hidden files and folders.
