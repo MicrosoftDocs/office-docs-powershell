@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPProfileManagedMetadataProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Move-SPProfileManagedMetadataProperty
@@ -32,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------------ 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Move-SPProfileManagedMetadataProperty -ProfileServiceApplicationProxy $proxy -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Move-SPProfileManagedMetadataProperty -ProfileServiceApplicationProxy $proxy -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
 ```
 
 This example moves values from the SPS-Interests property into a new term set called Interests and marks that term set as available for tagging.

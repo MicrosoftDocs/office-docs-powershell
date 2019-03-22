@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlContentSource
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlContentSource
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
 ```
 
 This example creates a new content source of type file to crawl a file system.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPWeb
@@ -33,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWeb http://somesite/subweb1 -Template "STS#0"
+New-SPWeb http://somesite/subweb1 -Template "STS#0"
 ```
 
 This example creates a new subsite by using the Team Site template at the provided URL (http://somesite/subweb1).

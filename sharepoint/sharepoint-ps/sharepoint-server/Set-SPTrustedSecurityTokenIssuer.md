@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTrustedSecurityTokenIssuer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTrustedSecurityTokenIssuer
@@ -43,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$a=Get-SPTrustedSecurityTokenIssuer
 
-PS C:\>Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
+Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
 ```
 
 This example sets the metadata endpoint of the url for the self-issue.

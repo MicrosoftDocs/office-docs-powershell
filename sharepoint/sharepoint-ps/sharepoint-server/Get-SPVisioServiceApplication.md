@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPVisioServiceApplication
@@ -27,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1------------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplication
+Get-SPVisioServiceApplication
 ```
 
 This example returns a collection of all Visio Services applications in the farm.
 
 ### -----------------------EXAMPLE 2------------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplication "VGS1"
+Get-SPVisioServiceApplication "VGS1"
 ```
 
 This example returns properties of the VGS1  Visio Services application.

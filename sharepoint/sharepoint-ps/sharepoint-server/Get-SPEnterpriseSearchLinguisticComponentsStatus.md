@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchLinguisticComponentsStatus
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchLinguisticComponentsStatus
@@ -27,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa
 ```
 
 This example gets the current status of the linguistic query and document processing components from the default SearchServiceApplication.

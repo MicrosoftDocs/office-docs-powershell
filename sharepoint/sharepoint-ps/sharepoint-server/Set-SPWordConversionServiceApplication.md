@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Word.Server.dll-Help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWordConversionServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWordConversionServiceApplication
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE-----------------
 ```
-PS C:\>Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
+Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
 ```
 
 This example sets the timer job frequency of the WordServices1 application to 30 minutes.

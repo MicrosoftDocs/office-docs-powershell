@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPMetadataWebServicePartitionData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPMetadataWebServicePartitionData
@@ -28,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE---------------------- 
 ```
-PS C:\>$subscription = Get-SPSIteSubscription -Identity http://site_url
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
-PS C:\>Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
+$subscription = Get-SPSIteSubscription -Identity http://site_url
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
+Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
 ```
 
 This example restores a backup of Metadata Service application data for a specific site subscription on a Metadata Service application.

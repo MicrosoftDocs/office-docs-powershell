@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPInfoPathFormsService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPInfoPathFormsService
@@ -35,14 +38,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
+Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
 ```
 
 This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
+Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
 ```
 
 This example modifies the AllowViewState and ViewStateThreshold parameter values.

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOnlineVoiceRoutingPolicy
@@ -27,7 +30,7 @@ Set-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-OnlinePstnUsages <PSListModifi
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
@@ -52,7 +55,7 @@ In Example 2, the online PSTN usage "Local" is removed from the per-user online 
 PS C:\> Set-CsOnlineVoiceRoutingPolicy | Where-Object {$_.OnlinePstnUsages -contains "Local"} | Set-CsOnlineVoiceRoutingPolicy -OnlinePstnUsages @{Remove="Local"}
 ```
 
-Example 3 removes the online PSTN usage "Local" is removed from all the online voice routing policies that include that usage. In order to do this, the command first calls the `Get-CsOnlineVoiceRoutingPolicy` cmdlet without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the "Local" usage. Those policies are then piped to the `Set-CsOnlineVoiceRoutingPolicy` cmdlet, which deletes the Local usage from each policy.
+Example 3 removes the online PSTN usage "Local" from all the online voice routing policies that include that usage. In order to do this, the command first calls the `Get-CsOnlineVoiceRoutingPolicy` cmdlet without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the "Local" usage. Those policies are then piped to the `Set-CsOnlineVoiceRoutingPolicy` cmdlet, which deletes the Local usage from each policy.
 
 ## PARAMETERS
 
@@ -170,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the tenant account whose online voice routing policies are being changed. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
@@ -224,10 +227,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
+[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)
+[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -79,7 +82,7 @@ StartDate and EndDate: These parameters specify the start date of January 1, 201
 
 TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
-StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
+StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### -------------------------- Example 2 --------------------------
 ```

@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: Project Server 2016, Project Server 2019
 title: Start-SPProjectGenerateWsdl
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPProjectGenerateWsdl
@@ -24,7 +27,7 @@ Generates ASPX pages from WSDL files.
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Start-SPProjectGenerateWsdl
+Start-SPProjectGenerateWsdl
 ```
 Generates ASPX files in C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\PSI from the pre-existing WSDL files.
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AddressList
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -38,7 +41,7 @@ Get-AddressList [-SearchText <String>]
 ```
 
 ## DESCRIPTION
-You can pipe the output from the Get-AddressList cmdlet to the Remove-AddressList, Set-AddressList, Update-Addresslist and Move-AddressList cmdlets instead of using the Identity parameter with each of those cmdlets.
+You can pipe the output from the Get-AddressList cmdlet to the Remove-AddressList, Set-AddressList, Update-AddressList and Move-AddressList cmdlets instead of using the Identity parameter with each of those cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -109,7 +112,6 @@ The Identity parameter specifies the address list that you want to view. You can
 
 - Name
 
-- Display name
 
 - Distinguished name (DN)
 

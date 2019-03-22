@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPScaleOutDatabase
@@ -32,7 +35,7 @@ C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplicatio
 
 C:\PS>$database = $databases[0]
 
-PS C:\>Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
+Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
 ```
 
 This example removes the specified scale-out database from the specified service application.

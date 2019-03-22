@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPVisioExternalData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPVisioExternalData
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPVisioExternalData -VisioServiceApplication "VGS1" -UnattendedServiceAccountApplicationID "SSSApp1"
+Set-SPVisioExternalData -VisioServiceApplication "VGS1" -UnattendedServiceAccountApplicationID "SSSApp1"
 ```
 
 This example sets the unattended service account application ID to SSSApp1 for the Visio Services application named VGS1.

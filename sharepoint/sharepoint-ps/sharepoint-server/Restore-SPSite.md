@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPSite
@@ -41,7 +44,7 @@ If a site collection is backed up and restored to a different URL location withi
 
 ### ----------------------EXAMPLE 1----------------------
 ```
-PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL http://server_name/sites/site_name.
@@ -49,7 +52,7 @@ This example restores a site collection from the backup file C:\Backup\site_name
 
 ### ----------------------EXAMPLE 2----------------------
 ```
-PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
+Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at http://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
@@ -57,7 +60,7 @@ This example restores a site collection backup from the backup file C:\Backup\si
 
 ### ----------------------EXAMPLE 3----------------------
 ```
-PS C:\>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
+Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection http://www.example.com on the Web application http://server_name.

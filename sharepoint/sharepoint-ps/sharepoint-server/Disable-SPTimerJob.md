@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPTimerJob
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPTimerJob
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE----------------------- 
 ```
-PS C:\>Disable-SPTimerJob job-ceip-datacollection
+Disable-SPTimerJob job-ceip-datacollection
 ```
 
 This example disables the timer job named job-ceip-datacollection.

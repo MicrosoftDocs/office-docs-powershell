@@ -1,12 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Apply-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Applies a provisioning template to a web
+Applies a site template to a web
 
 ## SYNTAX 
 
@@ -71,21 +71,21 @@ Apply-PnPProvisioningTemplate -Path <String>
 Apply-PnPProvisioningTemplate -Path template.xml
 ```
 
-Applies a provisioning template in XML format to the current web.
+Applies a site template in XML format to the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
 ```
 
-Applies a provisioning template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
+Applies a site template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
 ```
 
-Applies a provisioning template in XML format to the current web. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
+Applies a site template in XML format to the current web. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
 
 For instance with the example above, specifying {parameter:ListTitle} in your template will translate to 'Projects' when applying the template. These tokens can be used in most string values in a template.
 
@@ -94,21 +94,21 @@ For instance with the example above, specifying {parameter:ListTitle} in your te
 Apply-PnPProvisioningTemplate -Path template.xml -Handlers Lists, SiteSecurity
 ```
 
-Applies a provisioning template in XML format to the current web. It will only apply the lists and site security part of the template.
+Applies a site template in XML format to the current web. It will only apply the lists and site security part of the template.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.pnp
 ```
 
-Applies a provisioning template from a pnp package to the current web.
+Applies a site template from a pnp package to the current web.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path https://tenant.sharepoint.com/sites/templatestorage/Documents/template.pnp
 ```
 
-Applies a provisioning template from a pnp package stored in a library to the current web.
+Applies a site template from a pnp package stored in a library to the current web.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
@@ -125,7 +125,7 @@ This will create two new ExtensibilityHandler objects that are run while provisi
 Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
 
-Applies a provisioning template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
+Applies a site template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
 
 ## PARAMETERS
 
@@ -323,4 +323,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

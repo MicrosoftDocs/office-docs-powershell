@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSubscriptionSettingsServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSubscriptionSettingsServiceApplication
@@ -32,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$applicationPool = GetServiceApplicationPool SettingsApplicationPool
 
-PS C:\>Get-SPServiceApplication -Name SettingsServiceApp | Set-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPool
+Get-SPServiceApplication -Name SettingsServiceApp | Set-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPool
 ```
 
 This example changes the application pool of the subscription settings service application.

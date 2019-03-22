@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchResultItemType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchResultItemType
@@ -45,18 +48,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$web = Get-SPWeb http://webUrl
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
-PS C:\>$resultType.BuiltIn
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\>$ruleCollection.Add($rule)
-PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
-PS C:\>$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-PS C:\>Set-SPEnterpriseSearchResultItemType 
+$web = Get-SPWeb http://webUrl
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+$resultType.BuiltIn
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
+$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
+Set-SPEnterpriseSearchResultItemType 
 -Identity $resultType `
 -SearchApplication $ssa `
 -Name "CustomResultType" `

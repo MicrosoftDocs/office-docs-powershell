@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MigrationBatch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force] [-Partition <MailboxIdParameter>
+ [-WhatIf]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +49,21 @@ Remove-MigrationBatch -Identity LocalMove1 -Force
 This example removes the corrupted migration batch LocalMove1.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter identifies the migration batch that you want to remove. The value for this parameter is the name that was specified when the migration batch was created.
+
+```yaml
+Type: MigrationBatchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -84,6 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+This parameter is available only in on-premises Exchange.
+
 The Force switch specifies whether to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
 
 If you use this parameter to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You have to remove the individual migration user requests with the Remove-MigrationUser \<Identity\> -Force command.
@@ -92,7 +112,7 @@ If you use this parameter to remove a corrupted migration batch, the individual 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -100,18 +120,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter identifies the migration batch that you want to remove. The value for this parameter is the name that was specified when the migration batch was created.
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MigrationBatchIdParameter
+Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -123,21 +145,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

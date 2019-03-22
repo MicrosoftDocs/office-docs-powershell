@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPServerScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPServerScaleOutDatabase
@@ -27,9 +30,9 @@ Use the Remove-SPServerScaleOutDatabase cmdlet to remove a specific scale-out da
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Managed Metadata Service'}
-PS C:\>$database = Get-SPServerScaleOutDatabase -ServiceApplication $sa
-PS C:\>Remove-SPServerScaleOutDatabase -Database $database -ServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Managed Metadata Service'}
+$database = Get-SPServerScaleOutDatabase -ServiceApplication $sa
+Remove-SPServerScaleOutDatabase -Database $database -ServiceApplication $sa
 ```
 
 This example removes the specified scale-out database from the Managed Metadata Service application.

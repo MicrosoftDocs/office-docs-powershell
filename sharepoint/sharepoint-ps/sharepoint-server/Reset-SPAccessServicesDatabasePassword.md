@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Reset-SPAccessServicesDatabasePassword
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Reset-SPAccessServicesDatabasePassword
@@ -25,9 +28,9 @@ Resets the specified Access Services Database password with a randomly generated
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>$db = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | select -First 1
-PS C:\>Reset-SPAccessServicesDatabasePassword -Database $db -ServiceContext http://site_url
+$contentdb = Get-SPContentDatabase ContentDbName
+$db = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | select -First 1
+Reset-SPAccessServicesDatabasePassword -Database $db -ServiceContext http://site_url
 ```
 
 Resets the database password for the specified Access Database.

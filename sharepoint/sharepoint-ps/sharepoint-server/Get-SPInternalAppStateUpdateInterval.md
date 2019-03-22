@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInternalAppStateUpdateInterval
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPInternalAppStateUpdateInterval
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```
-PS C:\>Get-SPInternalAppStateUpdateInterval
+Get-SPInternalAppStateUpdateInterval
 ```
 
 This example returns the interval in hours between updates of the internal app state update job.

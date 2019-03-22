@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppStoreWebServiceConfiguration
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
+Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
 ```
 
 This example set the product type and version for a SharePoint Store app.

@@ -4,6 +4,9 @@ applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Grant-CsTeamsVideoInteropServicePolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsVideoInteropServicePolicy
@@ -29,13 +32,13 @@ Grant-CsTeamsVideoInteropServicePolicy [-PolicyName] <String> [-Tenant <System.G
 ## DESCRIPTION
 Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings.  You can use the TeamsVideoInteropServicePolicy cmdlets to enable Cloud Video Interop for particular users or for your entire organization.  Microsoft provides pre-constructed policies for each of our supported partners that allow you to designate which of the partners to use for cloud video interop.  
 
-The Grant-CsTeamsVideoInteropServicePolicy cmdlet allows you to assign a pre-constructed policies for use in your organization or assign the policy to specific users.
+The Grant-CsTeamsVideoInteropServicePolicy cmdlet allows you to assign a pre-constructed policy across your whole organization or only  to specific users.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsVideoInteropServicePolicy  -PolicyName ServiceProviderDisabled
+PS C:\> Grant-CsTeamsVideoInteropServicePolicy -PolicyName ServiceProviderDisabled
 ```
 
 In this example, Cloud Video Interop has been disabled for the entire tenant, except for those users that have an explicit policy assigned to them.
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specify the pre-constructed policy that you would like to assign to your tenant or a particular user.  You can get the policies available for your organization using the cmdlet Get-CsTeamsVideoInteropServicePolicy
+Specify the pre-constructed policy that you would like to assign to your tenant or a particular user.  You can get the policies available for your organization using the cmdlet Get-CsTeamsVideoInteropServicePolicy.
 
 ```yaml
 Type: String

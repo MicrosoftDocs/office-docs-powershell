@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPBrowserCustomerExperienceImprovementProgram
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPBrowserCustomerExperienceImprovementProgram
@@ -45,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the farm.
@@ -53,7 +56,7 @@ This example turns on the browser Customer Experience Improvement Program for th
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
 ```
 
 This example turns off the browser Customer Experience Improvement Program for the farm.
@@ -61,7 +64,7 @@ This example turns off the browser Customer Experience Improvement Program for t
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
+Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.

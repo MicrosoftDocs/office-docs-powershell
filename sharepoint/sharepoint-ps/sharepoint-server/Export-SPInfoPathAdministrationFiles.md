@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPInfoPathAdministrationFiles
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPInfoPathAdministrationFiles
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```
-PS C:\>Export-SPInfoPathAdministrationFiles -path d:\file.cab
+Export-SPInfoPathAdministrationFiles -path d:\file.cab
 ```
 
 This example saves all InfoPath form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.

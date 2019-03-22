@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPSiteSubscriptionProfileConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPSiteSubscriptionProfileConfig
@@ -41,10 +44,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------
 ```
-PS C:\>$sub = Get-SPSiteSubscription http://contoso/my
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation http://contoso/my
-PS C:\>$sub = New-SPSiteSubscription
+$sub = Get-SPSiteSubscription http://contoso/my
+$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation http://contoso/my
+$sub = New-SPSiteSubscription
 ```
 
 This example creates a new User Profile Service application tenant.

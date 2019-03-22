@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppSiteSubscriptionName
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppSiteSubscriptionName
@@ -29,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------- 
 ```
-PS C:\>Get-SPAppSiteSubscriptionName
+Get-SPAppSiteSubscriptionName
 ```
 
 This example returns the name of the default site subscription.
 
 ### ------------EXAMPLE 2------- 
 ```
-PS C:\>Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
+Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
 ```
 
 This example returns the name of the site subscription for SPSite https://www.contoso.com

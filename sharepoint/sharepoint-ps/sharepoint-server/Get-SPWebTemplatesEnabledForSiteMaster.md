@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebTemplatesEnabledForSiteMaster
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWebTemplatesEnabledForSiteMaster
@@ -23,7 +26,7 @@ Use the Get-SPWebTemplatesEnabledForSiteMaster cmdlet to display a full list of 
 
 ### Example 1 
 ```
-PS C:\>Get-SPWebTemplatesEnabledForSiteMaster
+Get-SPWebTemplatesEnabledForSiteMaster
 ```
 
 This example displays all the site master web templates in a farm.

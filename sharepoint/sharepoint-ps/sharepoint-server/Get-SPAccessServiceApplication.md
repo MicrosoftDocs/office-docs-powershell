@@ -3,6 +3,9 @@ external help file: microsoft.office.access.services.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAccessServiceApplication
@@ -30,21 +33,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication -identity "MyAccessService"
+Get-SPAccessServiceApplication -identity "MyAccessService"
 ```
 
 This example displays an Access Services application named MyAccessService.
 
 ### ------------EXAMPLE 2---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
+Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
 ```
 
 This example displays every Access Services application that run in the farm, which allows more than 10,000 records in a table.
 
 ### ------------EXAMPLE 3---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication
+Get-SPAccessServiceApplication
 ```
 
 This example displays every Access Services application in the farm.

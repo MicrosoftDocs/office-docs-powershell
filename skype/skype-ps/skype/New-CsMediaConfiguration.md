@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMediaConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsMediaConfiguration
@@ -81,13 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-
-QoS monitors the quality of voice signals over a network.
-The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
-
-Default: False
-
-
+QoS monitors the quality of voice signals over a network. When set to True, enables call Quality of Service (QoS) settings.
 
 ```yaml
 Type: Boolean
@@ -97,7 +94,7 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, 
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -125,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-
 The level of encryption between unified communications devices.
 
 Valid values:
@@ -198,7 +194,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
@@ -301,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInCallQoS
-When set to True, enables call Quality of Service (QoS) settings.
+Enables or disables the ability of Skype for Business clients to send the raw data that's required to generate InCallQuality messages.
 
 ```yaml
 Type: Boolean

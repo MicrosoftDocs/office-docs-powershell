@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelServiceApplication
@@ -52,8 +55,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
 ```
 
 This example sets the Excel Services Application to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
@@ -61,8 +64,8 @@ This example sets the Excel Services Application to enable each user to open no 
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
 ```
 This example sets the maximum number of private bytes of memory on the computer to a value of -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
 

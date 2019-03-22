@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPBusinessDataCatalogModel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPBusinessDataCatalogModel
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
-PS C:\>Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
+Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
 ```
 
 This example gets a Business Data Connectivity Model from the Business Data Connectivity Metadata Store and exports it to the location specified with the name model and using the bdcm file extension.

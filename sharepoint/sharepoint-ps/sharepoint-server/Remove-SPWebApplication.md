@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWebApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWebApplication
@@ -40,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
+Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
 ```
 
 This example prompts and then removes the Internet zone Web application extension on the Web application at http://sitename.
@@ -49,7 +52,7 @@ This command does not remove the content databases or the IIS Web site.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
+Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
 ```
 
 This example permanently removes the Web application, all content databases and the IIS Web site at http://sitename

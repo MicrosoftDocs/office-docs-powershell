@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSecureStoreApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSecureStoreApplication
@@ -37,14 +40,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
+$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
 ```
 
 This example gets the Secure Store application for the target application with the name ContosoTargetApplication.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPSecureStoreApplication -ServiceContext http://contoso -All
+Get-SPSecureStoreApplication -ServiceContext http://contoso -All
 ```
 
 This example returns all of the Secure Store applications http://contoso.

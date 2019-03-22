@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPTrustedServiceTokenIssuer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPTrustedServiceTokenIssuer
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPTrustedServiceTokenIssuer "WFE Farm 2"
+Remove-SPTrustedServiceTokenIssuer "WFE Farm 2"
 ```
 
 This example deletes the trusted service token issuer WFE Farm 2.

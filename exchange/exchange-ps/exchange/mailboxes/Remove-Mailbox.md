@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -32,7 +35,6 @@ Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,7 +53,6 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -192,15 +193,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies that the mailbox you're removing is an arbitration mailbox. You don't need to specify a value with this switch.
+The Arbitration switch is required to remove arbitration mailboxes. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find the arbitration mailbox to remove.
-
-- To remove an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To remove arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -217,13 +214,11 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+The AuditLog switch is required to remove audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+To remove other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -240,13 +235,11 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to remove auxillary audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+To remove other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -288,7 +281,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-{{Fill Migration Description}}
+The Migration switch is required to remove migration mailboxes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -411,9 +404,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolderswitch specifies that the mailbox to remove is a public folder mailbox. You don't need to specify a value with this switch. You need to use this switch to remove public folder mailboxes.
+The PublicFolder switch is required to remove public folder mailboxes. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -454,21 +447,6 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StoreMailboxIdentity, Identity
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

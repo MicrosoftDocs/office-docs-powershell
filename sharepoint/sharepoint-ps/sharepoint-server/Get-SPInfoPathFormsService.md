@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInfoPathFormsService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPInfoPathFormsService
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------------- 
 ```
-PS C:\>Get-SPInfoPathFormsService
+Get-SPInfoPathFormsService
 ```
 
 This example displays the InfoPath Forms Services settings for the entire farm.

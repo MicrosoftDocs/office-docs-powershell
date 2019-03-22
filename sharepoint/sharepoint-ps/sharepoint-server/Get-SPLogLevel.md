@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPLogLevel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPLogLevel
@@ -29,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPLogLevel
+Get-SPLogLevel
 ```
 
 This example displays throttle levels for all categories.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPLogLevel -Identity "Category1"
+Get-SPLogLevel -Identity "Category1"
 ```
 
 This example displays the throttle level for the Category1 category.
@@ -50,7 +53,7 @@ This example displays the throttle level for multiple categories.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Get-SPLogLevel -Identity "Area:*"
+Get-SPLogLevel -Identity "Area:*"
 ```
 
 This example displays the throttle level for all categories in one area.

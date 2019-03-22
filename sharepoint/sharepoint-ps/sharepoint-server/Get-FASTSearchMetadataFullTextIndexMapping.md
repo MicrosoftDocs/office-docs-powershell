@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataFullTextIndexMapping
 ---
 
@@ -33,8 +36,8 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>$fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
-PS C:\>Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
+$fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
+Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
 ```
 
 This example retrieves the full text index mappings for the full text index "content".
@@ -42,8 +45,8 @@ It then iterates over the mappings and outputs the names of the managed properti
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>$title = Get-FASTSearchMetadataManagedProperty -name title
-PS C:\>Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
+$title = Get-FASTSearchMetadataManagedProperty -name title
+Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
 ```
 
 This example retrieves all full text indexes where the managed property named "title" is included.

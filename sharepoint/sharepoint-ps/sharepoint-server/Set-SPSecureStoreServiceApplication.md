@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecureStoreServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSecureStoreServiceApplication
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPSecureStoreServiceApplication -Identity $contosoServApp -AuditlogMaxSize 40
+Set-SPSecureStoreServiceApplication -Identity $contosoServApp -AuditlogMaxSize 40
 ```
 
 This example sets the maximum size of the audit log to 40 days for the given service application.

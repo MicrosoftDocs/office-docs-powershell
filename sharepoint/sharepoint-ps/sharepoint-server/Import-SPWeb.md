@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPWeb
@@ -33,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE---------------------- 
 ```
-PS C:\>Import-SPWeb http://site -Path export.cmp -UpdateVersions Overwrite
+Import-SPWeb http://site -Path export.cmp -UpdateVersions Overwrite
 ```
 
 This example imports the contents of export.cmp into a site at http://site, overwriting the versioned content on the site with the contents of the export.cmp file.

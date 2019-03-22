@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPManagedAccount
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPManagedAccount
@@ -60,8 +63,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
-PS C:\>Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
+$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
+Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
 ```
 
 This example displays an explicit managed account if it exists and then attempts to update it to use automatically generated passwords.

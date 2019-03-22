@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPProfilePhotoStore
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPProfilePhotoStore
@@ -37,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-------------------
 ```
-PS C:\>Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
+Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
 ```
 
 This example uploads photos to a specified My Site host location.

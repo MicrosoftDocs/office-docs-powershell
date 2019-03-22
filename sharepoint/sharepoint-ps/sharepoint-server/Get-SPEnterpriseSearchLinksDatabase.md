@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchLinksDatabase
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------EXAMPLE--------- 
 ```
-PS C:\>Get-SPEnterpriseSearchLinksDatabase -Identity LinksDB_1 -SearchApplication 'Search Service Application'
+Get-SPEnterpriseSearchLinksDatabase -Identity LinksDB_1 -SearchApplication 'Search Service Application'
 ```
 
 This example gets a reference to the links database LinksDB_1 from the search service application 'Search Service Application'.

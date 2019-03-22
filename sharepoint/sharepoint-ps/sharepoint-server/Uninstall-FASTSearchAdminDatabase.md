@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Uninstall-FASTSearchAdminDatabase
 ---
 
@@ -31,7 +34,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
+Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
 ```
 
 This example uninstalls the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.

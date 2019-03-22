@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRequestManagementSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRequestManagementSettings
@@ -28,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$wa = Get-SPWebApplication http://webAppUrl
-PS C:\>$req = $wa | Get-SPRequestManagementSettings
-PS C:\>Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
+$wa = Get-SPWebApplication http://webAppUrl
+$req = $wa | Get-SPRequestManagementSettings
+Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
 ```
 
 This example disables throttling on the specified Web Application.

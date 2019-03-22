@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectPermissionMode
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectPermissionMode
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1-------------------
 ```
-PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
+Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
@@ -37,7 +40,7 @@ This example shows the syntax for transitioning a server into Project Server per
 
 ### --------------EXAMPLE 2-------------------
 ```
-PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
+Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.

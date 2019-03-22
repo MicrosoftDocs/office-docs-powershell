@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchSecurityClaimsUserStore
 ---
 
@@ -26,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "Sharepoint Users"
+Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "Sharepoint Users"
 ```
 
 This example updates the description of the "clm" claims user store.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
+Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
 ```
 
 This example sets the issuer of the "cl2" claims user store to "Windows".

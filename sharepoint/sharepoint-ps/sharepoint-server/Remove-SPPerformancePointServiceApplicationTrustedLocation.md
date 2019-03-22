@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPPerformancePointServiceApplicationTrustedLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPPerformancePointServiceApplicationTrustedLocation
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE--------------------
 ```
-PS C:\>Remove-SPPerformancePointServiceApplicationTrustedLocation -Identity <Valid GUID of a Trusted Location in an Application>
+Remove-SPPerformancePointServiceApplicationTrustedLocation -Identity <Valid GUID of a Trusted Location in an Application>
 ```
 
 This example removes a Trusted Location having the specified GUID from a PerformancePoint Service Application.

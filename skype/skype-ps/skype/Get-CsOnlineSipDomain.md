@@ -3,23 +3,24 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineSipDomain
 
 ## SYNOPSIS
-**THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY**</br> 
-
 This cmdlet lists online sip domains and their enabled/disabled status. In a disabled domain, provisioning of users is blocked. Once a domain is re-enabled, provisioning of users in that domain will happen.  
 
 ## SYNTAX
 
 ```
-Get-CsOnlineSipDomain [-Domain <String>] [-DomainType <DomainStatus>] [<CommonParameters>]
+Get-CsOnlineSipDomain [-Domain <String>] [-DomainStatus <DomainStatus>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is useful for organizations consolidating multiple on-premises deployments of Skype for Business Server into a single Office 365 tenant. During consolidation, sip domains for all forests hosting Skype for Business Server - other than the forest currently in hybrid mode -  must be disabled. Once a hybrid deployment is fully migrated to the cloud and detached from Office 365, the next forest can start migration to the cloud. This cmdlet allows administrators to view the status of  sip domains in their Office 365 tenant.
+This cmdlet is useful for organizations consolidating multiple on-premises deployments of Skype for Business Server into a single Office 365 tenant. During consolidation, sip domains for all forests hosting Skype for Business Server - other than the forest currently in hybrid mode -  must be disabled. Once a hybrid deployment is fully migrated to the cloud and detached from Office 365, the next forest can start migration to the cloud. This cmdlet allows administrators to view the status of  sip domains in their Office 365 tenant. For full details on cloud consolidation scenarios, see [Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation).
 
 ## EXAMPLES
 
@@ -32,7 +33,7 @@ List all online SIP domains in the tenant and show their enabled/disabled status
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsOnlineSipDomain -DomainType Disabled
+PS C:\> Get-CsOnlineSipDomain -DomainStatus Disabled
 ```
 
 List all disabled online SIP domains in the tenant.
@@ -55,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 
-### -DomainType
+### -DomainStatus
 This indicates the status of an online sip domain, which can be either enabled or disabled.
 
 ```yaml
@@ -89,3 +90,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md) 
+[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchCrawlLogReadPermission
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchCrawlLogReadPermission
@@ -32,9 +35,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant  "00000000-0000-0000-0000-000000000001"
-PS C:\>Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -SearchApplication $ssa -UserNames "user1;user2" -Tenant "00000000-0000-0000-0000-000000000001"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant  "00000000-0000-0000-0000-000000000001"
+Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -SearchApplication $ssa -UserNames "user1;user2" -Tenant "00000000-0000-0000-0000-000000000001"
 ```
 
 This example first defines $crawlLogPermission, which is the list of users who have permission to view the crawl log information from the tenant with id "00000000-0000-0000-0000-000000000001" on the search application referenced by $ssa.

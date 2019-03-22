@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPInfoPathFormTemplate
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Install-SPInfoPathFormTemplate
@@ -27,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-PS C:\>Install-SPInfoPathFormTemplate -Path c:\Form.xsn
+Install-SPInfoPathFormTemplate -Path c:\Form.xsn
 ```
 
 This example installs a single form template to the farm.
 
 ### ---------------EXAMPLE 2-------------- 
 ```
-PS C:\>"FormTemplateFirst.xsn", "FormTemplateSecond.xsn", "FormTemplateThird.xsn" | Install-SPInfoPathFormTemplate
+"FormTemplateFirst.xsn", "FormTemplateSecond.xsn", "FormTemplateThird.xsn" | Install-SPInfoPathFormTemplate
 ```
 
 This example installs multiple form templates on a farm.

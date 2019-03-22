@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPAlternateURL
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPAlternateURL -WebApplication http://sitename -Zone Extranet
+Remove-SPAlternateURL -WebApplication http://sitename -Zone Extranet
 ```
 
 This example deletes the extranet URL for the given Web application.
@@ -36,7 +39,7 @@ This example deletes the extranet URL for the given Web application.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
 ```
 
 This example removes all extranet alternate URLs in the farm.

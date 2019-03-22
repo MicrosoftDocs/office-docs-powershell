@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchRankingModel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchRankingModel
@@ -39,9 +42,9 @@ This example removes the ranking model for the search service application with t
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level ssa
-PS C:\>$MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
-PS C:\>Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
+$owner = Get-SPEnterpriseSearchOwner -Level ssa
+$MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
+Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
 ```
 
 This example removes the ranking model object MyRanking from the search service application Search Service Application.

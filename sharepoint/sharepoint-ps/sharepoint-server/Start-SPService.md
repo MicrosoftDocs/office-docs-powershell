@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPService
@@ -28,7 +31,7 @@ This cmdlet only controls service instances on servers that are managed by MinRo
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Start-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
+Start-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
 ```
 
 This example enables the Microsoft SharePoint Foundation Sandboxed Code Service in the farm.

@@ -3,13 +3,16 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchComponent
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchComponent
 
 ## SYNOPSIS
 
-Retrieves one or all search components in a given search topology..
+Retrieves one or all search components in a given search topology.
 
 
 
@@ -31,16 +34,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves the search component with the identity 06e6651d-ecdd-4105-bb65-6a83b6155525 from the search topology with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves all search components from the search topology with the identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.

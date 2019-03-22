@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSiteAdministration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSiteAdministration
@@ -44,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPSiteAdministration http://sitename -OwnerAlias "DOMAIN\NewOwner"
+Set-SPSiteAdministration http://sitename -OwnerAlias "DOMAIN\NewOwner"
 ```
 
 This example allows farm administrators to change the ownership of a site collection to which they do not have access.

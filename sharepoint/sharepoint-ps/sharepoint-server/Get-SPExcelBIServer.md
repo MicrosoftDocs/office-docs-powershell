@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2013
 title: Get-SPExcelBIServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelBIServer
@@ -25,7 +28,7 @@ Use the Get-SPExcelBIServer cmdlet to return the server ID of the instance of An
 
 ### Example 1 
 ```
-PS C:\>Get-SPExcelBIServer -ExcelServiceApplication 'Excel Service Application'
+Get-SPExcelBIServer -ExcelServiceApplication 'Excel Service Application'
 ```
 
 This example displays the name of the Excel Service application named 'Excel Service Application'.

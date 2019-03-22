@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-AdminAuditLogConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,12 +21,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>] [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
- [-AdminAuditLogCmdlets <MultiValuedProperty>] [-AdminAuditLogEnabled <$true | $false>]
- [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>] [-AdminAuditLogParameters <MultiValuedProperty>]
- [-Confirm] [-DomainController <Fqdn>] [-Force] [-Name <String>] [-TestCmdletLoggingEnabled <$true | $false>]
- [-WhatIf] [-LogLevel <None | Verbose>] [-LoadBalancerCount <Int32>] [-RefreshInterval <Int32>]
- [-UnifiedAuditLogIngestionEnabled <$true | $false>] [<CommonParameters>]
+Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
+ [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AdminAuditLogCmdlets <MultiValuedProperty>]
+ [-AdminAuditLogEnabled <$true | $false>]
+ [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>]
+ [-AdminAuditLogParameters <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-LoadBalancerCount <Int32>]
+ [-LogLevel <None | Verbose>]
+ [-Name <String>]
+ [-RefreshInterval <Int32>]
+ [-TestCmdletLoggingEnabled <$true | $false>]
+ [-UnifiedAuditLogIngestionEnabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,7 +120,7 @@ Accept wildcard characters: False
 ### -AdminAuditLogEnabled
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $false. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
+The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $true. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
 
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 
@@ -227,59 +240,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Name
-This parameter is available only in on-premises Exchange.
-
-The Name parameter specifies the name of the AdminAuditLogConfig object.
-
-You don't need to specify this parameter when you configure administrator audit logging. It doesn't affect your configuration or how administrator audit logging works.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TestCmdletLoggingEnabled
-This parameter is available only in on-premises Exchange.
-
-The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
-
-Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LogLevel
 This parameter is available only in on-premises Exchange.
 
@@ -314,6 +274,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+This parameter is available only in on-premises Exchange.
+
+The Name parameter specifies the name of the AdminAuditLogConfig object.
+
+You don't need to specify this parameter when you configure administrator audit logging. It doesn't affect your configuration or how administrator audit logging works.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RefreshInterval
 This parameter is reserved for internal Microsoft use.
 
@@ -322,6 +301,25 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TestCmdletLoggingEnabled
+This parameter is available only in on-premises Exchange.
+
+The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
+
+Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -343,6 +341,21 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

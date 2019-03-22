@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelBlockedFileType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelBlockedFileType
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```
-PS C:\>Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
+Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
 ```
 
 This example retrieves all blocked file types for the service application named 'Excel Service Application'.

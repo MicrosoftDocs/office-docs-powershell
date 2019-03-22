@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPServerScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPServerScaleOutDatabase
@@ -29,8 +32,8 @@ Use the Add-SPServerScaleOutDatabase cmdlet to add an existing scale-out databas
 
 ### -------------EXAMPLE------------ 
 ```
-PS C:\>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-PS C:\>Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example adds a new or existing scale out database into a specific service application.

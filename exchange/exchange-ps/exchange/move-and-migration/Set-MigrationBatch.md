@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MigrationBatch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,13 +21,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MigrationBatch [-Identity] <MigrationBatchIdParameter> [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>] [-AutoRetryCount <Int32>] [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>] [-Confirm] [-CSVData <Byte[]>] [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>] [-NotificationEmails <MultiValuedProperty>] [-ReportInterval <TimeSpan>]
- [-SourcePublicFolderDatabase <DatabaseIdParameter>] [-StartAfter <DateTime>] [-WhatIf]
- [-MoveOptions <MultiValuedProperty>] [-Partition <MailboxIdParameter>] [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>] [-SkipReports <$true | $false>] [-SyncNow] [-Update] [<CommonParameters>]
+Set-MigrationBatch [-Identity] <MigrationBatchIdParameter>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoRetryCount <Int32>]
+ [-BadItemLimit <Unlimited>]
+ [-CSVData <Byte[]>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <TimeSpan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports <$true | $false>]
+ [-SourcePublicFolderDatabase <DatabaseIdParameter>]
+ [-StartAfter <DateTime>]
+ [-SyncNow]
+ [-Update]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -277,7 +295,7 @@ The NotificationEmails parameter specifies one or more email addresses that migr
 
 If you don't use this parameter, the status report isn't sent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -394,8 +412,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for users within the batch won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -408,13 +424,11 @@ To specify a date/time value for this parameter, use either of the following opt
 
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
 
-This parameter should only be used in the cloud-based service.
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

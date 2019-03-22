@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppSiteDomain
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppSiteDomain
@@ -26,7 +29,7 @@ Use the Set-SPAppSiteDomain cmdlet to create or change the URL of any installed 
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPAppSiteDomain -Site https://www.contoso.com
+Set-SPAppSiteDomain -Site https://www.contoso.com
 ```
 
 This example sets the subscription name and app site domain identifier for the https://www.contoso.com site.

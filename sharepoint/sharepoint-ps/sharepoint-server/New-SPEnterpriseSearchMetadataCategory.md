@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchMetadataCategory
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchMetadataCategory
@@ -31,9 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 
-PS C:\>$guid = [System.Guid]::NewGuid() 
-PS C:\>New-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Name MyCategory -DiscoverNewProperties $true -PropSet $guid
+$ssa = Get-SPEnterpriseSearchServiceApplication 
+$guid = [System.Guid]::NewGuid() 
+New-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Name MyCategory -DiscoverNewProperties $true -PropSet $guid
 ```
 
 This example adds a new metadata category named MyCategory to the default search service application.

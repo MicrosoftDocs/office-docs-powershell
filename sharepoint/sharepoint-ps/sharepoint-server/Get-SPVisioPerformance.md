@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioPerformance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPVisioPerformance
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE---------------------- 
 ```
-PS C:\>Get-SPVisioPerformance -VisioServiceApplication "VGS1"
+Get-SPVisioPerformance -VisioServiceApplication "VGS1"
 ```
 
 This example gets settings related to performance for a Visio Services application.

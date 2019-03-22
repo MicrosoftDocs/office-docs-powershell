@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Add-PnPCustomAction
@@ -69,7 +69,7 @@ Adds a new application customizer to the site. This requires that an SPFX soluti
 ### -ClientSideComponentId
 The Client Side Component Id of the custom action
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: GuidPipeBind
@@ -83,7 +83,7 @@ Accept pipeline input: False
 ### -ClientSideComponentProperties
 The Client Side Component Properties of the custom action. Specify values as a json string : "{Property1 : 'Value1', Property2: 'Value2'}"
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -276,4 +276,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx)[BasePermissions](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.basepermissions.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx)[BasePermissions](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.basepermissions.aspx)

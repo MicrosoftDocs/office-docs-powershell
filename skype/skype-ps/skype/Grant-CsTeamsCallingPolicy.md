@@ -5,6 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsCallingPolicy
@@ -28,7 +31,7 @@ Grant-CsTeamsCallingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainContr
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
+The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interoperability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
 
 ## EXAMPLES
 

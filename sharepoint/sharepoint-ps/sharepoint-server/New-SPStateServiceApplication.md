@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPStateServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPStateServiceApplication
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
-PS C:\>New-SPStateServiceApplication -Name 'State Service' -Database $db
+$db = New-SPStateServiceDatabase -Name 'StateSvcDB1'
+New-SPStateServiceApplication -Name 'State Service' -Database $db
 ```
 
 This example creates a new state service database and a state service application associated with the database.

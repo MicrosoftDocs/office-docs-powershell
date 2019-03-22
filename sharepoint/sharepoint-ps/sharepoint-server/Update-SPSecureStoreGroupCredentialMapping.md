@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPSecureStoreGroupCredentialMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPSecureStoreGroupCredentialMapping
@@ -29,11 +32,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
-PS C:\>$firstCredential = ConvertTo-SecureString "LOBDATABASE\fulltimeemployees" -AsPlainText -Force
-PS C:\>$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
-PS C:\>$credentialValues = $firstCredential,$secondCredential
-PS C:\>Update-SPSecureStoreGroupCredentialMapping -Identity $ssApp -Values $credentialValues
+$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
+$firstCredential = ConvertTo-SecureString "LOBDATABASE\fulltimeemployees" -AsPlainText -Force
+$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
+$credentialValues = $firstCredential,$secondCredential
+Update-SPSecureStoreGroupCredentialMapping -Identity $ssApp -Values $credentialValues
 ```
 
 This example adds a credential mapping for the target application ContosoGroupTargetApplication, for all users in this group target application.

@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
@@ -43,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-PS C:\>Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
+Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```
 
 This example disables Timer Job execution of the Active Directory Enterprise Resource Pool synchronization on http://localhost/pwa.

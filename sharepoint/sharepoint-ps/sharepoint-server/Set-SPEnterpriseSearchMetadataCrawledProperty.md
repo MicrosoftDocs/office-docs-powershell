@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchMetadataCrawledProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchMetadataCrawledProperty
@@ -29,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
-PS C:\>Set-SPEnterpriseSearchMetadataCrawledProperty -Identity $crawlprop -IsMappedToContent $true
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
+Set-SPEnterpriseSearchMetadataCrawledProperty -Identity $crawlprop -IsMappedToContent $true
 ```
 
 This example sets the IsMappedToContent parameter of the crawled property MyCrawlProp to false (see the example for the `New-SPEnterpriseSearchMetadataCrawledProperty` command) for the default search service application.

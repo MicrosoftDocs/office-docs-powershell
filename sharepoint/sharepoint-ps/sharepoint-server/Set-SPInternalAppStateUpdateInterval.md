@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPInternalAppStateUpdateInterval
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPInternalAppStateUpdateInterval
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------
 ```
-PS C:\>Set-SPInternalAppStateUpdateInterval -AppStateSyncHours 24
+Set-SPInternalAppStateUpdateInterval -AppStateSyncHours 24
 ```
 
 This example sets a 24-hour interval between updates of the internal app state update job.

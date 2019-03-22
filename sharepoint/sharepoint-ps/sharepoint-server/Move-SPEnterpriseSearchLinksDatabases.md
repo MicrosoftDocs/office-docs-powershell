@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPEnterpriseSearchLinksDatabases
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Move-SPEnterpriseSearchLinksDatabases
@@ -32,12 +35,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceapplication
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
-PS C:\>$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
-PS C:\>$ssa | Move-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
+$ssa = Get-SPEnterpriseSearchServiceapplication
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
+$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
+$ssa | Move-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
 ```
 
 This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDatabases to move data from the current links databases into new databases.

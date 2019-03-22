@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchSecurityUserStore
 ---
 
@@ -27,7 +30,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchSecurityUserStore -Identity wn1
+Remove-FASTSearchSecurityUserStore -Identity wn1
 ```
 
 This example deletes the "wn1" user store.
@@ -35,7 +38,7 @@ A prompt is displayed to confirm the request.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Get-FASTSearchSecurityLotusNotesUserStore ln2 | remove-FASTSearchSecurityUserStore
+Get-FASTSearchSecurityLotusNotesUserStore ln2 | remove-FASTSearchSecurityUserStore
 ```
 
 This example deletes the user store specified by a piped SecurityUserStoreToRemove instance.

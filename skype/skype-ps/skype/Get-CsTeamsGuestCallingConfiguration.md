@@ -4,6 +4,9 @@ Module Name: Skype for Business Online
 title: Get-CsTeamsGuestCallingConfiguration
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsGuestCallingConfiguration
@@ -33,7 +36,7 @@ Returns information about the GuestCallingConfiguration, which specifies what op
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsGuestCallingConfiguration
+Get-CsTeamsGuestCallingConfiguration
 ```
 
 Returns the results 

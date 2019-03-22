@@ -3,33 +3,40 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsTeamsMeetingConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsMeetingConfiguration
 
 ## SYNOPSIS
 
-The CsTeamsMeetingConfiguration cmdlets enable administrators to control the meetings configurations in their tenants. 	
+The CsTeamsMeetingConfiguration cmdlets enable administrators to control the meetings configurations in their tenants.
 
 ## SYNTAX
 
 ### Identity (Default)
+
 ```
 Get-CsTeamsMeetingConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
 ### Filter
+
 ```
 Get-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The CsTeamsMeetingConfiguration cmdlets enable administrators to control the meetings configurations in their tenants. 	Use this cmdlet to retrieve the configuration set in your organization.
+
+The CsTeamsMeetingConfiguration cmdlets enable administrators to control the meetings configurations in their tenants. Use this cmdlet to retrieve the configuration set in your organization.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Get-CsTeamsMeetingConfiguration
 ```
@@ -39,6 +46,7 @@ Returns the configuration set in the organization.
 ## PARAMETERS
 
 ### -Filter
+
 Internal Microsoft use
 
 ```yaml
@@ -54,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
 The only valid input is "Global"
 
 ```yaml
@@ -84,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
 Internal Microsoft use
 
 ```yaml
@@ -99,15 +109,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

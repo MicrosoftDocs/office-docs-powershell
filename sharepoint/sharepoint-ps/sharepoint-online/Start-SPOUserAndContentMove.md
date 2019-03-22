@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOUserAndContentMove
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Start-SPOUserAndContentMove
@@ -24,23 +27,23 @@ In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and ena
 ## EXAMPLES
 
 ### EXAMPLE 1
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 ### EXAMPLE 2
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 
 ### EXAMPLE 3
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
@@ -184,9 +187,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
+[Start-SPOSiteRename](Start-SPOSiteRename.md)
+
+[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
+
 [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
+
+[Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
+
+
+
+

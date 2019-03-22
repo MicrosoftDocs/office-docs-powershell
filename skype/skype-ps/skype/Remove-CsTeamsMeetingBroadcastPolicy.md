@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 
@@ -19,7 +22,7 @@ Remove-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> 
 ```
 
 ## DESCRIPTION
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to delete an existing policy.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to delete an existing policy.
 
 ## EXAMPLES
 

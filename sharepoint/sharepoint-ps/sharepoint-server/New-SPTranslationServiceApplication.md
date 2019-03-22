@@ -3,6 +3,9 @@ external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPTranslationServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPTranslationServiceApplication
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------------
 ```
-PS C:\>New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
+New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
 ```
 
 This example creates a Machine Translation service application named TranslationService which will run in the SharePoint Web Services Default service application pool.

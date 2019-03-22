@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPThrottlingRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPThrottlingRule
@@ -33,7 +36,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\>Get-SPThrottlingRule -RequestManagementSettings $rm
+Get-SPThrottlingRule -RequestManagementSettings $rm
 ```
 
 This example returns throttling rules for the farm by using the $rm and $web variables.

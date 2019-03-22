@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPThrottlingRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPThrottlingRule
@@ -39,7 +42,7 @@ C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name 
 
 C:\PS>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
 
-PS C:\>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
+Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
 ```
 
 This example sets throttling rule property

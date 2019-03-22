@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlDatabase
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchCrawlDatabase -SearchApplication $ssa -DatabaseName newCrawlDB
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlDatabase -SearchApplication $ssa -DatabaseName newCrawlDB
 ```
 
 This example creates a new crawl database named newCrawlDB for the mySearchServiceApp search service application.

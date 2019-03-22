@@ -3,6 +3,9 @@ external help file: microsoft.office.access.services.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAccessServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAccessServiceApplication
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------------------
 ```
-PS C:\>Set-SPAccessServiceApplication -identity "MyAccessService" -RequestDurationMax 100
+Set-SPAccessServiceApplication -identity "MyAccessService" -RequestDurationMax 100
 ```
 
 This example sets the Access Services application named MyAccessService to let requests take up to 100 seconds before they time out.
@@ -42,7 +45,7 @@ This example sets the Access Services application named MyAccessService to let r
 
 ### ------------EXAMPLE 2------------------
 ```
-PS C:\>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -SessionsPerUserMax 5
+Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -SessionsPerUserMax 5
 ```
 
 This example sets every Access Services application in the farm to allow up to five sessions per user on each back-end application server computer on which Access Services runs.
@@ -52,7 +55,7 @@ First, every Access Services application is retrieved and then a new value is se
 
 ### ------------EXAMPLE 3------------------
 ```
-PS C:\>Get-SPAccessServiceApplication | where {$_.RowsMax -gt 50000 } | Set-SPAccessServiceApplication -RowsMax 50000
+Get-SPAccessServiceApplication | where {$_.RowsMax -gt 50000 } | Set-SPAccessServiceApplication -RowsMax 50000
 ```
 
 This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query and then sets the service application to allow up to 50,000 rows only.

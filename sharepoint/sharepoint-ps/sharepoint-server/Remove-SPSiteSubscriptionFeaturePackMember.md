@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteSubscriptionFeaturePackMember
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSiteSubscriptionFeaturePackMember
@@ -32,7 +35,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
-The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefintion parameter from the feature set specified by the Identity parameter.
+The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefinition parameter from the feature set specified by the Identity parameter.
 If the AllFeatureDefinitions flag is provided, all feature definitions are removed from the given Feature set.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
@@ -44,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
-PS C:\>Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
+Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
 ```
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
@@ -52,7 +55,7 @@ This example removes the PublishingSite feature from the Feature set that has ID
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
+Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
 ```
 
 This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.

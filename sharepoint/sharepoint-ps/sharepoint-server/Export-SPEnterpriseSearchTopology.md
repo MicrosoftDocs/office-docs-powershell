@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPEnterpriseSearchTopology
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPEnterpriseSearchTopology
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Export-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename topology.xml
+Export-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename topology.xml
 ```
 
 This example exports the topology to a file named topology.xml in the search service application referenced by $ssa.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MessageTrackingLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -122,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-The MessageId parameter filters the message tracking log entries by the value of the MessageId field. The value of MessageId corresponds to the value of the Message-Id: header field in the message. If the Message-ID header field is blank or doesn't exist, an arbitrary value is assigned.
+The MessageId parameter filters the message tracking log entries by the value of the MessageId field. The value of MessageId corresponds to the value of the Message-Id: header field in the message. If the Message-ID header field is blank or doesn't exist, an arbitrary value is assigned. Be sure to include the full MessageId string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>").
 
 ```yaml
 Type: String

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPBusinessDataCatalogMetadataObject
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPBusinessDataCatalogMetadataObject
@@ -48,8 +51,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$obj = Get-SPBusinessDataCatalogMetadataObject -Namespace "ContosoDatabase" -Name "ContosoDatabase" -BdcObjectType "LobSystemInstance" -ServiceContext http://contoso
-PS C:\>Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
+$obj = Get-SPBusinessDataCatalogMetadataObject -Namespace "ContosoDatabase" -Name "ContosoDatabase" -BdcObjectType "LobSystemInstance" -ServiceContext http://contoso
+Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
 ```
 
 This example creates a property on the LobSystemInstance (External System Instance) of name ContosoDatabase.

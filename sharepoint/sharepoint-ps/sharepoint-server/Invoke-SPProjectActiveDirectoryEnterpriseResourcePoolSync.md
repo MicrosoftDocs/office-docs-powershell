@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
@@ -43,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-PS C:\>Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
+Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```
 
 This example triggers an Active Directory Enterprise Resource Pool synchronization for the instance of Project Web App located at http://localhost/pwa.

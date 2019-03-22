@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAlternateURL
@@ -51,11 +54,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>#create the public URL
-PS C:\>New-SPAlternateURL https://www.contoso.com -Zone "Internet"
+#create the public URL
+New-SPAlternateURL https://www.contoso.com -Zone "Internet"
 
-PS C:\>#create the internal URL
-PS C:\>New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
+#create the internal URL
+New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
 ```
 
 This example translates incoming requests for https://www.contoso.com into http://sharepoint.contoso.com (on the Internet zone).

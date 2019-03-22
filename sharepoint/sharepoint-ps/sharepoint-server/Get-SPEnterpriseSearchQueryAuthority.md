@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchQueryAuthority
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchQueryAuthority
@@ -29,15 +32,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchQueryAuthority -Identity 'http://contoso.com' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -Identity 'http://contoso.com' -SearchApplication $ssa
 ```
 
 This example obtains the authoritative page for the URL http://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
 ```
 
 This example obtains the collection of query authority pages from a search service application named 'Search Service Application'.

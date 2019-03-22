@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchLinksDatabase
@@ -32,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-PS C:\>Set-SPEnterpriseSearchLinksDatabase -Identity SearchApp_LinksStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
+$ssa = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
+Set-SPEnterpriseSearchLinksDatabase -Identity SearchApp_LinksStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
 ```
 
 This example sets the failover database server to \\\\failoverServer for the links database SearchApp_LinksStore in the search service application mySearchServiceApp.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSiteMaster
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSiteMaster
@@ -27,7 +30,7 @@ Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
+New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
 This example creates a site master in the database WSS_Content.

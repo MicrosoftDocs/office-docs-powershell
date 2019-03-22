@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPEnterpriseSearchServiceApplication
@@ -53,9 +56,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\>$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
-PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
+$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
+$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
 ```
 
 This example uses Application Configuration Attach mode to restore configuration data.
@@ -63,8 +66,8 @@ This example uses Application Configuration Attach mode to restore configuration
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
+$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
 ```
 
 This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.

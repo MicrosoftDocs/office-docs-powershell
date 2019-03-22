@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchContentCollection
 ---
 
@@ -26,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchContentCollection -Name newscollection -Force
+Remove-FASTSearchContentCollection -Name newscollection -Force
 ```
 
 This example removes the content collection named "newscollection" without asking the user to confirm the operation.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchContentCollection -Name newscollection -WhatIf
+Remove-FASTSearchContentCollection -Name newscollection -WhatIf
 ```
 
 This example describes what would happen if you executed the Remove-FASTSearchContentCollection cmdlet.

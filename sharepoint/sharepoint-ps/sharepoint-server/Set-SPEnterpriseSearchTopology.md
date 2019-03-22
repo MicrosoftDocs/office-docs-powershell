@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchTopology
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchTopology
@@ -29,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
-PS C:\>Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
+Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
 ```
 
 This example enables a search topology with the Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e.
@@ -39,9 +42,9 @@ This example enables a search topology with the Identity 10fa59cb-4b32-4fe6-8f8d
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa | ?{$_.State -eq 'Inactive'}
-PS C:\>Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa | ?{$_.State -eq 'Inactive'}
+Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
 ```
 
 This example retreives an inactive topology and sets it to the active topology.

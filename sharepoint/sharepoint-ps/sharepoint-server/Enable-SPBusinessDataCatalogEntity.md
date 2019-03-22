@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPBusinessDataCatalogEntity
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPBusinessDataCatalogEntity
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$entityToEnable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
-PS C:\>Enable-SPBusinessDataCatalogEntity -Identity $entityToEnable
+Enable-SPBusinessDataCatalogEntity -Identity $entityToEnable
 ```
 
 This example activates the External Content type with the name Customer in the Contoso namespace on the site http://contoso.

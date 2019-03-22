@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityEncodedSid
 ---
 
@@ -25,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
+Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
 ```
 
 This example returns an encoded security identifier and user name for the Windows SID, "5-1-5-7".
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityEncodedSid -User users
+Get-FASTSearchSecurityEncodedSid -User users
 ```
 
 This example returns the encoded security identifier for the Windows built-in "Users" group.

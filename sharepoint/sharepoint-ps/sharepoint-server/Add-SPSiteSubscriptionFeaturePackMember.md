@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPSiteSubscriptionFeaturePackMember
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPSiteSubscriptionFeaturePackMember
@@ -33,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------------- 
 ```
-PS C:\>$fp = New-SPSiteSubscriptionFeaturePack
-PS C:\>Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
-PS C:\>$fp = Get-SPSiteSubscriptionFeaturePack $fp
+$fp = New-SPSiteSubscriptionFeaturePack
+Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
+$fp = Get-SPSiteSubscriptionFeaturePack $fp
 ```
 
 This example creates a Feature set and adds all Web site scoped Features to the set.

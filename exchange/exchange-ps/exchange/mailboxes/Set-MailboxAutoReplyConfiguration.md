@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxAutoReplyConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,13 +22,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
- [-AutoReplyState <Disabled | Enabled | Scheduled>] [-Confirm] [-DomainController <Fqdn>] [-EndTime <DateTime>]
- [-ExternalAudience <None | Known | All>] [-ExternalMessage <String>] [-IgnoreDefaultScope]
- [-InternalMessage <String>] [-StartTime <DateTime>] [-WhatIf]
- [-AutoDeclineFutureRequestsWhenOOF <$true | $false>] [-CreateOOFEvent <$true | $false>]
- [-DeclineAllEventsForScheduledOOF <$true | $false>] [-DeclineEventsForScheduledOOF <$true | $false>]
- [-DeclineMeetingMessage <String>] [-EventsToDeleteIDs <String[]>] [-OOFEventSubject <String>]
- [<CommonParameters>]
+ [-AutoDeclineFutureRequestsWhenOOF <$true | $false>]
+ [-AutoReplyState <Disabled | Enabled | Scheduled>]
+ [-Confirm]
+ [-CreateOOFEvent <$true | $false>]
+ [-DeclineAllEventsForScheduledOOF <$true | $false>]
+ [-DeclineEventsForScheduledOOF <$true | $false>]
+ [-DeclineMeetingMessage <String>]
+ [-DomainController <Fqdn>]
+ [-EndTime <DateTime>]
+ [-EventsToDeleteIDs <String[]>]
+ [-ExternalAudience <None | Known | All>]
+ [-ExternalMessage <String>]
+ [-IgnoreDefaultScope]
+ [-InternalMessage <String>]
+ [-OOFEventSubject <String>]
+ [-StartTime <DateTime>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,6 +103,29 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AutoDeclineFutureRequestsWhenOOF
+This parameter is available only in the cloud-based service.
+
+The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
+
+- $true: New meeting requests that are received during the scheduled time period are automatically declined.
+
+- $false: Meeting requests received during the scheduled time period aren't automatically declined. This is the default value.
+
+You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoReplyState
 The AutoReplyState parameter specifies whether the mailbox is enabled for Automatic Replies. Valid values are:
 
@@ -129,185 +165,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndTime
-The EndTime parameter specifies the end date and time that Automatic Replies are sent for the mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalAudience
-The ExternalAudience parameter specifies whether Automatic Replies are sent to external senders. Valid values are:
-
-- None: Automatic Replies aren't sent to any external senders.
-
-- Known: Automatic Replies are sent only to external senders that are specified in the Contact list of the mailbox.
-
-- All: Automatic Replies are sent to all external senders. This is the default value.
-
-The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
-
-```yaml
-Type: None | Known | All
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalMessage
-The ExternalMessage parameter specifies the Automatic Replies message that's sent to external senders or senders outside the organization. If the value contains spaces, enclose the value in quotation marks (").
-
-HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>I'll respond when I return.\</body\>\</html\>".
-
-The value of this parameter is meaningful only when both of the following conditions are true:
-
-- The AutoReplyState parameter is set to Enabled or Scheduled.
-
-- The ExternalAudience parameter is set to Known or All.
-
-To clear the value of this parameter when it's no longer required (for example, if you change the ExternalAudience parameter to None), use the value $null.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
-
-Using the IgnoreDefaultScope switch introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InternalMessage
-The InternalMessage parameter specifies the Automatic Replies message that's sent to internal senders or senders within the organization. If the value contains spaces, enclose the value in quotation marks (").
-
-HTML tags are automatically added to the text. For example, if you enter the text: "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>Please contact my manager.\</body\>\</html\>".
-
-The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
-
-To clear the value of this parameter when it's no longer required (for example, if you change the AutoReplyState parameter to Disabled), use the value $null.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StartTime
-The StartTime parameter specifies the start date and time that Automatic Replies are sent for the specified mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDeclineFutureRequestsWhenOOF
-This parameter is available only in the cloud-based service.
-
-The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
-
-- $true: New meeting requests that are received during the scheduled time period are automatically declined.
-
-- $false: Meeting requests received during the scheduled time period aren't automatically declined. This is the default value.
-
-You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -409,6 +266,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndTime
+The EndTime parameter specifies the end date and time that Automatic Replies are sent for the mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventsToDeleteIDs
 This parameter is available only in the cloud-based service.
 
@@ -430,6 +321,96 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalAudience
+The ExternalAudience parameter specifies whether Automatic Replies are sent to external senders. Valid values are:
+
+- None: Automatic Replies aren't sent to any external senders.
+
+- Known: Automatic Replies are sent only to external senders that are specified in the Contact list of the mailbox.
+
+- All: Automatic Replies are sent to all external senders. This is the default value.
+
+The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
+
+```yaml
+Type: None | Known | All
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalMessage
+The ExternalMessage parameter specifies the Automatic Replies message that's sent to external senders or senders outside the organization. If the value contains spaces, enclose the value in quotation marks (").
+
+HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>I'll respond when I return.\</body\>\</html\>".
+
+The value of this parameter is meaningful only when both of the following conditions are true:
+
+- The AutoReplyState parameter is set to Enabled or Scheduled.
+
+- The ExternalAudience parameter is set to Known or All.
+
+To clear the value of this parameter when it's no longer required (for example, if you change the ExternalAudience parameter to None), use the value $null.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreDefaultScope
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+
+Using the IgnoreDefaultScope switch introduces the following restrictions:
+
+- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
+
+- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InternalMessage
+The InternalMessage parameter specifies the Automatic Replies message that's sent to internal senders or senders within the organization. If the value contains spaces, enclose the value in quotation marks (").
+
+HTML tags are automatically added to the text. For example, if you enter the text: "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>Please contact my manager.\</body\>\</html\>".
+
+The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
+
+To clear the value of this parameter when it's no longer required (for example, if you change the AutoReplyState parameter to Disabled), use the value $null.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OOFEventSubject
 This parameter is available only in the cloud-based service.
 
@@ -442,6 +423,38 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartTime
+The StartTime parameter specifies the start date and time that Automatic Replies are sent for the specified mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

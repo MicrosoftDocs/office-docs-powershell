@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPInfoPathFormTemplate
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPInfoPathFormTemplate
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
+Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
 ```
 
 This example activates an InfoPath form template to a site collection named TestSite.

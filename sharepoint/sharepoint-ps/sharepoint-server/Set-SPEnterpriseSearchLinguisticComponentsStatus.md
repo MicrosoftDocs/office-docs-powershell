@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchLinguisticComponentsStatus
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchLinguisticComponentsStatus
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
 ```
 
 This example shows how to disable stemming during query processing by setting the parameter StemmingEnabled to false.
@@ -40,8 +43,8 @@ This example shows how to disable stemming during query processing by setting th
 
 ### ------------------EXAMPLE 2-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
 ```
 
 This example shows how to disable all linguistic query and document processing functionalities.

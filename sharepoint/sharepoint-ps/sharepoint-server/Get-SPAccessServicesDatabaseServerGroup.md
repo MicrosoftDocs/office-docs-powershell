@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServicesDatabaseServerGroup
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAccessServicesDatabaseServerGroup
@@ -25,7 +28,7 @@ Returns a database server group associated with the given service context.
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
+Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
 ```
 Returns the database server group associated with the site, http://siteUrl.
 

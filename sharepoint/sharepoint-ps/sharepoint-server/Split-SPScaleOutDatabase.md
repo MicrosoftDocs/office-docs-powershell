@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Split-SPScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Split-SPScaleOutDatabase
@@ -42,9 +45,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE---------------
 ```
-PS C:\>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.

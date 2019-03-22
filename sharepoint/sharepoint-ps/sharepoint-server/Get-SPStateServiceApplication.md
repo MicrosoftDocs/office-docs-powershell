@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPStateServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPStateServiceApplication
@@ -27,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPStateServiceApplication
+Get-SPStateServiceApplication
 ```
 
 This example displays all state service applications in the farm.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPStateServiceApplication -Identity "StateServiceApp1"
+Get-SPStateServiceApplication -Identity "StateServiceApp1"
 ```
 
 This example displays a specific state service application in the farm.

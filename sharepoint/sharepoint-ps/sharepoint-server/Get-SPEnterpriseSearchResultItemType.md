@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchResultItemType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchResultItemType
@@ -42,9 +45,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
-PS C:\>Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
+Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
 ```
 
 This example retrieves the result item types that are defined for the owner referenced by $tenantowner for the search application referenced by $ssa.

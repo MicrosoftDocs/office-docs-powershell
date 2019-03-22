@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchQueryDemoted
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchQueryDemoted
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication MySSA
-PS C:\>$demotedRule | Remove-SPEnterpriseSearchQueryDemoted
+$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication MySSA
+$demotedRule | Remove-SPEnterpriseSearchQueryDemoted
 ```
 
 This example obtains a reference to a site demotion rule for the URL http://somesite.com and removes it.

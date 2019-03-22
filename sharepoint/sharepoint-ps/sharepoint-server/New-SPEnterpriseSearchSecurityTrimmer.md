@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchSecurityTrimmer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchSecurityTrimmer
@@ -31,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
 ```
 
 This example adds a new custom security trimmer for trimming the returned result set. This new security trimmer is added to the search application by using the id 1. The strong named assembly contains the class CustomSecurityTrimmerPost, which implements the ISecurityTrimmerPost interface.

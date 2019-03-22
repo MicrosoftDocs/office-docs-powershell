@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppHostingQuotaConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppHostingQuotaConfiguration
@@ -26,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPAppHostingQuotaConfiguration -Identity '586d4a32-98c3-42ce-80be-3c76c10c250c'
+Get-SPAppHostingQuotaConfiguration -Identity '586d4a32-98c3-42ce-80be-3c76c10c250c'
 ```
 
 This example returns the hosted app quota associated to SiteSubscriptionID "586d4a32-98c3-42ce-80be-3c76c10c250c".
 
 ### --------------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPSiteSubscription | Get-SPAppHostingQuotaConfiguration -Identity $_
+Get-SPSiteSubscription | Get-SPAppHostingQuotaConfiguration -Identity $_
 ```
 
 This example returns the hosted app quota associated for all site subscriptions in the farm.

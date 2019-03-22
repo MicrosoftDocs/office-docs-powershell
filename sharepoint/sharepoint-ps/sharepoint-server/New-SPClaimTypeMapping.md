@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPClaimTypeMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPClaimTypeMapping
@@ -28,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------------- 
 ```
-PS C:\>$map1 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" -IncomingClaimTypeDisplayName "EmailAddress" -SameAsIncoming
-PS C:\>$map2 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
-PS C:\>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" -Description "LiveID Provider" -Realm "urn:domain.company.com" -ImportTrustCertificate $cert -ClaimsMappings $map1[,$map2..] -SignInUrl "https://login.live.com/login.srf" -IdentifierClaim $map2.InputClaimType
+$map1 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" -IncomingClaimTypeDisplayName "EmailAddress" -SameAsIncoming
+$map2 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" -Description "LiveID Provider" -Realm "urn:domain.company.com" -ImportTrustCertificate $cert -ClaimsMappings $map1[,$map2..] -SignInUrl "https://login.live.com/login.srf" -IdentifierClaim $map2.InputClaimType
 ```
 
 This example creates a claim map from an incoming token to a SharePoint token.

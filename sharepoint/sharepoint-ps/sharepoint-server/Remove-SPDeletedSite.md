@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPDeletedSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPDeletedSite
@@ -36,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
+Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example permanently removes a specific deleted site collection by using a site ID.

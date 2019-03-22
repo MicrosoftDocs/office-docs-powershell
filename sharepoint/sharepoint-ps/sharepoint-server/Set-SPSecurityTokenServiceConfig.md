@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecurityTokenServiceConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSecurityTokenServiceConfig
@@ -85,7 +88,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
+Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
 ```
 
 This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
@@ -95,7 +98,7 @@ This example updates the signing certificate of the SharePoint security token se
 ```
 C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 
-PS C:\>Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
+Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
 This example imports the signing certificate for the SharePoint STS identity provider.

@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPPerformancePointServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPPerformancePointServiceApplicationProxy
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE--------------------
 ```
-PS C:\>Remove-SPPerformancePointServiceApplicationProxy -Identity PPS_Application_Proxy_01
+Remove-SPPerformancePointServiceApplicationProxy -Identity PPS_Application_Proxy_01
 ```
 
 This example removes the PPS_Application_Proxy_01 application proxy from its associated PerformancePoint Service application.

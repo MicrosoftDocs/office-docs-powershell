@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPUnifiedGroup
 
 ## SYNOPSIS
-Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. You must first connect using Connect-PnPOnline -Graph, Connect-PnPOnline -Scopes or Connect-PnPOnline -AppId -AppSecret -AADDomain
+Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups
 
 ## SYNTAX 
 
@@ -93,4 +93,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPAccessServicesDatabaseCredentials
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Copy-SPAccessServicesDatabaseCredentials
@@ -25,7 +28,7 @@ Copy-SPAccessServicesDatabaseCredentials [-AppUrl] <String> [-AssignmentCollecti
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+ {{ Add example code here }}
 ```
 
 {{ Add example description here }}

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPDistributedCacheSize
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPDistributedCacheSize
@@ -24,7 +27,7 @@ Use the Update-SPDistributedCacheSize cmdlet to allocate memory to the Distribut
 
 ### -------------EXAMPLE----------
 ```
-PS C:\>Update-SPDistributedCacheSize -CacheSizeInMB 2048
+Update-SPDistributedCacheSize -CacheSizeInMB 2048
 ```
 
 Updates the Distributed Cache size to 2048MB.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServiceContext
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServiceContext
@@ -43,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$sitesub = Get-SPSiteSubscription http://my.contoso.com/
 
-PS C:\>Get-SPServiceContext $sitesub
+Get-SPServiceContext $sitesub
 ```
 
 This example returns the service context for a site in a hosted environment.

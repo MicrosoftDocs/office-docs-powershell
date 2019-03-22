@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Test-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Test-SPSite
@@ -30,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------
 ```
-PS C:\>Test-SPSite http://<site name>/sites/testsite
+Test-SPSite http://<site name>/sites/testsite
 ```
 
 This example runs all the site collection health checks on the http://\<site name\>/sites/testsite site collection.
 
 ### --------------EXAMPLE 2------------
 ```
-PS C:\>Test-SPSite http://<site name</sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
+Test-SPSite http://<site name</sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
 ```
 
 This example runs just the "Missing Galleries Check" on the http://\<site name\>/sites/testsite site collection.

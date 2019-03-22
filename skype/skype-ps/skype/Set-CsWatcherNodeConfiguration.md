@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsWatcherNodeConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsWatcherNodeConfiguration
@@ -343,7 +346,7 @@ Accept wildcard characters: False
 
 ### -UseAutoDiscovery
 When set to True ($True), watcher nodes will use the Autodiscover service locate the target pool.
-When set the False (the default value), watcher nodes will use the pool FQDN and SRV records to locate pools.
+When set to False (the default value), watcher nodes will use the pool FQDN and SRV records to locate pools.
 
 ```yaml
 Type: Boolean

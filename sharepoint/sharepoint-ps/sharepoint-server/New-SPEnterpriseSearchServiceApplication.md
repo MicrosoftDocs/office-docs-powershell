@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchServiceApplication
@@ -34,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$appPool = New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account 'CONTOSO\ServiceApps'
-PS C:\>New-SPEnterpriseSearchServiceApplication -Name "Search Service Application" -ApplicationPool $appPool
+$appPool = New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account 'CONTOSO\ServiceApps'
+New-SPEnterpriseSearchServiceApplication -Name "Search Service Application" -ApplicationPool $appPool
 ```
 
 This example creates a new search service application named NewSSA in a new application pool.

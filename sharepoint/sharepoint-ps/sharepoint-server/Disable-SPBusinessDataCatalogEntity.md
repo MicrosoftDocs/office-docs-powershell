@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPBusinessDataCatalogEntity
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPBusinessDataCatalogEntity
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$entityToDisable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
-PS C:\>Disable-SPBusinessDataCatalogEntity -Identity $entityToDisable
+Disable-SPBusinessDataCatalogEntity -Identity $entityToDisable
 ```
 
 This example deactivates the External Content type of the name Customer in the Contoso.

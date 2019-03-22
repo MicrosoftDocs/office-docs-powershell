@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPAppCatalogConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPAppCatalogConfiguration
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-----------
 ```
-PS C:\>Update-SPAppCatalogConfiguration -Site http://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
+Update-SPAppCatalogConfiguration -Site http://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
 ```
 This example sets http://contoso/sites/appcatalog_1 as the app catalog site collection for the tenant it belongs to.
 

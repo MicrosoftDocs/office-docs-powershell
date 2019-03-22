@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSingleSignOnDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Upgrade-SPSingleSignOnDatabase
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
+Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
 ```
 
 This example migrates the SSO database at the SSO connection to a Secure Store database at the Secure Store connection.

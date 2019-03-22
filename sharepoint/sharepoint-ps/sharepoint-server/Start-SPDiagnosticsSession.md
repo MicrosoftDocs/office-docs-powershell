@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPDiagnosticsSession
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPDiagnosticsSession
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE-------
 ```
-PS C:\>$correlationId = [guid]::NewGuid()
-PS C:\>Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
+$correlationId = [guid]::NewGuid()
+Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
 ```
 
 This example starts a diagnostic session for a specified correlation ID with the trace level of verbose.

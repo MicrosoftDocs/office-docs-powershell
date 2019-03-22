@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityRegexAliaserPattern
 ---
 
@@ -29,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
 ```
 
 This example creates a regular expression pattern that can be used to map the "mail" property of a Microsoft user store to identities in other user stores.

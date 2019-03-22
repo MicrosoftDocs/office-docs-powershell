@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSecureStoreServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSecureStoreServiceApplicationProxy
@@ -46,8 +49,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
-PS C:\>New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
+$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
+New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new Secure Store Service application and proxy.
@@ -55,13 +58,13 @@ This example creates a new Secure Store Service application and proxy.
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
-PS C:\>$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
-PS C:\>$prop = $proxy.Properties
-PS C:\>$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
-PS C:\>$partition = [enum]::Parse( $type, 1 )
-PS C:\>$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
-PS C:\>$proxy.Update()
+$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
+$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
+$prop = $proxy.Properties
+$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
+$partition = [enum]::Parse( $type, 1 )
+$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
+$proxy.Update()
 ```
 
 This example converts an unpartitioned secure store service application proxy in the child to a partitioned one.

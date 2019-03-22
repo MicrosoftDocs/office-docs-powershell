@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumber
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineTelephoneNumber
@@ -292,8 +295,8 @@ Accept wildcard characters: False
 
 ### -TelephoneNumberStartsWith
 Specifies the digits that the returned telephone numbers must begin with.
-To return numbers in the 425 area code, use this syntax: -TelephoneNumberStartsWith 425.
-To return numbers that are in the 206 area code and that begin with 88, use this syntax: -TelephoneNumberStartsWith 20688.
+To return numbers in the North American Numbering Plan 425 area code, use this syntax: -TelephoneNumberStartsWith 1425.
+To return numbers that are in the 206 area code and that begin with 88, use this syntax: -TelephoneNumberStartsWith 120688.
 You can use up to nine digits.
 
 ```yaml
@@ -330,7 +333,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -360,4 +363,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsOnlineTelephoneNumber](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csonlinetelephonenumber?view=skype-ps)
+[Remove-CsOnlineTelephoneNumber](https://docs.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber?view=skype-ps)

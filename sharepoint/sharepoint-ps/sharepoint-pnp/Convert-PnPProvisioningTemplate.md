@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Convert-PnPProvisioningTemplate
@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Path to the xml file containing the provisioning template
+Path to the xml file containing the site template
 
 ```yaml
 Type: String
@@ -105,4 +105,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)

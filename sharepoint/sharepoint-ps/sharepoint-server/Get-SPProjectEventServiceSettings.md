@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEventServiceSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectEventServiceSettings
@@ -23,7 +26,7 @@ Returns the settings for the Microsoft Project Server Events Service. There is c
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectEventServiceSettings
+Get-SPProjectEventServiceSettings
 ```
 
 This example shows what port the service is listening on.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CASMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -54,6 +57,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-MAPIEnabled <$true | $false>]
  [-MapiHttpEnabled <$true | $false>]
  [-Name <String>]
+ [-OutlookMobileEnabled <$true | $false>]
  [-OWAEnabled <$true | $false>]
  [-OWAforDevicesEnabled <$true | $false>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
@@ -143,7 +147,7 @@ Accept wildcard characters: False
 ### -ActiveSyncAllowedDeviceIDs
 TheActiveSyncAllowedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that are allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -164,7 +168,7 @@ Accept wildcard characters: False
 ### -ActiveSyncBlockedDeviceIDs
 The ActiveSyncBlockedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that aren't allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -404,7 +408,7 @@ Accept wildcard characters: False
 ### -EwsAllowList
 The EwsAllowList parameter specifies the Exchange Web Services applications (user agent strings) that are allowed to access the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -480,7 +484,7 @@ Accept wildcard characters: False
 ### -EwsBlockList
 The EwsBlockList parameter specifies the Exchange Web Services applications (user agent strings) that aren't allowed to access the mailbox by using Exchange Web Services.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -873,6 +877,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookMobileEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookMobileEnabled parameter enables or disables access to the mailbox by using Outlook for iOS and Android. Valid values are:
+
+- $true: Access to the mailbox using Outlook for iOS and Android is enabled. This is the default value.
+
+- $false: Access to the mailbox using Outlook for iOS and Android is disabled.
+
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OWAEnabled
 The OWAEnabled parameter enables or disables access to the mailbox by using Outlook on the web.
 
@@ -1193,7 +1219,7 @@ Valid values for this parameter are:
 To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
 
 ```yaml
-Type:$true | $false
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1207,11 +1233,11 @@ Accept wildcard characters: False
 ### -UniversalOutlookEnabled
 This parameter is available only in the cloud-based service.
 
-The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Mail and Calendar. Valid values are:
+The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Windows 10 Mail and Calendar. Valid values are:
 
-- $true: Access to the mailbox in Mail and Calendar is enabled. This is the default value.
+- $true: Access to the mailbox using Windows 10 Mail and Calendar is enabled. This is the default value.
 
-- $false: Access to the mailbox in Mail and Calendar is disabled.
+- $false: Access to the mailbox using Windows 10 Mail and Calendar is disabled.
 
 ```yaml
 Type: $true | $false

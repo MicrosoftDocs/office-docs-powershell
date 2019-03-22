@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPStateServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPStateServiceApplication
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPStateServiceApplication -Identity "State Service Application 1" -Name "New name for State Service Application 1"
+Set-SPStateServiceApplication -Identity "State Service Application 1" -Name "New name for State Service Application 1"
 ```
 
 This example changes the display name of a state service application.

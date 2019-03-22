@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-DatabaseAvailabilityGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -237,9 +240,9 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverNetworks
-The DiscoverNetworksswitch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
+The DiscoverNetworks switch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
 
-By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworksswitch.
+By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworks switch.
 
 ```yaml
 Type: SwitchParameter

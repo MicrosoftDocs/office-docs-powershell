@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectEnterpriseProjectTaskSync
@@ -24,7 +27,7 @@ Returns whether the task list sync between Project Web App and project sites is 
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectEnterpriseProjectTaskSync -Url http://contoso/sites/PWA
+Get-SPProjectEnterpriseProjectTaskSync -Url http://contoso/sites/PWA
 ```
 
 This example shows the syntax for getting the task sync status for the Project Web App site at http://contoso/sites/PWA.

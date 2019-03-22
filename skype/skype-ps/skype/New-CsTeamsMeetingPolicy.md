@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
- The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
+ The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 ## SYNTAX
 
 ```
@@ -126,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIPVideo
-Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their video. Set this to FALSE to prohibit the user from sharing their video
+Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their video. Set this to FALSE to prohibit the user from sharing their video
 
 ```yaml
 Type: Boolean
@@ -141,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetNow
-Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
+Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
 
 ```yaml
 Type: Boolean
@@ -156,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOutlookAddIn
-Determines whether a user can schedule Teams Meetings in Outlook desktop client. Set this to TRUE to allow the user to be able to schedule Teams meetings in Outlook client. Set this to FALSE to prohibit a user from scheduling Teams meeting in Outlook client 
+Determines whether a user can schedule Teams Meetings in Outlook desktop client. Set this to TRUE to allow the user to be able to schedule Teams meetings in Outlook client. Set this to FALSE to prohibit a user from scheduling Teams meeting in Outlook client 
 
 ```yaml
 Type: Boolean
@@ -201,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrivateMeetingScheduling
-Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user 
+Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user 
 
 ```yaml
 Type: Boolean
@@ -216,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedNotes
-Determines whether users are allowed to take shared notes.  Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether users are allowed to take shared notes.  Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean
@@ -231,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTranscription
-Determines whether real-time and/or post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether real-time and/or post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean
@@ -261,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting.
+Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.
 
 ```yaml
 Type: String
@@ -351,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaBitRateKb
-Determines the media bit rate for audio/video/app sharing transmissions in meetings 
+Determines the media bit rate for audio/video/app sharing transmissions in meetings 
 
 ```yaml
 Type: UInt32
@@ -366,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScreenSharingMode
-Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
+Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
 
 ```yaml
 Type: String

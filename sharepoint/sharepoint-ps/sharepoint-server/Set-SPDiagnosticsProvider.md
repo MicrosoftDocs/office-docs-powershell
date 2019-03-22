@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPDiagnosticsProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPDiagnosticsProvider
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable:$false
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable:$false
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example disables the event log diagnostics provider.
@@ -38,8 +41,8 @@ This example disables the event log diagnostics provider.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable -DaysRetained 10
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable -DaysRetained 10
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example enables the event log diagnostics provider and changes its retention policy to 10 days.

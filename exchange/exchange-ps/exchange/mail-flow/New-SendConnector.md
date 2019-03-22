@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SendConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -607,9 +610,9 @@ The LinkedReceiveConnector parameter specifies whether to force all messages rec
 
 When you use the LinkReceiveConnector parameter with this command, you must also use the following parameters with the specified values:
 
-- DNSRoutingEnabled$false
+- DNSRoutingEnabled $false
 
-- MaxMessageSizeunlimited
+- MaxMessageSize unlimited
 
 - Smarthosts \<SmarthostID\>
 
@@ -761,7 +764,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmartHosts
-The SmartHosts parameter specifies the smart hosts the Send connector uses to route mail. This parameteris required if you set the DNSRoutingEnabled parameter to $false and it must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. If you enter an IP address, you must enter the IP address as a literal. For example, 10.10.1.1. The smart host identity can be the FQDN of a smart-host server, a mail exchanger (MX) record, or an address (A) record. If you configure an FQDN as the smart host identity, the source server for the Send connector must be able to use DNS name resolution to locate the smart-host server.
+The SmartHosts parameter specifies the smart hosts the Send connector uses to route mail. This parameter is required if you set the DNSRoutingEnabled parameter to $false and it must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. If you enter an IP address, you must enter the IP address as a literal. For example, 10.10.1.1. The smart host identity can be the FQDN of a smart-host server, a mail exchanger (MX) record, or an address (A) record. If you configure an FQDN as the smart host identity, the source server for the Send connector must be able to use DNS name resolution to locate the smart host server.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 

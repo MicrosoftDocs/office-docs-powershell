@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-UMCallSummaryReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -91,7 +94,7 @@ This example displays the statistics for all calls received or placed by Mailbox
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-UMCallSummaryReport -GroupBy Month -UMDialplan MyUMDialPlan
+Get-UMCallSummaryReport -GroupBy Month -UMDialPlan MyUMDialPlan
 ```
 
 This example displays the statistics for calls received or placed by Mailbox servers for the UM dial plan MyUMDialPlan.
