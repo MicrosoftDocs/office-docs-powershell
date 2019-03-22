@@ -168,7 +168,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: MailboxComplianceExportRequest
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -191,7 +191,7 @@ If you don't grant this permission, you will receive an error message stating th
 Type: LongPath
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -358,7 +358,7 @@ The CompletedRequestAgeLimit parameter specifies how long the request will be ke
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -605,7 +605,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

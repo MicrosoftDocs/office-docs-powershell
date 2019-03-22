@@ -23,38 +23,64 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | HandsfreeOnly | Allow>]
- [-AllowBrowser <$true | $false>] [-AllowCamera <$true | $false>] [-AllowConsumerEmail <$true | $false>]
- [-AllowDesktopSync <$true | $false>] [-AllowExternalDeviceManagement <$true | $false>]
- [-AllowHTMLEmail <$true | $false>] [-AllowInternetSharing <$true | $false>] [-AllowIrDA <$true | $false>]
- [-AllowMobileOTAUpdate <$true | $false>] [-AllowNonProvisionableDevices <$true | $false>]
- [-AllowPOPIMAPEmail <$true | $false>] [-AllowRemoteDesktop <$true | $false>]
- [-AllowSimpleDevicePassword <$true | $false>]
+New-ActiveSyncMailboxPolicy [-Name] <String>
+ [-AllowApplePushNotifications <$true | $false>]
+ [-AllowBluetooth <Disable | HandsfreeOnly | Allow>]
+ [-AllowBrowser <$true | $false>]
+ [-AllowCamera <$true | $false>]
+ [-AllowConsumerEmail <$true | $false>]
+ [-AllowDesktopSync <$true | $false>]
+ [-AllowExternalDeviceManagement <$true | $false>]
+ [-AllowHTMLEmail <$true | $false>]
+ [-AllowInternetSharing <$true | $false>]
+ [-AllowIrDA <$true | $false>]
+ [-AllowMobileOTAUpdate <$true | $false>]
+ [-AllowNonProvisionableDevices <$true | $false>]
+ [-AllowPOPIMAPEmail <$true | $false>]
+ [-AllowRemoteDesktop <$true | $false>]
  [-AllowSMIMEEncryptionAlgorithmNegotiation <BlockNegotiation | OnlyStrongAlgorithmNegotiation | AllowAnyAlgorithmNegotiation>]
- [-AllowSMIMESoftCerts <$true | $false>] [-AllowStorageCard <$true | $false>]
- [-AllowTextMessaging <$true | $false>] [-AllowUnsignedApplications <$true | $false>]
- [-AllowUnsignedInstallationPackages <$true | $false>] [-AllowWiFi <$true | $false>]
+ [-AllowSMIMESoftCerts <$true | $false>]
+ [-AllowSimpleDevicePassword <$true | $false>]
+ [-AllowStorageCard <$true | $false>]
+ [-AllowTextMessaging <$true | $false>]
+ [-AllowUnsignedApplications <$true | $false>]
+ [-AllowUnsignedInstallationPackages <$true | $false>]
+ [-AllowWiFi <$true | $false>]
  [-AlphanumericDevicePasswordRequired <$true | $false>]
- [-ApprovedApplicationList <ApprovedApplicationCollection>] [-AttachmentsEnabled <$true | $false>] [-Confirm]
- [-DeviceEncryptionEnabled <$true | $false>] [-DevicePasswordEnabled <$true | $false>]
- [-DevicePasswordExpiration <Unlimited>] [-DevicePasswordHistory <Int32>]
- [-DevicePolicyRefreshInterval <Unlimited>] [-DomainController <Fqdn>] [-IrmEnabled <$true | $false>]
- [-IsDefaultPolicy <$true | $false>] [-MaxAttachmentSize <Unlimited>]
+ [-ApprovedApplicationList <ApprovedApplicationCollection>]
+ [-AttachmentsEnabled <$true | $false>]
+ [-Confirm]
+ [-DeviceEncryptionEnabled <$true | $false>]
+ [-DevicePasswordEnabled <$true | $false>]
+ [-DevicePasswordExpiration <Unlimited>]
+ [-DevicePasswordHistory <Int32>]
+ [-DevicePolicyRefreshInterval <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-IrmEnabled <$true | $false>]
+ [-IsDefault <$true | $false>]
+ [-IsDefaultPolicy <$true | $false>]
+ [-MaxAttachmentSize <Unlimited>]
  [-MaxCalendarAgeFilter <All | TwoWeeks | OneMonth | ThreeMonths | SixMonths>]
  [-MaxDevicePasswordFailedAttempts <Unlimited>]
  [-MaxEmailAgeFilter <All | OneDay | ThreeDays | OneWeek | TwoWeeks | OneMonth>]
- [-MaxEmailBodyTruncationSize <Unlimited>] [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
- [-MaxInactivityTimeDeviceLock <Unlimited>] [-MinDevicePasswordComplexCharacters <Int32>]
+ [-MaxEmailBodyTruncationSize <Unlimited>]
+ [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
+ [-MaxInactivityTimeDeviceLock <Unlimited>]
+ [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
  [-MobileOTAUpdateMode <MajorVersionUpdates | MinorVersionUpdates | BetaVersionUpdates>]
  [-PasswordRecoveryEnabled <$true | $false>]
- [-RequireDeviceEncryption <$true | $false>] [-RequireEncryptedSMIMEMessages <$true | $false>]
+ [-RequireDeviceEncryption <$true | $false>]
+ [-RequireEncryptedSMIMEMessages <$true | $false>]
  [-RequireEncryptionSMIMEAlgorithm <TripleDES | DES | RC2128bit | RC264bit | RC240bit>]
- [-RequireManualSyncWhenRoaming <$true | $false>] [-RequireSignedSMIMEAlgorithm <SHA1 | MD5>]
- [-RequireSignedSMIMEMessages <$true | $false>] [-RequireStorageCardEncryption <$true | $false>]
- [-UnapprovedInROMApplicationList <MultiValuedProperty>] [-UNCAccessEnabled <$true | $false>] [-WhatIf]
- [-WSSAccessEnabled <$true | $false>] [-AllowApplePushNotifications <$true | $false>]
- [-IsDefault <$true | $false>] [<CommonParameters>]
+ [-RequireManualSyncWhenRoaming <$true | $false>]
+ [-RequireSignedSMIMEAlgorithm <SHA1 | MD5>]
+ [-RequireSignedSMIMEMessages <$true | $false>]
+ [-RequireStorageCardEncryption <$true | $false>]
+ [-UNCAccessEnabled <$true | $false>]
+ [-UnapprovedInROMApplicationList <MultiValuedProperty>]
+ [-WSSAccessEnabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,6 +125,23 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowApplePushNotifications
+This parameter is available only in the cloud-based service.
+
+The AllowApplePushNotifications parameter specifies whether push notifications are allowed for Apple mobile devices. The default value is $true.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -567,7 +610,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -583,6 +626,21 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefault
+The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -958,38 +1016,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowApplePushNotifications
-This parameter is available only in the cloud-based service.
-
-The AllowApplePushNotifications parameter specifies whether push notifications are allowed for Apple mobile devices. The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
