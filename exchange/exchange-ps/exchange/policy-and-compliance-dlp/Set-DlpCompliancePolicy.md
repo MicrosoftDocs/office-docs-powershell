@@ -35,15 +35,22 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddOneDriveLocationException <MultiValuedProperty>]
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddTeamsLocation <MultiValuedProperty>]
+ [-AddTeamsLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-ExchangeSenderMemberOf <SmtpAddress[]>]
+ [-ExchangeSenderMemberOfException <SmtpAddress[]>]
  [-Force]
  [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
+ [-Priority <Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveTeamsLocation <MultiValuedProperty>]
+ [-RemoveTeamsLocationException <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -191,6 +198,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddTeamsLocation
+{{ Fill AddTeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsLocationException
+{{ Fill AddTeamsLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -218,6 +255,38 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOf
+{{ Fill ExchangeSenderMemberOf Description }}
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOfException
+{{ Fill ExchangeSenderMemberOfException Description }}
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -263,11 +332,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NewName
-This parameter is reserved for internal Microsoft use.
+### -Priority
+{{ Fill Priority Description }}
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -348,6 +417,36 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocation
+{{ Fill RemoveTeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocationException
+{{ Fill RemoveTeamsLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty

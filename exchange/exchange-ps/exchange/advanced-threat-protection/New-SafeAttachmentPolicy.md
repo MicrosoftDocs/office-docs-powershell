@@ -144,13 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enable parameter specifies whether policy is enabled. Valid values are:
 
 - $true: The rule or policy is enabled.
 
-- $false: The rule or policy is disabled.
-
-The default value is $false.
+- $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
