@@ -329,18 +329,24 @@ Accept wildcard characters: False
 ```
 
 ### -BookingType
-Description of this parameter
+This parameter is available only in the cloud-based service.
+
+The BookingType parameter specifies how reservations work on the resource mailbox. Valid values are:
+
+- Standard: The resource can be reserved based on the other settings in this cmdlet. This is the default value
+
+- Reserved: The resource can't be reserved.
 
 ```yaml
-Type: 
-Parameter Sets: ()
+Type: <Standard | Reserved>
+Parameter Sets: (All)
 Aliases:
-Applicable: 
-Required: 
-Position: 
-Default value: 
-Accept pipeline input:
-Accept wildcard characters: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BookingWindowInDays

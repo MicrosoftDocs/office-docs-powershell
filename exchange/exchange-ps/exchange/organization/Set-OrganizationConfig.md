@@ -869,6 +869,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAuthenticationPolicy
+This parameter is available only in the cloud-based service.
+
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
