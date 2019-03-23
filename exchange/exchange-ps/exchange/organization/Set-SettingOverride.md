@@ -23,9 +23,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-SettingOverride [-Identity] <SettingOverrideIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-FixVersion <Version>] [-MaxVersion <Version>] [-MinVersion <Version>] [-Parameters <MultiValuedProperty>]
- [-Reason <String>] [-Server <String[]>] [-WhatIf] [-Force] [<CommonParameters>]
+Set-SettingOverride [-Identity] <SettingOverrideIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxVersion <Version>]
+ [-MinVersion <Version>]
+ [-Parameters <MultiValuedProperty>]
+ [-Reason <String>]
+ [-Server <String[]>]
+ [-WhatIf]
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,14 +107,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FixVersion
-This parameter is reserved for internal Microsoft use.
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Version
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -213,21 +221,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
