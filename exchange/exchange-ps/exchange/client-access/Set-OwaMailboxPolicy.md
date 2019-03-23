@@ -435,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
