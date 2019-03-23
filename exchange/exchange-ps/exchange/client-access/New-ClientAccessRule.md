@@ -22,13 +22,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-ClientAccessRule [-Name] <String> -Action <AllowAccess | DenyAccess>
- [-AnyOfAuthenticationTypes <MultiValuedProperty>] [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
- [-AnyOfProtocols <MultiValuedProperty>] [-Confirm] [-DatacenterAdminsOnly <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
- [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>] [-ExceptAnyOfProtocols <MultiValuedProperty>]
- [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-Priority <Int32>] [-Scope <All | Users>]
- [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-UserRecipientFilter <String>] [-WhatIf]
- [<CommonParameters>]
+ [-AnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-AnyOfProtocols <MultiValuedProperty>]
+ [-Confirm]
+ [-DatacenterAdminsOnly <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-ExceptAnyOfProtocols <MultiValuedProperty>]
+ [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-Priority <Int32>] [-Scope <All | Users>]
+ [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-UserRecipientFilter <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
