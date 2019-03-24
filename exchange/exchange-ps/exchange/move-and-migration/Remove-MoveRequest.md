@@ -176,6 +176,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 

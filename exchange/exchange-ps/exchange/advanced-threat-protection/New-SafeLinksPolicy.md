@@ -169,13 +169,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 - $true: The rule or policy is enabled.
 
-- $false: The rule or policy is disabled.
-
-The default value is $false
+- $false: The rule or policy is disabled. This is the default value
 
 ```yaml
 Type: $true | $false
@@ -190,7 +188,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForInternalSenders
-PARAMVALUE: $true | $false
+The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to internal senders. Valid values are:
+
+- $true: The policy is applied to internal and external senders.
+
+- $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
 Type: $true | $false
