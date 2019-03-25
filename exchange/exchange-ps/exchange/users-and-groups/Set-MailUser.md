@@ -105,7 +105,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
- [-WindowsLiveID <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -1664,7 +1663,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -RemovePicture
 This parameter is available only in on-premises Exchange.
 
@@ -2002,23 +2000,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WindowsLiveID
-This parameter is available only in the cloud-based service.
-
-The WindowsLiveID parameter renames the Microsoft account that's associated with the mail user.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
