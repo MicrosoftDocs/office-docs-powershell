@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity
 ```
 Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
@@ -31,7 +30,6 @@ Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParam
 ### ManagedBy
 ```
 Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
@@ -91,21 +89,6 @@ You can't use this parameter with the Identity parameter.
 ```yaml
 Type: GeneralRecipientIdParameter
 Parameter Sets: ManagedBy
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False

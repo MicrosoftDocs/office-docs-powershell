@@ -20,13 +20,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### DatabaseSet
-```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
-
 ### Identity
 ```
 Get-MailboxLocation -Identity <MailboxLocationIdParameter> [-Confirm]
@@ -54,21 +47,6 @@ Get-MailboxLocation -User chris@contoso.com
 This example returns the mailbox location for the user chris@contoso.com.
 
 ## PARAMETERS
-
-### -Database
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: DatabaseSet
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.

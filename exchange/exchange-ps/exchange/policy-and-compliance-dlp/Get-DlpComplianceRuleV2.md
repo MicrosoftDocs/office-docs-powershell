@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-DlpComplianceRuleV2 [[-Identity] <ComplianceRuleIdParameter>] [-DomainController <Fqdn>]
- [-Policy <PolicyIdParameter>] [<CommonParameters>]
+Get-DlpComplianceRuleV2 [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,21 +51,6 @@ Get-DlpComplianceRuleV2 -Policy "PII Limited"
 This example lists all the rules included in the DLP compliance policy named "PII Limited".
 
 ## PARAMETERS
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the DLP rule that you want to view. You can use any value that uniquely identifies the rule. For example:

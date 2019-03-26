@@ -22,9 +22,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Facebook
 ```
-New-ConnectSubscription -AppAuthorizationCode <String> [-Facebook] -Mailbox <MailboxIdParameter> -RedirectUri <String>
- [-Confirm]
- [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription -Mailbox <MailboxIdParameter> -RedirectUri <String>
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### LinkedIn
@@ -49,36 +48,6 @@ New-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -Re
 This example modifies a people connection to LinkedIn.
 
 ## PARAMETERS
-
-### -AppAuthorizationCode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Facebook
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Facebook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Facebook
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -LinkedIn
 The LinkedIn parameter specifies whether you want to edit a LinkedIn subscription.
