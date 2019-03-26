@@ -1068,8 +1068,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1100,8 +1098,6 @@ The ForwardTo parameter specifies an action for the Inbox rule that forwards the
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1571,8 +1567,6 @@ The RedirectTo parameter specifies an action for the Inbox rule that redirects t
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
