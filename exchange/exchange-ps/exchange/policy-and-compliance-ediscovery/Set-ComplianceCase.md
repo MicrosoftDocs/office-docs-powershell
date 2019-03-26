@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceCase [-Identity] <ComplianceCaseIdParameter> [-AddOrUpdateSources] [-Close] [-Confirm]
- [-Description <String>] [-DomainController <Fqdn>] [-Name <String>] [-RemoveSources] [-Reopen]
- [-Sources <Object[]>] [-WhatIf] [<CommonParameters>]
+Set-ComplianceCase [-Identity] <ComplianceCaseIdParameter>
+ [-Close]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-Reopen]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,20 +64,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -AddOrUpdateSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Close
 The Close switch specifies that you want to close the eDiscovery case. You don't need to specify a value with this switch.
@@ -153,41 +144,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Reopen
 The Reopen switch specifies that you want to re-open a closed eDiscovery case. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Sources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
