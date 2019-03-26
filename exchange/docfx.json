@@ -21,7 +21,7 @@
         "dest": "exchange/exchange-ps"
        },
        {
-        "files": ["**/*.md"]
+        "files": ["**/*.md"],
         "src": "docs-conceptual/exchange-online",
         "version": "exchange-ps",
         "dest": "exchange-ps"
