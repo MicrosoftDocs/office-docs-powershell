@@ -65,11 +65,7 @@
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
-    "fileMetadata": {
-      "apiPlatform":{
-        "exchange-ps/exchange/**/*.md" : [ "powershell" ]
-      }
-    },
+    "fileMetadata": {},
     "template": [],
     "dest": "exchange-ps"
   }
