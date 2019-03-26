@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ApplicationAccessPolicy cmdlet to modify application access policies.
+Use the Set-ApplicationAccessPolicy cmdlet to modify the description of an application access policy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
