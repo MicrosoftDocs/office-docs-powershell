@@ -21,10 +21,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParameter> [-Confirm] [-Default]
- [-DomainController <Fqdn>] [-ExtranetCertificationUrl <Uri>] [-ExtranetLicensingUrl <Uri>]
- [-IntranetCertificationUrl <Uri>] [-IntranetLicensingUrl <Uri>] [-Name <String>] [-WhatIf]
- [<CommonParameters>]
+Set-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParameter>
+ [-Confirm]
+ [-Default]
+ [-ExtranetCertificationUrl <Uri>]
+ [-ExtranetLicensingUrl <Uri>]
+ [-IntranetCertificationUrl <Uri>]
+ [-IntranetLicensingUrl <Uri>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,21 +97,6 @@ The Default parameter specifies this is the default TPD. The default TPD display
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

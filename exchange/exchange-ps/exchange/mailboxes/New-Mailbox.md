@@ -39,8 +39,6 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -55,7 +53,6 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -81,8 +78,6 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -97,7 +92,6 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -105,7 +99,7 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
 
 ### Arbitration
 ```
-New-Mailbox [-Name] [-Arbitration] <String> [-OfficeGraph] [-Password <SecureString>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -120,19 +114,15 @@ New-Mailbox [-Name] [-Arbitration] <String> [-OfficeGraph] [-Password <SecureStr
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-ProvisionedForMicrosoftGraph]
  [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -155,8 +145,6 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemotePowerShellEnabled <$true | $false>]
@@ -165,7 +153,6 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -187,8 +174,6 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemotePowerShellEnabled <$true | $false>]
@@ -197,7 +182,6 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -221,8 +205,6 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -238,7 +220,6 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -261,8 +242,6 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -274,7 +253,6 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -297,8 +275,6 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <$true | $false> [-Micros
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
@@ -308,7 +284,6 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <$true | $false> [-Micros
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -332,8 +307,6 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <$true | $false>]
@@ -346,7 +319,6 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -366,8 +338,6 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -377,7 +347,6 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -400,8 +369,6 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -417,7 +384,6 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -441,8 +407,6 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -458,7 +422,6 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -482,8 +445,6 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -499,7 +460,6 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -519,8 +479,6 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -529,7 +487,6 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -551,8 +508,6 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
@@ -562,7 +517,6 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -585,8 +539,6 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
@@ -596,7 +548,6 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -621,8 +572,6 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -638,7 +587,6 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -663,8 +611,6 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-Initials <String>]
  [-LastName <String>]
  [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -679,7 +625,6 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -703,8 +648,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
@@ -721,7 +664,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -744,8 +686,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <Str
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
@@ -755,7 +695,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <Str
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -779,8 +718,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <$true | $false>]
@@ -793,7 +730,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>]
  [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -1716,40 +1652,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxProvisioningConstraint
-This parameter is only available in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningConstraint
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningPreferences
-This parameter is only available in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MailboxRegion
 This parameter is available only in the cloud-based service.
 
@@ -1874,23 +1776,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OfficeGraph
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Arbitration
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OrganizationalUnit
 The OrganizationalUnit parameter specifies the location in Active Directory where the new mailbox is created.
 
@@ -1941,23 +1826,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProvisionedForOfficeGraph
-This parameter is only available in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Arbitration
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2193,23 +2061,6 @@ Type: SharingPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared 
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMailboxProvisioningConstraintValidation
-This parameter is only available in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

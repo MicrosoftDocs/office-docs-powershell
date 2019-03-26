@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Start-ComplianceSearch [-Identity] <ComplianceSearchIdParameter> [-Confirm] [-Force] [-RetryOnError]
- [-UseBigFunnel] [-WhatIf] [<CommonParameters>]
+Start-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
+ [-Confirm]
+ [-Force]
+ [-RetryOnError]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,21 +105,6 @@ Accept wildcard characters: False
 
 ### -RetryOnError
 The RetryOnError switch specifies whether to retry the search on any items that failed without re-running the entire search all over again. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseBigFunnel
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
