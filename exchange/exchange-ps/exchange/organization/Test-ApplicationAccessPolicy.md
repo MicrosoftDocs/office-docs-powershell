@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Test-ApplicationAccessPolicy cmdlet to test application access policies.
+Use the Test-ApplicationAccessPolicy cmdlet to test access right of an application to a specific user/mailbox.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -35,6 +35,13 @@ Test-ApplicationAccessPolicy -Identity "Engineering Staff" -AppID 3dbc2ae1-7198-
 ```
 
 This example tests access to the specified app for the group "Engineering Staff".
+
+### -------------------------- Example 2 --------------------------
+```
+Test-ApplicationAccessPolicy -Identity RandomUser9911@AppPolicyTest2.com -AppId e7e4dbfc-046-4074-9b3b-2ae8f144f59b
+```
+
+This example tests access to the user RandomUser9911@AppPolicyTest2.com for the specified app.
 
 ## PARAMETERS
 
