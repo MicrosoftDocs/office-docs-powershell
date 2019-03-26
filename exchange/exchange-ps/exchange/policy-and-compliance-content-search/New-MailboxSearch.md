@@ -46,7 +46,6 @@ New-MailboxSearch [-Name] <String>
  [-Language <CultureInfo>]
  [-LogLevel <Suppress | Basic | Full>]
  [-MessageTypes <KindKeyword[]>]
- [-PublicFolderSources <PublicFolderIdParameter[]>]
  [-Recipients <String[]>]
  [-SearchDumpster]
  [-SearchQuery <String>]
@@ -463,22 +462,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -PublicFolderSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PublicFolderIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -Recipients
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.

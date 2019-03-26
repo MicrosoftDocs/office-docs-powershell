@@ -21,17 +21,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-DistributionGroup [-Name] <String> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>]
- [-BypassNestedModerationEnabled <$true | $false>] [-Confirm] [-CopyOwnerToMember] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-IgnoreNamingPolicy] [-ManagedBy <MultiValuedProperty>]
+New-DistributionGroup [-Name] <String>
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BypassNestedModerationEnabled <$true | $false>]
+ [-Confirm]
+ [-CopyOwnerToMember]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-IgnoreNamingPolicy]
+ [-ManagedBy <MultiValuedProperty>]
  [-MemberDepartRestriction <Closed | Open | ApprovalRequired>]
- [-MemberJoinRestriction <Closed | Open | ApprovalRequired>] [-Members <MultiValuedProperty>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Notes <String>]
+ [-MemberJoinRestriction <Closed | Open | ApprovalRequired>]
+ [-Members <MultiValuedProperty>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Notes <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RoomList] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-Type <Distribution | Security>] [-WhatIf]
- [-ExternalDirectoryObjectId <String>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [<CommonParameters>]
+ [-OverrideRecipientQuotas]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RoomList]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-Type <Distribution | Security>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -518,6 +532,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequireSenderAuthenticationEnabled
+The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
+
+- $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
+
+- $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
+
+The default value is $true.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RoomList
 The RoomList switch specifies that all members of this distribution group are room mailboxes. You don't need to specify a value with this switch.
 
@@ -604,42 +639,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireSenderAuthenticationEnabled
-The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
-
-- $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
-- $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
-
-The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

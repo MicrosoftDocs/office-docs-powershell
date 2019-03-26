@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-DataRetentionReport [[-Organization] <OrganizationIdParameter>] [-EndDate <DateTime>] [-Page <Int32>]
- [-PageSize <Int32>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-DataRetentionReport
+ [-EndDate <DateTime>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,21 +67,6 @@ Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
