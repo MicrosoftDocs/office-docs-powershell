@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxRepairRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,22 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
 Get-MailboxRepairRequest [-Database] <DatabaseIdParameter> [[-StoreMailbox] <StoreMailboxIdParameter>]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Detailed] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Detailed]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set3
+### Mailbox
 ```
-Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,7 +91,7 @@ You can't use this parameter with the Mailbox parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -103,7 +106,7 @@ The Identity parameter specifies the mailbox repair request to display informati
 
 ```yaml
 Type: StoreIntegrityCheckJobIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -134,7 +137,7 @@ You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set3
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -151,7 +154,7 @@ You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -166,7 +169,7 @@ Use the Detailed parameter to display mailbox-level repair tasks associated with
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -198,7 +201,7 @@ Use the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

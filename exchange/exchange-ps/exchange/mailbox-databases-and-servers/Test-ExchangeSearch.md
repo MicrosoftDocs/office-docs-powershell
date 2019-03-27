@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-ExchangeSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,22 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-IndexingTimeoutInSeconds <Int32>] [-MonitoringContext] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Test-ExchangeSearch [-Confirm] [-DomainController <Fqdn>] [-IndexingTimeoutInSeconds <Int32>]
- [-MailboxDatabase <DatabaseIdParameter>] [-MonitoringContext] [-WhatIf] [<CommonParameters>]
+Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Database
 ```
-Test-ExchangeSearch [-Confirm] [-DomainController <Fqdn>] [-IndexingTimeoutInSeconds <Int32>]
- [-MonitoringContext] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-ExchangeSearch [-MailboxDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Server
+```
+Test-ExchangeSearch [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +80,7 @@ The Archive switch specifies that the test be run against the archive mailbox fo
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -112,9 +127,11 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to test Exchange Search against.
 
+You can't use this parameter with the MailboxDatabase or Server parameters.
+
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -142,11 +159,13 @@ Accept wildcard characters: False
 ### -MailboxDatabase
 This parameter is available or functional only in Exchange Server 2010 and 2013.
 
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. The MailboxDatabase and Identity parameters can't be used together.
+The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against.
+
+You can't use this parameter with the Identity or Server parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set3
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -172,13 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010 and 2013.
-
 The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
+
+You can't use this parameter with the MailboxDatabase or Identity parameters.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

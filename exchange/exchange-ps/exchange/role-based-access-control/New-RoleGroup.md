@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
@@ -17,27 +20,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CrossForest
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-Confirm]
+New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Description <String>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>] [-Roles <RoleIdParameter[]>]
- [-SamAccountName <String>] [-WhatIf] [<CommonParameters>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-Roles <RoleIdParameter[]>]
+ [-SamAccountName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Default
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-Confirm]
+New-RoleGroup [-Name] <String>
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Description <String>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>]
- [-Members <MultiValuedProperty>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-Roles <RoleIdParameter[]>] [-SamAccountName <String>] [-WhatIf] [<CommonParameters>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedBy <MultiValuedProperty>]
+ [-Members <MultiValuedProperty>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-Roles <RoleIdParameter[]>]
+ [-SamAccountName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,7 +126,7 @@ If you use the LinkedDomainController parameter, you must specify a foreign USG 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -129,7 +145,7 @@ If you use the LinkedForeignGroup parameter, you must specify a domain controlle
 
 ```yaml
 Type: UniversalSecurityGroupIdParameter
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -282,7 +298,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

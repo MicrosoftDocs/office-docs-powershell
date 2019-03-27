@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RetentionPolicyTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,16 +20,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-RetentionPolicyTag [[-Identity] <RetentionPolicyTagIdParameter>] [-DomainController <Fqdn>]
- [-IncludeSystemTags] [-Types <ElcFolderType[]>] [<CommonParameters>]
+Get-RetentionPolicyTag [[-Identity] <RetentionPolicyTagIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeSystemTags]
+ [-Types <ElcFolderType[]>] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-RetentionPolicyTag [-DomainController <Fqdn>] [-IncludeSystemTags] [-Mailbox <MailboxIdParameter>]
- [-OptionalInMailbox] [-Types <ElcFolderType[]>] [<CommonParameters>]
+Get-RetentionPolicyTag [-Mailbox <MailboxIdParameter>] [-OptionalInMailbox]
+ [-DomainController <Fqdn>]
+ [-IncludeSystemTags]
+ [-Types <ElcFolderType[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,7 +103,7 @@ The Identity parameter specifies the name of the tag.
 
 ```yaml
 Type: RetentionPolicyTagIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -126,7 +133,7 @@ The Mailbox parameter isn't available in this release.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -141,7 +148,7 @@ The OptionalInMailbox parameter isn't available in this release.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

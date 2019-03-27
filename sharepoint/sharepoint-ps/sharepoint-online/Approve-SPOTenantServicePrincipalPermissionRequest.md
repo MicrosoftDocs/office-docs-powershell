@@ -1,25 +1,28 @@
 ---
-external help file:
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Approve-SPOTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
+
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
-
-> **Note** - This is a preview feature and should not be used in production.
-
 
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Approve-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>
 ```
 
 ## DESCRIPTION
+
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
 
 The return value of a successful call is a permission grant object.  See [the "Permission grant object" section of the 
@@ -34,6 +37,7 @@ Approving a permission request also removes that request from the list of permis
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 $requests = Get-SPOTenantServicePrincipalPermissionRequests
 $requestToApprove = $requests | ? { $_.Resource -eq 'Office 365 SharePoint Online' -and $_.Scope -eq 'MyFiles.Read' } | Select-Object -First 1
@@ -50,6 +54,7 @@ If there is no request with those properties, then no approve action will be tak
 ## PARAMETERS
 
 ### -RequestId
+
 The ID of the permission request to approve
 
 ```yaml

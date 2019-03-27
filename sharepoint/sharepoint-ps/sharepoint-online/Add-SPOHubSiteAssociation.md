@@ -1,8 +1,11 @@
  ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOHubSiteAssociation
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Add-SPOHubSiteAssociation
@@ -13,9 +16,7 @@ Associates a site with a hub site.
 ## SYNTAX
 
 ```
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
--HubSite <SpoHubSitePipeBind> `
-[<CommonParameters>]
+Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,8 +27,7 @@ Use this cmdlet to associate a site with a hub site.
 ### Example 1
 
 ```
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research `
--HubSite https://contoso.sharepoint.com/sites/Marketing 
+Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
 This example associates the research site with the marketing hub site.

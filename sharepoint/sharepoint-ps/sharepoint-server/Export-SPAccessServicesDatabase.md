@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: microsoft.office.access.server.dll-help.xml
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPAccessServicesDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPAccessServicesDatabase
@@ -24,15 +27,15 @@ EN\x86\DacFramework.msi
 
 Note: The x86 package is required. The x64 package is not compatible with this cmdlet.
 
-See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications).
+See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications).
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
-PS C:\>Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
+$contentdb = Get-SPContentDatabase ContentDbName
+$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
+Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
 ```
 
 This cmdlet retrieves the first Access Database from the specified Content Database and exports the Access Database to a BACPAC. This BACPAC file can then be imported via SQL Server Management Studio to restore the Access Database.
@@ -48,7 +51,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -64,7 +67,7 @@ The name of the Access Database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -80,7 +83,7 @@ The ServerReferenceId used for the Access Database.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -90,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

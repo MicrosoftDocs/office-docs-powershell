@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOTenantSyncClientRestriction
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPOTenantSyncClientRestriction
@@ -33,7 +36,7 @@ The `Remove-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
 ```
 Remove-SPOTenantSyncClientRestriction
 ```
-This example returns  the value of False for the TenantRestrictionEnabled property.
+This example returns  the value of False for the TenantRestrictionEnabled property.
 
 
 ## PARAMETERS

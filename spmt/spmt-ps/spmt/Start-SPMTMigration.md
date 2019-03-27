@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Start-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Start-SPMTMigration
@@ -28,14 +31,14 @@ This cmdlet will start the registered SPMT migration.
 
 $Global:SourceSiteUrl = "http://YourOnPremSite/"
 $Global:OnPremUserName = "Yourcomputer\administrator"
-$Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force 
+$Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force
 $Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
 $Global:SourceListName = "SourceListName"
 
 
 #Define SPO target#
-$Global:SPOUrl = “https://contoso.sharepoint.com”
-$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:SPOUrl = "https://contoso.sharepoint.com"
+$Global:UserName = "admin@contoso.onmicrosoft.com"
 $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 $Global:TargetListName = "TargetListName"
@@ -47,7 +50,7 @@ $Global:FileshareSource = "YourFileShareDataSource"
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
 
 #Register the SPMT session with SPO credentials#
-Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force 
+Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 
 #Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 

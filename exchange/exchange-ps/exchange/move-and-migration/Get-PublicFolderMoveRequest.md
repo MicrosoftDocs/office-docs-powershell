@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderMoveRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,18 +20,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filtering
 ```
-Get-PublicFolderMoveRequest [-BatchName <String>] [-DomainController <Fqdn>] [-HighPriority <$true | $false>]
- [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-ResultSize <Unlimited>]
+Get-PublicFolderMoveRequest [-BatchName <String>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [<CommonParameters>]
+ [-Suspend <$true | $false>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +71,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -97,7 +107,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -126,7 +136,7 @@ This parameter can't be used in conjunction with the following parameters:
 
 ```yaml
 Type: PublicFolderMoveRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -143,7 +153,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -164,7 +174,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -216,7 +226,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -233,7 +243,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

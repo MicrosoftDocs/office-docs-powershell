@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MessageClassification
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,21 +20,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Localized
 ```
-New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <CultureInfo>
- -SenderDescription <String> [-Confirm] [-DomainController <Fqdn>] 
- [-RecipientDescription <String>] [-WhatIf] [<CommonParameters>]
+New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <CultureInfo> -SenderDescription <String>
+ [-Confirm]
+ [-DomainController <Fqdn>] 
+ [-RecipientDescription <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 New-MessageClassification [-Name] <String> -DisplayName <String> -SenderDescription <String>
- [-ClassificationID <Guid>] [-Confirm]
+ [-ClassificationID <Guid>]
+ [-Confirm]
  [-DisplayPrecedence <Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest>]
- [-DomainController <Fqdn>] [-PermissionMenuVisible <$true | $false>]
- [-RecipientDescription <String>] [-RetainClassificationEnabled <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-PermissionMenuVisible <$true | $false>]
+ [-RecipientDescription <String>]
+ [-RetainClassificationEnabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +99,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 
 ```yaml
 Type: CultureInfo
-Parameter Sets: Set2
+Parameter Sets: Localized
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -102,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Adminstrative Name". The Name parameter can contain a maximum of 256 characters.
+The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name". The Name parameter can contain a maximum of 256 characters.
 
 ```yaml
 Type: String
@@ -136,7 +144,7 @@ The ClassificationID parameter specifies a classification ID of an existing mess
 
 ```yaml
 Type: Guid
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -174,7 +182,7 @@ The default value is Medium.
 
 ```yaml
 Type: Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -212,7 +220,7 @@ The default value is $true.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -246,7 +254,7 @@ The default value is $true.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

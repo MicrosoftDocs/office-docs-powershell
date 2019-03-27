@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Stop-DatabaseAvailabilityGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,18 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -ActiveDirectorySite <AdSiteIdParameter> [-ConfigurationOnly] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-QuorumOnly] [<CommonParameters>]
+Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -ActiveDirectorySite <AdSiteIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxSet
 ```
-Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -MailboxServer <MailboxServerIdParameter> [-ConfigurationOnly] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-QuorumOnly] [<CommonParameters>]
+Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -MailboxServer <MailboxServerIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +73,7 @@ The ActiveDirectorySite parameter specifies the Active Directory site containing
 
 ```yaml
 Type: AdSiteIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -96,7 +103,7 @@ The MailboxServer parameter specifies a single DAG member to stop. If Datacenter
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -163,21 +170,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QuorumOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

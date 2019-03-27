@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOnlineSchedule
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOnlineSchedule
@@ -13,14 +16,12 @@ Use the New-CsOnlineSchedule cmdlet to create a new schedule.
 ## SYNTAX
 
 ### WeeklyRecurrentSchedule
-```
-New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] 
-[-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>]
-[-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
+```powershell
+New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] [-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>] [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
 ```
 
 ### FixedSchedule
-```
+```powershell
 New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [-CommonParameters]
 ```
 
@@ -40,8 +41,8 @@ The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Au
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
-```
+### -------------------------- Example 1 --------------------------
+```powershell
 $tr1 = New-CsOnlineTimeRange -Start 09:00 -End 12:00
 $tr2 = New-CsOnlineTimeRange -Start 13:00 -End 17:00
 $businessHours = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr1, $tr2) -TuesdayHours @($tr1, $tr2) -WednesdayHours @($tr1, $tr2) -ThursdayHours @($tr1, $tr2) -FridayHours @($tr1, $tr2)
@@ -49,8 +50,8 @@ $businessHours = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSch
 
 This example creates a weekly recurrent schedule that is active on Monday-Friday from 9AM-12PM and 1PM-5PM.
 
-### -------------------------- Example 2 -------------------------- 
-```
+### -------------------------- Example 2 --------------------------
+```powershell
 $tr1 = New-CsOnlineTimeRange -Start 09:00 -End 12:00
 $tr2 = New-CsOnlineTimeRange -Start 13:00 -End 17:00
 $afterHours = New-CsOnlineSchedule -Name " After Hours" -WeeklyRecurrentSchedule -MondayHours @($tr1, $tr2) -TuesdayHours @($tr1, $tr2) -WednesdayHours @($tr1, $tr2) -ThursdayHours @($tr1, $tr2) -FridayHours @($tr1, $tr2) -Complement
@@ -58,16 +59,16 @@ $afterHours = New-CsOnlineSchedule -Name " After Hours" -WeeklyRecurrentSchedule
 
 This example creates a weekly recurrent schedule that is active at all times except Monday-Friday, 9AM-12PM and 1PM-5PM.
 
-### -------------------------- Example 3 -------------------------- 
-```
+### -------------------------- Example 3 --------------------------
+```powershell
 $dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
 $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
 ```
 
 This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017.
 
-### -------------------------- Example 4 -------------------------- 
-```
+### -------------------------- Example 4 --------------------------
+```powershell
 $dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
 $dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
 $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr1, $dtr2)
@@ -75,11 +76,11 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 
 This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017 and then from December 24, 2018 to December 26, 2018.
 
-### -------------------------- Example 5 -------------------------- 
-```
+### -------------------------- Example 5 --------------------------
+```powershell
 $dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
 $dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
-$notInEffectSchedule = New-CsOnlineSchedule -Name “NotInEffect” -FixedSchedule
+$notInEffectSchedule = New-CsOnlineSchedule -Name "NotInEffect" -FixedSchedule
 ```
 
 This example creates a fixed schedule that is never active.
@@ -92,7 +93,7 @@ The Name parameter represents a unique friendly name for the schedule.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -108,7 +109,7 @@ The WeeklyRecurrentSchedule parameter indicates that a weekly recurrent schedule
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -124,7 +125,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -140,7 +141,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -156,7 +157,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -172,7 +173,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -188,7 +189,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -204,7 +205,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -220,7 +221,7 @@ List of time ranges for that day.
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -231,14 +232,14 @@ Accept wildcard characters: False
 ```
 
 ### -Complement
-The Complement parameter indicates how the schedule is used. 
-When Complement is enabled, the schedule is used as the inverse of the provided configuration. 
+The Complement parameter indicates how the schedule is used.
+When Complement is enabled, the schedule is used as the inverse of the provided configuration.
 For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -254,7 +255,7 @@ The FixedSchedule parameter indicates that a fixed schedule is to be created.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FixedSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -270,7 +271,7 @@ List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: FixedSchedule
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -285,7 +286,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -317,3 +318,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
 
 [New-CsOrganizationalAutoAttendantCallFlow](New-CsOrganizationalAutoAttendantCallFlow.md)
+
+[New-CsOrganizationalAutoAttendantCallHandlingAssociation](New-CsOrganizationalAutoAttendantCallHandlingAssociation.md)

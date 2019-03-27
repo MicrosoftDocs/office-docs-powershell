@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSite
@@ -46,7 +49,7 @@ Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Get-SPSite cmdlet returns either a single site that matches the Identity parameter, or all the sites that match the Filter parameter for the specified scope.
 The scopes are the WebApplication, ContentDatabase , and SiteSubscription parameters.
@@ -66,33 +69,33 @@ Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
 It is important to note that every site collection that the Get-SPSite cmdlet returns is automatically destroyed at the end of the pipeline.
 To store the results of Get-SPSite in a local variable, use the Start-SPAssignment and Stop-SPAssignment cmdlets to avoid memory leaks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
+Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
 This example gets the collection of subweb titles in site collection at http://\<site name\>.
 
 ### ------------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
 
 ### ------------------EXAMPLE 3--------------------- 
 ```
-PS C:\>Start-SPAssignment -Global
+Start-SPAssignment -Global
 
-PS C:\>$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
+$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
 
-PS C:\>$s.Url
+$s.Url
 
-PS C:\>Stop-SPAssignment -Global
+Stop-SPAssignment -Global
 ```
 
 This example gets the sites specified by the Identity parameter and inserts the results in the variable s
@@ -103,9 +106,9 @@ Be careful not to run a Get-SPSite command that returns many results while globa
 
 ### ------------------EXAMPLE 4--------------------- 
 ```
-PS C:\>$GC = Start-SPAssignment
-PS C:\>$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
-PS C:\>Stop-SPAssignment $GC
+$GC = Start-SPAssignment
+$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
+Stop-SPAssignment $GC
 ```
 
 This example gets the first 50 sites owned by user DOMAIN\JDow by using a server-side query, and assigns them to a local variable.
@@ -114,14 +117,14 @@ This example uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 5--------------------- 
 ```
-PS C:\>Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
+Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
 ### ------------------EXAMPLE 6--------------------- 
 ```
-PS C:\>Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
+Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -130,21 +133,21 @@ The Quotes on the Identity parameter are required when the Regex parameter is us
 
 ### ------------------EXAMPLE 7--------------------- 
 ```
-PS C:\>Get-SPSite http://<site name>/sites/teams/* -Limit 100
+Get-SPSite http://<site name>/sites/teams/* -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
 
 ### ------------------EXAMPLE 8--------------------- 
 ```
-PS C:\>Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
+Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
 ```
 
 This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
 
 ### ------------------EXAMPLE 9--------------------- 
 ```
-PS C:\>Get-SPSite -Limit all -CompatibilityLevel 14
+Get-SPSite -Limit all -CompatibilityLevel 14
 ```
 
 This example returns all SharePoint Server mode site collections.
@@ -160,7 +163,7 @@ The type must be a valid URL, in the form, http://server_name or http://server_n
 Type: SPSitePipeBind
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -178,7 +181,7 @@ The type must be a valid database name, in the form, SPContentDB01, or a valid G
 Type: SPContentDatabasePipeBind
 Parameter Sets: AllSitesInContentDB
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ The type must be a valid URL, in the form, http://server_name or a valid GUID (f
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AllSitesInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -214,7 +217,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +236,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +253,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -270,7 +273,7 @@ Valid operators are: EQ, NE, LIKE, NOTLIKE.
 Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -290,7 +293,7 @@ Specify ALL to return all site collections for the given scope.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -306,7 +309,7 @@ When used, the URL provided for the Identity parameter is treated as a regular e
 Type: SwitchParameter
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -324,7 +327,7 @@ The type must be a valid URL, in the form, http://server_name, a valid GUID (for
 Type: SPWebApplicationPipeBind
 Parameter Sets: AllSitesInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -341,7 +344,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -359,7 +362,7 @@ The valid values are True and False.
 Type: SwitchParameter
 Parameter Sets: AllSitesInContentDB
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -369,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -191,11 +194,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The policy is enabled. This is the default value.
 
-- $false: The rule or policy is disabled.
+- $false: The policy is disabled.
 
 ```yaml
 Type: $true | $false
@@ -379,7 +382,7 @@ The PhishThresholdLevel parameter specifies the tolerance level that's used by m
 
 - 2: Aggressive
 
-- 3: More agressive
+- 3: More aggressive
 
 - 4: Most aggressive
 
@@ -431,7 +434,6 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -493,7 +495,6 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -567,12 +568,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

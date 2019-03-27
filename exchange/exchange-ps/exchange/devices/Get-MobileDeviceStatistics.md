@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MobileDeviceStatistics
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,18 +20,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter> [-ActiveSync] [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-OWAforDevices] [-ShowRecoveryPassword]
- [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-OWAforDevices]
+ [-ShowRecoveryPassword]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-OWAforDevices] [-ShowRecoveryPassword]
- [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-OWAforDevices]
+ [-ShowRecoveryPassword]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +62,7 @@ This example retrieves the statistics for the mobile phone configured to synchro
 
 ### -------------------------- Example 2 --------------------------
 ```
-$UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_}
+$UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
@@ -66,7 +81,7 @@ The Identity parameter specifies the user's device ID. If the Mailbox parameter 
 
 ```yaml
 Type: MobileDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -81,7 +96,7 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Remove-CsOnlineApplicationEndpoint
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsOnlineApplicationEndpoint
@@ -13,9 +16,10 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Remove-CsOnlineApplicationEndpoint [[-Uri] <Object>] [-Audience <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-DomainController <Object>] [-Force] [-PhoneNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
- [-IsInternalRun <Object>] [-Ring <Object>] [-RunFullProvisioningFlow <Object>] [<CommonParameters>]
+Remove-CsOnlineApplicationEndpoint [-Uri] <String> [-Audience <String>] [-Ring <String>]
+ [-PhoneNumber <String>] [-IsInternalRun <Boolean>] [-Tenant <Guid>]
+ [-RunFullProvisioningFlow <Boolean>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +41,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: SipUri
 Applicable: Skype for Business Online
@@ -53,23 +57,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -101,7 +89,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -133,7 +121,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -149,7 +137,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -177,27 +165,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IsInternalRun
 {{Fill IsInternalRun Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -213,7 +185,7 @@ Accept wildcard characters: False
 {{Fill Ring Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -229,7 +201,7 @@ Accept wildcard characters: False
 {{Fill RunFullProvisioningFlow Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

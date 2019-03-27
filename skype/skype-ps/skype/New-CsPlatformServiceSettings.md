@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPlatformServiceSettings
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsPlatformServiceSettings
@@ -181,7 +184,21 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the Identity of the Platform Service Settings to be modified.
+Unique identifier of the Platform Service Settings to be created.
+
+To create a new collection of settings at the site scope, use syntax similar to this:
+
+`-Identity site:Redmond`
+
+To create new settings at the service scope, use syntax like this:
+
+`-Identity service:WebServer:atl-cs-001.litwareinc.com`
+
+Privacy settings can only be created for the WebServer service. 
+An error will occur if you try to apply these settings to any other service.
+
+Note that your command will fail if Platform Service Settings already exist for the specified site or service.
+Likewise, your command will fail if you attempt to create a new collection of global settings.
 
 ```yaml
 Type: XdsIdentity
@@ -278,8 +295,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+[Set-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
 
-[Get-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csplatformservicesettings?view=skype-ps)
+[Get-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/get-csplatformservicesettings?view=skype-ps)
 
-[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)
+[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)

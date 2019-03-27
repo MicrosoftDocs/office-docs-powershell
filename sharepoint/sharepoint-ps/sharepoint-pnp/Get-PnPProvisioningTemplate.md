@@ -1,12 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Generates a provisioning template from a web
+Generates a provisioning site template from a web
 
 ## SYNTAX 
 
@@ -20,6 +20,7 @@ Get-PnPProvisioningTemplate [-Out <String>]
                             [-PersistBrandingFiles [<SwitchParameter>]]
                             [-PersistPublishingFiles [<SwitchParameter>]]
                             [-IncludeNativePublishingFiles [<SwitchParameter>]]
+                            [-IncludeHiddenLists [<SwitchParameter>]]
                             [-SkipVersionCheck [<SwitchParameter>]]
                             [-PersistMultiLanguageResources [<SwitchParameter>]]
                             [-ResourceFilePrefix <String>]
@@ -102,7 +103,7 @@ Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler
 This will create two new ExtensibilityHandler objects that are run during extraction of the template
 
 ### ------------------EXAMPLE 9------------------
-Only supported on SP2016 and SP Online
+Only supported on SP2016, SP2019 and SP Online
 ```powershell
 Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
 ```
@@ -110,7 +111,7 @@ Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
 Extracts a provisioning template in Office Open XML from the current web, and for supported artifacts it will create a resource file for each supported language (based upon the language settings of the current web). The generated resource files will be named after the value specified in the Out parameter. For instance if the Out parameter is specified as -Out 'template.xml' the generated resource file will be called 'template.en-US.resx'.
 
 ### ------------------EXAMPLE 10------------------
-Only supported on SP2016 and SP Online
+Only supported on SP2016, SP2019 and SP Online
 ```powershell
 Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources -ResourceFilePrefix MyResources
 ```
@@ -236,6 +237,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -IncludeHiddenLists
+If specified hidden lists will be included in the template
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -IncludeNativePublishingFiles
 If specified, out of the box / native publishing files will be saved.
 
@@ -335,7 +348,7 @@ Accept pipeline input: False
 ### -PersistMultiLanguageResources
 If specified, resource values for applicable artifacts will be persisted to a resource file
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -361,7 +374,7 @@ Accept pipeline input: False
 ### -ResourceFilePrefix
 If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.&lt;language&gt;.resx. See examples for more info.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -470,4 +483,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-OutlookAnywhere
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,15 +20,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-OutlookAnywhere -Server <ServerIdParameter> [-ADPropertiesOnly] [-DomainController <Fqdn>]
+Get-OutlookAnywhere -Server <ServerIdParameter>
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
  [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-OutlookAnywhere [[-Identity] <VirtualDirectoryIdParameter>] [-ADPropertiesOnly] [-DomainController <Fqdn>]
+Get-OutlookAnywhere [[-Identity] <VirtualDirectoryIdParameter>]
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
  [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
@@ -46,7 +53,7 @@ This example returns all Outlook Anywhere virtual directories on the server name
 Get-OutlookAnywhere -Identity "EXCH01\Rpc (Default Web Site)"
 ```
 
-This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web siteof the server named EXCH01.
+This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web site of the server named EXCH01.
 
 ## PARAMETERS
 
@@ -63,7 +70,7 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -116,7 +123,7 @@ The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from
 
 ```yaml
 Type: VirtualDirectoryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

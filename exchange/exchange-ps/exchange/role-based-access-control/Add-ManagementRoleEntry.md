@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Add-ManagementRoleEntry
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -17,17 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Overwrite]
- [-Parameters <String[]>] [-PSSnapinName <String>] [-Type <Cmdlet | Script | ApplicationPermission | All>]
- [-UnScopedTopLevel] [-WhatIf] [-Force] [<CommonParameters>]
+Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Overwrite]
+ [-Parameters <String[]>]
+ [-PSSnapinName <String>]
+ [-Type <Cmdlet | Script | ApplicationPermission | All>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ParentRoleEntry
 ```
-Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Overwrite] [-WhatIf] [-Force] [<CommonParameters>]
+Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Overwrite]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +94,7 @@ The role entry you want to add must exist in the parent role. If the role entry 
 
 ```yaml
 Type: RoleEntryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -95,7 +109,7 @@ The ParentRoleEntry parameter specifies the role entry in the parent role to add
 
 ```yaml
 Type: RoleEntryIdParameter
-Parameter Sets: Set2
+Parameter Sets: ParentRoleEntry
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -110,7 +124,7 @@ The Role parameter specifies the role to which the new role entry, specified by 
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set2
+Parameter Sets: ParentRoleEntry
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -156,6 +170,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Overwrite
 The Overwrite parameter causes existing role entries to be overwritten by the role entries being added.
 
@@ -176,7 +207,7 @@ The Parameters parameter specifies the parameters to be included in the role bei
 
 ```yaml
 Type: String[]
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -193,7 +224,7 @@ The PSSnapinName parameter specifies the Windows PowerShell snap-in that contain
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -208,7 +239,7 @@ The Type parameter specifies the type of role entry being added. The valid value
 
 ```yaml
 Type: Cmdlet | Script | ApplicationPermission | All
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -231,7 +262,7 @@ You can't use this switch with the ParentRoleEntry parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -249,23 +280,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-This parameter is available only in the cloud-based service.
-
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

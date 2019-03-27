@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TransportConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,39 +21,65 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-TransportConfig [[-Identity] <OrganizationIdParameter>] [-ClearCategories <$true | $false>] [-Confirm]
- [-ConvertDisclaimerWrapperToEml <$true | $false>] [-DomainController <Fqdn>]
- [-DSNConversionMode <UseExchangeDSNs | PreserveDSNBody | DoNotConvert>]
- [-ExternalDelayDsnEnabled <$true | $false>] [-ExternalDsnDefaultLanguage <CultureInfo>]
- [-ExternalDsnLanguageDetectionEnabled <$true | $false>]
- [-ExternalDsnMaxMessageAttachSize <ByteQuantifiedSize>] [-ExternalDsnReportingAuthority <SmtpDomain>]
- [-ExternalDsnSendHtml <$true | $false>] [-ExternalPostmasterAddress <SmtpAddress>]
- [-GenerateCopyOfDSNFor <MultiValuedProperty>]
- [-HeaderPromotionModeSetting <NoCreate | MayCreate | MustCreate>]
- [-InternalDelayDsnEnabled <$true | $false>] [-InternalDsnDefaultLanguage <CultureInfo>]
- [-InternalDsnLanguageDetectionEnabled <$true | $false>]
- [-InternalDsnMaxMessageAttachSize <ByteQuantifiedSize>] [-InternalDsnReportingAuthority <SmtpDomain>]
- [-InternalDsnSendHtml <$true | $false>] [-InternalSMTPServers <MultiValuedProperty>]
- [-JournalingReportNdrTo <SmtpAddress>] [-LegacyJournalingMigrationEnabled <$true | $false>]
- [-MaxDumpsterSizePerDatabase <ByteQuantifiedSize>] [-MaxDumpsterTime <EnhancedTimeSpan>]
- [-MaxReceiveSize <Unlimited>] [-MaxRecipientEnvelopeLimit <Unlimited>] [-MaxSendSize <Unlimited>]
- [-OrganizationFederatedMailbox <SmtpAddress>] [-Rfc2231EncodingEnabled <$true | $false>]
- [-ShadowHeartbeatRetryCount <Int32>] [-ShadowHeartbeatTimeoutInterval <EnhancedTimeSpan>]
- [-ShadowMessageAutoDiscardInterval <EnhancedTimeSpan>] [-ShadowRedundancyEnabled <$true | $false>]
- [-SupervisionTags <MultiValuedProperty>] [-TLSReceiveDomainSecureList <MultiValuedProperty>]
- [-TLSSendDomainSecureList <MultiValuedProperty>] [-VerifySecureSubmitEnabled <$true | $false>]
- [-VoicemailJournalingEnabled <$true | $false>] [-WhatIf] [-Xexch50Enabled <$true | $false>]
+Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-AddressBookPolicyRoutingEnabled <$true | $false>]
  [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <$true | $false>]
  [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <$true | $false>]
- [-DiagnosticsAggregationServicePort <Int32>] [-Force]
- [-JournalReportDLMemberSubstitutionEnabled <$true | $false>] [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
- [-MaxAllowedAgentGeneratedMessageDepthPerAgent <UInt32>] [-MaxRetriesForLocalSiteShadow <Int32>]
- [-MaxRetriesForRemoteSiteShadow <Int32>] [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
- [-RejectMessageOnShadowFailure <$true | $false>] [-SafetyNetHoldTime <EnhancedTimeSpan>]
+ [-ClearCategories <$true | $false>]
+ [-Confirm]
+ [-ConvertDisclaimerWrapperToEml <$true | $false>]
+ [-DiagnosticsAggregationServicePort <Int32>]
+ [-DomainController <Fqdn>]
+ [-DSNConversionMode <UseExchangeDSNs | PreserveDSNBody | DoNotConvert>]
+ [-ExternalDelayDsnEnabled <$true | $false>]
+ [-ExternalDsnDefaultLanguage <CultureInfo>]
+ [-ExternalDsnLanguageDetectionEnabled <$true | $false>]
+ [-ExternalDsnMaxMessageAttachSize <ByteQuantifiedSize>]
+ [-ExternalDsnReportingAuthority <SmtpDomain>]
+ [-ExternalDsnSendHtml <$true | $false>]
+ [-ExternalPostmasterAddress <SmtpAddress>]
+ [-Force]
+ [-GenerateCopyOfDSNFor <MultiValuedProperty>]
+ [-HeaderPromotionModeSetting <NoCreate | MayCreate | MustCreate>]
+ [-InternalDelayDsnEnabled <$true | $false>]
+ [-InternalDsnDefaultLanguage <CultureInfo>]
+ [-InternalDsnLanguageDetectionEnabled <$true | $false>]
+ [-InternalDsnMaxMessageAttachSize <ByteQuantifiedSize>]
+ [-InternalDsnReportingAuthority <SmtpDomain>]
+ [-InternalDsnSendHtml <$true | $false>]
+ [-InternalSMTPServers <MultiValuedProperty>]
+ [-JournalingReportNdrTo <SmtpAddress>]
+ [-LegacyJournalingMigrationEnabled <$true | $false>]
+ [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
+ [-MaxAllowedAgentGeneratedMessageDepthPerAgent <UInt32>]
+ [-MaxDumpsterSizePerDatabase <ByteQuantifiedSize>]
+ [-MaxDumpsterTime <EnhancedTimeSpan>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxRecipientEnvelopeLimit <Unlimited>]
+ [-MaxRetriesForLocalSiteShadow <Int32>]
+ [-MaxRetriesForRemoteSiteShadow <Int32>]
+ [-MaxSendSize <Unlimited>]
+ [-OrganizationFederatedMailbox <SmtpAddress>]
+ [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
+ [-RejectMessageOnShadowFailure <$true | $false>]
+ [-Rfc2231EncodingEnabled <$true | $false>]
+ [-SafetyNetHoldTime <EnhancedTimeSpan>]
  [-ShadowHeartbeatFrequency <EnhancedTimeSpan>]
+ [-ShadowHeartbeatRetryCount <Int32>]
+ [-ShadowHeartbeatTimeoutInterval <EnhancedTimeSpan>]
+ [-ShadowMessageAutoDiscardInterval <EnhancedTimeSpan>]
  [-ShadowMessagePreferenceSetting <PreferRemote | LocalOnly | RemoteOnly>]
- [-ShadowResubmitTimeSpan <EnhancedTimeSpan>] [-TransportRuleAttachmentTextScanLimit <ByteQuantifiedSize>]
+ [-ShadowRedundancyEnabled <$true | $false>]
+ [-ShadowResubmitTimeSpan <EnhancedTimeSpan>]
+ [-SmtpClientAuthenticationDisabled <$true | $false>]
+ [-SupervisionTags <MultiValuedProperty>]
+ [-TLSReceiveDomainSecureList <MultiValuedProperty>]
+ [-TLSSendDomainSecureList <MultiValuedProperty>]
+ [-TransportRuleAttachmentTextScanLimit <ByteQuantifiedSize>]
+ [-VerifySecureSubmitEnabled <$true | $false>]
+ [-VoicemailJournalingEnabled <$true | $false>]
+ [-WhatIf]
+ [-Xexch50Enabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -89,6 +118,65 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AddressBookPolicyRoutingEnabled
+The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
+
+The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentGeneratedMessageLoopDetectionInSubmissionEnabled
+This parameter is available only in on-premises Exchange.
+
+The AgentGeneratedMessageLoopDetectionInSubmissionEnabled parameter controls the behavior of messages loop detection in for loops caused by transport agents in the Mailbox Transport Submission service. An agent-generated loop occurs when an agent creates a new copy of a message or adds recipients to a message, and the agent continues to process these resulting messages by creating copies or adding recipients.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $true, the loop is logged in the message tracking log. When this parameter is set to $false, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepthPerAgent and MaxAllowedAgentGeneratedMessageDepth parameters.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentGeneratedMessageLoopDetectionInSmtpEnabled
+This parameter is available only in on-premises Exchange.
+
+The AgentGeneratedMessageLoopDetectionInSmtpEnabled parameter controls the behavior of messages loop detection in for loops caused by transport agents in the Transport service. An agent-generated loop occurs when an agent creates a new copy of a message or adds recipients to a message, and the agent continues to process these resulting messages by creating copies or adding recipients.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $false, the loop is logged in the message tracking log. When this parameter is set to $true, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepth and MaxAllowedAgentGeneratedMessageDepthPerAgent parameters.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -144,6 +232,23 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticsAggregationServicePort
+This parameter is available only in on-premises Exchange.
+
+The DiagnosticsAggregationServicePort parameter specifies the TCP port that's used to collect message queue diagnostic information. The default value is 9710.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -314,6 +419,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GenerateCopyOfDSNFor
 This parameter is available only in on-premises Exchange.
 
@@ -335,7 +455,7 @@ DSN codes are entered as x.y.z and are separated by commas. By default, the foll
 
 - 5.1.4
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -489,7 +609,7 @@ This parameter is available only in on-premises Exchange.
 
 The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -532,6 +652,42 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxAllowedAgentGeneratedMessageDepth
+This parameter is available only in on-premises Exchange.
+
+The MaxAllowedAgentGeneratedMessageDepth parameter specifies how many times all agents can process any resulting copies of the same message. The default value is 3. Valid input for this parameter is an integer.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxAllowedAgentGeneratedMessageDepthPerAgent
+This parameter is available only in on-premises Exchange.
+
+The MaxAllowedAgentGeneratedMessageDepthPerAgent parameter specifies how many times a single agent can process any resulting copies of the same message. The default value is 2.
+
+The value of the MaxAllowedAgentGeneratedMessageDepth parameter should be larger than the value of the MaxAllowedAgentGeneratedMessageDepthPerAgent parameter.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -653,6 +809,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MaxRetriesForLocalSiteShadow
+This parameter is available only in on-premises Exchange.
+
+The MaxRetriesForLocalSiteShadow parameter specifies the maximum number of attempts to make a shadow copy of the message in the local Active Directory site. Valid input for this parameter is an integer between 0 and 255. The default value is 2. The total number of attempts to create a shadow copy of the message is controlled by the ShadowMessagePreferenceSetting parameter:
+
+- If ShadowMessagePreferenceSetting is set to LocalOnly, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow parameter.
+
+- If ShadowMessagePreferenceSetting is set to PreferRemote, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow and MaxRetriesForRemoteSiteShadow parameters added together.
+
+- If ShadowMessagePreferenceSetting is set to RemoteOnly, the value of MaxRetriesForLocalSiteShadow is 0, and the MaxRetriesForLocalSiteShadow parameter has no effect on the total number of attempts to create a shadow copy of the message.
+
+If a shadow copy of the message isn't created after the specified number of attempts, accepting or rejecting the message is controlled by the RejectMessageOnShadowFailure parameter.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxRetriesForRemoteSiteShadow
+This parameter is available only in on-premises Exchange.
+
+The MaxRetriesForRemoteSiteShadow parameter specifies the maximum number of attempts to make a shadow copy of the message in a different Active Directory site. Valid input for this parameter is an integer between 0 and 255. The default value is 4. The total number of attempts to create a shadow copy of the message is controlled by the ShadowMessagePreferenceSetting parameter:
+
+- If ShadowMessagePreferenceSetting is set to RemoteOnly, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForRemoteSiteShadow parameter.
+
+- If ShadowMessagePreferenceSetting is set to PreferRemote, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow and MaxRetriesForRemoteSiteShadow parameters added together.
+
+- If ShadowMessagePreferenceSetting is set to LocalOnly, the value of MaxRetriesForRemoteSiteShadow is 0, and the MaxRetriesForRemoteSiteShadow parameter has no effect on the total number of attempts to create a shadow copy of the message.
+
+If a shadow copy of the message isn't created after the specified number of attempts, accepting or rejecting the message is controlled by the RejectMessageOnShadowFailure parameter.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MaxSendSize
 This parameter is available only in on-premises Exchange.
 
@@ -703,6 +909,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -QueueDiagnosticsAggregationInterval
+This parameter is available only in on-premises Exchange.
+
+The QueueDiagnosticsAggregationInterval parameter specifies the polling interval that's used to retrieve message queue diagnostic information. The default value is 00:01:00 or one minute.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectMessageOnShadowFailure
+This parameter is available only in on-premises Exchange.
+
+The RejectMessageOnShadowFailure parameter specifies whether to accept or reject messages when shadow copies of the messages can't be created. Valid values are:
+
+- $true: Messages are rejected with the SMTP code 450 4.5.1. Use this value only if you have multiple Mailbox servers in a database availability group (DAG) or in an Active Directory site where shadow copies of the messages can be created.
+
+- $false: Messages are accepted without making shadow copies. This is the default value.
+
+The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Rfc2231EncodingEnabled
 The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -711,6 +959,48 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SafetyNetHoldTime
+This parameter is available only in on-premises Exchange.
+
+The SafetyNetHoldTime parameter specifies how long a copy of a successfully processed message is retained in Safety Net. Unacknowledged shadow copies of messages auto-expire from Safety Net based on adding the values of the SafetyNetHoldTime parameter and the MessageExpirationTimeout parameter on the Set-TransportService cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+The default value is 2.00:00:00 or 2 days.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShadowHeartbeatFrequency
+This parameter is available only in on-premises Exchange.
+
+The ShadowHeartbeatFrequency parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:02:00 or 2 minutes.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -785,6 +1075,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShadowMessagePreferenceSetting
+This parameter is available only in on-premises Exchange.
+
+The ShadowMessagePreferenceSetting parameter specifies the preferred location for making a shadow copy of a message. Valid values are:
+
+- LocalOnly: A shadow copy of the message should only be made on a server in the local Active Directory site.
+
+- RemoteOnly: A shadow copy of the message should only be made on a server in a different Active Directory site.
+
+- PreferRemote: Try to make a shadow copy of the message in a different Active Directory site. If the operation fails, try make a shadow copy of the message on a server in the local Active Directory site.
+
+The default value is PreferRemote.
+
+```yaml
+Type: PreferRemote | LocalOnly | RemoteOnly
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ShadowRedundancyEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -795,6 +1110,64 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShadowResubmitTimeSpan
+This parameter is available only in on-premises Exchange.
+
+The ShadowResubmitTimeSpan parameter specifies amount of time a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 03:00:00 or 3 hours.
+
+This parameter replaces the ShadowHeartbeatRetryCount parameter.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpClientAuthenticationDisabled
+This parameter is available only in the cloud-based service.
+
+The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the whole organization. Examples of clients and services that require authenticated SMTP to send email messages include:
+
+- POP3 and IMAP4 clients.
+
+- Devices with scan to email capability.
+
+- Workflow applications that send email notifications.
+
+- Online services that send messages using internal email addresses in the organization.
+
+Valid values for this parameter are:
+
+- $true: Authenticated SMTP is disabled.
+
+- $false: Authenticated SMTP is enabled. This is the default value.
+
+The corresponding parameter that controls authenticated SMTP on individual mailboxes is the SmtpClientAuthenticationDisabled parameter on the Set-CASMailbox cmdlet. The default mailbox value is blank ($null), which means the mailbox setting is controlled by this organizational setting.
+
+To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
+
+```yaml
+Type: $true | $false
+Parameter Sets: Exchange Online
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -832,7 +1205,7 @@ The TLSReceiveDomainSecureList parameter specifies the domains from which you wa
 
 - Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -861,7 +1234,7 @@ The TLSSendDomainSecureList parameter specifies the domains from which you want 
 
 - Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified in the TLSReceiveDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -872,6 +1245,39 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportRuleAttachmentTextScanLimit
+This parameter is available only in on-premises Exchange.
+
+The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -942,394 +1348,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddressBookPolicyRoutingEnabled
-The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
-
-The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentGeneratedMessageLoopDetectionInSmtpEnabled
-This parameter is available only in on-premises Exchange.
-
-The AgentGeneratedMessageLoopDetectionInSmtpEnabled parameter controls the behavior of messages loop detection in for loops caused by transport agents in the Transport service. An agent-generated loop occurs when an agent creates a new copy of a message or adds recipients to a message, and the agent continues to process these resulting messages by creating copies or adding recipients.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $false, the loop is logged in the message tracking log. When this parameter is set to $true, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepth and MaxAllowedAgentGeneratedMessageDepthPerAgent parameters.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentGeneratedMessageLoopDetectionInSubmissionEnabled
-This parameter is available only in on-premises Exchange.
-
-The AgentGeneratedMessageLoopDetectionInSubmissionEnabled parameter controls the behavior of messages loop detection in for loops caused by transport agents in the Mailbox Transport Submission service. An agent-generated loop occurs when an agent creates a new copy of a message or adds recipients to a message, and the agent continues to process these resulting messages by creating copies or adding recipients.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $true, the loop is logged in the message tracking log. When this parameter is set to $false, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepthPerAgent and MaxAllowedAgentGeneratedMessageDepth parameters.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DiagnosticsAggregationServicePort
-This parameter is available only in on-premises Exchange.
-
-The DiagnosticsAggregationServicePort parameter specifies the TCP port that's used to collect message queue diagnostic information. The default value is 9710.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalReportDLMemberSubstitutionEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxAllowedAgentGeneratedMessageDepth
-This parameter is available only in on-premises Exchange.
-
-The MaxAllowedAgentGeneratedMessageDepth parameter specifies how many times all agents can process any resulting copies of the same message. The default value is 3. Valid input for this parameter is an integer.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxAllowedAgentGeneratedMessageDepthPerAgent
-This parameter is available only in on-premises Exchange.
-
-The MaxAllowedAgentGeneratedMessageDepthPerAgent parameter specifies how many times a single agent can process any resulting copies of the same message. The default value is 2.
-
-The value of the MaxAllowedAgentGeneratedMessageDepth parameter should be larger than the value of the MaxAllowedAgentGeneratedMessageDepthPerAgent parameter.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxRetriesForLocalSiteShadow
-This parameter is available only in on-premises Exchange.
-
-The MaxRetriesForLocalSiteShadow parameter specifies the maximum number of attempts to make a shadow copy of the message in the local Active Directory site. Valid input for this parameter is an integer between 0 and 255. The default value is 2. The total number of attempts to create a shadow copy of the message is controlled by the ShadowMessagePreferenceSetting parameter:
-
-- If ShadowMessagePreferenceSetting is set to LocalOnly, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow parameter.
-
-- If ShadowMessagePreferenceSetting is set to PreferRemote, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow and MaxRetriesForRemoteSiteShadow parameters added together.
-
-- If ShadowMessagePreferenceSetting is set to RemoteOnly, the value of MaxRetriesForLocalSiteShadow is 0, and the MaxRetriesForLocalSiteShadow parameter has no effect on the total number of attempts to create a shadow copy of the message.
-
-If a shadow copy of the message isn't created after the specified number of attempts, accepting or rejecting the message is controlled by the RejectMessageOnShadowFailure parameter.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxRetriesForRemoteSiteShadow
-This parameter is available only in on-premises Exchange.
-
-The MaxRetriesForRemoteSiteShadow parameter specifies the maximum number of attempts to make a shadow copy of the message in a different Active Directory site. Valid input for this parameter is an integer between 0 and 255. The default value is 4. The total number of attempts to create a shadow copy of the message is controlled by the ShadowMessagePreferenceSetting parameter:
-
-- If ShadowMessagePreferenceSetting is set to RemoteOnly, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForRemoteSiteShadow parameter.
-
-- If ShadowMessagePreferenceSetting is set to PreferRemote, the total number of attempts to make a shadow copy of the message is the value of the MaxRetriesForLocalSiteShadow and MaxRetriesForRemoteSiteShadow parameters added together.
-
-- If ShadowMessagePreferenceSetting is set to LocalOnly, the value of MaxRetriesForRemoteSiteShadow is 0, and the MaxRetriesForRemoteSiteShadow parameter has no effect on the total number of attempts to create a shadow copy of the message.
-
-If a shadow copy of the message isn't created after the specified number of attempts, accepting or rejecting the message is controlled by the RejectMessageOnShadowFailure parameter.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueueDiagnosticsAggregationInterval
-This parameter is available only in on-premises Exchange.
-
-The QueueDiagnosticsAggregationInterval parameter specifies the polling interval that's used to retrieve message queue diagnostic information. The default value is 00:01:00 or one minute.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectMessageOnShadowFailure
-This parameter is available only in on-premises Exchange.
-
-The RejectMessageOnShadowFailure parameter specifies whether to accept or reject messages when shadow copies of the messages can't be created. Valid values are:
-
-- $true: Messages are rejected with the SMTP code 450 4.5.1. Use this value only if you have multiple Mailbox servers in a database availability group (DAG) or in an Active Directory site where shadow copies of the messages can be created.
-
-- $false: Messages are accepted without making shadow copies. This is the default value.
-
-The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SafetyNetHoldTime
-This parameter is available only in on-premises Exchange.
-
-The SafetyNetHoldTime parameter specifies how long a copy of a successfully processed message is retained in Safety Net. Unacknowledged shadow copies of messages auto-expire from Safety Net based on adding the values of the SafetyNetHoldTime parameter and the MessageExpirationTimeout parameter on the Set-TransportService cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-The default value is 2.00:00:00 or 2 days.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShadowHeartbeatFrequency
-This parameter is available only in on-premises Exchange.
-
-The ShadowHeartbeatFrequency parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:02:00 or 2 minutes.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShadowMessagePreferenceSetting
-This parameter is available only in on-premises Exchange.
-
-The ShadowMessagePreferenceSetting parameter specifies the preferred location for making a shadow copy of a message. Valid values are:
-
-- LocalOnly: A shadow copy of the message should only be made on a server in the local Active Directory site.
-
-- RemoteOnly: A shadow copy of the message should only be made on a server in a different Active Directory site.
-
-- PreferRemote: Try to make a shadow copy of the message in a different Active Directory site. If the operation fails, try make a shadow copy of the message on a server in the local Active Directory site.
-
-The default value is PreferRemote.
-
-```yaml
-Type: PreferRemote | LocalOnly | RemoteOnly
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShadowResubmitTimeSpan
-This parameter is available only in on-premises Exchange.
-
-The ShadowResubmitTimeSpan parameter specifies amount of time a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 03:00:00 or 3 hours.
-
-This parameter replaces the ShadowHeartbeatRetryCount parameter.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportRuleAttachmentTextScanLimit
-This parameter is available only in on-premises Exchange.
-
-The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SmtpClientAuthenticationDisabled
-This parameter is available only in the cloud-based service.
-
-The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the whole organization. Examples of clients and services that require authenticated SMTP to send email messages include:
-
-- POP3 and IMAP4 clients.
-
-- Devices with scan to email capability.
-
-- Workflow applications that send email notifications.
-
-- Online services that send messages using internal email addresses in the organization.
-
-Valid values for this parameter are:
-
-- $true: Authenticated SMTP is disabled.
-
-- $false: Authenticated SMTP is enabled. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Exchange Online
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

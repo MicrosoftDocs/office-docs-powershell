@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Get-PublicFolderAdministrativePermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -17,16 +20,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Identity (Default)
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-DomainController <Fqdn>]
- [-Owner] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-User <SecurityPrincipalIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### Owner
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-User <SecurityPrincipalIdParameter>] [<CommonParameters>]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-Owner]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,7 +99,7 @@ The Owner parameter specifies that the command should return only the owner of t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -124,7 +129,7 @@ The User parameter specifies the user principal name (UPN), domain\\user, or ali
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -140,12 +145,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data. 
 
 ## NOTES
 

@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineLisLocation
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineLisLocation
@@ -12,12 +15,36 @@ Use the Get-CsOnlineLisLocation cmdlet to retrieve information on previously def
 
 ## SYNTAX
 
+### GetByLocationID (Default)
 ```
-Get-CsOnlineLisLocation [-CivicAddressId <Object>] [-Location <Object>] [-AssignmentStatus <Object>]
- [-BypassDualWrite <Object>] [-City <Object>] [-CountryOrRegion <Object>] [-Description <Object>]
- [-DomainController <Object>] [-Force] [-LocationId <Object>] [-NumberOfResultsToSkip <Object>]
- [-PopulateNumberOfVoiceUsers] [-ResultSize <Object>] [-Tenant <Object>] [-ValidationStatus <Object>] [-AsJob]
- [-PopulateNumberOfTelephoneNumbers] [<CommonParameters>]
+Get-CsOnlineLisLocation [-PopulateNumberOfVoiceUsers] [-PopulateNumberOfTelephoneNumbers]
+ [-AssignmentStatus <String>] [-City <String>] [-CountryOrRegion <String>] [-Description <String>]
+ [-ValidationStatus <String>] [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>] [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UseCivicAddressId
+```
+Get-CsOnlineLisLocation -CivicAddressId <Guid> [-PopulateNumberOfVoiceUsers]
+ [-PopulateNumberOfTelephoneNumbers] [-AssignmentStatus <String>] [-City <String>] [-CountryOrRegion <String>]
+ [-Description <String>] [-ValidationStatus <String>] [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UseLocationId
+```
+Get-CsOnlineLisLocation [-PopulateNumberOfVoiceUsers] [-PopulateNumberOfTelephoneNumbers]
+ [-LocationId <Guid>] [-AssignmentStatus <String>] [-City <String>] [-CountryOrRegion <String>]
+ [-Description <String>] [-ValidationStatus <String>] [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UseLocation
+```
+Get-CsOnlineLisLocation [-PopulateNumberOfVoiceUsers] [-PopulateNumberOfTelephoneNumbers] -Location <String>
+ [-AssignmentStatus <String>] [-City <String>] [-CountryOrRegion <String>] [-Description <String>]
+ [-ValidationStatus <String>] [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>] [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +86,7 @@ This example returns the information on one location specified by its unique ide
 Specifies the identification number of the civic address that is associated with the target locations.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -76,7 +103,7 @@ Specifies an administrator defined description of the location to retrieve.
 For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -93,23 +120,7 @@ Specifies whether the retrieved locations have been assigned to users or not.
 Valid inputs are "Assigned", or "Unassigned".
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -125,7 +136,7 @@ Accept wildcard characters: False
 Specifies the city of the target location.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +152,7 @@ Accept wildcard characters: False
 Specifies the country or region of the target location.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -157,7 +168,7 @@ Accept wildcard characters: False
 Specifies the administrator defined description of the civic address that is associated with the target locations.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -173,7 +184,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -207,7 +218,7 @@ Accept wildcard characters: False
 Specifies the unique identifier of the target location.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -228,7 +239,7 @@ For example the command below will return locations 26-50 for Seattle.
 `Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -260,7 +271,7 @@ Accept wildcard characters: False
 Specifies the maximum number of results to return.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -276,7 +287,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -293,7 +304,7 @@ Specifies the validation status of the addresses to be returned.
 Valid inputs are: Valid, Invalid, and Notvalidated.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

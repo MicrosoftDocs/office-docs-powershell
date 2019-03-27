@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-ActiveSyncDevice
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,18 +22,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Mailbox
 ```
-Get-ActiveSyncDevice -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
+Get-ActiveSyncDevice -Mailbox <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [-Monitoring] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-ActiveSyncDevice [[-Identity] <ActiveSyncDeviceIdParameter>] [-DomainController <Fqdn>] [-Filter <String>]
+Get-ActiveSyncDevice [[-Identity] <ActiveSyncDeviceIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [-Monitoring] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +94,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -184,13 +193,32 @@ The Identity parameter specifies the ActiveSync device that you want to view. Yo
 
 ```yaml
 Type: ActiveSyncDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Monitoring
+This parameter is available only in on-premises Exchange.
+
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -274,23 +302,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Monitoring
-This parameter is available only in on-premises Exchange.
-
-The Monitoring parameter specifies whether mobile devices created by monitoring accounts are included in the Get-ActiveSyncDevice cmdlet output. The default value is $false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxExportRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -229,7 +232,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
@@ -241,7 +244,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

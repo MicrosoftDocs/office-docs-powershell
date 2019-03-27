@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -16,13 +19,6 @@ Use the Get-MailboxLocation cmdlet to view mailbox location information in Excha
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
-
-### DatabaseSet
-```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
 
 ### Identity
 ```
@@ -51,21 +47,6 @@ Get-MailboxLocation -User chris@contoso.com
 This example returns the mailbox location for the user chris@contoso.com.
 
 ## PARAMETERS
-
-### -Database
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: DatabaseSet
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.
@@ -197,15 +178,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b6393122-1556-4b0b-b80d-c7737b09eb9c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxlocation)

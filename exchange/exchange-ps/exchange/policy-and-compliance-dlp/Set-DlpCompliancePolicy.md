@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-DlpCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -17,24 +20,37 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### RetryDistribution
 ```
 Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
- [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-Confirm] [-Name <String>] [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemoveSharePointLocationException <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>]
- [-AddOneDriveLocation <MultiValuedProperty>] [-AddOneDriveLocationException <MultiValuedProperty>]
- [-AddSharePointLocation <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-Force]
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddOneDriveLocation <MultiValuedProperty>]
+ [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddTeamsLocation <MultiValuedProperty>]
+ [-AddTeamsLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ExchangeSenderMemberOf <SmtpAddress[]>]
+ [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-Force]
  [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
- [-Name <String>] [-NewName <String>] [-RemoveExchangeLocation <MultiValuedProperty>]
- [-RemoveOneDriveLocation <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemoveSharePointLocation <MultiValuedProperty>] [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-Priority <Int32>]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveTeamsLocation <MultiValuedProperty>]
+ [-RemoveTeamsLocationException <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -87,7 +103,7 @@ The RetryDistribution switch redistributes the policy to all OneDrive for Busine
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -102,7 +118,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -119,7 +135,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -136,7 +152,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -155,7 +171,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -172,7 +188,37 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsLocation
+{{ Fill AddTeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsLocationException
+{{ Fill AddTeamsLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -187,7 +233,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -216,12 +262,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExchangeSenderMemberOf
+{{ Fill ExchangeSenderMemberOf Description }}
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOfException
+{{ Fill ExchangeSenderMemberOfException Description }}
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -244,7 +322,7 @@ The Mode parameter specifies the action and notification level of the DLP policy
 
 ```yaml
 Type: Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -254,27 +332,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-This parameter is reserved for internal Microsoft use.
+### -Priority
+{{ Fill Priority Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NewName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set1
+Type: Int32
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -289,7 +352,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -306,7 +369,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -323,7 +386,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -340,7 +403,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -357,7 +420,37 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocation
+{{ Fill RemoveTeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocationException
+{{ Fill RemoveTeamsLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -388,12 +481,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MoveRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,26 +20,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MoveRequest [[-Identity] <MoveRequestIdParameter>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
+Get-MoveRequest [[-Identity] <MoveRequestIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-IncludeSoftDeletedObjects]
- [-ProxyToMailbox <MailboxIdParameter>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-IncludeSoftDeletedObjects]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### Filtering
 ```
-Get-MoveRequest [-BatchName <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
- [-MoveStatus <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Offline <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>] 
- [-Protect <$true | $false>] [-RemoteHostName <Fqdn>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-SourceDatabase <DatabaseIdParameter>]
- [-Suspend <$true | $false>] [-SuspendWhenReadyToComplete <$true | $false>]
- [-TargetDatabase <DatabaseIdParameter>]
+Get-MoveRequest [-BatchName <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
  [-Flags <None | CrossOrg | IntraOrg | Push | Pull | Offline | Protected | RemoteLegacy | HighPriority | Suspend | SuspendWhenReadyToComplete | MoveOnlyPrimaryMailbox | MoveOnlyArchiveMailbox | TargetIsAggregatedMailbox | Join | Split>]
- [-IncludeSoftDeletedObjects] [-ProxyToMailbox <MailboxIdParameter>] [<CommonParameters>]
+ [-HighPriority <$true | $false>]
+ [-IncludeSoftDeletedObjects]
+ [-MoveStatus <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
+ [-Offline <$true | $false>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Protect <$true | $false>]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RemoteHostName <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-SourceDatabase <DatabaseIdParameter>]
+ [-Suspend <$true | $false>]
+ [-SuspendWhenReadyToComplete <$true | $false>]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,7 +137,7 @@ You can use this parameter with the following parameters:
 
 ```yaml
 Type: MoveRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -137,7 +154,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -183,6 +200,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Flags
+The Flags parameter specifies the move type to retrieve information for. The following values may be used:
+
+- CrossOrg
+
+- HighPriority
+
+- IntraOrg
+
+- Join
+
+- MoveOnlyArchiveMailbox
+
+- MoveOnlyPrimaryMailbox
+
+- None
+
+- Offline
+
+- Protected
+
+- Pull
+
+- Push
+
+- RemoteLegacy
+
+- Split
+
+- Suspend
+
+- SuspendWhenReadyToComplete
+
+- TargetIsAggregatedMailbox
+
+```yaml
+Type: None | CrossOrg | IntraOrg | Push | Pull | Offline | Protected | RemoteLegacy | HighPriority | Suspend | SuspendWhenReadyToComplete | MoveOnlyPrimaryMailbox | MoveOnlyArchiveMailbox | TargetIsAggregatedMailbox | Join | Split
+Parameter Sets: Filtering
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HighPriority
 This parameter is available only in on-premises Exchange.
 
@@ -192,9 +256,26 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSoftDeletedObjects
+This parameter is available only in on-premises Exchange.
+
+The IncludeSoftDeletedObjects parameter specifies whether to return mailboxes that have been soft deleted. This parameter accepts $true or $false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +308,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -244,7 +325,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -286,9 +367,50 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyToMailbox
+This parameter is available only in the cloud-based service.
+
+The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
+
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -303,7 +425,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -366,7 +488,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -383,7 +505,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -400,7 +522,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -423,114 +545,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Flags
-The Flags parameter specifies the move type to retrieve information for. The following values may be used:
-
-- CrossOrg
-
-- HighPriority
-
-- IntraOrg
-
-- Join
-
-- MoveOnlyArchiveMailbox
-
-- MoveOnlyPrimaryMailbox
-
-- None
-
-- Offline
-
-- Protected
-
-- Pull
-
-- Push
-
-- RemoteLegacy
-
-- Split
-
-- Suspend
-
-- SuspendWhenReadyToComplete
-
-- TargetIsAggregatedMailbox
-
-```yaml
-Type: None | CrossOrg | IntraOrg | Push | Pull | Offline | Protected | RemoteLegacy | HighPriority | Suspend | SuspendWhenReadyToComplete | MoveOnlyPrimaryMailbox | MoveOnlyArchiveMailbox | TargetIsAggregatedMailbox | Join | Split
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeSoftDeletedObjects
-This parameter is available only in on-premises Exchange.
-
-The IncludeSoftDeletedObjects parameter specifies whether to return mailboxes that have been soft deleted. This parameter accepts $true or $false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyToMailbox
-This parameter is available only in the cloud-based service.
-
-The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

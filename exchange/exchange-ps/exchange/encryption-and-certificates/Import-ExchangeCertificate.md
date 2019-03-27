@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Import-ExchangeCertificate
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,25 +20,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### FileData
 ```
-Import-ExchangeCertificate -FileData <Byte[]> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Import-ExchangeCertificate -Instance <String[]> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Import-ExchangeCertificate -FileData <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### FileName
 ```
-Import-ExchangeCertificate -FileName <String> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Import-ExchangeCertificate -Instance <String[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Instance
+```
+Import-ExchangeCertificate -FileName <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +100,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: FileData
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -97,7 +115,7 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: FileName
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -211,19 +229,7 @@ If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set3
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -257,7 +263,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True

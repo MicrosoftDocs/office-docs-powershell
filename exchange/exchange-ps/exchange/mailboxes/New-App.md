@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-App
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,38 +20,71 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ExtensionOfficeMarketplace
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-Etoken <String>]
- [-Mailbox <MailboxIdParameter>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>]
- [-MarketplaceServicesUrl <String>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-MarketplaceCorrelationID <String>]
- [-MarketplaceUserProfileType <String>] [-PrivateCatalog] [<CommonParameters>]
-```
-
-### Set1
-```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-FileData <Byte[]>]
- [-Mailbox <MailboxIdParameter>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <$true | $false>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <Everyone | SpecificUsers>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ExtensionFileData
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-FileStream <Stream>]
- [-Mailbox <MailboxIdParameter>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-FileData <Byte[]>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <$true | $false>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <Everyone | SpecificUsers>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### ExtensionFileStream
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>] [-Url <Uri>] [-UserList <MultiValuedProperty>]
- [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-FileStream <Stream>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <$true | $false>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <Everyone | SpecificUsers>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ExtensionPrivateURL
+```
+New-App [-Url <Uri>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <$true | $false>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <Everyone | SpecificUsers>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -195,7 +231,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -212,7 +248,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: ExtensionFileData
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -227,7 +263,7 @@ The FileStream parameter is used only by the Exchange admin center to support th
 
 ```yaml
 Type: Stream
-Parameter Sets: Set3
+Parameter Sets: ExtensionFileStream
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -281,7 +317,7 @@ The MarketplaceAssetID parameter specifies the Office Store identifier for the a
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -291,12 +327,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MarketplaceQueryMarket
-The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value isen-US.
+### -MarketplaceCorrelationID
+The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MarketplaceQueryMarket
+The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value is en-US.
+
+```yaml
+Type: String
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -311,7 +362,7 @@ The MarketplaceServicesUrl parameter specifies the full services URL for the app
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -321,14 +372,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MarketplaceUserProfileType
+The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
+
+```yaml
+Type: String
+Parameter Sets: ExtensionOfficeMarketplace
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OrganizationApp
-The OrganizationAppswitch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
+The OrganizationApp switch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivateCatalog
+The PrivateCatalog switch specifies whether the app is located in a private catalog. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -362,7 +443,7 @@ The Url parameter specifies the full URL location of the app manifest file that 
 
 ```yaml
 Type: Uri
-Parameter Sets: Set4
+Parameter Sets: ExtensionPrivateURL
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -373,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can usean organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
+The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
 
 For example:
 
@@ -423,51 +504,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MarketplaceCorrelationID
-The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MarketplaceUserProfileType
-The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies whether the app is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

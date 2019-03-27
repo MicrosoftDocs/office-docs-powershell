@@ -14,7 +14,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 - You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
-- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](http://aka.ms/wmf5download) and installed on these versions of Windows:
+- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](https://aka.ms/wmf5download) and installed on these versions of Windows:
   
   - Windows Server 2012 R2
 
@@ -152,7 +152,7 @@ Check the details of your connection instructions, but your session information 
 ### Step 6: Run platyPS to generate topic files
 You have two choices:
 
-- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple, but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
+- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
   ```
   New-MarkdownHelp -Module <ModuleName> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
   ``` 
@@ -325,7 +325,7 @@ In the TOC file, you can fill in a description or remove the template text line.
 
 After you're done editing the TOC file:
 
-1. Go to the **Propose file change** area at the bottom of the page. Enter a title and optional description informaton and then click **Propose file change**. 
+1. Go to the **Propose file change** area at the bottom of the page. Enter a title and optional description information and then click **Propose file change**. 
 
 2. On the next screen, click **Create pull request**.
 
@@ -333,13 +333,13 @@ After you're done editing the TOC file:
 
 ### Reference
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-6
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-6
 
 - https://github.com/PowerShell/platyPS
 
-- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
 
 
 ### Install platyPS on older versions of Windows

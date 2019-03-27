@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-CmdletExtensionAgent
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,16 +20,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filters
 ```
-Get-CmdletExtensionAgent [-Assembly <String>] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [<CommonParameters>]
+Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <$true | $false>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-CmdletExtensionAgent [[-Identity] <CmdletExtensionAgentIdParameter>] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-CmdletExtensionAgent [[-Identity] <CmdletExtensionAgentIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +60,7 @@ The Assembly parameter filters the results by the specified Assembly property va
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filters
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -93,7 +96,7 @@ If you don't use this parameter, enabled and disabled agents are included in the
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filters
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -114,7 +117,7 @@ The Identity parameter specifies the name of the cmdlet extension agent that you
 
 ```yaml
 Type: CmdletExtensionAgentIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

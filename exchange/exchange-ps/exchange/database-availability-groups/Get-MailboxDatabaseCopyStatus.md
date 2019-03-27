@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxDatabaseCopyStatus
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,16 +20,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter> [-ConnectionStatus] [-DomainController <Fqdn>]
- [-ExtendedErrorInfo] [-Active] [-UseServerCache] [<CommonParameters>]
+Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
+ [-Active]
+ [-ConnectionStatus]
+ [-DomainController <Fqdn>]
+ [-ExtendedErrorInfo]
+ [-UseServerCache] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Active] [-ConnectionStatus]
- [-DomainController <Fqdn>] [-Local] [-ExtendedErrorInfo] [-UseServerCache] [<CommonParameters>]
+Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Local]
+ [-Active]
+ [-ConnectionStatus]
+ [-DomainController <Fqdn>]
+ [-ExtendedErrorInfo]
+ [-UseServerCache] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +75,7 @@ The Server parameter specifies that a Mailbox server returns status information 
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -124,7 +135,7 @@ The Identity parameter specifies the name of the database copy for which the com
 
 ```yaml
 Type: DatabaseCopyIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -139,7 +150,7 @@ The Local switch specifies whether to return mailbox database copy status inform
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

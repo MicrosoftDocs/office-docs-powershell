@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Set-RoleGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
@@ -17,21 +20,29 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CrossForest
 ```
-Set-RoleGroup [-Identity] <RoleGroupIdParameter> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm]
- [-Description <String>] [-DisplayName <String>] [-DomainController <Fqdn>] [-LinkedCredential <PSCredential>]
- [-ManagedBy <MultiValuedProperty>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-RoleGroup [-Identity] <RoleGroupIdParameter> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-ManagedBy <MultiValuedProperty>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Default
 ```
-Set-RoleGroup [-Identity] <RoleGroupIdParameter> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm]
- [-Description <String>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
- [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>] [-Name <String>] [-WhatIf]
- [<CommonParameters>]
+Set-RoleGroup [-Identity] <RoleGroupIdParameter> [-Force]
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-ManagedBy <MultiValuedProperty>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,7 +105,7 @@ You can only use the LinkedDomainController parameter with a linked role group.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -115,7 +126,7 @@ If you use the LinkedForeignGroup parameter, you must specify a domain controlle
 
 ```yaml
 Type: UniversalSecurityGroupIdParameter
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -196,9 +207,24 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +243,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Position: Named
@@ -270,21 +296,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

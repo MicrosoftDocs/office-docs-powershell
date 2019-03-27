@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-Queue
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,20 +20,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Identity
 ```
-Get-Queue [[-Identity] <QueueIdentity>] [-BookmarkIndex <Int32>] [-BookmarkObject <ExtensibleQueueInfo>]
- [-IncludeBookmark <$true | $false>] [-ResultSize <Unlimited>] [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>] [-SortOrder <QueueViewerSortOrderEntry[]>]
- [-Exclude <QueueViewerIncludesAndExcludes>] [-Include <QueueViewerIncludesAndExcludes>] [<CommonParameters>]
+Get-Queue [[-Identity] <QueueIdentity>]
+ [-BookmarkIndex <Int32>]
+ [-BookmarkObject <ExtensibleQueueInfo>]
+ [-Exclude <QueueViewerIncludesAndExcludes>]
+ [-Include <QueueViewerIncludesAndExcludes>]
+ [-IncludeBookmark <$true | $false>]
+ [-ResultSize <Unlimited>]
+ [-ReturnPageInfo <$true | $false>]
+ [-SearchForward <$true | $false>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
-### Set1
+### Server
 ```
-Get-Queue [-BookmarkIndex <Int32>] [-BookmarkObject <ExtensibleQueueInfo>] [-Filter <String>]
- [-IncludeBookmark <$true | $false>] [-ResultSize <Unlimited>] [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>] [-Server <ServerIdParameter>] [-SortOrder <QueueViewerSortOrderEntry[]>]
- [-Exclude <QueueViewerIncludesAndExcludes>] [-Include <QueueViewerIncludesAndExcludes>] [<CommonParameters>]
+Get-Queue [-Server <ServerIdParameter>] [-Filter <String>]
+ [-BookmarkIndex <Int32>]
+ [-BookmarkObject <ExtensibleQueueInfo>]
+ [-Exclude <QueueViewerIncludesAndExcludes>]
+ [-Include <QueueViewerIncludesAndExcludes>]
+ [-IncludeBookmark <$true | $false>]
+ [-ResultSize <Unlimited>]
+ [-ReturnPageInfo <$true | $false>]
+ [-SearchForward <$true | $false>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +88,7 @@ The Identity parameter specifies the queue. Valid input for this parameter uses 
 
 ```yaml
 Type: QueueIdentity
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -113,6 +128,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Exclude
+The Exclude parameter specifies the types of queues you want to exclude from the results. Valid values for this parameter are:
+
+- Internal
+
+- External
+
+- A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
+
+```yaml
+Type: QueueViewerIncludesAndExcludes
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
 The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value, for example, {NextHopDomain -eq "contoso.com"}. For details about filterable queue properties and comparison operators, see Queue properties (https://technet.microsoft.com/library/bb125237.aspx) and Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
 
@@ -120,9 +156,30 @@ You can specify multiple criteria by using the and comparison operator. Property
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Include
+The Include parameter specifies the types of queues you want to include the results. Valid values for this parameter are:
+
+- Internal
+
+- External
+
+- A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
+
+```yaml
+Type: QueueViewerIncludesAndExcludes
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +264,7 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -227,48 +284,6 @@ Type: QueueViewerSortOrderEntry[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Exclude
-The Exclude parameter specifies the types of queues you want to exclude from the results. Valid values for this parameter are:
-
-- Internal
-
-- External
-
-- A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
-
-```yaml
-Type: QueueViewerIncludesAndExcludes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Include
-The Include parameter specifies the types of queues you want to include the results. Valid values for this parameter are:
-
-- Internal
-
-- External
-
-- A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
-
-```yaml
-Type: QueueViewerIncludesAndExcludes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

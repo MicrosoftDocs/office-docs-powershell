@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-FederationTrust
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,22 +20,37 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### ApplicationUri
 ```
-Set-FederationTrust [-Identity] <FederationTrustIdParameter> -ApplicationUri <String> [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-WhatIf] [-PublishFederationCertificate] [<CommonParameters>]
+Set-FederationTrust [-Identity] <FederationTrustIdParameter> -ApplicationUri <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-WhatIf]
+ [-PublishFederationCertificate]
+ [<CommonParameters>]
 ```
 
-### Set2
+### PublishFederationCertificate
 ```
-Set-FederationTrust [-Identity] <FederationTrustIdParameter> [-PublishFederationCertificate] [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-WhatIf] -ApplicationUri <String> [<CommonParameters>]
+Set-FederationTrust [-Identity] <FederationTrustIdParameter> [-PublishFederationCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-FederationTrust [-Identity] <FederationTrustIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-MetadataUrl <Uri>] [-Name <String>] [-RefreshMetadata] [-Thumbprint <String>] [-WhatIf] [<CommonParameters>]
+Set-FederationTrust [-Identity] <FederationTrustIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MetadataUrl <Uri>]
+ [-Name <String>]
+ [-RefreshMetadata]
+ [-Thumbprint <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +98,7 @@ The ApplicationUri parameter specifies the primary domain used for the federatio
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set2
+Parameter Sets: ApplicationUri
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -99,7 +117,7 @@ Before setting the next certificate to be used as the current certificate, ensur
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set2
+Parameter Sets: PublishFederationCertificate
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -148,7 +166,7 @@ The MetadataUrl parameter specifies the URL where WS-FederationMetadata is publi
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -178,7 +196,7 @@ The RefreshMetadata switch specifies that the metadata document and certificate 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -193,7 +211,7 @@ The Thumbprint parameter specifies the thumbprint of the X.509 certificate to be
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

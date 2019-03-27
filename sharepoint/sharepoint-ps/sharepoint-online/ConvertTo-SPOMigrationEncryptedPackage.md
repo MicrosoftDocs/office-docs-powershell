@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationEncryptedPackage
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # ConvertTo-SPOMigrationEncryptedPackage
 
 ## SYNOPSIS
-Use this Cmdlet to convert your XML files into a new encryted migration package.
+Use this Cmdlet to convert your XML files into a new encrypted migration package.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-This command convert the XML file on your temprary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
+This command convert the XML file on your temporary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
 
 ## EXAMPLES
 
@@ -47,12 +50,12 @@ PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA384
  -TargetPackagePath $TargetPackagePath
 ```
 
-Same as example1 but without log file and using an encription type SHA384
+Same as example1 but without log file and using an encryption type SHA384
 
 ## PARAMETERS
 
 ### -EncryptionParameters
-Parameters of the encription, it doesn't accept wildcard caracters.
+Parameters of the encryption, it doesn't accept wildcard characters.
 It accepts parameters like SHA384, SHA256, etc.
 
 ```yaml
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationSourceLocations
-Posible Source locations to migrate
+Possible Source locations to migrate
 
 ```yaml
 Type: MigrationPackageLocation
@@ -170,9 +173,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
 [ConvertTo-SPOMigrationTargetedPackage](ConvertTo-SPOMigrationTargetedPackage.md)
-[Migrate to SharePoint Online using PowerShell](https://docs.microsoft.com/en-us/sharepointmigration/overview-spmt-ps-cmdlets)
+[Migrate to SharePoint Online using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets)

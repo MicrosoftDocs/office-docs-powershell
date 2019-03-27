@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-ManagementRoleAssignment
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -17,38 +20,50 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
 Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Delegating <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-GetEffectiveUsers]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
- [-WritableDatabase <DatabaseIdParameter>] [-WritableRecipient <GeneralRecipientIdParameter>]
- [-WritableServer <ServerIdParameter>] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-WritableDatabase <DatabaseIdParameter>]
+ [-WritableRecipient <GeneralRecipientIdParameter>]
+ [-WritableServer <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
-### Set2
+### RoleAssignee
 ```
-Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
+Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>] [-Role <RoleIdParameter>]
  [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Delegating <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-GetEffectiveUsers]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-Role <RoleIdParameter>] [-RoleAssignee <RoleAssigneeIdParameter>]
+ [-RoleAssignee <RoleAssigneeIdParameter>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
- [-WritableDatabase <DatabaseIdParameter>] [-WritableRecipient <GeneralRecipientIdParameter>]
- [-WritableServer <ServerIdParameter>] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-WritableDatabase <DatabaseIdParameter>]
+ [-WritableRecipient <GeneralRecipientIdParameter>]
+ [-WritableServer <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -117,7 +132,7 @@ The Identity parameter specifies the name of the role assignment to retrieve. If
 
 ```yaml
 Type: RoleAssignmentIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -144,7 +159,7 @@ You must specify a value with the RoleAssignee parameter if you use the Assignme
 
 ```yaml
 Type: AssignmentMethod[]
-Parameter Sets: Set2
+Parameter Sets: RoleAssignee
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -330,6 +345,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecipientAdministrativeUnitScope
+This parameter is available only in the cloud-based service.
+
+The RecipientAdministrativeUnitScope parameter returns only the role assignments that include the specified administrative unit.
+
+Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+
+```yaml
+Type: AdministrativeUnitIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientOrganizationalUnitScope
 The RecipientOrganizationalUnitScope parameter returns only the role assignments that include the specified organizational unit (OU). If the OU tree contains spaces, enclose it in quotation marks (").
 
@@ -365,7 +399,7 @@ The Role parameter returns only the role assignments associated with the specifi
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set2
+Parameter Sets: RoleAssignee
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -384,7 +418,7 @@ If the name of the user or USG contains spaces, enclose it in quotation marks ("
 
 ```yaml
 Type: RoleAssigneeIdParameter
-Parameter Sets: Set2
+Parameter Sets: RoleAssignee
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -457,25 +491,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAdministrativeUnitScope
-This parameter is available only in the cloud-based service.
-
-The RecipientAdministrativeUnitScope parameter returns only the role assignments that include the specified administrative unit.
-
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
-
-```yaml
-Type: AdministrativeUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

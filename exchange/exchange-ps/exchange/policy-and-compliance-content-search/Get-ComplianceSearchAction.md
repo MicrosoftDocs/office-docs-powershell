@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
@@ -17,27 +20,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Identity
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-Export]
- [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>] [-Case <String>] [-Details]
- [-DomainController <Fqdn>] [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Preview
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential]
- [-Preview] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [-Preview]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set4
+### Purge
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential] [-Purge]
+Get-ComplianceSearchAction [-Purge]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
+```
+
+### Export
+```
+Get-ComplianceSearchAction [-Export]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -120,7 +139,7 @@ The Export switch filters the results by Export compliance search actions. You d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -139,7 +158,7 @@ The Identity parameter specifies the compliance search action that you want to v
 
 ```yaml
 Type: ComplianceSearchActionIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -169,7 +188,7 @@ The Preview switch filters the results by Preview compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Preview
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -184,7 +203,7 @@ The Purge switch filters the results by Purge compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -215,12 +234,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

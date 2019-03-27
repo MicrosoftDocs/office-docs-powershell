@@ -1,35 +1,36 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Start-CsExMeetingMigration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Start-CsExMeetingMigration
 
 ## SYNOPSIS
-The `Start-CsExMeetingMigration` cmdlet starts a meeting migration manually.
+This cmdlet manually trigger a meeting migration request for the specified user.
 
 ## SYNTAX
 
 ```
-Start-CsExMeetingMigration [[-Identity] <UserIdParameter>] [-Confirm] [-Tenant <Guid>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-TargetMeetingType <MmsTargetMeetingTypes>]
+ [-Tenant <Guid>] [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users. MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings.
-
-Also, with `Start-CsExMeetingMigration` cmdlet, you can start a meeting migration manually.
+This cmdlet manually trigger a meeting migration request for the specified user.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Start-CsExMeetingMigration -Identity John@contoso.com
+Start-CsExMeetingMigration -Identity ashaw@contoso.com -TargetMeetingType Teams
 ```
 
-This example kicks off meeting migration for the user John@contoso.com.
+This example below shows how to initiate meeting migration for user ashaw@contoso.com so that all meetings are migrated to Teams.
 
 
 ## PARAMETERS
@@ -67,15 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -106,26 +99,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -136,6 +109,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
+[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsOnlineDialInConferencingTenantSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
+[Get-CsMeetingMigrationStatus](https://docs.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus)
+
+[Set-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/set-cstenantmigrationconfiguration)
+
+[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration)
+
+
+

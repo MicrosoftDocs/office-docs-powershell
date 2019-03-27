@@ -1,14 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPActivitiesToWorkflowService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Copy-SPActivitiesToWorkflowService
 
 ## SYNOPSIS
-This cmdlet copies the Workflow Activities from SharePoint Server to the Workflow Manager farm. Activities are defined within Microsoft provided or custom coded assemblies.
+Copies the Workflow Activities from SharePoint to Workflow Manager. Activities are defined within Microsoft provided or custom coded assemblies.
 
 
 
@@ -27,11 +30,11 @@ Copies Workflow activites from SharePoint Server to Workflow Manager.
 
 ### Example 1 
 ```
-PS C:\>$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
-PS C:\>$site = Get-SPSite <siteurl>
-PS C:\>$proxy = Get-SPWorkflowServiceApplicationProxy
-PS C:\>$svcAddress = $proxy.GetWorkflowServiceAddress($site)
-PS C:\>Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
+$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
+$site = Get-SPSite <siteurl>
+$proxy = Get-SPWorkflowServiceApplicationProxy
+$svcAddress = $proxy.GetWorkflowServiceAddress($site)
+Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
 ```
 
 
@@ -48,7 +51,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 
 Required: False
@@ -67,7 +70,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +86,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +102,7 @@ The credential used to connect to Workflow Manager.
 Type: ICredentials
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ Forces a specific Activity to be copied to Workflow Manager.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +135,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ The Workflow Manager farm endpoint URL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsEmergencyNumber
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsEmergencyNumber
@@ -93,6 +96,6 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[New-CsLocationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-cslocationpolicy?view=skype-ps)
+[New-CsLocationPolicy](https://docs.microsoft.com/powershell/module/skype/new-cslocationpolicy?view=skype-ps)
 
-[Set-CsLocationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-cslocationpolicy?view=skype-ps)
+[Set-CsLocationPolicy](https://docs.microsoft.com/powershell/module/skype/set-cslocationpolicy?view=skype-ps)

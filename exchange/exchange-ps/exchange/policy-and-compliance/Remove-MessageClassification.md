@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MessageClassification
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -28,7 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+
+```powershell
 Remove-MessageClassification MyMessageClassification
 ```
 
@@ -117,8 +121,8 @@ To see the input types that this cmdlet accepts, see Cmdlet Input and Output Typ
 ###  
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-## NOTES
 
-## RELATED LINKS
+
+## RELATED LINKS 
 
 [Online Version](https://technet.microsoft.com/library/6a8b067b-a070-4c82-80c3-95b267a734c1.aspx)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Set-ConnectSubscription
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,16 +20,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Facebook
 ```
-Set-ConnectSubscription -AppAuthorizationCode <String> [-Facebook]
- -Identity <AggregationSubscriptionIdParameter> -RedirectUri <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-ConnectSubscription -Identity <AggregationSubscriptionIdParameter> -RedirectUri <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### LinkedIn
 ```
 Set-ConnectSubscription -Identity <AggregationSubscriptionIdParameter> [-LinkedIn] -OAuthVerifier <String>
- -RequestSecret <String> -RequestToken <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+ -RequestSecret <String> -RequestToken <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,36 +50,6 @@ Set-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -Re
 This example modifies a people connection to LinkedIn.
 
 ## PARAMETERS
-
-### -AppAuthorizationCode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Facebook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the provider identification number that uniquely identifies the provider network.
@@ -95,7 +71,7 @@ The LinkedIn parameter specifies whether you want to edit a LinkedIn subscriptio
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -110,7 +86,7 @@ The OAuthVerifier parameter specifies the verification code associated with the 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -125,7 +101,7 @@ The RedirectUri parameter specifies the host name used to connect to the server 
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -140,7 +116,7 @@ The RequestSecret parameter specifies the secret associated with the access toke
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -155,7 +131,7 @@ The RequestToken parameter specifies the access token that provides access to pr
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True

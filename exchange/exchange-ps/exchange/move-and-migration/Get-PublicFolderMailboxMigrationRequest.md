@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderMailboxMigrationRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,19 +20,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filtering
 ```
-Get-PublicFolderMailboxMigrationRequest [-BatchName <String>] [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>]
+Get-PublicFolderMailboxMigrationRequest [-BatchName <String>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [<CommonParameters>]
+ [-Suspend <$true | $false>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-PublicFolderMailboxMigrationRequest [[-Identity] <PublicFolderMailboxMigrationRequestIdParameter>]
- [-DomainController <Fqdn>] [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,6 +68,20 @@ Get-PublicFolderMailboxMigrationRequest -HighPriority $true
 
 In on-premises Exchange, this example returns all migration requests that have a priority value of High, Higher, Highest or Emergency.
 
+### -------------------------- Example 3 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
+```
+
+This example returns public folder mailbox migration requests that don't have a target mailbox.
+
+### -------------------------- Example 4 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
+```
+
+This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
+
 ## PARAMETERS
 
 ### -BatchName
@@ -68,7 +91,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -108,7 +131,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -137,7 +160,7 @@ You can't use this parameter with the following parameters:
 
 ```yaml
 Type: PublicFolderMailboxMigrationRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -154,7 +177,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -177,7 +200,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -229,7 +252,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -246,7 +269,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -262,12 +285,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

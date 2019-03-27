@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MigrationUser
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-MigrationUser [-Identity] <MigrationUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Remove-MigrationUser [-Identity] <MigrationUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force] [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,13 +90,32 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that some specific checks and removal steps should be skipped and that the migration user should be forcibly removed. This parameter is used to work around issues where the migration user needs to be removed to fix issues when the user or data is corrupted, or to prevent such issues from occurring
+This parameter is available only in on-premises Exchange.
+
+The Force switch specifies that some specific checks and removal steps should be skipped and that the migration user should be forcibly removed. This parameter is used to work around issues where the migration user needs to be removed to fix issues when the user or data is corrupted, or to prevent such issues from occurring.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -110,21 +131,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

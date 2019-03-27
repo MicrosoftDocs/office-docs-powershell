@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MobileDevice
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,18 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Mailbox
 ```
-Get-MobileDevice -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainController <Fqdn>] [-Filter <String>]
- [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice -Mailbox <MailboxIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>] [-ActiveSync] [-DomainController <Fqdn>]
- [-Filter <String>] [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>]
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +66,7 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
+Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
@@ -91,7 +110,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -205,7 +224,7 @@ The Identity parameter specifies the mobile device that you want to view. You ca
 
 ```yaml
 Type: MobileDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -218,7 +237,9 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring parameter specifies whether mobile devices that are created by monitoring accounts are exposed by the Get-MobileDevice cmdlet. The default value is $false.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
 ```yaml
 Type: SwitchParameter

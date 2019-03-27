@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MapiVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,14 +20,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-MapiVirtualDirectory -Server <ServerIdParameter> [-ADPropertiesOnly] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MapiVirtualDirectory -Server <ServerIdParameter>
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>] [-ADPropertiesOnly]
+Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
+ [-ADPropertiesOnly]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -71,7 +77,7 @@ You can't use the Server and Identity parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -128,7 +134,7 @@ You can't use the Identity and Server parameters in the same command.
 
 ```yaml
 Type: VirtualDirectoryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

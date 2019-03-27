@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ThrottlingPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -216,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousCutoffBalance
-The AnonymousCutoffBalance parameter specifies the resource consumption limits for an anonymous user before the user is completely blocked from performing operations on a specific component.
+The AnonymousCutoffBalance parameter specifies the resource consumption limits for an anonymous user before the user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -496,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -CpaCutoffBalance
-The CpaCutoffBalance parameter specifies the resource consumption limits for a cross-premises user before that user is completely blocked from performing operations on a specific component.
+The CpaCutoffBalance parameter specifies the resource consumption limits for a cross-premises user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -772,7 +775,7 @@ Accept wildcard characters: False
 ```
 
 ### -EasCutoffBalance
-The EasCutoffBalance parameter specifies the resource consumption limits for an Exchange ActiveSync user before that user is completely blocked from performing operations on a specific component.
+The EasCutoffBalance parameter specifies the resource consumption limits for an Exchange ActiveSync user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1063,7 +1066,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsCutoffBalance
-The EwsCutoffBalance parameter specifies the resource consumption limits for an Exchange Web Services user before that user is completely blocked from performing operations on a specific component.
+The EwsCutoffBalance parameter specifies the resource consumption limits for an Exchange Web Services user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1270,7 +1273,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImapCutoffBalance
-The ImapCutoffBalance parameter specifies the resource consumption limits for an IMAP user before that user is completely blocked from performing operations on a specific component.
+The ImapCutoffBalance parameter specifies the resource consumption limits for an IMAP user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1537,7 +1540,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaCutoffBalance
-The OwaCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web user before that user is completely blocked from performing operations on a specific component.
+The OwaCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1648,7 +1651,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaVoiceCutoffBalance
-The OwaVoiceCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web voice user before that user is completely blocked from performing operations on a specific component.
+The OwaVoiceCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web voice user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1708,7 +1711,7 @@ Accept wildcard characters: False
 ```
 
 ### -PopCutoffBalance
-The PopCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
+The PopCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -1819,7 +1822,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellCutoffBalance
-The PowerShellCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
+The PowerShellCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -2018,7 +2021,7 @@ This property can only be set for the default throttling policy.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2209,7 +2212,7 @@ Accept wildcard characters: False
 ```
 
 ### -RcaCutoffBalance
-The RcaCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
+The RcaCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited
@@ -2324,7 +2327,7 @@ Accept wildcard characters: False
 ```
 
 ### -RcaSharedCutoffBalance
-The RcaSharedCutoffBalance parameter specifies the resource consumption limits for all users before they're completely blocked from performing operations on a specific component.
+The RcaSharedCutoffBalance parameter specifies the resource consumption limits for all users before they're completely blocked from performing operations on a specific component after all available resources have been consumed. There is no preset default value for this parameter but it generally ranges from 600,000 to 3,000,000 in working state depending on the protocol. If for any reason, this value needs to be increased further, you must contact Microsoft Support because a higher value can affect server performance adversely.
 
 ```yaml
 Type: Unlimited

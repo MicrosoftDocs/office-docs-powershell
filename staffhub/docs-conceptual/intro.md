@@ -2,7 +2,7 @@
 
 Welcome to the Microsoft StaffHub cmdlet help references. The Microsoft StaffHub cmdlets provide the command line interface for service administration and management.
 
-Here you will find all of the Microsoft StaffHub PowerShell help topics. The reference documentation can be found here: https://docs.microsoft.com/en-us/powershell/module/staffhub/?view=staffhub-ps
+Here you will find all of the Microsoft StaffHub PowerShell help topics. The reference documentation can be found here: https://docs.microsoft.com/powershell/module/staffhub/?view=staffhub-ps
 
 Instructions on installing the StaffHub cmdlet module can be found here: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
 

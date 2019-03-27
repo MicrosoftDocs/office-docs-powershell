@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,31 +20,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### GetChildren
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
- [-Mailbox <MailboxIdParameter>] [-ResidentFolders] [-Recurse] [<CommonParameters>]
-```
-
-### Set3
-```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
- [-Mailbox <MailboxIdParameter>] [-ResidentFolders] [-GetChildren] [<CommonParameters>]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-ResidentFolders]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
-### Set4
+### Recurse
 ```
-Get-PublicFolder [-LostAndFound] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-ResidentFolders] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-ResidentFolders]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### LostAndFound
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-ResidentFolders]
- [<CommonParameters>]
+Get-PublicFolder [-LostAndFound]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-ResidentFolders]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
+```
+
+### Identity
+```
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-ResidentFolders]
+ [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +118,7 @@ You can't use this switch with the Recurse or LostAndFound switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: GetChildren
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -117,7 +135,7 @@ You can't use this switch with the GetChildren or LostAndFound switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Recurse
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -149,7 +167,7 @@ The Identity parameter specifies the name and path of the public folder you want
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set2, Set3, Set1
+Parameter Sets: GetChildren, Recurse, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -159,35 +177,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. The default maximum is 10,000. For no limit on the returned results, set this parameter to Unlimited. This parameter can only be passed in combination with the Recurse or GetChildren parameters.
+### -LostAndFound
+The LostAndFound switch specifies whether to return only orphaned folders that are located in \\NON\_IPM\_SUBTREE\\LOST\_AND\_FOUND. You don't need to specify a value with this switch.
+
+The LOST\_AND\_FOUND folder holds missing folders that are recreated by the public folder hierarchy reconciliation process when the folder exists in a secondary public folder mailbox, but not in the primary.
+
+You can't use this switch with the Identity parameter or the Recurse or LostAndFound switches.
 
 ```yaml
-Type: Unlimited
-Parameter Sets: Set2, Set3, Set4
+Type: SwitchParameter
+Parameter Sets: LostAndFound
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-This parameter is available or functional only in Exchange Server 2010.
-
-The Server parameter specifies the server on which to perform the selected operations.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -230,6 +235,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Organization
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResidentFolders
 The ResidentFolders specifies whether to return public folders that reside in a specific content public folder mailbox. If this parameter isn't specified, the command will only return public folders whose contents reside in the primary hierarchy public folder mailbox.
 
@@ -245,22 +267,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LostAndFound
-The LostAndFound switch specifies whether to return only orphaned folders that are located in \\NON\_IPM\_SUBTREE\\LOST\_AND\_FOUND. You don't need to specify a value with this switch.
-
-The LOST\_AND\_FOUND folder holds missing folders that are recreated by the public folder hierarchy reconciliation process when the folder exists in a secondary public folder mailbox, but not in the primary.
-
-You can't use this switch with the Identity parameter or the Recurse or LostAndFound switches.
+### -ResultSize
+The ResultSize parameter specifies the maximum number of results to return. The default maximum is 10,000. For no limit on the returned results, set this parameter to Unlimited. This parameter can only be passed in combination with the Recurse or GetChildren parameters.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Set4
+Type: Unlimited
+Parameter Sets: GetChildren, Recurse, LostAndFound
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
+The Server parameter specifies the server on which to perform the selected operations.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: GetChildren, Recurse, Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkMediaBypassConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsNetworkMediaBypassConfiguration
@@ -20,8 +23,8 @@ This cmdlet was introduced in Lync Server 2010.
 ```
 New-CsNetworkMediaBypassConfiguration [-AlwaysBypass <Boolean>] [-BypassID <String>] [-Enabled <Boolean>]
  [-EnableDefaultBypassID <Boolean>] [-ExternalBypassMode <BypassModeEnumType>]
- [-InternalBypassMode <BypassModeEnumType>] [-EnabledForAudioVideoConferences <Boolean>] [-Tenant <Object>]
- [-AsJob] [<CommonParameters>]
+ [-InternalBypassMode <BypassModeEnumType>] [-EnabledForAudioVideoConferences <Boolean>] [-Tenant <Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +64,6 @@ The following parameters are not applicable to Skype for Business Online: AsJob,
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 $a = (Get-CsNetworkConfiguration).MediaBypassSettings
 
 $a.AlwaysBypass = $false
@@ -267,23 +269,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

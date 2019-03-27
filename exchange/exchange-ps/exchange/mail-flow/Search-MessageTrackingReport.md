@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-MessageTrackingReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,20 +22,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SearchAsSender
 ```
 Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress> [-BypassDelegateChecking]
- [-Confirm] [-DomainController <Fqdn>] [-DoNotResolve] [-MessageEntryId <String>] [-MessageId <String>]
- [-ResultSize <Unlimited>] [-Subject <String>] [-TraceLevel <Low | Medium | High>] [-WhatIf]
- [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <Low | Medium | High>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### SearchAsRecipient
 ```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-BypassDelegateChecking] [-Confirm]
- [-DomainController <Fqdn>] [-DoNotResolve] [-MessageEntryId <String>] [-MessageId <String>]
- [-Recipients <SmtpAddress[]>] [-ResultSize <Unlimited>] [-Subject <String>]
- [-TraceLevel <Low | Medium | High>] [-WhatIf] [<CommonParameters>]
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <SmtpAddress[]>]
+ [-BypassDelegateChecking]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <Low | Medium | High>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,7 +124,7 @@ You need to use this parameter with the Identity parameter.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set2
+Parameter Sets: SearchAsSender
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -204,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string. This may include angle brackets.
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>").
 
 ```yaml
 Type: String
@@ -225,7 +241,7 @@ You can't use this parameter with the Sender parameter.
 
 ```yaml
 Type: SmtpAddress[]
-Parameter Sets: Set1
+Parameter Sets: SearchAsRecipient
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

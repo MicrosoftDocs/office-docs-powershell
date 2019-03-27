@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -19,15 +22,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Initialize
 ```
 Install-UnifiedCompliancePrerequisite [-ForceInitialize] [-PolicyCenterSiteOwner <SmtpAddress>]
  [<CommonParameters>]
 ```
 
-### Set2
+### LoadOnly
 ```
-Install-UnifiedCompliancePrerequisite [-LoadOnly] [<CommonParameters>]
+Install-UnifiedCompliancePrerequisite [-LoadOnly]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +79,7 @@ You can't use this switch with the LoadOnly switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Initialize
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -92,7 +96,7 @@ You can't use this switch with the ForceInitialize switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: LoadOnly
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -107,7 +111,7 @@ The PolicyCenterSiteOwner parameter specifies the email address of the owner of 
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set1
+Parameter Sets: Initialize
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -123,12 +127,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

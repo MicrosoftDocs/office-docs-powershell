@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,17 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-PublicFolderDatabase -Server <ServerIdParameter> [-DomainController <Fqdn>] [-IncludePreExchange2010]
- [-Status] [-IncludeCorrupted] [<CommonParameters>]
+Get-PublicFolderDatabase -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludePreExchange2010]
+ [-Status]
+ [-IncludeCorrupted] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>] [-DomainController <Fqdn>]
- [-IncludePreExchange2010] [-Status] [-IncludeCorrupted]
- [<CommonParameters>]
+Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludePreExchange2010]
+ [-Status]
+ [-IncludeCorrupted] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +75,7 @@ The Server parameter specifies the name of a server that contains a public folde
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -105,7 +113,7 @@ If you don't specify the server name, the cmdlet searches for databases on the l
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

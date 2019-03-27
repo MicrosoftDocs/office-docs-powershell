@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-QueueDigest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,32 +22,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Dag
 ```
-Get-QueueDigest -Dag <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Dag <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set4
+### Forest
 ```
-Get-QueueDigest [-Forest] [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest [-Forest]
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set2
+### Server
 ```
-Get-QueueDigest -Server <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Server <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set3
+### Site
 ```
-Get-QueueDigest -Site <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Site <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +92,7 @@ You can't use the Dag parameter with the Server, Site or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Dag
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -92,7 +109,7 @@ You can't use the Forest switch with the Server, Site or Dag parameters.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Forest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -109,7 +126,7 @@ You can't use the Server parameter with the Dag, Site or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -126,7 +143,7 @@ You can't use the Site parameter with the Server, Dag or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set3
+Parameter Sets: Site
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -193,21 +210,6 @@ The default value is NextHopDomain.
 
 ```yaml
 Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeE14Servers
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

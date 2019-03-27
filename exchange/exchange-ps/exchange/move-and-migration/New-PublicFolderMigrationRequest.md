@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PublicFolderMigrationRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,33 +20,49 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### MigrationOutlookAnywherePublicFolder
 ```
-New-PublicFolderMigrationRequest [[-Name] <String>] -OutlookAnywhereHostName <Fqdn>
- -RemoteCredential <PSCredential> -RemoteMailboxLegacyDN <String> -RemoteMailboxServerLegacyDN <String>
+New-PublicFolderMigrationRequest [[-Name] <String>] -OutlookAnywhereHostName <Fqdn> -RemoteCredential <PSCredential> -RemoteMailboxLegacyDN <String> -RemoteMailboxServerLegacyDN <String>
  [-AcceptLargeDataLoss]
  [-AuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-CSVData <Byte[]>] [-CSVStream <Stream>] [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-CSVData <Byte[]>]
+ [-CSVStream <Stream>]
  [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-SkipMerging <SkippableMergeComponent[]>] [-Suspend] [-SuspendComment <String>] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-MigrationMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Default
 ```
 New-PublicFolderMigrationRequest [[-Name] <String>] -SourceDatabase <DatabaseIdParameter>
- [-AcceptLargeDataLoss] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-CSVData <Byte[]>] [-CSVStream <Stream>]
- [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
+ [-AcceptLargeDataLoss]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-CSVData <Byte[]>]
+ [-CSVStream <Stream>]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MigrationMailbox <MailboxIdParameter>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-SkipMerging <SkippableMergeComponent[]>] [-Suspend] [-SuspendComment <String>] [-WhatIf]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-MigrationMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +86,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -88,7 +107,7 @@ You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN 
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -107,7 +126,7 @@ You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -124,7 +143,7 @@ The RemoteMailboxServerLegacyDN parameter specifies the server legacy distinguis
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -145,7 +164,7 @@ The SourceDatabase parameter specifies the identity of the database on which the
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -175,7 +194,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -296,7 +315,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -311,7 +330,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -336,9 +355,26 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationMailbox
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -384,9 +420,32 @@ The Priority parameter specifies the order in which the request should be proces
 
 ```yaml
 Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -402,6 +461,23 @@ Type: SkippableMergeComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceEndpoint
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -461,62 +537,9 @@ The WorkloadType parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MigrationMailbox
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestExpiryInterval
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceEndpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

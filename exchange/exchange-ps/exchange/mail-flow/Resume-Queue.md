@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Resume-Queue
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,14 +20,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filter
 ```
-Resume-Queue -Filter <String> [-Confirm] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Resume-Queue -Filter <String> [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Resume-Queue [-Identity] <QueueIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Resume-Queue [-Identity] <QueueIdentity>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +57,7 @@ You can specify multiple criteria by using the and comparison operator. Property
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -65,7 +72,7 @@ The Identity parameter specifies the queue. Valid input for this parameter uses 
 
 ```yaml
 Type: QueueIdentity
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -111,7 +118,7 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

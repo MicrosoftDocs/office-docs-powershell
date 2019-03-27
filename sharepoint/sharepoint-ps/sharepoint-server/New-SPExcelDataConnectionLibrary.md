@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelDataConnectionLibrary
@@ -26,15 +29,15 @@ Data connection libraries contain data connection files, which contain all the r
 Data connection libraries enable you to reuse and share data connections.
 Data connections can be loaded by using information from the workbook file; however, using a data connection library to load data connections allows data connections to be managed separately from workbooks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$sa = Get-SPExcelServiceApplication
-PS C:\>New-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
+$sa = Get-SPExcelServiceApplication
+New-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
 ```
 
 This example adds a new data connection library (DCL) and then sets its description to the list of trusted data connection libraries that is in the Excel Services Application Web service application named MyExcelService.
@@ -156,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

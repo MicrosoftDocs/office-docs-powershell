@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: Get-ManagedContentSettings
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -17,16 +20,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### FolderName
 ```
-Get-ManagedContentSettings [-DomainController <Fqdn>] [-FolderName <ELCFolderIdParameter>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedContentSettings [-FolderName <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-ManagedContentSettings [[-Identity] <ELCContentSettingsIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedContentSettings [[-Identity] <ELCContentSettingsIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +90,7 @@ This parameter can't be used with the Identity parameter.
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: Set2
+Parameter Sets: FolderName
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -100,7 +107,7 @@ This parameter can't be used with the FolderName parameter.
 
 ```yaml
 Type: ELCContentSettingsIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -131,12 +138,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderMoveRequestStatistics
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,22 +20,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-PublicFolderMoveRequestStatistics [-Identity] <PublicFolderMoveRequestIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-IncludeReport] [-ReportOnly] [<CommonParameters>]
+Get-PublicFolderMoveRequestStatistics [-Identity] <PublicFolderMoveRequestIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly] [<CommonParameters>]
 ```
 
-### Set2
+### MigrationRequestQueue
 ```
-Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-IncludeReport] [-RequestGuid <Guid>] [-ReportOnly]
- [<CommonParameters>]
+Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The RequestQueue parameter is for debugging purposes only.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -60,7 +68,7 @@ This parameter can't be used with the RequestQueue parameter.
 
 ```yaml
 Type: PublicFolderMoveRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -71,6 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
+This parameter is for debugging purposes only.
+
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Database GUID
@@ -81,7 +91,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -158,7 +168,7 @@ This parameter can't be used with the Identity parameter.
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -169,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

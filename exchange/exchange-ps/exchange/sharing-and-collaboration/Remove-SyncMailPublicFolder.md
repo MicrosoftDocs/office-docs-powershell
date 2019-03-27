@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Remove-SyncMailPublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-The Remove-SyncMailPublicFolder cmdlet is used by the Sync-MailPublicFolders.ps1 script to remove mail-enabled public folder recipient objects from Azure Active Directory in Office 365 (the script synchronizes mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
+The Remove-SyncMailPublicFolder cmdlet is used by the Sync-MailPublicFolders.ps1 script to remove mail-enabled public folder recipient objects from Exchange Online in Office 365 (the script synchronizes mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -39,7 +42,7 @@ This cmdlet is only used by the Sync-MailPublicFolders.ps1 script. Don't run thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail-enabled public folder object that you want to remove from Azure Active Directory in Office 365.
+The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365.
 
 For example:
 
@@ -120,12 +123,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

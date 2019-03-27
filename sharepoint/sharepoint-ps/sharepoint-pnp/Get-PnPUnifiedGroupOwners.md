@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPUnifiedGroupOwners
 
 ## SYNOPSIS
-Gets owners of a paricular Office 365 Group (aka Unified Group)
+Gets owners of a particular Office 365 Group (aka Unified Group)
 
 ## SYNTAX 
 
@@ -46,4 +46,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

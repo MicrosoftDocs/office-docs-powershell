@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineLisCivicAddress
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineLisCivicAddress
@@ -13,11 +16,11 @@ Use the Get-CsOnlineLisCivicAddress cmdlet to retrieve information about existin
 ## SYNTAX
 
 ```
-Get-CsOnlineLisCivicAddress [-AssignmentStatus <Object>] [-BypassDualWrite <Object>] [-City <Object>]
- [-CivicAddressId <Object>] [-CountryOrRegion <Object>] [-Description <Object>] [-DomainController <Object>]
- [-Force] [-LocationId <Object>] [-NumberOfResultsToSkip <Object>] [-PopulateNumberOfVoiceUsers]
- [-ResultSize <Object>] [-Tenant <Object>] [-ValidationStatus <Object>] [-AsJob]
- [-PopulateNumberOfTelephoneNumbers] [<CommonParameters>]
+Get-CsOnlineLisCivicAddress [-CivicAddressId <Guid>] [-LocationId <Guid>]
+ [-PopulateNumberOfVoiceUsers] [-PopulateNumberOfTelephoneNumbers] [-AssignmentStatus <String>]
+ [-City <String>] [-CountryOrRegion <String>] [-Description <String>] [-ValidationStatus <String>]
+ [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,23 +52,7 @@ Specifies whether the retrieved addresses have been assigned to users or not.
 Valid inputs are "Assigned", or "Unassigned".
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -81,7 +68,7 @@ Accept wildcard characters: False
 Specifies the city of the target civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -97,7 +84,7 @@ Accept wildcard characters: False
 Specifies the identification number of the civic address to return.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -113,7 +100,7 @@ Accept wildcard characters: False
 Specifies the country or region of the target civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -129,7 +116,7 @@ Accept wildcard characters: False
 Specifies the administrator defined description of the target civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +132,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -179,7 +166,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -200,7 +187,7 @@ For example the command below will return civic addresses 26-50 for Seattle.
 `Get-CsOnlineLisCivicAddress -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -232,7 +219,7 @@ Accept wildcard characters: False
 Specifies the maximum number of results to return.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -248,7 +235,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -265,7 +252,7 @@ Specifies the validation status of the addresses to be returned.
 Valid inputs are: Valid, Invalid, and Notvalidated.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

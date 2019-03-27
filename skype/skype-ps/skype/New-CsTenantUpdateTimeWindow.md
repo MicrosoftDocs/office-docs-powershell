@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: New-CsTenantUpdateTimeWindow
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsTenantUpdateTimeWindow
@@ -12,10 +15,37 @@ Use the `New-CsTenantUpdateTimeWindow` cmdlet to create a new tenant update time
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-New-CsTenantUpdateTimeWindow [[-Identity] <Object>] [-Daily] [-DayOfMonth <Object>] [-DaysOfWeek <Object>]
- [-Monthly] [-Weekly] [-WeeksOfMonth <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Duration <Object>]
- [-Force] [-InMemory] [-StartTime <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Daily
+```
+New-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Daily]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Weekly
+```
+New-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Weekly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -DaysOfWeek <TenantUpdateTimeWindowDayOfWeek> [-InMemory]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### MonthlyByDate
+```
+New-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Monthly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -DayOfMonth <Int32> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### MonthlyByWeekDay
+```
+New-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Monthly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -WeeksOfMonth <TenantUpdateTimeWindowWeekOfMonth>
+ -DaysOfWeek <TenantUpdateTimeWindowDayOfWeek> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +115,7 @@ Day of month.
 It must be defined when Type is Monthly.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -103,7 +133,7 @@ It can be multiple days separated by a comma.
 It must be defined when Type is Weekly or Monthly.
 
 ```yaml
-Type: Object
+Type: TenantUpdateTimeWindowDayOfWeek
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,7 +149,7 @@ Accept wildcard characters: False
 Specifies the identity of the tenant update time window.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -169,23 +199,7 @@ It can be multiple weeks separated by a comma.
 It must be defined when Type is Monthly.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: TenantUpdateTimeWindowWeekOfMonth
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -217,7 +231,7 @@ Accept wildcard characters: False
 Duration of the update time window.
 
 ```yaml
-Type: Object
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -267,7 +281,7 @@ Accept wildcard characters: False
 Time of day when the update time window starts.
 
 ```yaml
-Type: Object
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -283,7 +297,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -302,22 +316,6 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

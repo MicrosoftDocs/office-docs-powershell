@@ -5,6 +5,9 @@ online version:
 applicable: SharePoint Online
 title: Export-SPOQueryLogs
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 
@@ -40,12 +43,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com
 ```
-Example 1 exports the query log for a user who has the e-mail address user1@contoso.harepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
+Example 1 exports the query log for a user who has the e-mail address user1@contoso.sharepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
 
 
 ###   ------------ Example 2 --------------------
 ```
-Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime “2018-10-21” -OutputFolder “c:\users\contosoadmin\Documents”
+Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime "2018-10-21" -OutputFolder "c:\users\contosoadmin\Documents"
 ```
 Example 2 exports the query log from the starting time 21. October 2018, for a user who has the e-mail address user1@contoso.sharepoint.com, to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the folder c:\users\contosoadmin\Documents.
 
@@ -116,8 +119,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
+[Introduction to the SharePoint Online management shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Set up the SharePoint Online Management Shell Windows PowerShell environment](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 

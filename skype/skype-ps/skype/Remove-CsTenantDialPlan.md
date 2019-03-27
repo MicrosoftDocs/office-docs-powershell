@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Remove-CsTenantDialPlan
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsTenantDialPlan
@@ -13,8 +16,8 @@ Use the `Remove-CsTenantDialPlan` cmdlet to remove a tenant dial plan.
 ## SYNTAX
 
 ```
-Remove-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsTenantDialPlan [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,29 +45,13 @@ This example removes the Vt1TenantDialPlan2.
 The Identity parameter is the unique identifier of the tenant dial plan to remove.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -108,7 +95,7 @@ For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -127,22 +114,6 @@ The WhatIf parameter describes what would happen if you executed the command, wi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

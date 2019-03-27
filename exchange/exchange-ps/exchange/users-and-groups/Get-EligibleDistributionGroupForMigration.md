@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,17 +20,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Identity
 ```
 Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParameter>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### ManagedBy
 ```
 Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParameter>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -52,7 +55,7 @@ You can't use this parameter with the ManagedBy parameter.
 
 ```yaml
 Type: DistributionGroupIdParameter
-Parameter Sets: Set3
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -85,22 +88,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: GeneralRecipientIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
+Parameter Sets: ManagedBy
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -154,12 +142,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

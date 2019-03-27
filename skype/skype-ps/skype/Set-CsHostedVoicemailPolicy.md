@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsHostedVoicemailPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsHostedVoicemailPolicy
@@ -134,7 +137,6 @@ If you attempt to enable a user for hosted voice mail and the user's assigned po
 This value must be 255 characters or less and in a format matching the regular expression string ^\[a-zA-Z0-9\-_\]+(\.\[a-zA-Z0-9\-_\]+){0,}$.
 This just means it should be in the form of an FQDN, such as server.litwareinc.com.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -151,7 +153,6 @@ Accept wildcard characters: False
 ### -Organization
 This parameter contains a comma-separated list of the Exchange tenants that contain Skype for Business Server users.
 Each tenant must be specified as an FQDN of the tenant on the hosted Exchange Service.
-
 
 ```yaml
 Type: String
@@ -224,7 +225,8 @@ You can return the tenant ID for each of your tenants by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-
+> [!NOTE]
+> In Skype for Business Server 2019, you can notice that you can use -TenantID in the same way as this parameter.
 
 ```yaml
 Type: Guid

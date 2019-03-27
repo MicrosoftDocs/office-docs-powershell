@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PartnerApplication
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,19 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ACSTrustApplication
 ```
-New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-Realm <String>] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] 
- [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
+ [-AcceptSecurityIdentifierInformation <$true | $false>]
+ [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-IssuerIdentifier <String>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### AuthMetadataUrl
 ```
-New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-TrustAnySSLCertificate] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+ [-AcceptSecurityIdentifierInformation <$true | $false>]
+ [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-IssuerIdentifier <String>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,12 +68,27 @@ This example creates a new HRApp partner application named HRApp.
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a name for the partner application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplicationIdentifier
 The ApplicationIdentifier parameter specifies a unique application identifier for the partner application that uses an authorization server. When specifying a value for the ApplicationIdentifier parameter, you must also use the UseAuthServer parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -72,26 +105,11 @@ The AuthMetadataUrl parameter specifies the URL that Exchange can retrieve the A
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a name for the partner application.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -105,6 +123,59 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccountType
+The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
+
+- OrganizationalAccount (This is the default value)
+
+- ConsumerAccount
+
+```yaml
+Type: OrganizationalAccount | ConsumerAccount
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActAsPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppOnlyPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +234,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IssuerIdentifier
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LinkedAccount
 The LinkedAccount parameter specifies a linked Active Directory user account for the application. Exchange evaluates Role Based Access Control (RBAC) permissions for the linked account when authorizing a token used to perform a task.
 
@@ -185,7 +273,7 @@ The Realm parameter specifies a security realm for the partner application. If t
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -204,7 +292,7 @@ We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -222,25 +310,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountType
-The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
-
-- OrganizationalAccount: This is the default value
-
-- ConsumerAccount
-
-```yaml
-Type: OrganizationalAccount | ConsumerAccount
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

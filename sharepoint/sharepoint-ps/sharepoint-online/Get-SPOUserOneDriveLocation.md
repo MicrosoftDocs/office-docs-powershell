@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOUserOneDriveLocation
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOUserOneDriveLocation
 
 ## SYNOPSIS
-This cmdlet will return the UPN of a user, current location this user locates, user’s corresponding MySite(ODB) Url and the site id.
+This cmdlet will return the user principal name, current location, and corresponding OneDrive for Business url, and the site ID. This cmdlet only supports Multi-Geo OneDrive sites.
 
 ## SYNTAX
 
@@ -17,7 +20,7 @@ Get-SPOUserOneDriveLocation -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command will return information about the onedrive location from the current user
+This command will return information about the OneDrive location for the specified user.
 
 ## EXAMPLES
 
@@ -25,7 +28,7 @@ This command will return information about the onedrive location from the curren
 ```powershell
 Get-SPOUserOneDriveLocation -UserPrincipalName admin@contoso.com
 ```
-Get the current location this user locates, user's corresponding MySite(ODB) Url and site ID.
+Get the current location the user's OneDrive location, url, and site ID.
 
 ## PARAMETERS
 
@@ -51,7 +54,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

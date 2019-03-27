@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: Set-AvailabilityReportOutage
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -17,18 +20,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity (Default)
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String>
- -ReportDate <ExDateTime> [-Confirm] [-DowntimeMinutes <Double>] [-Force] [-ReportingDatabase <String>]
- [-ReportingServer <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime> [-DowntimeMinutes <Double>]
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ResetToOriginal
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime>
- [-ResetToOriginal] [-Confirm] [-Force] [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime> [-ResetToOriginal]
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +59,7 @@ The Comment parameter describes the outage that was inserted.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -95,7 +104,7 @@ The ResetToOriginal parameter specifies whether to reset the previously selected
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ResetToOriginal
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -129,7 +138,7 @@ The DowntimeMinutes parameter specifies the number of minutes of downtime to ins
 
 ```yaml
 Type: Double
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -205,12 +214,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

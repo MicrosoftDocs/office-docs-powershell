@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-EdgeSynchronization
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,17 +20,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SingleValidation
 ```
-Test-EdgeSynchronization -VerifyRecipient <ProxyAddress> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Test-EdgeSynchronization -VerifyRecipient <ProxyAddress>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Default
 ```
-Test-EdgeSynchronization [-Confirm] [-DomainController <Fqdn>] [-ExcludeRecipientTest] [-FullCompareMode]
- [-MaxReportSize <Unlimited>] [-MonitoringContext <$true | $false>] [-TargetServer <String>] [-WhatIf]
- [<CommonParameters>]
+Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <$true | $false>] [-TargetServer <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +66,7 @@ The VerifyRecipient parameter specifies a single recipient with which to verify 
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set2
+Parameter Sets: SingleValidation
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -109,7 +115,7 @@ The ExcludeRecipientTest switch specifies whether to exclude validation of recip
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -124,7 +130,7 @@ The FullCompareMode switch specifies whether a full comparison of the configurat
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -139,7 +145,7 @@ The MaxReportSize parameter specifies the total number of objects and properties
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -154,7 +160,7 @@ The MonitoringContext parameter specifies whether to include the associated moni
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -171,7 +177,7 @@ You may want to use this parameter to specify a single Edge Transport server for
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

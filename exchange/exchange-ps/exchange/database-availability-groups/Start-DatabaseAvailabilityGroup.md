@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Start-DatabaseAvailabilityGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,18 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -ActiveDirectorySite <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-ConfigurationOnly]
- [-QuorumOnly] [<CommonParameters>]
+Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -ActiveDirectorySite <AdSiteIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxSet
 ```
-Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -MailboxServer <MailboxServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-ConfigurationOnly]
- [-QuorumOnly] [<CommonParameters>]
+Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -MailboxServer <MailboxServerIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +66,7 @@ The ActiveDirectorySite parameter specifies whether to start all DAG members in 
 
 ```yaml
 Type: AdSiteIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -89,13 +96,28 @@ The MailboxServer parameter specifies whether to start a single DAG member.
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ConfigurationOnly
+The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -141,36 +163,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConfigurationOnly
-The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QuorumOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsTenantUpdateTimeWindow
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTenantUpdateTimeWindow
@@ -12,9 +15,15 @@ Use the Get-CsTenantUpdateTimeWindow cmdlet to retrieve information about your t
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTenantUpdateTimeWindow [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantUpdateTimeWindow [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTenantUpdateTimeWindow [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,27 +55,11 @@ The command shown in Example 2 returns information for the tenant update time wi
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -82,7 +75,7 @@ Accept wildcard characters: False
 Specifies the identity of the tenant update time window.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -114,7 +107,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

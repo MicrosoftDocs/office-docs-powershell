@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOSite
@@ -40,7 +43,7 @@ Additional site collections are now displayed. For example, all group and video 
 
 The Detailed parameter has been deprecated. It will continue to work with earlier versions
 
-You may see an impact on performance when the Filter parameter is used.
+Currently, Filter parameter is not functional.
 
 > [!NOTE] 
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
@@ -71,7 +74,7 @@ Example 2 lists the site collection with detailed properties.
 ```
 Get-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwnersStatus
 ```
-Example 3 disables the ability for non owners of a site collection to share. 
+Example 3 Updates status on if the non owners of a site collection can share the site collection (does not set this value).
 
 ### -----------------------EXAMPLE 4-----------------------------
 ```

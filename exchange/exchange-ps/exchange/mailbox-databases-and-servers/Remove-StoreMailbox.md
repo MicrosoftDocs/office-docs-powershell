@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-StoreMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,8 +21,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter>
- -MailboxState <Disabled | SoftDeleted> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <Disabled | SoftDeleted>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +55,7 @@ This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
+Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -match "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
 ```
 
 This example permanently purges all soft-deleted mailboxes from mailbox database MBD01.

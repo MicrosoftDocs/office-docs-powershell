@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-FederationTrust
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,17 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SkipNamespaceProviderProvisioning
 ```
-New-FederationTrust [-Name] <String> -ApplicationUri <String> [-SkipNamespaceProviderProvisioning]
- -Thumbprint <String> [-AdministratorProvisioningId <String>] [-ApplicationIdentifier <String>] [-Confirm]
- [-DomainController <Fqdn>] [-MetadataUrl <Uri>] [-WhatIf] [<CommonParameters>]
+New-FederationTrust [-Name] <String> -Thumbprint <String> -ApplicationUri <String> [-SkipNamespaceProviderProvisioning] [-AdministratorProvisioningId <String>] [-ApplicationIdentifier <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MetadataUrl <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### FederationTrust
 ```
-New-FederationTrust [-Name] <String> -Thumbprint <String> [-Confirm] [-DomainController <Fqdn>]
- [-MetadataUrl <Uri>] [-SuppressDnsWarning] [-UseLegacyProvisioningService] [-WhatIf] [<CommonParameters>]
+New-FederationTrust [-Name] <String> -Thumbprint <String> [-SuppressDnsWarning] [-UseLegacyProvisioningService]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MetadataUrl <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +78,7 @@ If you specify the ApplicationUri parameter, you must use the SkipNamespaceProvi
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -87,7 +95,7 @@ If you use this switch, you must specify the ApplicationIdentifier, ApplicationU
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -119,7 +127,7 @@ If you specify the AdministratorProvisioningId parameter, you must use the SkipN
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -136,7 +144,7 @@ If you specify the ApplicationIdentifier parameter, you must use the SkipNamespa
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -202,7 +210,7 @@ The SuppressDNSWarning parameter specifies whether to display the DNS warning me
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: FederationTrust
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -217,7 +225,7 @@ The UseLegacyProvisioningService parameter specifies if the legacy interface on 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: FederationTrust
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

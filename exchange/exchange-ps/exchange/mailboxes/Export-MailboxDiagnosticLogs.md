@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Export-MailboxDiagnosticLogs
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,18 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MailboxLog
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentName <String> [-Archive]
- [-Confirm] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentName <String>
+ [-Archive]
+ [-Confirm]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ExtendedProperties
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties] [-Archive]
- [-Confirm] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties]
+ [-Archive]
+ [-Confirm]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +66,9 @@ This example retrieves the calendar permissions diagnostic log for the mailbox n
 ## PARAMETERS
 
 ### -ComponentName
-The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises or Exchange Online). Possible values are:
+The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
+
+- ActionProcessingAgent
 
 - BirthdayAssistant
 
@@ -69,7 +84,11 @@ The ComponentName parameter specifies the component that you want to retrieve th
 
 - InternetCalendar
 
+- InternalCalendarSharingMigration
+
 - MRM
+
+- OnlineMeetings
 
 - OOFRules
 
@@ -79,9 +98,11 @@ The ComponentName parameter specifies the component that you want to retrieve th
 
 - SharingSyncAssistant
 
+- SweepRules
+
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: MailboxLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -96,7 +117,7 @@ The ExtendedProperties switch specifies whether to retrieve all of the well-know
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ExtendedProperties
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

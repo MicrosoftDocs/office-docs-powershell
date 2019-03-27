@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOSite
@@ -13,13 +16,8 @@ Sets or updates one or more properties' values for a site collection.
 
 ## SYNTAX
 
-### ParamSet2
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
 ### ParamSet1
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
@@ -29,21 +27,33 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
+ [-DisabledWebpartIds <Guid>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
 ```
+### ParamSet2
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+
 
 ### ParamSet3
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwners] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### ParamSet4
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
+### ParamSet4 (valid for Group Site Collection)
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+ [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+ [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+ [<CommonParameters>]
 ```
 
 
@@ -58,7 +68,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
 ```
 
@@ -66,7 +76,7 @@ Example 1 updates the owner of site collection https://contoso.sharepoint.com/si
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 15000
 ```
 
@@ -74,7 +84,7 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 3000 -StorageQuotaWarningLevel 2000
 ```
 
@@ -82,7 +92,7 @@ This example updates the settings of site collection https://contoso.sharepoint.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
 ```
 
@@ -90,15 +100,24 @@ Example 4 prevents non-owners of a site from inviting new users to the site.
 
 
 ### -----------------------EXAMPLE 5-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
 ```
 
 This example sets the quota for the site.
 
+
+
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
+
+### -----------------------EXAMPLE 6-----------------------------
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
+```
+
+Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
 ## PARAMETERS
 
@@ -207,6 +226,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DisabledWebpartIds
+This parameter is used for enabling disabled web parts that use third-party service (Amazon Kindle, YouTube, Twitter).  The GUIDs that can be used are 46698648-fcd5-41fc-9526-c7f7b2ace919 (Amazon Kindle), 544dd15b-cf3c-441b-96da-004d5a8cea1d (YouTube), f6fdf4f8-4a24-437b-a127-32e66a5dd9b4 (Twitter).
+
+The Set-SPOTenant cmdlet is used for disabling these web parts with third-party services. 
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -LocaleId
 Specifies the language of this site collection.
@@ -544,23 +582,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NewUrl
-PARAMVALUE: String
-
-
-```yaml
-Type: String
-Parameter Sets: ParamSet4
-Aliases: 
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RestrictedToGeo
 PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
 
@@ -644,7 +665,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
 
 
 ```yaml
@@ -739,8 +760,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOTenant](Set-SPOTenant.md)

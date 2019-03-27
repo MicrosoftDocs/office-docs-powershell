@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationBatch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,114 +22,264 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Local
 ```
-New-MigrationBatch [-Local] -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] [-CSVData <Byte[]>] [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>] [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly]
- [-ReportInterval <System.TimeSpan>] [-SkipMoving <MultiValuedProperty>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>]
- [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>]
- [<CommonParameters>]
+New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### LocalPublicFolder
 ```
-New-MigrationBatch -Name <String> -SourcePublicFolderDatabase <DatabaseIdParameter>
- [-AllowIncrementalSyncs <System.Boolean>] [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete]
- [-AutoRetryCount <System.Int32>] [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]>
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase <DatabaseIdParameter>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch [-UserIds] <MultiValuedProperty> -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DisableOnCopy] [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DisableOnCopy]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Preexisting
 ```
-New-MigrationBatch [-Users] <MultiValuedProperty> -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DisableOnCopy] [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DisableOnCopy]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Onboarding
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] [-CSVData <Byte[]>] [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipMoving <MultiValuedProperty>]
- [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>] [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>] [-TargetDeliveryDomain <String>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-CompleteAfter <System.DateTime>] [-ExcludeFolders <MultiValuedProperty>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [-ExcludeDumpsters] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Offboarding
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipMoving <MultiValuedProperty>]
- [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>] [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>] [-TargetEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### XO1
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart]
- [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DomainController <Fqdn>] [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>] [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <System.DateTime>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [<CommonParameters>]
 ```
 
 ### PublicFolderToUnifiedGroup
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart]
- [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>] [-ReportInterval <System.TimeSpan>] [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>] [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-PublicFolderToUnifiedGroup] [-CompleteAfter <System.DateTime>]
- [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Abch
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- -CSVData <Byte[]> [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### WorkflowTemplate
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-WorkflowTemplate <String>] [-CompleteAfter <System.DateTime>]
- [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,54 +311,123 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2; Start-MigrationBatch -Identity LocalMove1
+New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2; 
+Start-MigrationBatch -Identity LocalMove1
 ```
 
 This example creates a migration batch for a local move, where the mailboxes in the specified CSV file are moved to a different mailbox database. This CSV file contains a single column with the email address for the mailboxes that will be moved. The header for this column must be named EmailAddress. The migration batch in this example must be started manually by using the Start-MigrationBatch cmdlet or the Exchange admin center. Alternatively, you can use the AutoStart parameter to start the migration batch automatically.
 
 ### -------------------------- Example 2 --------------------------
 ```
-$Credentials = Get-Credential; $MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials; $CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")); Start-MigrationBatch -Identity $CrossForestBatch.Identity
+$Credentials = Get-Credential; 
+$MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials; 
+$CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")); Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
 This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Note that cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
 
 ### -------------------------- Example 3 --------------------------
 ```
-$Credentials = Get-Credential; $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")); Start-MigrationBatch -Identity $OnboardingBatch.Identity
+$Credentials = Get-Credential; 
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")); 
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
 This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes that will be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
 
 ### -------------------------- Example 4 --------------------------
 ```
-$Credentials = Get-Credential; $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; $OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv")); Start-MigrationBatch -Identity $OffboardingBatch.Identity
+$Credentials = Get-Credential; 
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
+$OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv")); 
+Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
 This example creates a migration batch for an offboarding remote move migration from Exchange Online to an on-premises Exchange organization. Like an onboarding remote move, it's initiated from the Exchange Online organization. First a Migration Endpoint is created that contains information about how to connect to the on-premises organization. The endpoint is used as the TargetEndpoint when creating the migration batch, which is then started with the Start-MigrationBatch cmdlet. The TargetDatabases parameter specifies multiple on-premises databases that the migration service can select as the target database to move the mailbox to.
 
 ### -------------------------- Example 5 --------------------------
 ```
-$credentials = Get-Credential; $SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials; New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
+$credentials = Get-Credential; 
+$SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials; 
+New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
 This example creates a migration batch for the cutover Exchange migration CutoverBatch that's automatically started. The example obtains the connection settings to the on-premises Exchange server, and then uses those connection settings to create a migration endpoint. The endpoint is then used to create the migration batch. This example also includes the optional TimeZone parameter.
 
 ### -------------------------- Example 6 --------------------------
 ```
-$Credentials = Get-Credential; $MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; $StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv")); Start-MigrationBatch -Identity $StagedBatch1.Identity
+$Credentials = Get-Credential; 
+$MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; 
+$StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv")); 
+Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
 This example creates and starts a migration batch for a staged Exchange migration. The example uses the New-MigrationEndpoint cmdlet to create a migration endpoint for the on-premises Exchange server, and then uses that endpoint to create the migration batch. The migration batch is started with the Start-MigrationBatch cmdlet.
 
 ### -------------------------- Example 7 --------------------------
 ```
-New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993; New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
+New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993; 
+New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```
 
 This example creates a migration endpoint for the connection settings to the IMAP server. Then an IMAP migration batch is created that uses the CSV migration file IMAPmigration\_1.csv and excludes the contents of the Deleted Items and Junk Email folders. This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
+### -------------------------- Example 8 --------------------------
+```
+$Credentials = Get-Credential; 
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"; 
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. This method allows you to start a migration and then leave it to complete after business hours.
+
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CSVData
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://technet.microsoft.com/library/dn170437.aspx).
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Byte[]
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Local
 This parameter is available only in on-premises Exchange.
@@ -217,21 +439,6 @@ Type: SwitchParameter
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies an unique name for the migration batch. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -308,7 +515,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
-Type: System.Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -322,12 +529,12 @@ Accept wildcard characters: False
 ### -AllowUnknownColumnsInCsv
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
-- $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columnswithmisspelledcolumn headers). All unknown columns are treated like extra columns that aren't used by migration.
+- $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
 
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
-Type: System.Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -339,7 +546,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveOnly
-The ArchiveOnlyswitchspecifies that only archive mailboxes are migrated for the users in the migration batch (primary mailboxes aren't migrated). You don't need to specify a value with this switch.
+The ArchiveOnly switch specifies that only archive mailboxes are migrated for the users in the migration batch (primary mailboxes aren't migrated). You don't need to specify a value with this switch.
 
 You can only use this switch for local moves and remote move migrations.
 
@@ -358,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoComplete
-The AutoCompleteswitch forces the finalization of the individual mailboxes as soon as the mailbox has completed initial synchronization. You don't need to specify a value with this switch.
+The AutoComplete switch forces the finalization of the individual mailboxes as soon as the mailbox has completed initial synchronization. You don't need to specify a value with this switch.
 
 You can only use this switch for local moves and remote move migrations.
 
@@ -394,7 +601,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoStart
-The AutoStartswitch immediately starts the processing of the new migration batch. You don't need to specify a value with this switch.
+The AutoStart switch immediately starts the processing of the new migration batch. You don't need to specify a value with this switch.
 
 If you don't use this switch, you need to manually start the migration batch by using the Start-MigrationBatch cmdlet.
 
@@ -428,8 +635,6 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the could-based service.
-
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -445,10 +650,10 @@ To specify a date/time value for this parameter, use either of the following opt
 This parameter should only be used in the cloud-based service.
 
 ```yaml
-Type: System.DateTime
-Parameter Sets: Local, LocalPublicFolder, PreexistingUserIds, Preexisting, Onboarding, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate
+Type: DateTime
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -475,37 +680,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CSVData
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://technet.microsoft.com/library/dn170437.aspx).
-
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
-
-```yaml
-Type: Byte[]
-Parameter Sets: LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Byte[]
-Parameter Sets: Local, Onboarding
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableOnCopy
-The DisableOnCopyswitch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
+The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -522,7 +698,7 @@ Accept wildcard characters: False
 ### -DisallowExistingUsers
 This parameter is available only in on-premises Exchange.
 
-The DisallowExistingUsersswitch prevents the migration of mailboxes that are currently defined in a different migration batch. You don't need to specify a value with this switch.
+The DisallowExistingUsers switch prevents the migration of mailboxes that are currently defined in a different migration batch. You don't need to specify a value with this switch.
 
 A validation warning is displayed for any pre-existing mailbox in the target destination.
 
@@ -829,8 +1005,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -845,9 +1019,9 @@ To specify a date/time value for this parameter, use either of the following opt
 
 ```yaml
 Type: DateTime
-Parameter Sets: Sets: Local, LocalPublicFolder, PreexistingUserIds, Preexisting, Onboarding, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate
+Parameter Sets: Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsHybridPSTNSite
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsHybridPSTNSite
@@ -12,10 +15,18 @@ Use the `Set-CsHybridPSTNSite` cmdlet to modify an existing hybrid public switch
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsHybridPSTNSite [[-Identity] <Object>] [-BitsUpdateTimeWindow <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-EdgeFQDN <Object>] [-EnableAutoUpdate <Object>] [-Force] [-Instance <Object>]
- [-OsUpdateTimeWindow <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsHybridPSTNSite [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-EdgeFQDN <String>]
+ [-EnableAutoUpdate <Boolean>] [-BitsUpdateTimeWindow <Int32>] [-OsUpdateTimeWindow <Int32>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsHybridPSTNSite [-Tenant <Guid>] [-EdgeFQDN <String>] [-EnableAutoUpdate <Boolean>]
+ [-BitsUpdateTimeWindow <Int32>] [-OsUpdateTimeWindow <Int32>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +54,7 @@ Specifies the identity of the hybrid public switched telephone network (PSTN) si
 For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -59,23 +70,7 @@ Accept wildcard characters: False
 Time window for updating Skype for Business Cloud Connector Edition bits on the appliance.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,7 +103,7 @@ Specifies the fully qualified domain name of the edge server.
 For example: `-EdgeFQDN Contoso.Denver.Edge.com`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -126,7 +121,7 @@ If set to $false, automatic updates will be turned off for the Skype for Busines
 The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -160,7 +155,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -176,7 +171,7 @@ Accept wildcard characters: False
 Time window for updating the operating system on the appliance.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -199,7 +194,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -219,22 +214,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

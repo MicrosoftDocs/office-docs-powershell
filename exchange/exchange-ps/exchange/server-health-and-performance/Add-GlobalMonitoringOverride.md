@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-GlobalMonitoringOverride
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,18 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ApplyVersion
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version>
- -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-Roles <String>] [<CommonParameters>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Roles <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Duration
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
- -PropertyName <String> -PropertyValue <String> [-Confirm] [-DomainController <Fqdn>]
- [-Duration <EnhancedTimeSpan>] [-WhatIf] [-BuildRange <String>] [-Roles <String>] [<CommonParameters>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> [-BuildRange <String>] [-Duration <EnhancedTimeSpan>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Roles <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +68,7 @@ You can't use this parameter with the Duration parameter.
 
 ```yaml
 Type: Version
-Parameter Sets: Set2
+Parameter Sets: ApplyVersion
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -184,7 +191,7 @@ You can't use this parameter with the ApplyVersion parameter.
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: Duration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -214,7 +221,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Duration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

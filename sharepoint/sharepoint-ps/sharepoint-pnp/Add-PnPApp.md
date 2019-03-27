@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
 # Add-PnPApp
@@ -58,6 +58,8 @@ This will upload the specified app package to the site collection app catalog an
 ### -Overwrite
 Overwrites the existing app package if it already exists
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -69,6 +71,8 @@ Accept pipeline input: False
 
 ### -Path
 Specifies the Id or an actual app metadata instance
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -82,6 +86,8 @@ Accept pipeline input: True
 ### -Publish
 This will deploy/trust an app into the app catalog
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Add and Publish
@@ -93,6 +99,8 @@ Accept pipeline input: False
 
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: AppCatalogScope
@@ -106,6 +114,8 @@ Accept pipeline input: False
 ### -SkipFeatureDeployment
 
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Add and Publish
@@ -118,6 +128,8 @@ Accept pipeline input: False
 ### -Timeout
 Specifies the timeout in seconds. Defaults to 200.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: Int
 Parameter Sets: (All)
@@ -129,6 +141,8 @@ Accept pipeline input: False
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection
@@ -145,4 +159,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

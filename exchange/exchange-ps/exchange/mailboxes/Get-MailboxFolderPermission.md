@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxFolderPermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -133,9 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch specifies that you want to use this cmdlet on an Office 365 Group. You don't need to specify a value with this switch.
-
-This switch is required when you use this cmdlet on an Office 365 Group.
+The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

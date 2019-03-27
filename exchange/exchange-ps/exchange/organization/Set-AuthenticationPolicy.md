@@ -3,15 +3,15 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-AuthenticationPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
 # Set-AuthenticationPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> This topic describes a preview feature that isn't available to everyone, and is subject to change.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Set-AuthenticationPolicy cmdlet to modify authentication policies in Exchange Online.
@@ -21,7 +21,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter> [-AllowBasicAuthActiveSync] [-AllowBasicAuthAutodiscover] [-AllowBasicAuthImap] [-AllowBasicAuthMapi] [-AllowBasicAuthOfflineAddressBook] [-AllowBasicAuthOutlookService] [-AllowBasicAuthPop] [-AllowBasicAuthPowershell] [-AllowBasicAuthReportingWebServices] [-AllowBasicAuthRest] [-AllowBasicAuthRpc] [-AllowBasicAuthSmtp] [-AllowBasicAuthWebServices] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
+ [-AllowBasicAuthActiveSync]
+ [-AllowBasicAuthAutodiscover]
+ [-AllowBasicAuthImap]
+ [-AllowBasicAuthMapi]
+ [-AllowBasicAuthOfflineAddressBook]
+ [-AllowBasicAuthOutlookService]
+ [-AllowBasicAuthPop]
+ [-AllowBasicAuthPowershell]
+ [-AllowBasicAuthReportingWebServices]
+ [-AllowBasicAuthRpc]
+ [-AllowBasicAuthSmtp]
+ [-AllowBasicAuthWebServices]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AuthenticationPolicy -Identity "Engineering Group" -AllowBasicAuthReportingWebServices
 ```
 
-This example modifies the authentication policy named Engineering Group to all Basic authentication for Exchange Remporting Web Services (EWS)
+This example modifies the authentication policy named Engineering Group to all Basic authentication for Exchange Reporting Web Services.
 
 ## PARAMETERS
 
@@ -60,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthActiveSync
-The AllowBasicAuthActiveSync switch specifies whther to allow Basic authentication with Exchange Active Sync.
+The AllowBasicAuthActiveSync switch specifies whether to allow Basic authentication with Exchange Active Sync.
 
 - To change the value to $true, use this switch without a value.
 
@@ -79,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthAutodiscover
-The AllowBasicAuthAutodiscover switch specifies whther to allow Basic authentication with Autodiscover.
+The AllowBasicAuthAutodiscover switch specifies whether to allow Basic authentication with Autodiscover.
 
 - To change the value to $true, use this switch without a value.
 
@@ -98,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthImap
-The AllowBasicAuthImap switch specifies whther to allow Basic authentication with IMAP.
+The AllowBasicAuthImap switch specifies whether to allow Basic authentication with IMAP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -117,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthMapi
-The AllowBasicAuthMapi switch specifies whther to allow Basic authentication with MAPI.
+The AllowBasicAuthMapi switch specifies whether to allow Basic authentication with MAPI.
 
 - To change the value to $true, use this switch without a value.
 
@@ -136,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOfflineAddressBook
-The AllowBasicAuthOfflineAddressBook switch specifies whther to allow Basic authentication with Offline Address Books.
+The AllowBasicAuthOfflineAddressBook switch specifies whether to allow Basic authentication with Offline Address Books.
 
 - To change the value to $true, use this switch without a value.
 
@@ -155,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOutlookService
-The AllowBasicAuthOutlookService switch specifies whther to allow Basic authentication with the Outlook service.
+The AllowBasicAuthOutlookService switch specifies whether to allow Basic authentication with the Outlook service.
 
 - To change the value to $true, use this switch without a value.
 
@@ -174,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPop
-The AllowBasicAuthPop switch specifies whther to allow Basic authentication with POP.
+The AllowBasicAuthPop switch specifies whether to allow Basic authentication with POP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -193,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPowershell
-The AllowBasicAuthPowerShell switch specifies whther to allow Basic authentication with PowerShell.
+The AllowBasicAuthPowerShell switch specifies whether to allow Basic authentication with PowerShell.
 
 - To change the value to $true, use this switch without a value.
 
@@ -212,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthReportingWebServices
-The AllowBasicAuthReporting Web Services switch specifies whther to allow Basic authentication with reporting web services.
+The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic authentication with reporting web services.
 
 - To change the value to $true, use this switch without a value.
 
@@ -230,27 +244,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowBasicAuthRest
-The AllowBasicAuthRest switch specifies whther to allow Basic authentication with REST.
-
-- To change the value to $true, use this switch without a value.
-
-- To change the value to $false, use this exact syntax: -AllowBasicAuthRest:$false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowBasicAuthRpc
-The AllowBasicAuthRpc switch specifies whther to allow Basic authentication with RPC.
+The AllowBasicAuthRpc switch specifies whether to allow Basic authentication with RPC.
 
 - To change the value to $true, use this switch without a value.
 
@@ -269,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthSmtp
-The AllowBasicAuthSmtp switch specifies whther to allow Basic authentication with SMTP.
+The AllowBasicAuthSmtp switch specifies whether to allow Basic authentication with SMTP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -288,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthWebServices
-The AllowBasicAuthWebServices switch specifies whther to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
+The AllowBasicAuthWebServices switch specifies whether to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
 
 - To change the value to $true, use this switch without a value.
 
@@ -326,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-SThe WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -346,12 +341,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

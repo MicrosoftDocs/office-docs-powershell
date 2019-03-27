@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-PowerShellConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,21 +22,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### URL
 ```
 Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TestType <Internal | External>] [-TrustAnySSLCertificate]
- [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +89,7 @@ This example tests the PowerShell (Default Web Site) virtual directory on the MB
 $UserCredentials = Get-Credential; Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
 ```
 
-This example tests the remote PowerShell virtual directory that's available at https://contoso.com/powershell. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directoryis configured to use Basic authentication.
+This example tests the remote PowerShell virtual directory that's available at https://contoso.com/powershell. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directory is configured to use Basic authentication.
 
 The credentials that are used to connect to the virtual directory are stored in the $UserCredentials variable. The test is then run as previously described.
 
@@ -90,7 +102,7 @@ You can't use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -109,7 +121,7 @@ You can only use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -163,7 +175,7 @@ You can't use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -271,7 +283,7 @@ You can only use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Internal | External
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -305,7 +317,7 @@ You can only use this parameter with the ClientAccessServer parameter. If you do
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

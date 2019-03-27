@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxPermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,16 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Owner
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Owner] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set1
+### AccessRights
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-User <SecurityPrincipalIdParameter>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -156,7 +165,7 @@ This parameter can't be used with the User parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -209,7 +218,7 @@ This parameter can't be used with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

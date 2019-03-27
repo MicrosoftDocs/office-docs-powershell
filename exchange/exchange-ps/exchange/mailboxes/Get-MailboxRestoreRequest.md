@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxRestoreRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -17,22 +20,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>]
- [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
+Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Filtering
 ```
-Get-MailboxRestoreRequest [-BatchName <String>] [-DomainController <Fqdn>] [-HighPriority <$true | $false>]
- [-Name <String>] [-ResultSize <Unlimited>]
- [-SourceDatabase <DatabaseIdParameter>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [-TargetDatabase <DatabaseIdParameter>]
- [-TargetMailbox <MailboxOrMailUserIdParameter>] [-RequestQueue <DatabaseIdParameter>]
- [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
+Get-MailboxRestoreRequest [-BatchName <String>] [-HighPriority <$true | $false>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-SourceDatabase <DatabaseIdParameter>] [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>] [-Suspend <$true | $false>] [-TargetDatabase <DatabaseIdParameter>] [-TargetMailbox <MailboxOrMailUserIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +78,7 @@ You can't use this parameter with the Name parameter.
 
 ```yaml
 Type: MailboxRestoreRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -96,7 +95,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -134,7 +133,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -155,9 +154,32 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestQueue
+This parameter is available only in on-premises Exchange.
+
+The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
+
+- Database GUID
+
+- Database name
+
+You can't use this parameter with the Identity parameter.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Filtering
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +215,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -230,7 +252,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -247,7 +269,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -270,7 +292,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -301,47 +323,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestQueue
-This parameter is available only in on-premises Exchange.
-
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
-
-- Database GUID
-
-- Database name
-
-You can't use this parameter with the Identity parameter.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountPartition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

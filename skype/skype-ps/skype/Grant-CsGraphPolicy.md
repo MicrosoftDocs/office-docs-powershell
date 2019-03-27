@@ -1,31 +1,41 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Grant-CsGraphPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsGraphPolicy
 
 ## SYNOPSIS
-Use the `Grant-CsGraphPolicy` cmdlet to assign a previously defined graph policy to a user or to your organization.
-Graph policies determine whether users can pre-load content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
+Use the Grant-CsGraphPolicy cmdlet to assign a previously defined graph policy to a user or to your organization.
+Graph policies determine whether users can pre-load content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting,
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsGraphPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>]
- [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsGraphPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsGraphPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Skype for Business Online supports a Global CsGraphPolicy that is set by default to enable Outlook content pre-load in Skype for Business Online meetings.
 The Global policy can't be changed by you.
-Use the `Grant-CsGraphPolicy` cmdlet to assign a predefined graph policy to users in your organization.
+Use the Grant-CsGraphPolicy cmdlet to assign a predefined graph policy to users in your organization.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "Grant-CsGraphPolicy"}`
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}`
 
 ## EXAMPLES
 
@@ -44,10 +54,10 @@ Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
 Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "GraphEnabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled"`.
 
 Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "GraphDisabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled"`.
 
 ```yaml
 Type: String
@@ -79,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+Specifies the domain controller that's used by the cmdlet to read or write the specified data.
+Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
 
 ```yaml
 Type: Fqdn
@@ -164,7 +175,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -195,5 +206,5 @@ The Grant-CsGraphPolicy cmdlet returns an object of type Microsoft.Rtc.Managemen
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsGraphPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csgraphpolicy?view=skype-ps)
+
 

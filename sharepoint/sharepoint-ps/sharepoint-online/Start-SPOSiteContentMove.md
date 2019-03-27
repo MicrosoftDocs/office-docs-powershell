@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOSiteContentMove
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Start-SPOSiteContentMove
@@ -43,7 +46,7 @@ This command starts the information and the status of a move request of a user b
 ```powershell
 Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
-Starts the movement of the content on $url to the destination defined on $DestLocation variable prefered to start 1 hour ahead from now, until 12 hours to that relative time.
+Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
 ### EXAMPLE 2
 ```powershell
@@ -203,8 +206,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Start-SPOSiteRename](Start-SPOSiteRename.md)
+
+[Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
 [Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
