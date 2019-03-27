@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsCallQueue
 
 ## SYNOPSIS
-The Get-CsCallQueue cmdlet returns the identified call queues.
+The Get-CsCallQueue cmdlet returns the identified Call Queues.
 
 ## SYNTAX
 
@@ -18,11 +18,11 @@ Get-CsCallQueue [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force
 ```
 
 ## DESCRIPTION
-The Get-CsCallQueue cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue.
+The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
 
-If called without parameters, Get-CsCallQueue returns a collection of all call queues configured to be used in your organization.
+If called without parameters, Get-CsCallQueue returns a collection of all Call Queues configured to be used in your organization.
 
-The Get-CsCallQueue cmdlet may suggest additional steps required to complete the call queue setup.
+The Get-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 ## EXAMPLES
 
@@ -31,14 +31,14 @@ The Get-CsCallQueue cmdlet may suggest additional steps required to complete the
 Get-CsCallQueue
 ```
 
-This example gets all call queues in the organization.
+This example gets all Call Queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsCallQueue -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example gets the call queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no call queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+This example gets the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Call Queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 
 ## PARAMETERS
@@ -113,13 +113,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Identity
-Represents the unique identifier of a call queue.
+Represents the unique identifier of a Call Queue.
 
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.CallQueue
-
+### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
 
 ## NOTES
 

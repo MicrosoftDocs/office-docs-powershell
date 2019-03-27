@@ -27,7 +27,7 @@ The Remove-CsCallQueue cmdlet deletes an existing Call Queue specified by the Id
 Remove-CsCallQueue -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example removes the call queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no call queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Call Queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 
 ## PARAMETERS
@@ -102,13 +102,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Identity
-Represents the unique identifier of a call queue.
+Represents the unique identifier of a Call Queue.
 
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.CallQueue
-
+### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
 
 ## NOTES
 
