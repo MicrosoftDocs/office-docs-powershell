@@ -21,41 +21,78 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob]
- [-ApplyCategory <MultiValuedProperty>] [-BodyContainsWords <MultiValuedProperty>] [-Confirm]
- [-CopyToFolder <MailboxFolderIdParameter>] [-DeleteMessage <$true | $false>] [-DomainController <Fqdn>]
- [-ExceptIfBodyContainsWords <MultiValuedProperty>] [-ExceptIfFlaggedForAction <String>]
- [-ExceptIfFrom <RecipientIdParameter[]>] [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>] [-ExceptIfHasAttachment <$true | $false>]
+Set-InboxRule [-Identity] <InboxRuleIdParameter>
+ [-AlwaysDeleteOutlookRulesBlob]
+ [-ApplyCategory <MultiValuedProperty>]
+ [-ApplySystemCategory <MultiValuedProperty>]
+ [-BodyContainsWords <MultiValuedProperty>]
+ [-Confirm]
+ [-CopyToFolder <MailboxFolderIdParameter>]
+ [-DeleteMessage <$true | $false>]
+ [-DeleteSystemCategory <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-ExceptIfBodyContainsWords <MultiValuedProperty>]
+ [-ExceptIfFlaggedForAction <String>]
+ [-ExceptIfFrom <RecipientIdParameter[]>]
+ [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
+ [-ExceptIfHasAttachment <$true | $false>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
  [-ExceptIfMessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-ExceptIfMyNameInCcBox <$true | $false>] [-ExceptIfMyNameInToBox <$true | $false>]
- [-ExceptIfMyNameInToOrCcBox <$true | $false>] [-ExceptIfMyNameNotInToBox <$true | $false>]
- [-ExceptIfReceivedAfterDate <ExDateTime>] [-ExceptIfReceivedBeforeDate <ExDateTime>]
- [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>] [-ExceptIfSentOnlyToMe <$true | $false>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
- [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>] [-ExceptIfWithImportance <Low | Normal | High>]
- [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>] [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>] [-FlaggedForAction <String>]
- [-Force] [-ForwardAsAttachmentTo <RecipientIdParameter[]>] [-ForwardTo <RecipientIdParameter[]>]
- [-From <RecipientIdParameter[]>] [-FromAddressContainsWords <MultiValuedProperty>]
- [-FromSubscription <AggregationSubscriptionIdentity[]>] [-HasAttachment <$true | $false>]
- [-HasClassification <MessageClassificationIdParameter[]>] [-HeaderContainsWords <MultiValuedProperty>]
- [-Mailbox <MailboxIdParameter>] [-MarkAsRead <$true | $false>] [-MarkImportance <Low | Normal | High>]
+ [-ExceptIfMyNameInCcBox <$true | $false>]
+ [-ExceptIfMyNameInToBox <$true | $false>]
+ [-ExceptIfMyNameInToOrCcBox <$true | $false>]
+ [-ExceptIfMyNameNotInToBox <$true | $false>]
+ [-ExceptIfReceivedAfterDate <ExDateTime>]
+ [-ExceptIfReceivedBeforeDate <ExDateTime>]
+ [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfSentOnlyToMe <$true | $false>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>]
+ [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
+ [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-FlaggedForAction <String>]
+ [-Force]
+ [-ForwardAsAttachmentTo <RecipientIdParameter[]>]
+ [-ForwardTo <RecipientIdParameter[]>]
+ [-From <RecipientIdParameter[]>]
+ [-FromAddressContainsWords <MultiValuedProperty>]
+ [-FromSubscription <AggregationSubscriptionIdentity[]>]
+ [-HasAttachment <$true | $false>]
+ [-HasClassification <MessageClassificationIdParameter[]>]
+ [-HeaderContainsWords <MultiValuedProperty>]
+ [-Mailbox <MailboxIdParameter>]
+ [-MarkAsRead <$true | $false>]
+ [-MarkImportance <Low | Normal | High>]
  [-MessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-MoveToFolder <MailboxFolderIdParameter>] [-MyNameInCcBox <$true | $false>] [-MyNameInToBox <$true | $false>]
- [-MyNameInToOrCcBox <$true | $false>] [-MyNameNotInToBox <$true | $false>] [-Name <String>]
- [-Priority <Int32>] [-ReceivedAfterDate <ExDateTime>] [-ReceivedBeforeDate <ExDateTime>]
- [-RecipientAddressContainsWords <MultiValuedProperty>] [-RedirectTo <RecipientIdParameter[]>]
- [-SendTextMessageNotificationTo <MultiValuedProperty>] [-SentOnlyToMe <$true | $false>]
- [-SentTo <RecipientIdParameter[]>] [-StopProcessingRules <$true | $false>]
- [-SubjectContainsWords <MultiValuedProperty>] [-SubjectOrBodyContainsWords <MultiValuedProperty>] [-WhatIf]
- [-WithImportance <Low | Normal | High>] [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
+ [-MoveToFolder <MailboxFolderIdParameter>]
+ [-MyNameInCcBox <$true | $false>]
+ [-MyNameInToBox <$true | $false>]
+ [-MyNameInToOrCcBox <$true | $false>]
+ [-MyNameNotInToBox <$true | $false>]
+ [-Name <String>]
+ [-PinMessage <$true | $false>]
+ [-Priority <Int32>]
+ [-ReceivedAfterDate <ExDateTime>]
+ [-ReceivedBeforeDate <ExDateTime>]
+ [-RecipientAddressContainsWords <MultiValuedProperty>]
+ [-RedirectTo <RecipientIdParameter[]>]
+ [-SendTextMessageNotificationTo <MultiValuedProperty>]
+ [-SentOnlyToMe <$true | $false>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-StopProcessingRules <$true | $false>]
+ [-SubjectContainsWords <MultiValuedProperty>]
+ [-SubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-WhatIf]
+ [-WithImportance <Low | Normal | High>]
+ [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-WithinSizeRangeMinimum <ByteQuantifiedSize>]
  [-WithSensitivity <Normal | Personal | Private | CompanyConfidential>]
- [-ApplySystemCategory <MultiValuedProperty>] [-DeleteSystemCategory <MultiValuedProperty>]
- [-PinMessage <$true | $false>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,6 +168,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplySystemCategory
+The ApplySystemCategory parameter specifies an action for the Inbox rule that applies the specified system category to messages. System categories are available to all mailboxes in the organization. Valid values are:
+
+- NotDefined
+
+- Bills
+
+- Document
+
+- DocumentPlus
+
+- Event
+
+- Family
+
+- File
+
+- Flight
+
+- FromContact
+
+- Important
+
+- LiveView
+
+- Lodging
+
+- MailingList
+
+- Newsletter
+
+- Photo
+
+- Purchase
+
+- RentalCar
+
+- RestaurantReservation
+
+- RetiredPromotion
+
+- ShippingNotification
+
+- Shopping
+
+- SocialUpdate
+
+- Travel
+
+- Video
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BodyContainsWords
 The BodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
@@ -179,6 +283,71 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteSystemCategory
+The DeleteSystemCategory parameter specifies an action for the Inbox rule that deletes the specified system category from messages. System categories are available to all mailboxes in the organization. Valid values are:
+
+- NotDefined
+
+- Bills
+
+- Document
+
+- DocumentPlus
+
+- Event
+
+- Family
+
+- File
+
+- Flight
+
+- FromContact
+
+- Important
+
+- LiveView
+
+- Lodging
+
+- MailingList
+
+- Newsletter
+
+- Photo
+
+- Purchase
+
+- RentalCar
+
+- RestaurantReservation
+
+- RetiredPromotion
+
+- ShippingNotification
+
+- Shopping
+
+- SocialUpdate
+
+- Travel
+
+- Video
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1286,6 +1455,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PinMessage
+The PinMessage parameter specifies an action for the Inbox rule that pins messages to the top of the Inbox. Valid values are:
+
+- $true: Message that match the conditions of the rule are pinned to the top of the Inbox.
+
+- $false: The action isn't used.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies a priority for the Inbox rule that determines the order of rule processing. A lower integer value indicates a higher priority,
 
@@ -1648,156 +1836,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplySystemCategory
-The ApplySystemCategory parameter specifies an action for the Inbox rule that applies the specified system category to messages. System categories are available to all mailboxes in the organization. Valid values are:
-
-- NotDefined
-
-- Bills
-
-- Document
-
-- DocumentPlus
-
-- Event
-
-- Family
-
-- File
-
-- Flight
-
-- FromContact
-
-- Important
-
-- LiveView
-
-- Lodging
-
-- MailingList
-
-- Newsletter
-
-- Photo
-
-- Purchase
-
-- RentalCar
-
-- RestaurantReservation
-
-- RetiredPromotion
-
-- ShippingNotification
-
-- Shopping
-
-- SocialUpdate
-
-- Travel
-
-- Video
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeleteSystemCategory
-The DeleteSystemCategory parameter specifies an action for the Inbox rule that deletes the specified system category from messages. System categories are available to all mailboxes in the organization. Valid values are:
-
-- NotDefined
-
-- Bills
-
-- Document
-
-- DocumentPlus
-
-- Event
-
-- Family
-
-- File
-
-- Flight
-
-- FromContact
-
-- Important
-
-- LiveView
-
-- Lodging
-
-- MailingList
-
-- Newsletter
-
-- Photo
-
-- Purchase
-
-- RentalCar
-
-- RestaurantReservation
-
-- RetiredPromotion
-
-- ShippingNotification
-
-- Shopping
-
-- SocialUpdate
-
-- Travel
-
-- Video
-
-You can specify multiple values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PinMessage
-The PinMessage parameter specifies an action for the Inbox rule that pins messages to the top of the Inbox. Valid values are:
-
-- $true: Message that match the conditions of the rule are pinned to the top of the Inbox.
-
-- $false: The action isn't used.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
