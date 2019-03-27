@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Clear-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Clear-TextMessagingAccount [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
