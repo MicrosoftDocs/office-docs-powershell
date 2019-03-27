@@ -1,7 +1,10 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsClsScenario
@@ -48,7 +51,9 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ### -------------------------- Example 1 -------------------------- (Lync Server 2013)
 ```
+$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
+New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 ```
 
 The commands shown in Example 1 create a new centralized logging scenario with the Identity global/RedmondHybridVoice.
@@ -56,13 +61,13 @@ In order to carry out this task, the first command in the example uses the New-C
 
 After the description and the provider have been created, the final command in the example calls New-CsClsScenario in order to create the scenario, using the data stored in $provider to assign a value to the Provider property.
 
-$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
-New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
+$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
+New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 ```
 
 The commands shown in Example 1 create a new centralized logging scenario with the Identity global/RedmondHybridVoice.
@@ -70,9 +75,7 @@ In order to carry out this task, the first command in the example uses the New-C
 
 After the description and the provider have been created, the final command in the example calls the New-CsClsScenario cmdlet in order to create the scenario, using the data stored in $provider to assign a value to the Provider property.
 
-$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
-New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 
 ## PARAMETERS
 
@@ -89,7 +92,7 @@ If you use the Identity parameter then you cannot use either the name parameter 
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -111,7 +114,7 @@ However, you should not use the Identity parameter in the same command as the Na
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -137,7 +140,7 @@ However, you should not use the Identity parameter in the same command as the Na
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -153,7 +156,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -189,7 +192,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +212,7 @@ For example:
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -225,7 +228,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -251,5 +254,6 @@ The New-CsClsScenario cmdlet creates new instances of the Microsoft.Rtc.Manageme
 ## NOTES
 
 ## RELATED LINKS
+
 
 

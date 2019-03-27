@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatActiveServer
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatActiveServer
@@ -198,3 +201,4 @@ None.
 ## RELATED LINKS
 
 [Set-CsPersistentChatState](Set-CsPersistentChatState.md)
+

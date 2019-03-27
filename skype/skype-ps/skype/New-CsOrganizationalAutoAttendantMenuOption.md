@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantMenuOption.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantMenuOption
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantMenuOption
@@ -13,7 +16,8 @@ Use the New-CsOrganizationalAutoAttendantMenuOption cmdlet to create a new menu 
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <Object>] [-CallTarget <Object>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantMenuOption -Action <ActionType> -DtmfResponse <DtmfTone> [-VoiceResponses <List>]
+ [-CallTarget <CallableEntity>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +53,7 @@ The Action parameter represents the action to be taken when the menu option is a
 - TransferCallToTarget - The call is transferred to the menu option’s call target.
 
 ```yaml
-Type: Object
+Type: ActionType
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -67,9 +71,8 @@ The DtmfResponse parameter indicates the key on the telephone keypad to be press
 - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
 - Automatic - The action is executed without user response.
 
-
 ```yaml
-Type: Object
+Type: DtmfTone
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -86,9 +89,8 @@ The VoiceResponses parameter represents the voice responses to select a menu opt
 
 Voice responses are currently limited to one voice response per menu option. 
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -107,9 +109,8 @@ CallTarget is required if the action of the menu option is TransferCallToTarget.
 
 Use the New-CsOrganizationalAutoAttendantCallableEntity cmdlet to create new callable entities. 
 
-
 ```yaml
-Type: Object
+Type: CallableEntity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

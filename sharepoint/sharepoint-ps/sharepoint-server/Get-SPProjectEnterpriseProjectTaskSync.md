@@ -1,14 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectEnterpriseProjectTaskSync
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns whether the task list sync between Project Web App and project sites is enabled or disabled. This cmdlet returns a value only if the feature has previously been enabled or disabled.
 
 ## SYNTAX
 
@@ -18,27 +21,29 @@ Get-SPProjectEnterpriseProjectTaskSync [-AssignmentCollection <SPAssignmentColle
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns whether the task list sync between Project Web App and project sites is enabled or disabled. This cmdlet returns a value only if the feature has previously been enabled or disabled.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Get-SPProjectEnterpriseProjectTaskSync -Url http://contoso/sites/PWA
 ```
 
-{{ Add example description here }}
+This example shows the syntax for getting the task sync status for the Project Web App site at http://contoso/sites/PWA.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -48,13 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+The URL of the PWA site.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

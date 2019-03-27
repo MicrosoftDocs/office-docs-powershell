@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013
+external help file: sharepointserver.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelServiceApplication
@@ -45,25 +48,26 @@ Set-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
 The `Set-ExcelServiceApplication` cmdlet changes global runtime properties for Excel Services Application. 
 Changes to properties that are made by using this cmdlet affect all machines in the farm that are running an instance of the specified Excel Services Application Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Set-SPExcelServiceApplication ExcelServiceTestApplication -sessionsperusermax 10
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
 ```
 
-This example sets the Excel Services Application Web service application named ExcelServiceTestApplication to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
+This example sets the Excel Services Application to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
 
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication | where{ $_.privatebytesmax -ne -1 } | Set-SPExcelServiceApplication -PrivateBytesMax -1
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
 ```
-
-This example displays every Excel Services Application application that runs in the farm that is using a user-specified value for the maximum number of private bytes of memory on the computer and then sets that value to -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
+This example sets the maximum number of private bytes of memory on the computer to a value of -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
 
 
 ## PARAMETERS
@@ -77,7 +81,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: 1
@@ -99,7 +103,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -116,7 +120,7 @@ The default is true when the parameter is not specified on the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -133,7 +137,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -149,7 +153,7 @@ Specifies that trusted workbooks and data connection files can be requested and 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -169,7 +173,7 @@ The type must be one of the following: None or Connection.
 Type: EncryptedConnectionMode
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -193,7 +197,7 @@ The default value is 1800.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -214,7 +218,7 @@ The type must be one of the following: UseImpersonation or UseFileAccessAccount.
 Type: FileAccessMethod
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -233,7 +237,7 @@ The type must be one of the following: RoundRobin, Local, or WorkbookURL.
 Type: LoadBalancingScheme
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -254,7 +258,7 @@ The type must be an integer in the range of 0 to 95.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -275,7 +279,7 @@ The type must be -1 or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -296,7 +300,7 @@ The type must be -1 or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -317,7 +321,7 @@ The type must be -1, 0, or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -333,7 +337,7 @@ Terminates Excel Services Application when an access violation occurs in the pro
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -354,7 +358,7 @@ The type must be an integer value in the range of 0 to 2073600.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -378,7 +382,7 @@ An unattended account is required when workbook connections specify None for aut
 Type: String
 Parameter Sets: ExistingTargetApplicationParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -398,7 +402,7 @@ The type must be -1, or an integer in the range of 1 to 34560.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -415,7 +419,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -438,7 +442,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -457,7 +461,7 @@ The type must be any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -467,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnattendedServiceAccount
-{{Fill UnattendedServiceAccount Description}}
+The Unattended Service Account is a single account that all workbooks can use to refresh data. This account is required to refresh data when workbook connections specify "Use the Unattended Service Account" without using Windows Credentials. 
 
 ```yaml
 Type: PSCredential
@@ -483,7 +487,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseEffectiveUserName
-{{Fill UseEffectiveUserName Description}}
+The UseEffectiveUserName  property is an alternative to Windows delegation for allowing users to securely access Analysis Services data. 
+
+The setting will only impact external data connections based on Analysis Services workbook connections with an authentication setting of "Use the authenticated user's account". 
 
 ```yaml
 Type: SwitchParameter
@@ -515,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

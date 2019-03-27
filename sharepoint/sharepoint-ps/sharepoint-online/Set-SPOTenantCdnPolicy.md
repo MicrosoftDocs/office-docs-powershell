@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantCdnPolicy
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenantCdnPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Sets the content delivery network (CDN) policies from the tenant level.
 
 
 ## SYNTAX
@@ -19,22 +23,32 @@ Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPoli
 ```
 
 ## DESCRIPTION
+
 {{Fill in the Description}}
 
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### --------------------EXAMPLE 1---------------------
+
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,BMP"
 ```
 
-{{ Add example description here }}
+This example sets a CDN to a public type with a policy value of listed extensions.
 
+### --------------------EXAMPLE 2---------------------
+
+```
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
+```
+
+This example sets a CDN to a public type with a policy value of valid site classifications.
 
 ## PARAMETERS
 
 ### -CdnType
+
 {{Fill CdnType Description}}
 
 ```yaml
@@ -52,6 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
+
 {{Fill PolicyType Description}}
 
 ```yaml
@@ -69,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyValue
+
 {{Fill PolicyValue Description}}
 
 ```yaml
@@ -85,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

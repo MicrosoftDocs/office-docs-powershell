@@ -1,14 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: sharepointserver.xml
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSiteMapDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Upgrade-SPSiteMapDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use.
 
 ## SYNTAX
 
@@ -18,27 +21,27 @@ Upgrade-SPSiteMapDatabase [-DatabaseId] <Guid> [-AssignmentCollection <SPAssignm
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use.
 
 ## EXAMPLES
 
 ### -------------EXAMPLE 1----------
 ```
-PS C:\> {{ Add example code here }}
+#Do not use
 ```
 
-{{ Add example description here }}
+Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -54,7 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -64,13 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
-{{Fill DatabaseId Description}}
+Do not use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -87,7 +90,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

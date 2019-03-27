@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPNavigationNode
@@ -10,10 +10,17 @@ Removes a menu item from either the quicklaunch or top navigation
 
 ## SYNTAX 
 
+### Remove a node by ID
 ```powershell
-Remove-PnPNavigationNode -Location <NavigationType>
-                         -Title <String>
-                         [-Header <String>]
+Remove-PnPNavigationNode -Identity <NavigationNodePipeBind>
+                         [-Force [<SwitchParameter>]]
+                         [-Web <WebPipeBind>]
+                         [-Connection <SPOnlineConnection>]
+```
+
+### All Nodes
+```powershell
+Remove-PnPNavigationNode -All [<SwitchParameter>]
                          [-Force [<SwitchParameter>]]
                          [-Web <WebPipeBind>]
                          [-Connection <SPOnlineConnection>]
@@ -23,19 +30,53 @@ Remove-PnPNavigationNode -Location <NavigationType>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPNavigationNode -Title Recent -Location QuickLaunch
+Remove-PnPNavigationNode -Identity 1032
+```
+
+Removes the navigation node with the specified id
+
+### ------------------EXAMPLE 2------------------
+```powershell
+$nodes = Get-PnPNavigationNode -QuickLaunch
+PS:>$nodes | Select-Object -First 1 | Remove-PnPNavigationNode -Force
+```
+
+Retrieves all navigation nodes from the Quick Launch navigation, then removes the first node in the list and it will not ask for a confirmation
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Remove-PnPNavigationNode -Title Recent -Location QuickLaunch
 ```
 
 Will remove the recent navigation node from the quick launch in the current web.
 
-### ------------------EXAMPLE 2------------------
+### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Remove-PnPNavigationNode -Title Home -Location TopNavigationBar -Force
+Remove-PnPNavigationNode -Title Home -Location TopNavigationBar -Force
 ```
 
 Will remove the home navigation node from the top navigation bar without prompting for a confirmation in the current web.
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Remove-PnPNavigationNode -Location QuickLaunch -All
+```
+
+Will remove all the navigation nodes from the quick launch bar in the current web.
+
 ## PARAMETERS
+
+### -All
+Specifying the All parameter will remove all the nodes from specified Location.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: All Nodes
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Force
 Specifying the Force parameter will skip the confirmation question.
@@ -49,44 +90,20 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -Header
-The header where the node is located
+### -Identity
+The Id or node object to delete
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Location
-The location from where to remove the node (QuickLaunch, TopNavigationBar
-
-```yaml
-Type: NavigationType
-Parameter Sets: (All)
+Type: NavigationNodePipeBind
+Parameter Sets: Remove a node by ID
 
 Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Title
-The title of the node that needs to be removed
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Position: 0
+Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -98,7 +115,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -111,4 +128,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

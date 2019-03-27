@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Search-CsOnlineTelephoneNumberInventory
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Search-CsOnlineTelephoneNumberInventory
@@ -13,10 +16,10 @@ Use the `Search-CsOnlineTelephoneNumberInventory` cmdlet to reserve a telephone 
 ## SYNTAX
 
 ```
-Search-CsOnlineTelephoneNumberInventory [-Area <Object>] [-CapitalOrMajorCity <Object>]
- [-CountryOrRegion <Object>] [-InventoryType <Object>] [-Quantity <Object>] [-RegionalGroup <Object>]
- [-AreaCode <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-TelephoneNumber <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Search-CsOnlineTelephoneNumberInventory [-Tenant <Guid>] -RegionalGroup <String>
+ -CountryOrRegion <String> -Area <String> -CapitalOrMajorCity <String> -Quantity <Int32>
+ [-TelephoneNumber <String>] [-AreaCode <String>] -InventoryType <String> [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,10 +43,9 @@ This example reserves 10 Service type telephone numbers in New York, New York.
 
 ### -Area
 Specifies the target geographical area for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -57,10 +59,9 @@ Accept wildcard characters: False
 
 ### -CapitalOrMajorCity
 Specifies the target geographical city for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: City
 Applicable: Skype for Business Online
@@ -74,10 +75,9 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Country
 Applicable: Skype for Business Online
@@ -98,7 +98,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -115,7 +115,7 @@ Specifies the quantity of telephone numbers to reserve.
 The maximum value is 500.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -129,10 +129,9 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
 Applicable: Skype for Business Online
@@ -148,23 +147,7 @@ Accept wildcard characters: False
 Specifies the area code to search for telephone numbers.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -180,7 +163,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -214,7 +197,7 @@ Accept wildcard characters: False
 Specifies either an individual telephone number to reserve, or multiple telephone numbers can be entered separated by a comma.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -231,23 +214,7 @@ Specifies your tenant identifier.
 To find your tenant id use the command: `Get-CsTenant | fl objectid`.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -275,3 +242,4 @@ This cmdlets returns an Microsoft.Rtc.Management.Hosted.Bvd.Types.NumberReservat
 ## NOTES
 
 ## RELATED LINKS
+

@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: New-TeamChannel
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-TeamChannel
@@ -49,8 +52,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 Channel display name.
-Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ?
-+ | ' "
+Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ? + | ' "
 
 ```yaml
 Type: String

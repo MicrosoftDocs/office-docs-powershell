@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsThirdPartyVideoSystemPolicy
@@ -53,7 +56,7 @@ Get-CsThirdPartyVideoSystemPolicy | Remove-CsThirdPartyVideoSystemPolicy
 ```
 
 In Example 2, all the third-party video system policies configured for use in the organization are deleted.
-This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
+This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
 Note that the global policy will not actually be deleted; Skype for Business Server does not allow you to delete global policies.
 However, all the properties within the global policy will be reset to their default values.
 
@@ -95,7 +98,7 @@ Wildcard characters such as the asterisk (*) cannot be used with the Identity pa
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -111,7 +114,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +169,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -200,3 +203,4 @@ Instead, the `Remove-CsThirdPartyVideoSystemPolicy` cmdlet deletes instances of 
 [New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
+

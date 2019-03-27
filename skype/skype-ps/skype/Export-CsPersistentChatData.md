@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Export-CsPersistentChatData
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Export-CsPersistentChatData
@@ -246,3 +249,4 @@ The Export-CsPersistentChatData cmdlet creates .ZIP files.
 
 
 ## RELATED LINKS
+

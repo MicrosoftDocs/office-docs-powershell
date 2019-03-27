@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Add-PnPSiteCollectionAdmin
@@ -11,32 +11,32 @@ Adds one or more users as site collection administrators to the site collection 
 ## SYNTAX 
 
 ```powershell
-Add-PnPSiteCollectionAdmin -Owners <List`1>
+Add-PnPSiteCollectionAdmin -Owners <UserPipeBind>
                            [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove exisitng site collection administrators.
+This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove existing site collection administrators.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPSiteCollectionAdmin -Owners "user@contoso.onmicrosoft.com"
+Add-PnPSiteCollectionAdmin -Owners "user@contoso.onmicrosoft.com"
 ```
 
 This will add user@contoso.onmicrosoft.com as an additional site collection owner to the site collection in the current context
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPSiteCollectionAdmin -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
+Add-PnPSiteCollectionAdmin -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
 ```
 
 This will add user1@contoso.onmicrosoft.com and user2@contoso.onmicrosoft.com as additional site collection owners to the site collection in the current context
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPUser | ? Title -Like "*Doe" | Add-PnPSiteCollectionAdmin
+Get-PnPUser | ? Title -Like "*Doe" | Add-PnPSiteCollectionAdmin
 ```
 
 This will add all users with their title ending with "Doe" as additional site collection owners to the site collection in the current context
@@ -44,10 +44,10 @@ This will add all users with their title ending with "Doe" as additional site co
 ## PARAMETERS
 
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators to the site in the current context. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators to the site in the current context. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
-Type: List`1
+Type: UserPipeBind
 Parameter Sets: (All)
 
 Required: True
@@ -56,7 +56,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -69,4 +69,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

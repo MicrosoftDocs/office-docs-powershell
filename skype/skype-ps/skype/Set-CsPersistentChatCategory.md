@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatCategory
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatCategory
@@ -164,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatHistory
-When set the False ($False), the chat history feature will be disabled for the new category.
+When set to False ($False), the chat history feature will be disabled for the new category.
 Typically, chat history is only disabled for chat rooms that are used for announcements that are posted once and then never need to be referred to again.
 
 ```yaml
@@ -382,3 +385,4 @@ Instead, the `Set-CsPersistentChatCategory` cmdlet modifies existing instances o
 [New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
 [Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)
+

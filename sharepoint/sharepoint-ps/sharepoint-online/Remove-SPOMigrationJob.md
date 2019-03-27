@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOMigrationJob
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPOMigrationJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cmdlet to remove a previously created migration job from the specified site collection.
 
 
 ## SYNTAX
@@ -19,23 +22,24 @@ Remove-SPOMigrationJob [-TargetWebUrl] <String> [-JobId] <Guid> -Credentials <Cr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Cmdlet to remove a previously created migration job from the specified site collection.
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOMigrationJob -JobId 4da9e777-3e38-4804-96d9-ddeebe7dfa79 -TargetUrl https://contoso.sharepoint.com/sites/TargetSite
 ```
 
-{{ Add example description here }}
+This example removes the specified migration job from the site collection “https://contoso.sharepoint.com/sites/TargetSite”.
 
 
 ## PARAMETERS
 
 ### -Credentials
-{{Fill Credentials Description}}
+Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
+
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -51,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-{{Fill JobId Description}}
+Id of a previously created migration job that exists on the target site collection.
+
 
 ```yaml
 Type: Guid
@@ -67,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Indicates to not create a log file. The default is to create a new DeleteMigrationJob log file within the current directory.
+
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+The fully qualified URL of the site collection where the job will be deleted if found.
+
 
 ```yaml
 Type: String

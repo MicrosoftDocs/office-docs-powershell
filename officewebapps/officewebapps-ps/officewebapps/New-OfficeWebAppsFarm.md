@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: New-OfficeWebAppsFarm
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-OfficeWebAppsFarm
@@ -41,12 +44,10 @@ You run this cmdlet on the first server in the Office Online Server farm and the
 
 ### ------------------EXAMPLE 1---------------------
 ```
-New-OfficeWebAppsFarm -InternalUrl "https://server.corp.contoso.com" -ExternalUrl "https://server.external.contoso.com" -EditingEnabled:$true -SSLOffloaded
+New-OfficeWebAppsFarm -ExternalUrl "https://office.contoso.com" -CertificateName "Office Server Cert" -EditingEnabled:$true
 ```
 
-This example creates an Office Online Server farm on the local server that has editing enabled for Office Online.
-The farm is configured for load balancing by enabling SSLOffloaded, which automatically enables AllowHttp.
-If you are not using a load balancer, make sure that you set CertificateName.
+This example creates an Office Online Server farm on the local server that has editing enabled for Office Online. With this example, only a single URL is used for both internal and external users. The Certificate Name value is the Friendly Name of the certificate as it appears in the Computer's certificate store.
 
 ## PARAMETERS
 
@@ -370,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelExternalDataCacheLifetime
-Specifes the duration, in seconds, of the external data cache lifetime in Excel Online.
+Specifies the duration, in seconds, of the external data cache lifetime in Excel Online.
 The default is 300 seconds.
 
 ```yaml
@@ -762,7 +763,7 @@ Accept wildcard characters: False
 Turns on or off the ability to use Online Viewers to view Office files from a URL or UNC path.
 The default is False.
 
-You must set this paramater to True when you use ClipartEnabled.
+You must set this parameter to True when you use ClipartEnabled.
 
 ```yaml
 Type: SwitchParameter

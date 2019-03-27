@@ -1,0 +1,11 @@
+{
+    "spmt-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/spmt/spmt-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/spmt-ps/toc.json",
+        "packageRoot": "spmt-ps",
+        "modules": {
+            "spmt": {}     
+        }
+    }
+}

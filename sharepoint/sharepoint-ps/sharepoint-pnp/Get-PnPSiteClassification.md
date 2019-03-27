@@ -12,12 +12,12 @@ Returns the defined Site Classifications for the tenant. Requires a connection t
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Get-PnPSiteClassification
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Get-PnPSiteClassification
 ```
 
 Returns the currently set site classifications for the tenant.
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

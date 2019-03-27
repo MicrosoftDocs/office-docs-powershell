@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsTrunkConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsTrunkConfiguration
@@ -50,7 +53,7 @@ The phone number against which to test the configuration.
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -67,7 +70,7 @@ Trunk configuration objects can be retrieved by calling the `Get-CsTrunkConfigur
 Type: TrunkConfiguration
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -86,7 +89,7 @@ For example:
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -120,3 +123,4 @@ Returns a value of type Microsoft.Rtc.Management.Voice.TrunkConfigurationTestRes
 [Set-CsTrunkConfiguration](Set-CsTrunkConfiguration.md)
 
 [Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)
+

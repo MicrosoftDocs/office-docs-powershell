@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsXmppGatewayConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsXmppGatewayConfiguration
@@ -70,7 +73,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -309,3 +312,4 @@ Instead, the `Set-CsXmppGatewayConfiguration` cmdlet modifies existing instances
 ## RELATED LINKS
 
 [Get-CsXmppGatewayConfiguration](Get-CsXmppGatewayConfiguration.md)
+

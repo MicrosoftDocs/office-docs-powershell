@@ -12,12 +12,12 @@ Disables Site Classifications for the tenant. Requires a connection to the Micro
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Disable-PnPSiteClassification
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Disable-PnPSiteClassification
 ```
 
 Disables Site Classifications for your tenant.
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

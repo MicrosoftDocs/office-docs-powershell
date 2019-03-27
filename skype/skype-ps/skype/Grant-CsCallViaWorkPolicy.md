@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsCallViaWorkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsCallViaWorkPolicy
@@ -19,9 +22,8 @@ Grant-CsCallViaWorkPolicy [-Identity] <UserIdParameter> [-PolicyName] <String> [
 ```
 
 ## DESCRIPTION
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+This cmdlet assigns an existing per-user call via work policy to a user. Call via work policies are used to control access to the feature and manage the characteristics of outbound calls placed through the Skype for Business client.
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
@@ -48,14 +50,14 @@ Domain name and logon name, in the form domain\logon
 
 Active Directory display name (Ken Myer), or distinguished name
 
-In addition, you can use the asterisk (*) wildcard character when using the display name as the user Identity.
-For example, the Identity "* Smith" grants the policy all users who have a display name that ends in the string value " Smith".
+In addition, you can use the asterisk (\*) wildcard character when using the display name as the user Identity.
+For example, the Identity "\* Smith" grants the policy all users who have a display name that ends in the string value " Smith".
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +78,7 @@ For example: `Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -92,7 +94,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -109,7 +111,7 @@ If this parameter is not specified, then the Grant-CsCallViaWorkPolicy cmdlet wi
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +128,7 @@ By default, the Grant-CsCallViaWorkPolicy cmdlet does not pass objects through t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -136,13 +138,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -175,4 +177,5 @@ None.
 [New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
 [Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)
+
 

@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantDialScope.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantDialScope
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantDialScope
@@ -100,4 +103,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
 

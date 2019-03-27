@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsFederatedPartner
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsFederatedPartner
@@ -24,7 +27,7 @@ Test-CsFederatedPartner [-TargetFqdn] <String> [-Domain] <String> [-Certificate 
 `Test-CsFederatedPartner` verifies your ability to connect to the domain of a federated partner.
 In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
 Domains can be added to the allowed list by using the `New-CsAllowedDomain` cmdlet.
-When using this cmdlet, make sure that the TargetFqdn parameter points to the internal edge of the proxy server to which federated SIP traffic is directed.
+When using this cmdlet, make sure that the TargetFqdn parameter points to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 
 ## EXAMPLES
@@ -35,12 +38,12 @@ Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain fabrikam.
 ```
 
 The command shown in Example 1 verifies the connection between the local access proxy server (accessproxy.litwareinc.com) and the federated domain Fabrikam.com.
-Note that TargetFqdn must point to the internal edge of the proxy server to which federated SIP traffic is directed.
+Note that TargetFqdn must point to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinco.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
+Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
 ```
 
 Example 2 shows how you can test the connection between your domain and the Lync Server Push Notification Service.
@@ -69,7 +72,7 @@ For example: `-Domain "fabrikam.com"`.
 Type: String
 Parameter Sets: (All)
 Aliases: d
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 3
@@ -80,13 +83,13 @@ Accept wildcard characters: False
 
 ### -TargetFqdn
 FQDN of the access proxy server used by your organization for federated SIP traffic.
-The TargetFqdn must point to the internal edge of the proxy server to which federated SIP traffic is directed.
+The TargetFqdn must point to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -102,7 +105,7 @@ Enables you to provide an X509 certificate for authentication purposes when conn
 Type: X509Certificate2
 Parameter Sets: (All)
 Aliases: ce
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ FQDN of the access proxy server used by the federated organization.
 Type: String
 Parameter Sets: (All)
 Aliases: pe
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +137,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +175,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +204,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -229,3 +232,4 @@ None.
 ## RELATED LINKS
 
 [Get-CsAllowedDomain](Get-CsAllowedDomain.md)
+

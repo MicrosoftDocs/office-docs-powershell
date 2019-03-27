@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMeetingConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsMeetingConfiguration
@@ -13,36 +16,28 @@ Meeting configuration settings help dictate the type of meetings (also called co
 Note that these settings only affect scheduled meetings; they do not affect ad-hoc meetings created by clicking the Meet Now option in Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsMeetingConfiguration [[-Identity] <XdsIdentity>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsMeetingConfiguration [-Instance <PSObject>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsMeetingConfiguration [[-Identity] <Object>] [-AdmitAnonymousUsersByDefault <Object>]
- [-AllowCloudRecordingService <Object>] [-AllowConferenceRecording <Object>]
- [-AssignedConferenceTypeByDefault <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-CustomFooterText <Object>] [-DesignateAsPresenter <Object>] [-EnableAssignedConferenceType <Object>]
- [-EnableMeetingReport <Object>] [-Force] [-HelpURL <Object>] [-Instance <Object>] [-LegalURL <Object>]
- [-LogoURL <Object>] [-PstnCallersBypassLobby <Object>] [-RequireRoomSystemsAuthorization <Object>]
- [-Tenant <Object>] [-UserUriFormatForStUser <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [-Instance <PSObject>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +53,6 @@ This will occur regardless of how you have configured your meeting settings usin
 
 The `Set-CsMeetingConfiguration` cmdlet enables you to modify any of the meeting configuration settings currently in use in your organization.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 ------------------------
@@ -68,7 +62,6 @@ Set-CsMeetingConfiguration -Identity site:Redmond -DesignateAsPresenter Everyone
 
 The command shown in Example 1 modifies the meeting configuration settings assigned to the Redmond site (-Identity site:Redmond).
 In this case, the value of the DesignateAsPresenter property is set to Everyone.
-
 
 ### -------------------------- Example 2 ------------------------
 ```
@@ -80,7 +73,6 @@ In this case, however, the value of the DesignateAsPresenter property is modifie
 To do this, the `Get-CsMeetingConfiguration` cmdlet is called without any parameters in order to return a collection of all the meeting configuration settings currently in use.
 This collection is then piped to the `Set-CsMeetingConfiguration` cmdlet, which modifies the DesignateAsPresenter property for each item in the collection.
 
-
 ### -------------------------- Example 3 ------------------------
 ```
 Get-CsMeetingConfiguration | Where-Object {$_.AdmitAnonymousUsersByDefault -eq $False} | Set-CsMeetingConfiguration -PstnCallersBypassLobby $True
@@ -91,23 +83,21 @@ To perform this task, the command first calls the `Get-CsMeetingConfiguration` c
 This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the AdmitAnonymousUsersByDefault property is equal to False.
 In turn, this filtered collection is piped to the `Set-CsMeetingConfiguration` cmdlet, which takes each item in the collection and sets the PstnCallersBypassLobby property to True.
 
-
 ## PARAMETERS
 
 ### -Identity
 Indicates the unique identifier for the collection of meeting configuration settings you want to modify.
-To refer to the global settings, use this syntax: `-Identity global`.
-To refer to a collection configured at the site scope, use syntax similar to this: `-Identity "site:Redmond"`.
-Settings configured at the service scope can be referenced using syntax like this: `-Identity "service:UserServer:atl-cs-001.litwareinc.com"`.
+To refer to the global settings, use this syntax: -Identity global.
+To refer to a collection configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
+Settings configured at the service scope can be referenced using syntax like this: -Identity "service:UserServer:atl-cs-001.litwareinc.com".
 
 If this parameter is not specified, then the `Set-CsMeetingConfiguration` cmdlet will modify the global settings.
-
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -119,25 +109,11 @@ Accept wildcard characters: False
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -147,16 +123,17 @@ Accept wildcard characters: False
 ```
 
 ### -AdmitAnonymousUsersByDefault
-Determines whether meetings will, by default, allow attendance by anonymous users (that is, by unauthenticated users).
-Set this value to True if you would like new meetings to allow for attendance by anonymous users by default.
-Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users.
+Determines whether meetings will, by default, allow attendance by anonymous users (that is, by unauthenticated users) or by federated users (authenticated users from other tenants).
+Set this value to True if you would like new meetings to allow for attendance by anonymous users or federated users by default.
+Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users or federated users. When set to False, anonymous and federated users will be placed in the lobby of a meeting when trying to join it. After being placed in the lobby, they can be admitted by any presenter in the meeting.
+When this value is changed, the change will only apply to new meetings and it will not applied to meetings already scheduled.
 The default value is True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +151,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -187,21 +164,24 @@ Accept wildcard characters: False
 Indicates which users (besides the meeting organizer) are automatically designated as presenters when they join a meeting.
 Valid choices are: None; Company and Everyone.
 By default, DesignateAsPresenter is set to Company, meaning everyone in your organization will have presenter rights the moment they join a meeting.
+Note: When DesignateAsPresenter is set to Everyone, only dynamic meetings will comply with this setting. Static meetings do not allow Everyone to join as a Presenter. 
 
 ```yaml
 Type: DesignateAsPresenter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: None
+Default value: Company
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -EnableAssignedConferenceType
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are allowed to schedule public meetings.
 With a public meeting, the conference ID and the meeting link remain consistent each time the meeting is held.
 With a private meeting, the conference ID and meeting link change from meeting to meeting.
@@ -211,7 +191,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -231,7 +211,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +227,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -261,22 +241,21 @@ Globally unique identifier (GUID) of the Office 365 tenant account whose meeting
 
 For example:
 
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
 You can return the tenant ID for each of your tenants by running this command:
 
-`Get-CsTenant | Select-Object DisplayName, TenantID`
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will automatically be filled in for you based on your connection information.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -292,7 +271,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -308,7 +287,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -318,13 +297,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomFooterText
-Text to be used on custom meeting invitations.
+Text to be used on custom meeting invitations. Multiple lines are supported using the Enter key.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -340,7 +319,7 @@ URL to a website where users can obtain assistance on joining the meeting.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -356,7 +335,7 @@ URL to a website containing legal information and meeting disclaimers.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -372,7 +351,7 @@ URL for the image to be used on custom meeting invitations.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -385,12 +364,11 @@ Accept wildcard characters: False
 When set to True ($True) all users must be authenticated before they can join a meeting using the Skype for Business Room System.
 The default value is False ($False).
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -403,7 +381,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -420,23 +398,7 @@ Determines whether or not users are allowed to record conference proceedings.
 The default value is True.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -452,7 +414,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -468,23 +430,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

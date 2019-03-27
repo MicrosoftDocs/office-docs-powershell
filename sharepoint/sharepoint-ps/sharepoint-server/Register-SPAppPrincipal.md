@@ -1,15 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Register-SPAppPrincipal
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Register-SPAppPrincipal
 
 ## SYNOPSIS
-Lets an on-premise or SharePoint Online administrator register an app principal.
-
+Lets an on-premises administrator register an app principal.
 
 ## SYNTAX
 
@@ -19,21 +21,21 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ```
 
 ## DESCRIPTION
-Use the `Register-SPAppPrincipal` cmdlet to let an on-premise farm or SharePoint Online administrator to register an app principal management service.
+Use the `Register-SPAppPrincipal` cmdlet to let an on-premises farm administrator to register an app principal management service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831(https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-C:\PS>$site = Get-SPSite "https://<urlofsite>"
-
-C:\PS>Register-SPAppPrincipal -site $site.root -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso SharePoint Online"
+$site = Get-SPSite "https://<urlofsite>"
+Register-SPAppPrincipal -site $site.RootWeb -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso"
 ```
 
-This example registers the app principal named Contoso SharePoint Online.
+This example registers the app principal named Contoso.
 
 
 ## PARAMETERS
@@ -45,7 +47,7 @@ Specifies the friendly name to use for the app principal that is being registere
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -61,7 +63,7 @@ Specifies the app principal's name identifier that needs to be added to the app 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -71,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{ Fill Site Description}}
+{{Fill Site Description}}
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -99,7 +101,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -119,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAppPrincipal]()
+[Get-SPAppPrincipal](Get-SPAppPrincipal.md)

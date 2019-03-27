@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
 # Add-PnPClientSideText
@@ -12,8 +12,8 @@ Adds a text element to a client-side page.
 
 ### Default
 ```powershell
-Add-PnPClientSideText -Text <String>
-                      -Page <ClientSidePagePipeBind>
+Add-PnPClientSideText -Page <ClientSidePagePipeBind>
+                      -Text <String>
                       [-Order <Int>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
@@ -21,10 +21,10 @@ Add-PnPClientSideText -Text <String>
 
 ### Positioned
 ```powershell
-Add-PnPClientSideText -Text <String>
+Add-PnPClientSideText -Page <ClientSidePagePipeBind>
+                      -Text <String>
                       -Section <Int>
                       -Column <Int>
-                      -Page <ClientSidePagePipeBind>
                       [-Order <Int>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
@@ -37,7 +37,7 @@ Adds a new text element to a section on a client-side page.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPClientSideText -Page "MyPage" -Text "Hello World!"
+Add-PnPClientSideText -Page "MyPage" -Text "Hello World!"
 ```
 
 Adds the text 'Hello World!' to the Client-Side Page 'MyPage'
@@ -46,6 +46,8 @@ Adds the text 'Hello World!' to the Client-Side Page 'MyPage'
 
 ### -Column
 Sets the column where to insert the text control.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: Int
@@ -59,9 +61,11 @@ Accept pipeline input: False
 ### -Order
 Sets the order of the text control. (Default = 1)
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: Int
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: False
 Position: Named
@@ -71,9 +75,11 @@ Accept pipeline input: False
 ### -Page
 The name of the page.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: ClientSidePagePipeBind
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: True
 Position: 0
@@ -82,6 +88,8 @@ Accept pipeline input: True
 
 ### -Section
 Sets the section where to insert the text control.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: Int
@@ -95,9 +103,11 @@ Accept pipeline input: False
 ### -Text
 Specifies the text to display in the text area.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: True
 Position: Named
@@ -105,7 +115,9 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection
@@ -117,7 +129,9 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: WebPipeBind
@@ -130,4 +144,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

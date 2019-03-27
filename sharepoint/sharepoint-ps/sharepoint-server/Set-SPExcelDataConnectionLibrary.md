@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013
+external help file: sharepointserver.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelDataConnectionLibrary
@@ -29,14 +32,14 @@ Data connection libraries enable you to reuse and share data connections.
 Data connections can be loaded by using information from the workbook file.
 However, using a data connection library to load data connections provides an additional layer for data connections so that they can be managed separately from workbooks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
 ```
 
 This example sets a display description for the entry http://portal/site/salesDCL in the list of trusted data connection libraries (DCLs) that is on the Excel Services Application Web service application named MyExcelService.
@@ -44,7 +47,7 @@ This example sets a display description for the entry http://portal/site/salesDC
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
 ```
 
 This example updates the address of the data connection library for the entry http://portal/test/site/salesDCL to http://portal/site/salesDCL in the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.
@@ -61,7 +64,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelDCLPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: 1
@@ -79,7 +82,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -98,7 +101,7 @@ The type must be a valid URL, in the form http://server_name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -155,7 +158,7 @@ The type must a valid a string; for example, "This is the data connection librar
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -172,7 +175,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -182,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

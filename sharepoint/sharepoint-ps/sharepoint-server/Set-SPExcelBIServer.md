@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013
+external help file: sharepointserver.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelBIServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelBIServer
@@ -10,10 +13,6 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Specifies a description for an existing BI server for Excel Services.
-
-
-
-
 
 ## SYNTAX
 
@@ -27,17 +26,13 @@ Set-SPExcelBIServer [-Identity] <SPExcelBIServerPipeBind> [-AssignmentCollection
 Use the Set-SPExcelBIServer cmdlet to specify a description for an existing BI server for Excel Services.
 
 
-
-
-
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication "MyExcel"
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
 ```
-
-
 
 ## PARAMETERS
 
@@ -50,7 +45,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -66,7 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -82,7 +77,7 @@ Specifies the description of the Analysis server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -98,7 +93,7 @@ Specifies the Excel Services Application Web service application that contains t
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -114,7 +109,7 @@ Specifies the ExcelServiceApplication identity.
 Type: SPExcelBIServerPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: 0
@@ -130,7 +125,7 @@ The name of the Analysis Services server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -147,7 +142,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -157,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

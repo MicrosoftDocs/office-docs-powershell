@@ -1,21 +1,24 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumberInventoryAreas
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineTelephoneNumberInventoryAreas
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryAreas cmdlet to retrieve the geographical areas where specified inventory types are supported.
+Use the `Get-CsOnlineTelephoneNumberInventoryAreas` cmdlet to retrieve the geographical areas where specified inventory types are supported.
 
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumberInventoryAreas [-CountryOrRegion <Object>] [-InventoryType <Object>]
- [-RegionalGroup <Object>] [-Area <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumberInventoryAreas [-Tenant <Guid>] -RegionalGroup <String>
+ -CountryOrRegion <String> [-Area <String>] -InventoryType <String> [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,10 +72,9 @@ This example returns the areas with Subscriber inventory in the specified region
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Country
 Applicable: Skype for Business Online
@@ -93,7 +95,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -107,10 +109,9 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
 Applicable: Skype for Business Online
@@ -124,26 +125,9 @@ Accept wildcard characters: False
 
 ### -Area
 Specifies the target geographical area for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -159,7 +143,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -193,7 +177,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -228,14 +212,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryArea
 Instance or array of the objects.
 
-
 ## NOTES
 
-
 ## RELATED LINKS
+

@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantCallFlow.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallFlow
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantCallFlow
@@ -13,7 +16,8 @@ Use the New-CsOrganizationalAutoAttendantCallFlow cmdlet to create a new call fl
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallFlow -Name <String> [-Greetings <List>] -Menu <Menu> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +51,7 @@ This example creates a new call flow that plays a greeting before rendering the 
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -64,9 +68,8 @@ The Menu parameter identifies the menu to render when the call flow is executed.
 
 You can create a new menu by using the New-CsOrganizationalAutoAttendantMenu cmdlet.
 
-
 ```yaml
-Type: System.Object
+Type: Menu
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -83,9 +86,8 @@ If present, the prompts specified by the Greetings parameter (either TTS or Audi
 
 You can create prompts by using the New-CsOrganizationalAutoAttendantPrompt cmdlet.
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

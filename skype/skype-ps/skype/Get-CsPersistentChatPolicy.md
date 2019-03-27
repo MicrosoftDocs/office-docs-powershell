@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsPersistentChatPolicy
@@ -193,3 +196,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
 [Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)
+

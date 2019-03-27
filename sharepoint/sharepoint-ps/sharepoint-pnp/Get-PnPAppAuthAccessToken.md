@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPAppAuthAccessToken
@@ -21,7 +21,7 @@ Returns the access token from the current client context (only works with App-On
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> $accessToken = Get-PnPAppAuthAccessToken
+$accessToken = Get-PnPAppAuthAccessToken
 ```
 
 This will put the access token from current context in the $accessToken variable. Will only work in App authentication flow (App+user or App-Only)
@@ -29,7 +29,7 @@ This will put the access token from current context in the $accessToken variable
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -42,8 +42,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [System.String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
+### System.String
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

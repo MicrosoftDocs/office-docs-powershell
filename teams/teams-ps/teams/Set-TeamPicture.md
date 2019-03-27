@@ -3,18 +3,22 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-TeamPicture
-online version: 
+online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-TeamPicture
 
 ## SYNOPSIS
+
 Note: This cmdlet is currently in Beta.
 
 Update the team picture.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately. 
+Note: the command will return immediately, but the Teams application will not reflect the update immediately.
 The Teams application may need to be open for up to an hour before changes are reflected.
 
 ## SYNTAX
@@ -28,13 +32,15 @@ Set-TeamPicture -GroupId <String> -ImagePath <String>
 ## EXAMPLES
 
 ### --------------------------  Example 1  --------------------------
-```
-Set-TeamPicture -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -ImagePath c:\Image\TeamPictire.png
+
+```powershell
+Set-TeamPicture -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -ImagePath c:\Image\TeamPicture.png
 ```
 
 ## PARAMETERS
 
 ### -GroupId
+
 GroupId of the team
 
 ```yaml
@@ -51,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImagePath
-File path and image (*.png,*.gif, *.jpg, or *.jpeg)
+
+File path and image (*.png, *.gif, *.jpg, or *.jpeg)
 
 ```yaml
 Type: String
@@ -73,4 +80,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

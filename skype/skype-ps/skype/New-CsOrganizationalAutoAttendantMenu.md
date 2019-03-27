@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantMenu.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantMenu
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantMenu
@@ -147,3 +150,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 [New-CsOrganizationalAutoAttendantMenuOption](New-CsOrganizationalAutoAttendantMenuOption.md)
 [New-CsOrganizationalAutoAttendantPrompt](New-CsOrganizationalAutoAttendantPrompt.md)
+

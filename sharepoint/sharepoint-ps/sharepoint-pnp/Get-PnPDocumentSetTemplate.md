@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPDocumentSetTemplate
@@ -13,8 +13,8 @@ Retrieves a document set template
 ### 
 ```powershell
 Get-PnPDocumentSetTemplate -Identity <DocumentSetPipeBind>
-                           [-Web <WebPipeBind>]
                            [-Includes <String[]>]
+                           [-Web <WebPipeBind>]
                            [-Connection <SPOnlineConnection>]
 ```
 
@@ -22,14 +22,14 @@ Get-PnPDocumentSetTemplate -Identity <DocumentSetPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPDocumentSetTemplate -Identity "Test Document Set"
+Get-PnPDocumentSetTemplate -Identity "Test Document Set"
 ```
 
 This will get the document set template with the name "Test Document Set"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPDocumentSetTemplate -Identity "0x0120D520005DB65D094035A241BAC9AF083F825F3B"
+Get-PnPDocumentSetTemplate -Identity "0x0120D520005DB65D094035A241BAC9AF083F825F3B"
 ```
 
 This will get the document set template with the id "0x0120D520005DB65D094035A241BAC9AF083F825F3B"
@@ -53,7 +53,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -73,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -86,8 +86,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.DocumentSet.DocumentSetTemplate](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.documentset.documentsettemplate.aspx)
+### Microsoft.SharePoint.Client.DocumentSet.DocumentSetTemplate
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

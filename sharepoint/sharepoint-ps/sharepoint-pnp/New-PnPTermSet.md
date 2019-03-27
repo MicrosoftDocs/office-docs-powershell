@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # New-PnPTermSet
@@ -30,7 +30,7 @@ New-PnPTermSet -Name <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPTermSet -Name "Department" -TermGroup "Corporate"
+New-PnPTermSet -Name "Department" -TermGroup "Corporate"
 ```
 
 Creates a new termset named "Department" in the group named "Corporate"
@@ -158,7 +158,7 @@ Accept pipeline input: False
 ```
 
 ### -TermGroup
-Name, id or actualy termgroup to create the termset in.
+Name, id or actually termgroup to create the termset in.
 
 ```yaml
 Type: Id, Title or TermGroup
@@ -183,7 +183,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -196,8 +196,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Taxonomy.TermSet](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.taxonomy.termset.aspx)
+### Microsoft.SharePoint.Client.Taxonomy.TermSet
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

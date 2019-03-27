@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsWatcherNodeConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsWatcherNodeConfiguration
@@ -92,7 +95,7 @@ For example, to return all of the watcher nodes for the domain litwareinc.com us
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ If this parameter is not specified then the Get-CsWatcherNodeConfiguration cmdle
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -132,7 +135,7 @@ Retrieves the watcher node configuration data from the local replica of the Cent
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -166,3 +169,4 @@ The Get-CsWatcherNodeConfiguration cmdlet returns instances of the Microsoft.Rtc
 [Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
 
 [Test-CsWatcherNodeConfiguration](Test-CsWatcherNodeConfiguration.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPProperty
@@ -24,9 +24,9 @@ Will populate properties of an object and optionally, if needed, load the value 
 ### ------------------EXAMPLE 1------------------
 ```powershell
 
-PS:> $web = Get-PnPWeb
-PS:> Get-PnPProperty -ClientObject $web -Property Id, Lists
-PS:> $web.Lists
+$web = Get-PnPWeb
+Get-PnPProperty -ClientObject $web -Property Id, Lists
+$web.Lists
 ```
 
 Will load both the Id and Lists properties of the specified Web object.
@@ -34,8 +34,8 @@ Will load both the Id and Lists properties of the specified Web object.
 ### ------------------EXAMPLE 2------------------
 ```powershell
 
-PS:> $list = Get-PnPList -Identity 'Site Assets'
-PS:> Get-PnPProperty -ClientObject $list -Property Views
+$list = Get-PnPList -Identity 'Site Assets'
+Get-PnPProperty -ClientObject $list -Property Views
 ```
 
 Will load the views object of the specified list object and return its value to the output.
@@ -67,7 +67,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -80,8 +80,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ClientObject](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientobject.aspx)
+### Microsoft.SharePoint.Client.ClientObject
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

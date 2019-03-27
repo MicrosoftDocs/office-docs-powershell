@@ -1,12 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPWebPart
 
 ## SYNOPSIS
-Removes a webpart from a page
+Removes a web part from a page
 
 ## SYNTAX 
 
@@ -30,22 +30,22 @@ Remove-PnPWebPart -Title <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
+Remove-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
+This will remove the web part specified by ID to the specified page in the first row and the first column of the HTML table present on the page
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Name MyWebpart
+Remove-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Title MyWebpart
 ```
 
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
+This will remove the web part specified by title to the specified page in the first row and the first column of the HTML table present on the page
 
 ## PARAMETERS
 
 ### -Identity
-The Guid of the webpart
+The Guid of the web part
 
 ```yaml
 Type: GuidPipeBind
@@ -57,11 +57,11 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Full server relative url of the webpart page, e.g. /sites/demo/sitepages/home.aspx
+Server relative url of the web part page, e.g. /sites/demo/sitepages/home.aspx
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: PageUrl
 
 Required: True
@@ -70,7 +70,7 @@ Accept pipeline input: False
 ```
 
 ### -Title
-The name of the webpart
+The name of the web part
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -95,7 +95,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -108,4 +108,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

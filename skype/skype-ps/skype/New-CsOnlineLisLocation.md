@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: New-CsOnlineLisLocation
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOnlineLisLocation
@@ -14,13 +17,20 @@ Typically the civic address designates the building, and locations are specific 
 
 ## SYNTAX
 
+### ExistingCivicAddress (Default)
 ```
-New-CsOnlineLisLocation [-CivicAddressId <Object>] [-CountryOrRegion <Object>] [-Location <Object>]
- [-BypassDualWrite <Object>] [-City <Object>] [-CityAlias <Object>] [-CompanyName <Object>]
- [-CompanyTaxId <Object>] [-Confirm] [-Description <Object>] [-DomainController <Object>] [-Force]
- [-HouseNumber <Object>] [-HouseNumberSuffix <Object>] [-PostalCode <Object>] [-PostDirectional <Object>]
- [-PreDirectional <Object>] [-StateOrProvince <Object>] [-StreetName <Object>] [-StreetSuffix <Object>]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsOnlineLisLocation -CivicAddressId <Guid> -Location <String> [-CompanyName <String>]
+ [-CompanyTaxId <String>] [-HouseNumberSuffix <String>] [-CityAlias <String>] [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateCivicAddress
+```
+New-CsOnlineLisLocation [-Location <String>] [-CompanyName <String>] [-CompanyTaxId <String>]
+ [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>] [-StreetSuffix <String>]
+ [-PostDirectional <String>] [-PreDirectional <String>] [-City <String>] [-CityAlias <String>]
+ [-StateOrProvince <String>] -CountryOrRegion <String> [-PostalCode <String>] [-Description <String>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +39,6 @@ New-CsOnlineLisLocation [-CivicAddressId <Object>] [-CountryOrRegion <Object>] [
 
 ### -------------------------- Example 1 --------------------------
 ```
-
 New-CsOnlineLisLocation -CivicAddressId b39ff77d-db51-4ce5-8d50-9e9c778e1617 -Location "Office 101, 1st Floor"
 ```
 
@@ -44,7 +53,7 @@ If specified, no other address description parameters are allowed.
 Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddress cmdlet.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -60,7 +69,7 @@ Accept wildcard characters: False
 Specifies the country or region of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Country
 Applicable: Skype for Business Online
@@ -77,23 +86,7 @@ Specifies an administrator defined description of the new location.
 For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +102,7 @@ Accept wildcard characters: False
 Specifies the city of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -125,7 +118,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +134,7 @@ Accept wildcard characters: False
 Specifies the name of your organization.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Name
 Applicable: Skype for Business Online
@@ -157,7 +150,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -189,7 +182,7 @@ Accept wildcard characters: False
 Specifies an administrator defined description of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -205,7 +198,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -239,7 +232,7 @@ Accept wildcard characters: False
 Specifies the numeric portion of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -256,7 +249,7 @@ Specifies the numeric suffix of the civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -272,7 +265,7 @@ Accept wildcard characters: False
 Specifies the postal code of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -289,7 +282,7 @@ Specifies the directional attribute of the civic address which follows the stree
 For example, "425 Smith Avenue NE".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -306,7 +299,7 @@ Specifies the directional attribute of the civic address which precedes the stre
 For example, "425 NE Smith Avenue ".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -322,7 +315,7 @@ Accept wildcard characters: False
 Specifies the state or province of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: State
 Applicable: Skype for Business Online
@@ -338,7 +331,7 @@ Accept wildcard characters: False
 Specifies the street name of the civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -355,7 +348,7 @@ Specifies the modifier of the street name.
 The street suffix will typically be something like street, avenue, way, or boulevard.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -371,7 +364,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -400,22 +393,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -426,3 +403,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+

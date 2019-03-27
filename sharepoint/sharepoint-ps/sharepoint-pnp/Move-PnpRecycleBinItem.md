@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Move-PnpRecycleBinItem
+# Move-PnPRecycleBinItem
 
 ## SYNOPSIS
 Moves all items or a specific item in the first stage recycle bin of the current site collection to the second stage recycle bin
@@ -11,7 +11,7 @@ Moves all items or a specific item in the first stage recycle bin of the current
 ## SYNTAX 
 
 ```powershell
-Move-PnpRecycleBinItem [-Identity <RecycleBinItemPipeBind>]
+Move-PnPRecycleBinItem [-Identity <RecycleBinItemPipeBind>]
                        [-Force [<SwitchParameter>]]
                        [-Connection <SPOnlineConnection>]
 ```
@@ -20,21 +20,21 @@ Move-PnpRecycleBinItem [-Identity <RecycleBinItemPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Move-PnpRecycleBinItem
+Move-PnpRecycleBinItem
 ```
 
 Moves all the items in the first stage recycle bin of the current site collection to the second stage recycle bin
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Move-PnpRecycleBinItem -Identity 26ffff29-b526-4451-9b6f-7f0e56ba7125
+Move-PnpRecycleBinItem -Identity 26ffff29-b526-4451-9b6f-7f0e56ba7125
 ```
 
 Moves the item with the provided ID in the first stage recycle bin of the current site collection to the second stage recycle bin without asking for confirmation first
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Move-PnpRecycleBinItem -Force
+Move-PnpRecycleBinItem -Force
 ```
 
 Moves all the items in the first stage recycle bin of the current context to the second stage recycle bin without asking for confirmation first
@@ -66,7 +66,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -79,4 +79,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

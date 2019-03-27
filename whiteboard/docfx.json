@@ -1,0 +1,71 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "whiteboard-ps",
+        "dest": "whiteboard",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "whiteboard-ps",
+        "dest": "whiteboard/whiteboard-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "whiteboard-ps",
+      "version": "whiteboard-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "whiteboard-ps",
+      "version": "whiteboard-ps",
+      "dest": "module/whiteboard-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "whiteboard-ps": {
+        "dest": "whiteboard-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "author" : "tbrosman",
+      "ms.author" : "tbrosman",
+      "manager" : "shanejc",
+      "ms.date" : "04/23/2018",
+      "ms.topic" : "reference",
+      "ms.service" : "whiteboard-powershell",
+      "ms.devlang" : "powershell",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "whiteboard-ps"
+  }
+}

@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2016
 title: Dismount-SPSiteMapDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Dismount-SPSiteMapDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Dismount-SPSiteMapDatabase [-DatabaseId] <Guid> [-AssignmentCollection <SPAssign
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use.
 
 ## EXAMPLES
 
-### Example 1 
-```
-PS C:\> {{ Add example code here }}
+### ------------EXAMPLE------------------
 ```
 
-{{ Add example description here }}
+```
+
+Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
-{{Fill DatabaseId Description}}
+Do not use.
 
 ```yaml
 Type: Guid
@@ -80,8 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

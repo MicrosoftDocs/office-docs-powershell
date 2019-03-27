@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsCallViaWorkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsCallViaWorkPolicy
@@ -19,9 +22,7 @@ New-CsCallViaWorkPolicy [-Identity] <XdsIdentity> [-AdminCallbackNumber <String>
 ```
 
 ## DESCRIPTION
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+This cmdlet creates a new call via work policy.
 
 ## EXAMPLES
 
@@ -41,19 +42,19 @@ The policy is enabled, the administrative callback number is specified and enfor
 Unique identity to be assigned to the policy.
 New policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as the Identity.
-For example, to create a new policy for the Redmond site you would use this syntax: `-Identity site:Redmond.`
-To create a new per-user policy, this syntax: `-Identity SalesDepartmentPolicy.`
+For example, to create a new policy for the Redmond site you would use this syntax: `-Identity site:Redmond`.
+To create a new per-user policy, this syntax: `-Identity SalesDepartmentPolicy`.
 
 You cannot create a new global policy.
-If you want to make changes to the global policy, use the Set-CsCallViawork cmdlet instead.
+If you want to make changes to the global policy, use the Set-CsCallViaWorkPolicy cmdlet instead.
 Likewise, you cannot create a new site or per-user policy if a policy with that Identity already exists.
-If you need to make changes to an existing policy, use the Set-CsCallViawork cmdlet.
+If you need to make changes to an existing policy, use the Set-CsCallViaWorkPolicy cmdlet.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -73,7 +74,7 @@ For instance, "12068881234" or "+12068881234".
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ The default is false ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ Suppresses the display of any non-fatal error messages and completes the cmdlet 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -139,7 +140,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +174,7 @@ The user might choose to change the call back number to a personal phone number 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -183,13 +184,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -222,4 +223,5 @@ The New-CsCallViaWorkPolicy returns Microsoft.Rtc.Management.WritableConfig.Poli
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
 
 [Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)
+
 

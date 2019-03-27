@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOnlineAudioFile.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOnlineAudioFile
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOnlineAudioFile
@@ -21,7 +24,7 @@ The New-CsOnlineAudioFile cmdlet creates a new audio file for use with the Organ
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
 $audioFile = New-CsOnlineAudioFile -FileName "Hello.wav" -Content $content
@@ -32,12 +35,12 @@ This example creates a new audio file using the WAV content that has a filename 
 ## PARAMETERS
 
 ### -FileName
-The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav. 
+The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav.
 
 ```yaml
 Type: System.string
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -53,7 +56,7 @@ The Content parameter represents the content of the audio file. Supported format
 ```yaml
 Type: System.Byte[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -68,7 +71,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -92,4 +95,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
 

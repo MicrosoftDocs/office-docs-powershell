@@ -1,13 +1,11 @@
 ---
-Module Name: teams
+Module Name: Microsoft Teams PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: teams
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# Microsoft Teams Module
+# Microsoft Teams PowerShell
 ## Description
 The following cmdlet references are for Microsoft Teams.
 

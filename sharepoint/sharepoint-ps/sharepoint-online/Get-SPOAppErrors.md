@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOAppErrors
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOAppErrors
@@ -17,7 +20,7 @@ Get-SPOAppErrors [-EndTimeInUtc <DateTime>] -ProductId <Guid> [-StartTimeInUtc <
 ```
 
 ## DESCRIPTION
-The Get-SPOAppErrors cmdlet returns application monitoring errors (if available) for the application that is specified by ProductId between StartTimeInUtc in Coordinated Universal Time (UTC) and EndTimeInUtc in UTC.
+The `Get-SPOAppErrors` cmdlet returns application monitoring errors (if available) for the application that is specified by ProductId between StartTimeInUtc in Coordinated Universal Time (UTC) and EndTimeInUtc in UTC.
 
 Based on server configuration, errors are available for a limited time.
 The default is seven days.
@@ -35,14 +38,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   ------------ Example 1 --------------------
 ```
-{example code}
+Get-SPOAppErrors -ProductId ba51729b-e017-409d-681a-66f1dd18f0f4
 ```
-{example description}
+This example returns a collection of monitoring error message(s) for application whose GUID is ba51729b-e017-409d-681a-66f1dd18f0f4.
+
 
 ## PARAMETERS
 
 ### -EndTimeInUtc
-{{Fill EndTimeInUtc Description}}
+Specifies the end time in UTC to search for monitoring errors. If no end time is given, the default value current time in UTC is used.
 
 ```yaml
 Type: DateTime
@@ -58,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-{{Fill ProductId Description}}
+Specifies the application’s GUID.
 
 ```yaml
 Type: Guid
@@ -74,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTimeInUtc
-{{Fill StartTimeInUtc Description}}
+Specifies the start time in UTC to search for monitoring errors — for example, 01032011:12:00. If no start time is given, the default value 72 hours before the current time is used.
 
 ```yaml
 Type: DateTime
@@ -100,10 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Get-SPOAppInfo]()
-
-
+[Get-SPOAppInfo](Get-SPOAppInfo.md)

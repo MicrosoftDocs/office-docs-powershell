@@ -1,0 +1,11 @@
+{
+    "staffhub-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/staffhub/staffhub-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/staffhub-ps/toc.json",
+        "packageRoot": "staffhub-ps",
+        "modules": {
+            "staffhub": {}     
+        }
+    }
+}

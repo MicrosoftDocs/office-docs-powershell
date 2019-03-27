@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # New-PnPTerm
@@ -12,8 +12,8 @@ Creates a taxonomy term
 
 ```powershell
 New-PnPTerm -Name <String>
-            -TermGroup <Id, Title or TermGroup>
             -TermSet <Id, Title or TaxonomyItem>
+            -TermGroup <Id, Title or TermGroup>
             [-Id <Guid>]
             [-Lcid <Int>]
             [-Description <String>]
@@ -27,7 +27,7 @@ New-PnPTerm -Name <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPTerm -TermSet "Departments" -TermGroup "Corporate" -Name "Finance"
+New-PnPTerm -TermSet "Departments" -TermGroup "Corporate" -Name "Finance"
 ```
 
 Creates a new taxonomy term named "Finance" in the termset Departments which is located in the "Corporate" termgroup
@@ -135,7 +135,7 @@ Term store to check; if not specified the default term store is used.
 
 ```yaml
 Type: Id, Name or Object
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: TermStoreName
 
 Required: False
@@ -144,7 +144,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -157,8 +157,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Taxonomy.Term](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.taxonomy.term.aspx)
+### Microsoft.SharePoint.Client.Taxonomy.Term
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

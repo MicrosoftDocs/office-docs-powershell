@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsTenant
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTenant
@@ -14,8 +17,8 @@ Tenants represent groups of online users.
 ## SYNTAX
 
 ```
-Get-CsTenant [[-Identity] <Object>] [-DomainController <Object>] [-Filter <Object>] [-ResultSize <Object>]
- [-AsJob] [<CommonParameters>]
+Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdParameter>] [-ResultSize <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +42,7 @@ Organizations will have only one tenant.
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -55,18 +58,18 @@ Accept wildcard characters: False
 Enables you to return data by using Active Directory attributes and without having to specify the full Active Directory distinguished name.
 For example, to retrieve a tenant by using the tenant display name, use syntax similar to this:
 
-`Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}`
+Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}
 
 To return all tenants that use a Fabrikam domain use this syntax:
 
-`Get-CsTenant -Filter {Domains -like "*fabrikam*"}`
+Get-CsTenant -Filter {Domains -like "*fabrikam*"}
 
-The Filter parameter uses the same Windows PowerShell filtering syntax is used by the Where-Object cmdlet.
+The Filter parameter uses the same Windows PowerShell filtering syntax is used by the `Where-Object` cmdlet.
 
 You cannot use both the Identity parameter and the Filter parameter in the same command.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -82,12 +85,12 @@ Accept wildcard characters: False
 Unique identifier for the tenant.
 For example:
 
-`-Identity "bf19b7db-6960-41e5-a139-2aa373474354"`
+-Identity "bf19b7db-6960-41e5-a139-2aa373474354"
 
-If you do not include either the Identity or the Filter parameter then the Get-CsTenant cmdlet will return information about all your tenants.
+If you do not include either the Identity or the Filter parameter then the `Get-CsTenant` cmdlet will return information about all your tenants.
 
 ```yaml
-Type: Object
+Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +112,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the tenants to 7 but you have only three contacts in your forest, the command will return those three tenants and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -144,14 +147,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject or String
-The Get-CsTenant cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object as well as string values representing the Identity of the tenant (for example "bf19b7db-6960-41e5-a139-2aa373474354").
-
+The `Get-CsTenant` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object as well as string values representing the Identity of the tenant (for example "bf19b7db-6960-41e5-a139-2aa373474354").
 
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject
 
-
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,43 +1,49 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOGeoAdministrator
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Add-SPOGeoAdministrator
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
+
 
 ## SYNTAX
 
-### Group
-```
-Add-SPOGeoAdministrator [-Group] <String> [<CommonParameters>]
-```
-
-### User
-```
-Add-SPOGeoAdministrator [-User] <String> [<CommonParameters>]
+```powershell
+Add-SPOGeoAdministrator
+  -UserPrincipalName <string>
+  -GroupAlias <string>
+  -ObjectId <guid>
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet requires a connection to a multi-geo tenant to run correctly. 
+You must be a SharePoint Online global Administrator to run this cmdlet.
+
 
 ## EXAMPLES
 
-### Example 1 
+### EXAMPLE 1
+```powershell
+Add-SPOGeoAdministrator -UserPrincipalName admin@contoso.onmicrosoft.com
 ```
-PS C:\> {{ Add example code here }}
-```
+Adds the user **admin@contoso.onmicrosoft.com**  as administrator to the SharePoint Online multi-geo tenant.
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Group
-{{Fill Group Description}}
+### -GroupAlias
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -52,8 +58,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -User
-{{Fill User Description}}
+### -ObjectId
+PARAMVALUE: Guid
+
+
+```yaml
+Type: Guid
+Parameter Sets: ObjectId
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UserPrincipalName
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -73,13 +96,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
+
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
+
+[Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
+
+
 

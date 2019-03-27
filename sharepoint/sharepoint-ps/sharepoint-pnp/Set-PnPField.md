@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPField
@@ -11,8 +11,8 @@ Changes one or more properties of a field in a specific list or for the whole we
 ## SYNTAX 
 
 ```powershell
-Set-PnPField -Values <Hashtable>
-             -Identity <FieldPipeBind>
+Set-PnPField -Identity <FieldPipeBind>
+             -Values <Hashtable>
              [-List <ListPipeBind>]
              [-UpdateExistingLists [<SwitchParameter>]]
              [-Web <WebPipeBind>]
@@ -23,21 +23,21 @@ Set-PnPField -Values <Hashtable>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"}
+Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"}
 ```
 
 Updates the AssignedTo field on the current web to use customrendering.js for the JSLink and sets the group name the field is categorized in to "My Fields". Lists that are already using the AssignedTo field will not be updated.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"} -UpdateExistingLists
+Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"} -UpdateExistingLists
 ```
 
 Updates the AssignedTo field on the current web to use customrendering.js for the JSLink and sets the group name the field is categorized in to "My Fields". Lists that are already using the AssignedTo field will also be updated.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPField -List "Tasks" -Identity "AssignedTo" -Values @{JSLink="customrendering.js"}
+Set-PnPField -List "Tasks" -Identity "AssignedTo" -Values @{JSLink="customrendering.js"}
 ```
 
 Updates the AssignedTo field on the Tasks list to use customrendering.js for the JSLink
@@ -57,7 +57,7 @@ Accept pipeline input: True
 ```
 
 ### -List
-The list object, name or id where to update the field. If omited the field will be updated on the web.
+The list object, name or id where to update the field. If omitted the field will be updated on the web.
 
 ```yaml
 Type: ListPipeBind
@@ -93,7 +93,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -105,7 +105,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -118,8 +118,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Field](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.field.aspx)
+### Microsoft.SharePoint.Client.Field
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

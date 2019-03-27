@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOnlineDialInConferencingUserDefaultNumber
@@ -12,12 +15,27 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
+### BridgeNameParams
 ```
-Set-CsOnlineDialInConferencingUserDefaultNumber [-BridgeId <Object>] [-BridgeName <Object>]
- [-CountryOrRegion <Object>] [-FromNumber <Object>] [-NumberType <Object>] [-ToNumber <Object>]
- [-AreaOrState <Object>] [-BypassDualWrite <Object>] [-CapitalOrMajorCity <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-RescheduleMeetings] [-Tenant <Object>] [-TenantDomain <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ -BridgeName <String> [-FromNumber <String>] -ToNumber <String> -NumberType <String>
+ [-CountryOrRegion <String>] [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### FilterByUsageLocation
+```
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ [-BridgeName <String>] -BridgeId <Guid> -ToNumber <String> -NumberType <String>
+ -CountryOrRegion <String> [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UniqueBridgeParams
+```
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ -BridgeId <System.Guid> -FromNumber <String> -ToNumber <String> -NumberType <String> [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +57,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -55,7 +73,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -71,7 +89,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -87,7 +105,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -103,7 +121,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,7 +137,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -135,23 +153,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -167,7 +169,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -199,7 +201,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -247,7 +249,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -263,7 +265,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -291,22 +293,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -317,3 +303,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

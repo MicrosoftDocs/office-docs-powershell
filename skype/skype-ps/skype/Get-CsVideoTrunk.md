@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVideoTrunk
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsVideoTrunk
@@ -68,7 +71,7 @@ Enables you to use wildcard characters in order to return a video trunk (or a co
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ If this parameter is not specified, then all the video trunks in the organizatio
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -111,7 +114,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -139,3 +142,4 @@ The Get-CsVideoTrunk cmdlet returns instances of the Microsoft.Rtc.Management.Xd
 ## RELATED LINKS
 
 [Set-CsVideoGateway](Set-CsVideoGateway.md)
+

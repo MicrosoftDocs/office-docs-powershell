@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsDialPlan
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsDialPlan
@@ -19,7 +22,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Grant-CsDialPlan [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>] [-PassThru]
- [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +32,8 @@ Dial plans provide information required to enable Enterprise Voice users to make
 Users who do not have a valid dial plan will not be enabled to make calls by using Enterprise Voice.
 A dial plan determines such things as how normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object DialPlan.`
+You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "<user name>" | Select-Object DialPlan`
+
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object DialPlan`
@@ -69,14 +73,11 @@ For example, the Identity "* Smith" would return all the users with the last nam
 
 Full data type: Microsoft.Rtc.Management.AD.UserIdParameter
 
-
-
-
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -91,14 +92,11 @@ The Identity value of the dial plan to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
 Per-user dial plan identities include a prefix of tag: that should not be included with the PolicyName.)
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -112,14 +110,11 @@ Accept wildcard characters: False
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
 
-
-
-
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -133,13 +128,11 @@ Accept wildcard characters: False
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,13 +145,11 @@ Accept wildcard characters: False
 
 Describes what would happen if you executed the command without actually executing the command.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,44 +162,11 @@ Accept wildcard characters: False
 
 Prompts you for confirmation before executing the command.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{Fill Tenant Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -250,3 +208,4 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 [Test-CsDialPlan](Test-CsDialPlan.md)
 
 [Get-CsUser](Get-CsUser.md)
+

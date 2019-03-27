@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMediaConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsMediaConfiguration
@@ -27,7 +30,7 @@ New-CsMediaConfiguration [-Identity] <XdsIdentity> [-EnableQoS <Boolean>] [-Enab
 
 ## DESCRIPTION
 
-This cmdlet creates a new collection of settings that define behaviors for specific media actions.
+This cmdlet creates a new collection of settings that define the behavior of specific media actions.
 
 
 
@@ -63,7 +66,7 @@ A configuration at the site scope would be entered as site:\<site name\>, such a
 A service would be entered as \<server role\>:\<fqdn\>, such as MediationServer:pool0.litwareinc.com.
 A media configuration at the global scope will always exist and cannot be removed, so a new global configuration cannot be created.
 
-Media configurations created at the service scope can be created only for the A/V Conferencing service, Mediation Server, and Application Server.
+Media configurations created at the service scope can be created for only the A/V Conferencing service, Mediation Server, and Application Server.
 
 
 
@@ -71,7 +74,7 @@ Media configurations created at the service scope can be created only for the A/
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -81,22 +84,17 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-
-QoS monitors the quality of voice signals over a network.
-
-Default: False
-
-
+QoS monitors the quality of voice signals over a network. When set to True, enables call Quality of Service (QoS) settings.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -114,7 +112,7 @@ Default: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-
 The level of encryption between unified communications devices.
 
 Valid values:
@@ -143,7 +140,7 @@ Default: RequireEncryption
 Type: EncryptionLevel
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +168,7 @@ Default: VGA600K
 Type: MaxVideoRateAllowed
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -187,7 +184,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +194,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
@@ -207,7 +203,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -223,7 +219,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -239,7 +235,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -300,13 +296,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInCallQoS
-When set to True, enables call Quality of Service (QoS) settings.
+Enables or disables the ability of Skype for Business clients to send the raw data that's required to generate InCallQuality messages.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -322,7 +318,7 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -338,7 +334,7 @@ Specifies the interval between call QoS actions.
 Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -348,13 +344,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-{{Fill EnableVideoBasedSharing Description}}
+Use this parameter to enable video based sharing.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -385,4 +381,5 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Media
 [Set-CsMediaConfiguration](Set-CsMediaConfiguration.md)
 
 [Get-CsMediaConfiguration](Get-CsMediaConfiguration.md)
+
 

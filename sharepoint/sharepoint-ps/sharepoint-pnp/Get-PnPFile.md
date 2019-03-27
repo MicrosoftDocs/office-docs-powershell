@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPFile
@@ -36,10 +36,11 @@ Get-PnPFile -Url <String>
 
 ### Save to local path
 ```powershell
-Get-PnPFile -AsFile [<SwitchParameter>]
-            -Url <String>
+Get-PnPFile -Url <String>
+            -AsFile [<SwitchParameter>]
             [-Path <String>]
             [-Filename <String>]
+            [-Force [<SwitchParameter>]]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
@@ -48,42 +49,42 @@ Get-PnPFile -AsFile [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor
 ```
 
 Retrieves the file and downloads it to the current folder
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
 
 Retrieves the file and downloads it to c:\temp\company.spcolor
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsString
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsString
 ```
 
 Retrieves the file and outputs its contents to the console
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsFile
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsFile
 ```
 
 Retrieves the file and returns it as a File object
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsListItem
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsListItem
 ```
 
 Retrieves the file and returns it as a ListItem object
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPFile -Url _catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor
+Get-PnPFile -Url _catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
 
 Retrieves the file by site relative URL and downloads it to c:\temp\company.spcolor
@@ -138,6 +139,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -Force
+Overwrites the file if it exists.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Save to local path
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Path
 Local path where the file should be saved
 
@@ -151,7 +164,7 @@ Accept pipeline input: False
 ```
 
 ### -ThrowExceptionIfFileNotFound
-If provided in combination with -AsListItem, a Sytem.ArgumentException will be thrown if the file specified in the -Url argument does not exist. Otherwise it will return nothing instead.
+If provided in combination with -AsListItem, a System.ArgumentException will be thrown if the file specified in the -Url argument does not exist. Otherwise it will return nothing instead.
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +180,7 @@ The URL (server or site relative) to the file
 
 ```yaml
 Type: String
-Parameter Sets: Return as file object
+Parameter Sets: Return as file object, Return as list item, Save to local path, Return as string
 Aliases: ServerRelativeUrl,SiteRelativeUrl
 
 Required: True
@@ -176,7 +189,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -188,7 +201,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -201,8 +214,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.File](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.file.aspx)
+### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

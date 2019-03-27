@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Complete-CsCceApplianceRegistration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Complete-CsCceApplianceRegistration
@@ -13,8 +16,7 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Complete-CsCceApplianceRegistration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Complete-CsCceApplianceRegistration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -171,3 +173,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

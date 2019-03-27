@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSiteGroup
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOSiteGroup
@@ -26,18 +29,26 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOSiteGroup -Site http://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
 ```
 
-{{ Add example description here }}
+Example 1 changes permission level of the ProjectViewers group inside site collection http://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Set-SPOSiteGroup -Site https://contoso.sharepoint.com -Identity "ProjectViewers" -Owner Melissa.kerr@contoso.com
+```
+
+Example 2 sets Melissa.kerr@contoso.com as the owner of the ProjectViewers group.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the name of the group.
+
 
 ```yaml
 Type: String
@@ -53,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the new name of the group.
+
 
 ```yaml
 Type: String
@@ -69,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-{{Fill Owner Description}}
+Specifies the owner (individual or a security group) of the group to be created.
+
 
 ```yaml
 Type: String
@@ -85,7 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionLevelsToAdd
-{{Fill PermissionLevelsToAdd Description}}
+Specifies the permission levels to grant to the group.
+
+> [!NOTE] 
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+
 
 ```yaml
 Type: String[]
@@ -101,7 +118,11 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionLevelsToRemove
-{{Fill PermissionLevelsToRemove Description}}
+Specifies the permission levels to remove from the group.
+
+> [!NOTE] 
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+
 
 ```yaml
 Type: String[]
@@ -117,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the site collection the group belongs to.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -143,8 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Get-SPOSiteGroup]()
+[Get-SPOSiteGroup](Get-SPOSiteGroup.md)

@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOGeoMoveCompatibilityStatus
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOGeoMoveCompatibilityStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet returns the compatibility status between geographic locations.
+
 
 ## SYNTAX
 
@@ -17,21 +21,31 @@ Get-SPOGeoMoveCompatibilityStatus [-AllLocations <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet returns the compatibility between sites and locations for a move in a multi-geo SharePoint Online tenant.
+
 
 ## EXAMPLES
 
-### Example 1 
-```
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```powershell
+Get-SPOGeoMoveCompatibilityStatus -AllLocations $true
 ```
 
-{{ Add example description here }}
+Get the compatibility status for all locations.
+
+### EXAMPLE 2
+```powershell
+Get-SPOGeoMoveCompatibilityStatus -AllLocations $false
+```
+
+Get the compatibility status for the current location.
+
 
 ## PARAMETERS
 
 ### -AllLocations
-{{Fill AllLocations Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -49,15 +63,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 

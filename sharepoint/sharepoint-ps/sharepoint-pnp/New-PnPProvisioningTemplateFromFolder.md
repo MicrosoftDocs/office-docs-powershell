@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # New-PnPProvisioningTemplateFromFolder
@@ -11,14 +11,14 @@ Generates a provisioning template from a given folder, including only files that
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningTemplateFromFolder [-Match <String>]
+New-PnPProvisioningTemplateFromFolder [-Out <String>]
+                                      [-Folder <String>]
+                                      [-Match <String>]
                                       [-ContentType <ContentTypePipeBind>]
                                       [-Properties <Hashtable>]
                                       [-AsIncludeFile [<SwitchParameter>]]
                                       [-Force [<SwitchParameter>]]
                                       [-Encoding <Encoding>]
-                                      [-Out <String>]
-                                      [-Folder <String>]
                                       [-TargetFolder <String>]
                                       [-Schema <XMLPnPSchemaVersion>]
                                       [-Web <WebPipeBind>]
@@ -29,56 +29,56 @@ New-PnPProvisioningTemplateFromFolder [-Match <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml
+New-PnPProvisioningTemplateFromFolder -Out template.xml
 ```
 
 Creates an empty provisioning template, and includes all files in the current folder.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp
 ```
 
 Creates an empty provisioning template, and includes all files in the c:\temp folder.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents"
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents"
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -ContentType "Test Content Type"
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -ContentType "Test Content Type"
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder. It will add a property to the item for the content type.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -Properties @{"Title" = "Test Title"; "Category"="Test Category"}
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -Properties @{"Title" = "Test Title"; "Category"="Test Category"}
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder. It will add the specified properties to the file entries.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.pnp
+New-PnPProvisioningTemplateFromFolder -Out template.pnp
 ```
 
 Creates an empty provisioning template as a pnp package file, and includes all files in the current folder
 
 ### ------------------EXAMPLE 8------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.pnp -Folder c:\temp
+New-PnPProvisioningTemplateFromFolder -Out template.pnp -Folder c:\temp
 ```
 
 Creates an empty provisioning template as a pnp package file, and includes all files in the c:\temp folder
@@ -86,7 +86,7 @@ Creates an empty provisioning template as a pnp package file, and includes all f
 ## PARAMETERS
 
 ### -AsIncludeFile
-If specified, the output will only contain the <pnp:Files> element. This allows the output to be included in another template.
+If specified, the output will only contain the &lt;pnp:Files&gt; element. This allows the output to be included in another template.
 
 ```yaml
 Type: SwitchParameter
@@ -206,7 +206,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -218,7 +218,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -231,4 +231,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)

@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPFileFromProvisioningTemplate
@@ -20,7 +20,7 @@ Remove-PnPFileFromProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPFileFromProvisioningTemplate -Path template.pnp -FilePath filePath
+Remove-PnPFileFromProvisioningTemplate -Path template.pnp -FilePath filePath
 ```
 
 Removes a file from an in-memory PnP Provisioning Template
@@ -65,4 +65,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

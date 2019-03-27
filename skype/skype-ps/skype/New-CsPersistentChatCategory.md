@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: New-CsPersistentChatCategory
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsPersistentChatCategory
@@ -180,3 +183,4 @@ The New-CsPersistentChatCategory cmdlet creates new instances of the Microsoft.R
 [Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)
 
 [Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)
+

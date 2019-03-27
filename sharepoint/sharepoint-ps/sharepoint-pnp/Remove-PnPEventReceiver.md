@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPEventReceiver
@@ -26,42 +26,42 @@ Removes/unregisters a specific eventreceiver
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPEventReceiver -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+Remove-PnPEventReceiver -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will remove the event receiver with ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22" from the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPEventReceiver -List ProjectList -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+Remove-PnPEventReceiver -List ProjectList -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will remove the event receiver with ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22" from the "ProjectList" list
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Remove-PnPEventReceiver -List ProjectList -Identity MyReceiver
+Remove-PnPEventReceiver -List ProjectList -Identity MyReceiver
 ```
 
 This will remove the event receiver with ReceiverName "MyReceiver" from the "ProjectList" list
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Remove-PnPEventReceiver -List ProjectList
+Remove-PnPEventReceiver -List ProjectList
 ```
 
 This will remove all event receivers from the "ProjectList" list
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Remove-PnPEventReceiver
+Remove-PnPEventReceiver
 ```
 
 This will remove all event receivers from the current site
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPEventReceiver | ? ReceiverUrl -Like "*azurewebsites.net*" | Remove-PnPEventReceiver
+Get-PnPEventReceiver | ? ReceiverUrl -Like "*azurewebsites.net*" | Remove-PnPEventReceiver
 ```
 
 This will remove all event receivers from the current site which are pointing to a service hosted on Azure Websites
@@ -105,7 +105,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -117,7 +117,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -130,4 +130,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

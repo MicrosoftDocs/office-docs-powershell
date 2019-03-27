@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Register-CsHybridPSTNAppliance
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Register-CsHybridPSTNAppliance
@@ -13,9 +16,9 @@ Use the `Register-CsHybridPSTNAppliance` cmdlet to create a new Skype for Busine
 ## SYNTAX
 
 ```
-Register-CsHybridPSTNAppliance [-MediationServerFqdn <Object>] [-MediationServerIPAddress <Object>]
- [-Name <Object>] [-SiteName <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force] [-InMemory]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Register-CsHybridPSTNAppliance [-Tenant <Guid>] -Name <String> -SiteName <String>
+ -MediationServerIPAddress <String> -MediationServerFqdn <String> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +47,7 @@ Insert descriptive text for example 1.
 Mediation Server FQDN of this Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -60,7 +63,7 @@ Accept wildcard characters: False
 Mediation Server IP address of this Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -76,7 +79,7 @@ Accept wildcard characters: False
 Name of Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -92,23 +95,7 @@ Accept wildcard characters: False
 Name of Skype for Business Cloud Connector Edition site that the appliance belongs to.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -174,7 +161,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,22 +189,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -228,3 +199,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

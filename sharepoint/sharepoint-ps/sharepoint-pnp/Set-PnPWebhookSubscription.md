@@ -23,24 +23,24 @@ Set-PnPWebhookSubscription -Subscription <WebhookSubscriptionPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPWebhookSubscription -List MyList -Subscription ea1533a8-ff03-415b-a7b6-517ee50db8b6 -NotificationUrl https://my-func.azurewebsites.net/webhook
+Set-PnPWebhookSubscription -List MyList -Subscription ea1533a8-ff03-415b-a7b6-517ee50db8b6 -NotificationUrl https://my-func.azurewebsites.net/webhook
 ```
 
 Updates an existing Webhook subscription with the specified id on the list MyList with a new Notification Url
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPWebhookSubscription -List MyList -Subscription ea1533a8-ff03-415b-a7b6-517ee50db8b6 -NotificationUrl https://my-func.azurewebsites.net/webhook -ExpirationDate "2017-09-01"
+Set-PnPWebhookSubscription -List MyList -Subscription ea1533a8-ff03-415b-a7b6-517ee50db8b6 -NotificationUrl https://my-func.azurewebsites.net/webhook -ExpirationDate "2017-09-01"
 ```
 
 Updates an existing Webhook subscription with the specified id on the list MyList with a new Notification Url and a new expiration date
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> $subscriptions = Get-PnPWebhookSubscriptions -List MyList
-PS:> $updated = $subscriptions[0]
-PS:> $updated.ExpirationDate = "2017-10-01"
-PS:> Set-PnPWebhookSubscription -List MyList -Subscription $updated
+$subscriptions = Get-PnPWebhookSubscriptions -List MyList
+$updated = $subscriptions[0]
+$updated.ExpirationDate = "2017-10-01"
+Set-PnPWebhookSubscription -List MyList -Subscription $updated
 ```
 
 Updates the Webhook subscription from the list MyList with a modified subscription object.
@@ -97,7 +97,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -109,7 +109,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -126,4 +126,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

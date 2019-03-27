@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientPolicyEntry
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsClientPolicyEntry
@@ -122,7 +125,7 @@ For example: `-Name "OnlineFeedbackURL".`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -139,7 +142,7 @@ For example: `-Value http://www.litwareinc.com/feedback.`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -169,3 +172,4 @@ The New-CsClientPolicyEntry cmdlet creates new instances of the Microsoft.Rtc.Ma
 [New-CsClientPolicy](New-CsClientPolicy.md)
 
 [Set-CsClientPolicy](Set-CsClientPolicy.md)
+

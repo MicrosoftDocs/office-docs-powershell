@@ -11,8 +11,8 @@ Checks if a list item is a record
 ## SYNTAX 
 
 ```powershell
-Test-PnPListItemIsRecord -Identity <ListItemPipeBind>
-                         -List <ListPipeBind>
+Test-PnPListItemIsRecord -List <ListPipeBind>
+                         -Identity <ListItemPipeBind>
                          [-Web <WebPipeBind>]
                          [-Connection <SPOnlineConnection>]
 ```
@@ -21,7 +21,7 @@ Test-PnPListItemIsRecord -Identity <ListItemPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Test-PnPListItemAsRecord -List "Documents" -Identity 4
+Test-PnPListItemIsRecord -List "Documents" -Identity 4
 ```
 
 Returns true if the document in the documents library with id 4 is a record
@@ -53,7 +53,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -65,7 +65,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -78,4 +78,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

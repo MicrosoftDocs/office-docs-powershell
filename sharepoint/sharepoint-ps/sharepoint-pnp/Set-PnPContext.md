@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPContext
@@ -21,13 +21,13 @@ Sets the Client Context to use by the cmdlets, which allows easy context switchi
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Url $siteAurl -Credentials $credentials
-PS:> $ctx = Get-PnPContext
-PS:> Get-PnPList # returns the lists from site specified with $siteAurl
-PS:> Connect-PnPOnline -Url $siteBurl -Credentials $credentials
-PS:> Get-PnPList # returns the lists from the site specified with $siteBurl
-PS:> Set-PnPContext -Context $ctx # switch back to site A
-PS:> Get-PnPList # returns the lists from site A
+Connect-PnPOnline -Url $siteAurl -Credentials $credentials
+$ctx = Get-PnPContext
+Get-PnPList # returns the lists from site specified with $siteAurl
+Connect-PnPOnline -Url $siteBurl -Credentials $credentials
+Get-PnPList # returns the lists from the site specified with $siteBurl
+Set-PnPContext -Context $ctx # switch back to site A
+Get-PnPList # returns the lists from site A
 ```
 
 
@@ -48,4 +48,4 @@ Accept pipeline input: True
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

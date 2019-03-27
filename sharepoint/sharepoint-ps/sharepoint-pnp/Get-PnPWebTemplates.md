@@ -23,21 +23,21 @@ Will list all available templates one can use to create a classic site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPWebTemplates
+Get-PnPWebTemplates
 ```
 
 
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPWebTemplates -LCID 1033
+Get-PnPWebTemplates -LCID 1033
 ```
 
 Returns all webtemplates for the Locale with ID 1033 (English)
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPWebTemplates -CompatibilityLevel 15
+Get-PnPWebTemplates -CompatibilityLevel 15
 ```
 
 Returns all webtemplates for the compatibility level 15
@@ -69,7 +69,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -82,8 +82,8 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.spotenantwebtemplatecollection.aspx)
+### Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)

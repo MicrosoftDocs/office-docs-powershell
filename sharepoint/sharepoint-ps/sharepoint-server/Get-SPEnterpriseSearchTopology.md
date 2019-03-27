@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchTopology
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchTopology
@@ -21,13 +24,13 @@ Get-SPEnterpriseSearchTopology [[-Identity] <SearchTopologyPipeBind>]
 ## DESCRIPTION
 This cmdlet retrieves a given search topology, the active search topology, or all search topologies that belong to a given search service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
+$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
 
@@ -35,7 +38,7 @@ This example retrieves all search topologies of the search service application r
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
+$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
 ```
 
@@ -43,8 +46,8 @@ This example retrieves the active search topology of the search service applicat
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity '10fa59cb-4b32-4fe6-8f8d-065388df201e'
 ```
 
 This example retrieves search topology with the identity 10fa59cb-4b32-4fe6-8f8d-065388df201e of the search service application referenced by $ssa.
@@ -58,7 +61,7 @@ Specifies the search topology to retrieve.
 Type: SearchTopologyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -76,7 +79,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -92,7 +95,7 @@ Specifies that the active search topology should be returned.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,19 +105,14 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
-
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,9 +132,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchTopology]()
+[New-SPEnterpriseSearchTopology](New-SPEnterpriseSearchTopology.md)
 
-[Set-SPEnterpriseSearchTopology]()
+[Set-SPEnterpriseSearchTopology](Set-SPEnterpriseSearchTopology.md)
 
-[Remove-SPEnterpriseSearchTopology]()
+[Remove-SPEnterpriseSearchTopology](Remove-SPEnterpriseSearchTopology.md)
 

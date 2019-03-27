@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Convert-PnPFolderToProvisioningTemplate
@@ -20,14 +20,14 @@ Convert-PnPFolderToProvisioningTemplate -Out <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Convert-PnPFolderToProvisioningTemplate -Out template.pnp
+Convert-PnPFolderToProvisioningTemplate -Out template.pnp
 ```
 
 Creates a pnp package file of an existing template xml, and includes all files in the current folder
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Convert-PnPFolderToProvisioningTemplate -Out template.pnp -Folder c:\temp
+Convert-PnPFolderToProvisioningTemplate -Out template.pnp -Folder c:\temp
 ```
 
 Creates a pnp package file of an existing template xml, and includes all files in the c:\temp folder
@@ -72,4 +72,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

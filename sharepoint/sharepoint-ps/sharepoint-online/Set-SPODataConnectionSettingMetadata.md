@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPODataConnectionSettingMetadata
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPODataConnectionSettingMetadata
@@ -45,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------
 ```
-C:\PS>Set-SPODataConnectionSettingMetadata -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSettingMetadata -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
 ```
 
 This example updates the authentication mode of the metadata of Business Connectivity Services connection named ContosoServiceApp.
@@ -53,9 +56,9 @@ This example updates the authentication mode of the metadata of Business Connect
 
 ### --------------EXAMPLE 2-------------
 ```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext  http://contoso -Name "ContosoServiceApp"
+$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext  http://contoso -Name "ContosoServiceApp"
 
-C:\PS>Set-SPODataConnectionSettingMetadata -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSettingMetadata -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
 ```
 
 This example updates the Metadata properties of the Business Connectivity Services connection named ContosoServiceApp.
@@ -247,4 +250,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataConnectionSettingMetaData]()
+[Get-SPODataConnectionSettingMetaData](Get-SPODataConnectionSettingMetaData.md)

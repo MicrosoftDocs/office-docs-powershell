@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserDatabaseState
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsUserDatabaseState
@@ -85,7 +88,7 @@ If both parameters are omitted the Get-CsUserDatabaseState cmdlet returns inform
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -109,7 +112,7 @@ If both parameters are omitted the Get-CsUserDatabaseState cmdlet returns inform
 Type: Fqdn
 Parameter Sets: RegistrarPool
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -139,5 +142,6 @@ The Get-CsUserDatabaseState cmdlet returns instances of the Microsoft.Rtc.Manage
 [Set-CsUserDatabaseState](Set-CsUserDatabaseState.md)
 
 [Update-CsUserDatabase](Update-CsUserDatabase.md)
+
 
 

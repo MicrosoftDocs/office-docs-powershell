@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Get-TeamMessagingSettings
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-TeamMessagingSettings
@@ -27,13 +30,6 @@ Get-TeamMessagingSettings -GroupId <String>
 ### --------------------------  Example 1  --------------------------
 ```
 Get-TeamMessagingSettings -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf
-```
-
-### --------------------------    --------------------------
-@{paragraph=PS C:\\\>}
-
-```
-
 ```
 
 ## PARAMETERS

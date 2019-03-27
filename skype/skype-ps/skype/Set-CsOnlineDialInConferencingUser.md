@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOnlineDialInConferencingUser
@@ -12,13 +15,24 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 
 ## SYNTAX
 
+### TenantIdParams (Default)
 ```
-Set-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-TenantDomain <Object>]
- [-AllowPSTNOnlyMeetings <Object>] [-BridgeId <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>]
- [-ConferenceId <Object>] [-Confirm] [-DomainController <Object>] [-Force] [-ResetConferenceId]
- [-ResetLeaderPin] [-SendEmail] [-SendEmailFromAddress <Object>] [-SendEmailFromDisplayName <Object>]
- [-SendEmailToAddress <Object>] [-ServiceNumber <Object>] [-Tenant <Object>] [-TollFreeServiceNumber <Object>]
- [-WhatIf] [-AllowTollFreeDialIn <Object>] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-ConferenceId <System.Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### TenantDomainParams
+```
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] -TenantDomain <String> [-ConferenceId <Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +66,7 @@ A user identity can be specified by using one of four formats: 1) the user's SIP
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +84,7 @@ Specifies the domain name for the tenant or organization.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -89,7 +103,7 @@ An authenticated user is a user who joins the meeting using a Skype for Business
 The default is false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -105,7 +119,7 @@ Accept wildcard characters: False
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -121,23 +135,7 @@ Accept wildcard characters: False
 Specifies the name of the audio conferencing bridge.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +160,7 @@ When ConferenceId is specified the new ConferenceId will be assigned to the user
 When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: Passcode
 Applicable: Skype for Business Online
@@ -194,14 +192,14 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com.`
+Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com`
 
 Computer name: `-DomainController atl-cs-001`
 
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -270,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
-PARAMVALUE: SwitchParameter
+Send an email to the user containing their Audio Conference information.
 
 ```yaml
 Type: SwitchParameter
@@ -286,10 +284,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-PARAMVALUE: String
+You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -302,10 +300,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-PARAMVALUE: String
+You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -318,10 +316,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToAddress
-PARAMVALUE: String
+You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -341,7 +339,7 @@ The cmdlet will verify that the service number is assigned to the user's current
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -361,7 +359,7 @@ You can find your tenant ID by running this command: `Get-CsTenant | Select-Obje
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -374,10 +372,10 @@ Accept wildcard characters: False
 ```
 
 ### -TollFreeServiceNumber
-PARAMVALUE: String
+Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations. The toll-free number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -407,26 +405,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-{{Fill AllowTollFreeDialIn Description}}
+If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. Please note that making modifications to this value could trigger rescheduling all existing meetings organized by the given users, and all meeting invites will be resent to all participants. 
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -439,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -448,3 +430,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

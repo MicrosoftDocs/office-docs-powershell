@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Remove-CsPersistentChatAddin
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsPersistentChatAddin
@@ -170,3 +173,4 @@ Instead, the `Remove-CsPersistentChatAddin` cmdlet deletes existing instances of
 [New-CsPersistentChatAddin](New-CsPersistentChatAddin.md)
 
 [Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)
+

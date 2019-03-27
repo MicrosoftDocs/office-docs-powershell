@@ -1,8 +1,11 @@
 ---
-external help file: Get-CsOrganizationalAutoAttendantSupportedLanguage.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantSupportedLanguage
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOrganizationalAutoAttendantSupportedLanguage
@@ -83,3 +86,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Remove-CsPersistentChatRoom
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsPersistentChatRoom
@@ -179,3 +182,4 @@ Instead, the `Remove-CsPersistentChatRoom` cmdlet deletes existing instances of 
 [New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
 [Set-CsPersistentChatRoom](Set-CsPersistentChatRoom.md)
+

@@ -1,8 +1,11 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantPrompt.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantPrompt
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantPrompt
@@ -12,19 +15,23 @@ Use the New-CsOrganizationalAutoAttendantPrompt cmdlet to create a new prompt.
 
 ## SYNTAX
 
-### AudioFile
+### AudioFileParamSet (Default)
 ```
-New-CsOrganizationalAutoAttendantPrompt -AudioFilePrompt <Object> [-Tenant <Guid>] [<CommonParameters>]
-```
-
-### TextToSpeech
-```
-New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantPrompt -AudioFilePrompt <AudioFile> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
-### Dual
+### DualParamSet
 ```
-New-CsOrganizationalAutoAttendantPrompt -ActiveType <None | TextToSpeech | AudioFile> -AudioFilePrompt <Object> -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantPrompt -ActiveType <PromptType> [-AudioFilePrompt <AudioFile>]
+ [-TextToSpeechPrompt <String>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
+```
+
+### TextToSpeechParamSet
+```
+New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +62,7 @@ This example creates a new prompt that plays the selected audio file.
 ```
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
 $audioFile = New-CsOnlineAudioFile -FileName "hello.wav" -Content $content
-$dualPrompt = New-CsOrganizationalAutoAttendantPrompt -ActiveType -AudioFile AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
+$dualPrompt = New-CsOrganizationalAutoAttendantPrompt -ActiveType AudioFile -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
 ```
 
 This example creates a new prompt that has both audio file and text-to-speech data, but will play the audio file when the prompt is activated (rendered).
@@ -70,9 +77,8 @@ The ActiveType parameter identifies the active type (modality) of the OAA prompt
 
 This is explicitly required if both Audio File and TTS prompts are specified. Otherwise, it is inferred.
 
-
 ```yaml
-Type: Object
+Type: PromptType
 Parameter Sets: Dual
 Aliases: 
 Applicable: Skype for Business Online
@@ -89,9 +95,8 @@ The AudioFilePrompt parameter represents the audio to play when the prompt is ac
 
 This parameter is required when audio file prompts are being created. You can create audio files by using the New-CsOnlineAudioFile cmdlet.
 
-
 ```yaml
-Type: Object
+Type: AudioFile
 Parameter Sets: AudioFile, Dual
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,9 +113,8 @@ The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that 
 
 This parameter is required when text to speech prompts are being created.
 
-
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TextToSpeech, Dual
 Aliases: 
 Applicable: Skype for Business Online
@@ -125,7 +129,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -155,3 +159,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## RELATED LINKS
 
 [New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
+
