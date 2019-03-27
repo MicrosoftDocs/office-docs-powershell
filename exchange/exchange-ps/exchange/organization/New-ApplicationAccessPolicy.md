@@ -11,19 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application. 
-
-While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
-
-Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
-
-1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy. 
-2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy). 
-3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access. 
-4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
-5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
-
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -40,21 +28,17 @@ New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <S
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-This feature applies only to apps connecting to the Microsoft Graph API for Outlook resources.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application. 
 
-While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the app can only read mails/events and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn't have access to data from other countries or a CRM integration app should only access calendar of the Sales org and not other departments.
+While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
-Every request to a target user's mailbox by a Graph application is verified using the following rules (in the same order):
+Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
-1. If there are multiple application access policies for the same App-user, DenyAccess policy is prioritized over a RestrictAccess policy.
-
-2. If a DenyAccess policy exists for the current App-User, then the app's access request is denied (even if a RestrictAccess policy exists).
-
-3. If there are any RestrictAccess policies that match the App-User, then the app is granted access.
-
-4. If there are any Restrict policies for the application, and the target mailbox is not a member of those policies, then app is denied access to the target mailbox.
-
-5. If none of the above conditions are met, then the app is granted access.
+1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy. 
+2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy). 
+3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access. 
+4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
+5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
 
 ## EXAMPLES
 
