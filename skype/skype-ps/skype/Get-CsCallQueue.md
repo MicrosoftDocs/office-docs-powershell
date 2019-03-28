@@ -13,16 +13,12 @@ The Get-CsCallQueue cmdlet returns the identified Call Queues.
 ## SYNTAX
 
 ```
-Get-CsCallQueue [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Identity <Object>]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsCallQueue [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Identity <Object>] [-Tenant <Object>] [First <Int32>] 
+[Skip <Int32>] [ExcludeContent <Switch>] [Sort <String>] [Descending <Switch>] [NameFilter <String>] [-AsJob] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
 The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
-
-If called without parameters, Get-CsCallQueue returns a collection of all Call Queues configured to be used in your organization.
-
-The Get-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 ## EXAMPLES
 
@@ -101,6 +97,102 @@ Aliases:
 Applicable: Skype for Business Online
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -First
+The First parameter gets the first N Call Queues
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: 100
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Skip
+The Skip parameter skips the first N Call Queues
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeContent
+The ExcludeContent parameter only displays the Name and Id of the Call Queues
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sort
+The Sort parameter specifies the property used to sort.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: Name
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Descending
+The Descending parameter sorts Call Queues in descending order
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NameFilter
+The NameFilter parameter returns Call Queues where name contains specified string
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

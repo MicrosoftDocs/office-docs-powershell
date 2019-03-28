@@ -13,12 +13,12 @@ The Remove-CsCallQueue cmdlet deletes an existing Call Queue.
 ## SYNTAX
 
 ```
-Remove-CsCallQueue -Identity <System.Guid> [-AsJob] [-BypassDualWrite <System.Boolean>] [-Confirm]
-[-DomainController <Object>] [-Force] [-Tenant <System.Guid>] [-WhatIf] [<CommonParameters>]
+Remove-CsCallQueue -Identity <Guid> [-AsJob] [-BypassDualWrite <Boolean>] [-Confirm]
+[-DomainController <Object>] [-Force] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-CsCallQueue cmdlet deletes an existing Call Queue specified by the Identity parameter.
+The Remove-CsCallQueue cmdlet deletes an existing Call Queue specified by the Identity parameter. The removal will fail if there are any ApplicationInstances still associated with the Call Queue.
 
 ## EXAMPLES
 

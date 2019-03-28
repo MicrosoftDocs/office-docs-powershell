@@ -16,10 +16,10 @@ Updates a Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-Set-CsCallQueue -Identity <System.Identity> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections.Generic.List`1[System.Guid]>]
-[-MusicOnHoldAudioFileId <System.Guid>] [-Name <System.String>] [-OverflowAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction>] [-OverflowActionTarget <System.Uri>] 
-[-OverflowThreshold <Int16>] [-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>] 
-[-TimeoutActionTarget <System.Uri>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <System.Boolean>] [-WelcomeMusicAudioFileId <System.Guid>] [<CommonParameters>]
+Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>]
+[-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] 
+[-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] 
+[-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

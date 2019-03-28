@@ -13,25 +13,21 @@ Creates new Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-New-CsCallQueue -Name <System.String> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections.Generic.List`1[System.Guid]>] 
-[-Tenant <System.Guid>] [-UseDefaultMusicOnHold <System.Boolean>] [-WelcomeMusicAudioFileId <System.Guid>] [-MusicOnHoldAudioFileId <System.Guid>] 
-[-OverflowAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction>] [-OverflowActionTarget <System.Guid>] [-OverflowThreshold <Int16>] 
-[-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>] [-TimeoutActionTarget <System.Guid>] [-TimeoutThreshold <Int16>] 
-[-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [<CommonParameters>]
+New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] 
+[-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
+[-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
+[-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] 
+[-RoutingMethod <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsCallQueue cmdlet creates a new Call Queue.
 
-MusicOnHoldAudioFileId must be provided or set UseDefaultMusicOnHold to true.
-
-The New-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-New-CsCallQueue -Name "Help Desk" -Domain "litwareinc.com" -UseDefaultMusicOnHold $true
+New-CsCallQueue -Name "Help Desk" -UseDefaultMusicOnHold $true
 ```
 
 This example creates a Call Queue for the organization named "Help Desk" using default music on hold.
@@ -42,7 +38,7 @@ New-CsCallQueue -Name "Help desk" -RoutingMethod Attendant -DistributionLists @(
 
 ```
 
-This example creates a Call Queue for the organization named "Help Desk" in the domain "litwareinc.com" using existing music on hold and welcome music files and other configurable parameters.
+This example creates a Call Queue for the organization named "Help Desk" and uses default music on hold files
 
 
 ## PARAMETERS
