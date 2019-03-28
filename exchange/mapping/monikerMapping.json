@@ -4,8 +4,6 @@
         "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
         "packageRoot": "exchange-ps",
-        "modules": {
-            "exchange": {}     
-        }
+        "serviceMap": "mapping/groupMapping.json"
     }
 }
