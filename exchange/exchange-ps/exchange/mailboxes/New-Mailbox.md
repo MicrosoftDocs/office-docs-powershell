@@ -937,7 +937,7 @@ Accept wildcard characters: False
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The InactiveMailbox parameter specifies the inactive mailbox that you want to recover. To find inactive mailboxes, run the command Get-Mailbox -InactiveMailboxOnly | FL Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid and then use the DistinguishedName or ExchangeGuid property values to identify the inactive mailbox for this parameter (values guaranteed to be unique).
+The InactiveMailbox parameter specifies the inactive mailbox that you want to recover. To find inactive mailboxes, run the command `Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid` and then use the DistinguishedName or ExchangeGuid property values to identify the inactive mailbox for this parameter (only those values are guaranteed to be unique for inactive mailboxes).
 
 ```yaml
 Type: MailboxIdParameter
@@ -988,8 +988,6 @@ The LinkedMasterAccount parameter specifies the master account in the forest whe
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -1299,8 +1297,6 @@ The ArbitrationMailbox parameter specifies the arbitration mailbox that's used t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1711,8 +1707,6 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

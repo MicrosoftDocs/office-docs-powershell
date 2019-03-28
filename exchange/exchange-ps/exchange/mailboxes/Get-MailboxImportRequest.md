@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ### -BatchName
 The BatchName parameter specifies the name given to a batch import request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
@@ -151,7 +151,7 @@ The Database parameter specifies the database in which the user's mailbox or arc
 
 - Database name
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -213,8 +213,6 @@ In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParam
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

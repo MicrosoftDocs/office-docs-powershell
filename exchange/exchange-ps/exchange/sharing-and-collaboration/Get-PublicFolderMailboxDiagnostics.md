@@ -49,6 +49,28 @@ This example returns the diagnostic information for the public folder mailbox Sa
 ### -Identity
 The Identity parameter specifies the identity of the public folder mailbox. The public folder mailbox is where the content of the public folder resides.
 
+You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)

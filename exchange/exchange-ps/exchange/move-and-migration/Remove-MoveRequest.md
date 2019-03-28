@@ -84,7 +84,7 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 
 - Alias
 
-You can't use this parameter in conjunction with the MailboxGuid or MoveRequestQueue parameters.
+You can't use this parameter with the MailboxGuid or MoveRequestQueue parameters.
 
 ```yaml
 Type: MoveRequestIdParameter
@@ -103,7 +103,7 @@ This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of the mailbox for which you want to remove the move request. If you specify the MailboxGuid parameter, you must also specify the MoveRequestQueue parameter.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -126,7 +126,7 @@ The MoveRequestQueue parameter specifies the database on which the move request 
 
 - Database name
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -199,8 +199,6 @@ The ProxyToMailbox parameter specifies the move destination by the location of t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

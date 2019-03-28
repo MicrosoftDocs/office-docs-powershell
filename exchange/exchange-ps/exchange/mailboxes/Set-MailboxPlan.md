@@ -61,6 +61,8 @@ The Identity parameter specifies the mailbox plan that you want to modify. You c
 
 - Name
 
+- Alias
+
 - Display name
 
 - Distinguished name (DN)

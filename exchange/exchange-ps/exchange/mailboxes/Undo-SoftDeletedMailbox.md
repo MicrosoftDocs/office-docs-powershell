@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the identity of the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
+The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
 
 ```yaml
 Type: MailboxIdParameter

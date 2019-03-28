@@ -116,7 +116,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the public folder mailbox from which you want to view the permissions. By default, the permissions are returned from the primary public folder mailbox. Using the Mailbox parameter allows you to specify a different public folder mailbox.
+The Mailbox parameter specifies the public folder mailbox that you want to view the permissions for. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+ 
+By default, the permissions are returned from the primary public folder mailbox. Using this parameter allows you to specify a different public folder mailbox.
 
 ```yaml
 Type: MailboxIdParameter

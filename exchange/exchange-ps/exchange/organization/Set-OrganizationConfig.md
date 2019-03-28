@@ -1423,8 +1423,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -1811,8 +1809,6 @@ The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
