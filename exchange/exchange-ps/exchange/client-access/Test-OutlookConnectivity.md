@@ -147,7 +147,29 @@ In Exchange 2010, this example validates Outlook connectivity through RpcProxy o
 ### -Identity
 This parameter is available or functional only in Exchange Server 2010.
 
-The Identity parameter specifies a target user mailbox. This value can be the mailbox GUID or can be the domain name\\user, for example, contoso.com\\erin. If the parameter isn't specified, the command looks for a test user in Active Directory. You need to create the test user with the New-TestCasConnectivityUser.ps1 script.
+The Identity parameter specifies a target user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the command looks for a test user in Active Directory that you previously created by using the New-TestCasConnectivityUser.ps1 script.
 
 ```yaml
 Type: MailboxIdParameter
@@ -333,7 +355,31 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxId
-The MailboxID parameter specifies the target mailbox. IF not specified, this uses the test account.
+The MailboxID parameter specifies the target mailbox.
+
+In Exchange 2013 or later, the Identity parameter specifies a target user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the command uses the test account.
 
 ```yaml
 Type: MailboxIdParameter

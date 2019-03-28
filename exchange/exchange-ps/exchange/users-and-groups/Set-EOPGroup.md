@@ -65,8 +65,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -95,8 +93,6 @@ The ManagedBy parameter specifies a user who owns the group. You can use any val
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

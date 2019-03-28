@@ -68,23 +68,27 @@ This example prevents the user tony@contoso.com from accessing his calendar and 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user to enable for Unified Messaging. The values for this parameter include the following:
+The Identity parameter specifies the mailbox tht you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
-- ADObjectID
+- Name
 
-- GUID
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

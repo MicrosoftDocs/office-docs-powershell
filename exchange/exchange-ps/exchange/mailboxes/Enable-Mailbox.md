@@ -288,8 +288,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -409,8 +407,6 @@ The LinkedMasterAccount parameter specifies the master account in the forest whe
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

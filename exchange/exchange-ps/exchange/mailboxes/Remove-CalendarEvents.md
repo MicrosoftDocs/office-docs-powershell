@@ -61,13 +61,9 @@ This example previews the meetings that would be cancelled in Jacob Berger's cal
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -75,9 +71,17 @@ For example:
 
 - Canonical DN
 
+- \<domain name\>\\\<account name\>
+
 - Email address
 
 - GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

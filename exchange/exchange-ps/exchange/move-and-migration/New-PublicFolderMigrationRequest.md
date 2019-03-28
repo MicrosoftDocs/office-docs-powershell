@@ -103,7 +103,7 @@ The RemoteCredential parameter specifies an administrator who has permission to 
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
-You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN parameter.
+You must use this parameter with the RemoteMailboxServerLegacyDN parameter.
 
 ```yaml
 Type: PSCredential
@@ -122,7 +122,7 @@ This parameter is available only in the cloud-based service.
 
 The RemoteMailboxLegacyDN parameter specifies the mailbox of the remote credentials specified in the RemoteCredential parameter.
 
-You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN parameter.
+You must use this parameter in with the RemoteMailboxServerLegacyDN parameter.
 
 ```yaml
 Type: String

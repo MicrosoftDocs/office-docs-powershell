@@ -60,6 +60,8 @@ The Identity parameter specifies the mailbox plan that you want to view. You can
 
 - Name
 
+- Alias
+
 - Display name
 
 - Distinguished name (DN)
