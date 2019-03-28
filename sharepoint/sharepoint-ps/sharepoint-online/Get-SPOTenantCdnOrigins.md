@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOTenantCdnOrigins
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOTenantCdnOrigins
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists all the configured origins under the tenancy or under a given site. Requires Tenant administrator permissions.
+
 
 ## SYNTAX
 
@@ -17,21 +21,24 @@ Get-SPOTenantCdnOrigins -CdnType <SPOTenantCdnType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Lists all the configured origins under the tenancy or under a given site.
+
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOTenantCdnOrigins -CdnType Public 
 ```
 
-{{ Add example description here }}
+The example returns a list of origins from the Tenant.
+
 
 ## PARAMETERS
 
 ### -CdnType
-{{Fill CdnType Description}}
+Specifies the CDN type. The valid values are: Public or Private.
+
 
 ```yaml
 Type: SPOTenantCdnType
@@ -61,4 +68,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

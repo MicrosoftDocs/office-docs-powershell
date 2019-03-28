@@ -1,15 +1,18 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPLogLevel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPLogLevel
 
 ## SYNOPSIS
 
-Resets the Windows trace logging and event logging levels to their default values.
+Resets the Windows event logging and trace logging to their default values.
 
 
 
@@ -24,30 +27,37 @@ Clear-SPLogLevel [-AssignmentCollection <SPAssignmentCollection>] [-Identity <St
 The Clear-SPLogLevel cmdlet resets the Windows event logging and trace logging levels for the specified categories to the default values.
 If the Identity parameter is not provided, all categories are affected.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Clear-SPLogLevel -Identity Cat1
+Clear-SPLogLevel -Identity Cat1
 ```
 
 This example resets the log levels for a single category.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
+"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
 ```
 
 This example resets the log levels for multiple categories.
 
 ### --------------EXAMPLE 3----------------- 
 ```
-C:\PS>Get-SPLogLevel | Clear-SPLogLevel
+Get-SPLogLevel | Clear-SPLogLevel
 ```
 
 This example resets the log levels for all categories.
+
+### --------------EXAMPLE 4----------------- 
+```
+Clear-SPLogLevel -Identity "SharePoint Server:Database"
+```
+
+This example resets the log level for the specific category in the SharePoint Server area only. This is useful when more than one area uses the same named category.
 
 ## PARAMETERS
 
@@ -64,7 +74,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +93,7 @@ Providing an invalid category is a non-terminating error and will be ignored.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -101,7 +111,7 @@ The user can retrieve one or more categories from the Get-SPLogLevel cmdlet, mod
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

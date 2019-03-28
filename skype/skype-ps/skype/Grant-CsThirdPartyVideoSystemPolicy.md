@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsThirdPartyVideoSystemPolicy
@@ -27,7 +30,7 @@ One key management task related to VTC devices is to enable (or disable) the abi
 By default, VTC devices are allowed to send low-resolution video.
 However, administrators can create third-party video system policies that disable the use of low-resolution video.
 This might be useful for devices located in conference rooms or other areas where low-resolution video is not considered acceptable.
-The Grant-CsThirdPartyVideoSystem cmdlet provides a way for administrators to assign (or unassign) third-party video system policies created at the per-user scope.
+The Grant-CsThirdPartyVideoSystemPolicy cmdlet provides a way for administrators to assign (or unassign) third-party video system policies created at the per-user scope.
 
 Note that this cmdlet can only be used to assign per-user policies; that's because policies at the global or the site scope do not need to be assigned.
 If you want a VTC device to be managed by the global policy or (if available) the device site policy, simply unassign any per-user policy previously assigned to the device.
@@ -48,7 +51,7 @@ This device is then piped to the Grant-CsThirdPartyVideoSystemPolicy cmdlet, whi
 ### -------------------------- Example 2 -------------------------- 
 ```
 
-Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Contact"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName $Null
+Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Device"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName $Null
 ```
 
 The command shown in Example 2 is effectively the inverse of the command shown in Example 1: in this case, any per-user policy previously assigned to Redmond Video Device is removed.
@@ -79,7 +82,7 @@ This means you might find it easier to modify third-party video systems by using
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -98,7 +101,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -114,7 +117,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +134,7 @@ If this parameter is not specified then the Grant-CsThirdPartyVideoSystemPolicy 
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -148,7 +151,7 @@ By default, the Grant-CsThirdPartyVideoSystemPolicy cmdlet does not pass objects
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +167,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -200,3 +203,4 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
+

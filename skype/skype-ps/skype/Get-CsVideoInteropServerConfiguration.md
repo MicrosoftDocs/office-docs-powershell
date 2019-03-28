@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVideoInteropServerConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsVideoInteropServerConfiguration
@@ -93,7 +96,7 @@ The Filter and the Identity parameters are mutually exclusive.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ If neither the Identity nor the Filter parameter is specified, then the Get-CsVi
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -138,7 +141,7 @@ Retrieves the VIS configuration from the local replica of the Central Management
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -170,3 +173,4 @@ The Get-CsVideoInteropServerConfiguration cmdlet returns instances of the Micros
 [Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)
 
 [Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)
+

@@ -1,8 +1,11 @@
 ---
-external help file: Get-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendant
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOrganizationalAutoAttendant
@@ -172,3 +175,4 @@ The String is used as the PrimaryUri input.
 [Set-CsOrganizationalAutoAttendant](Set-CsOrganizationalAutoAttendant.md)
 
 [Remove-CsOrganizationalAutoAttendant](Remove-CsOrganizationalAutoAttendant.md)
+

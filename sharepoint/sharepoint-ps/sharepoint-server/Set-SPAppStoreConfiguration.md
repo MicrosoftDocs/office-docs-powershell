@@ -1,14 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppStoreConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets SharePoint Store settings for an app.
 
 
 ## SYNTAX
@@ -19,38 +22,48 @@ Set-SPAppStoreConfiguration [-Url <String>] [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPAppStoreConfiguration cmdlet to set SharePoint Store settings for a specified app.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715](https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
 ```
 
-{{ Add example description here }}
+This example sets the URL to the Office.com server.
 
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPAppStoreConfiguration -Enable $true
+Set-SPAppStoreConfiguration -Enable $false
+```
+
+This example turns off the SharePoint Store.
+
+### --------------------EXAMPLE 3---------------------
+```
+Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.
 
-
 ## PARAMETERS
 
 ### -Url
-{{Fill Url Description}}
+Specifies the URL of the app for which to set SharePoint Store settings.
+
+The SharePoint store value should not be changed unless instructed by a Microsoft representative.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -60,14 +73,16 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +99,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +117,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -112,13 +127,19 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+Specifies whether the Office Store services lets third- party add-ins to be found or downloaded.
+
+This is intended for administrators to disable discovery and downloads of third-party add-ins on their SharePoint tenants and site collections.
+
+The valid values are True and False.
+
+The default value is False.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -128,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -142,4 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAppStoreConfiguration]()
+[Get-SPAppStoreConfiguration](Get-SPAppStoreConfiguration.md)

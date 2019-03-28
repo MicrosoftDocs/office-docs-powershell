@@ -1,14 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: sharepointserver.xml
+applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPProjectDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016, SharePoint Server 2019 content database containing the migrated site collection.
 
 ## SYNTAX
 
@@ -19,27 +22,31 @@ Migrate-SPProjectDatabase [-AssignmentCollection <SPAssignmentCollection>] [-Con
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016, SharePoint Server 2019 content database containing the migrated site collection.
 
+Both the Project Server 2013 database and the SharePoint Server 2016, SharePoint Server 2019 database must be on the same instance of SQL
+Server and the SharePoint farm account must have full access to the Project Server 2013 database. During the migration process the Project Server 2013 database will be modified and cannot be mounted back to a Project Server 2013.
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "http://contoso1/sites/PWA"
 ```
 
-{{ Add example description here }}
+This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing http://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -55,7 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -65,13 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-{{Fill DatabaseName Description}}
+The name of the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -81,13 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
-{{Fill DatabaseServer Description}}
+The name of the instance of SQL Server hosting the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -97,13 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverPartner
-{{Fill FailoverPartner Description}}
+The name of the SQL Server failover partner for the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -113,13 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-{{Fill Overwrite Description}}
+Specifies to overwrite any Project data from previous attempts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -129,13 +136,13 @@ Accept wildcard characters: False
 ```
 
 ### -SQLLogon
-{{Fill SQLLogon Description}}
+SQL Server authentication credentials if needed.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -145,13 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
-{{Fill SiteCollection Description}}
+The URL of the site collection to which you want to copy the Project data.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -168,7 +175,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -178,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

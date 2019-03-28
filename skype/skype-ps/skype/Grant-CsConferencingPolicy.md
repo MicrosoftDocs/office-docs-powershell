@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsConferencingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsConferencingPolicy
@@ -18,8 +21,8 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ```
-Grant-CsConferencingPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsCloudMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,12 +47,10 @@ This is not the case with per-user policies: per-user policies are not assigned 
 Instead, you must use the Grant-CsConferencingPolicy cmdlet to explicitly assign per-user conferencing policies to a user or set of users.
 
 
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsConferencingPolicy -identity "Ken Myer" -PolicyName SalesConferencingPolicy
 ```
 
@@ -58,7 +59,6 @@ In Example 1, the Grant-CsConferencingPolicy cmdlet is used to assign the policy
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Grant-CsConferencingPolicy -PolicyName FinanceConferencingPolicy
 ```
 
@@ -69,7 +69,6 @@ After the user accounts have been retrieved, that information is then piped to t
 
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Grant-CsConferencingPolicy -PolicyName $Null
 ```
 
@@ -79,7 +78,6 @@ To do this, the command calls the Grant-CsConferencingPolicy cmdlet and specifie
 
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "Department=Human Resources" | Grant-CsConferencingPolicy -PolicyName HRConferencingPolicy
 ```
 
@@ -91,7 +89,6 @@ After the user accounts have been retrieved, that collection is piped to the Gra
 ## PARAMETERS
 
 ### -Identity
-
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 User Identities can also be referenced by using the user's Active Directory distinguished name.
@@ -99,14 +96,11 @@ User Identities can also be referenced by using the user's Active Directory dist
 Note that you can use the asterisk (*) wildcard character when specifying the user Identity.
 For example, the Identity "* Smith" returns all the users with a display name that ends with the string value " Smith".
 
-
-
-
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -116,21 +110,17 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
 For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondConferencingPolicy has a PolicyName equal to RedmondConferencingPolicy.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName parameter to $Null.
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -143,13 +133,11 @@ Accept wildcard characters: False
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsConferencingPolicy cmdlet will contact the first available domain controller.
 
-
-
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -159,19 +147,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsConferencingPolicy cmdlet does not pass objects through the pipeline.
-
-
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -181,17 +164,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,17 +180,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -224,7 +199,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -292,4 +267,5 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsConferencingPolicy](Remove-CsConferencingPolicy.md)
 
 [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
+
 

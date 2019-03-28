@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsVoicePolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsVoicePolicy
@@ -16,10 +19,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsVoicePolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsVoicePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### GrantToTenant
+```
+Grant-CsVoicePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 
 ## DESCRIPTION
 
@@ -27,19 +38,18 @@ This cmdlet assigns an existing per-user voice policy to a user.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
 Use this cmdlet to assign the settings that enable and disable these features for a specific user.
 
-You can check whether a user has been granted a per-user voice policy by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object VoicePolicy.`
+You can check whether a user has been granted a per-user voice policy by calling a command in this format: `Get-CsUser "<user name>" | Select-Object VoicePolicy.`
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object VoicePolicy`
 
-
+    NOTE - For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
 
 ## EXAMPLES
 
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsVoicePolicy -Identity "Ken Myer" -PolicyName VoicePolicyRedmond
 ```
 
@@ -48,7 +58,6 @@ This example assigns the voice policy with the Identity VoicePolicyRedmond to th
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=Finance,ou=North America,dc=litwareinc,dc=com" | Grant-CsVoicePolicy -PolicyName VoicePolicyRedmond
 ```
 
@@ -60,23 +69,20 @@ This collection of users is then piped to the Grant-CsVoicePolicy cmdlet, which 
 ## PARAMETERS
 
 ### -Identity
-
 The Identity (unique identifier) of the user to whom the policy is being assigned.
 
 User identities can be specified by using one of four formats: 1) The user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 
-Note that you can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
+Note that you can use the asterisk (\*) wildcard character when using the Display Name as the user Identity.
 For example, the Identity "* Smith" would return all the users with the last name Smith.
 
 Full Data Type: Microsoft.Rtc.Management.AD.UserIdParameter
-
-
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -86,17 +92,15 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 The name (Identity) of the voice policy to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
 Per-user policy identities include a prefix of tag: that should not be included with the PolicyName.)
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -106,17 +110,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -126,16 +127,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +150,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -167,7 +166,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -186,12 +185,8 @@ You can return your tenant ID by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
-Instead, the tenant ID will automatically be filled in for you based on your connection information.
-The Tenant parameter is primarily for use in a hybrid deployment.
-
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -204,7 +199,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -250,3 +249,4 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 [Get-CsUser](Get-CsUser.md)
 
 [Get-CsOnlineUser](Get-CsOnlineUser.md)
+

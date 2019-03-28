@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Invoke-PnPWebAction
@@ -12,18 +12,18 @@ Executes operations on web, lists and list items.
 
 ```powershell
 Invoke-PnPWebAction [-Webs <Web[]>]
-                    [-WebAction <Action`1>]
-                    [-ShouldProcessWebAction <Func`2>]
-                    [-PostWebAction <Action`1>]
-                    [-ShouldProcessPostWebAction <Func`2>]
+                    [-WebAction <Web>]
+                    [-ShouldProcessWebAction <Web>]
+                    [-PostWebAction <Web>]
+                    [-ShouldProcessPostWebAction <Web>]
                     [-WebProperties <String[]>]
-                    [-ListAction <Action`1>]
-                    [-ShouldProcessListAction <Func`2>]
-                    [-PostListAction <Action`1>]
-                    [-ShouldProcessPostListAction <Func`2>]
+                    [-ListAction <List>]
+                    [-ShouldProcessListAction <List>]
+                    [-PostListAction <List>]
+                    [-ShouldProcessPostListAction <List>]
                     [-ListProperties <String[]>]
-                    [-ListItemAction <Action`1>]
-                    [-ShouldProcessListItemAction <Func`2>]
+                    [-ListItemAction <ListItem>]
+                    [-ShouldProcessListItemAction <ListItem>]
                     [-ListItemProperties <String[]>]
                     [-SubWebs [<SwitchParameter>]]
                     [-DisableStatisticsOutput [<SwitchParameter>]]
@@ -36,14 +36,14 @@ Invoke-PnPWebAction [-Webs <Web[]>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Invoke-PnPWebAction -ListAction ${function:ListAction}
+Invoke-PnPWebAction -ListAction ${function:ListAction}
 ```
 
 This will call the function ListAction on all the lists located on the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Invoke-PnPWebAction -ShouldProcessListAction ${function:ShouldProcessList} -ListAction ${function:ListAction}
+Invoke-PnPWebAction -ShouldProcessListAction ${function:ShouldProcessList} -ListAction ${function:ListAction}
 ```
 
 This will call the function ShouldProcessList, if it returns true the function ListAction will then be called. This will occur on all lists located on the current web
@@ -66,7 +66,7 @@ Accept pipeline input: False
 Function to be executed on the list. There is one input parameter of type List
 
 ```yaml
-Type: Action`1
+Type: List
 Parameter Sets: (All)
 
 Required: False
@@ -78,7 +78,7 @@ Accept pipeline input: False
 Function to be executed on the list item. There is one input parameter of type ListItem
 
 ```yaml
-Type: Action`1
+Type: ListItem
 Parameter Sets: (All)
 
 Required: False
@@ -114,7 +114,7 @@ Accept pipeline input: False
 Function to be executed on the list, this will trigger after list items have been processed. There is one input parameter of type List
 
 ```yaml
-Type: Action`1
+Type: List
 Parameter Sets: (All)
 
 Required: False
@@ -126,7 +126,7 @@ Accept pipeline input: False
 Function to be executed on the web, this will trigger after lists and list items have been processed. There is one input parameter of type Web
 
 ```yaml
-Type: Action`1
+Type: Web
 Parameter Sets: (All)
 
 Required: False
@@ -138,7 +138,7 @@ Accept pipeline input: False
 Function to be executed on the web that would determine if ListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
 
 ```yaml
-Type: Func`2
+Type: List
 Parameter Sets: (All)
 
 Required: False
@@ -150,7 +150,7 @@ Accept pipeline input: False
 Function to be executed on the web that would determine if ListItemAction should be invoked, There is one input parameter of type ListItem and the function should return a boolean value
 
 ```yaml
-Type: Func`2
+Type: ListItem
 Parameter Sets: (All)
 
 Required: False
@@ -162,7 +162,7 @@ Accept pipeline input: False
 Function to be executed on the web that would determine if PostListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
 
 ```yaml
-Type: Func`2
+Type: List
 Parameter Sets: (All)
 
 Required: False
@@ -174,7 +174,7 @@ Accept pipeline input: False
 Function to be executed on the web that would determine if PostWebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
 
 ```yaml
-Type: Func`2
+Type: Web
 Parameter Sets: (All)
 
 Required: False
@@ -186,7 +186,7 @@ Accept pipeline input: False
 Function to be executed on the web that would determine if WebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
 
 ```yaml
-Type: Func`2
+Type: Web
 Parameter Sets: (All)
 
 Required: False
@@ -222,7 +222,7 @@ Accept pipeline input: False
 Function to be executed on the web. There is one input parameter of type Web
 
 ```yaml
-Type: Action`1
+Type: Web
 Parameter Sets: (All)
 
 Required: False
@@ -255,7 +255,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -267,7 +267,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -280,4 +280,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

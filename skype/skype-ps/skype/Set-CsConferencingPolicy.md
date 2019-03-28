@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsConferencingPolicy
@@ -15,67 +18,48 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsConferencingPolicy [[-Identity] <XdsIdentity>] [-AllowAnnotations <Boolean>]
- [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowConferenceRecording <Boolean>] [-AllowExternalUserControl <Boolean>]
- [-AllowExternalUsersToSaveContent <Boolean>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
- [-AllowParticipantControl <Boolean>] [-AllowPolls <Boolean>]
- [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-Description <String>]
- [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-EnableDataCollaboration <Boolean>]
- [-EnableDialInConferencing <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
- [-EnableP2PRecording <Boolean>] [-EnableP2PVideo <Boolean>] [-MaxMeetingSize <UInt32>]
- [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-Force] [-WhatIf] [-Confirm]
- [-AllowExternalUsersToRecordMeeting <Boolean>] [-AppSharingBitRateKb <Int64>] [-AudioBitRateKb <UInt32>]
- [-FileTransferBitRateKb <Int64>] [-VideoBitRateKb <Int64>] [-AllowLargeMeetings <Boolean>]
- [-AllowMultiView <Boolean>] [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowSharedNotes <Boolean>]
- [-DisablePowerPointAnnotations <Boolean>] [-EnableMultiViewJoin <Boolean>]
- [-TotalReceiveVideoBitRateKb <Int64>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
- [-AllowOfficeContent <Boolean>] [-AllowQandA <Boolean>] [-EnableOnlineMeetingPromptForLyncResources <Boolean>]
- [-Tenant <Guid>] [-ApplicationSharingMode <String>] [<CommonParameters>]
+Set-CsConferencingPolicy [-Tenant <Guid>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowMultiView <Boolean>] [-Description <String>] [-AllowParticipantControl <Boolean>]
+ [-AllowAnnotations <Boolean>] [-DisablePowerPointAnnotations <Boolean>]
+ [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-ApplicationSharingMode <String>]
+ [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
+ [-AllowExternalUsersToSaveContent <Boolean>] [-AllowExternalUserControl <Boolean>]
+ [-AllowExternalUsersToRecordMeeting <Boolean>] [-AllowPolls <Boolean>] [-AllowSharedNotes <Boolean>]
+ [-AllowQandA <Boolean>] [-AllowOfficeContent <Boolean>] [-EnableDialInConferencing <Boolean>]
+ [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-AllowConferenceRecording <Boolean>]
+ [-EnableP2PRecording <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
+ [-EnableP2PVideo <Boolean>] [-AllowLargeMeetings <Boolean>]
+ [-EnableOnlineMeetingPromptForLyncResources <Boolean>] [-EnableDataCollaboration <Boolean>]
+ [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-MaxMeetingSize <UInt32>]
+ [-AudioBitRateKb <UInt32>] [-VideoBitRateKb <Int64>] [-AppSharingBitRateKb <Int64>]
+ [-FileTransferBitRateKb <Int64>] [-TotalReceiveVideoBitRateKb <Int64>] [-EnableMultiViewJoin <Boolean>]
+ [-CloudRecordingServiceSupport <CloudRecordingServiceSupport>] [-EnableReliableConferenceDeletion <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsConferencingPolicy [-Instance <PSObject>] [-AllowAnnotations <Boolean>]
- [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowConferenceRecording <Boolean>] [-AllowExternalUserControl <Boolean>]
- [-AllowExternalUsersToSaveContent <Boolean>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
- [-AllowParticipantControl <Boolean>] [-AllowPolls <Boolean>]
- [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-Description <String>]
- [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-EnableDataCollaboration <Boolean>]
- [-EnableDialInConferencing <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
- [-EnableP2PRecording <Boolean>] [-EnableP2PVideo <Boolean>] [-MaxMeetingSize <UInt32>]
- [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-Force] [-WhatIf] [-Confirm]
- [-AllowExternalUsersToRecordMeeting <Boolean>] [-AppSharingBitRateKb <Int64>] [-AudioBitRateKb <UInt32>]
- [-FileTransferBitRateKb <Int64>] [-VideoBitRateKb <Int64>] [-AllowLargeMeetings <Boolean>]
- [-AllowMultiView <Boolean>] [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowSharedNotes <Boolean>]
- [-DisablePowerPointAnnotations <Boolean>] [-EnableMultiViewJoin <Boolean>]
- [-TotalReceiveVideoBitRateKb <Int64>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
- [-AllowOfficeContent <Boolean>] [-AllowQandA <Boolean>] [-EnableOnlineMeetingPromptForLyncResources <Boolean>]
- [-Tenant <Guid>] [-ApplicationSharingMode <String>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsConferencingPolicy [[-Identity] <Object>] [-AllowAnnotations <Object>]
- [-AllowAnonymousParticipantsInMeetings <Object>] [-AllowAnonymousUsersToDialOut <Object>]
- [-AllowConferenceRecording <Object>] [-AllowExternalUserControl <Object>]
- [-AllowExternalUsersToRecordMeeting <Object>] [-AllowExternalUsersToSaveContent <Object>]
- [-AllowFederatedParticipantJoinAsSameEnterprise <Object>] [-AllowIPAudio <Object>] [-AllowIPVideo <Object>]
- [-AllowLargeMeetings <Object>] [-AllowMultiView <Object>] [-AllowNonEnterpriseVoiceUsersToDialOut <Object>]
- [-AllowOfficeContent <Object>] [-AllowParticipantControl <Object>] [-AllowPolls <Object>]
- [-AllowQandA <Object>] [-AllowSharedNotes <Object>] [-AllowUserToScheduleMeetingsWithAppSharing <Object>]
- [-ApplicationSharingMode <Object>] [-AppSharingBitRateKb <Object>] [-AudioBitRateKb <Object>]
- [-BypassDualWrite <Object>] [-CloudRecordingServiceSupport <Object>] [-Confirm] [-Description <Object>]
- [-DisablePowerPointAnnotations <Object>] [-EnableAppDesktopSharing <Object>]
- [-EnableDataCollaboration <Object>] [-EnableDialInConferencing <Object>] [-EnableFileTransfer <Object>]
- [-EnableMultiViewJoin <Object>] [-EnableOnlineMeetingPromptForLyncResources <Object>]
- [-EnableP2PFileTransfer <Object>] [-EnableP2PRecording <Object>] [-EnableP2PVideo <Object>]
- [-EnableReliableConferenceDeletion <Object>] [-FileTransferBitRateKb <Object>] [-Force] [-Instance <Object>]
- [-MaxMeetingSize <Object>] [-MaxVideoConferenceResolution <Object>] [-Tenant <Object>]
- [-TotalReceiveVideoBitRateKb <Object>] [-VideoBitRateKb <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsConferencingPolicy [-Tenant <Guid>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowMultiView <Boolean>] [-Description <String>] [-AllowParticipantControl <Boolean>]
+ [-AllowAnnotations <Boolean>] [-DisablePowerPointAnnotations <Boolean>]
+ [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-ApplicationSharingMode <String>]
+ [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
+ [-AllowExternalUsersToSaveContent <Boolean>] [-AllowExternalUserControl <Boolean>]
+ [-AllowExternalUsersToRecordMeeting <Boolean>] [-AllowPolls <Boolean>] [-AllowSharedNotes <Boolean>]
+ [-AllowQandA <Boolean>] [-AllowOfficeContent <Boolean>] [-EnableDialInConferencing <Boolean>]
+ [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-AllowConferenceRecording <Boolean>]
+ [-EnableP2PRecording <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
+ [-EnableP2PVideo <Boolean>] [-AllowLargeMeetings <Boolean>]
+ [-EnableOnlineMeetingPromptForLyncResources <Boolean>] [-EnableDataCollaboration <Boolean>]
+ [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-MaxMeetingSize <UInt32>]
+ [-AudioBitRateKb <UInt32>] [-VideoBitRateKb <Int64>] [-AppSharingBitRateKb <Int64>]
+ [-FileTransferBitRateKb <Int64>] [-TotalReceiveVideoBitRateKb <Int64>] [-EnableMultiViewJoin <Boolean>]
+ [-CloudRecordingServiceSupport <CloudRecordingServiceSupport>] [-EnableReliableConferenceDeletion <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,7 +81,7 @@ This provides administrators with enormous flexibility when it comes to deciding
 Policy property values can be configured at the time a policy is created.
 In addition to that, you can, at any time, use the `Set-CsConferencingPolicy` cmdlet to modify the property values of an existing policy.
 
-The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AppSharingBitRateKb, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, TotalReceiveVideoBitRateKb, and VideoBitRateKb
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb
 
 ## EXAMPLES
 
@@ -158,7 +142,7 @@ If you do not specify an Identity the `Set-CsConferencingPolicy` cmdlet will aut
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -175,20 +159,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +181,7 @@ However, the user can participate in other conferences where annotations are all
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +203,7 @@ However, the user can take part in other conferences where anonymous participant
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -256,7 +227,7 @@ The default value is False ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -275,7 +246,7 @@ This setting applies to all users taking part in the conference.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -296,7 +267,7 @@ That means that some users in a session might be allowed to give up control of a
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -316,7 +287,7 @@ However, the user can take part in other conferences where external users are al
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -336,7 +307,7 @@ However, the user can take part in other conferences where IP audio is allowed.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -356,7 +327,7 @@ However, the user can take part in other conferences where IP video is allowed.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -377,7 +348,7 @@ However, the user can take part in other conferences where participant control i
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -397,7 +368,7 @@ However, the user can take part in other conferences where polls are allowed.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -417,7 +388,7 @@ However, the user can take part in other conferences where application sharing i
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -434,7 +405,7 @@ For example, the Description might indicate the users the policy should be assig
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -456,8 +427,7 @@ Users are allowed to share a single application.
 None.
 Users are not allowed to share applications or their desktop.
 
-This setting is enforced at the per-user level.
-That means that some users in a conference might be allowed to share their desktop or applications while other users in the same conference might not be allowed to do so.
+
 
 The default value is Desktop.
 
@@ -465,7 +435,7 @@ The default value is Desktop.
 Type: EnableAppDesktopSharing
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -484,7 +454,7 @@ However, the user can take part in other conferences where data collaboration is
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -494,6 +464,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialInConferencing
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are able to join the meeting by dialing in with a public switched telephone network (PSTN) telephone.
 The default value is True.
 
@@ -504,7 +476,7 @@ However, the user can take part in other conferences where dial-in conferencing 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -524,7 +496,7 @@ However, the user can take part in other conferences where file transfers are al
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -544,7 +516,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -565,7 +537,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -586,7 +558,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -611,7 +583,7 @@ However, the user can take part in other conferences where additional participan
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -636,7 +608,7 @@ The default value is VGA.
 Type: MaxVideoConferenceResolution
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -652,7 +624,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -668,7 +640,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -684,7 +656,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -707,7 +679,7 @@ Note that this setting takes effect only if the AllowConferenceRecording propert
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -725,7 +697,7 @@ The default value is 50000.
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -745,7 +717,7 @@ This setting is enforced at the per-user level, and for both conferences and pee
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -765,7 +737,7 @@ This setting is enforced at the per-user level and for both conferences and peer
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -785,7 +757,7 @@ This setting is enforced at the per-user level and for both conferences and peer
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -803,7 +775,7 @@ The default value is False ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -821,7 +793,7 @@ However, the user can participate in other conferences where multiview is allowe
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -845,7 +817,7 @@ The default value is False ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -861,7 +833,7 @@ When set to True (the default value) any open OneNote notebooks linked to the co
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -879,7 +851,7 @@ The default value is False, meaning that PowerPoint annotations are allowed.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -898,7 +870,7 @@ That means that some users in a session might be allowed to have multiple video 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -916,7 +888,7 @@ The default value is 50000 kilobits per second.
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -929,10 +901,10 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -946,10 +918,10 @@ When set to False, prevents users from using Office content in their conferences
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -967,10 +939,10 @@ However, the user can make use of the Questions and Answers Manager in other con
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -980,30 +952,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationSharingMode
-{{Fill ApplicationSharingMode Description}}
+Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter is used only in SfB Server.  To disable VbSS, use the value "RDP".
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1016,7 +972,7 @@ Accept wildcard characters: False
 PARAMVALUE: NotSupported | Supported | Required
 
 ```yaml
-Type: Object
+Type: CloudRecordingServiceSupport
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1033,10 +989,10 @@ When set to True, users will be prompted any time they schedule a meeting in Out
 The default value is False.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1049,7 +1005,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1073,25 +1029,10 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1126,3 +1067,4 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsConferencingPolicy](New-CsConferencingPolicy.md)
 
 [Remove-CsConferencingPolicy](Remove-CsConferencingPolicy.md)
+

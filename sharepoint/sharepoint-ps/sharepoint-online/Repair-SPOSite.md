@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Repair-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Repair-SPOSite
@@ -33,18 +36,26 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Repair-SPOSite https://contoso.sharepoint.com/sites/marketing
 ```
 
-{{ Add example description here }}
+This example runs all the site collection health checks in repair mode on the https://contoso.sharepoint.com/sites/marketing site collection.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Repair-SPOSite https://contoso.sharepoint.com/sites/marketing -RuleID "ee967197-ccbe-4c00-88e4-e6fab81145e1"
+```
+
+This example runs the Missing Galleries Check rule in repair mode on the https://contoso.sharepoint.com/sites/marketing site collection.
 
 
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
+
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the SharePoint Online site collection on which to run the repairs.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -76,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
-{{Fill RuleId Description}}
+Specifies a health check rule to run.
+
 
 ```yaml
 Type: Guid
@@ -92,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunAlways
-{{Fill RunAlways Description}}
+Displays a message that explains the effect of the command instead of executing the command.
+
 
 ```yaml
 Type: SwitchParameter
@@ -135,8 +149,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Test-SPOSite]()
+[Test-SPOSite](Test-SPOSite.md)

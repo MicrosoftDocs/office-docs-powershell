@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Restore-SPODeletedSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Restore-SPODeletedSite
@@ -27,16 +30,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+Restore-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/arecycledsite
 ```
-
-{{ Add example description here }}
+This example restores a SharePoint Online deleted site collection named "https://contoso.sharepoint.com/sites/arecycledsite" from the Recycle Bin.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to restore.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -52,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+Specifies to continue executing script immediately.
+
 
 ```yaml
 Type: SwitchParameter
@@ -78,10 +82,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Get-SPODeletedSite](Get-SPODeletedSite.md)
 
-[Get-SPODeletedSite]()
-
-[Remove-SPODeletedSite]()
+[Remove-SPODeletedSite](Remove-SPODeletedSite.md)

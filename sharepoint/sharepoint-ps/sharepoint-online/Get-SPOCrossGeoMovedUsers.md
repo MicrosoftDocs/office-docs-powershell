@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMovedUsers
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOCrossGeoMovedUsers
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+In a multi-geo tenant returns the SharePoint Online user (or users) that had been moved.
+
 
 ## SYNTAX
 
@@ -17,21 +21,28 @@ Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the moved users out and in the current SPO site.
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOCrossGeoMovedUsers -Direction MoveIn
 ```
+Get the cross users that have been moved in the current SPO site
 
-{{ Add example description here }}
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOCrossGeoMovedUsers -Direction MoveOut
+```
+Get the cross users that have been moved out the current SPO site
+
 
 ## PARAMETERS
 
 ### -Direction
-{{Fill Direction Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -50,15 +61,10 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)

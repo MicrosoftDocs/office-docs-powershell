@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: New-CsPersistentChatPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsPersistentChatPolicy
@@ -240,4 +243,5 @@ The New-CsPersistentChatPolicy cmdlet creates new instances of the Microsoft.Rtc
 [Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
 [Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)
+
 

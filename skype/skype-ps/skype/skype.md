@@ -1,15 +1,26 @@
 ---
-Module Name: skype
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Name: SkypeForBusiness
+Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
+Help Version:  17.0.15229.2100
+Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/skype/
 title: skype
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
+de-DE Version: 17.0.15229.2100
+es-ES Version: 17.0.15229.2100
+fr-FR Version: 17.0.15229.2100
+it-IT Version: 17.0.15229.2100
+ja-JP Version: 17.0.15229.2100
+ko-KR Version: 17.0.15229.2100
+pt-BR Version: 17.0.15229.2100
+ru-RU Version: 17.0.15229.2100
+zh-CN Version: 17.0.15229.2100
+zh-TW Version: 17.0.15229.2100
 ---
 
-# Skype for Business Cmdlet Reference
+# Skype for Business PowerShell
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for Skype for Business and Microsoft Teams. You can find information on installing the module for Skype for Business Online here: https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell. If you are using Skype for Business Server then the cmdlets are available in the Skype for Business Server Management Shell and you can find information about it here: https://docs.microsoft.com/skypeforbusiness/manage/management-shell.
 
 ## Skype for Business Cmdlets
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
@@ -230,9 +241,6 @@ Locale: en-US
 
 ### [Get-CsBusyOptions](Get-CsBusyOptions.md)
 {{Manually Enter Get-CsBusyOptions Description Here}}
-
-### [Get-CsCallerIdPolicy](Get-CsCallerIdPolicy.md)
-{{Manually Enter Get-CsCallerIdPolicy Description Here}}
 
 ### [Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 {{Manually Enter Get-CsCallingLineIdentity Description Here}}
@@ -552,6 +560,9 @@ Locale: en-US
 ### [Get-CsOnlineNumberPortOutOrderPin](Get-CsOnlineNumberPortOutOrderPin.md)
 {{Manually Enter Get-CsOnlineNumberPortOutOrderPin Description Here}}
 
+### [Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
+{{Manually Enter Get-CsOnlinePSTNGateway Description Here}}
+
 ### [Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
 {{Manually Enter Get-CsOnlineTelephoneNumber Description Here}}
 
@@ -738,6 +749,9 @@ Locale: en-US
 ### [Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 {{Manually Enter Get-CsStorageServiceConfiguration Description Here}}
 
+### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+{{Manually Enter Get-CsTeamsCallingPolicy Description Here}}
+
 ### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
@@ -762,8 +776,20 @@ Locale: en-US
 ### [Get-CsTenantMigrationConfiguration](Get-CsTenantMigrationConfiguration.md)
 {{Manually Enter Get-CsTenantMigrationConfiguration Description Here}}
 
+### [Get-CsTenantNetworkRegion](Get-CsTenantNetworkRegion.md)
+{{Manually Enter Get-CsTenantNetworkRegion Description Here}}
+
+### [Get-CsTenantNetworkSite](Get-CsTenantNetworkSite.md)
+{{Manually Enter Get-CsTenantNetworkSite Description Here}}
+
+### [Get-CsTenantNetworkSubnet](Get-CsTenantNetworkSubnet.md)
+{{Manually Enter Get-CsTenantNetworkSubnet Description Here}}
+
 ### [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
 {{Manually Enter Get-CsTenantPublicProvider Description Here}}
+
+### [Get-CsTenantTrustedIPAddress](Get-CsTenantTrustedIPAddress.md)
+{{Manually Enter Get-CsTenantTrustedIPAddress Description Here}}
 
 ### [Get-CsTenantUpdateTimeWindow](Get-CsTenantUpdateTimeWindow.md)
 {{Manually Enter Get-CsTenantUpdateTimeWindow Description Here}}
@@ -894,9 +920,6 @@ Locale: en-US
 ### [Grant-CsBroadcastMeetingPolicy](Grant-CsBroadcastMeetingPolicy.md)
 {{Manually Enter Grant-CsBroadcastMeetingPolicy Description Here}}
 
-### [Grant-CsCallerIdPolicy](Grant-CsCallerIdPolicy.md)
-{{Manually Enter Grant-CsCallerIdPolicy Description Here}}
-
 ### [Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
 {{Manually Enter Grant-CsCallingLineIdentity Description Here}}
 
@@ -959,6 +982,9 @@ Locale: en-US
 
 ### [Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 {{Manually Enter Grant-CsSetupPermission Description Here}}
+
+### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+{{Manually Enter Grant-CsTeamsCallingPolicy Description Here}}
 
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 {{Manually Enter Grant-CsTeamsMeetingPolicy Description Here}}
@@ -1139,9 +1165,6 @@ Locale: en-US
 
 ### [New-CsBlockedDomain](New-CsBlockedDomain.md)
 {{Manually Enter New-CsBlockedDomain Description Here}}
-
-### [New-CsCallerIdPolicy](New-CsCallerIdPolicy.md)
-{{Manually Enter New-CsCallerIdPolicy Description Here}}
 
 ### [New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
 {{Manually Enter New-CsCallingLineIdentity Description Here}}
@@ -1359,6 +1382,9 @@ Locale: en-US
 ### [New-CsOnlineNumberPortInOrder](New-CsOnlineNumberPortInOrder.md)
 {{Manually Enter New-CsOnlineNumberPortInOrder Description Here}}
 
+### [New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
+{{Manually Enter New-CsOnlinePSTNGateway Description Here}}
+
 ### [New-CsOnlineSchedule](New-CsOnlineSchedule.md)
 {{Manually Enter New-CsOnlineSchedule Description Here}}
 
@@ -1542,6 +1568,18 @@ Locale: en-US
 ### [New-CsTenantDialPlan](New-CsTenantDialPlan.md)
 {{Manually Enter New-CsTenantDialPlan Description Here}}
 
+### [New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+{{Manually Enter New-CsTenantNetworkRegion Description Here}}
+
+### [New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
+{{Manually Enter New-CsTenantNetworkSite Description Here}}
+
+### [New-CsTenantNetworkSubnet](New-CsTenantNetworkSubnet.md)
+{{Manually Enter New-CsTenantNetworkSubnet Description Here}}
+
+### [New-CsTenantTrustedIPAddress](New-CsTenantTrustedIPAddress.md)
+{{Manually Enter New-CsTenantTrustedIPAddress Description Here}}
+
 ### [New-CsTenantUpdateTimeWindow](New-CsTenantUpdateTimeWindow.md)
 {{Manually Enter New-CsTenantUpdateTimeWindow Description Here}}
 
@@ -1688,9 +1726,6 @@ Locale: en-US
 
 ### [Remove-CsBusyOptions](Remove-CsBusyOptions.md)
 {{Manually Enter Remove-CsBusyOptions Description Here}}
-
-### [Remove-CsCallerIdPolicy](Remove-CsCallerIdPolicy.md)
-{{Manually Enter Remove-CsCallerIdPolicy Description Here}}
 
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 {{Manually Enter Remove-CsCallingLineIdentity Description Here}}
@@ -1905,6 +1940,9 @@ Locale: en-US
 ### [Remove-CsOnlineNumberPortInOrder](Remove-CsOnlineNumberPortInOrder.md)
 {{Manually Enter Remove-CsOnlineNumberPortInOrder Description Here}}
 
+### [Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)
+{{Manually Enter Remove-CsOnlinePSTNGateway Description Here}}
+
 ### [Remove-CsOnlineTelephoneNumber](Remove-CsOnlineTelephoneNumber.md)
 {{Manually Enter Remove-CsOnlineTelephoneNumber Description Here}}
 
@@ -2024,6 +2062,18 @@ Locale: en-US
 
 ### [Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
 {{Manually Enter Remove-CsTenantDialPlan Description Here}}
+
+### [Remove-CsTenantNetworkRegion](Remove-CsTenantNetworkRegion.md)
+{{Manually Enter Remove-CsTenantNetworkRegion Description Here}}
+
+### [Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+{{Manually Enter Remove-CsTenantNetworkSite Description Here}}
+
+### [Remove-CsTenantNetworkSubnet](Remove-CsTenantNetworkSubnet.md)
+{{Manually Enter Remove-CsTenantNetworkSubnet Description Here}}
+
+### [Remove-CsTenantTrustedIPAddress](Remove-CsTenantTrustedIPAddress.md)
+{{Manually Enter Remove-CsTenantTrustedIPAddress Description Here}}
 
 ### [Remove-CsTenantUpdateTimeWindow](Remove-CsTenantUpdateTimeWindow.md)
 {{Manually Enter Remove-CsTenantUpdateTimeWindow Description Here}}
@@ -2210,9 +2260,6 @@ Locale: en-US
 
 ### [Set-CsBusyOptions](Set-CsBusyOptions.md)
 {{Manually Enter Set-CsBusyOptions Description Here}}
-
-### [Set-CsCallerIdPolicy](Set-CsCallerIdPolicy.md)
-{{Manually Enter Set-CsCallerIdPolicy Description Here}}
 
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 {{Manually Enter Set-CsCallingLineIdentity Description Here}}
@@ -2496,6 +2543,9 @@ Locale: en-US
 ### [Set-CsOnlineNumberPortOutOrderPin](Set-CsOnlineNumberPortOutOrderPin.md)
 {{Manually Enter Set-CsOnlineNumberPortOutOrderPin Description Here}}
 
+### [Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
+{{Manually Enter Set-CsOnlinePSTNGateway Description Here}}
+
 ### [Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
 {{Manually Enter Set-CsOnlineVoicemailPolicy Description Here}}
 
@@ -2628,6 +2678,9 @@ Locale: en-US
 ### [Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)
 {{Manually Enter Set-CsStorageServiceConfiguration Description Here}}
 
+### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+{{Manually Enter Set-CsTeamsCallingPolicy Description Here}}
+
 ### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
@@ -2636,6 +2689,18 @@ Locale: en-US
 
 ### [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
 {{Manually Enter Set-CsTenantDialPlan Description Here}}
+
+### [Set-CsTenantNetworkRegion](Set-CsTenantNetworkRegion.md)
+{{Manually Enter Set-CsTenantNetworkRegion Description Here}}
+
+### [Set-CsTenantNetworkSite](Set-CsTenantNetworkSite.md)
+{{Manually Enter Set-CsTenantNetworkSite Description Here}}
+
+### [Set-CsTenantNetworkSubnet](Set-CsTenantNetworkSubnet.md)
+{{Manually Enter Set-CsTenantNetworkSubnet Description Here}}
+
+### [Set-CsTenantTrustedIPAddress](Set-CsTenantTrustedIPAddress.md)
+{{Manually Enter Set-CsTenantTrustedIPAddress Description Here}}
 
 ### [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
 {{Manually Enter Set-CsTenantFederationConfiguration Description Here}}
@@ -3006,3 +3071,114 @@ Locale: en-US
 ### [Update-CsUserDatabase](Update-CsUserDatabase.md)
 {{Manually Enter Update-CsUserDatabase Description Here}}
 
+### [Get-CsTeamsInteropPolicy](Get-CsTeamsInteropPolicy.md)
+{{Manually Enter Get-CsTeamsInteropPolicy Description Here}}
+
+### [Grant-CsTeamsInteropPolicy](Grant-CsTeamsInteropPolicy.md)
+{{Manually Enter Grant-CsTeamsInteropPolicy Description Here}}
+
+### [Remove-CsTeamsInteropPolicy](Remove-CsTeamsInteropPolicy.md)
+{{Manually Enter Remove-CsTeamsInteropPolicy Description Here}}
+
+### [Set-CsPlatformServiceSettings](Set-CsPlatformServiceSettings.md)
+{{Manually Enter Set-CsPlatformServiceSettings Description Here}}
+
+### [Get-CsPlatformServiceSettings](Get-CsPlatformServiceSettings.md)
+{{Manually Enter Get-CsPlatformServiceSettings Description Here}}
+
+### [New-CsPlatformServiceSettings](New-CsPlatformServiceSettings.md)
+{{Manually Enter New-CsPlatformServiceSettings Description Here}}
+
+### [Remove-CsPlatformServiceSettings](Remove-CsPlatformServiceSettings.md)
+{{Manually Enter Remove-CsPlatformServiceSettings Description Here}}
+
+### [Get-CsAdditionalInternalDomain](Get-CsAdditionalInternalDomain.md)
+{{Manually Enter Get-CsAdditionalInternalDomain Description Here}}
+
+### [New-CsAdditionalInternalDomain](New-CsAdditionalInternalDomain.md)
+{{Manually Enter New-CsAdditionalInternalDomain Description Here}}
+
+### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
+{{Manually Enter Remove-CsAdditionalInternalDomain Description Here}}
+
+### [Get-CsHybridApplicationEndpoint](Get-CsHybridApplicationEndpoint.md)
+{{Manually Enter Get-CsHybridApplicationEndpoint Description Here}}
+
+### [New-CsHybridApplicationEndpoint](New-CsHybridApplicationEndpoint.md)
+{{Manually Enter New-CsHybridApplicationEndpoint Description Here}}
+
+### [Set-CsHybridApplicationEndpoint](Set-CsHybridApplicationEndpoint.md)
+{{Manually Enter Set-CsHybridApplicationEndpoint Description Here}}
+
+### [Remove-CsHybridApplicationEndpoint](Remove-CsHybridApplicationEndpoint.md)
+{{Manually Enter Remove-CsHybridApplicationEndpoint Description Here}}
+
+### [Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
+
+### [Set-CsTeamsUpgradeConfiguration](Set-CsTeamsUpgradeConfiguration.md)
+
+### [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
+
+### [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+
+### [New-CsTeamsUpgradePolicy](New-CsTeamsUpgradePolicy.md)
+
+### [Remove-CsTeamsUpgradePolicy](Remove-CsTeamsUpgradePolicy.md)
+
+### [Set-CsTeamsUpgradePolicy](Set-CsTeamsUpgradePolicy.md)
+
+### [Get-CsCloudCallDataConnector](Get-CsCloudCallDataConnector.md)
+
+### [Get-CsCloudCallDataConnectorConfiguration](Get-CsCloudCallDataConnectorConfiguration.md)
+
+### [New-CsCloudCallDataConnectorConfiguration](New-CsCloudCallDataConnectorConfiguration.md)
+
+### [Set-CsCloudCallDataConnector](Set-CsCloudCallDataConnector.md)
+
+### [Set-CsCloudCallDataConnectorConfiguration](Set-CsCloudCallDataConnectorConfiguration.md)
+
+### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+
+### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsMeetingBroadcastConfiguration](Set-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingBroadcastConfiguration](Get-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
+
+### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
+
+### [New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md)
+
+### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
+
+### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
+
+### [Set-CsAuthConfig](Set-CsAuthConfig.md)
+
+### [Get-CsAuthConfig](Get-CsAuthConfig.md)
+
+### [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
+
+### [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
+
+### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+
+### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+
+### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
+
+### [New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
+
+### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
+
+### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+
+### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+
+### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)

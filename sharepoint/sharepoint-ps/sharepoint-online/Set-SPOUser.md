@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOUser
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOUser
@@ -21,7 +24,7 @@ Set-SPOUser -IsSiteCollectionAdmin <Boolean> -LoginName <String> -Site <SpoSiteP
 Use the `Set-SPOUser` cmdlet to configure properties of an existing user.
 That is, to add or remove a user as a SharePoint Online site collection administrator.
 
-You must have the SharePoint Online global administrator permission to run the cmdlet.
+You must have the SharePoint Online Administrator or Global Administrator role to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
@@ -30,16 +33,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOUser -Site https://contoso.sharepoint.com/sites/marketing -LoginName melissa.kerr@contoso.com -IsSiteCollectionAdmin $true 
 ```
-
-{{ Add example description here }}
+This example makes melissa.kerr@contoso.com a SharePoint Online site collection administrator on https://contoso.sharepoint.com/sites/marketing.
 
 
 ## PARAMETERS
 
 ### -IsSiteCollectionAdmin
-{{Fill IsSiteCollectionAdmin Description}}
+Specifies whether the user is a site collection administrator.
+
 
 ```yaml
 Type: Boolean
@@ -55,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-{{Fill LoginName Description}}
+Specifies the user name.
+
 
 ```yaml
 Type: String
@@ -71,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the full URL of the site collection. It must be in a valid managed path in the company’s site.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -97,8 +102,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Get-SPOUser]()
+[Get-SPOUser](Get-SPOUser.md)

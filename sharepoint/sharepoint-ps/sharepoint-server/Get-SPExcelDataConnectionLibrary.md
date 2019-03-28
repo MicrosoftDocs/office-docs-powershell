@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013
+external help file: sharepointserver.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelDataConnectionLibrary
@@ -22,20 +25,20 @@ Get-SPExcelDataConnectionLibrary [[-Identity] <SPExcelDCLPipeBind>]
 The Get-SPExcelDataConnectionLibrary cmdlet gets a library of data connection files that Excel Services Application and the Excel client use to connect to an external data source. 
 Excel Services Application loads data connection files only if they are stored in a data connection library that is in the list of trusted data connection libraries.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------------- 
 ```
-C:\PS>Get-SPExcelserviceapplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary
+Get-SPExcelserviceapplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary
 ```
 
 This example displays all the data connection libraries that connection files can be loaded by an Excel Services Application Web service application.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPExcelserviceapplication -identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.Description.Contains("Sales Cube")}
+Get-SPExcelserviceapplication -identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.Description.Contains("Sales Cube")}
 ```
 
 This example displays all the data connection libraries that have descriptions containing the words Sales Cube from the specified Excel Services Application Web service application.
@@ -52,7 +55,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelDCLPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: 1
@@ -70,7 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -92,7 +95,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

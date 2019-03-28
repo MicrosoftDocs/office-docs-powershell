@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPOSite
@@ -20,7 +23,7 @@ Remove-SPOSite [-Confirm] -Identity <SpoSitePipeBind> [-NoWait] [-WhatIf] [<Comm
 ## DESCRIPTION
 The `Remove-SPOSite` cmdlet does not delete a site collection from the site collections list permanently.
 Instead, the removed site collection is moved to the Recycle Bin.
-You can use the `Restore-SPODeletedSitecmdlet` to restore a site collection from the Recycle Bin.
+You can use the `Restore-SPODeletedSite`cmdlet to restore a site collection from the Recycle Bin.
 To delete a site collection permanently, first move the site collection to the Recycle Bin by using the `Remove-SPOSite` cmdlet and then delete it from the Recycle Bin by using the `Remove-SPODeletedSite` cmdlet.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
@@ -30,18 +33,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -NoWait
 ```
 
-{{ Add example description here }}
+This example immediately removes the site collection named https://contoso.sharepoint.com/sites/site1 from the site collections list and moves it to the Recycle Bin. 
 
 
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
+
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to remove.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -73,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+Specifies to continue executing script immediately.
+
 
 ```yaml
 Type: SwitchParameter
@@ -91,6 +97,7 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
+
 
 ```yaml
 Type: SwitchParameter
@@ -116,10 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Remove-SPODeletedSite](Remove-SPODeletedSite.md)
 
-[Remove-SPODeletedSite]()
-
-[Restore-SPODeletedSite]()
+[Restore-SPODeletedSite](Restore-SPODeletedSite.md)

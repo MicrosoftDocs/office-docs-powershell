@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Start-CsPool
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Start-CsPool
@@ -43,7 +46,7 @@ For example: `-PoolFqdn "atl-cs-001.litwareinc.com"`
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -59,7 +62,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -75,7 +78,7 @@ Suppresses the display of any non-fatal error messages and completes the cmdlet 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ If true ($True), user data is reloaded from the backup store for any routing gro
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ To specify more than one routing group use the syntax: `-SkipRoutingGroup "bef5f
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -129,14 +132,14 @@ Use this parameter if one or more of the front end servers cannot be started.
 Note that there is a minimum number of servers required for the pool to be functional.
 The cmdlet will check for those conditions while trying to implement this parameter.
 
-For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne"`.
-To specify more than one server use the syntax: `-SkipServer "AtlServerOne","AtlServerTwo"`
+For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne.litwareinc.com"`.
+To specify more than one server use the syntax: `-SkipServer "AtlServerOne.litwareinc.com","AtlServerTwo.litwareinc.com"`
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +155,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -181,3 +184,4 @@ None
 [Backup-CsPool](Backup-CsPool.md)
 
 [Get-CsPool](Get-CsPool.md)
+

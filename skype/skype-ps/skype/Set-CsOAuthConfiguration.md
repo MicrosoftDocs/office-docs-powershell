@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOAuthConfiguration
@@ -15,26 +18,19 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <String>]
- [-ExchangeAutodiscoverUrl <String>] [-Force] [-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>]
- [-WhatIf] [-ClientAuthorizationOAuthServerIdentity <String>] [<CommonParameters>]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Realm <String>] [-ServiceName <String>]
+ [-ClientAuthorizationOAuthServerIdentity <String>] [-ExchangeAutodiscoverAllowedDomains <String>]
+ [-ExchangeAutodiscoverUrl <String>] [-ClientAdalAuthOverride <ClientAdalAuthOverride>]
+ [-AlternateAudienceUrl <String>] [-AdditionalAudienceUrls <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOAuthConfiguration [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsOAuthConfiguration [[-Identity] <Object>] [-AdditionalAudienceUrls <Object>]
- [-AlternateAudienceUrl <Object>] [-BypassDualWrite <Object>] [-ClientAdalAuthOverride <Object>]
- [-ClientAuthorizationOAuthServerIdentity <Object>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <Object>]
- [-ExchangeAutodiscoverUrl <Object>] [-Force] [-Instance <Object>] [-Realm <Object>] [-ServiceName <Object>]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +67,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -91,7 +87,7 @@ For example:
 Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +104,7 @@ URL for the autodiscovery service used by the Office 365 version of Microsoft Ex
 Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +121,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +142,7 @@ You can, however, use the following syntax to reference the global settings:
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -155,41 +151,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
 
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -202,12 +171,11 @@ Accept wildcard characters: False
 Server-to-server security container.
 By default, Skype for Business Server uses your default SIP domain as its OAuth realm.
 
-
 ```yaml
 Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -224,7 +192,7 @@ Globally unique identifier (GUID) assigned to the OAuth service.
 Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -248,7 +216,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -265,7 +233,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -275,10 +243,10 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -291,26 +259,10 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -323,10 +275,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-{{Fill ClientAdalAuthOverride Description}}
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
 
 ```yaml
-Type: Object
+Type: ClientAdalAuthOverride
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoOverride, Allowed, Disallowed
@@ -344,26 +296,10 @@ URI of the OAuth server used for client authentication.
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -391,3 +327,4 @@ Instead, the `Set-CsOAuthConfiguration` cmdlet modifies existing instances of th
 ## RELATED LINKS
 
 [Get-CsOAuthConfiguration](Get-CsOAuthConfiguration.md)
+

@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOUser
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPOUser
@@ -31,16 +34,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOUser -Site https://contoso.sharepoint.com/sites/sc1 -LoginName joe.healy@contoso.com -Group "SC1 Owners"
 ```
-
-{{ Add example description here }}
+This example removes a user who has the email address joe.healy@contoso.com from the group SC1 Owners in the site collection https://contoso.sharepoint.com/sites/sc1.
 
 
 ## PARAMETERS
 
 ### -Group
-{{Fill Group Description}}
+Specifies the group to remove the user from. If not specified, the cmdlet removes the user from all groups.
+
 
 ```yaml
 Type: String
@@ -56,7 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-{{Fill LoginName Description}}
+Specifies the user name.
+
 
 ```yaml
 Type: String
@@ -72,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the site collection to remove the user from.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -98,8 +103,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Get-SPOUser]()
+[Get-SPOUser](Get-SPOUser.md)

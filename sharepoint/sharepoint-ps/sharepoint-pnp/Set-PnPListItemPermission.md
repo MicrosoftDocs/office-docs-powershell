@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPListItemPermission
@@ -12,9 +12,10 @@ Sets list item permissions
 
 ### Inherit
 ```powershell
-Set-PnPListItemPermission -Identity <ListItemPipeBind>
-                          -List <ListPipeBind>
+Set-PnPListItemPermission -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-InheritPermissions [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -22,11 +23,12 @@ Set-PnPListItemPermission -Identity <ListItemPipeBind>
 ### Group
 ```powershell
 Set-PnPListItemPermission -Group <GroupPipeBind>
-                          -Identity <ListItemPipeBind>
                           -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -34,11 +36,12 @@ Set-PnPListItemPermission -Group <GroupPipeBind>
 ### User
 ```powershell
 Set-PnPListItemPermission -User <String>
-                          -Identity <ListItemPipeBind>
                           -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
+                          [-SystemUpdate [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -47,28 +50,28 @@ Set-PnPListItemPermission -User <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute'
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute'
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -RemoveRole 'Contribute'
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -RemoveRole 'Contribute'
 ```
 
 Removes the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents' and removes all other permissions
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -InheritPermissions
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -InheritPermissions
 ```
 
 Resets permissions for listitem with id 1 to inherit permissions from the list 'Documents'
@@ -80,7 +83,7 @@ The role that must be assigned to the group or user
 
 ```yaml
 Type: String
-Parameter Sets: User
+Parameter Sets: User, Group
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ Clear all existing permissions
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: User
+Parameter Sets: User, Group
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ The ID of the listitem, or actual ListItem object
 
 ```yaml
 Type: ListItemPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: Named
@@ -140,7 +143,7 @@ The ID, Title or Url of the list.
 
 ```yaml
 Type: ListPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
@@ -152,7 +155,21 @@ The role that must be removed from the group or user
 
 ```yaml
 Type: String
-Parameter Sets: User
+Parameter Sets: User, Group
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SystemUpdate
+Update the item permissions without creating a new version or triggering MS Flow.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 
 Required: False
 Position: Named
@@ -172,7 +189,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -184,7 +201,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -197,4 +214,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

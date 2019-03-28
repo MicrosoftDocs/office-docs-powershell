@@ -1,12 +1,12 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Disable-PnPResponsiveUI
 
 ## SYNOPSIS
-Deactive the PnP Response UI add-on
+Deactivate the PnP Response UI add-on
 
 ## SYNTAX 
 
@@ -22,7 +22,7 @@ Disables the PnP Responsive UI implementation on a classic SharePoint Site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Disable-PnPResponsiveUI
+Disable-PnPResponsiveUI
 ```
 
 If enabled previously, this will remove the PnP Responsive UI from a site.
@@ -30,7 +30,7 @@ If enabled previously, this will remove the PnP Responsive UI from a site.
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -42,7 +42,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -55,4 +55,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

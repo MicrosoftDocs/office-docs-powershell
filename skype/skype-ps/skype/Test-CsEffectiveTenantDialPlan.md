@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Test-CsEffectiveTenantDialPlan
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsEffectiveTenantDialPlan
@@ -12,10 +15,16 @@ Use the `Test-CsEffectiveTenantDialPlan` cmdlet to test a tenant dial plan.
 
 ## SYNTAX
 
+### Identity
 ```
-Test-CsEffectiveTenantDialPlan [-DialedNumber <Object>] [-Identity <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-Force] [-WhatIf] [-AsJob] [-EffectiveTenantDialPlanName <Object>] [-TenantScopeOnly]
- [<CommonParameters>]
+Test-CsEffectiveTenantDialPlan [-DialedNumber <PhoneNumber>] [-Identity <UserIdParameter>] [-TenantScopeOnly]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### EffectiveTDPName
+```
+Test-CsEffectiveTenantDialPlan -DialedNumber <PhoneNumber> [-EffectiveTenantDialPlanName <String>]
+ [-TenantScopeOnly] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +48,7 @@ This example gets the Identity of a dial plan that is associated with a dialed n
 The DialedNumber parameter is the phone number to be normalized with the effective tenant dial plan.
 
 ```yaml
-Type: Object
+Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -55,23 +64,7 @@ Accept wildcard characters: False
 The Identity parameter is the effective tenant dial plan name in the form of TenantId_GlobalVoiceDialPlan_TenantDialPlan.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -134,27 +127,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EffectiveTenantDialPlanName
 {{Fill EffectiveTenantDialPlanName Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -192,3 +169,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantCdnEnabled
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. Requires Tenant administrator permissions.
 
 
 ## SYNTAX
@@ -19,23 +22,24 @@ Set-SPOTenantCdnEnabled [-CdnType <SPOTenantCdnTypeClient>] [-Confirm] [-Enable 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. 
 
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOTenantCdnEnabled -CdnType public -Enable $true
 ```
 
-{{ Add example description here }}
+The example enables a CDN.
 
 
 ## PARAMETERS
 
 ### -CdnType
-{{Fill CdnType Description}}
+Specifies the CDN type. The valid values are: public or private.
+
 
 ```yaml
 Type: SPOTenantCdnTypeClient
@@ -68,7 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+Specifies if the CDN is enabled.
+
+The valid values are: $True and $False.
+
 
 ```yaml
 Type: Boolean
@@ -84,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoDefaultOrigins
-{{Fill NoDefaultOrigins Description}}
+PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
@@ -130,3 +138,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Set-SPOTenantCdnEnabled](Set-SPOTenantCdnEnabled.md)

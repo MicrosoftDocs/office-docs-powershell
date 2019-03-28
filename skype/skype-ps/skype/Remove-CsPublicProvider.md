@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsPublicProvider
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsPublicProvider
@@ -63,7 +66,7 @@ This collection is then piped to the `Remove-CsPublicProvider` cmdlet, which, in
 Get-CsPublicProvider | Where-Object {$_.Enabled -eq $False} | Remove-CsPublicProvider
 ```
 
-In Example 3, all the public providers that are currently disabled are removed from the set of configured pubic providers.
+In Example 3, all the public providers that are currently disabled are removed from the set of configured public providers.
 To carry out this task, the command first uses the `Get-CsPublicProvider` cmdlet to return a collection of all the public providers currently configured for use.
 This collection is piped to the `Where-Object` cmdlet, which selects only those providers where the Enabled property is equal to False.
 That filtered collection is then piped to the `Remove-CsPublicProvider` cmdlet, which deletes all the items in the collection.
@@ -80,7 +83,7 @@ The Identity typically the name of the website providing the services.
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -96,7 +99,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -165,3 +168,4 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 [New-CsPublicProvider](New-CsPublicProvider.md)
 
 [Set-CsPublicProvider](Set-CsPublicProvider.md)
+

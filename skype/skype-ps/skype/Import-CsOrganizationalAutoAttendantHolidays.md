@@ -1,8 +1,11 @@
 ---
-external help file: Import-CsOrganizationalAutoAttendantHolidays.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Import-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Import-CsOrganizationalAutoAttendantHolidays
@@ -124,3 +127,4 @@ The String is used as the PrimaryUri input.
 [Export-CsOrganizationalAutoAttendantHolidays](Export-CsOrganizationalAutoAttendantHolidays.md)
 
 [Get-CsOrganizationalAutoAttendantHolidays](Get-CsOrganizationalAutoAttendantHolidays.md)
+

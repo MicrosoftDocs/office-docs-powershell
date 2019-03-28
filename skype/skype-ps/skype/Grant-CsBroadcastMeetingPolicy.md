@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Grant-CsBroadcastMeetingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsBroadcastMeetingPolicy
@@ -11,10 +14,9 @@ schema: 2.0.0
 Use the Grant-CsBroadcastMeetingPolicy cmdlet to assign a broadcast meeting policy to a user.
 
 ## SYNTAX
-
 ```
-Grant-CsBroadcastMeetingPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
- [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsBroadcastMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +34,15 @@ They can only be granted, or assigned to users.
 Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName BroadcastMeetingPolicyAllEnabled
 ```
 
-This example grants the BroadcastMeetingPolicyAllEnabled policy to a user identified by User Principal Name (UPN.)
+This example grants the BroadcastMeetingPolicyAllEnabled policy to a user identified by their User Principal Name (UPN).
+
+### -------------------------- Example 2 -------------------------- 
+```
+Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName $Null
+```
+
+In Example 2, any per-user broadcast meeting policy previously assigned to the user jphillips is unassigned from that user; as a result, they will be managed by the global broadcast meeting policy.
+To unassign a per-user policy, set the PolicyName to a null value ($Null).
 
 
 ## PARAMETERS
@@ -48,7 +58,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -68,7 +78,7 @@ For example, a policy with the identity "Tag:BroadcastMeetingPolicyDisabled" has
 To unassign a previously assigned policy, set PolicyName to $Null.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +110,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -132,7 +142,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +172,12 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+
 
 ```yaml
 Type: SwitchParameter
@@ -178,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -194,3 +209,4 @@ None
 
 ## RELATED LINKS
 
+[Get-CsBroadcastMeetingPolicy](Get-CsBroadcastMeetingPolicy.md)

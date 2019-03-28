@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOSiteGroup
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPOSiteGroup
@@ -29,16 +32,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/marketing -Identity GroupToRemove
 ```
-
-{{ Add example description here }}
+This example removes a group named GroupToRemove from the site collection https://contoso.sharepoint.com/sites/marketing.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the name of the group to remove.
+
 
 ```yaml
 Type: String
@@ -54,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the site collection to remove the group from.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -80,10 +84,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 
-[Get-SPOSiteGroup]()
-
-[New-SPOSiteGroup]()
+[New-SPOSiteGroup](New-SPOSiteGroup.md)

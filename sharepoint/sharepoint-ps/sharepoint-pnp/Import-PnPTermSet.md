@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Import-PnPTermSet
@@ -15,7 +15,7 @@ Import-PnPTermSet -GroupName <String>
                   -Path <String>
                   [-TermSetId <Guid>]
                   [-SynchronizeDeletions [<SwitchParameter>]]
-                  [-IsOpen <Nullable`1>]
+                  [-IsOpen <Boolean>]
                   [-Contact <String>]
                   [-Owner <String>]
                   [-TermStoreName <String>]
@@ -33,29 +33,29 @@ The first data row must contain the Term Set Name, Term Set Description, and LCI
 
 It is recommended that a fixed GUID be used as the termSetId, to allow the term set to be easily updated (so do not pass Guid.Empty).
 
-In contrast to the web interface import, this is not a one-off import but runs synchronisation logic allowing updating of an existing Term Set. When synchronising, any existing terms are matched (with Term Description and Available for Tagging updated as necessary), any new terms are added in the correct place in the hierarchy, and (if synchroniseDeletions is set) any terms not in the imported file are removed.
+In contrast to the web interface import, this is not a one-off import but runs synchronization logic allowing updating of an existing Term Set. When synchronizing, any existing terms are matched (with Term Description and Available for Tagging updated as necessary), any new terms are added in the correct place in the hierarchy, and (if synchronizeDeletions is set) any terms not in the imported file are removed.
 
-The import file also supports an expanded syntax for the Term Set Name and term names (Level 1 Term, Level 2 Term, etc). These columns support values with the format 'Name | GUID', with the name and GUID separated by a pipe character (note that the pipe character is invalid to use within a taxomony item name). This expanded syntax is not required, but can be used to ensure all terms have fixed IDs.
+The import file also supports an expanded syntax for the Term Set Name and term names (Level 1 Term, Level 2 Term, etc). These columns support values with the format 'Name | GUID', with the name and GUID separated by a pipe character (note that the pipe character is invalid to use within a taxonomy item name). This expanded syntax is not required, but can be used to ensure all terms have fixed IDs.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -SynchronizeDeletions
+Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -SynchronizeDeletions
 ```
 
 Creates (or updates) the term set specified in the import file, in the group specified, removing any existing terms not in the file.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
+Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
 ```
 
 Creates (or updates) the term set specified in the import file, in the term store and group specified, using the specified ID.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -IsOpen $true -Contact 'user@example.org' -Owner 'user@example.org'
+Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -IsOpen $true -Contact 'user@example.org' -Owner 'user@example.org'
 ```
 
 Creates (or updates) the term set specified in the import file, setting the IsOpen, Contact, and Owner properties as specified.
@@ -90,7 +90,7 @@ Accept pipeline input: False
 Whether the term set should be marked open; if not specified, then the existing setting is not changed.
 
 ```yaml
-Type: Nullable`1
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False
@@ -159,7 +159,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -172,4 +172,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

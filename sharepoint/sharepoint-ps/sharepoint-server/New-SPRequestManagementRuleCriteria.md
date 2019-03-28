@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPRequestManagementRuleCriteria
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPRequestManagementRuleCriteria
@@ -30,7 +33,7 @@ New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestMana
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the rule to match.
 
@@ -39,11 +42,10 @@ Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the 
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
 ```
 
-{{ Add example description here }}
-
+This example creates a new rule that matches the Host 'Client01'.
 
 ## PARAMETERS
 
@@ -54,7 +56,7 @@ Specifies a value for the rule to match.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -64,13 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeader
-{{ Fill CustomHeader Description}}
+Specifies the custom header for the rule.
 
 ```yaml
 Type: String
 Parameter Sets: CustomPropertyParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -85,19 +87,26 @@ Specifies a header for a value to match.
 The following are the valid values:
 
 --Url
+
 --Urlreferrer
+
 --UserAgent
+
 --Host
+
 --IP
+
 --HttpMethod
+
 --SoapAction
+
 --CustomHeader
 
 ```yaml
 Type: SPRequestManagementRulePropertyType
 Parameter Sets: StandardParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -113,7 +122,7 @@ Specifies whether or not the match is case sensitive.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 3
@@ -128,15 +137,18 @@ Defines operators for the match.
 The following are the valid values:
 
 --Equals
+
 --Regex
+
 --StartsWith
+
 --EndsWith
 
 ```yaml
 Type: SPRequestManagementRuleMatchType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 3
@@ -158,7 +170,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,6 +190,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPRequestManagementSettings]()
+[Get-SPRequestManagementSettings](Get-SPRequestManagementSettings.md)
 
-[Set-SPRequestManagementSettings]()
+[Set-SPRequestManagementSettings](Set-SPRequestManagementSettings.md)

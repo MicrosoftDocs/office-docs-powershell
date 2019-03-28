@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPContext
@@ -15,15 +15,15 @@ Returns a Client Side Object Model context
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> $ctx = Get-PnPContext
+$ctx = Get-PnPContext
 ```
 
 This will put the current context in the $ctx variable.
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ClientContext](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientcontext.aspx)
+### Microsoft.SharePoint.Client.ClientContext
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

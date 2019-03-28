@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: New-SPODataConnectionSetting
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # New-SPODataConnectionSetting
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName"
+New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName"
 ```
 
 This example creates a new Business Data Connectivity service connection named ContosoServiceApp.
@@ -187,8 +190,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataConnectionSetting]()
+[Get-SPODataConnectionSetting](Get-SPODataConnectionSetting.md)
 
-[Remove-SPODataConnectionSetting]()
+[Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting]()
+[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)

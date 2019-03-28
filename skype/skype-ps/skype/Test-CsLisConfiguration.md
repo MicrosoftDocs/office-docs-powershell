@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsLisConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsLisConfiguration
@@ -122,7 +125,7 @@ This parameter is required unless you specify the TargetUri parameter, in which 
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -135,7 +138,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ClientPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -158,7 +161,7 @@ This parameter is required unless you specify the TargetFqdn parameter.
 Type: String
 Parameter Sets: TargetUri
 Aliases: twsu
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -177,7 +180,7 @@ This parameter is required if the TargetFqdn and UserSipAddress parameters are s
 Type: PSCredential
 Parameter Sets: ClientPlatform
 Aliases: uc
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -198,7 +201,7 @@ To see if synthetic transaction users have been set up, run the `Get-CsHealthMon
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: ua
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +214,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ClientPlatform, TargetUri
 Aliases: ua
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -228,7 +231,7 @@ This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
 Type: String
 Parameter Sets: (All)
 Aliases: b
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -245,7 +248,7 @@ This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab, or 
 Type: String
 Parameter Sets: (All)
 Aliases: c
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -261,7 +264,7 @@ This parameter is not supported for Location Information Server.
 Type: SwitchParameter
 Parameter Sets: ServerPlatform, ClientPlatform
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -278,7 +281,7 @@ This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
 Type: String
 Parameter Sets: (All)
 Aliases: m
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -295,7 +298,7 @@ This can also contain a MAC address or IP address.
 Type: String
 Parameter Sets: (All)
 Aliases: p
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -319,7 +322,7 @@ Valid subtypes are:
 Type: PortIDSubType
 Parameter Sets: (All)
 Aliases: ps
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -335,7 +338,7 @@ The port number of the Registrar service.
 Type: Int32
 Parameter Sets: ServerPlatform, ClientPlatform
 Aliases: rp
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -352,7 +355,7 @@ This value should be entered as an IPv4 address (digits separated by periods, su
 Type: String
 Parameter Sets: (All)
 Aliases: s
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -371,7 +374,7 @@ This parameter is required if the TargetUri and UserSipAddress parameters are sp
 Type: PSCredential
 Parameter Sets: TargetUri
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -387,7 +390,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -409,7 +412,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -435,7 +438,7 @@ LiveID
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -464,7 +467,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -499,3 +502,4 @@ The `Test-CsLisConfiguration` cmdlet returns an instance of the Microsoft.Rtc.Sy
 [Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
 [Export-CsLisConfiguration](Export-CsLisConfiguration.md)
+

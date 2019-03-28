@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRoutingMachinePool
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRoutingMachinePool
@@ -22,23 +25,19 @@ Set-SPRoutingMachinePool [-Identity] <SPRoutingMachinePoolPipeBind>
 ## DESCRIPTION
 Use the `Set-SPRoutingMachinePool` cmdlet to set properties of a machine pool by using the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>$pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
-
-C:\PS>Set-SPRoutingMachinePool -Identity $pool -MachineTargets <Machine collections>
+$wa = Get-SPWebApplication -Identity http://webAppUrl
+$rm = Get-SPRequestManagementSettings -Identity $wa
+$pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
+$newMachine = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
+Set-SPRoutingMachinePool -Identity $pool -MachineTargets ($pool.MachineTargets + $newMachine)
 ```
-
-This example sets the machine pool property of MachineTargets for a specified identity as defined by the $pool variable.
-
+This example sets the routing machine pool on the specified Web Application. Using the Request Management settings of the Web Application, it retrieves the existing routing machine pool named 'MachinePool'. It then gets the routing machine info for a new machine to add to the pool. Lastly, it sets the pool with the existing machine targets plus the new machine target.
 
 ## PARAMETERS
 
@@ -49,7 +48,7 @@ Specifies the name of the request management settings object to set.
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -71,7 +70,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -87,7 +86,7 @@ Specifies the routing targets collection that the machine pool will contain.
 Type: SPRoutingRuleTargetPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,8 +106,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPRoutingMachinePool]()
+[Add-SPRoutingMachinePool](Add-SPRoutingMachinePool.md)
 
-[Get-SPRoutingMachinePool]()
+[Get-SPRoutingMachinePool](Get-SPRoutingMachinePool.md)
 
-[Remove-SPRoutingMachinePool]()
+[Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)

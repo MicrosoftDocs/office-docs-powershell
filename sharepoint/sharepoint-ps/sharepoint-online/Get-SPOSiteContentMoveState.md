@@ -1,43 +1,57 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSiteContentMoveState
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOSiteContentMoveState
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This Cmdlet allows a SharePoint administrators to check the status of a site or group move.
+
 
 ## SYNTAX
 
 ### GroupName
-```
+```powershell
 Get-SPOSiteContentMoveState [-GroupName] <String> [<CommonParameters>]
 ```
 
 ### SourceSiteUrl
-```
+```powershell
 Get-SPOSiteContentMoveState [-SourceSiteUrl] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOSiteContentMoveState -GroupName "group@contoso.com"
 ```
 
-{{ Add example description here }}
+Gets the status of the site content for the group "group@contoso.com"
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOSiteContentMoveState -SourceSiteUrl $siteurl
+```
+
+Gets the status of the site content give on the variable $siteurl
+
 
 ## PARAMETERS
 
 ### -GroupName
-{{Fill GroupName Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -53,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceSiteUrl
-{{Fill SourceSiteUrl Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -71,15 +86,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 

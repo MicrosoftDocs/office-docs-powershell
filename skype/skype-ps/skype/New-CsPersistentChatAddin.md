@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: New-CsPersistentChatAddin
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsPersistentChatAddin
@@ -133,4 +136,5 @@ The New-CsPersistentChatAddin cmdlet creates new instances of the Microsoft.Rtc.
 [Remove-CsPersistentChatAddin](Remove-CsPersistentChatAddin.md)
 
 [Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)
+
 

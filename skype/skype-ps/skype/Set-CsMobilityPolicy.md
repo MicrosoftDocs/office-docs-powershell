@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsMobilityPolicy
@@ -17,36 +20,26 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsMobilityPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Description <String>]
- [-EnableIPAudioVideo <Boolean>] [-EnableMobility <Boolean>] [-EnableOutsideVoice <Boolean>] [-Force]
- [-RequireWIFIForIPAudio <Boolean>] [-RequireWIFIForIPVideo <Boolean>] [-WhatIf]
- [-AllowCustomerExperienceImprovementProgram <Boolean>] [-AllowExchangeConnectivity <Boolean>]
- [-AllowSaveCallLogs <Boolean>] [-AllowSaveCredentials <Boolean>] [-AllowSaveIMHistory <Boolean>]
- [-RequireWiFiForSharing <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMobilityPolicy [-Tenant <Guid>] [-Description <String>] [-EnableOutsideVoice <Boolean>]
+ [-EnableMobility <Boolean>] [-EnableIPAudioVideo <Boolean>] [-RequireWIFIForIPVideo <Boolean>]
+ [-AllowCustomerExperienceImprovementProgram <Boolean>] [-RequireWiFiForSharing <Boolean>]
+ [-AllowSaveCallLogs <Boolean>] [-AllowExchangeConnectivity <Boolean>] [-AllowSaveIMHistory <Boolean>]
+ [-AllowSaveCredentials <Boolean>] [-EnablePushNotifications <Boolean>] [-EncryptAppData <Boolean>]
+ [-AllowDeviceContactsSync <Boolean>] [-RequireIntune <Boolean>] [-AllowAutomaticPstnFallback <Boolean>]
+ [-VoiceSettings <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsMobilityPolicy [-Confirm] [-Description <String>] [-EnableIPAudioVideo <Boolean>]
- [-EnableMobility <Boolean>] [-EnableOutsideVoice <Boolean>] [-Force] [-Instance <PSObject>]
- [-RequireWIFIForIPAudio <Boolean>] [-RequireWIFIForIPVideo <Boolean>] [-WhatIf]
- [-AllowCustomerExperienceImprovementProgram <Boolean>] [-AllowExchangeConnectivity <Boolean>]
- [-AllowSaveCallLogs <Boolean>] [-AllowSaveCredentials <Boolean>] [-AllowSaveIMHistory <Boolean>]
- [-RequireWiFiForSharing <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsMobilityPolicy [[-Identity] <Object>] [-AllowAutomaticPstnFallback <Object>]
- [-AllowCustomerExperienceImprovementProgram <Object>] [-AllowDeviceContactsSync <Object>]
- [-AllowExchangeConnectivity <Object>] [-AllowSaveCallLogs <Object>] [-AllowSaveCredentials <Object>]
- [-AllowSaveIMHistory <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
- [-EnableIPAudioVideo <Object>] [-EnableMobility <Object>] [-EnableOutsideVoice <Object>]
- [-EnablePushNotifications <Object>] [-EncryptAppData <Object>] [-Force] [-Instance <Object>]
- [-RequireIntune <Object>] [-RequireWIFIForIPVideo <Object>] [-RequireWiFiForSharing <Object>]
- [-Tenant <Object>] [-VoiceSettings <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsMobilityPolicy [-Tenant <Guid>] [-Description <String>] [-EnableOutsideVoice <Boolean>]
+ [-EnableMobility <Boolean>] [-EnableIPAudioVideo <Boolean>] [-RequireWIFIForIPVideo <Boolean>]
+ [-AllowCustomerExperienceImprovementProgram <Boolean>] [-RequireWiFiForSharing <Boolean>]
+ [-AllowSaveCallLogs <Boolean>] [-AllowExchangeConnectivity <Boolean>] [-AllowSaveIMHistory <Boolean>]
+ [-AllowSaveCredentials <Boolean>] [-EnablePushNotifications <Boolean>] [-EncryptAppData <Boolean>]
+ [-AllowDeviceContactsSync <Boolean>] [-RequireIntune <Boolean>] [-AllowAutomaticPstnFallback <Boolean>]
+ [-VoiceSettings <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,7 +94,7 @@ That filtered collection of policies is then piped to the `Set-CsMobilityPolicy`
 Get-CsMobilityPolicy | Where-Object {$_.Description -eq $Null} | Set-CsMobilityPolicy -Description "Policy owner: kenmyer@litwareinc.com"
 ```
 
-In Example 3, a new description is added to any mobility policy property that does not currently have a description.
+In Example 3, a new description is added to any mobility policy that does not currently have a description.
 To do this, the first uses the `Get-CsMobilityPolicy` cmdlet to return a collection of all the mobility policies currently in use in the organization.
 This collection is then piped to the `Where-Object` cmdlet, which selects only those policies where the Description property is equal to (-eq) a null value.
 That filtered collection is then piped to the `Set-CsMobilityPolicy` cmdlet, which sets the Description property for each policy to the string value "Policy owner: kenmyer@litwareinc.com".
@@ -117,7 +110,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -135,7 +128,7 @@ For example, the Description might include information about the users the polic
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +148,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +165,7 @@ When set to True, users are allowed to use Skype for Business Mobile.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +185,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +202,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -235,25 +228,11 @@ To refer to a per-user policy, use syntax similar to this:
 
 If you do not specify an Identity, then the `Set-CsMobilityPolicy` cmdlet will modify the global policy.
 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -270,20 +249,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -293,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPAudio
-When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a WiFi network.
+When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a Wi-Fi network.
 That means that the user will only be allowed to make audio calls using Wi-Fi, and will not be able to use the standard cellular phone network.
 The default value is False.
 
@@ -304,7 +270,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: Identity, Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -314,9 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPVideo
-When set to True, the user can use IP video only in calls made when mobile device is connected to a Wi-Fi network.
-If mobile device goes outside of Wi-Fi range, then video calls will be received as audio calls only.
-If this property is set to False (the default value) then the user can make or receive IP video calls in using either a Wi-Fi or a cellular data connection.
+When set to True, the user can use IP video only in calls made when their mobile device is connected to a Wi-Fi network.
+If the mobile device goes outside of Wi-Fi range, then video calls will be received as audio calls only.
+If this property is set to False (the default value) then the user can make or receive IP video calls using either a Wi-Fi or a cellular data connection.
 
 This parameter was introduced in Lync Server 2013.
 
@@ -325,7 +291,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -342,7 +308,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -355,7 +321,7 @@ Accept wildcard characters: False
 {{Fill AllowAutomaticPstnFallback Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -372,10 +338,10 @@ When set to True (the default value) mobile users will be allowed to participate
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -388,7 +354,7 @@ Accept wildcard characters: False
 {{Fill AllowDeviceContactsSync Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -405,10 +371,10 @@ When set to True (the default value) users will be allowed to connect to Exchang
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -424,10 +390,10 @@ Note that this setting does not apply to Android devices.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -440,12 +406,15 @@ Accept wildcard characters: False
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
 
+Note: If a user has AllowSaveCredentials set to False in the CsMobility policy, the Skype for Business App for iOS may sign out automatically when bringing it from the background to the foreground. This is due to the password not being saved anywhere but in the iOS process memory. Once the process is killed by the iOS system, the password will no longer be available, so the user will need to enter it again. However, there is no impact if modern authenticaion is implemented.
+
+
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -459,26 +428,10 @@ When set to True (the default value) users will be allowed to save transcripts o
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -491,7 +444,7 @@ Accept wildcard characters: False
 {{Fill EnablePushNotifications Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -507,7 +460,7 @@ Accept wildcard characters: False
 {{Fill EncryptAppData Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -523,7 +476,7 @@ Accept wildcard characters: False
 {{Fill RequireIntune Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -536,18 +489,18 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWiFiForSharing
-When set to True, mobile users must use a WiFi connection in order to participate in an application sharing session.
-When set to False (the default value) mobile users can participate in application sharing by using either a WiFi connection or a cellular (3G/4G) connection.
+When set to True, mobile users must use a Wi-Fi connection in order to participate in an application sharing session.
+When set to False (the default value) mobile users can participate in application sharing by using either a Wi-Fi connection or a cellular (3G/4G) connection.
 
-If this value is set to True, then users then users will not be able to change their sharing configuration settings.
-If this value is set to False users can use the Options page to modify their sharing configuration settings.
+If this value is set to True, users will not be able to change their sharing configuration settings.
+If this value is set to False, users can use the Options page to modify their sharing configuration settings.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -568,10 +521,10 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -581,26 +534,16 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSettings
-{{Fill VoiceSettings Description}}
+Controls how audio is connected by a mobile device joining a meeting or a peer-to-peer call. When the Skype for Business client is first run, and the user is enabled for Phone System with a Calling Plan, they are prompted to configure a call back phone number. This number is stored in settings under the **Calls and Meetings** section and will be used based on the value chosen for this parameter. Acceptable values are: 
+
+**VoIPAlways:** Wi-Fi will be used when available, otherwise a call back will be performed.
+
+**VoIPOverWiFi:** If Wi-Fi is not available, a call back to the pre-defined phone number will be performed.
+
+**Cellular:** Always perform a call back to the pre-defined phone number.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -630,3 +573,4 @@ Instead, the `Set-CsMobilityPolicy` cmdlet modifies existing instances of the Mi
 ## NOTES
 
 ## RELATED LINKS
+

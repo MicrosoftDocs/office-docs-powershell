@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatRoom
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatRoom
 
 ## SYNOPSIS
-Modifies and existing Persistent Chat chat room.
+Modifies an existing Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013.
 
@@ -480,3 +483,4 @@ Instead, the `Set-CsPersistentChatRoom` cmdlet modifies existing instances of th
 [New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
 [Remove-CsPersistentChatRoom](Remove-CsPersistentChatRoom.md)
+

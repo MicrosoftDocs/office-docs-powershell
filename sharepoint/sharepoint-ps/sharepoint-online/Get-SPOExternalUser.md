@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOExternalUser
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOExternalUser
 
 ## SYNOPSIS
-Returns external users in the tenant's folder.
+Returns external users in the tenant.
+
 
 ## SYNTAX
 
@@ -19,22 +23,38 @@ Get-SPOExternalUser [[-Position] <Int32>] [[-PageSize] <Int32>] [[-Filter] <Stri
 ```
 
 ## DESCRIPTION
-The Get-SPOExternalUser cmdlet returns external users that are located in the tenant's folder based on specified criteria.
+The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant based on specified criteria.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-### ------------ Example 1 --------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-{example code}
+Get-SPOExternalUser -Position 0 -PageSize 2
 ```
-{example description}
+Example 1 returns the first two external users in the collection.
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOExternalUser -Position 2 -PageSize 2
+```
+Example 2 returns two external users from the third page of the collection.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+Get-SPOExternalUser -Position 0 -PageSize 30 -Filter https://contoso.sharepoint.com
+```
+Example 3 returns the first 30 users that match the filter https://contoso.sharepoint.com.
 
 ## PARAMETERS
 
 ### -Filter
-Limits the results to only those users whose first name, last name or email address begins with the text in the string, using a case-insensitive comparison
+Limits the results to only those users whose first name, last name, or email address begins with the text in the string using a case-insensitive comparison.
+
 
 ```yaml
 Type: String
@@ -54,6 +74,7 @@ Specifies the maximum number of users to be returned in the collection.
 
 The value must be less than or equal to 50.
 
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -70,6 +91,7 @@ Accept wildcard characters: False
 ### -Position
 Use to specify the zero-based index of the position in the sorted collection of the first result to be returned.
 
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -85,7 +107,9 @@ Accept wildcard characters: False
 
 ### -SiteUrl
 Specifies the site to retrieve external users for.
+
 If no site is specified, the external users for all sites are returned.
+
 
 ```yaml
 Type: String
@@ -103,6 +127,7 @@ Accept wildcard characters: False
 ### -SortOrder
 Specifies the sort results in Ascending or Descending order on the SPOUser.Email property should occur.
 
+
 ```yaml
 Type: SortOrder
 Parameter Sets: (All)
@@ -117,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount
-{{Fill ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount Description}}
+Shows users who have accepted an invite but not using the account the invite was sent to.
+
 
 ```yaml
 Type: Boolean
@@ -143,10 +169,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[Remove-SPOExternalUser]()
-
-
+[Remove-SPOExternalUser](Remove-SPOExternalUser.md)

@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsVoiceTestConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsVoiceTestConfiguration
@@ -96,7 +99,7 @@ You cannot supply a DialedNumber and a TestCaseInputObject.
 Type: PhoneNumber
 Parameter Sets: AdhocTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -117,7 +120,7 @@ If you do, the object in this parameter must match the dial plan specified in th
 Type: LocationProfile
 Parameter Sets: AdhocTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -130,7 +133,7 @@ Accept wildcard characters: False
 Type: LocationProfile
 Parameter Sets: StoredTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ You should also not specify a Dialplan or VoicePolicy, as those would be redunda
 Type: TestConfiguration
 Parameter Sets: StoredTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -171,7 +174,7 @@ If you do, the object in this parameter must match the voice policy specified in
 Type: VoicePolicy
 Parameter Sets: AdhocTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -184,7 +187,7 @@ Accept wildcard characters: False
 Type: VoicePolicy
 Parameter Sets: StoredTest
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -204,7 +207,7 @@ You can use this parameter with either the DialedNumber parameter or with the Te
 Type: PstnRoutingSettings
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -220,7 +223,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -260,3 +263,4 @@ This cmdlet returns an object of type Microsoft.Rtc.Management.Voice.OcsVoiceTes
 [Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
 [Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)
+

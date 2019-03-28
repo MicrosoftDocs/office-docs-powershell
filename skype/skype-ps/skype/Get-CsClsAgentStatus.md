@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClsAgentStatus
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsClsAgentStatus
@@ -49,7 +52,7 @@ By default the CacheFileLocalFolders path from the Get-CsClsConfiguration cmdlet
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -65,7 +68,7 @@ If specified, the cmdlet will return the default.xml file as an XmlDocument obje
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -93,3 +96,4 @@ Or an XmlDocument object if the DefaultXml parameter is used.
 
 
 ## RELATED LINKS
+

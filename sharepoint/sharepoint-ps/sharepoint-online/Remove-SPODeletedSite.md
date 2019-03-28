@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPODeletedSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPODeletedSite
@@ -24,15 +27,17 @@ You have to be a SharePoint Online global administrator and site collection admi
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+**Note**: As of today, the modern admin center UI does not allow permanent deletion of group connected site, but the use of this cmdlet does allow the deletion, but when this occurs it does not delete the associated group, just the site.
+
+
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/sitetoremove
 ```
-
-{{ Add example description here }}
+This example removes a SharePoint Online deleted site collection named https://contoso.sharepoint.com/sites/sitetoremove from the Recycle Bin and deletes it permanently.
 
 
 ## PARAMETERS
@@ -54,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to remove.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -70,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -113,10 +118,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Remove-SPOSite](Remove-SPOSite.md)
 
-[Remove-SPOSite]()
-
-[Get-SPODeletedSite]()
+[Get-SPODeletedSite](Get-SPODeletedSite.md)

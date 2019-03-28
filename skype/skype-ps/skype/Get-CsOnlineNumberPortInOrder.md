@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineNumberPortInOrder
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineNumberPortInOrder
@@ -14,8 +17,8 @@ New third party provider ports should be provisioned through the Skype for Busin
 ## SYNTAX
 
 ```
-Get-CsOnlineNumberPortInOrder [-BypassDualWrite <Object>] [-Confirm] [-DomainController <Object>] [-Force]
- [-PortInOrderId <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Get-CsOnlineNumberPortInOrder [-Tenant <Guid>] [-PortInOrderId <String>] [-DomainController <Fqdn>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,22 +31,6 @@ Get-CsOnlineNumberPortInOrder [-BypassDualWrite <Object>] [-Confirm] [-DomainCon
 ```
 
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 This parameter is reserved for internal Microsoft use.
@@ -65,7 +52,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -97,7 +84,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -113,7 +100,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -167,3 +154,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

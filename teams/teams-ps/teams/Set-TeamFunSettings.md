@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Set-TeamFunSettings
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-TeamFunSettings
@@ -115,17 +118,11 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### GroupId
+### GroupId, AllowGiphy, GiphyContentRating, AllowStickersAndMemes, AllowCustomMemes
 
-### AllowGiphy
-
-### GiphyContentRating
-
-### AllowStickersAndMemes
-
-### AllowCustomMemes
 
 ## OUTPUTS
+
 
 ## NOTES
 

@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Disconnect-MicrosoftTeams
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Disconnect-MicrosoftTeams

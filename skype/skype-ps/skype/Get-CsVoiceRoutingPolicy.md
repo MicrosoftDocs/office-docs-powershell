@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceRoutingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsVoiceRoutingPolicy
@@ -13,24 +16,16 @@ Voice routing policies manage PSTN usages for users of hybrid voice.
 Hybrid voice enables users homed on Skype for Business Online to take advantage of the Enterprise Voice capabilities available in an on-premises installation of Skype for Business Server.
 This cmdlet was introduced in Lync Server 2013.
 
-
-
 ## SYNTAX
 
-### Filter
-```
-Get-CsVoiceRoutingPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
-```
-
-### Identity
+### Identity (Default)
 ```
 Get-CsVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
-###  (Default)
+### Filter
 ```
-Get-CsVoiceRoutingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-AsJob] [<CommonParameters>]
+Get-CsVoiceRoutingPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,8 +37,6 @@ Among other things, you will also need to enable those users for Enterprise Voic
 
 The functions carried out by the Get-CsVoiceRoutingPolicy cmdlet are not available in the Skype for Business Server Control Panel.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -53,15 +46,12 @@ Get-CsVoiceRoutingPolicy
 
 The command shown in Example 1 returns information for all the voice routing policies configured for use in the organization.
 
-
 ### -------------------------- Example 2 -------------------------- 
 ```
 Get-CsVoiceRoutingPolicy -Identity "RedmondVoiceRoutingPolicy"
 ```
 
 In Example 2, information is returned for a single voice routing policy: the policy with the Identity RedmondVoiceRoutingPolicy.
-
-
 
 ### -------------------------- Example 3 -------------------------- 
 ```
@@ -70,8 +60,6 @@ Get-CsVoiceRoutingPolicy -Filter "tag:*"
 
 The command shown in Example 3 returns information about all the voice routing policies configured at the per-user scope.
 To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
-
-
 
 ### -------------------------- Example 4 -------------------------- 
 ```
@@ -82,7 +70,6 @@ In Example 4, information is returned only for those voice routing policies that
 To carry out this task, the command first calls Get-CsVoiceRoutingPolicy without any parameters; that returns a collection of all the voice routing policies configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which picks out only those policies where the PstnUsages property includes (-contains) the usage "Long Distance".
 
-
 ### -------------------------- Example 5 -------------------------- 
 ```
 Get-CsVoiceRoutingPolicy | Where-Object {$_.PstnUsages -notcontains "Long Distance"}
@@ -91,24 +78,19 @@ Get-CsVoiceRoutingPolicy | Where-Object {$_.PstnUsages -notcontains "Long Distan
 Example 5 is a variation on the command shown in Example 4; in this case, however, information is returned only for those voice routing policies that do not include the PSTN usage "Long Distance".
 In order to do that, the Where-Object cmdlet uses the -notcontains operator, which limits returned data to policies that do not include the usage "Long Distance".
 
-
 ## PARAMETERS
 
 ### -Filter
-
-
 Enables you to use wildcards when retrieving one or more voice routing policies.
 For example, to return all the policies configured at the per-user scope, use this syntax:
 
 -Filter "tag:*"
 
-
-
 ```yaml
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
 Unique identifier of the voice routing policy to be retrieved.
 To return the global policy, use this syntax:
 
@@ -132,13 +113,11 @@ You cannot use wildcard characters when specifying the Identity.
 
 If neither the Identity nor the Filter parameters are specified, then Get-CsVoiceRoutingPolicy returns all the voice routing policies configured for use in the organization.
 
-
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -154,23 +133,7 @@ Retrieves the voice policy data from the local replica of the Central Management
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -180,7 +143,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -220,3 +187,4 @@ The Get-CsVoiceRoutingPolicy cmdlet returns instances of the Microsoft.Rtc.Manag
 [Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
 [Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)
+

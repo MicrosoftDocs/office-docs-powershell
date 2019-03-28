@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceNormalizationRule
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsVoiceNormalizationRule
@@ -15,26 +18,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-New-CsVoiceNormalizationRule [-Identity] <XdsIdentity> [-Description <String>] [-IsInternalExtension <Boolean>]
- [-Pattern <String>] [-Priority <Int32>] [-Translation <String>] [-Force] [-InMemory] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+ [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Identity] <XdsIdentity>
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsVoiceNormalizationRule -Name <String> -Parent <String> [-Description <String>]
- [-IsInternalExtension <Boolean>] [-Pattern <String>] [-Priority <Int32>] [-Translation <String>] [-Force]
- [-InMemory] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-###  (Default)
-```
-New-CsVoiceNormalizationRule [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-Description <Object>] [-Force] [-InMemory] [-IsInternalExtension <Object>] [-Name <Object>]
- [-Parent <Object>] [-Pattern <Object>] [-Priority <Object>] [-Tenant <Object>] [-Translation <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsVoiceNormalizationRule [-Tenant <Guid>] -Parent <String> -Name <String> [-Description <String>]
+ [-Pattern <String>] [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-InMemory]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,23 +97,10 @@ You cannot include the Identity parameter and the Parent parameter in the same c
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -131,27 +113,13 @@ If no value has been specified for the Parent parameter, Name defaults to the na
 For example, if a rule is created with the Identity site:Redmond/RedmondRule, the Name will default to RedmondRule.
 The Name parameter and the Identity parameter cannot be used in the same command.
 
-
 ```yaml
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -167,25 +135,11 @@ The Parent parameter is required unless the Identity parameter is specified.
 You cannot include the Identity parameter and the Parent parameter in the same command.
 If you include the Parent parameter, the Name parameter is also required.
 
-
-```yaml
-Type: String
-Parameter Sets: ParentAndRelativeKey
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -199,12 +153,11 @@ A friendly description of the normalization rule.
 
 Maximum string length: 512 characters.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -220,12 +173,11 @@ This value is ignored if the value of the OptimizeDeviceDialing property of the 
 
 Default: False
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -239,12 +191,11 @@ A regular expression that the dialed number must match in order for this rule to
 
 Default: ^(\d{11})$ (The default represents any set of numbers up to 11 digits.)
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -258,12 +209,11 @@ The order in which rules are applied.
 A phone number might match more than one rule.
 This parameter sets the order in which the rules are tested against the number.
 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -277,12 +227,11 @@ The regular expression pattern that will be applied to the number to convert it 
 
 Default: +$1 (The default prefixes the number with a plus sign \[+\].)
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -294,12 +243,11 @@ Accept wildcard characters: False
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -312,12 +260,11 @@ Accept wildcard characters: False
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -329,12 +276,11 @@ Accept wildcard characters: False
 ### -WhatIf
 Describes what would happen if you executed the command without actually executing the command.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -346,28 +292,11 @@ Accept wildcard characters: False
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -380,23 +309,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -436,3 +349,4 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 [New-CsDialPlan](New-CsDialPlan.md)
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
+

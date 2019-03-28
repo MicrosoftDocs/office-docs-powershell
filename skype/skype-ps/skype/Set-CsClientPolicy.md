@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClientPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsClientPolicy
@@ -15,119 +18,94 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsClientPolicy [[-Identity] <XdsIdentity>] [-AddressBookAvailability <AddressBookAvailability>]
- [-AttendantSafeTransfer <Boolean>] [-AutoDiscoveryRetryInterval <TimeSpan>]
- [-BlockConversationFromFederatedContacts <Boolean>] [-CalendarStatePublicationInterval <UInt32>]
- [-ConferenceIMIdleTimeout <TimeSpan>] [-CustomizedHelpUrl <String>] [-CustomLinkInErrorMessages <String>]
- [-CustomStateUrl <String>] [-Description <String>] [-DGRefreshInterval <TimeSpan>]
+Set-CsClientPolicy [-Tenant <Guid>] [-PolicyEntry <PSListModifier>] [-Description <String>]
+ [-AddressBookAvailability <AddressBookAvailability>] [-AttendantSafeTransfer <Boolean>]
+ [-AutoDiscoveryRetryInterval <TimeSpan>] [-BlockConversationFromFederatedContacts <Boolean>]
+ [-CalendarStatePublicationInterval <UInt32>] [-CustomizedHelpUrl <String>]
+ [-CustomLinkInErrorMessages <String>] [-CustomStateUrl <String>] [-DGRefreshInterval <TimeSpan>]
  [-DisableCalendarPresence <Boolean>] [-DisableContactCardOrganizationTab <Boolean>]
  [-DisableEmailComparisonCheck <Boolean>] [-DisableEmoticons <Boolean>]
- [-DisableFederatedPromptDisplayName <Boolean>] [-DisableFeedsTab <Boolean>] [-DisableFreeBusyInfo <Boolean>]
- [-DisableHandsetOnLockedMachine <Boolean>] [-DisableHtmlIm <Boolean>] [-DisableICE <Boolean>]
- [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>] [-DisableOnlineContextualSearch <Boolean>]
- [-DisablePhonePresence <Boolean>] [-DisablePICPromptDisplayName <Boolean>]
- [-DisablePoorDeviceWarnings <Boolean>] [-DisablePoorNetworkWarnings <Boolean>]
- [-DisablePresenceNote <Boolean>] [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>]
- [-DisplayPhoto <DisplayPhoto>] [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
- [-EnableClientMusicOnHold <Boolean>] [-EnableConversationWindowTabs <Boolean>]
- [-EnableEnterpriseCustomizedHelp <Boolean>] [-EnableEventLogging <Boolean>]
- [-EnableExchangeContactSync <Boolean>] [-EnableExchangeDelegateSync <Boolean>]
- [-EnableFullScreenVideo <Boolean>] [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
- [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
+ [-DisableFeedsTab <Boolean>] [-DisableFederatedPromptDisplayName <Boolean>]
+ [-DisableFreeBusyInfo <Boolean>] [-DisableHandsetOnLockedMachine <Boolean>]
+ [-DisableMeetingSubjectAndLocation <Boolean>] [-DisableHtmlIm <Boolean>]
+ [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>]
+ [-DisableOnlineContextualSearch <Boolean>] [-DisablePhonePresence <Boolean>]
+ [-DisablePICPromptDisplayName <Boolean>] [-DisablePoorDeviceWarnings <Boolean>]
+ [-DisablePoorNetworkWarnings <Boolean>] [-DisablePresenceNote <Boolean>]
+ [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>] [-DisplayPhoto <DisplayPhoto>]
+ [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
+ [-EnableClientAutoPopulateWithTeam <Boolean>] [-EnableClientMusicOnHold <Boolean>]
+ [-EnableConversationWindowTabs <Boolean>] [-EnableEnterpriseCustomizedHelp <Boolean>]
+ [-EnableEventLogging <Boolean>] [-EnableExchangeContactSync <Boolean>]
+ [-EnableExchangeDelegateSync <Boolean>] [-EnableExchangeContactsFolder <Boolean>]
+ [-EnableFullScreenVideo <Boolean>] [-EnableHighPerformanceConferencingAppSharing <Boolean>]
+ [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
+ [-EnableMediaRedirection <Boolean>] [-EnableMeetingEngagement <Boolean>]
+ [-EnableNotificationForNewSubscribers <Boolean>] [-EnableServerConversationHistory <Boolean>]
+ [-EnableSkypeUI <Boolean>] [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>]
+ [-EnableURL <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
  [-EnableVOIPCallDefault <Boolean>] [-ExcludedContactFolders <String>] [-HotdeskingTimeout <TimeSpan>]
  [-IMWarning <String>] [-MAPIPollInterval <TimeSpan>] [-MaximumDGsAllowedInContactList <UInt32>]
- [-MaximumNumberOfContacts <UInt16>] [-MusicOnHoldAudioFile <String>]
- [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-PlayAbbreviatedDialTone <Boolean>]
- [-PolicyEntry <PSListModifier>] [-SearchPrefixFlags <UInt16>] [-ShowManagePrivacyRelationships <Boolean>]
- [-ShowRecentContacts <Boolean>] [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchCenterExternalURL <String>]
- [-SPSearchCenterInternalURL <String>] [-SPSearchExternalURL <String>] [-SPSearchInternalURL <String>]
- [-TabURL <String>] [-WebServicePollInterval <TimeSpan>] [-Force] [-WhatIf] [-Confirm]
- [-DisableMeetingSubjectAndLocation <Boolean>] [-EnableNotificationForNewSubscribers <Boolean>]
- [-EnableURL <Boolean>] [-MaxPhotoSizeKB <UInt32>] [-EnableMediaRedirection <Boolean>]
- [-HelpEnvironment <String>] [-TracingLevel <TracingLevel>]
- [-EnableHighPerformanceConferencingAppSharing <Boolean>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
- [-EnableServerConversationHistory <Boolean>] [-EnableSkypeUI <Boolean>] [-IMLatencyErrorThreshold <UInt32>]
- [-IMLatencySpinnerDelay <UInt32>] [-RateMyCallAllowCustomUserFeedback <Boolean>]
- [-RateMyCallDisplayPercentage <UInt16>] [-Tenant <Guid>] [<CommonParameters>]
+ [-MaximumNumberOfContacts <UInt16>] [-MaxPhotoSizeKB <UInt32>] [-MusicOnHoldAudioFile <String>]
+ [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
+ [-PlayAbbreviatedDialTone <Boolean>] [-RequireContentPin <String>] [-SearchPrefixFlags <UInt16>]
+ [-ShowRecentContacts <Boolean>] [-ShowManagePrivacyRelationships <Boolean>]
+ [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchInternalURL <String>] [-SPSearchExternalURL <String>]
+ [-SPSearchCenterInternalURL <String>] [-SPSearchCenterExternalURL <String>] [-TabURL <String>]
+ [-TracingLevel <TracingLevel>] [-TelemetryTier <String>] [-PublicationBatchDelay <UInt32>]
+ [-EnableViewBasedSubscriptionMode <Boolean>] [-WebServicePollInterval <TimeSpan>]
+ [-HelpEnvironment <String>] [-RateMyCallDisplayPercentage <UInt16>]
+ [-RateMyCallAllowCustomUserFeedback <Boolean>] [-IMLatencySpinnerDelay <UInt32>]
+ [-IMLatencyErrorThreshold <UInt32>] [-SupportModernFilePicker <Boolean>] [-EnableOnlineFeedback <Boolean>]
+ [-EnableOnlineFeedbackScreenshots <Boolean>] [-ConferenceIMIdleTimeout <TimeSpan>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsClientPolicy [-Instance <PSObject>] [-AddressBookAvailability <AddressBookAvailability>]
- [-AttendantSafeTransfer <Boolean>] [-AutoDiscoveryRetryInterval <TimeSpan>]
- [-BlockConversationFromFederatedContacts <Boolean>] [-CalendarStatePublicationInterval <UInt32>]
- [-ConferenceIMIdleTimeout <TimeSpan>] [-CustomizedHelpUrl <String>] [-CustomLinkInErrorMessages <String>]
- [-CustomStateUrl <String>] [-Description <String>] [-DGRefreshInterval <TimeSpan>]
+Set-CsClientPolicy [-Tenant <Guid>] [-PolicyEntry <PSListModifier>] [-Description <String>]
+ [-AddressBookAvailability <AddressBookAvailability>] [-AttendantSafeTransfer <Boolean>]
+ [-AutoDiscoveryRetryInterval <TimeSpan>] [-BlockConversationFromFederatedContacts <Boolean>]
+ [-CalendarStatePublicationInterval <UInt32>] [-CustomizedHelpUrl <String>]
+ [-CustomLinkInErrorMessages <String>] [-CustomStateUrl <String>] [-DGRefreshInterval <TimeSpan>]
  [-DisableCalendarPresence <Boolean>] [-DisableContactCardOrganizationTab <Boolean>]
  [-DisableEmailComparisonCheck <Boolean>] [-DisableEmoticons <Boolean>]
- [-DisableFederatedPromptDisplayName <Boolean>] [-DisableFeedsTab <Boolean>] [-DisableFreeBusyInfo <Boolean>]
- [-DisableHandsetOnLockedMachine <Boolean>] [-DisableHtmlIm <Boolean>] [-DisableICE <Boolean>]
- [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>] [-DisableOnlineContextualSearch <Boolean>]
- [-DisablePhonePresence <Boolean>] [-DisablePICPromptDisplayName <Boolean>]
- [-DisablePoorDeviceWarnings <Boolean>] [-DisablePoorNetworkWarnings <Boolean>]
- [-DisablePresenceNote <Boolean>] [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>]
- [-DisplayPhoto <DisplayPhoto>] [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
- [-EnableClientMusicOnHold <Boolean>] [-EnableConversationWindowTabs <Boolean>]
- [-EnableEnterpriseCustomizedHelp <Boolean>] [-EnableEventLogging <Boolean>]
- [-EnableExchangeContactSync <Boolean>] [-EnableExchangeDelegateSync <Boolean>]
- [-EnableFullScreenVideo <Boolean>] [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
- [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
+ [-DisableFeedsTab <Boolean>] [-DisableFederatedPromptDisplayName <Boolean>]
+ [-DisableFreeBusyInfo <Boolean>] [-DisableHandsetOnLockedMachine <Boolean>]
+ [-DisableMeetingSubjectAndLocation <Boolean>] [-DisableHtmlIm <Boolean>]
+ [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>]
+ [-DisableOnlineContextualSearch <Boolean>] [-DisablePhonePresence <Boolean>]
+ [-DisablePICPromptDisplayName <Boolean>] [-DisablePoorDeviceWarnings <Boolean>]
+ [-DisablePoorNetworkWarnings <Boolean>] [-DisablePresenceNote <Boolean>]
+ [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>] [-DisplayPhoto <DisplayPhoto>]
+ [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
+ [-EnableClientAutoPopulateWithTeam <Boolean>] [-EnableClientMusicOnHold <Boolean>]
+ [-EnableConversationWindowTabs <Boolean>] [-EnableEnterpriseCustomizedHelp <Boolean>]
+ [-EnableEventLogging <Boolean>] [-EnableExchangeContactSync <Boolean>]
+ [-EnableExchangeDelegateSync <Boolean>] [-EnableExchangeContactsFolder <Boolean>]
+ [-EnableFullScreenVideo <Boolean>] [-EnableHighPerformanceConferencingAppSharing <Boolean>]
+ [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
+ [-EnableMediaRedirection <Boolean>] [-EnableMeetingEngagement <Boolean>]
+ [-EnableNotificationForNewSubscribers <Boolean>] [-EnableServerConversationHistory <Boolean>]
+ [-EnableSkypeUI <Boolean>] [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>]
+ [-EnableURL <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
  [-EnableVOIPCallDefault <Boolean>] [-ExcludedContactFolders <String>] [-HotdeskingTimeout <TimeSpan>]
  [-IMWarning <String>] [-MAPIPollInterval <TimeSpan>] [-MaximumDGsAllowedInContactList <UInt32>]
- [-MaximumNumberOfContacts <UInt16>] [-MusicOnHoldAudioFile <String>]
- [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-PlayAbbreviatedDialTone <Boolean>]
- [-PolicyEntry <PSListModifier>] [-SearchPrefixFlags <UInt16>] [-ShowManagePrivacyRelationships <Boolean>]
- [-ShowRecentContacts <Boolean>] [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchCenterExternalURL <String>]
- [-SPSearchCenterInternalURL <String>] [-SPSearchExternalURL <String>] [-SPSearchInternalURL <String>]
- [-TabURL <String>] [-WebServicePollInterval <TimeSpan>] [-Force] [-WhatIf] [-Confirm]
- [-DisableMeetingSubjectAndLocation <Boolean>] [-EnableNotificationForNewSubscribers <Boolean>]
- [-EnableURL <Boolean>] [-MaxPhotoSizeKB <UInt32>] [-EnableMediaRedirection <Boolean>]
- [-HelpEnvironment <String>] [-TracingLevel <TracingLevel>]
- [-EnableHighPerformanceConferencingAppSharing <Boolean>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
- [-EnableServerConversationHistory <Boolean>] [-EnableSkypeUI <Boolean>] [-IMLatencyErrorThreshold <UInt32>]
- [-IMLatencySpinnerDelay <UInt32>] [-RateMyCallAllowCustomUserFeedback <Boolean>]
- [-RateMyCallDisplayPercentage <UInt16>] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsClientPolicy [[-Identity] <Object>] [-AddressBookAvailability <Object>] [-AttendantSafeTransfer <Object>]
- [-AutoDiscoveryRetryInterval <Object>] [-BlockConversationFromFederatedContacts <Object>]
- [-BypassDualWrite <Object>] [-CalendarStatePublicationInterval <Object>] [-ConferenceIMIdleTimeout <Object>]
- [-Confirm] [-CustomLinkInErrorMessages <Object>] [-CustomStateUrl <Object>] [-CustomizedHelpUrl <Object>]
- [-DGRefreshInterval <Object>] [-Description <Object>] [-DisableCalendarPresence <Object>]
- [-DisableContactCardOrganizationTab <Object>] [-DisableEmailComparisonCheck <Object>]
- [-DisableEmoticons <Object>] [-DisableFederatedPromptDisplayName <Object>] [-DisableFeedsTab <Object>]
- [-DisableFreeBusyInfo <Object>] [-DisableHandsetOnLockedMachine <Object>] [-DisableHtmlIm <Object>]
- [-DisableInkIM <Object>] [-DisableMeetingSubjectAndLocation <Object>] [-DisableOneNote12Integration <Object>]
- [-DisableOnlineContextualSearch <Object>] [-DisablePICPromptDisplayName <Object>]
- [-DisablePhonePresence <Object>] [-DisablePoorDeviceWarnings <Object>] [-DisablePoorNetworkWarnings <Object>]
- [-DisablePresenceNote <Object>] [-DisableRTFIM <Object>] [-DisableSavingIM <Object>] [-DisplayPhoto <Object>]
- [-EnableAppearOffline <Object>] [-EnableCallLogAutoArchiving <Object>]
- [-EnableClientAutoPopulateWithTeam <Object>] [-EnableClientMusicOnHold <Object>]
- [-EnableConversationWindowTabs <Object>] [-EnableEnterpriseCustomizedHelp <Object>]
- [-EnableEventLogging <Object>] [-EnableExchangeContactSync <Object>] [-EnableExchangeContactsFolder <Object>]
- [-EnableExchangeDelegateSync <Object>] [-EnableFullScreenVideo <Object>]
- [-EnableHighPerformanceConferencingAppSharing <Object>] [-EnableHighPerformanceP2PAppSharing <Object>]
- [-EnableHotdesking <Object>] [-EnableIMAutoArchiving <Object>] [-EnableMediaRedirection <Object>]
- [-EnableMeetingEngagement <Object>] [-EnableNotificationForNewSubscribers <Object>]
- [-EnableOnlineFeedback <Object>] [-EnableOnlineFeedbackScreenshots <Object>] [-EnableSQMData <Object>]
- [-EnableServerConversationHistory <Object>] [-EnableSkypeUI <Object>] [-EnableTracing <Object>]
- [-EnableURL <Object>] [-EnableUnencryptedFileTransfer <Object>] [-EnableVOIPCallDefault <Object>]
- [-EnableViewBasedSubscriptionMode <Object>] [-ExcludedContactFolders <Object>] [-Force]
- [-HelpEnvironment <Object>] [-HotdeskingTimeout <Object>] [-IMLatencyErrorThreshold <Object>]
- [-IMLatencySpinnerDelay <Object>] [-IMWarning <Object>] [-Instance <Object>] [-MAPIPollInterval <Object>]
- [-MaxPhotoSizeKB <Object>] [-MaximumDGsAllowedInContactList <Object>] [-MaximumNumberOfContacts <Object>]
- [-MusicOnHoldAudioFile <Object>] [-P2PAppSharingEncryption <Object>] [-PlayAbbreviatedDialTone <Object>]
- [-PolicyEntry <Object>] [-PublicationBatchDelay <Object>] [-RateMyCallAllowCustomUserFeedback <Object>]
- [-RateMyCallDisplayPercentage <Object>] [-RequireContentPin <Object>] [-SPSearchCenterExternalURL <Object>]
- [-SPSearchCenterInternalURL <Object>] [-SPSearchExternalURL <Object>] [-SPSearchInternalURL <Object>]
- [-SearchPrefixFlags <Object>] [-ShowManagePrivacyRelationships <Object>] [-ShowRecentContacts <Object>]
- [-ShowSharepointPhotoEditLink <Object>] [-SupportModernFilePicker <Object>] [-TabURL <Object>]
- [-TelemetryTier <Object>] [-Tenant <Object>] [-TracingLevel <Object>] [-WebServicePollInterval <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+ [-MaximumNumberOfContacts <UInt16>] [-MaxPhotoSizeKB <UInt32>] [-MusicOnHoldAudioFile <String>]
+ [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
+ [-PlayAbbreviatedDialTone <Boolean>] [-RequireContentPin <String>] [-SearchPrefixFlags <UInt16>]
+ [-ShowRecentContacts <Boolean>] [-ShowManagePrivacyRelationships <Boolean>]
+ [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchInternalURL <String>] [-SPSearchExternalURL <String>]
+ [-SPSearchCenterInternalURL <String>] [-SPSearchCenterExternalURL <String>] [-TabURL <String>]
+ [-TracingLevel <TracingLevel>] [-TelemetryTier <String>] [-PublicationBatchDelay <UInt32>]
+ [-EnableViewBasedSubscriptionMode <Boolean>] [-WebServicePollInterval <TimeSpan>]
+ [-HelpEnvironment <String>] [-RateMyCallDisplayPercentage <UInt16>]
+ [-RateMyCallAllowCustomUserFeedback <Boolean>] [-IMLatencySpinnerDelay <UInt32>]
+ [-IMLatencyErrorThreshold <UInt32>] [-SupportModernFilePicker <Boolean>] [-EnableOnlineFeedback <Boolean>]
+ [-EnableOnlineFeedbackScreenshots <Boolean>] [-ConferenceIMIdleTimeout <TimeSpan>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -191,25 +169,11 @@ To reference the global policy, use this syntax: `-Identity global`.
 To reference a site policy, use the prefix "site:" and the name of the site as your Identity; for example: `-Identity site:Redmond`.
 To reference a per-user policy, use syntax similar to this: `-Identity SalesClientPolicy`.
 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -226,20 +190,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -263,7 +214,7 @@ FileDownloadOnly
 Type: AddressBookAvailability
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -281,7 +232,7 @@ When set to False, transferred calls that fail to reach the intended recipient w
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -305,7 +256,7 @@ For example, to set the interval to 25 minutes use this syntax:
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -324,7 +275,7 @@ When set to False, outside contacts are allowed to send unsolicited instant mess
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -345,7 +296,7 @@ For example, to set the CalendarStatePublicationInterval to 10 minutes (600 seco
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -367,7 +318,7 @@ For example, this syntax sets the timeout value to 45 minutes:
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -387,7 +338,7 @@ Customized help will not be available unless you also set EnableEnterpriseCustom
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -406,7 +357,7 @@ Users can then click that link and be taken to a custom website that contains ad
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -424,7 +375,7 @@ Specifies the location of the XML file used to add custom presence states to Sky
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -442,7 +393,7 @@ For example, the Description might indicate the users that the policy should be 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -461,7 +412,7 @@ The default value is 28,800 seconds.
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -480,7 +431,7 @@ For example, free/busy information will be reported in your contact card; likewi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -498,7 +449,7 @@ When set to False, the contact card organization tab is available in Skype for B
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -519,7 +470,7 @@ If the SMTP addresses do not match then contact and calendar data in Outlook wil
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -541,7 +492,7 @@ When set to False users will be able to include emoticons in their instant messa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -559,7 +510,7 @@ When set to False, the notification dialog will use the federated user's display
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -577,7 +528,7 @@ When set to False, the feeds tab will be available within Skype for Business.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -598,7 +549,7 @@ Calendar: Free until 2:00 PM
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -618,7 +569,7 @@ When set to False, users will be allowed to use their handset even if the comput
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -641,7 +592,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -678,7 +629,7 @@ When set to True, users will not be allowed to receive instant messages containi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -697,7 +648,7 @@ In addition, if you locate an instant message transcript in Microsoft Outlook's 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -720,7 +671,7 @@ Cached searches are not affected by this setting.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -739,7 +690,7 @@ For example, any time you are on the phone your status will automatically be set
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -757,7 +708,7 @@ When set to False, the notification dialog box will use the person's display nam
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -775,7 +726,7 @@ When set to False, these warnings will be issued.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -792,7 +743,7 @@ When set to True, Skype for Business will not display warnings about poor networ
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -810,7 +761,7 @@ When set to False, your Out of Office message will be displayed any time a user 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -828,7 +779,7 @@ When set to False, rich text formatting will be allowed in instant messages.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -849,7 +800,7 @@ However, it does not prevent users from copying all the text in a transcript to 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -875,7 +826,7 @@ The default value is AllPhotos.
 Type: DisplayPhoto
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -894,7 +845,7 @@ When set to False, the Appear Offline presence state will not be available in Sk
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -913,7 +864,7 @@ What is recorded is information such as who took part in the call; the length of
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -932,7 +883,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -953,7 +904,7 @@ This parameter has been deprecated for use with Skype for Business Server.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -973,7 +924,7 @@ This parameter has been deprecated for use with Skype for Business Server.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -991,7 +942,7 @@ When set to False, only major events (such as the failure to connect to Skype fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1008,7 +959,7 @@ When set to True (the default value) Skype for Business creates a corresponding 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1025,7 +976,7 @@ When set to True, a user that has been configured in Outlook will be allowed to 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1043,7 +994,7 @@ When set to False then full-screen video is not available in Skype for Business,
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1065,7 +1016,7 @@ When set to False, no one will be allowed to log on to that phone.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1084,7 +1035,7 @@ When set to False, these transcripts will not be saved automatically.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1105,7 +1056,7 @@ In addition, Skype for Business will not give users the option of joining the pr
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1124,7 +1075,7 @@ As such tracing is mostly useful to developers and to application support person
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1142,7 +1093,7 @@ When set to False, users will only be able to exchange files with external users
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1163,7 +1114,7 @@ After a user has modified the click-to-call setting that setting will remain in 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1181,7 +1132,7 @@ Multiple folders can be specified by separating the folder names using semicolon
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1206,7 +1157,7 @@ The default value is 5 minutes (00:05:00), and the minimum value is 30 seconds (
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1229,7 +1180,7 @@ If set to a null value ($Null) then no message appears in the Conversation windo
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1239,7 +1190,9 @@ Accept wildcard characters: False
 ```
 
 ### -MAPIPollInterval
-Important: This parameter has been deprecated for use with Skype for Business Server.
+
+> [!IMPORTANT] 
+> This parameter has been deprecated for use with Skype for Business Server.
 
 For users of Microsoft Exchange Server 2003, MAPIPollInterval specifies how often Skype for Business retrieves calendar data from the Exchange public folders.
 MAPIPollInterval can be set to any value between 1 second and 1 hour; inclusive.
@@ -1253,7 +1206,7 @@ For example, this command sets the MAPI poll interval to 45 minutes:
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1272,7 +1225,7 @@ The default value is 10.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1291,7 +1244,7 @@ When set to 0, that prevents the user from having any contacts.
 Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1310,7 +1263,7 @@ If no value is configured for this property then users can specify their own mus
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1338,7 +1291,7 @@ Desktop and application sharing data will not be encrypted.
 Type: P2PAppSharingEncryption
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1356,7 +1309,7 @@ When set to True, a 3-second dial tone will be played any time a Skype for Busin
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1381,7 +1334,7 @@ For more details and examples, see the `New-CsClientPolicyEntry` cmdlet help top
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1424,7 +1377,7 @@ To convert a binary number to a decimal number you can use the following Windows
 Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1447,7 +1400,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1464,7 +1417,7 @@ This parameter has no effect on the client.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1482,7 +1435,7 @@ The default value is False, which means that Skype for Business will not include
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1505,7 +1458,7 @@ The parameter SPSearchCenterInternalURL is for users who log on from inside the 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1528,7 +1481,7 @@ The parameter SPSearchCenterExternalURL is for users who log on from outside the
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1546,7 +1499,7 @@ Skype for Business will use the SharePoint site located at this URL any time an 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1564,7 +1517,7 @@ Skype for Business will use the SharePoint site located at this URL any time an 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1582,7 +1535,7 @@ This parameter has been deprecated for use with Skype for Business Server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1607,7 +1560,7 @@ For those users, calendar retrieval is managed using MAPIPollInterval.
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1624,7 +1577,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1641,7 +1594,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1658,7 +1611,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1677,7 +1630,7 @@ To completely prevent the display of meeting-related information you should also
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1695,7 +1648,7 @@ In addition, the notification dialog box will provide options for you to add tha
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1714,7 +1667,7 @@ To navigate to the location, users will need to copy the link text and paste it 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1733,7 +1686,7 @@ The default value is 30 kilobytes.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1751,7 +1704,7 @@ Media redirection typically results in lower bandwidth usage, higher server scal
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1770,7 +1723,7 @@ If set to a null value (the default value) then the on-premises help will be sho
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1796,23 +1749,7 @@ By default TracingLevel is set to Light.
 Type: TracingLevel
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1822,10 +1759,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableClientAutoPopulateWithTeam
-{{Fill EnableClientAutoPopulateWithTeam Description}}
+
+When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1838,10 +1776,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-{{Fill EnableExchangeContactsFolder Description}}
+
+When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1859,10 +1798,10 @@ However, this improved performance will reduce the system resources and network 
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1872,15 +1811,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceP2PAppSharing
+
 When set to True, allows a peer-to-peer application sharing session to exceed the maximum frame rate of 2.5 frames per second.
 The default value is False.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1893,7 +1833,7 @@ Accept wildcard characters: False
 {{Fill EnableMeetingEngagement Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1906,10 +1846,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-{{Fill EnableOnlineFeedback Description}}
+
+When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1922,10 +1863,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedbackScreenshots
-{{Fill EnableOnlineFeedbackScreenshots Description}}
+
+When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1945,10 +1887,10 @@ The default value is False ($False).
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1962,10 +1904,10 @@ When set to True ($True), this parameter allows administrators to enable the Sky
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1978,7 +1920,7 @@ Accept wildcard characters: False
 {{Fill EnableViewBasedSubscriptionMode Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1995,10 +1937,10 @@ If IM latency is greater than the threshold value (in milliseconds), the client 
 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -2012,10 +1954,10 @@ Amount of time, in milliseconds, to wait before showing the spinner in the clien
 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -2028,7 +1970,7 @@ Accept wildcard characters: False
 {{Fill PublicationBatchDelay Description}}
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2045,10 +1987,10 @@ When set to True ($True), enables a text box for users to type feedback when pro
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -2065,10 +2007,10 @@ When set to 100, users will get prompted after every call.
 
 
 ```yaml
-Type: Object
+Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -2081,7 +2023,7 @@ Accept wildcard characters: False
 {{Fill RequireContentPin Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2097,7 +2039,7 @@ Accept wildcard characters: False
 {{Fill SupportModernFilePicker Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2113,7 +2055,7 @@ Accept wildcard characters: False
 {{Fill TelemetryTier Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2137,26 +2079,10 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -2191,3 +2117,4 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsClientPolicy](New-CsClientPolicy.md)
 
 [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
+

@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsXmppGatewayConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsXmppGatewayConfiguration
@@ -143,3 +146,4 @@ The Get-CsXmppGatewayConfiguration cmdlet returns instances of the Microsoft.Rtc
 ## RELATED LINKS
 
 [Set-CsXmppGatewayConfiguration](Set-CsXmppGatewayConfiguration.md)
+

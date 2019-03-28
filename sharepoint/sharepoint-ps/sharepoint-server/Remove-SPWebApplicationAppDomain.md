@@ -1,15 +1,17 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWebApplicationAppDomain
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWebApplicationAppDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Deletes the AppDomain.
 
 ## SYNTAX
 
@@ -19,38 +21,34 @@ Remove-SPWebApplicationAppDomain [-Identity] <SPAppDomainPipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Remove-SPWebApplicationAppDomain cmdlet to delete the AppDomain for a specified zone or to delete all the app domains for the web application if no zone is specified.
 
+This cmdlet also deletes the Internet Information Services (IIS) port binding if any was added for the WebApp/Zone combination.
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
 ```
-
-{{ Add example description here }}
-
+Removes all of the app domains for the specified web application.
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
 ```
-
 Removes the app domains for the internet zone for the specified web application.
-
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
-
+Specifies the string of a domain name (that is, contoso.com) or a SPAppDomain object to remove.
 
 ```yaml
 Type: SPAppDomainPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -60,14 +58,16 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -127,6 +127,6 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Get-SPWebApplicationAppDomain]()
+[Get-SPWebApplicationAppDomain](Get-SPWebApplicationAppDomain.md)
 
-[New-SPWebApplicationAppDomain]()
+[New-SPWebApplicationAppDomain](New-SPWebApplicationAppDomain.md)

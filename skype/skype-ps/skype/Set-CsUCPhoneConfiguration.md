@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUCPhoneConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsUCPhoneConfiguration
@@ -15,29 +18,22 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsUCPhoneConfiguration [[-Identity] <XdsIdentity>] [-CalendarPollInterval <TimeSpan>]
- [-EnforcePhoneLock <Boolean>] [-LoggingLevel <LoggingLevel>] [-MinPhonePinLength <Byte>]
- [-PhoneLockTimeout <TimeSpan>] [-SIPSecurityMode <SIPSecurityMode>] [-Voice8021p <Byte>]
- [-VoiceDiffServTag <Byte>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsUCPhoneConfiguration [-Tenant <Guid>] [-CalendarPollInterval <TimeSpan>]
+ [-EnforcePhoneLock <Boolean>] [-PhoneLockTimeout <TimeSpan>] [-MinPhonePinLength <Byte>]
+ [-SIPSecurityMode <SIPSecurityMode>] [-VoiceDiffServTag <Byte>] [-Voice8021p <Byte>]
+ [-LoggingLevel <LoggingLevel>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsUCPhoneConfiguration [-Instance <PSObject>] [-CalendarPollInterval <TimeSpan>]
- [-EnforcePhoneLock <Boolean>] [-LoggingLevel <LoggingLevel>] [-MinPhonePinLength <Byte>]
- [-PhoneLockTimeout <TimeSpan>] [-SIPSecurityMode <SIPSecurityMode>] [-Voice8021p <Byte>]
- [-VoiceDiffServTag <Byte>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsUCPhoneConfiguration [-Tenant <Guid>] [-CalendarPollInterval <TimeSpan>]
+ [-EnforcePhoneLock <Boolean>] [-PhoneLockTimeout <TimeSpan>] [-MinPhonePinLength <Byte>]
+ [-SIPSecurityMode <SIPSecurityMode>] [-VoiceDiffServTag <Byte>] [-Voice8021p <Byte>]
+ [-LoggingLevel <LoggingLevel>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-###  (Default)
-```
-Set-CsUCPhoneConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-CalendarPollInterval <Object>]
- [-Confirm] [-EnforcePhoneLock <Object>] [-Force] [-Instance <Object>] [-LoggingLevel <Object>]
- [-MinPhonePinLength <Object>] [-PhoneLockTimeout <Object>] [-SIPSecurityMode <Object>] [-Tenant <Object>]
- [-Voice8021p <Object>] [-VoiceDiffServTag <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
-```
 
 ## DESCRIPTION
 UC phones represent the merging of the telephone and Skype for Business Server.
@@ -130,23 +126,10 @@ If this parameter is omitted, then the `Set-CsUCPhoneConfiguration` cmdlet will 
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -160,20 +143,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +162,7 @@ The default value is 3 minutes (00:03:00).
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +180,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -229,7 +199,7 @@ The default value is Off.
 Type: LoggingLevel
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -252,7 +222,7 @@ Default: 6
 Type: Byte
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -272,7 +242,7 @@ The default value is 00:10:00 (10 minutes).
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -299,7 +269,7 @@ The default value is High.
 Type: SIPSecurityMode
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -320,7 +290,7 @@ The default value is 0.
 Type: Byte
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -341,7 +311,7 @@ The default value is 40.
 Type: Byte
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -358,7 +328,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -375,7 +345,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -392,23 +362,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -421,23 +375,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -473,3 +411,4 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsUCPhoneConfiguration](New-CsUCPhoneConfiguration.md)
 
 [Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)
+

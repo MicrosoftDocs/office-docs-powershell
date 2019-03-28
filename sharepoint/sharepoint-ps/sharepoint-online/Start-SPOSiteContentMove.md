@@ -1,53 +1,71 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOSiteContentMove
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Start-SPOSiteContentMove
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Start a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command
+
 
 ## SYNTAX
 
 ### UrlAndDestinationDataLocation
-```
+```powershell
 Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
  [-ValidationOnly] [<CommonParameters>]
 ```
 
 ### GroupNameAndDestinationDataLocation
-```
+```powershell
 Start-SPOSiteContentMove [-GroupName] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
  [-ValidationOnly] [<CommonParameters>]
 ```
 
 ### UrlAndDestinationUrl
-```
+```powershell
 Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
  [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command starts the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### EXAMPLE 1
+```powershell
+Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
-PS C:\> {{ Add example code here }}
-```
+Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
-{{ Add example description here }}
+### EXAMPLE 2
+```powershell
+Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation  $destlocation
+```
+Starts the movement of a group of users called group@contoso.com to the destination location called $destlocation
+
+### EXAMPLE 3
+```powershell
+Start-SPOSiteContentMove -Url $url -DestinationUrl $destlocation
+```
+Starts the movement from a $url and set it to the location defined on $destlocation
+
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
-{{Fill DestinationDataLocation Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -63,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationUrl
-{{Fill DestinationUrl Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -79,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupName
-{{Fill GroupName Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -95,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveBeginDate
-{{Fill PreferredMoveBeginDate Description}}
+PARAMVALUE: DateTime
+
 
 ```yaml
 Type: DateTime
@@ -111,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveEndDate
-{{Fill PreferredMoveEndDate Description}}
+PARAMVALUE: DateTime
+
 
 ```yaml
 Type: DateTime
@@ -127,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-{{Fill Reserved Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -143,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+Destination URL where the move will take place
+
 
 ```yaml
 Type: String
@@ -159,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationOnly
-{{Fill ValidationOnly Description}}
+PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
@@ -177,14 +202,16 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Start-SPOSiteRename](Start-SPOSiteRename.md)
+
+[Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
+
+[Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)

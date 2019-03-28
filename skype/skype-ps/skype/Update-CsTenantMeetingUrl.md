@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Update-CsTenantMeetingUrl
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Update-CsTenantMeetingUrl
@@ -14,7 +17,7 @@ The updated URL uses a simpler, more standardized format that makes it easier fo
 ## SYNTAX
 
 ```
-Update-CsTenantMeetingUrl [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Update-CsTenantMeetingUrl [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -74,7 +77,6 @@ The command shown in Example 1 updates the meeting URL for the tenant with the t
 (Note that you must supply the tenant ID in order for this command to complete.) After pressing ENTER to run the command, you will be asked if you are sure you want to update the meeting URL.
 You must answer yes to this prompt before `Update-CsTenantMeetingUrl` will actually make any changes to your Skype for Business Online configuration settings.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Update-CsTenantMeetingUrl -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" -Force
@@ -84,24 +86,7 @@ Example 2 also updates the meeting URL for the tenant with the tenant ID 38aad66
 In this case, however, the Force parameter is included; this bypasses the confirmation prompt that typically appears when you run `Update-CsTenantMeetingUrl`.
 In this case, as soon as you press ENTER the command will run and your Skype for Business Online configuration settings will be modified.
 
-
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
@@ -142,16 +127,16 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the tenant account whose federation settings are being returned.
 For example:
 
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
 You can return your tenant ID by running this command:
 
-`Get-CsTenant | Select-Object DisplayName, TenantID`
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 If you do not include the Tenant parameter then `Update-CsMeetingUrl` will prompt you to enter that parameter before you can continue.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -180,7 +165,12 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+
 
 ```yaml
 Type: SwitchParameter
@@ -196,13 +186,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ###  
 None.
-Update-CsMeetingUrl does not accept pipelined input.
+`Update-CsMeetingUrl` does not accept pipelined input.
 
 ## OUTPUTS
 

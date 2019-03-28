@@ -1,25 +1,27 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumberInventoryRegions
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineTelephoneNumberInventoryRegions
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryRegions cmdlet to retrieve the regions where specified inventory types are supported.
+Use the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet to retrieve the regions where specified inventory types are supported.
 
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumberInventoryRegions [-InventoryType <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-RegionalGroup <Object>] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+Get-CsOnlineTelephoneNumberInventoryRegions [-Tenant <Guid>] [-RegionalGroup <String>]
+ -InventoryType <String> [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Following is an example of the Get-CsOnlineTelephoneNumberInventoryRegions cmdlet's console output.
+Following is an example of the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet's console output.
 
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
 
@@ -45,7 +47,6 @@ Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Subscriber
 
 This example returns the region where the inventory type of "Subscriber" is supported.
 
-
 ## PARAMETERS
 
 ### -InventoryType
@@ -57,23 +58,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -89,7 +74,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -121,10 +106,9 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
 Applicable: Skype for Business Online
@@ -140,7 +124,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -153,7 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -175,7 +163,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Region
@@ -184,3 +171,4 @@ Instance or array of the object.
 ## NOTES
 
 ## RELATED LINKS
+

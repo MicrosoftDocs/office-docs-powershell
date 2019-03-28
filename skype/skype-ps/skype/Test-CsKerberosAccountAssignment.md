@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsKerberosAccountAssignment
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Test-CsKerberosAccountAssignment
@@ -48,7 +51,7 @@ For example: `-Identity "site:Redmond"`.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -65,7 +68,7 @@ For example: `-Report "C:\Logs\TestKerberos.html"`.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -115,3 +118,4 @@ The `Test-CsKerberosAccountAssignment` cmdlet does not return any objects or val
 [Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
 [Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)
+

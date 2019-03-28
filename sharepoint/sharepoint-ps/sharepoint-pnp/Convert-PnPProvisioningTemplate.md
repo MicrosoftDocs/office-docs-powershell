@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Convert-PnPProvisioningTemplate
@@ -22,21 +22,21 @@ Convert-PnPProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml
+Convert-PnPProvisioningTemplate -Path template.xml
 ```
 
 Converts a provisioning template to the latest schema and outputs the result to current console.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml
+Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml
 ```
 
 Converts a provisioning template to the latest schema and outputs the result the newtemplate.xml file.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml -ToSchema V201512
+Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml -ToSchema V201512
 ```
 
 Converts a provisioning template to the latest schema using the 201512 schema and outputs the result the newtemplate.xml file.
@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Path to the xml file containing the provisioning template
+Path to the xml file containing the site template
 
 ```yaml
 Type: String
@@ -105,4 +105,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)

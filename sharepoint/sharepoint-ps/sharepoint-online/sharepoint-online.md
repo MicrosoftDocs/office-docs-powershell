@@ -1,33 +1,62 @@
 ---
-Module Name: sharepoint-online
+Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+title: sharepoint-online
 Locale: en-US
 ---
 
-# sharepoint-online Module
+# SharePoint Online PowerShell
+
 ## Description
-{{Manually Enter Description Here}}
+
+The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
+
+### [Add-SPOHubSiteAssociation](Add-SPOHubSiteAssociation.md)
+{{Manually Enter Add-SPOHubSiteAssociation Description Here}}
+
+### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
+
+### [Add-SPOSiteDesign](Add-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesignTask Description Here}}
+
+### [Add-SPOSiteScript](Add-SPOSiteScript.md)
+{{Manually Enter Add-SPOSiteScript Description Here}}
 
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 {{Manually Enter Add-SPOTenantCdnOrigin Description Here}}
 
+### [Add-SPOTheme](Add-SPOTheme.md)
+{{Manually Enter Add-SPOTheme Description Here}}
+
 ### [Add-SPOUser](Add-SPOUser.md)
 {{Manually Enter Add-SPOUser Description Here}}
 
+### [Approve-SPOTenantServicePrincipalPermissionRequest](Approve-SPOTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Approve-SPOTenantServicePrincipalPermissionRequest Description Here}}
+
 ### [Connect-SPOService](Connect-SPOService.md)
+{{Manually Enter Connect-SPOService Description Here}}
+
+### [Deny-SPOTenantServicePrincipalPermissionRequest](Deny-SPOTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Deny-SPOTenantServicePrincipalPermissionRequest Description Here}}
+
+### [Disable-SPOTenantServicePrincipal](Disable-SPOTenantServicePrincipal.md)
 {{Manually Enter Connect-SPOService Description Here}}
 
 ### [Disconnect-SPOService](Disconnect-SPOService.md)
 {{Manually Enter Disconnect-SPOService Description Here}}
 
-### [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
-{{Manually Enter Get-SPO365LinkSettings Description Here}}
+### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
+{{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
+
+### [Export-SPOUserInfo](Export-SPOUserInfo.md)
+{{Manually Enter Export-SPOUserInfo Description Here}}
 
 ### [Get-SPOAppErrors](Get-SPOAppErrors.md)
 {{Manually Enter Get-SPOAppErrors Description Here}}
@@ -56,7 +85,7 @@ Locale: en-US
 ### [Get-SPOfficeStoreAppsDefaultActivation](Get-SPOfficeStoreAppsDefaultActivation.md)
 {{Manually Enter Get-SPOfficeStoreAppsDefaultActivation Description Here}}
 
-### [Get-SPOGeoAdministrators](Get-SPOGeoAdministrators.md)
+### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 {{Manually Enter Get-SPOGeoAdministrators Description Here}}
 
 ### [Get-SPOGeoMoveCompatibilityStatus](Get-SPOGeoMoveCompatibilityStatus.md)
@@ -64,6 +93,12 @@ Locale: en-US
 
 ### [Get-SPOGeoStorageQuota](Get-SPOGeoStorageQuota.md)
 {{Manually Enter Get-SPOGeoStorageQuota Description Here}}
+
+### [Get-SPOHideDefaultThemes](Get-SPOHideDefaultThemes.md)
+{{Manually Enter Get-SPOHideDefaultThemes Description Here}}
+
+### [Get-SPOHubSite](Get-SPOHubSite.md)
+{{Manually Enter Get-SPOHubSite Description Here}}
 
 ### [Get-SPOMigrationJobProgress](Get-SPOMigrationJobProgress.md)
 {{Manually Enter Get-SPOMigrationJobProgress Description Here}}
@@ -80,8 +115,29 @@ Locale: en-US
 ### [Get-SPOSiteContentMoveState](Get-SPOSiteContentMoveState.md)
 {{Manually Enter Get-SPOSiteContentMoveState Description Here}}
 
+### [Get-SPOSiteDesign](Get-SPOSiteDesign.md)
+{{Manually Enter Get-SPOSiteDesign Description Here}}
+
+### [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
+
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 {{Manually Enter Get-SPOSiteGroup Description Here}}
+
+### [Get-SPOSiteScript](Get-SPOSiteScript.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
 {{Manually Enter Get-SPOTenant Description Here}}
@@ -104,11 +160,20 @@ Locale: en-US
 ### [Get-SPOTenantLogLastAvailableTimeInUtc](Get-SPOTenantLogLastAvailableTimeInUtc.md)
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
 
+### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
+{{Manually Enter Get-SPOTenantServicePrincipalPermissionGrants Description Here}}
+
+### [Get-SPOTenantServicePrincipalPermissionRequests](Get-SPOTenantServicePrincipalPermissionRequests.md)
+{{Manually Enter Get-SPOTenantServicePrincipalPermissionRequests Description Here}}
+
 ### [Get-SPOTenantSyncClientRestriction](Get-SPOTenantSyncClientRestriction.md)
 {{Manually Enter Get-SPOTenantSyncClientRestriction Description Here}}
 
 ### [Get-SPOTenantTaxonomyReplicationParameters](Get-SPOTenantTaxonomyReplicationParameters.md)
 {{Manually Enter Get-SPOTenantTaxonomyReplicationParameters Description Here}}
+
+### [Get-SPOTheme](Get-SPOTheme.md)
+{{Manually Enter Get-SPOTheme Description Here}}
 
 ### [Get-SPOUser](Get-SPOUser.md)
 {{Manually Enter Get-SPOUser Description Here}}
@@ -122,8 +187,17 @@ Locale: en-US
 ### [Get-SPOWebTemplate](Get-SPOWebTemplate.md)
 {{Manually Enter Get-SPOWebTemplate Description Here}}
 
+### [Grant-SPOHubSiteRights](Grant-SPOHubSiteRights.md)
+{{Manually Enter Grant-SPOHubSiteRights Description Here}}
+
+### [Grant-SPOSiteDesignRights](Grant-SPOSiteDesignRights.md)
+{{Manually Enter Grant-SPOSiteDesignRights Description Here}}
+
 ### [Invoke-SPOMigrationEncryptUploadSubmit](Invoke-SPOMigrationEncryptUploadSubmit.md)
 {{Manually Enter Invoke-SPOMigrationEncryptUploadSubmit Description Here}}
+
+### [Invoke-SPOSiteDesign](Invoke-SPOSiteDesign.md)
+{{Manually Enter Invoke-SPOSiteDesign Description Here}}
 
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 {{Manually Enter New-SPODataConnectionSetting Description Here}}
@@ -149,6 +223,9 @@ Locale: en-US
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 {{Manually Enter New-SPOSiteGroup Description Here}}
 
+### [Register-SPOHubSite](Register-SPOHubSite.md)
+{{Manually Enter Register-SPOHubSite Description Here}}
+
 ### [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 {{Manually Enter Remove-SPODataConnectionSetting Description Here}}
 
@@ -160,6 +237,9 @@ Locale: en-US
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 {{Manually Enter Remove-SPOGeoAdministrator Description Here}}
+
+### [Remove-SPOHubSiteAssociation](Remove-SPOHubSiteAssociation.md)
+{{Manually Enter Remove-SPOHubSiteAssociation Description Here}}
 
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 {{Manually Enter Remove-SPOMigrationJob Description Here}}
@@ -173,14 +253,26 @@ Locale: en-US
 ### [Remove-SPOSite](Remove-SPOSite.md)
 {{Manually Enter Remove-SPOSite Description Here}}
 
+### [Remove-SPOSiteDesign](Remove-SPOSiteDesign.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
+### [Remove-SPOSiteDesignTask](Remove-SPOSiteDesignTask.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 {{Manually Enter Remove-SPOSiteGroup Description Here}}
+
+### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
+{{Manually Enter Remove-SPOSiteScript Description Here}}
 
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 {{Manually Enter Remove-SPOTenantCdnOrigin Description Here}}
 
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 {{Manually Enter Remove-SPOTenantSyncClientRestriction Description Here}}
+
+### [Remove-SPOTheme](Remove-SPOTheme.md)
+{{Manually Enter Remove-SPOTheme Description Here}}
 
 ### [Remove-SPOUser](Remove-SPOUser.md)
 {{Manually Enter Remove-SPOUser Description Here}}
@@ -200,11 +292,17 @@ Locale: en-US
 ### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
 {{Manually Enter Revoke-SPObjectSecurity Description Here}}
 
+### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
+{{Manually Enter Revoke-SPOHubSiteRights Description Here}}
+
+### [Revoke-SPOSiteDesignRights](Revoke-SPOSiteDesignRights.md)
+{{Manually Enter Revoke-SPOSiteDesignRights Description Here}}
+
+### [Revoke-SPOTenantServicePrincipalPermission](Revoke-SPOTenantServicePrincipalPermission.md)
+{{Manually Enter Revoke-SPOTenantServicePrincipalPermission Description Here}}
+
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 {{Manually Enter Revoke-SPOUserSession Description Here}}
-
-### [Set-SPO365LinkSettings](Set-SPO365LinkSettings.md)
-{{Manually Enter Set-SPO365LinkSettings Description Here}}
 
 ### [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
 {{Manually Enter Set-SPODataConnectionSetting Description Here}}
@@ -218,14 +316,26 @@ Locale: en-US
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 {{Manually Enter Set-SPOGeoStorageQuota Description Here}}
 
+### [Set-SPOHideDefaultThemes](Set-SPOHideDefaultThemes.md)
+{{Manually Enter Set-SPOHideDefaultThemes Description Here}}
+
+### [Set-SPOHubSite](Set-SPOHubSite.md)
+{{Manually Enter Set-SPOHubSite Description Here}}
+
 ### [Set-SPOMigrationPackageAzureSource](Set-SPOMigrationPackageAzureSource.md)
 {{Manually Enter Set-SPOMigrationPackageAzureSource Description Here}}
 
 ### [Set-SPOSite](Set-SPOSite.md)
 {{Manually Enter Set-SPOSite Description Here}}
 
+### [Set-SPOSiteDesign](Set-SPOSiteDesign.md)
+{{Manually Enter Set-SPOSiteDesign Description Here}}
+
 ### [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 {{Manually Enter Set-SPOSiteGroup Description Here}}
+
+### [Set-SPOSiteScript](Set-SPOSiteScript.md)
+{{Manually Enter Set-SPOSiteScript Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 {{Manually Enter Set-SPOTenant Description Here}}
@@ -260,12 +370,14 @@ Locale: en-US
 ### [Submit-SPOMigrationJob](Submit-SPOMigrationJob.md)
 {{Manually Enter Submit-SPOMigrationJob Description Here}}
 
-### [Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)
-{{Manually Enter Test-SPO365LinkSettings Description Here}}
-
 ### [Test-SPOSite](Test-SPOSite.md)
 {{Manually Enter Test-SPOSite Description Here}}
+
+### [Unregister-SPOHubSite](Unregister-SPOHubSite.md)
+{{Manually Enter Unregister-SPOHubSite Description Here}}
 
 ### [Upgrade-SPOSite](Upgrade-SPOSite.md)
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
+
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->

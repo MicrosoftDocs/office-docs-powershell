@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAddressBookNormalizationConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsAddressBookNormalizationConfiguration
@@ -47,7 +50,7 @@ The commands shown in Example 1 remove the Address Book normalization rule LongD
 In order to carry out this task, the first command in the example uses the `Get-CsAddressBookNormalizationRule` cmdlet to create an object reference to the normalization rule with the Identity global/LongDistanceRule.
 The resulting object reference is stored in a variable named $x.
 
-The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguraton` cmdlet to remove the rule global/LongDistanceRule from the global collection.
+The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguration` cmdlet to remove the rule global/LongDistanceRule from the global collection.
 This is done by including the AddressBookNormalizationRules parameter and the syntax @{Remove=$x}.
 
 `$x = Get-CsAddressBookNormalizationRule -Identity "global/LongDistanceRule"`
@@ -96,7 +99,7 @@ In general, this is easier and less error-prone than trying to modify a rules co
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ Suppresses any confirmation prompts before making changes.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ Note that you cannot use wildcards when specifying an Identity.
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -165,7 +168,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -215,3 +218,4 @@ Instead, the `Set-CsAddressBookNormalizationConfiguration` cmdlet modifies exist
 [Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
 [Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)
+

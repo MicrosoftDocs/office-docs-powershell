@@ -1,17 +1,18 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Generates a provisioning template from a web
+Generates a provisioning site template from a web
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
+Get-PnPProvisioningTemplate [-Out <String>]
+                            [-IncludeAllTermGroups [<SwitchParameter>]]
                             [-IncludeSiteCollectionTermGroup [<SwitchParameter>]]
                             [-IncludeSiteGroups [<SwitchParameter>]]
                             [-IncludeTermGroupsSecurity [<SwitchParameter>]]
@@ -19,6 +20,7 @@ Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
                             [-PersistBrandingFiles [<SwitchParameter>]]
                             [-PersistPublishingFiles [<SwitchParameter>]]
                             [-IncludeNativePublishingFiles [<SwitchParameter>]]
+                            [-IncludeHiddenLists [<SwitchParameter>]]
                             [-SkipVersionCheck [<SwitchParameter>]]
                             [-PersistMultiLanguageResources [<SwitchParameter>]]
                             [-ResourceFilePrefix <String>]
@@ -34,7 +36,6 @@ Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
                             [-TemplateProperties <Hashtable>]
                             [-OutputInstance [<SwitchParameter>]]
                             [-ExcludeContentTypesFromSyndication [<SwitchParameter>]]
-                            [-Out <String>]
                             [-Schema <XMLPnPSchemaVersion>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -44,49 +45,49 @@ Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp
+Get-PnPProvisioningTemplate -Out template.pnp
 ```
 
 Extracts a provisioning template in Office Open XML from the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.xml
+Get-PnPProvisioningTemplate -Out template.xml
 ```
 
 Extracts a provisioning template in XML format from the current web.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -Schema V201503
+Get-PnPProvisioningTemplate -Out template.pnp -Schema V201503
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and saves it in the V201503 version of the schema.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -IncludeAllTermGroups
+Get-PnPProvisioningTemplate -Out template.pnp -IncludeAllTermGroups
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and includes all term groups, term sets and terms from the Managed Metadata Service Taxonomy.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -IncludeSiteCollectionTermGroup
+Get-PnPProvisioningTemplate -Out template.pnp -IncludeSiteCollectionTermGroup
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and includes the term group currently (if set) assigned to the site collection.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistComposedLookFiles
+Get-PnPProvisioningTemplate -Out template.pnp -PersistComposedLookFiles
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and saves the files that make up the composed look to the same folder as where the template is saved.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -Handlers Lists, SiteSecurity
+Get-PnPProvisioningTemplate -Out template.pnp -Handlers Lists, SiteSecurity
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, but only processes lists and site security when generating the template.
@@ -94,46 +95,46 @@ Extracts a provisioning template in Office Open XML from the current web, but on
 ### ------------------EXAMPLE 8------------------
 ```powershell
 
-PS:> $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> $handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
+$handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
 This will create two new ExtensibilityHandler objects that are run during extraction of the template
 
 ### ------------------EXAMPLE 9------------------
-Only supported on SP2016 and SP Online
+Only supported on SP2016, SP2019 and SP Online
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
+Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, and for supported artifacts it will create a resource file for each supported language (based upon the language settings of the current web). The generated resource files will be named after the value specified in the Out parameter. For instance if the Out parameter is specified as -Out 'template.xml' the generated resource file will be called 'template.en-US.resx'.
 
 ### ------------------EXAMPLE 10------------------
-Only supported on SP2016 and SP Online
+Only supported on SP2016, SP2019 and SP Online
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources -ResourceFilePrefix MyResources
+Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources -ResourceFilePrefix MyResources
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, and for supported artifacts it will create a resource file for each supported language (based upon the language settings of the current web). The generated resource files will be named 'MyResources.en-US.resx' etc.
 
 ### ------------------EXAMPLE 11------------------
 ```powershell
-PS:> $template = Get-PnPProvisioningTemplate -OutputInstance
+$template = Get-PnPProvisioningTemplate -OutputInstance
 ```
 
 Extracts an instance of a provisioning template object from the current web. This syntax cannot be used together with the -Out parameter, but it can be used together with any other supported parameters.
 
 ### ------------------EXAMPLE 12------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -ContentTypeGroups "Group A","Group B"
+Get-PnPProvisioningTemplate -Out template.pnp -ContentTypeGroups "Group A","Group B"
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, but only processes content types from the to given content type groups.
 
 ### ------------------EXAMPLE 13------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -ExcludeContentTypesFromSyndication
+Get-PnPProvisioningTemplate -Out template.pnp -ExcludeContentTypesFromSyndication
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, excluding content types provisioned through content type syndication (content type hub), in order to prevent provisioning errors if the target also provision the content type using syndication.
@@ -226,6 +227,18 @@ Accept pipeline input: False
 
 ### -IncludeAllTermGroups
 If specified, all term groups will be included. Overrides IncludeSiteCollectionTermGroup.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -IncludeHiddenLists
+If specified hidden lists will be included in the template
 
 ```yaml
 Type: SwitchParameter
@@ -335,6 +348,8 @@ Accept pipeline input: False
 ### -PersistMultiLanguageResources
 If specified, resource values for applicable artifacts will be persisted to a resource file
 
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -357,7 +372,9 @@ Accept pipeline input: False
 ```
 
 ### -ResourceFilePrefix
-If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.<language>.resx. See examples for more info.
+If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.&lt;language&gt;.resx. See examples for more info.
+
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -441,7 +458,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -453,7 +470,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -466,4 +483,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)

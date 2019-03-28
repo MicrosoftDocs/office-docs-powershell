@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSiteSubscription
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSiteSubscription
@@ -25,31 +28,36 @@ A site collection can be a member of only one site subscription and once set, ca
 Site subscriptions are not persisted in a database until used in conjunction with either an SPSite or the Site Subscription Settings Service.
 After a site subscription is applied to any site collection in the farm, the site subscription can be retrieved by using the `Get-SPSiteSubscription` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>New-SPSiteSubscription |%{ New-SPSite http://contoso.com/sites/admin -SiteSubscription $_ -Template "TenantAdmin#0"}
 
-C:\PS>
+$subscription = New-SPSiteSubscription
+
 ```
 
-This example creates a new site subscription and applies it to a new Tenant Administration site collection.
+This example creates a new site subscription.
 
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$s = New-SPSiteSubscription
-
-C:\PS>Get-SPSite http://sitename | Set-SPSite -SiteSubscription $s
-
-C:\PS>Set-SPSite http://sitename -SiteSubscription {New-SPSiteSubscription}
+$subscription = New-SPSiteSubscription
+Set-SPSite -Identity http://siteUrl -SiteSubscription $subscription
 ```
 
-This example adds a new subscription to an existing site collection at http://sitename.
+This example creates a new Site Subscription and sets it on the site collection http://siteUrl.
+
+
+### ------------------EXAMPLE 3-----------------------
+```
+New-SPSite -URL http://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
+```
+
+This example creates a new Site Collection at http://siteUrl along with a new Site Subscription.
 
 
 ## PARAMETERS
@@ -67,7 +75,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -77,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

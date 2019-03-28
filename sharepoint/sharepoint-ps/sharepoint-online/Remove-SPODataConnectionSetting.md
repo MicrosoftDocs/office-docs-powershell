@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Remove-SPODataConnectionSetting
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Remove-SPODataConnectionSetting
@@ -45,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
+Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example removes the Business Connectivity Services connection named ContosoServiceApp.
@@ -54,7 +57,7 @@ Metadata properties are also removed.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
+Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
 ```
 
 This example removes the Business Connectivity Services connection metadata named ContosoServiceApp.
@@ -64,9 +67,9 @@ The associated Business Connectivity Services connection object is also removed.
 
 ### -----------------------EXAMPLE 3-----------------------------
 ```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
+$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
 
-C:\PS>Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "http://contoso"
+Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "http://contoso"
 ```
 
 This example removes the Business Connectivity Services and its associated metadata connection named ContosoServiceApp.
@@ -190,8 +193,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataConnectionSetting]()
+[Get-SPODataConnectionSetting](Get-SPODataConnectionSetting.md)
 
-[New-SPODataConnectionSetting]()
+[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting]()
+[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)

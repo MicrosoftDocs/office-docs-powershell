@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsLisConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Import-CsLisConfiguration
@@ -111,7 +114,7 @@ The value passed to this parameter is a variable containing a byte array of the 
 Type: Byte[]
 Parameter Sets: ByteInput
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -129,7 +132,7 @@ Only one of these two parameters can be used with each call to this cmdlet.
 Type: String
 Parameter Sets: FileName
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -167,3 +170,4 @@ This cmdlet does not return a value.
 [Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
 [Test-CsLisConfiguration](Test-CsLisConfiguration.md)
+

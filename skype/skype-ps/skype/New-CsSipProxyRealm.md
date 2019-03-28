@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipProxyRealm
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsSipProxyRealm
@@ -72,7 +75,7 @@ The RealmChoice must be created by using either the New-CsSipProxyUseDefault or 
 Type: IRealmChoice
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -102,4 +105,5 @@ The New-CsSipProxyRealm cmdlet creates new instances of the Microsoft.Rtc.Manage
 [New-CsSipProxyCustom](New-CsSipProxyCustom.md)
 
 [New-CsSipProxyUseDefault](New-CsSipProxyUseDefault.md)
+
 

@@ -1,18 +1,23 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPRepopulateMicroblogFeedCache
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPRepopulateMicroblogFeedCache
 
 ## SYNOPSIS
-Refreshes the cache.
+
+Refreshes the microblog feed cache.
 
 ## SYNTAX
 
-###  (Default)
+### (Default)
+
 ```
 Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
@@ -21,6 +26,7 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 ```
 
 ### Default
+
 ```
 Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
@@ -29,6 +35,7 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 ```
 
 ### FollowableList
+
 ```
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind> -ListId <Guid>
@@ -36,39 +43,59 @@ Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPService
 ```
 
 ## DESCRIPTION
+
 Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user.
 It can be used in scenarios where the automatic refresh has failed or when reverting to an old version of a user's personal site.
 
 When you refresh the cache, the `Update-SPRepopulateMicroblogLMTCache` cmdlet should be run first and then the `Update-SPRepopulateMicroblogFeedCache` cmdlet second.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------EXAMPLE 1------------
+
 ```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user>
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
 
-This example refreshes the feeds for a specific user by using the AccountName parameter.
+This example refreshes the feed for a specific user by using the AccountName parameter.
 
 ### ------------EXAMPLE 2------------
-```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user> -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
+
+```powershell
+$site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
+$context = Get-SPServiceContext $site
+$upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
+$profiles = $upm.GetEnumerator()
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+while($profiles.MoveNext()) {
+    $profile = $profiles.Current
+    Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
 ```
 
-This example refreshes the feeds for a specific user by using the AccountName parameter.
+This example refreshes the feeds for all users in the User Profile Service Application.
+
+### ------------EXAMPLE 3------------
+
+```powershell
+Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
+```
+
+This example refreshes the feed on the site https://sharepoint.contoso.com.
 
 ## PARAMETERS
 
 ### -AccountName
+
 Specifies the user's account name for the User Profile Service application.
 
 ```yaml
 Type: String
 Parameter Sets: (All), Default
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -78,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
+
 Specifies the User Profile Service application proxy to update.
 
 The type must be in one of the following forms:
@@ -89,8 +117,8 @@ The type must be in one of the following forms:
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -100,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -111,8 +140,8 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -122,14 +151,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
 Specifies the account under which this service should run.
 This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All), Default
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,8 +171,8 @@ Accept wildcard characters: False
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: FollowableList
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -152,13 +182,14 @@ Accept wildcard characters: False
 ```
 
 ### -SiteUrl
-{{Fill SiteUrl Description}}
+
+Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
 
 ```yaml
 Type: String
 Parameter Sets: (All), Default
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,13 +199,14 @@ Accept wildcard characters: False
 ```
 
 ### -ListId
-{{Fill ListId Description}}
+
+The ListId of the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -184,13 +216,14 @@ Accept wildcard characters: False
 ```
 
 ### -ListRootFolderUrl
-{{Fill ListRootFolderUrl Description}}
+
+The RootFolderUrl of the FollowableList.
 
 ```yaml
 Type: String
 Parameter Sets: FollowableList
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -200,13 +233,14 @@ Accept wildcard characters: False
 ```
 
 ### -SiteId
-{{Fill SiteId Description}}
+
+The SiteId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -216,13 +250,14 @@ Accept wildcard characters: False
 ```
 
 ### -WebId
-{{Fill WebId Description}}
+
+The WebId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -232,7 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -242,4 +278,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Update-SPRepopulateMicroblogLMTCache]()
+[Update-SPRepopulateMicroblogLMTCache](Update-SPRepopulateMicroblogLMTCache.md)

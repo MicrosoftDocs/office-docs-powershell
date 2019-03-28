@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPAssignment
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPAssignment
@@ -28,24 +31,23 @@ You can also ensure that the objects remain as long as you need them, even throu
 There are three levels of assignment:
 
 -- No assignment -- The object is not assigned to a variable and is disposed of after each iteration of the command.
+
 -- Simple assignment -- All objects are assigned to the global assignment store. This is done by using the Global parameter. When using this level, all objects are assigned to a global store and are disposed of when the Stop-SPAssignment cmdlet is called.
+
 -- Advanced assignment -- Objects are assigned to named stores for disposal. You can dispose of objects by using the Identity parameter with the `Stop-SPAssignment` cmdlet.
 
 Regardless of the assignment level used, all objects are disposed of when the Windows PowerShell run space is closed.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Start-SPAssignment -global
-
-C:\PS>$w = Get-SPWeb http://MyWeb
-
-C:\PS>$w | Set-SPWeb -title "Accounting"
-
-C:\PS>Stop-SPAssignment -global
+Start-SPAssignment -global
+$w = Get-SPWeb http://MyWeb
+$w | Set-SPWeb -title "Accounting"
+Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.
@@ -55,13 +57,10 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$gc = Start-SPAssignment
-
-C:\PS>$web = $gc | Get-SPWeb http://MyWeb
-
-C:\PS>$web | Set-SPWeb -title "Accounting"
-
-C:\PS>Stop-SPAssignment -Identity $gc
+$gc = Start-SPAssignment
+$web = $gc | Get-SPWeb http://MyWeb
+$web | Set-SPWeb -title "Accounting"
+Stop-SPAssignment -Identity $gc
 ```
 
 This example sets the title of the SPWeb object in multiple lines and controls the rate of disposal.
@@ -84,7 +83,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +101,7 @@ If you do not use this parameter, you must assign the output of this cmdlet to a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

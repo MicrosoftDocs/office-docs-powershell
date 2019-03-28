@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatEndpoint
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsPersistentChatEndpoint
@@ -243,3 +246,4 @@ String value representing the Identity or the SIP address of a Persistent Chat e
 [New-CsPersistentChatEndpoint](New-CsPersistentChatEndpoint.md)
 
 [Remove-CsPersistentChatEndpoint](Remove-CsPersistentChatEndpoint.md)
+

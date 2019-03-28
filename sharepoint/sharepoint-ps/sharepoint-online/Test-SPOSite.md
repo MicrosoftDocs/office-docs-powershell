@@ -1,14 +1,18 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Test-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Test-SPOSite
 
 ## SYNOPSIS
 Tests a SharePoint Online site collection.
+
 
 ## SYNTAX
 
@@ -25,20 +29,22 @@ You must be a SharePoint Online global administrator to run the `Test-SPOSite` c
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Test-SPOSite https://contoso.sharepoint.com/sites/marketing
 ```
 
-{{ Add example description here }}
+This example runs all the site collection health checks on the https://contoso.sharepoint.com/sites/marketing site collection.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the SharePoint Online site collection to test.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -54,7 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
-{{Fill RuleId Description}}
+Specifies the health check rule to run.
+
 
 ```yaml
 Type: Guid
@@ -70,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunAlways
-{{Fill RunAlways Description}}
+Displays a message that states the effect of the command instead of executing the command.
+
 
 ```yaml
 Type: SwitchParameter
@@ -96,14 +104,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 
-[Get-SPOAppErrors]()
+[Get-SPOSite](Get-SPOSite.md)
 
-[Get-SPOSite]()
+[New-SPOSite](New-SPOSite.md)
 
-[New-SPOSite]()
-
-[Repair-SPOSite]()
+[Repair-SPOSite](Repair-SPOSite.md)

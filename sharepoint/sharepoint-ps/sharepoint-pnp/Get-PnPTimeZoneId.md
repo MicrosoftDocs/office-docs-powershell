@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPTimeZoneId
@@ -21,14 +21,14 @@ In order to create a new classic site you need to specify the timezone this site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPTimeZoneId
+Get-PnPTimeZoneId
 ```
 
 This will return all time zone IDs in use by Office 365.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTimeZoneId -Match Stockholm
+Get-PnPTimeZoneId -Match Stockholm
 ```
 
 This will return the time zone IDs for Stockholm
@@ -55,4 +55,4 @@ Returns a list of matching zones. Use the ID property of the object for use in N
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

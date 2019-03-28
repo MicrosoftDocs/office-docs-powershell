@@ -1,40 +1,59 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOUserAndContentMove
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Start-SPOUserAndContentMove
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts the ability to move a user closer to their sites.
 
 ## SYNTAX
 
-```
+```powershell
 Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [-OverwriteOdb]
  [[-Notify] <String>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and enables the ability to move a user closer to their sites
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
-```
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
-{{ Add example description here }}
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
+### EXAMPLE 2
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
+```
+
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
+
+### EXAMPLE 3
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
+```
+
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
 
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
-{{Fill DestinationDataLocation Description}}
+Defines the new destination of the user that you want to move.
 
 ```yaml
 Type: String
@@ -50,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notify
-{{Fill Notify Description}}
+Makes a SPO notification that the user is being move
 
 ```yaml
 Type: String
@@ -66,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverwriteOdb
-{{Fill OverwriteOdb Description}}
+Switch parameter to Overwrite the information into the DB 
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveBeginDate
-{{Fill PreferredMoveBeginDate Description}}
+Specifies what is the preferred Date and time to start the job
 
 ```yaml
 Type: DateTime
@@ -98,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveEndDate
-{{Fill PreferredMoveEndDate Description}}
+Specifies what is the preferred Date and time to stop the job
 
 ```yaml
 Type: DateTime
@@ -114,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-{{Fill Reserved Description}}
+This parameter will only check for reserved users to be moved near to their sites
 
 ```yaml
 Type: String
@@ -130,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{Fill UserPrincipalName Description}}
+UserPrincipalName or UPN defined for the specific user on the SPO tenant
 
 ```yaml
 Type: String
@@ -146,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationOnly
-{{Fill ValidationOnly Description}}
+This parameter will force the cmdlet to execute only validation
 
 ```yaml
 Type: SwitchParameter
@@ -164,14 +183,22 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Start-SPOSiteRename](Start-SPOSiteRename.md)
+
+[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
+
+[Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
+
+[Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
+
+
+
+

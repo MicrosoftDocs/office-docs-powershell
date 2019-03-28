@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsCallViaWorkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsCallViaWorkPolicy
@@ -26,10 +29,7 @@ Get-CsCallViaWorkPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid
 
 
 ## DESCRIPTION
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
-
+Use the Get-CsCallViaWorkPolicy cmdlet to return call via work policies.
 
 ## EXAMPLES
 
@@ -46,14 +46,14 @@ This example returns the properties of the policy currently assigned to the Redm
 
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-For example, to return all the policies configured at the site scope use this syntax: -Filter "site:*".
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*"
+For example, to return all the policies configured at the site scope use this syntax: -Filter "site:\*".
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*"
 
 ```yaml
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ Per-user syntax: -Identity CallviaWorkStandard
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -92,7 +92,7 @@ Retrieves the call via work policy data from the local replica of the Central Ma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS
@@ -143,3 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
+

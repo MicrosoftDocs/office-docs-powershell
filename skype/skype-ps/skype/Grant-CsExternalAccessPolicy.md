@@ -1,8 +1,11 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsExternalAccessPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsExternalAccessPolicy
@@ -14,13 +17,13 @@ External access policies determine whether or not your users can: 1) communicate
 This cmdlet was introduced in Lync Server 2010.
 
 
-
 ## SYNTAX
 
 ```
-Grant-CsExternalAccessPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsExternalAccessPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 
@@ -57,12 +60,10 @@ As long as that policy is in force, Ken will be allowed to communicate with fede
 That's because the settings in the per-user policy take precedence.
 
 
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolicy
 ```
 
@@ -71,7 +72,6 @@ Example 1 assigns the external access policy RedmondAccessPolicy to the user wit
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "l=Redmond" | Grant-CsExternalAccessPolicy -PolicyName RedmondAccessPolicy
 ```
 
@@ -82,7 +82,6 @@ That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which 
 
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
 ```
 
@@ -93,7 +92,6 @@ This filtered collection is then piped to the Grant-CsExternalAccessPolicy cmdle
 
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-
 Get-CsUser -Filter {ExternalAccessPolicy -eq $Null} | Grant-CsExternalAccessPolicy -PolicyName BasicAccessPolicy
 ```
 
@@ -104,7 +102,6 @@ By definition, ExternalAccessPolicy will be null only if users have not been ass
 
 ### -------------------------- EXAMPLE 5 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
 ```
 
@@ -115,7 +112,6 @@ The returned collection is then piped to the Grant-CsExternalAccessPolicy cmdlet
 
 ### -------------------------- EXAMPLE 6 -------------------------- 
 ```
-
 Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 ```
 
@@ -127,7 +123,6 @@ That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which 
 ## PARAMETERS
 
 ### -Identity
-
 Identity of the user account the policy should be assigned to.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 User Identities can also be referenced by using the user's Active Directory distinguished name.
@@ -135,14 +130,11 @@ User Identities can also be referenced by using the user's Active Directory dist
 In addition, you can use the asterisk (*) wildcard character when specifying the user Identity.
 For example, the Identity "* Smith" returns all the users with a display name that ends with the string value " Smith."
 
-
-
-
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -152,20 +144,17 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
 For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondAccessPolicy has a PolicyName equal to RedmondAccessPolicy.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName parameter to $Null.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -175,17 +164,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified, then the Grant-CsExternalAccessPolicy cmdlet will contact the first available domain controller.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -195,18 +181,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsExternalAccessPolicy cmdlet does not pass objects through the pipeline.
-
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -216,17 +198,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -236,16 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -255,10 +230,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -271,7 +246,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -326,4 +305,5 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
 [Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
+
 
