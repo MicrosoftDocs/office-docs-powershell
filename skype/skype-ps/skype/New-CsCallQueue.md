@@ -47,7 +47,7 @@ This example creates a Call Queue for the organization named "Help Desk" and use
 The Name parameter specifies a unique name for the Call Queue.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a Call Queue.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 The DistributionLists parameter lets you add all the members of the distribution lists to the Call Queue. This is a list of distribution list GUIDs. A service wide configurable maximum number of DLs per Call Queue are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are supported. O365 Groups can also be used to add members to the Call Queue.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.Guid]
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 The MusicOnHoldFileContent parameter represents music to play when callers are placed on hold. This is the unique identifier of the audio file. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -129,7 +129,7 @@ The OverflowAction parameter designates the action to take if the overflow thres
 PARAMVALUE: DisconnectWithBusy | Forward | Voicemail
 
 ```yaml
-Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid. Otherwise, this parameter is optional.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -179,7 +179,7 @@ The RoutingMethod defines how agents will be called in a Call Queue. If the rout
 PARAMVALUE: Attendant | Serial
 
 ```yaml
-Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -197,7 +197,7 @@ The TimeoutAction parameter defines the action to take if the timeout threshold 
 PARAMVALUE: Disconnect | Forward | Voicemail
 
 ```yaml
-Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a Guid. Otherwise, this field is optional.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldAudioFileId.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -262,105 +262,7 @@ Accept wildcard characters: False
 The WelcomeMusicAudioFileId parameter represents the audio file to play when callers are connected with the Call Queue. This is the unique identifier of the audio file.
 
 ```yaml
-Type: System.Byte[]
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientAudience
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for Microsoft internal use only.
-
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Ring
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: System.String
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -376,7 +278,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

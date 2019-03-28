@@ -13,8 +13,7 @@ The Get-CsCallQueue cmdlet returns the identified Call Queues.
 ## SYNTAX
 
 ```
-Get-CsCallQueue [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Identity <Object>] [-Tenant <Object>] [First <Int32>] 
-[Skip <Int32>] [ExcludeContent <Switch>] [Sort <String>] [Descending <Switch>] [NameFilter <String>] [-AsJob] [<CommonParameters>] 
+Get-CsCallQueue [-Identity <Guid>] [-Tenant <Guid>] [First <Int32>] [Skip <Int32>] [ExcludeContent <Switch>] [Sort <String>] [Descending <Switch>] [NameFilter <String>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
@@ -39,43 +38,11 @@ This example gets the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c
 
 ## PARAMETERS
 
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -91,7 +58,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -155,7 +122,7 @@ Accept wildcard characters: False
 The Sort parameter specifies the property used to sort.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -187,7 +154,7 @@ Accept wildcard characters: False
 The NameFilter parameter returns Call Queues where name contains specified string
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

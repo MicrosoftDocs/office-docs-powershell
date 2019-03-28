@@ -13,8 +13,7 @@ The Remove-CsCallQueue cmdlet deletes an existing Call Queue.
 ## SYNTAX
 
 ```
-Remove-CsCallQueue -Identity <Guid> [-AsJob] [-BypassDualWrite <Boolean>] [-Confirm]
-[-DomainController <Object>] [-Force] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+Remove-CsCallQueue -Identity <Guid> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,43 +31,11 @@ This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5c
 
 ## PARAMETERS
 
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -84,7 +51,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
