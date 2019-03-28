@@ -79,8 +79,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -119,8 +117,6 @@ You can use any value that uniquely identifies the user or group.
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

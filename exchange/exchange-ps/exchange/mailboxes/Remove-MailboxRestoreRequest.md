@@ -90,7 +90,7 @@ This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the unique identifier for the restore request. To find the GUID, use the Get-MailboxRestoreRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
 
-This parameter can't be used in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -113,7 +113,7 @@ The RequestQueue parameter specifies the target mailbox database on which the ma
 
 - Database name
 
-If you specify the RequestQueue parameter, you must also specify the RequestGuid parameter. This parameter can't be used in conjunction with the Identity parameter.
+If you specify the RequestQueue parameter, you must also specify the RequestGuid parameter. You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter

@@ -94,23 +94,27 @@ This example returns the owner information for the resource mailbox Room222.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox. You can use one of the following values:
+The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
 
-- ADObjectID
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

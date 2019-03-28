@@ -93,8 +93,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -385,8 +383,6 @@ The ProxyToMailbox parameter filters the results by the location of the specifie
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

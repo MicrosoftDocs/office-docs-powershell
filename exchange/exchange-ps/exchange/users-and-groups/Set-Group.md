@@ -62,8 +62,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -212,8 +210,6 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
