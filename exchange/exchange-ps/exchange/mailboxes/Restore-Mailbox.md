@@ -70,49 +70,27 @@ This example bulk restores all the mailboxes in the MyDatabase mailbox database 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox.
+The Identity parameter specifies the mailbox that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
-This parameter accepts the following values:
+- Name
 
 - Alias
 
-  Example: JPhillips
+- Distinguished name (DN)
 
 - Canonical DN
 
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
+- \<domain name\>\\\<account name\>
 
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
+- Email address
 
 - GUID
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
+- LegacyExchangeDN
 
-- Immutable ID
+- SamAccountName
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

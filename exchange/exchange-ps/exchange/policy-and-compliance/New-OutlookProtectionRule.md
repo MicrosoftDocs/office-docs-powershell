@@ -174,9 +174,27 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies one or more recipients as a rule condition. The identity of recipients in the organization or the SMTP address of external recipients can be specified.
+The SentTo parameter specifies one or more recipients as a rule condition. You can use any value that uniquely identifies the internal recipient. For example:
 
-The SentTo parameter doesn't accept wildcard characters. When multiple recipients are specified, messages sent to any of the specified recipients are considered a match.
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+You can also specify the SMTP email address of an external recipient.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+When you specify multiple recipients, messages sent to any of the specified recipients are considered a match.
+
+This parameter doesn't accept wildcard characters.
 
 ```yaml
 Type: RecipientIdParameter[]

@@ -136,8 +136,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -289,8 +287,6 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -374,8 +370,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -410,8 +404,6 @@ The ModeratedBy parameter specifies one or more moderators for this group. A mod
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

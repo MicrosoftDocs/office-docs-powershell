@@ -21,15 +21,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
-[-EntryID <String>]
-[-FilterEndTime <DateTime>]
-[-FilterItemType <String>]
-[-FilterStartTime <DateTime>]
-[-LastParentFolderID <String>]
-[-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
-[-SubjectContains <String>]
-[<CommonParameters>]
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,8 +52,6 @@ The Identity parameter specifies the mailbox that contains the Recoverable Items
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -550,8 +550,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -562,7 +560,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -610,8 +608,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -622,7 +618,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -642,8 +638,6 @@ The TargetMailbox parameter specifies the destination mailbox where the search r
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

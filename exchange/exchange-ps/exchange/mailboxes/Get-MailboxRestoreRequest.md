@@ -288,7 +288,7 @@ The TargetDatabase parameter specifies that the cmdlet should only return restor
 
 - Database name
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter

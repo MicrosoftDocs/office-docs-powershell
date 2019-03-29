@@ -111,25 +111,31 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox to test. You can use the following values:
+The Identity parameter specifies a mailbox to test. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
+- Name
 
 - Alias
 
-This parameter accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If an object is piped from the Get-Mailbox cmdlet or Get-Recipient cmdlet, this parameter isn't required.
+- Distinguished name (DN)
 
-If you don't specify this parameter, the cmdlet tests the SystemMailbox on the database that you specify.
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+This cmdlet accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If you pipe the identify from the Get-Mailbox or Get-Recipient cmdlets, you don't need to use this parameter.
+
+If you don't use this parameter, the cmdlet tests the SystemMailbox on the database that you specify.
 
 ```yaml
 Type: MailboxIdParameter

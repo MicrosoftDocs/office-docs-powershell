@@ -44,8 +44,6 @@ The Identity parameter specifies the address list that you want to move. You can
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID
@@ -68,8 +66,6 @@ Accept wildcard characters: False
 The Container parameter specifies where to move the address list. Valid input for this parameter is under the root "\\" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

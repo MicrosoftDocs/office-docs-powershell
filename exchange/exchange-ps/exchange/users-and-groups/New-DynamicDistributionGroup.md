@@ -216,8 +216,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -649,8 +647,6 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

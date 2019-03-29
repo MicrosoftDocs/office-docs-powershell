@@ -280,8 +280,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -459,8 +457,6 @@ The UserList parameter specifies who can use an organizational app. Valid values
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
