@@ -22,14 +22,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
- [-ArchiveAccessEnabled <$true | $false>] [-Confirm] [-DeliveryReportEnabled <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-FreeBusyAccessEnabled <$true | $false>]
- [-FreeBusyAccessLevel <None | AvailabilityOnly | LimitedDetails>] [-FreeBusyAccessScope <GroupIdParameter>]
- [-MailboxMoveEnabled <$true | $false>] [-MailTipsAccessEnabled <$true | $false>]
- [-MailTipsAccessLevel <None | Limited | All>] [-MailTipsAccessScope <GroupIdParameter>]
- [-OrganizationContact <SmtpAddress>] [-TargetApplicationUri <Uri>]
- [-TargetAutodiscoverEpr <Uri>] [-TargetOwaURL <Uri>] [-TargetSharingEpr <Uri>] [-WhatIf]
- [-PhotosEnabled <$true | $false>] [-MailboxMoveDirection <None | Inbound | Outbound>] [<CommonParameters>]
+ [-ArchiveAccessEnabled <$true | $false>]
+ [-Confirm]
+ [-DeliveryReportEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-FreeBusyAccessEnabled <$true | $false>]
+ [-FreeBusyAccessLevel <None | AvailabilityOnly | LimitedDetails>]
+ [-FreeBusyAccessScope <GroupIdParameter>]
+ [-MailboxMoveEnabled <$true | $false>]
+ [-MailTipsAccessEnabled <$true | $false>]
+ [-MailTipsAccessLevel <None | Limited | All>]
+ [-MailTipsAccessScope <GroupIdParameter>]
+ [-OrganizationContact <SmtpAddress>]
+ [-PhotosEnabled <$true | $false>]
+ [-TargetApplicationUri <Uri>]
+ [-TargetAutodiscoverEpr <Uri>]
+ [-TargetOwaURL <Uri>]
+ [-TargetSharingEpr <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -249,8 +260,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -341,8 +350,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -383,6 +390,25 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhotosEnabled
+The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
+
+- $true: Photos for users in this organization are returned over the organization relationship.
+
+- $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -460,40 +486,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhotosEnabled
-The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
-
-- $true: Photos for users in this organization are returned over the organization relationship.
-
-- $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxMoveDirection
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | Inbound | Outbound
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

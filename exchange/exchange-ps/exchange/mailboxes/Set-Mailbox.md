@@ -974,8 +974,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1013,8 +1011,6 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1051,8 +1047,6 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1092,8 +1086,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1263,8 +1255,6 @@ The ArbitrationMailbox parameter specifies the arbitration mailbox that's used t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1713,8 +1703,6 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2177,7 +2165,21 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultPublicFolderMailbox
-The DefaultPublicFolderMailbox parameter assigns a specific public folder mailbox to the user. By default, the public folder mailbox used by a user is automatically selected by an algorithm that load-balances users across all public folder mailboxes.
+The DefaultPublicFolderMailbox parameter assigns a specific public folder mailbox to the user. You can use any value that uniquely identifies the public folder mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+By default, the public folder mailbox used by a user is automatically selected by an algorithm that load-balances users across all public folder mailboxes.
 
 ```yaml
 Type: RecipientIdParameter
@@ -2737,13 +2739,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardingAddress
-The ForwardingAddress parameter specifies a forwarding address for messages that are sent to this mailbox. A valid value for this parameter is a recipient in your organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardingAddress parameter specifies a forwarding address in your organization for messages that are sent to this mailbox. You can use any value that uniquely identifies the internal recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2829,8 +2827,6 @@ The sender you specify for this parameter must a mailbox, mail user or mail-enab
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -3145,8 +3141,6 @@ The LinkedMasterAccount parameter specifies the master account in the forest whe
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -3636,8 +3630,6 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -4135,8 +4127,6 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -4173,8 +4163,6 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -4214,8 +4202,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

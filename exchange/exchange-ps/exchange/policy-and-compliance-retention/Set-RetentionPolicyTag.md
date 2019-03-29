@@ -103,7 +103,27 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies a mailbox for assigning opt-in tags.
+The Mailbox parameter specifies a mailbox for assigning opt-in tags. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You must use this parameter with the OptionalInMailbox parameter.
 

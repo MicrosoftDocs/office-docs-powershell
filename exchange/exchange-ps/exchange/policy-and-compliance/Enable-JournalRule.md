@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Enable-JournalRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
-[-WhatIf] [<CommonParameters>]
+Enable-JournalRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

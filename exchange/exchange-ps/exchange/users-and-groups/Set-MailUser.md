@@ -21,51 +21,90 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailUser [-Identity] <MailUserIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+Set-MailUser [-Identity] <MailUserIdParameter>
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
- [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
- [-BypassModerationFromSendersOrMembers <MultiValuedProperty>] [-Confirm] [-CreateDTMFMap <$true | $false>]
- [-CustomAttribute1 <String>] [-CustomAttribute10 <String>] [-CustomAttribute11 <String>]
- [-CustomAttribute12 <String>] [-CustomAttribute13 <String>] [-CustomAttribute14 <String>]
- [-CustomAttribute15 <String>] [-CustomAttribute2 <String>] [-CustomAttribute3 <String>]
- [-CustomAttribute4 <String>] [-CustomAttribute5 <String>] [-CustomAttribute6 <String>]
- [-CustomAttribute7 <String>] [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-EmailAddresses <ProxyAddressCollection>]
- [-EmailAddressPolicyEnabled <$true | $false>] [-ExchangeGuid <Guid>]
- [-ExtensionCustomAttribute1 <MultiValuedProperty>] [-ExtensionCustomAttribute2 <MultiValuedProperty>]
- [-ExtensionCustomAttribute3 <MultiValuedProperty>] [-ExtensionCustomAttribute4 <MultiValuedProperty>]
- [-ExtensionCustomAttribute5 <MultiValuedProperty>] [-ExternalEmailAddress <ProxyAddress>]
- [-FederatedIdentity <String>] [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>] [-IgnoreDefaultScope] [-ImmutableId <String>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>] [-MailTip <String>]
- [-MailTipTranslations <MultiValuedProperty>] [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Name <String>]
- [-Password <SecureString>] [-PrimarySmtpAddress <SmtpAddress>] [-RecipientLimits <Unlimited>]
- [-RejectMessagesFrom <MultiValuedProperty>] [-RejectMessagesFromDLMembers <MultiValuedProperty>]
- [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>] [-RemovePicture] [-RemoveSpokenName]
- [-RequireSenderAuthenticationEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-SamAccountName <String>] [-SecondaryAddress <String>] [-SecondaryDialPlan <UMDialPlanIdParameter>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SimpleDisplayName <String>]
- [-UMDtmfMap <MultiValuedProperty>] [-UseMapiRichTextFormat <Never | Always | UseDefaultSettings>]
- [-UsePreferMessageFormat <$true | $false>] [-UserPrincipalName <String>] [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [-AddOnSKUCapability <MultiValuedProperty>] [-ArchiveQuota <Unlimited>]
- [-ArchiveWarningQuota <Unlimited>] [-BypassLiveId] [-CalendarVersionStoreDisabled <$true | $false>]
- [-EndDateForRetentionHold <DateTime>] [-JournalArchiveAddress <SmtpAddress>] [-LitigationHoldDate <DateTime>]
- [-LitigationHoldEnabled <$true | $false>] [-LitigationHoldOwner <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MicrosoftOnlineServicesID <SmtpAddress>]
- [-NetID <NetID>] [-RecoverableItemsQuota <Unlimited>] [-RecoverableItemsWarningQuota <Unlimited>]
- [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-RetentionComment <String>]
- [-RetentionHoldEnabled <$true | $false>] [-RetentionUrl <String>]
- [-SingleItemRecoveryEnabled <$true | $false>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-StartDateForRetentionHold <DateTime>] [-UsageLocation <CountryInfo>]
- [-UserCertificate <MultiValuedProperty>] [-UserSMimeCertificate <MultiValuedProperty>]
- [-WindowsLiveID <SmtpAddress>] [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-IssueWarningQuota <Unlimited>] [-MailboxRegion <String>] [-ProhibitSendQuota <Unlimited>]
- [-ProhibitSendReceiveQuota <Unlimited>] [-SkipDualWrite] [-SkipMailboxProvisioningConstraintValidation]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-ArchiveGuid <Guid>]
+ [-ArchiveName <MultiValuedProperty>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-Confirm]
+ [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExchangeGuid <Guid>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-FederatedIdentity <String>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IgnoreDefaultScope]
+ [-ImmutableId <String>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MailboxRegion <String>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageBodyFormat <Text | Html | TextAndHtml>]
+ [-MessageFormat <Text | Mime>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Name <String>]
+ [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RecipientLimits <Unlimited>]
+ [-RecoverableItemsQuota <Unlimited>]
+ [-RecoverableItemsWarningQuota <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RemovePicture]
+ [-RemoveSpokenName]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SecondaryAddress <String>]
+ [-SecondaryDialPlan <UMDialPlanIdParameter>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-SimpleDisplayName <String>]
+ [-SkipDualWrite]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-UseMapiRichTextFormat <Never | Always | UseDefaultSettings>]
+ [-UsePreferMessageFormat <$true | $false>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserPrincipalName <String>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -89,8 +128,6 @@ The Identity parameter specifies the mail user that you want to modify. You can 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -120,8 +157,6 @@ The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages t
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -159,8 +194,6 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -200,8 +233,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -271,8 +302,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -304,13 +333,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveGuid
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -319,13 +350,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveName
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -339,8 +372,6 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -633,6 +664,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the mail user. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
+
+```yaml
+Type: DataEncryptionPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the mail user. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -905,8 +962,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1002,6 +1057,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JournalArchiveAddress
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MacAttachmentFormat
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
@@ -1024,6 +1096,23 @@ Type: BinHex | UuEncode | AppleSingle | AppleDouble
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegion
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1203,14 +1292,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MicrosoftOnlineServicesID
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ModeratedBy
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1339,14 +1441,82 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecoverableItemsQuota
+This parameter is available only in on-premises Exchange.
+
+The RecoverableItemsQuota parameter specifies the maximum size for the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, it no longer accepts messages.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 30 gigabytes (32212254720 bytes).
+
+The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecoverableItemsWarningQuota
+This parameter is available only in on-premises Exchange.
+
+The RecoverableItemsWarningQuota parameter specifies the warning threshold for the size of the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, Exchange logs an event to the application event log.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 20 gigabytes (21474836480 bytes).
+
+The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RejectMessagesFrom
 The RejectMessagesFrom parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1384,8 +1554,6 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1426,8 +1594,6 @@ To specify senders for this parameter, you can use any value that uniquely ident
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1451,6 +1617,23 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveMailboxProvisioningConstraint
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveMailboxProvisioningConstraint Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1631,6 +1814,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipDualWrite
+This parameter is available only in Exchange 2016 or later.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UMDtmfMap
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
@@ -1702,6 +1902,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserCertificate
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSMimeCertificate
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
@@ -1748,583 +1978,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddOnSKUCapability
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArchiveQuota
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArchiveWarningQuota
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassLiveId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CalendarVersionStoreDisabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndDateForRetentionHold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalArchiveAddress
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LitigationHoldDate
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LitigationHoldEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LitigationHoldOwner
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningConstraint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningConstraint
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningPreferences
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MicrosoftOnlineServicesID
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetID
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: NetID
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecoverableItemsQuota
-This parameter is available only in on-premises Exchange.
-
-The RecoverableItemsQuota parameter specifies the maximum size for the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, it no longer accepts messages.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 30 gigabytes (32212254720 bytes).
-
-The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecoverableItemsWarningQuota
-This parameter is available only in on-premises Exchange.
-
-The RecoverableItemsWarningQuota parameter specifies the warning threshold for the size of the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, Exchange logs an event to the application event log.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 20 gigabytes (21474836480 bytes).
-
-The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetainDeletedItemsFor
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionComment
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionHoldEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionUrl
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SingleItemRecoveryEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SKUAssigned
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SKUCapability
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StartDateForRetentionHold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsageLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: CountryInfo
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserCertificate
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserSMimeCertificate
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WindowsLiveID
-This parameter is available only in the cloud-based service.
-
-The WindowsLiveID parameter renames the Microsoft account that's associated with the mail user.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DataEncryptionPolicy
-This parameter is available only in the cloud-based service.
-
-The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the mail user. You can use any value that uniquely identifies the policy. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
-
-```yaml
-Type: DataEncryptionPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IssueWarningQuota
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxRegion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProhibitSendQuota
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProhibitSendReceiveQuota
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDualWrite
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMailboxProvisioningConstraintValidation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
