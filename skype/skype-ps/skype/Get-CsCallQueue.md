@@ -13,13 +13,7 @@ The Get-CsCallQueue cmdlet returns the identified Call Queues.
 ## SYNTAX
 
 ```
-Get-CsCallQueue [-Identity <Guid>] [-Tenant <Guid>] 
-[First <Int32>] 
-[Skip <Int32>] 
-[ExcludeContent <Switch>] 
-[Sort <String>] [Descending <Switch>] 
-[NameFilter <String>] 
-[<CommonParameters>] 
+Get-CsCallQueue [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-ExcludeContent <Switch>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
