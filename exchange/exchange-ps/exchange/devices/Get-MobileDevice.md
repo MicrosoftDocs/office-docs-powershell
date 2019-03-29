@@ -71,7 +71,6 @@ Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 
 This example returns a summary list of all mobile devices in the organization.
 
-
 ### -------------------------- Example 3 --------------------------
 ```
 Get-MobileDevice -Identity lila\ExchangeActiveSyncDevices\Android§android94732903 | Format-List

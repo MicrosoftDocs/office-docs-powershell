@@ -309,7 +309,6 @@ In Exchange Online, this example results in meeting updates being auto-processed
 
 ## PARAMETERS
 
-
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -1564,7 +1563,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:

@@ -111,7 +111,6 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 
 - Owners
 
-
 ```yaml
 Type: Members | Owners | Subscribers | Aggregators
 Parameter Sets: (All)

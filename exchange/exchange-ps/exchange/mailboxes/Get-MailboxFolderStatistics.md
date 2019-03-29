@@ -99,7 +99,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: Identity

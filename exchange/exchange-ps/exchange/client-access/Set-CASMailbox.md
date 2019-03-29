@@ -884,7 +884,6 @@ The OutlookMobileEnabled parameter enables or disables access to the mailbox by 
 
 - $false: Access to the mailbox using Outlook for iOS and Android is disabled.
 
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)

@@ -689,7 +689,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -DisplayName
 The DisplayName parameter specifies the display name of the mail user. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 

@@ -244,7 +244,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -ManagedBy
 The ManagedBy parameter filters the results by the owner of the group. You can use any value that uniquely identifies the owner.
 

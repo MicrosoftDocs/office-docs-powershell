@@ -138,7 +138,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Enabled
 The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
 

@@ -310,7 +310,6 @@ The DataEncryptionPolicy parameter specifies the data encryption policy that's a
 
 - GUID
 
-
 ```yaml
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
