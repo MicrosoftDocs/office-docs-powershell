@@ -69,7 +69,13 @@ This command disables the authorization server ACS.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of authorization server.
+The Identity parameter specifies the authorization server object that you want to modify. You can use any value that uniquely identifies the authorization server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: AuthServerIdParameter
@@ -135,6 +141,12 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the authorization server is enabled. Only enabled authorization servers can issue and accept tokens. Disabling the authorization server prevents any partner applications configured to use the authorization server from getting a token.
 
+The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
+
+- $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
+
+- $false: The authorization server does not issue or accept authorization tokens.
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -148,9 +160,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultAuthorizationEndpoint
-The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. This server's authorization URL is advertised to calling partner applications and applications need to get their OAuth access tokens from this authorization server.
+The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+$true: The authorization server's URL is advertised to calling partner applications and applications that need to get their OAuth access tokens from the authorization server.
+
+$false: The authorization server's URL is not advertised. The default value is $false.
 
 ```yaml
 Type: $true | $false
@@ -165,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a name for the authorization server.
+The Name parameter specifies a unique name for the authorization server object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -180,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshAuthMetadata
-The RefreshAuthMetadata switch specifies whether Exchange should refresh the auth metadata from the specified URL.
+The RefreshAuthMetadata switch specifies whether Exchange should refresh the auth metadata from the specified URL. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. We don't recommend using this switch in a production environment.
+The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter

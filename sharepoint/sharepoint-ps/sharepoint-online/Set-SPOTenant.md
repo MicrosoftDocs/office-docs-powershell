@@ -110,6 +110,33 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 This example stops publishing content types to OneDrive for Business sites. 
 
+
+### -----------------------EXAMPLE 8-------------------------------
+
+```powershell
+Set-SPOTenant -SearchResolveExactEmailOrUPN $true
+```
+
+This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
+
+
+### -----------------------EXAMPLE 9-------------------------------
+
+```powershell
+Set-SPOTenant -UseFindPeopleInPeoplePicker $true
+```
+
+This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
+
+
+### -----------------------EXAMPLE 10-------------------------------
+
+```powershell
+Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
+```
+
+This example enable the option to search for existing guest users at Tenant Level.
+
 ## PARAMETERS
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
@@ -357,7 +384,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
-True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
 
 ```yaml
@@ -476,7 +503,7 @@ Specifies the home realm discovery value to be sent to Azure Active Directory (A
 When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
-Acceleration will not occur on site collections that are shared externally.
+Acceleration will not occur on site collections that are shared externally. 
 
 This value should be configured with the login domain that is used by your company (that is, example@contoso.com).
 

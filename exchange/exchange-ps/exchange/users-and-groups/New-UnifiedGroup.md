@@ -132,8 +132,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -495,13 +493,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the recipients (mail-enabled objects) that are members of the Office 365 Group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Members parameter specifies the recipients (mail-enabled objects) that are members of the Office 365 Group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -564,11 +558,7 @@ The Owner parameter specifies the for the Office 365 Group. An owner is a group 
 
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
-For example:
-
 - Name
-
-- Display name
 
 - Alias
 
@@ -576,17 +566,9 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
-
 - Email address
 
 - GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
 
 ```yaml
 Type: RecipientIdParameter

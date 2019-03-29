@@ -449,7 +449,7 @@ The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public
 Type: SwitchParameter
 Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -751,7 +751,29 @@ Accept wildcard characters: False
 ### -TestMailbox
 This parameter is available only in the cloud-based service.
 
-The TestMailbox parameter specifies an Exchange Online mailbox used as the target by the migration service to verify the connection using this endpoint. If this parameter isn't specified, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.
+The TestMailbox parameter specifies an Exchange Online mailbox used as the target by the migration service to verify the connection using this endpoint. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.
 
 This parameter is only used to create Outlook Anywhere migration endpoints.
 

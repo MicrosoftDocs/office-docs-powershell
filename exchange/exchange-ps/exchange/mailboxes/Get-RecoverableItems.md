@@ -53,8 +53,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -168,7 +166,7 @@ The LastParentFolderID parameter specifies the FolderID value of the item before
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +204,6 @@ If you don't use this parameter, the command will search all locations.
 Type: DeletedItems | RecoverableItems
 Parameter Sets: (All)
 Aliases:
-Accepted values: DeletedItems, RecoverableItems
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named

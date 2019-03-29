@@ -80,7 +80,7 @@ The Identity parameter specifies the identity of the public folder migration req
 
 - Name
 
-This parameter can't be used in conjunction with the RequestQueue or RequestGuid parameter.
+You can't use this parameter with the RequestQueue or RequestGuid parameter.
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
@@ -222,7 +222,7 @@ This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the GUID of a migration request.
 
-This parameter can't be used in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid

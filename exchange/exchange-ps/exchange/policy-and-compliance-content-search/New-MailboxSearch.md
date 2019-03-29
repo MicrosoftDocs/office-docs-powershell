@@ -46,7 +46,6 @@ New-MailboxSearch [-Name] <String>
  [-Language <CultureInfo>]
  [-LogLevel <Suppress | Basic | Full>]
  [-MessageTypes <KindKeyword[]>]
- [-PublicFolderSources <PublicFolderIdParameter[]>]
  [-Recipients <String[]>]
  [-SearchDumpster]
  [-SearchQuery <String>]
@@ -464,22 +463,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicFolderSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PublicFolderIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 ### -Recipients
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.
 
@@ -567,8 +550,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -579,7 +560,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -627,8 +608,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -639,7 +618,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -659,8 +638,6 @@ The TargetMailbox parameter specifies the destination mailbox where the search r
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

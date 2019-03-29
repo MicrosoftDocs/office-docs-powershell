@@ -65,7 +65,7 @@ The RequestGuid and RequestQueue parameters are for debugging purposes only.
 ### -Identity
 The Identity parameter specifies the identity of the public folder move request. The default identity is \\PublicFolderMove.
 
-You can't use this parameter in conjunction with the RequestGuid or RequestQueue parameter.
+You can't use this parameter with the RequestGuid or RequestQueue parameter.
 
 ```yaml
 Type: PublicFolderMoveRequestIdParameter
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ### -RequestGuid
 The RequestGuid parameter specifies the GUID of the public folder move request. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid

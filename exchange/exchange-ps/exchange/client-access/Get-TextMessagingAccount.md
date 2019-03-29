@@ -14,19 +14,23 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-TextMessagingAccount cmdlet to return a user's Short Message Service (SMS) settings.
+Use the Get-TextMessagingAccount cmdlet to view the text notification settings on mailboxes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Get-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-TextMessagingAccount [-Identity] <MailboxIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-TextMessagingAccount cmdlet displays the SMS settings for a specific user. These settings include whether Exchange ActiveSync is enabled, the user's country or region ID, mobile operator ID, service provider ID and notification phone number.
+When text messaging notifications are enabled on a mailbox, you can configure calendar notifications, voice mail notifications, and email notifications using an inbox rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -47,8 +51,6 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

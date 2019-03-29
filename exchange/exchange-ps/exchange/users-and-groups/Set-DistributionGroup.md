@@ -22,33 +22,73 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-DistributionGroup [-Identity] <DistributionGroupIdParameter>
- [-AcceptMessagesOnlyFrom <MultiValuedProperty>] [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
- [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
- [-BypassNestedModerationEnabled <$true | $false>] [-BypassSecurityGroupManagerCheck] [-Confirm]
- [-CreateDTMFMap <$true | $false>] [-CustomAttribute1 <String>] [-CustomAttribute10 <String>]
- [-CustomAttribute11 <String>] [-CustomAttribute12 <String>] [-CustomAttribute13 <String>]
- [-CustomAttribute14 <String>] [-CustomAttribute15 <String>] [-CustomAttribute2 <String>]
- [-CustomAttribute3 <String>] [-CustomAttribute4 <String>] [-CustomAttribute5 <String>]
- [-CustomAttribute6 <String>] [-CustomAttribute7 <String>] [-CustomAttribute8 <String>]
- [-CustomAttribute9 <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
- [-ExpansionServer <String>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
- [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
- [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
- [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>]
- [-IgnoreDefaultScope] [-IgnoreNamingPolicy] [-MailTip <String>] [-MailTipTranslations <MultiValuedProperty>]
- [-ManagedBy <MultiValuedProperty>] [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-BypassNestedModerationEnabled <$true | $false>]
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EmailAddressPolicyEnabled <$true | $false>]
+ [-ExpansionServer <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IgnoreDefaultScope]
+ [-IgnoreNamingPolicy]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-ManagedBy <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
  [-MemberDepartRestriction <Closed | Open | ApprovalRequired>]
- [-MemberJoinRestriction <Closed | Open | ApprovalRequired>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Name <String>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RejectMessagesFrom <MultiValuedProperty>] [-RejectMessagesFromDLMembers <MultiValuedProperty>]
- [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>] [-ReportToManagerEnabled <$true | $false>]
- [-ReportToOriginatorEnabled <$true | $false>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-RoomList] [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SendOofMessageToOriginatorEnabled <$true | $false>] [-SimpleDisplayName <String>]
- [-UMDtmfMap <MultiValuedProperty>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>]
- [-GenerateExternalDirectoryObjectId] [-ResetMigrationToUnifiedGroup] [<CommonParameters>]
+ [-MemberJoinRestriction <Closed | Open | ApprovalRequired>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Name <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-ReportToManagerEnabled <$true | $false>]
+ [-ReportToOriginatorEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-ResetMigrationToUnifiedGroup]
+ [-RoomList]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendOofMessageToOriginatorEnabled <$true | $false>]
+ [-SimpleDisplayName <String>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,8 +128,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -118,8 +156,6 @@ The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages t
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -157,8 +193,6 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -198,8 +232,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -269,8 +301,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -307,8 +337,6 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -887,8 +915,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1042,8 +1068,6 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1202,8 +1226,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1294,8 +1316,6 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1332,8 +1352,6 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1373,8 +1391,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1460,6 +1476,23 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetMigrationToUnifiedGroup
+This parameter is available only in the cloud-based service.
+
+The ResetMigrationToUnifiedGroup switch specifies whether you want to reset the flag that indicates the migration of the distribution group to an Office 365 Group is in progress. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1624,38 +1657,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GenerateExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResetMigrationToUnifiedGroup
-This parameter is available only in the cloud-based service.
-
-The ResetMigrationToUnifiedGroup switch specifies whether you want to reset the flag that indicates the migration of the distribution group to an Office 365 Group is in progress. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

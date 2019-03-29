@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Add-PnPFileToProvisioningTemplate
 
@@ -13,6 +10,19 @@ Adds a file to a PnP Provisioning Template
 
 ## SYNTAX 
 
+### Remove File
+```powershell
+Add-PnPFileToProvisioningTemplate -Path <String>
+                                  -SourceUrl <String>
+                                  [-Container <String>]
+                                  [-FileLevel <FileLevel>]
+                                  [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+                                  [-FileOverwrite [<SwitchParameter>]]
+                                  [-Web <WebPipeBind>]
+                                  [-Connection <SPOnlineConnection>]
+```
+
+### Local File
 ```powershell
 Add-PnPFileToProvisioningTemplate -Path <String>
                                   -Source <String>
@@ -21,6 +31,8 @@ Add-PnPFileToProvisioningTemplate -Path <String>
                                   [-FileLevel <FileLevel>]
                                   [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
                                   [-FileOverwrite [<SwitchParameter>]]
+                                  [-Web <WebPipeBind>]
+                                  [-Connection <SPOnlineConnection>]
 ```
 
 ## EXAMPLES
@@ -52,6 +64,13 @@ Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Fo
 ```
 
 Adds a file to a PnP Site Template with a custom container for the file
+
+### ------------------EXAMPLE 5------------------
+```powershell
+Add-PnPFileToProvisioningTemplate -Path template.pnp -SourceUrl "Shared%20Documents/ProjectStatus.docs"
+```
+
+Adds a file to a PnP Provisioning Template retrieved from the currently connected site. The url can be server relative or web relative. If specifying a server relative url has to start with the current site url.
 
 ## PARAMETERS
 
@@ -96,7 +115,7 @@ The target Folder for the file to add to the in-memory template.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Local File
 
 Required: True
 Position: 2
@@ -120,7 +139,19 @@ The file to add to the in-memory template, optionally including full path.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Local File
+
+Required: True
+Position: 1
+Accept pipeline input: False
+```
+
+### -SourceUrl
+The file to add to the in-memory template, specifying its url in the current connected Web.
+
+```yaml
+Type: String
+Parameter Sets: Remove File
 
 Required: True
 Position: 1
@@ -136,6 +167,30 @@ Parameter Sets: (All)
 
 Required: False
 Position: 4
+Accept pipeline input: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: SPOnlineConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Web
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+
+```yaml
+Type: WebPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

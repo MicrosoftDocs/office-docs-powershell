@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Add-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter> -Links <RecipientIdParameter[]>
- -LinkType <Members | Owners | Subscribers | Aggregators | EventSubscribers> [-Confirm] [-WhatIf]
+ -LinkType <Members | Owners | Subscribers | Aggregators> [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -49,8 +49,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -76,13 +74,9 @@ Accept wildcard characters: False
 ### -Links
 The Links parameter specifies the recipients to add to the Office 365 Group. You specify whether these recipients are members, owners or subscribers by using the LinkType parameter.
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -111,8 +105,6 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Office 365 Group property that you want to modify. Valid values are:
 
-- EventSubscribers
-
 - Members
 
 - Owners
@@ -120,7 +112,7 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 - Subscribers
 
 ```yaml
-Type: Members | Owners | Subscribers | Aggregators | EventSubscribers
+Type: Members | Owners | Subscribers | Aggregators
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

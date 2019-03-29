@@ -100,8 +100,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -209,8 +207,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -237,8 +233,6 @@ The user that you specify for this parameter must be a user or security group (a
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

@@ -324,7 +324,27 @@ Accept wildcard characters: False
 ### -OverrideContentMailbox
 This parameter is available only in on-premises Exchange.
 
-The OverrideContentMailbox parameter specifies the identity of the public folder mailbox that you want to move this public folder's content to.
+The OverrideContentMailbox parameter specifies the target public folder mailbox whereyou want to move this public folder's content to. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

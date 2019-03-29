@@ -114,7 +114,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
-This parameter can't be used in conjunction with the Identity or RequestQueue parameters.
+You can't use this parameter with the Identity or RequestQueue parameters.
 
 ```yaml
 Type: Fqdn
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
+The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid

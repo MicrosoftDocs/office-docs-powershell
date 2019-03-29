@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # New-PnPTermSet
 
@@ -161,7 +158,7 @@ Accept pipeline input: False
 ```
 
 ### -TermGroup
-Name, id or actualy termgroup to create the termset in.
+Name, id or actually termgroup to create the termset in.
 
 ```yaml
 Type: Id, Title or TermGroup

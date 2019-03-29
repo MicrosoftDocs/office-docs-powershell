@@ -122,11 +122,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The rule is enabled. This is the default value.
 
-- $false: The rule or policy is disabled.
+- $false: The rule is disabled.
+
+In the properties of the rule, the value of this parameter is visible in the State property.
 
 ```yaml
 Type: $true | $false
@@ -160,9 +162,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -187,9 +191,11 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -257,9 +263,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -284,9 +292,11 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
