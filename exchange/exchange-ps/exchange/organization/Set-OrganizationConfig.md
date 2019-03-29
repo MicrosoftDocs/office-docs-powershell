@@ -95,7 +95,6 @@ Set-OrganizationConfig
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <$true | $false>]
  [-WebSuggestedRepliesDisabled <$true | $false>]
-
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -2362,7 +2361,7 @@ Accept wildcard characters: False
 ### -WebPushNotificationsDisabled
 This parameter is available only in the cloud-based service.
 
-The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web.  This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web.  This brings awareness of incoming messages while they are working elsewhere on their computer.  Valid values are:
+The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
 
 - $true: Web Push Notifications are disabled. 
 
