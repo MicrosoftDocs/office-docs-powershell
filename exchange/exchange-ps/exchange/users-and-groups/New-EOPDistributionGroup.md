@@ -115,8 +115,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -157,8 +155,6 @@ You can use any value that uniquely identifies the recipient.
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -53,8 +53,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -110,8 +108,6 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

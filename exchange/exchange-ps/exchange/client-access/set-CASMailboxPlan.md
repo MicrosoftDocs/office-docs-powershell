@@ -51,8 +51,6 @@ The Identity parameter specifies the CAS mailbox plan that you want to modify. Y
 
 - Name
 
-- Display Name
-
 - Distinguished name (DN)
 
 - GUID

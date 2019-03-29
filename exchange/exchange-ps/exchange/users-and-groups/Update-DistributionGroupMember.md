@@ -46,8 +46,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -133,8 +131,6 @@ The Members parameter specifies the recipients (mail-enabled objects) that will 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
