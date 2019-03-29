@@ -259,8 +259,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -297,8 +295,6 @@ The Sender parameter specifies a condition for the Sweep rule that looks for the
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

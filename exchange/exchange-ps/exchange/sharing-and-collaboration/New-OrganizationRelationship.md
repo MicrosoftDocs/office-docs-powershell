@@ -260,8 +260,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -351,8 +349,6 @@ The MailTipsAccessScope parameter specifies a mail-enabled security group in the
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

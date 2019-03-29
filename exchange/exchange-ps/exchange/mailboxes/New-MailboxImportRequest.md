@@ -229,8 +229,6 @@ In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdP
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)

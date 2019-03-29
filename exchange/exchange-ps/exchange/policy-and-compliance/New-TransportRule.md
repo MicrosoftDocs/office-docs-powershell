@@ -398,8 +398,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -434,8 +432,6 @@ The AnyOfCcHeader parameter specifies a condition that looks for recipients in t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -475,8 +471,6 @@ The AnyOfCcHeaderMemberOf parameter specifies a condition that looks for group m
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -563,8 +557,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -603,8 +595,6 @@ The AnyOfToCcHeaderMemberOf parameter specifies a condition that looks for group
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -645,8 +635,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -685,8 +673,6 @@ The AnyOfToHeaderMemberOf parameter specifies a condition that looks for group m
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1131,8 +1117,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1168,8 +1152,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1204,8 +1186,6 @@ The BlindCopyTo parameter specifies an action that adds recipients to the Bcc fi
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1296,8 +1276,6 @@ The CopyTo parameter specifies an action that adds recipients to the Cc field of
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1535,8 +1513,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1575,8 +1551,6 @@ The ExceptIfAnyOfCcHeaderMemberOf parameter specifies an exception that looks fo
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1663,8 +1637,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1703,8 +1675,6 @@ The ExceptIfAnyOfToCcHeaderMemberOf parameter specifies an exception that looks 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1745,8 +1715,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1785,8 +1753,6 @@ The ExceptIfAnyOfToHeaderMemberOf parameter specifies an exception that looks fo
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2089,8 +2055,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -2125,8 +2089,6 @@ The ExceptIfBetweenMemberOf2 parameter specifies an exception that looks for mes
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2183,8 +2145,6 @@ The ExceptIfFrom parameter specifies an exception that looks for messages from s
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2264,8 +2224,6 @@ The ExceptIfFromMemberOf parameter specifies an exception that looks for message
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2479,8 +2437,6 @@ The ExceptIfManagerAddresses parameter specifies the users (managers) for the Ex
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -3165,9 +3121,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -3195,8 +3153,6 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 - Name
 
 - Distinguished name (DN)
-
-- Display name
 
 - Email address
 
@@ -3380,8 +3336,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -3461,8 +3415,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -3522,8 +3474,6 @@ The GenerateIncidentReport parameter specifies where to send the incident report
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -3853,8 +3803,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -4074,8 +4022,6 @@ The ModerateMessageByUser parameter specifies an action that forwards messages f
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -4453,8 +4399,6 @@ The RedirectMessageTo parameter specifies a rule action that redirects messages 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -4999,9 +4943,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -5030,9 +4976,11 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 

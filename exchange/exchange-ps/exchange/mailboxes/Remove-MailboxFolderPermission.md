@@ -48,8 +48,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -88,8 +86,6 @@ The User parameter specifies the mailbox, mail user, or mail-enabled security gr
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

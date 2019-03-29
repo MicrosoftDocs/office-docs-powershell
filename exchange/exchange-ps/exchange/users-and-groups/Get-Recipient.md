@@ -280,13 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

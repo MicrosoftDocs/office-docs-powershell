@@ -458,8 +458,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -470,7 +468,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding condition parameter to this exception is From.
 
@@ -793,9 +791,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -1044,7 +1044,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1075,7 +1075,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1096,8 +1096,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1108,7 +1106,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfFrom.
 
@@ -1229,8 +1227,6 @@ The Mailbox parameter specifies the mailbox that contains the Inbox rule. You ca
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1555,13 +1551,17 @@ For example:
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1622,15 +1622,17 @@ For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfSentTo.
 

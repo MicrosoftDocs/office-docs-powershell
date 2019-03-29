@@ -48,8 +48,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -135,8 +133,6 @@ The Member parameter specifies the recipient that you want to remove from the gr
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

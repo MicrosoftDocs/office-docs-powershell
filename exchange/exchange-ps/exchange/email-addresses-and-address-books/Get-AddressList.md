@@ -68,8 +68,6 @@ The Container parameter filters the results based on the location of the address
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID
