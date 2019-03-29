@@ -84,7 +84,7 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 
 - Alias
 
-You can't use this parameter in conjunction with the MailboxGuid or MoveRequestQueue parameters.
+You can't use this parameter with the MailboxGuid or MoveRequestQueue parameters.
 
 ```yaml
 Type: MoveRequestIdParameter
@@ -103,7 +103,7 @@ This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of the mailbox for which you want to remove the move request. If you specify the MailboxGuid parameter, you must also specify the MoveRequestQueue parameter.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -126,7 +126,7 @@ The MoveRequestQueue parameter specifies the database on which the move request 
 
 - Database name
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -176,6 +176,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
@@ -184,8 +199,6 @@ The ProxyToMailbox parameter specifies the move destination by the location of t
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

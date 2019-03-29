@@ -98,8 +98,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -128,8 +126,6 @@ The ManagedBy parameter specifies one or more group owners. A group must have at
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -553,11 +553,7 @@ Accept wildcard characters: False
 ### -JournalRecipient
 The JournalRecipient parameter specifies the journal recipient to use for per-database journaling for all mailboxes on the database. You can use any value that uniquely identifies the recipient. For example:
 
-For example:
-
 - Name
-
-- Display name
 
 - Alias
 

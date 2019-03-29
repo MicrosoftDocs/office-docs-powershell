@@ -14,7 +14,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-UrlTrace cmdlet to view the results of Safe Links actions in your cloud-based organization.
+Use the Get-UrlTrace cmdlet to view the results of Safe Links actions in your cloud-based organization. Currently, the date range can't be more than seven days.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

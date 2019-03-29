@@ -146,7 +146,8 @@ Set-OwaVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-WhatIf]
  [-WindowsAuthentication <$true | $false>]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1554,11 +1555,11 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEnabled
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
-- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
+- $true: The Journal folder is visible in Outlook on the web. This is the default value.
 
-- $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
+- $false: The Journal folder isn't visible in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -1573,7 +1574,11 @@ Accept wildcard characters: False
 ```
 
 ### -JunkEmailEnabled
-The JunkEmailEnabled parameter specifies whether the Junk Email management tools are enabled.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
+
+- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
+
+- $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -2087,6 +2092,8 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFoldersEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
 - $true: Search Folders are visible in Outlook on the Web. This is the default value.

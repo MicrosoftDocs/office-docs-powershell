@@ -22,30 +22,39 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- [-AllowCrossSiteRpcClientAccess] [-AlternateWitnessDirectory <NonRootLocalLongFullPath>]
- [-AlternateWitnessServer <FileShareWitnessServerName>] [-Confirm]
- [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>] [-DatacenterActivationMode <Off | DagOnly>]
- [-DiscoverNetworks] [-DomainController <Fqdn>]
- [-NetworkCompression <Disabled | Enabled | InterSubnetOnly | SeedOnly>]
- [-NetworkEncryption <Disabled | Enabled | InterSubnetOnly | SeedOnly>] [-ReplicationPort <UInt16>] [-WhatIf]
- [-WitnessDirectory <NonRootLocalLongFullPath>] [-WitnessServer <FileShareWitnessServerName>]
- [-AutoDagAllServersInstalled <$true | $false>] [-AutoDagAutoReseedEnabled <$true | $false>]
- [-AutoDagBitlockerEnabled <$true | $false>] [-AutoDagDatabaseCopiesPerDatabase <Int32>]
- [-AutoDagDatabaseCopiesPerVolume <Int32>] [-AutoDagDatabasesRootFolderPath <NonRootLocalLongFullPath>]
- [-AutoDagDiskReclaimerEnabled <$true | $false>] [-AutoDagFIPSCompliant <$true | $false>]
- [-AutoDagTotalNumberOfDatabases <Int32>] [-AutoDagTotalNumberOfServers <Int32>]
- [-AutoDagVolumesRootFolderPath <NonRootLocalLongFullPath>]
- [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
- [-MailboxLoadBalanceEnabled <$true | $false>] [-MailboxLoadBalanceOverloadedThreshold <Int32>] [-MailboxLoadBalanceRelativeLoadCapacity <Int32>]
- [-MailboxLoadBalanceUnderloadedThreshold <Int32>] [-ManualDagNetworkConfiguration <$true | $false>]
- [-ReplayLagManagerEnabled <$true | $false>] [-SkipDagValidation]
  [-ActivityState <NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare>]
- [-AutoDagAutoRedistributeEnabled <$true | $false>] [-AutoDagSIPEnabled <$true | $false>]
- [-DistributedStoreMembershipConfigOverride <String>] [-DxStoreSpareServers <String>]
- [-DxStoreWitnessServers <String>] [-FileSystem <NTFS | ReFS>] [-ForceSyncDistributedStoreSettings]
- [-IgnoreClusterErrors] [-MailboxLoadBalanceComputeCapacity <Int32>]
- [-MailboxLoadBalanceSellableStorage <ByteQuantifiedSize>] [-MetaCacheDatabaseVolumesPerServer <Int32>]
- [-PreferenceMoveFrequency <TimeSpan>] [-RequestedDistributedStoreConfig <String>] [-SiloName <String>]
+ [-AllowCrossSiteRpcClientAccess]
+ [-AlternateWitnessDirectory <NonRootLocalLongFullPath>]
+ [-AlternateWitnessServer <FileShareWitnessServerName>]
+ [-AutoDagAllServersInstalled <$true | $false>]
+ [-AutoDagAutoRedistributeEnabled <$true | $false>]
+ [-AutoDagAutoReseedEnabled <$true | $false>]
+ [-AutoDagBitlockerEnabled <$true | $false>]
+ [-AutoDagDatabaseCopiesPerDatabase <Int32>]
+ [-AutoDagDatabaseCopiesPerVolume <Int32>]
+ [-AutoDagDatabasesRootFolderPath <NonRootLocalLongFullPath>]
+ [-AutoDagDiskReclaimerEnabled <$true | $false>]
+ [-AutoDagTotalNumberOfDatabases <Int32>]
+ [-AutoDagTotalNumberOfServers <Int32>]
+ [-AutoDagVolumesRootFolderPath <NonRootLocalLongFullPath>]
+ [-Confirm]
+ [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
+ [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
+ [-DatacenterActivationMode <Off | DagOnly>]
+ [-DiscoverNetworks]
+ [-DomainController <Fqdn>]
+ [-FileSystem <NTFS | ReFS>]
+ [-ManualDagNetworkConfiguration <$true | $false>]
+ [-MetaCacheDatabaseVolumesPerServer <Int32>]
+ [-NetworkCompression <Disabled | Enabled | InterSubnetOnly | SeedOnly>]
+ [-NetworkEncryption <Disabled | Enabled | InterSubnetOnly | SeedOnly>]
+ [-PreferenceMoveFrequency <TimeSpan>]
+ [-ReplayLagManagerEnabled <$true | $false>]
+ [-ReplicationPort <UInt16>]
+ [-SkipDagValidation]
+ [-WhatIf]
+ [-WitnessDirectory <NonRootLocalLongFullPath>]
+ [-WitnessServer <FileShareWitnessServerName>]
  [<CommonParameters>]
 ```
 
@@ -141,6 +150,21 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ActivityState
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowCrossSiteRpcClientAccess
 This parameter is reserved for internal Microsoft use.
 
@@ -186,197 +210,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseAvailabilityGroupIpAddresses
-The DatabaseAvailabilityGroupIpAddresses parameter specifies one or more static IP addresses to the DAG when a Mailbox server is added to a DAG. If you omit the DatabaseAvailabilityGroupIpAddresses parameter when creating a DAG, the system attempts to lease one or more IP addresses from a Dynamic Host Configuration Protocol (DHCP) server in your organization to assign to the DAG. You must specify this parameter each time an additional IP address is added to the DAG, such as in the case of multi-subnet DAGs. You must also specify all IP addresses previously assigned to the DAG each time the DatabaseAvailabilityGroupIpAddresses parameter is used. Setting the DatabaseAvailabilityGroupIpAddresses parameter to a value of 0.0.0.0 automatically configures the DAG to use DHCP.
-
-```yaml
-Type: IPAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatacenterActivationMode
-The DatacenterActivationMode parameter specifies the datacenter activation mode for the DAG. Valid values are:
-
-- Off: Datacenter activation mode is disabled.
-
-- DagOnly: Datacenter activation mode is enabled.
-
-```yaml
-Type: Off | DagOnly
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DiscoverNetworks
-The DiscoverNetworks switch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
-
-By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworks switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkCompression
-The NetworkCompression parameter specifies the network compression option for the DAG. Valid values are:
-
-- Disabled: Network compression is disabled on all networks.
-
-- Enabled: Network compression is enabled on all networks.
-
-- InterSubnetOnly: Network compression is enabled only for inter-subnet communication.
-
-- SeedOnly: Network compression is enabled only for seeding.
-
-```yaml
-Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkEncryption
-The NetworkEncryption parameter specifies the network encryption option for the DAG. Valid values are:
-
-- Disabled: Network encryption is disabled on all networks.
-
-- Enabled: Network encryption is enabled on all networks.
-
-- InterSubnetOnly: Network encryption is enabled only for inter-subnet communication.
-
-- SeedOnly: Network encryption is enabled only for seeding.
-
-```yaml
-Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicationPort
-The ReplicationPort parameter specifies a Transmission Control Protocol (TCP) port for replication (log shipping and seeding) activity. If this parameter isn't specified, the default port for replication is TCP 64327.
-
-```yaml
-Type: UInt16
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WitnessDirectory
-The WitnessDirectory parameter specifies the name of the directory on the server that's used to store file share witness data. The specified directory must not be in use by any other DAGs.
-
-```yaml
-Type: NonRootLocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WitnessServer
-The WitnessServer parameter specifies the name of a server that will act as a witness for the DAG. The server specified can't be a member of the DAG.
-
-```yaml
-Type: FileShareWitnessServerName
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AutoDagAllServersInstalled
 This parameter is reserved for internal Microsoft use.
 
@@ -385,6 +218,21 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDagAutoRedistributeEnabled
+The AutoDagAutoRedistributeEnabled parameter specifies whether automatic DAG redistribution is enabled or disabled during AutoReseed. The default value is $true (enabled).
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -482,21 +330,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoDagFIPSCompliant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AutoDagTotalNumberOfDatabases
 This parameter is reserved for internal Microsoft use.
 
@@ -542,6 +375,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DagConfiguration
 This parameter is reserved for internal Microsoft use.
 
@@ -557,14 +409,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxLoadBalanceEnabled
-This parameter is reserved for internal Microsoft use.
+### -DatabaseAvailabilityGroupIpAddresses
+The DatabaseAvailabilityGroupIpAddresses parameter specifies one or more static IP addresses to the DAG when a Mailbox server is added to a DAG. If you omit the DatabaseAvailabilityGroupIpAddresses parameter when creating a DAG, the system attempts to lease one or more IP addresses from a Dynamic Host Configuration Protocol (DHCP) server in your organization to assign to the DAG. You must specify this parameter each time an additional IP address is added to the DAG, such as in the case of multi-subnet DAGs. You must also specify all IP addresses previously assigned to the DAG each time the DatabaseAvailabilityGroupIpAddresses parameter is used. Setting the DatabaseAvailabilityGroupIpAddresses parameter to a value of 0.0.0.0 automatically configures the DAG to use DHCP.
 
 ```yaml
-Type: $true | $false
+Type: IPAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -572,14 +424,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxLoadBalanceOverloadedThreshold
-This parameter is reserved for internal Microsoft use.
+### -DatacenterActivationMode
+The DatacenterActivationMode parameter specifies the datacenter activation mode for the DAG. Valid values are:
+
+- Off: Datacenter activation mode is disabled.
+
+- DagOnly: Datacenter activation mode is enabled.
 
 ```yaml
-Type: Int32
+Type: Off | DagOnly
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -587,74 +443,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxLoadBalanceRelativeLoadCapacity
-This parameter is reserved for internal Microsoft use.
+### -DiscoverNetworks
+The DiscoverNetworks switch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
 
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceUnderloadedThreshold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ManualDagNetworkConfiguration
-The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to $false, DAG networks are automatically configured. If this parameter is set to $true, you must manually configure DAG networks.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayLagManagerEnabled
-The ReplayLagManagerEnabled parameter specifies whether to disable the automatic playdown of log files for a lagged database copy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDagValidation
-The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when configuring the DAG. You don't need to specify a value with this switch.
+By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworks switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -662,89 +460,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ActivityState
-This parameter is reserved for internal Microsoft use.
+### -DomainController
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
-Type: NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDagAutoRedistributeEnabled
-The AutoDagAutoRedistributeEnabled parameter specifies whether automatic DAG redistribution is enabled or disabled during AutoReseed. The default value is $true (enabled).
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDagSIPEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DistributedStoreMembershipConfigOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DxStoreSpareServers
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DxStoreWitnessServers
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -771,59 +494,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceSyncDistributedStoreSettings
-This parameter is reserved for internal Microsoft use.
+### -ManualDagNetworkConfiguration
+The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to $false, DAG networks are automatically configured. If this parameter is set to $true, you must manually configure DAG networks.
 
 ```yaml
-Type: SwitchParameter
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreClusterErrors
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceComputeCapacity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceSellableStorage
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -839,6 +517,52 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkCompression
+The NetworkCompression parameter specifies the network compression option for the DAG. Valid values are:
+
+- Disabled: Network compression is disabled on all networks.
+
+- Enabled: Network compression is enabled on all networks.
+
+- InterSubnetOnly: Network compression is enabled only for inter-subnet communication.
+
+- SeedOnly: Network compression is enabled only for seeding.
+
+```yaml
+Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkEncryption
+The NetworkEncryption parameter specifies the network encryption option for the DAG. Valid values are:
+
+- Disabled: Network encryption is disabled on all networks.
+
+- Enabled: Network encryption is enabled on all networks.
+
+- InterSubnetOnly: Network encryption is enabled only for inter-subnet communication.
+
+- SeedOnly: Network encryption is enabled only for seeding.
+
+```yaml
+Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -865,14 +589,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RequestedDistributedStoreConfig
-This parameter is reserved for internal Microsoft use.
+### -ReplayLagManagerEnabled
+The ReplayLagManagerEnabled parameter specifies whether to disable the automatic playdown of log files for a lagged database copy.
 
 ```yaml
-Type: String
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -880,14 +604,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SiloName
-This parameter is reserved for internal Microsoft use.
+### -ReplicationPort
+The ReplicationPort parameter specifies a Transmission Control Protocol (TCP) port for replication (log shipping and seeding) activity. If this parameter isn't specified, the default port for replication is TCP 64327.
 
 ```yaml
-Type: String
+Type: UInt16
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDagValidation
+The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when configuring the DAG. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WitnessDirectory
+The WitnessDirectory parameter specifies the name of the directory on the server that's used to store file share witness data. The specified directory must not be in use by any other DAGs.
+
+```yaml
+Type: NonRootLocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WitnessServer
+The WitnessServer parameter specifies the name of a server that will act as a witness for the DAG. The server specified can't be a member of the DAG.
+
+```yaml
+Type: FileShareWitnessServerName
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -65,7 +65,7 @@ The RequestGuid and RequestQueue parameters are for debugging purposes only.
 ### -Identity
 The Identity parameter specifies the identity of the public folder migration request.
 
-You can't use this parameter in conjunction with the RequestGuid or RequestQueue parameters.
+You can't use this parameter with the RequestGuid or RequestQueue parameters.
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
@@ -84,7 +84,7 @@ This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the GUID of the migration request. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid

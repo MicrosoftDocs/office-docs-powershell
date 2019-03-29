@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Start-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Start-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-Confirm] [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,21 +49,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
