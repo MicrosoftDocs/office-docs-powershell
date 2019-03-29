@@ -46,9 +46,7 @@ This example restores the soft-deleted Office 365 Group named Marketing Departme
 ## PARAMETERS
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that you want to restore. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that you want to restore. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
 

@@ -79,9 +79,7 @@ The first command reads the CSV file and writes the information to the variable 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

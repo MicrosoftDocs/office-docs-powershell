@@ -43,9 +43,7 @@ This example adds members chris@contoso.com and michelle@contoso.com to the Offi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
 

@@ -43,9 +43,7 @@ This example removes members laura@contoso.com and julia@contoso.com from the Of
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
 

@@ -42,9 +42,7 @@ This example mail-enables the universal distribution group named Distribution Gr
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the universal security group or universal distribution group that you want to mail-enable. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the universal security group or universal distribution group that you want to mail-enable. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

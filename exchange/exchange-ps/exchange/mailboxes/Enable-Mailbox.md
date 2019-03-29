@@ -282,9 +282,7 @@ This example creates a remote archive for the existing on-premises user named Ay
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -402,9 +400,7 @@ Accept wildcard characters: False
 ### -LinkedMasterAccount
 This parameter is available only in on-premises Exchange.
 
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
-
-For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
 

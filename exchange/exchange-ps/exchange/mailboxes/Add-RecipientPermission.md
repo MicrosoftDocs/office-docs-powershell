@@ -108,9 +108,7 @@ You can specify the following types of users or groups (security principals) for
 
 - Security groups
 
-You can use any value that uniquely identifies the user or group.
-
-For example:
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
 

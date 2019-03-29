@@ -44,9 +44,7 @@ This example removes the distribution group named Temporary Staff.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to remove. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to remove. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

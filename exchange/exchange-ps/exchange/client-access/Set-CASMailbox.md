@@ -106,9 +106,7 @@ This example sets the display name and disables Outlook Anywhere access for the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

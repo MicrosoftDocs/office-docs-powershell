@@ -113,9 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

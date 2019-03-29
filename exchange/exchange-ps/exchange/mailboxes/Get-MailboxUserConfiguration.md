@@ -66,9 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the user configuration items you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the user configuration items you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

@@ -65,9 +65,7 @@ This example mail-enables user John with the external email address john@contoso
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to mail-enable. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user that you want to mail-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
 

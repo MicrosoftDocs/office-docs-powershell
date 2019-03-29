@@ -176,9 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the dynamic distribution group that you want to view. You can use any value that uniquely identifies the dynamic distribution group.
-
-For example:
+The Identity parameter specifies the dynamic distribution group that you want to view. You can use any value that uniquely identifies the dynamic distribution group. For example:
 
 - Name
 
@@ -245,9 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter filters the results by the owner of the group. You can use any value that uniquely identifies the owner.
-
-For example:
+The ManagedBy parameter filters the results by the owner of the group. You can use any value that uniquely identifies the owner. For example:
 
 - Name
 

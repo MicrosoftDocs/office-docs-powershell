@@ -62,9 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the non-mail-enabled contact that you want to mail-enable. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the non-mail-enabled contact that you want to mail-enable. You can use any value that uniquely identifies the contact. For example:
 
 - Name
 

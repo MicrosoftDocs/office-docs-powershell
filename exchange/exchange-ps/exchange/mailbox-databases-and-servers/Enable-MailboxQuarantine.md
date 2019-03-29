@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  MailboxIdentity
+### MailboxIdentity
 ```
 Enable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
  [-AllowMigration]
@@ -62,9 +62,7 @@ This example quarantines the mailbox for the user Brian Johnson.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to quarantine. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to quarantine. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

@@ -81,9 +81,7 @@ This example returns detailed information about the specified device on Lila's m
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
