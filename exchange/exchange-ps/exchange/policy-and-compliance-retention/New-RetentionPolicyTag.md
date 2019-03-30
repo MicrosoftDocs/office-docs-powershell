@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ### -RetentionEnabled
 The RetentionEnabled parameter specifies whether the tag is enabled. When set to $false, the tag is disabled, and no retention action is taken on messages that have the tag applied.
 
-Messages with a disabled tag are still considered tagged, so any default policy tags of the same type (delete of archive) in the user's retention policy aren't applied to such messages.
+Messages with a disabled tag are still considered tagged, so any default policy tags of the same type (delete or archive) in the user's retention policy aren't applied to such messages.
 
 When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
 
