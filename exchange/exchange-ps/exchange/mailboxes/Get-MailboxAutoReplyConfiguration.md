@@ -70,8 +70,6 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)

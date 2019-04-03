@@ -65,7 +65,7 @@ This example returns all migration requests that have the name PFMigrate10\_11\_
 ### -BatchName
 The BatchName parameter specifies the name that was given to a batch migration request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
@@ -126,7 +126,7 @@ The Identity parameter specifies the identity of the public folder. You can use 
 
 - Name
 
-You can't use this parameter in conjunction with the following parameters:
+You can't use this parameter with the following parameters:
 
 - BatchName
 

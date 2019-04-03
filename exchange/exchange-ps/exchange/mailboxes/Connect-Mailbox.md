@@ -250,8 +250,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -551,8 +549,6 @@ The User parameter specifies the user object in Active Directory that you want t
 For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

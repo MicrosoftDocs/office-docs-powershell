@@ -47,15 +47,13 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
--  \<domain name>\\\<account name>
+- \<domain name>\\\<account name>
 
 - Email address
 

@@ -173,8 +173,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -226,8 +224,6 @@ The ManagedBy parameter filters the results by the owner of the group. You can u
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

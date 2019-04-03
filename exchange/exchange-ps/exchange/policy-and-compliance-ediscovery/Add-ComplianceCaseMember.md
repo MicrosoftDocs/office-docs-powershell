@@ -72,8 +72,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - Canonical DN

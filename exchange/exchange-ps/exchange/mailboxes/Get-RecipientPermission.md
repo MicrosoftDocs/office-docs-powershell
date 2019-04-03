@@ -81,13 +81,9 @@ You can specify any type of recipient, for example:
 
 - Dynamic distribution groups
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -157,8 +153,6 @@ You can use any value that uniquely identifies the user or group.
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

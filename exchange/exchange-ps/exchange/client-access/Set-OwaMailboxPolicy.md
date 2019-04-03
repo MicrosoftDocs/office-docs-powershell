@@ -123,7 +123,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1090,7 +1091,7 @@ Accept wildcard characters: False
 ### -JunkEmailEnabled
 This parameter is available only in on-premises Exchange.
 
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
 - $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 

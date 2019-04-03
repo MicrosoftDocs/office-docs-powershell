@@ -47,8 +47,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -135,8 +133,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -152,8 +148,6 @@ The Member parameter specifies the recipient that you want to add to the group. 
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 

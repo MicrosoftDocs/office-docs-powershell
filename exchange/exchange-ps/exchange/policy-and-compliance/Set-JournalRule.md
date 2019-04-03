@@ -104,7 +104,19 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEmailAddress
-The JournalEmailAddress parameter specifies a journal recipient. Journal reports for the specified rule are sent to the journal recipient.
+The JournalEmailAddress parameter specifies a journal recipient. Journal reports for the specified rule are sent to the journal recipient. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 ```yaml
 Type: RecipientIdParameter

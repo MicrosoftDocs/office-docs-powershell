@@ -117,21 +117,27 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use the following values:
+The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SMTP address
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.
 

@@ -25,7 +25,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-ExportAsWav <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,7 +33,6 @@ Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdPara
 Export-UMPrompt -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-ExportAsWav <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -138,23 +136,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExportAsWav
-This parameter is only available in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

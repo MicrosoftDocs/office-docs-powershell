@@ -49,8 +49,6 @@ For example:
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -76,13 +74,9 @@ Accept wildcard characters: False
 ### -Links
 The Links parameter specifies the recipients to add to the Office 365 Group. You specify whether these recipients are members, owners or subscribers by using the LinkType parameter.
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

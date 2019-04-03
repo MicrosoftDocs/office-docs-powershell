@@ -297,7 +297,27 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available or functional only in Exchange Server 2010.
 
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
+The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -447,8 +467,6 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 For example:
 
 - Name
-
-- Display name
 
 - Alias
 
