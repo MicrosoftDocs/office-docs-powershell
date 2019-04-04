@@ -754,14 +754,14 @@ Accept wildcard characters: False
 PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
 Please read documentation here to understand Conditional Access Policy usage in SharePoint Online "https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices"
 ```powershell
-Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess 
+Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess 
 ```
 
 ### -AllowEditing  
 PARAMVALUE: $true | $false 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 ```powershell
-Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
+Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
 ```
 
 ### -LimitedAccessFileType 
@@ -771,7 +771,7 @@ The following parameters can be used with -ConditionalAccessPolicy AllowLimitedA
 -LimitedAccessFileType WebPreviewableFiles (default) Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
 -LimitedAccessFileType OtherFiles Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 ```powershell
-Set-SPOTenant -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
+Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
 ```
 
 ### CommonParameters
