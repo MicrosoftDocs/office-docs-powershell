@@ -46,6 +46,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
  [-CustomizedExternalSharingServiceUrl <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [<CommonParameters>]
 ```
 
@@ -1302,6 +1303,30 @@ When the feature is enabled, the Content Type Hub will push content types to One
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
 ```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
+```
+
+### -ConditionalAccessPolicy  
+PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+Please read documentation here to understand Conditional Access Policy usage in SharePoint Online "https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices"
+```powershell
+Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess 
+```
+
+### -AllowEditing  
+PARAMVALUE: $true | $false 
+Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+```powershell
+Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
+```
+
+### -LimitedAccessFileType 
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
+-OfficeOnlineFilesOnly Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default) Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+```powershell
+Set-SPOTenant -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
 ```
 
 ### CommonParameters
