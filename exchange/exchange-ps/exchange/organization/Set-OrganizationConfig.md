@@ -93,6 +93,7 @@ Set-OrganizationConfig
  [-SmtpActionableMessagesEnabled <$true | $false>]
  [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
  [-VisibleMeetingUpdateProperties <String>]
+ [-WebPushNotificationsDisabled <$true | $false>]
  [-WebSuggestedRepliesDisabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -2351,6 +2352,26 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -WebPushNotificationsDisabled
+This parameter is available only in the cloud-based service.
+
+The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
+
+- $true: Web Push Notifications are disabled. 
+
+- $false: Web Push Notifications are enabled. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

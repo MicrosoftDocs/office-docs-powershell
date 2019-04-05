@@ -2,7 +2,7 @@
 localization_priority: Normal
 ---
 
-#Microsoft Teams cmdlet reference
+# Microsoft Teams cmdlet reference
 
 Welcome to the Microsoft Teams PowerShell cmdlet help references. Cmdlets for managing Microsoft Teams service are split between two powershell modules: the Skype for Business Online module and the Microsoft Teams module.
 
