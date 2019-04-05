@@ -1,4 +1,12 @@
 {
+    "exchserver-ps-2019": {
+        "serviceMap": "mapping/exchange2019mapping.json",
+        "packageRoot": "exchange-ps/exchange",
+        "conceptualToc":"docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/exchserver-ps-2019/toc.yml",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
+    },
     "exchserver-ps-2016": {
         "serviceMap": "mapping/exchange2016mapping.json",
         "packageRoot": "exchange-ps/exchange",
