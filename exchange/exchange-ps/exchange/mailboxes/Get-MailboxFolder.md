@@ -134,9 +134,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox and the folder that you want to view. If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: \<Mailbox Identity\>:\<Parent\>.
 
-Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox.
-
-For example:
+Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. For example:
 
 - Name
 

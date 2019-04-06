@@ -64,7 +64,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-
 ### -Close
 The Close switch specifies that you want to close the eDiscovery case. You don't need to specify a value with this switch.
 

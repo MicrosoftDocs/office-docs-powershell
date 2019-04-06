@@ -45,9 +45,7 @@ This example clears the text messaging account settings and notification setting
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox. You can any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox. You can any value that uniquely identifies the mailbox. For example:
 
 - Name
 

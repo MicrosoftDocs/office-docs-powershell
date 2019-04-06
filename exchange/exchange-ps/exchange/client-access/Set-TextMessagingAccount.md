@@ -57,9 +57,7 @@ This example sets the region, mobile operator and notification phone number for 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

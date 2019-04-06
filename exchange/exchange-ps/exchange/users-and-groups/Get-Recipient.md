@@ -342,8 +342,8 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -IncludeSoftDeletedRecipients
 The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted recipients in the results. You don't need to specify a value with this switch.
 

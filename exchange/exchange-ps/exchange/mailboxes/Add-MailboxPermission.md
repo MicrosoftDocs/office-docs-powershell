@@ -94,9 +94,7 @@ In Office 365, this example assigns the administrator account admin@contoso.com 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -201,9 +199,7 @@ Accept wildcard characters: False
 ### -Owner
 The Owner parameter specifies the owner of the mailbox object. The default mailbox owner is NT AUTHORITY\\SELF.
 
-The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
-
-For example:
+The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example: For example:
 
 - Name
 
@@ -228,9 +224,7 @@ Accept wildcard characters: False
 ### -User
 The User parameter specifies the user that you're assigning the permission to.
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example:
-
-For example:
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
 

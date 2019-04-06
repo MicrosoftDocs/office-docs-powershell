@@ -52,7 +52,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [<CommonParameters>]
 ```
 
-###  MailboxIDMigrationLocalMailboxRestore
+### MailboxIDMigrationLocalMailboxRestore
 ```
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]

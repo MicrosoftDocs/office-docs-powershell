@@ -518,9 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMailboxes
-The SourceMailboxes parameter specifies the mailboxes to be searched. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The SourceMailboxes parameter specifies the mailboxes to be searched. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -593,9 +591,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
-The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient.
-
-For example:
+The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -624,9 +620,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
