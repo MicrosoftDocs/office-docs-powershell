@@ -41,9 +41,7 @@ This example removes the Office 365 Group named Research Department.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to remove. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to remove. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
 

@@ -258,9 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -FreeBusyAccessScope
-The FreeBusyAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group.
-
-For example:
+The FreeBusyAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -348,9 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailTipsAccessScope
-The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group.
-
-For example:
+The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
