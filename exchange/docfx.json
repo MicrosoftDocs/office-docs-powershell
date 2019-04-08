@@ -7,7 +7,7 @@
           "toc.yml"
         ],
         "src": "docs-conceptual",
-        "version":"exchserver-ps-2010",
+        "version":"exchserver-ps-2019",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -42,6 +42,23 @@
         ],
         "src": "docs-conceptual",
         "version":"exchserver-ps-2013",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"exchserver-ps-2010",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -108,6 +125,22 @@
           "**/*.md"         
         ],
         "src": "exchange-ps/exchange",
+        "version": "exchserver-ps-2019",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchserver-ps-2019",
+        "version": "exchserver-ps-2019",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
         "dest": "module"
       },
@@ -137,18 +170,18 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.md"         
         ],
         "src": "exchange-ps/exchange",
-        "version": "eop-ps",
+        "version": "exchserver-ps-2010",
         "dest": "module"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps/exchange/eop-ps",
-        "version": "eop-ps",
+        "src": "exchange-ps/exchange/exchserver-ps-2010",
+        "version": "exchserver-ps-2010",
         "dest": "module/exchange-ps"
       },
       {
@@ -172,22 +205,6 @@
           "**/*.md"         
         ],
         "src": "exchange-ps/exchange",
-        "version": "exchserver-ps-2010",
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "exchange-ps/exchange/exchserver-ps-2010",
-        "version": "exchserver-ps-2010",
-        "dest": "module/exchange-ps"
-      },
-      {
-        "files": [
-          "**/*.md"         
-        ],
-        "src": "exchange-ps/exchange",
         "version": "o365scc-ps",
         "dest": "module"
       },
@@ -200,7 +217,24 @@
         "dest": "module/exchange-ps"
       },
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "eop-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/eop-ps",
+        "version": "eop-ps",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"],
         "src": "exchange-ps/redirect",
         "version": "exchange-ps",
         "dest": "module/exchange"
@@ -212,18 +246,7 @@
           "**/*.png",
           "**/*.jpg"
         ],
-        "version": "exchserver-ps-2010",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      },
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "version": "o365scc-ps",
+        "version": "exchserver-ps-2019",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -256,7 +279,7 @@
           "**/*.png",
           "**/*.jpg"
         ],
-        "version": "eop-ps",
+        "version": "exchserver-ps-2010",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -272,26 +295,51 @@
           "**/obj/**",
           "**/includes/**"
         ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "o365scc-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "eop-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
       }
     ],
     "versions": {
+      "exchserver-ps-2019": {
+        "dest": "exchserver-ps-2019"
+      },
       "exchserver-ps-2016": {
         "dest": "exchserver-ps-2016"
       },
       "exchserver-ps-2013": {
         "dest": "exchserver-ps-2013"
       },
-      "eop-ps": {
-        "dest": "eop-ps"
+      "exchserver-ps-2010": {
+        "dest": "exchserver-ps-2010"
       },
       "exchonline-ps": {
         "dest": "exchonline-ps"
       },
-      "exchserver-ps-2010": {
-        "dest": "exchserver-ps-2010"
-      },
       "o365scc-ps": {
         "dest": "o365scc-ps"
+      },
+      "eop-ps": {
+        "dest": "eop-ps"
       },
       "exchange-ps": {
         "dest": "exchange-ps"
@@ -303,7 +351,7 @@
       "author": "chrisda",
       "ms.author": "chrisda",
       "manager": "serdars",
-      "ms.date": "09/25/2017",
+      "ms.date": "04/08/2019",
       "ms.topic": "reference",
       "ms.service": "exchange-powershell",
       "ms.devlang": "powershell",
