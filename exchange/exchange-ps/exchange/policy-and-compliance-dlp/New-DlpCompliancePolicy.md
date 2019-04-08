@@ -21,13 +21,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-DlpCompliancePolicy [-Name] <String> [-Comment <String>] [-Confirm]
- [-ExchangeLocation <MultiValuedProperty>] [-ExchangeOnPremisesLocation <MultiValuedProperty>] [-Force]
+New-DlpCompliancePolicy [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-ExchangeSenderMemberOf <SmtpAddress[]>]
+ [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-Force]
  [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
- [-OneDriveLocation <MultiValuedProperty>] [-OneDriveLocationException <MultiValuedProperty>]
- [-SharePointLocation <MultiValuedProperty>] [-SharePointLocationException <MultiValuedProperty>]
+ [-OneDriveLocation <MultiValuedProperty>]
+ [-OneDriveLocationException <MultiValuedProperty>]
+ [-Priority <Int32>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-SharePointLocationException <MultiValuedProperty>]
  [-SharePointOnPremisesLocationException <MultiValuedProperty>]
- [-SharePointServerLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-SharePointServerLocation <MultiValuedProperty>]
+ [-TeamsLocation <MultiValuedProperty>]
+ [-TeamsLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,11 +126,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExchangeOnPremisesLocation
-This parameter is reserved for internal Microsoft use.
+### -ExchangeSenderMemberOf
+{{ Fill ExchangeSenderMemberOf Description }}
 
 ```yaml
-Type: MultiValuedProperty
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOfException
+{{ Fill ExchangeSenderMemberOfException Description }}
+
+```yaml
+Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -202,6 +228,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Priority
+{{ Fill Priority Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharePointLocation
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
@@ -240,7 +281,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MultiValuedProperty
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -253,6 +294,36 @@ Accept wildcard characters: False
 
 ### -SharePointServerLocation
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLocation
+{{ Fill TeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLocationException
+{{ Fill TeamsLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty

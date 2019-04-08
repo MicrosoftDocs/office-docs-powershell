@@ -123,7 +123,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -292,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedMimeTypes
-The AllowedMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
+The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
 - image/bmp
 
@@ -375,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedMimeTypes
-The BlockedMimeTypes parameter specifies MIME extentions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
+The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
 - application/hta
 
@@ -435,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -477,7 +478,7 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additioanlly configure a Conditional Access policy in the Azure Active Directory Portal.
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additionally configure a Conditional Access policy in the Azure Active Directory Portal.
 
 Valid values are:
 
@@ -639,7 +640,7 @@ The DisableFacebook switch specifies whether users can synchronize their Faceboo
 
 - To disable Facebook integration, use this switch without a value.
 
-- To enable Facebook ingetration after it's been disabled, use this exact syntax: -DisableFacebook:$false.
+- To enable Facebook integration after it's been disabled, use this exact syntax: -DisableFacebook:$false.
 
 Note that the value of this parameter is stored in the FacebookEnabled property in the output of the Get-OwaMailboxPolicy cmdlet.
 
@@ -774,7 +775,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveMimeTypes
-The ForceSaveMimeTypes parameter specifies the MIME extentions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
+The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
 - Application/futuresplash
 
@@ -994,6 +995,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -InterestingCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
@@ -1090,7 +1092,7 @@ Accept wildcard characters: False
 ### -JunkEmailEnabled
 This parameter is available only in on-premises Exchange.
 
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
 - $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 
@@ -1223,8 +1225,6 @@ Accept wildcard characters: False
 ```
 
 ### -OnSendAddinsEnabled
-This parameter is available or functional only in the cloud-based service.
-
 The OnSendAddinsEnabled parameter specifies whether to enable or disable on send add-ins in Outlook on the web (add-ins that support events when a user clicks Send). Valid values are:
 
 - $true: On send add-ins are enabled.
@@ -1235,7 +1235,7 @@ The OnSendAddinsEnabled parameter specifies whether to enable or disable on send
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1672,7 +1672,7 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom Sharepoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
 
 - $true: The custom SharePoint page is skipped when a user creates an Office 365 group in Outlook on the web. This is the default value.
 
@@ -1821,7 +1821,7 @@ This parameter is available only in the cloud-based service.
 
 The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
 
-- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over emailp.
+- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over email.
 
 - $false: Third-party attachments are disabled in Outlook on the web. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
 
@@ -2243,7 +2243,7 @@ Accept wildcard characters: False
 ### -WebReadyMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
+The WebReadyMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
 
 - application/msword
 

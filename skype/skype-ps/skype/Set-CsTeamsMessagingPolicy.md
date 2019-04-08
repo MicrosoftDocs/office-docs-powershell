@@ -34,7 +34,7 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
 ```
 
 ## DESCRIPTION
- The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify. This cmdlet updates a Teams messaging policy. Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
+ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify. This cmdlet updates a Teams messaging policy. Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
 
 
 ## EXAMPLES

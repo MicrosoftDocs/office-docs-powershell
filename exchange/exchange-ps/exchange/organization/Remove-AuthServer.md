@@ -35,12 +35,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AuthServer AMC
 ```
 
-This example removes the authorization server AMC.
+This example removes the authorization server named AMC.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the authorization server.
+The Identity parameter specifies the authorization server object that you want to remove. You can use any value that uniquely identifies the authorization server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: AuthServerIdParameter

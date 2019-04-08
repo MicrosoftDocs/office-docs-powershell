@@ -107,7 +107,7 @@ The Identity parameter specifies the identity of the restore request. The Identi
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
 
-This parameter can't be used in conjunction with the MRSInstance or RequestQueue parameters.
+You can't use this parameter with the MRSInstance or RequestQueue parameters.
 
 ```yaml
 Type: MailboxRestoreRequestIdParameter
@@ -126,7 +126,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
-This parameter can't be used in conjunction with the Identity or RequestQueue parameters.
+You can't use this parameter with the Identity or RequestQueue parameters.
 
 ```yaml
 Type: Fqdn

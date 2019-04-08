@@ -23,12 +23,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>]  [-ExchangeServer <String>] 
- [-MailboxPermission <Admin | FullAccess>]  [-MaxConcurrentIncrementalSyncs <Unlimited>] 
- [-MaxConcurrentMigrations <Unlimited>] [-NspiServer <String>]
- [-Port <Int32>] [-RemoteServer <Fqdn>] [-RpcProxyServer <Fqdn>] [-Security <None | Ssl | Tls>]
- [-SkipVerification] [-SourceMailboxLegacyDN <String>] [-TestMailbox <MailboxIdParameter>] [-WhatIf]
- [-Partition <MailboxIdParameter>] [-PublicFolderDatabaseServerLegacyDN <String>] [<CommonParameters>]
+ [-Confirm]
+ [-Credentials <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ExchangeServer <String>]
+ [-MailboxPermission <Admin | FullAccess>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-NspiServer <String>]
+ [-Partition <MailboxIdParameter>]
+ [-Port <Int32>]
+ [-PublicFolderDatabaseServerLegacyDN <String>]
+ [-RemoteServer <Fqdn>]
+ [-RpcProxyServer <Fqdn>]
+ [-Security <None | Ssl | Tls>]
+ [-SkipVerification]
+ [-SourceMailboxLegacyDN <String>]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -246,6 +258,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Port
 This parameter is available only in the cloud-based service.
 
@@ -253,6 +282,23 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderDatabaseServerLegacyDN
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -373,36 +419,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderDatabaseServerLegacyDN
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

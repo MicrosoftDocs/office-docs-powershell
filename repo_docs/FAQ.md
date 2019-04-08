@@ -72,7 +72,7 @@ Some examples are:
 
 Every folder must have this TOC file.
 When you browse the list of cmdlets in the Reference folder this is the file you see.
-For example, https://docs.microsoft.com/en-us/powershell/module/skype/?view=skype-ps.
+For example, https://docs.microsoft.com/powershell/module/skype/?view=skype-ps.
 Note that docs.microsoft.com automatically strips out the note about manually entering a description.
 It ONLY strips this out if it is in the exact format given. 
 Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
@@ -140,7 +140,7 @@ The system was designed to be as simple as possible in order to achieve three pr
     The first two places the PowerShell reference content is surfaces is Get-Help in PowerShell itself and the docs.microsoft.com website.
     In the future the content can also be surfaced in an iOS app, Android app, Windows Universal app, and other mechanisms. 
     With a simple, centralized, system for the source of truth, in GitHub, it becomes much easier to surface content using multiple mechanisms since GitHub is not tailored for once specific location, such as Get-Help. 
-    If the GitHub repo focused on one specific site or mechanism then surfacing from other mechansisms could become too complex or could exponentially expound the effort required.
+    If the GitHub repo focused on one specific site or mechanism then surfacing from other mechanisms could become too complex or could exponentially expound the effort required.
 
 1. Keep content fresh and up to date.
 

@@ -41,13 +41,9 @@ This example disables Focused Inbox for the mailbox of laura@contoso.com.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -55,7 +51,7 @@ For example:
 
 - Canonical DN
 
--  \<domain name>\\\<account name>
+- \<domain name>\\\<account name>
 
 - Email address
 

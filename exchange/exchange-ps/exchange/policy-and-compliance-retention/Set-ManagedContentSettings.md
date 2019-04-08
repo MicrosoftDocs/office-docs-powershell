@@ -65,7 +65,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-The AddressForJournaling parameter specifies the address of the journaling recipient that's the destination of journaling operations.
+The AddressForJournaling parameter specifies the journaling recipient where journaled messages are sent. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 ```yaml
 Type: RecipientIdParameter

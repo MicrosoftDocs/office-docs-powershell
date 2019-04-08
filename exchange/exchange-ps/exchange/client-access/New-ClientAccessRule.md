@@ -22,13 +22,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-ClientAccessRule [-Name] <String> -Action <AllowAccess | DenyAccess>
- [-AnyOfAuthenticationTypes <MultiValuedProperty>] [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
- [-AnyOfProtocols <MultiValuedProperty>] [-Confirm] [-DatacenterAdminsOnly <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
- [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>] [-ExceptAnyOfProtocols <MultiValuedProperty>]
- [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-Priority <Int32>] [-Scope <All | Users>]
- [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-UserRecipientFilter <String>] [-WhatIf]
- [<CommonParameters>]
+ [-AnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-AnyOfProtocols <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-ExceptAnyOfProtocols <MultiValuedProperty>]
+ [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-Priority <Int32>] [-Scope <All | Users>]
+ [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-UserRecipientFilter <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -204,21 +211,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatacenterAdminsOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
