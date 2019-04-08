@@ -10,7 +10,7 @@ ms.author: antonla
 # Set-SPOOrgNewsSite
 
 ## SYNOPSIS
-Marks a site as one of multile possible tenant's organizational news sites. Requires Global administrator or SharePoint administrator permissions.
+Marks a site as one of multiple possible tenant's organizational news sites. Requires Global administrator or SharePoint administrator permissions.
 
 ## SYNTAX
 
