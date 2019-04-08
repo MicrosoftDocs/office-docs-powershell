@@ -470,11 +470,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies that all mailboxes being moved from the specified source database are returned. You can use the following values:
+The SourceDatabase parameter returns all mailboxes that are being moved from the specified source mailbox database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -527,11 +529,13 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies whether to return all mailboxes that are being moved to the specified target database. You can use the following values:
+The TargetDatabase parameter returns all mailboxes that are being moved to the specified target mailbox database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
