@@ -206,9 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the UM-enabled mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the UM-enabled mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

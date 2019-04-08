@@ -38,7 +38,6 @@ This example remove the authentication policy named "Engineering Group"
 
 ## PARAMETERS
 
-
 ### -Identity
 The Identity parameter specifies the authentication policy you want to remove. You can use any value that uniquely identifies the policy. For example:
 

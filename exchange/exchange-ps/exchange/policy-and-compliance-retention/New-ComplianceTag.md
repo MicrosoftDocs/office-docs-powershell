@@ -25,8 +25,11 @@ New-ComplianceTag [-Name] <String>
  [-Comment <String>]
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
  [-IsRecordLabel <$true | $false>]
  [-Notes <String>]
+ [-Regulatory <$true | $false>]
  [-RetentionAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
@@ -126,6 +129,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePlanProperty
+{{ Fill FilePlanProperty Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsRecordLabel
 The IsRecordLabel parameter specifies whether the label is a record label. Valid values are:
 
@@ -150,6 +183,21 @@ The Notes parameter specifies an optional note. If you specify a value that cont
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Regulatory
+{{ Fill Regulatory Description }}
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

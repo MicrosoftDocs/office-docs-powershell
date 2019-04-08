@@ -96,9 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
-
-For example:
+The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...). For example:
 
 - @("Enabled=true")
 
