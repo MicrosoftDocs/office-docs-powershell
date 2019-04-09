@@ -1503,7 +1503,7 @@ The ReportJunkEmailEnabled parameter specifies whether users can report messages
 
 - $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
 
-- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available.
+- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available. Users can stil mark messages as junk, phishing, or not junk, but they won't be able to report messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
