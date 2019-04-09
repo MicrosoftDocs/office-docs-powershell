@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in the Recoverable Items folder in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
