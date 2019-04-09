@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ### -Local
 This parameter is available only in on-premises Exchange.
 
-The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directoryforest). You don't need to specify a value with this switch.
+The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -449,7 +449,13 @@ Accept wildcard characters: False
 ### -SourcePublicFolderDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourcePublicFolderDatabase parameter specifies the name of the source public folder database that's used in a public folder migration.
+The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

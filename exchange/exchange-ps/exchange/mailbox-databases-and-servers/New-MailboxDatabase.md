@@ -254,7 +254,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database.
+The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database. You can use any value that uniquely identifies the public folder database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
