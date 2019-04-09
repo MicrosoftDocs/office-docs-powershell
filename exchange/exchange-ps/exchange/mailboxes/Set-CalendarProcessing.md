@@ -118,13 +118,9 @@ This example rejects meeting requests from any user who isn't a member of the Ex
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -365,15 +361,9 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. Any in-policy meeting requests from these users are automatically approved.
-
-You can use any value that uniquely identifies the recipient.
-
-For example:
+The BookInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the users. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -384,6 +374,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -718,15 +710,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestInPolicy
-The RequestInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. All in-policy meeting requests from these users are subject to approval by a resource mailbox delegate.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -737,6 +723,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -751,15 +739,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestOutOfPolicy
-The RequestOutOfPolicy parameter specifies a comma-separated list of users who are allowed to submit out-of-policy requests.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestOutOfPolicy parameter specifies users who are allowed to submit out-of-policy requests that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -771,7 +753,7 @@ For example:
 
 - GUID
 
-Out-of-policy requests are subject to approval by a resource mailbox delegate.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -786,15 +768,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceDelegates
-The ResourceDelegates parameter specifies a comma-separated list of users who are resource mailbox delegates. Resource mailbox delegates can approve or reject requests sent to the resource mailbox.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The ResourceDelegates parameter specifies users can approve or reject requests that are sent to the resource mailbox. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -805,6 +781,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]

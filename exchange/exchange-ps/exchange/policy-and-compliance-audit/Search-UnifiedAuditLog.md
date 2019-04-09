@@ -378,14 +378,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
-> [!NOTE] `-OutVariable` accepts objects of `ArrayList` list type.  
-> Below is a quick example of how `-OutVariable` can be used:
-> ```
-> $start = (Get-Date).AddDays(-1)
-> $end = (Get-Date).AddDays(-0.5)
-> $auditData = New-Object System.Collections.ArrayList
-> Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
-> ```
 ## INPUTS
 
 ###  
@@ -393,6 +385,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
+The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
+$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; 
+Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 

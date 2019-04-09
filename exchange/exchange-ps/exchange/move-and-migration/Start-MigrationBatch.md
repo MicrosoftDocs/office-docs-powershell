@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Start-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-Validate] [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Start-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-Validate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +100,23 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Validate
 The Validate parameter specifies whether to start the migration batch in the validation stage of the migration process. If you include this parameter, the migration performs a validation check of the mailboxes in the batch.
 
@@ -119,21 +140,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

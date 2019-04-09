@@ -21,8 +21,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
- [-RetentionDuration <Unlimited>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
+ [-Notes <String>]
+ [-RetentionDuration <Unlimited>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,6 +94,74 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EventType
+The EventType specifies the retention rule that's associated with the label. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use the Get-RetentionComplianceRule cmdlet to view the available retention rules.
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePlanProperty
+{{ Fill FilePlanProperty Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameter specifies an optional note. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is a user note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

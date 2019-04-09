@@ -15,21 +15,23 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-RecoverableItems items cmdlet to view deleted items in the Recoverable Items folder in mailboxes. After you find the deleted items, you use the Restore-RecoverableItems cmdlet to restore them.
 
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
 Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
-[-EntryID <String>]
-[-FilterEndTime <DateTime>]
-[-FilterItemType <String>]
-[-FilterStartTime <DateTime>]
-[-LastParentFolderID <String>]
-[-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
-[-SubjectContains <String>]
-[<CommonParameters>]
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,13 +49,9 @@ This example returns all of the available recoverable deleted messages with the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

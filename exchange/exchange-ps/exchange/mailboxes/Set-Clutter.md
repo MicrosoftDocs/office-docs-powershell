@@ -39,13 +39,9 @@ This example disables Clutter for the user Alexander Martinez.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

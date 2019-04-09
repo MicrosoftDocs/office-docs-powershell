@@ -50,13 +50,9 @@ This example sets the scope of the search to the entire forest by running the Se
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
