@@ -139,11 +139,13 @@ This parameter is available only in on-premises Exchange.
 
 This parameter is for debugging purposes only.
 
-The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use one of the following values:
+The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity or MRSInstance parameters.
 

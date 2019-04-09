@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMeetingDuration
-The DefaultMeetingDuration parameter specifies the default duration in minutes for new meetings. The default value is 30 minutes.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
