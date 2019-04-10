@@ -32,6 +32,7 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-ResultSize <Unlimited>]
  [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>]
  [-SubjectContains <String>]
+ [-NoOutput]
  [<CommonParameters>]
 ```
 
@@ -77,6 +78,24 @@ laura@contoso.com
 julia@contoso.com
 
 The first command reads the CSV file and writes the information to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
+
+### -------------------------- Example 3 --------------------------
+```
+Restore-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY18 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+```
+
+After using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items from multiple specified mailboxes:
+
+- Mailbox: malik@contoso.com, lillian@contoso.com
+
+- Item type: Email message
+
+- Message subject: COGS FY18 Review
+
+- Location: Recoverable Items\Deletions
+
+- Date range: 3/15/2019 to 3/25/2018
+
 
 ## PARAMETERS
 
@@ -204,6 +223,22 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -MaxParallelSize
+The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems.
+
+Values for -MaxParallelSize range from [1,10]
+
+```
+Restore-RecoverableItems -Identity alexandria@contoso.com -MaxParallelSize = 5
+```
+
+### -NoOutput
+The NoOutput parameter will ignore the output object and restore items directly without any output in console.
+
+```
+Restore-RecoverableItems -Identity alvin@contoso.com -NoOutput
 ```
 
 ### -ResultSize
