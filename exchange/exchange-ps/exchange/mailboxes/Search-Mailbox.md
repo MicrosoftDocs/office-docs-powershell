@@ -131,13 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -185,25 +181,29 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the identity of the destination mailbox where search results are copied. You can use the following values:
+The TargetMailbox parameter specifies the destination mailbox where search results are copied. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
 
 - Alias
 
-- Display name
+- Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- SMTP address
+- \<domain name\>\\\<account name\>
 
-- DN
+- Email address
 
-- Object GUID
-
-- UPN
+- GUID
 
 - LegacyExchangeDN
 
-When you specify a value for the TargetMailbox parameter, you must also specify the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You must use this parameter with the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
 
 ```yaml
 Type: MailboxIdParameter

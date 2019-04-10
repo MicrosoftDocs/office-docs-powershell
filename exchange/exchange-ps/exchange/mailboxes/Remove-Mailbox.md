@@ -109,13 +109,9 @@ In Exchange Online, this example removes the specified soft-deleted mailbox mail
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -179,7 +175,7 @@ Accept wildcard characters: False
 ### -StoreMailboxIdentity
 This parameter is available only in on-premises Exchange.
 
-The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
+The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its MailboxGUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
 
 When you use this parameter with the Database parameter to identify and remove the mailbox, the mailbox is immediately and permanently deleted from the database, so you can't reconnect or restore the mailbox. You can't either of these parameters with the Identity parameter.
 

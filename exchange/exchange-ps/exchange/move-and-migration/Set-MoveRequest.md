@@ -113,13 +113,16 @@ Accept wildcard characters: False
 ### -ArchiveTargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The ArchiveTargetDatabase parameter specifies the Exchange target database to which you're moving the personal archive. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+The ArchiveTargetDatabase parameter specifies the target mailbox database for the personal archive. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values to specify the target database:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+
 
 ```yaml
 Type: DatabaseIdParameter
@@ -408,13 +411,9 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -576,13 +575,15 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+The TargetDatabase parameter specifies the target mailbox database for the mailbox. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
 
 ```yaml
 Type: DatabaseIdParameter

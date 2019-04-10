@@ -103,7 +103,21 @@ Accept wildcard characters: False
 ```
 
 ### -UserIdentity
-The UserIdentity parameter specifies a mailbox user to request a token for. If a mailbox user isn't specified, the command uses the default test mailbox.
+The UserIdentity parameter specifies a mailbox user to request a token for. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+If you don't specify a mailbox, the command uses the default test mailbox.
 
 ```yaml
 Type: RecipientIdParameter

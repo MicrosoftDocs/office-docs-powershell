@@ -66,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user.
-
-For example:
+The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

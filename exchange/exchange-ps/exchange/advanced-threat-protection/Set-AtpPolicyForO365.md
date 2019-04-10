@@ -141,7 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForClients
-
 The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 ProPlus clients. Valid values are:
 
 - $true: Safe Links are enabled for Office clients.

@@ -258,13 +258,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that contains the IMAP subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that contains the IMAP subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

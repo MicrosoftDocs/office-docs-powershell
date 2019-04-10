@@ -43,13 +43,9 @@ This example removes the mail contact named John.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail contact that you want to remove. You can use any value that uniquely identifies the mail contact.
-
-For example:
+The Identity parameter specifies the mail contact that you want to remove. You can use any value that uniquely identifies the mail contact. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

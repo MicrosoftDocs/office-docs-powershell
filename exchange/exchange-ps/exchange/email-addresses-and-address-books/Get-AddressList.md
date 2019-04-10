@@ -68,8 +68,6 @@ The Container parameter filters the results based on the location of the address
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID
@@ -111,7 +109,6 @@ Accept wildcard characters: False
 The Identity parameter specifies the address list that you want to view. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 
 - Distinguished name (DN)
 

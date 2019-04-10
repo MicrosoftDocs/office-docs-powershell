@@ -59,19 +59,19 @@ This example disables the duplication of email messages in the site mailbox SMO\
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. You can use any of the following values:
-
-- Distinguished name (DN)
-
-- GUID
+The Identity parameter specifies the identity of the site mailbox. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
 
-- Display name
-
 - Alias
 
-- Primary SMTP address
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 ```yaml
 Type: RecipientIdParameter
@@ -167,7 +167,23 @@ Accept wildcard characters: False
 ### -Members
 This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
 
-The Members parameter specifies the members of the site mailbox. You can add or remove members using this parameter. This is a multivalued parameter and multiple recipients should be separated by a comma.
+The Members parameter specifies the members of the site mailbox. You can add or remove members using this parameter.
+
+You can use any value that uniquely identifies the member. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -184,7 +200,23 @@ Accept wildcard characters: False
 ### -Owners
 This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
 
-The Owners parameter specifies the site mailbox's owners. This is a multivalued field and multiple recipients should be separated by commas.
+The Owners parameter specifies the owners of the site mailbox. You can add or remove owners using this parameter.
+
+You can use any value that uniquely identifies the owner. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]

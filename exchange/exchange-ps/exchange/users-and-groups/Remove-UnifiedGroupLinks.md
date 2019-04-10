@@ -43,13 +43,9 @@ This example removes members laura@contoso.com and julia@contoso.com from the Of
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -76,13 +72,9 @@ Accept wildcard characters: False
 ### -Links
 The Links parameter specifies the recipients to remove from the Office 365 Group. You specify whether these recipients are members, owners, or subscribers by using the LinkType parameter.
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -116,7 +108,6 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 - Members
 
 - Owners
-
 
 ```yaml
 Type: Members | Owners | Subscribers | Aggregators
