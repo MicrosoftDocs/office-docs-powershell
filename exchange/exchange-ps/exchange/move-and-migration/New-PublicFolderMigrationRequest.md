@@ -156,11 +156,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies the identity of the database on which the public folders that are being migrated resides. You can use the following values:
+The SourceDatabase parameter specifies the target database for the public folders. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

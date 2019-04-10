@@ -138,13 +138,13 @@ This example returns the detailed move history and a verbose detailed move repor
 ### -Database
 This parameter is available only in on-premises Exchange.
 
-The Database parameter specifies the name of the mailbox database. When you specify a value for the Database parameter, the Exchange Management Shell returns statistics for all the mailboxes on the database specified.
+The Database parameter returns statistics for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
+
+- Distinguished name (DN)
 
 - GUID
-
-- Database
 
 This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
 
