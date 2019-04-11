@@ -42,9 +42,7 @@ This example removes Jan Dryml from the distribution group named Technical Suppo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -128,9 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the recipient that you want to remove from the group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Member parameter specifies the recipient that you want to remove from the group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 

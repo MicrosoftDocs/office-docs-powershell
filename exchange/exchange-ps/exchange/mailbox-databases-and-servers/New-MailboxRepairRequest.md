@@ -122,13 +122,17 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the database on which you run this command. If you use this parameter, all mailboxes on the database are searched for corruptions. To avoid performance issues, you're limited to one active database repair request at a time. You can use the following values:
+The Database parameter starts new mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Mailbox parameter.
+
+To avoid performance issues, you're limited to one active database repair request at a time.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -143,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox on which you run this command. You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter starts a new mailbox repair request on the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

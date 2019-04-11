@@ -56,9 +56,7 @@ This example specifies that the group Human Resources is a hierarchical group an
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

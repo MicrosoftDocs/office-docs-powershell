@@ -46,9 +46,7 @@ This example disables the journal archiving for the user named Timothy Amaral. T
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the user's journal archive mailbox in Exchange Online. You can use any value that uniquely identifies the journal archive mailbox.
-
-For example:
+The Identity parameter specifies the identity of the user's journal archive mailbox in Exchange Online. You can use any value that uniquely identifies the journal archive mailbox. For example:
 
 - Name
 
