@@ -150,13 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user.
-
-For example:
+The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -217,13 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the group object that you want to view. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the group object that you want to view. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

@@ -38,7 +38,6 @@ New-TeamsRetentionCompliancePolicy -Name "Teams - Regulation 123 Compliance" -Te
 
 This example creates a retention policy named "Teams - Regulation 123 Compliance" for the Teams channel messages in the teams by the names of Engineering Team and UX Design Team and Teams chats in the mailboxes of Kitty Petersen and Scott Nakamura.
 
-
 ## PARAMETERS
 
 ### -Name

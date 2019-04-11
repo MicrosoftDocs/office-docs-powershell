@@ -237,13 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter the user that you want to view. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter the user that you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

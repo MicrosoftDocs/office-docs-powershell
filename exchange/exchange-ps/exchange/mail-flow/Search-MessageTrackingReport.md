@@ -75,13 +75,9 @@ This example returns the message tracking reports that the Help desk can analyze
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

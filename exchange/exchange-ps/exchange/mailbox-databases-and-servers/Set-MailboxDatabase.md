@@ -553,11 +553,7 @@ Accept wildcard characters: False
 ### -JournalRecipient
 The JournalRecipient parameter specifies the journal recipient to use for per-database journaling for all mailboxes on the database. You can use any value that uniquely identifies the recipient. For example:
 
-For example:
-
 - Name
-
-- Display name
 
 - Alias
 
@@ -784,15 +780,13 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use the following values:
+The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use any value that uniquely identifies the public folder database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Name of the public folder database
-
-- Database name
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

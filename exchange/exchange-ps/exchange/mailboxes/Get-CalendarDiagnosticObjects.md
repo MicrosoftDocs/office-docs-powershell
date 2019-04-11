@@ -21,11 +21,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter> [-Credential <PSCredential>]
- [-CustomPropertyNames <String[]>] [-DomainController <Fqdn>] [-EndDate <ExDateTime>] [-EntryId <String>]
- [-ExactMatch <$true | $false>] [-ItemClass <String[]>] [-ItemIds <String[]>] [-MeetingId <String>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-ShouldBindToItem <$true | $false>]
- [-ShouldFetchRecurrenceExceptions <$true | $false>] [-StartDate <ExDateTime>] [-Subject <String>]
+Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
+ [-CustomPropertyNames <String[]>]
+ [-DomainController <Fqdn>]
+ [-EndDate <ExDateTime>]
+ [-EntryId <String>]
+ [-ExactMatch <$true | $false>]
+ [-ItemClass <String[]>]
+ [-ItemIds <String[]>]
+ [-MeetingId <String>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-ShouldBindToItem <$true | $false>]
+ [-ShouldFetchRecurrenceExceptions <$true | $false>]
+ [-StartDate <ExDateTime>]
+ [-Subject <String>]
  [<CommonParameters>]
 ```
 
@@ -75,13 +85,9 @@ This example returns diagnostic information for meetings with the subject Team L
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox or Office 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Office 365 Group.
-
-For example:
+The Identity parameter specifies the mailbox or Office 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -110,21 +116,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Credential
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
