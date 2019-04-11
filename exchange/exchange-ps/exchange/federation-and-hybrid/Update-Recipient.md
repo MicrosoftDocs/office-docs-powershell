@@ -63,13 +63,9 @@ This example updates all contacts in a specific organizational unit (OU). This e
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the recipient that you want to update. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Identity parameter specifies the recipient that you want to update. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

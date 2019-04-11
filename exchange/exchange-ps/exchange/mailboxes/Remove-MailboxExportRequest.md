@@ -75,7 +75,7 @@ This example cancels the export request by using the RequestGuid parameter for a
 ### -Identity
 The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). Use the following syntax: \<alias\>\\\<name\>.
 
-You can't use this parameter in conjunction with the RequestGuid parameter.
+You can't use this parameter with the RequestGuid parameter.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
+The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -107,9 +107,11 @@ Accept wildcard characters: False
 ### -RequestQueue
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 

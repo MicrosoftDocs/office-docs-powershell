@@ -55,13 +55,17 @@ This example updates the site mailbox WinterHoliday@tailspintoys.com and perform
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. This parameter accepts the following values:
-
-- DisplayName
-
-- SMTP address
+The Identity parameter specifies the site mailbox that you want to update. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
 
 - GUID
 
