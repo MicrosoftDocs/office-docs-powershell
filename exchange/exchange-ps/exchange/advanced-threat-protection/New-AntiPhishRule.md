@@ -162,9 +162,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -189,9 +191,11 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -259,9 +263,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -286,9 +292,11 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 

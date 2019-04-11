@@ -56,7 +56,27 @@ This example returns the calendar notification settings for the user Tony Smith 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox ID for the user's mailbox.
+The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

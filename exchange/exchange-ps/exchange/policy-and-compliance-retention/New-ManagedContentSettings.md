@@ -146,7 +146,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-The AddressForJournaling parameter specifies the journaling recipient to which journaled messages are sent.
+The AddressForJournaling parameter specifies the journaling recipient where journaled messages are sent. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 This parameter is required if the JournalingEnabled parameter is set to $true.
 

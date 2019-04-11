@@ -58,6 +58,28 @@ This example disables the .NET service channel for the user Jeff Hay without req
 ### -Identity
 The Identity parameter specifies the identity of the user for which you want to enable the .NET service channel. The user specified must be a valid user in Active Directory who has an Exchange mailbox.
 
+You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)

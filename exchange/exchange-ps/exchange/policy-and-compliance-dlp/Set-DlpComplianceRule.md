@@ -22,23 +22,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
- [-AccessScope <InOrganization | NotInOrganization | None>] [-AccessTimeControl <PswsHashtable>]
- [-ActivationDate <DateTime>] [-BlockAccess <$true | $false>] [-BlockAccessScope <$true | $false>]
- [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-AccessScope <InOrganization | NotInOrganization | None>]
+ [-ActivationDate <DateTime>]
+ [-BlockAccess <$true | $false>]
+ [-BlockAccessScope <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
- [-Disabled <$true | $false>] [-DocumentIsUnsupported <$true | $false>]
+ [-Disabled <$true | $false>]
+ [-DocumentIsUnsupported <$true | $false>]
  [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
- [-ExceptIfDocumentIsUnsupported <$true | $false>] [-ExceptIfFrom <SmtpAddress[]>]
- [-ExceptIfFromMemberOf <SmtpAddress[]>] [-ExceptIfProcessingLimitExceeded <$true | $false>]
- [-ExpiryDate <DateTime>] [-From <SmtpAddress[]>] [-FromMemberOf <SmtpAddress[]>]
- [-GenerateAlert <MultiValuedProperty>] [-GenerateIncidentReport <MultiValuedProperty>]
- [-IncidentReportContent <ReportContentOption[]>] [-Name <String>] [-NotifyAllowOverride <OverrideOption[]>]
- [-NotifyEmailCustomText <String>] [-NotifyPolicyTipCustomText <String>]
- [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>] [-NotifyUser <MultiValuedProperty>]
- [-ProcessingLimitExceeded <$true | $false>] [-ReportSeverityLevel <Low | Medium | High | None>]
- [-RuleErrorAction <Ignore | RetryThenBlock>] [-WhatIf] [<CommonParameters>]
+ [-ExceptIfDocumentIsUnsupported <$true | $false>]
+ [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExpiryDate <DateTime>]
+ [-From <SmtpAddress[]>]
+ [-FromMemberOf <SmtpAddress[]>]
+ [-GenerateAlert <MultiValuedProperty>]
+ [-GenerateIncidentReport <MultiValuedProperty>]
+ [-IncidentReportContent <ReportContentOption[]>]
+ [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomText <String>]
+ [-NotifyPolicyTipCustomText <String>]
+ [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-ProcessingLimitExceeded <$true | $false>]
+ [-ReportSeverityLevel <Low | Medium | High | None>]
+ [-RuleErrorAction <Ignore | RetryThenBlock>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,21 +102,6 @@ The AccessScope parameter specifies a condition for the DLP rule that's based on
 
 ```yaml
 Type: InOrganization | NotInOrganization | None
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccessTimeControl
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -331,36 +329,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptIfFrom
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfFromMemberOf
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExceptIfProcessingLimitExceeded
 This parameter is reserved for internal Microsoft use.
 
@@ -506,21 +474,6 @@ Therefore, if you use any of these redundant values with the value Default, they
 
 ```yaml
 Type: ReportContentOption[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

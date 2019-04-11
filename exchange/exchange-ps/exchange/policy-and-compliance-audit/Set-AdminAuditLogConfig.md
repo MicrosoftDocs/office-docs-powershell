@@ -29,11 +29,8 @@ Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
  [-AdminAuditLogParameters <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Force]
- [-LoadBalancerCount <Int32>]
  [-LogLevel <None | Verbose>]
  [-Name <String>]
- [-RefreshInterval <Int32>]
  [-TestCmdletLoggingEnabled <$true | $false>]
  [-UnifiedAuditLogIngestionEnabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
@@ -259,21 +256,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LoadBalancerCount
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 This parameter is available only in on-premises Exchange.
 
@@ -286,21 +268,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RefreshInterval
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

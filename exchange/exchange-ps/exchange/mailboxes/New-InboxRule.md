@@ -496,13 +496,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
-
-For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -514,7 +510,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding condition parameter to this exception is From.
 
@@ -831,9 +827,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -1062,13 +1060,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardAsAttachmentTo
-The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1080,7 +1074,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1095,13 +1089,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardTo
-The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1113,7 +1103,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1128,13 +1118,9 @@ Accept wildcard characters: False
 ```
 
 ### -From
-The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender.
-
-For example:
+The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1146,7 +1132,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfFrom.
 
@@ -1258,13 +1244,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1566,21 +1548,21 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectTo
-The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1633,21 +1615,21 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient.
-
-For example:
+The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfSentTo.
 

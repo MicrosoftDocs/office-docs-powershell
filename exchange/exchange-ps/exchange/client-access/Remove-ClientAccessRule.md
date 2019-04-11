@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter> [-Confirm] [-DatacenterAdminsOnly]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,21 +75,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatacenterAdminsOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named

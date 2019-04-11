@@ -54,13 +54,9 @@ This example returns the regional settings for Alice Jakobsen's mailbox and also
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
