@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Stop-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Stop-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +50,21 @@ Stop-MigrationBatch -Identity MigrationBatch1
 This example stops the migration batch MigrationBatch1.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter identifies the name of the current migration batch. The value for this parameter is specified by the Name parameter of the New-MigrationBatch cmdlet.
+
+```yaml
+Type: MigrationBatchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -84,18 +102,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter identifies the name of the current migration batch. The value for this parameter is specified by the Name parameter of the New-MigrationBatch cmdlet.
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MigrationBatchIdParameter
+Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -107,21 +127,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

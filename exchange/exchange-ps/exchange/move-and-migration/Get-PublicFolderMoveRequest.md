@@ -67,7 +67,7 @@ This example returns the status of in-progress and queued requests that are on t
 ### -BatchName
 The BatchName parameter specifies the name that was given to a batch public folder move request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \\PublicFolderMove.
 
-This parameter can't be used in conjunction with the following parameters:
+You can't use this parameter with the following parameters:
 
 - BatchName
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the public folder move request. If you didn't specify a name when creating the move request, PublicFolderMove will be the default name assigned to the request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
@@ -166,9 +166,11 @@ Accept wildcard characters: False
 ### -RequestQueue
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 

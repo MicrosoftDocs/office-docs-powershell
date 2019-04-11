@@ -75,7 +75,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 

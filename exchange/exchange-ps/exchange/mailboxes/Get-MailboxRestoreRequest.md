@@ -169,9 +169,11 @@ This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -205,11 +207,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that are being restored from the specified source database. You can use the following values:
+The SourceDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that are being restored from the specified source database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -282,13 +286,15 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The TargetDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that reside on the target database. You can use the following values:
+The TargetDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that reside on the target database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-You can't use this parameter in conjunction with the Identity parameter.
+- GUID
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter

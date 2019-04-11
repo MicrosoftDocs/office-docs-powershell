@@ -42,13 +42,9 @@ This example mail-disables the mail contact named Ed Meadows.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail contact that you want to mail-disable. You can use any value that uniquely identifies the mail contact.
-
-For example:
+The Identity parameter specifies the mail contact that you want to mail-disable. You can use any value that uniquely identifies the mail contact. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

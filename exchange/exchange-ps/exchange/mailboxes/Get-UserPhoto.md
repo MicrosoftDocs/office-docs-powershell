@@ -173,13 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the user account. You can use any value that uniquely identifies the user account.
-
-For example:
+The Identity parameter specifies the user account. You can use any value that uniquely identifies the user account. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

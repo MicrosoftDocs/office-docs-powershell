@@ -25,15 +25,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Get-MigrationUser -MailboxGuid <Guid>
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### StatusAndBatchId
 ```
-Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>] [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
+Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
+ [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
+ [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -127,6 +131,23 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -217,21 +238,6 @@ Type: Active | Failed | Synced | Completed | Stopped
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -28,7 +28,6 @@ Get-AdvancedThreatProtectionDocumentReport [-Action <MultiValuedProperty>] [-Agg
 ## DESCRIPTION
 For the reporting period and organization you specify, the cmdlet returns the following information:
 
-
 - Action
 
 - Count

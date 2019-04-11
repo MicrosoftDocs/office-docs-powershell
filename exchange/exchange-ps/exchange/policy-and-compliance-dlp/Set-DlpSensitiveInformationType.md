@@ -119,6 +119,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Fingerprints
 The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see New-DlpFingerprint or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
 

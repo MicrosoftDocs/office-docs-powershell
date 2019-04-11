@@ -157,13 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the contact that you want to view. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the contact that you want to view. You can use any value that uniquely identifies the contact. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
