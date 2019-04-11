@@ -29,10 +29,11 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-FilterItemType <String>]
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
+ [-NoOutput]
  [-ResultSize <Unlimited>]
  [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>]
  [-SubjectContains <String>]
- [-NoOutput]
  [<CommonParameters>]
 ```
 
@@ -94,7 +95,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 - Location: Recoverable Items\Deletions
 
-- Date range: 3/15/2019 to 3/25/2018
+- Date range: 3/15/2019 to 3/25/2019
 
 
 ## PARAMETERS
@@ -226,16 +227,39 @@ Accept wildcard characters: False
 ```
 
 ### -MaxParallelSize
-The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems.
+The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
 
-Values for -MaxParallelSize range from [1,10]
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
-```
-Restore-RecoverableItems -Identity alexandria@contoso.com -MaxParallelSize = 5
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NoOutput
-The NoOutput parameter will ignore the output object and restore items directly without any output in console.
+The NoOutput switch restores items directly without any output in console. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoOutput
+
 
 ```
 Restore-RecoverableItems -Identity alvin@contoso.com -NoOutput
