@@ -1615,7 +1615,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoURL
-The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
+The SetPhotoURL parameter controls where users go to select their photo. Note that you can't specify a URL that contains one or more picture files, as there is no mechanism to copy a URL photo to the properties of the users' Exchange Online mailboxes.
 
 ```yaml
 Type: String
