@@ -30,7 +30,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
 ### Identity
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddDynamicScopeLocation <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddExchangeLocationException <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
@@ -46,7 +45,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <$true | $false>]
  [-Force]
- [-RemoveDynamicScopeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
