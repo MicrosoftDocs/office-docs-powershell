@@ -59,7 +59,6 @@ Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoA
 
 This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
 
-
 ## PARAMETERS
 
 ### -PromptFileName

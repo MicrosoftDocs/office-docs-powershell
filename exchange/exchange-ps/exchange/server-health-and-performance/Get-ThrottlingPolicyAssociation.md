@@ -124,9 +124,7 @@ The Identity parameter specifies the throttling policy association that you want
 
 - Distinguished name (DN)
 
-- GUID
-
-For example:
+- GUID For example:
 
 - Name
 

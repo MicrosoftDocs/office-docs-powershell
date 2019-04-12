@@ -310,7 +310,6 @@ In Exchange Online, this example results in meeting updates being auto-processed
 
 ## PARAMETERS
 
-
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -1418,9 +1417,7 @@ Accept wildcard characters: False
 ```
 
 ### -HierarchicalAddressBookRoot
-The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1565,7 +1562,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
@@ -1805,9 +1801,7 @@ Accept wildcard characters: False
 ### -MicrosoftExchangeRecipientReplyRecipient
 This parameter is available only in on-premises Exchange.
 
-The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient:
-
-For example:
+The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient: For example:
 
 - Name
 
