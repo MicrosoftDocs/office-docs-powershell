@@ -105,11 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryDatabase
-The RecoveryDatabase parameter specifies the recovery database from which you're restoring the mailbox. You can use the following values:
+The RecoveryDatabase parameter specifies the recovery database where you are restoring the mailbox from. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -125,6 +127,8 @@ Accept wildcard characters: False
 
 ### -RecoveryMailbox
 The RecoveryMailbox parameter specifies the mailbox to be used as the source mailbox. This parameter is required if the source mailbox is different from the target mailbox.
+
+You identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
 
 ```yaml
 Type: StoreMailboxIdParameter

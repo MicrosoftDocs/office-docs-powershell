@@ -38,9 +38,7 @@ This example returns the Clutter settings for the user Constancia Pena.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

@@ -42,9 +42,7 @@ This example shows the calendar processing options for the resource mailbox Room
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

@@ -118,9 +118,7 @@ This example rejects meeting requests from any user who isn't a member of the Ex
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

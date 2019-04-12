@@ -128,9 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

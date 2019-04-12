@@ -452,9 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
-
-For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
 
 - Name
 
@@ -1028,9 +1026,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardAsAttachmentTo
-The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1059,9 +1055,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardTo
-The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1090,9 +1084,7 @@ Accept wildcard characters: False
 ```
 
 ### -From
-The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender.
-
-For example:
+The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
 
@@ -1222,9 +1214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -1545,9 +1535,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectTo
-The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1616,9 +1604,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient.
-
-For example:
+The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1837,7 +1823,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).

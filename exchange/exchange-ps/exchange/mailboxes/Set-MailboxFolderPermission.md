@@ -143,9 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -182,9 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group.
-
-For example:
+The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
 

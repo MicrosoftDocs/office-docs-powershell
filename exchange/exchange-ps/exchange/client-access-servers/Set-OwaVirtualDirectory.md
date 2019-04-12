@@ -1641,7 +1641,6 @@ The LogonFormat parameter specifies the type of logon format that's required for
 
 - PrincipalName: Requires the user principal name (UPN) (for example, user@contoso.com). This sign-in method works only for users whose UPN name is the same as their email address.
 
-
 ```yaml
 Type: FullDomain | PrincipalName | UserName
 Parameter Sets: (All)
