@@ -509,21 +509,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveDynamicScopeLocation
-{{Fill RemoveDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveExchangeLocation
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
