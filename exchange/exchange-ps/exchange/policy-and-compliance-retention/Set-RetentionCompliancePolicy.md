@@ -138,21 +138,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddDynamicScopeLocation
-{{Fill AddDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AddExchangeLocation
 The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
