@@ -182,19 +182,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: ParamSet3
-Aliases: 
-Applicable: SharePoint Online
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -IncludePersonalSite
 Displays personal sites when value is set to $true.
 
