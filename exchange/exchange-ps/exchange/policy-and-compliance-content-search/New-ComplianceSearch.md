@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: New-ComplianceSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
@@ -18,13 +21,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-ComplianceSearch [-Name] <String> [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
- [-Case <String>] [-Confirm] [-ContentMatchQuery <String>] [-Description <String>]
- [-ExchangeLocation <String[]>] [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>]
- [-Language <CultureInfo>] [-LogLevel <Suppressed | Basic | Full>] [-OneDriveLocation <String[]>]
- [-OneDriveLocationExclusion <String[]>] [-PublicFolderLocation <String[]>]
- [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>] [-SearchNames <String[]>]
- [-SharePointLocation <String[]>] [-SharePointLocationExclusion <String[]>] [-StatusMailRecipients <String[]>]
+New-ComplianceSearch [-Name] <String>
+ [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-Case <String>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-Description <String>]
+ [-ExchangeLocation <String[]>]
+ [-ExchangeLocationExclusion <String[]>]
+ [-Force]
+ [-HoldNames <String[]>]
+ [-IncludeUserAppContent <$true | $false>]
+ [-Language <CultureInfo>]
+ [-LogLevel <Suppressed | Basic | Full>]
+ [-OneDriveLocation <String[]>]
+ [-OneDriveLocationExclusion <String[]>]
+ [-PublicFolderLocation <String[]>]
+ [-PublicFolderLocationExclusion <String[]>]
+ [-RefinerNames <String[]>]
+ [-SearchNames <String[]>]
+ [-SharePointLocation <String[]>]
+ [-SharePointLocationExclusion <String[]>]
+ [-StatusMailRecipients <String[]>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -66,6 +84,8 @@ This example creates a new compliance search named AnnBeebe-InactiveMailbox that
 
 ### -Name
 The Name parameter specifies the name of the compliance search. If the value contains spaces, enclose the value in quotation marks.
+
+Don't use spaces in the value of this parameter if you plan on using the Case parameter. If the Name parameter contains spaces, the value of the ExchangeLocation parameter is cleared when you use the Case parameter.
 
 ```yaml
 Type: String
@@ -110,6 +130,8 @@ Accept wildcard characters: False
 
 ### -Case
 The Case parameter specifies the name of an eDiscovery case that the new compliance search will be associated with. If the value contains spaces, enclose the value in quotation marks.
+
+If the Name parameter contains spaces, the value of the ExchangeLocation parameter is cleared when you use the Case parameter.
 
 ```yaml
 Type: String
@@ -483,12 +505,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

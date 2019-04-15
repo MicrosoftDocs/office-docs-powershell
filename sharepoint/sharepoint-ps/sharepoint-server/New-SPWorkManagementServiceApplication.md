@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPWorkManagementServiceApplication

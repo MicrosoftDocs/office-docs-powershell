@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Remove-DistributionGroupMember
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -39,13 +42,9 @@ This example removes Jan Dryml from the distribution group named Technical Suppo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -127,13 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the recipient that you want to remove from the group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Member parameter specifies the recipient that you want to remove from the group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -1,79 +1,41 @@
 ---
-external help file: 
+external help file: Remove-CsCallQueue.xml
 applicable: Skype for Business Online
-title: Get-CsCallerIdPolicy
+title: Remove-CsCallQueue
 schema: 2.0.0
 ---
 
-# Get-CsCallerIdPolicy
+# Remove-CsCallQueue
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The Remove-CsCallQueue cmdlet deletes an existing Call Queue.
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Get-CsCallerIdPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
-```
-
-### Filter
-```
-Get-CsCallerIdPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Remove-CsCallQueue -Identity <Guid> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Remove-CsCallQueue cmdlet deletes an existing Call Queue specified by the Identity parameter. The removal will fail if there are any ApplicationInstances still associated with the Call Queue.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Remove-CsCallQueue -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-Insert descriptive text for example 1.
+This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Call Queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 
 ## PARAMETERS
 
-### -Filter
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-PARAMVALUE: XdsIdentity
+PARAMVALUE: Guid
 
 ```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -106,9 +68,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Identity
+Represents the unique identifier of a Call Queue.
+
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
 
 ## NOTES
 
-## RELATED LINKS
 
+## RELATED LINKS

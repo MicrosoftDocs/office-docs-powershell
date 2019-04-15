@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-ProjectServerLicense
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-ProjectServerLicense

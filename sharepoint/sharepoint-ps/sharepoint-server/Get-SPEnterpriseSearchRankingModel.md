@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchRankingModel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchRankingModel
@@ -38,7 +41,7 @@ This example retrieves the ranking model on the search service application level
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level ssa
 Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
 ```

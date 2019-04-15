@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ManagementScope
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -134,7 +137,17 @@ Accept wildcard characters: False
 ### -DatabaseList
 This parameter is available only in on-premises Exchange.
 
-The DatabaseList parameter specifies a list of databases to which the scope should be applied. Multiple databases can be specified, separated by commas. If you use the DatabaseList parameter, you can't use the DatabaseRestrictionFilter, ServerList, RecipientRestrictionFilter, RecipientRoot, or ServerRestrictionFilter parameters.
+The DatabaseList parameter specifies a list of databases to which the scope should be applied. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+
+You can't use this parameter with the DatabaseRestrictionFilter, ServerList, RecipientRestrictionFilter, RecipientRoot, or ServerRestrictionFilter parameters.
 
 ```yaml
 Type: DatabaseIdParameter[]

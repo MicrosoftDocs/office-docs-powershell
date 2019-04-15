@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-Recipient
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
@@ -228,7 +231,13 @@ Accept wildcard characters: False
 ### -Database
 This parameter is available only in on-premises Exchange.
 
-The Database parameter specifies a mailbox database. Use this parameter to return all recipients stored on a specific mailbox database. Use the mailbox database Name property as the value for this parameter.
+The Database parameter return all recipients stored on the specified mailbox database. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -277,13 +286,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -343,12 +348,10 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -IncludeSoftDeletedRecipients
 The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted recipients in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted recipients.
 
 Soft-deleted recipients are deleted recipients that are still recoverable.
 

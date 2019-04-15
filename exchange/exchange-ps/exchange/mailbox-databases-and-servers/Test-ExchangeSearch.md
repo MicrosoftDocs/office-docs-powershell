@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-ExchangeSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -122,7 +125,27 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to test Exchange Search against.
+The Identity parameter specifies the mailbox that you want to test Exchange Search against. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the MailboxDatabase or Server parameters.
 
@@ -156,7 +179,13 @@ Accept wildcard characters: False
 ### -MailboxDatabase
 This parameter is available or functional only in Exchange Server 2010 and 2013.
 
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against.
+The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity or Server parameters.
 

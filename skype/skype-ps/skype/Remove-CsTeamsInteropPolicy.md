@@ -3,13 +3,16 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsTeamsInteropPolicy
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy has been  replaced by TeamsUpgradePolicy. See description for details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+IMPORTANT: TeamsInteropPolicy has been  replaced by TeamsUpgradePolicy. See description for details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 ## SYNTAX
@@ -22,7 +25,7 @@ Remove-CsTeamsInteropPolicy [-Identity <Object>] [-WhatIf] [-Confirm] [-Tenant <
 
 This cmdlet previously allowed administrators to remove custom created instances of TeamsInteropPolicy. In the past, TeamsInteropPolicy  determined how chats and calls are routed between Skype for Business and Microsoft Teams, when TeamsUpgradePolicy had mode=Legacy. However, both TeamsInteropPolicy and Legacy mode have been retired. TeamsInteropPolicy is no longer honored.
 
-For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 ## EXAMPLES
@@ -149,4 +152,4 @@ This policy has been deprecated and removed from the system. Customters should u
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-InboxRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,41 +21,78 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob]
- [-ApplyCategory <MultiValuedProperty>] [-BodyContainsWords <MultiValuedProperty>] [-Confirm]
- [-CopyToFolder <MailboxFolderIdParameter>] [-DeleteMessage <$true | $false>] [-DomainController <Fqdn>]
- [-ExceptIfBodyContainsWords <MultiValuedProperty>] [-ExceptIfFlaggedForAction <String>]
- [-ExceptIfFrom <RecipientIdParameter[]>] [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>] [-ExceptIfHasAttachment <$true | $false>]
+Set-InboxRule [-Identity] <InboxRuleIdParameter>
+ [-AlwaysDeleteOutlookRulesBlob]
+ [-ApplyCategory <MultiValuedProperty>]
+ [-ApplySystemCategory <MultiValuedProperty>]
+ [-BodyContainsWords <MultiValuedProperty>]
+ [-Confirm]
+ [-CopyToFolder <MailboxFolderIdParameter>]
+ [-DeleteMessage <$true | $false>]
+ [-DeleteSystemCategory <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-ExceptIfBodyContainsWords <MultiValuedProperty>]
+ [-ExceptIfFlaggedForAction <String>]
+ [-ExceptIfFrom <RecipientIdParameter[]>]
+ [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
+ [-ExceptIfHasAttachment <$true | $false>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
  [-ExceptIfMessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-ExceptIfMyNameInCcBox <$true | $false>] [-ExceptIfMyNameInToBox <$true | $false>]
- [-ExceptIfMyNameInToOrCcBox <$true | $false>] [-ExceptIfMyNameNotInToBox <$true | $false>]
- [-ExceptIfReceivedAfterDate <ExDateTime>] [-ExceptIfReceivedBeforeDate <ExDateTime>]
- [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>] [-ExceptIfSentOnlyToMe <$true | $false>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
- [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>] [-ExceptIfWithImportance <Low | Normal | High>]
- [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>] [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>] [-FlaggedForAction <String>]
- [-Force] [-ForwardAsAttachmentTo <RecipientIdParameter[]>] [-ForwardTo <RecipientIdParameter[]>]
- [-From <RecipientIdParameter[]>] [-FromAddressContainsWords <MultiValuedProperty>]
- [-FromSubscription <AggregationSubscriptionIdentity[]>] [-HasAttachment <$true | $false>]
- [-HasClassification <MessageClassificationIdParameter[]>] [-HeaderContainsWords <MultiValuedProperty>]
- [-Mailbox <MailboxIdParameter>] [-MarkAsRead <$true | $false>] [-MarkImportance <Low | Normal | High>]
+ [-ExceptIfMyNameInCcBox <$true | $false>]
+ [-ExceptIfMyNameInToBox <$true | $false>]
+ [-ExceptIfMyNameInToOrCcBox <$true | $false>]
+ [-ExceptIfMyNameNotInToBox <$true | $false>]
+ [-ExceptIfReceivedAfterDate <ExDateTime>]
+ [-ExceptIfReceivedBeforeDate <ExDateTime>]
+ [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfSentOnlyToMe <$true | $false>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>]
+ [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
+ [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-FlaggedForAction <String>]
+ [-Force]
+ [-ForwardAsAttachmentTo <RecipientIdParameter[]>]
+ [-ForwardTo <RecipientIdParameter[]>]
+ [-From <RecipientIdParameter[]>]
+ [-FromAddressContainsWords <MultiValuedProperty>]
+ [-FromSubscription <AggregationSubscriptionIdentity[]>]
+ [-HasAttachment <$true | $false>]
+ [-HasClassification <MessageClassificationIdParameter[]>]
+ [-HeaderContainsWords <MultiValuedProperty>]
+ [-Mailbox <MailboxIdParameter>]
+ [-MarkAsRead <$true | $false>]
+ [-MarkImportance <Low | Normal | High>]
  [-MessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-MoveToFolder <MailboxFolderIdParameter>] [-MyNameInCcBox <$true | $false>] [-MyNameInToBox <$true | $false>]
- [-MyNameInToOrCcBox <$true | $false>] [-MyNameNotInToBox <$true | $false>] [-Name <String>]
- [-Priority <Int32>] [-ReceivedAfterDate <ExDateTime>] [-ReceivedBeforeDate <ExDateTime>]
- [-RecipientAddressContainsWords <MultiValuedProperty>] [-RedirectTo <RecipientIdParameter[]>]
- [-SendTextMessageNotificationTo <MultiValuedProperty>] [-SentOnlyToMe <$true | $false>]
- [-SentTo <RecipientIdParameter[]>] [-StopProcessingRules <$true | $false>]
- [-SubjectContainsWords <MultiValuedProperty>] [-SubjectOrBodyContainsWords <MultiValuedProperty>] [-WhatIf]
- [-WithImportance <Low | Normal | High>] [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
+ [-MoveToFolder <MailboxFolderIdParameter>]
+ [-MyNameInCcBox <$true | $false>]
+ [-MyNameInToBox <$true | $false>]
+ [-MyNameInToOrCcBox <$true | $false>]
+ [-MyNameNotInToBox <$true | $false>]
+ [-Name <String>]
+ [-PinMessage <$true | $false>]
+ [-Priority <Int32>]
+ [-ReceivedAfterDate <ExDateTime>]
+ [-ReceivedBeforeDate <ExDateTime>]
+ [-RecipientAddressContainsWords <MultiValuedProperty>]
+ [-RedirectTo <RecipientIdParameter[]>]
+ [-SendTextMessageNotificationTo <MultiValuedProperty>]
+ [-SentOnlyToMe <$true | $false>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-StopProcessingRules <$true | $false>]
+ [-SubjectContainsWords <MultiValuedProperty>]
+ [-SubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-WhatIf]
+ [-WithImportance <Low | Normal | High>]
+ [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-WithinSizeRangeMinimum <ByteQuantifiedSize>]
  [-WithSensitivity <Normal | Personal | Private | CompanyConfidential>]
- [-ApplySystemCategory <MultiValuedProperty>] [-DeleteSystemCategory <MultiValuedProperty>]
- [-PinMessage <$true | $false>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,10 +168,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplySystemCategory
+The ApplySystemCategory parameter specifies an action for the Inbox rule that applies the specified system category to messages. System categories are available to all mailboxes in the organization. Valid values are:
+
+- NotDefined
+
+- Bills
+
+- Document
+
+- DocumentPlus
+
+- Event
+
+- Family
+
+- File
+
+- Flight
+
+- FromContact
+
+- Important
+
+- LiveView
+
+- Lodging
+
+- MailingList
+
+- Newsletter
+
+- Photo
+
+- Purchase
+
+- RentalCar
+
+- RestaurantReservation
+
+- RetiredPromotion
+
+- ShippingNotification
+
+- Shopping
+
+- SocialUpdate
+
+- Travel
+
+- Video
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BodyContainsWords
 The BodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -183,6 +290,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeleteSystemCategory
+The DeleteSystemCategory parameter specifies an action for the Inbox rule that deletes the specified system category from messages. System categories are available to all mailboxes in the organization. Valid values are:
+
+- NotDefined
+
+- Bills
+
+- Document
+
+- DocumentPlus
+
+- Event
+
+- Family
+
+- File
+
+- Flight
+
+- FromContact
+
+- Important
+
+- LiveView
+
+- Lodging
+
+- MailingList
+
+- Newsletter
+
+- Photo
+
+- Purchase
+
+- RentalCar
+
+- RestaurantReservation
+
+- RetiredPromotion
+
+- ShippingNotification
+
+- Shopping
+
+- SocialUpdate
+
+- Travel
+
+- Video
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeleteMessage
 The DeleteMessage parameter specifies an action for the Inbox rule that sends messages to the Deleted Items folder. Valid values are:
 
@@ -222,7 +394,7 @@ Accept wildcard characters: False
 ### -ExceptIfBodyContainsWords
 The ExceptIfBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -280,13 +452,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
-
-For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -298,7 +466,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding condition parameter to this exception is From.
 
@@ -317,7 +485,7 @@ Accept wildcard characters: False
 ### -ExceptIfFromAddressContainsWords
 The ExceptIfFromAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -395,7 +563,7 @@ Accept wildcard characters: False
 ### -ExceptIfHeaderContainsWords
 The HeaderContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -577,7 +745,7 @@ Accept wildcard characters: False
 ### -ExceptIfRecipientAddressContainsWords
 The ExceptIfRecipientAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -621,9 +789,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -648,7 +818,7 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectContainsWords
 The ExceptIfSubjectContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -669,7 +839,7 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectOrBodyContainsWords
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -856,13 +1026,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardAsAttachmentTo
-The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -874,7 +1040,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -889,13 +1055,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardTo
-The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -907,7 +1069,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -922,13 +1084,9 @@ Accept wildcard characters: False
 ```
 
 ### -From
-The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender.
-
-For example:
+The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -940,7 +1098,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfFrom.
 
@@ -959,7 +1117,7 @@ Accept wildcard characters: False
 ### -FromAddressContainsWords
 The FromAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1037,7 +1195,7 @@ Accept wildcard characters: False
 ### -HeaderContainsWords
 The HeaderContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1056,13 +1214,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1287,6 +1441,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PinMessage
+The PinMessage parameter specifies an action for the Inbox rule that pins messages to the top of the Inbox. Valid values are:
+
+- $true: Message that match the conditions of the rule are pinned to the top of the Inbox.
+
+- $false: The action isn't used.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies a priority for the Inbox rule that determines the order of rule processing. A lower integer value indicates a higher priority,
 
@@ -1343,7 +1516,7 @@ Accept wildcard characters: False
 ### -RecipientAddressContainsWords
 The RecipientAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1362,21 +1535,21 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectTo
-The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1393,7 +1566,7 @@ Accept wildcard characters: False
 ### -SendTextMessageNotificationTo
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1431,21 +1604,21 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient.
-
-For example:
+The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfSentTo.
 
@@ -1483,7 +1656,7 @@ Accept wildcard characters: False
 ### -SubjectContainsWords
 The SubjectContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1504,7 +1677,7 @@ Accept wildcard characters: False
 ### -SubjectOrBodyContainsWords
 The SubjectOrBodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1644,157 +1817,6 @@ Type: Normal | Personal | Private | CompanyConfidential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplySystemCategory
-The ApplySystemCategory parameter specifies an action for the Inbox rule that applies the specified system category to messages. System categories are available to all mailboxes in the organization. Valid values are:
-
-- NotDefined
-
-- Bills
-
-- Document
-
-- DocumentPlus
-
-- Event
-
-- Family
-
-- File
-
-- Flight
-
-- FromContact
-
-- Important
-
-- LiveView
-
-- Lodging
-
-- MailingList
-
-- Newsletter
-
-- Photo
-
-- Purchase
-
-- RentalCar
-
-- RestaurantReservation
-
-- RetiredPromotion
-
-- ShippingNotification
-
-- Shopping
-
-- SocialUpdate
-
-- Travel
-
-- Video
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeleteSystemCategory
-The DeleteSystemCategory parameter specifies an action for the Inbox rule that deletes the specified system category from messages. System categories are available to all mailboxes in the organization. Valid values are:
-
-- NotDefined
-
-- Bills
-
-- Document
-
-- DocumentPlus
-
-- Event
-
-- Family
-
-- File
-
-- Flight
-
-- FromContact
-
-- Important
-
-- LiveView
-
-- Lodging
-
-- MailingList
-
-- Newsletter
-
-- Photo
-
-- Purchase
-
-- RentalCar
-
-- RestaurantReservation
-
-- RetiredPromotion
-
-- ShippingNotification
-
-- Shopping
-
-- SocialUpdate
-
-- Travel
-
-- Video
-
-You can specify multiple values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PinMessage
-The PinMessage parameter specifies an action for the Inbox rule that pins messages to the top of the Inbox. Valid values are:
-
-- $true: Message that match the conditions of the rule are pinned to the top of the Inbox.
-
-- $false: The action isn't used.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

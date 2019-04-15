@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-FederationTrust
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -100,7 +103,21 @@ Accept wildcard characters: False
 ```
 
 ### -UserIdentity
-The UserIdentity parameter specifies a mailbox user to request a token for. If a mailbox user isn't specified, the command uses the default test mailbox.
+The UserIdentity parameter specifies a mailbox user to request a token for. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+If you don't specify a mailbox, the command uses the default test mailbox.
 
 ```yaml
 Type: RecipientIdParameter

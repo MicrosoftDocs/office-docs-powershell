@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PublicFolderMigrationRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -100,7 +103,7 @@ The RemoteCredential parameter specifies an administrator who has permission to 
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
-You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN parameter.
+You must use this parameter with the RemoteMailboxServerLegacyDN parameter.
 
 ```yaml
 Type: PSCredential
@@ -119,7 +122,7 @@ This parameter is available only in the cloud-based service.
 
 The RemoteMailboxLegacyDN parameter specifies the mailbox of the remote credentials specified in the RemoteCredential parameter.
 
-You must use this parameter in conjunction with the RemoteMailboxServerLegacyDN parameter.
+You must use this parameter in with the RemoteMailboxServerLegacyDN parameter.
 
 ```yaml
 Type: String
@@ -153,11 +156,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies the identity of the database on which the public folders that are being migrated resides. You can use the following values:
+The SourceDatabase parameter specifies the target database for the public folders. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

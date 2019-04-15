@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OrganizationConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -75,7 +78,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
- [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookMobileGCCRestrictionsEnabled <$true | $false>]
  [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -90,6 +93,7 @@ Set-OrganizationConfig
  [-SmtpActionableMessagesEnabled <$true | $false>]
  [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
  [-VisibleMeetingUpdateProperties <String>]
+ [-WebPushNotificationsDisabled <$true | $false>]
  [-WebSuggestedRepliesDisabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -175,7 +179,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### AdfsAuthenticationParameter
 ```
 Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled <true | $false>]
+ [-ACLableSyncedObjectEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -306,7 +310,6 @@ In Exchange Online, this example results in meeting updates being auto-processed
 
 ## PARAMETERS
 
-
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -378,7 +381,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsAudienceUris parameter specifies one or more external URLs that are used for Active Directory Federation Services (AD FS) claims-based authentication. For example, the external Outlook on the web and external Exchange admin center (EAC) URLs.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -456,7 +459,7 @@ The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-s
 
 To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see Get-ADFSCertificate (https://go.microsoft.com/fwlink/p/?linkid=392706).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -572,7 +575,11 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsPaymentsEnabled Description}}
+The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+
+- $true: Online payments are enabled.
+
+- $false: Online payments are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -589,7 +596,11 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-{{Fill BookingsSocialSharingRestricted Description}}
+The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+
+- $true: Social sharing options are restricted.
+
+- $false: Users can see social sharing options inside Bookings. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -858,6 +869,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAuthenticationPolicy
+This parameter is available only in the cloud-based service.
+
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -1218,7 +1231,7 @@ Accept wildcard characters: False
 ### -EwsAllowList
 The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1288,7 +1301,7 @@ Accept wildcard characters: False
 ### -EwsBlockList
 The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1404,13 +1417,9 @@ Accept wildcard characters: False
 ```
 
 ### -HierarchicalAddressBookRoot
-The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -1466,9 +1475,11 @@ This parameter accepts IPv4 or IPv6 addresses in the following formats:
 
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+This parameter has a limit of approximately 1200 entries.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1551,7 +1562,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
@@ -1791,13 +1801,9 @@ Accept wildcard characters: False
 ### -MicrosoftExchangeRecipientReplyRecipient
 This parameter is available only in on-premises Exchange.
 
-The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient:
-
-For example:
+The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1861,10 +1867,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutlookMobileHelpShiftEnabled
+### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill OutlookMobileHelpShiftEnabled Description}}
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+
+- $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
+
+- $false: Enable features that aren't FedRAMP compliant for GCC customers.
+
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+
+- Multi-account support
+
+- Third-party services
+
+- HelpShift and in-app support
+
+- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+
+ For a full list of Features and services that are not FedRAMP compliant for GCC customers, see Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users (https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
 ```yaml
 Type: $true | $false
@@ -1879,7 +1901,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookPayEnabled
-
 This parameter is available only in the cloud-based service.
 
 The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
@@ -2325,6 +2346,26 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -WebPushNotificationsDisabled
+This parameter is available only in the cloud-based service.
+
+The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
+
+- $true: Web Push Notifications are disabled. 
+
+- $false: Web Push Notifications are enabled. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

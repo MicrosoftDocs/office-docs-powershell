@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -24,7 +27,7 @@ New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter> [-AutoDagExclud
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>]
+
  [-SkipDatabaseLogFolderCreation]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -36,7 +39,6 @@ New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter> [-Recovery]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>]
  [-SkipDatabaseLogFolderCreation]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -236,21 +238,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxProvisioningAttributes
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningAttributes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OfflineAddressBook
 The OfflineAddressBook parameter specifies the associated offline address book (OAB) for the new mailbox database.
 
@@ -267,7 +254,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database.
+The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database. You can use any value that uniquely identifies the public folder database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

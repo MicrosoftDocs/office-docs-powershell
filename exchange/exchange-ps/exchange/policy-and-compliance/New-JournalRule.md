@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-JournalRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -58,7 +61,19 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEmailAddress
-The JournalEmailAddress parameter specifies a recipient object to which journal reports are sent.
+The JournalEmailAddress parameter specifies a recipient object to which journal reports are sent. You ean use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 ```yaml
 Type: RecipientIdParameter

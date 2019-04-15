@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-RetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -27,7 +30,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
 ### Identity
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddDynamicScopeLocation <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddExchangeLocationException <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
@@ -43,7 +45,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <$true | $false>]
  [-Force]
- [-RemoveDynamicScopeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -129,21 +130,6 @@ Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddDynamicScopeLocation
-{{Fill AddDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -521,21 +507,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveDynamicScopeLocation
-{{Fill RemoveDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveExchangeLocation
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -881,12 +852,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

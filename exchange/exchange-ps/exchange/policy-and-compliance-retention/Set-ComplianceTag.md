@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-ComplianceTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -18,8 +21,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
- [-RetentionDuration <Unlimited>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
+ [-Notes <String>]
+ [-RetentionDuration <Unlimited>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,6 +102,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EventType
+The EventType specifies the retention rule that's associated with the label. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use the Get-RetentionComplianceRule cmdlet to view the available retention rules.
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePlanProperty
+{{ Fill FilePlanProperty Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameter specifies an optional note. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is a user note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetentionDuration
 The RetentionDuration parameter specifies the number of days to retain the content. Valid values are:
 
@@ -146,12 +225,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

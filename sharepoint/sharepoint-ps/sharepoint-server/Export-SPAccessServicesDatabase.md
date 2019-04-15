@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPAccessServicesDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPAccessServicesDatabase
@@ -24,7 +27,7 @@ EN\x86\DacFramework.msi
 
 Note: The x86 package is required. The x64 package is not compatible with this cmdlet.
 
-See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications).
+See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications).
 
 ## EXAMPLES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPPowerPointConversionServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPPowerPointConversionServiceApplication

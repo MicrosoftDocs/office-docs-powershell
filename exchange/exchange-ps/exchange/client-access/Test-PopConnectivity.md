@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-PopConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -155,7 +158,7 @@ Accept wildcard characters: False
 ### -LightMode
 The LightMode switch tells the command to perform only a test logon to the server by using the POP3 protocol. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command also tests sending and receiving a message using the POP3 protocol.
+If you don't use this switch, the command also tests receiving a message using the POP3 protocol.
 
 ```yaml
 Type: SwitchParameter

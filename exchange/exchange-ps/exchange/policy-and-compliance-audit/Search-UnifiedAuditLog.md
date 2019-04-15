@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -18,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime> [-Formatted] [-FreeText <String>]
- [-IPAddresses <String[]>] [-ObjectIds <String[]>] [-Operations <String[]>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ResultSize <Int32>] [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
- [-SessionId <String>] [-SiteIds <String[]>] [-UserIds <String[]>] [<CommonParameters>]
+Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
+ [-Formatted]
+ [-FreeText <String>]
+ [-IPAddresses <String[]>]
+ [-ObjectIds <String[]>]
+ [-Operations <String[]>]
+ [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-ResultSize <Int32>]
+ [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
+ [-SessionId <String>]
+ [-SiteIds <String[]>]
+ [-UserIds <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -Formatted
-The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch.
+The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch. 
+In addition it will make AuditData more readable.
 
 ```yaml
 Type: SwitchParameter
@@ -201,9 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the log entries by record type.
-
-Valid values are:
+The RecordType parameter filters the log entries by record type. Valid values are:
 
 - AzureActiveDirectory
 
@@ -239,7 +249,11 @@ Valid values are:
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
@@ -260,7 +274,7 @@ Valid values are:
 - Yammer
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -364,23 +378,17 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
-> [!NOTE] `-OutVariable` accepts objects of `ArrayList` list type.  
-> Below is a quick example of how `-OutVariable` can be used:
-> ```
-> $start = (Get-Date).AddDays(-1)
-> $end = (Get-Date).AddDays(-0.5)
-> $auditData = New-Object System.Collections.ArrayList
-> Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
-> ```
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
+$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; 
+Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 

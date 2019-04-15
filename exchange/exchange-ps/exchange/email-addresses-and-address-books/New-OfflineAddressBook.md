@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OfflineAddressBook
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -177,13 +180,9 @@ Accept wildcard characters: False
 ### -GeneratingMailbox
 This parameter is available only in on-premises Exchange.
 
-The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -264,7 +263,15 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the identity of the public folder database being used to distribute the OAB. To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
+The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
 
 ```yaml
 Type: DatabaseIdParameter

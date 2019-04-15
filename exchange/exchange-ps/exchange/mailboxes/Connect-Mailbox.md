@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Connect-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -207,7 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that you are connecting an equipment mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox
+The Equipment switch is required to connect equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -239,13 +244,9 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example:
-
-For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -268,7 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that you are connecting a room mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox.
+The Room switch is required to connect room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-The Shared switch specifies that you are connecting a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. This mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -539,13 +542,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user object in Active Directory that you want to connect the mailbox to. You can use any value that uniquely identifies the user. For example:
-
-For example:
+The User parameter specifies the user object in Active Directory that you want to connect the mailbox to. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

@@ -10,7 +10,7 @@ Adds a Client-Side Web Part to a client-side page
 
 ## SYNTAX 
 
-### Default with built-in webpart
+### Default with built-in web part
 ```powershell
 Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          -DefaultWebPartType <DefaultClientSideWebParts>
@@ -20,7 +20,7 @@ Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          [-Connection <SPOnlineConnection>]
 ```
 
-### Default with 3rd party webpart
+### Default with 3rd party web part
 ```powershell
 Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          -Component <ClientSideComponentPipeBind>
@@ -30,7 +30,7 @@ Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          [-Connection <SPOnlineConnection>]
 ```
 
-### Positioned with built-in webpart
+### Positioned with built-in web part
 ```powershell
 Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          -DefaultWebPartType <DefaultClientSideWebParts>
@@ -42,7 +42,7 @@ Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          [-Connection <SPOnlineConnection>]
 ```
 
-### Positioned with 3rd party webpart
+### Positioned with 3rd party web part
 ```powershell
 Add-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
                          -Component <ClientSideComponentPipeBind>
@@ -83,11 +83,11 @@ Adds a Client-Side component 'HelloWorld' to the page called 'MyPage' in section
 ## PARAMETERS
 
 ### -Column
-Sets the column where to insert the WebPart control.
+Sets the column where to insert the web part control.
 
 ```yaml
 Type: Int
-Parameter Sets: Positioned with built-in webpart, Positioned with 3rd party webpart
+Parameter Sets: Positioned with built-in web part, Positioned with 3rd party web part
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ Specifies the component instance or Id to add.
 
 ```yaml
 Type: ClientSideComponentPipeBind
-Parameter Sets: Default with 3rd party webpart, Positioned with 3rd party webpart
+Parameter Sets: Default with 3rd party web part, Positioned with 3rd party web part
 
 Required: True
 Position: Named
@@ -107,11 +107,11 @@ Accept pipeline input: False
 ```
 
 ### -DefaultWebPartType
-Defines a default WebPart type to insert.
+Defines a default web part type to insert.
 
 ```yaml
 Type: DefaultClientSideWebParts
-Parameter Sets: Default with built-in webpart, Positioned with built-in webpart
+Parameter Sets: Default with built-in web part, Positioned with built-in web part
 
 Required: True
 Position: Named
@@ -119,11 +119,11 @@ Accept pipeline input: False
 ```
 
 ### -Order
-Sets the order of the WebPart control. (Default = 1)
+Sets the order of the web part control. (Default = 1)
 
 ```yaml
 Type: Int
-Parameter Sets: Default with built-in webpart, Default with 3rd party webpart, Positioned with built-in webpart, Positioned with 3rd party webpart
+Parameter Sets: Default with built-in web part, Default with 3rd party web part, Positioned with built-in web part, Positioned with 3rd party web part
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ The name of the page.
 
 ```yaml
 Type: ClientSidePagePipeBind
-Parameter Sets: Default with built-in webpart, Default with 3rd party webpart, Positioned with built-in webpart, Positioned with 3rd party webpart
+Parameter Sets: Default with built-in web part, Default with 3rd party web part, Positioned with built-in web part, Positioned with 3rd party web part
 
 Required: True
 Position: 0
@@ -143,11 +143,11 @@ Accept pipeline input: True
 ```
 
 ### -Section
-Sets the section where to insert the WebPart control.
+Sets the section where to insert the web part control.
 
 ```yaml
 Type: Int
-Parameter Sets: Positioned with built-in webpart, Positioned with 3rd party webpart
+Parameter Sets: Positioned with built-in web part, Positioned with 3rd party web part
 
 Required: True
 Position: Named
@@ -155,11 +155,11 @@ Accept pipeline input: False
 ```
 
 ### -WebPartProperties
-The properties of the WebPart
+The properties of the web part
 
 ```yaml
 Type: PropertyBagPipeBind
-Parameter Sets: Default with built-in webpart, Default with 3rd party webpart, Positioned with built-in webpart, Positioned with 3rd party webpart
+Parameter Sets: Default with built-in web part, Default with 3rd party web part, Positioned with built-in web part, Positioned with 3rd party web part
 
 Required: False
 Position: Named
@@ -192,4 +192,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

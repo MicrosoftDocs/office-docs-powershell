@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Set-PublicFolderDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -18,16 +21,29 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter> [-AllowFileRestore <$true | $false>]
- [-BackgroundDatabaseMaintenance <$true | $false>] [-CircularLoggingEnabled <$true | $false>] [-Confirm]
- [-CustomReferralServerList <MultiValuedProperty>] [-DeletedItemRetention <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-EventHistoryRetentionPeriod <EnhancedTimeSpan>] [-IssueWarningQuota <Unlimited>]
- [-ItemRetentionPeriod <Unlimited>] [-MaintenanceSchedule <Schedule>] [-MaxItemSize <Unlimited>]
- [-MountAtStartup <$true | $false>] [-Name <String>] [-ProhibitPostQuota <Unlimited>]
- [-QuotaNotificationSchedule <Schedule>] [-ReplicationMessageSize <ByteQuantifiedSize>]
- [-ReplicationPeriod <UInt32>] [-ReplicationSchedule <Schedule>]
- [-RetainDeletedItemsUntilBackup <$true | $false>] [-UseCustomReferralServerList <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
+ [-AllowFileRestore <$true | $false>]
+ [-BackgroundDatabaseMaintenance <$true | $false>]
+ [-CircularLoggingEnabled <$true | $false>]
+ [-Confirm]
+ [-CustomReferralServerList <MultiValuedProperty>]
+ [-DeletedItemRetention <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-EventHistoryRetentionPeriod <EnhancedTimeSpan>]
+ [-IssueWarningQuota <Unlimited>]
+ [-ItemRetentionPeriod <Unlimited>]
+ [-MaintenanceSchedule <Schedule>]
+ [-MaxItemSize <Unlimited>]
+ [-MountAtStartup <$true | $false>]
+ [-Name <String>]
+ [-ProhibitPostQuota <Unlimited>]
+ [-QuotaNotificationSchedule <Schedule>]
+ [-ReplicationMessageSize <ByteQuantifiedSize>]
+ [-ReplicationPeriod <UInt32>]
+ [-ReplicationSchedule <Schedule>]
+ [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-UseCustomReferralServerList <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,15 +75,13 @@ This example prevents the deleted items in the public folder database PFDB01 fro
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
+The Identity parameter specifies the public folder database that you want to modify. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
-
-If you don't specify the server name, the command searches for databases on the local server. If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -425,12 +439,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

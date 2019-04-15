@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps" 
 ---
 
@@ -13,12 +16,25 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in the Recoverable Items folder in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems>] [-SubjectContains <String>] [<CommonParameters>]
+Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
+ [-NoOutput]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,16 +80,30 @@ julia@contoso.com
 
 The first command reads the CSV file and writes the information to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
 
+### -------------------------- Example 3 --------------------------
+```
+Restore-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY18 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+```
+
+After using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items from multiple specified mailboxes:
+
+- Mailbox: malik@contoso.com, lillian@contoso.com
+
+- Item type: Email message
+
+- Message subject: COGS FY18 Review
+
+- Location: Recoverable Items\Deletions
+
+- Date range: 3/15/2019 to 3/25/2019
+
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -114,7 +144,7 @@ You can find the EntryID for specific items by using other search filters on the
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -188,12 +218,51 @@ The LastParentFolderID parameter specifies the FolderID value of the item before
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -MaxParallelSize
+The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoOutput
+The NoOutput switch restores items directly without any output in console. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoOutput
+
+
+```
+Restore-RecoverableItems -Identity alvin@contoso.com -NoOutput
 ```
 
 ### -ResultSize
@@ -218,14 +287,15 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 
 - RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
 
-If you don't use this parameter, the command will search both locations.
+- PurgedItems: If either Litigation Hold or single item recovery is enabled on the mailbox, this folder contains all items that are hard deleted. This folder isn't visible to end users.
+
+If you don't use this parameter, the command will search all locations.
 
 ```yaml
 Type: DeletedItems | RecoverableItems
 Parameter Sets: (All)
 Aliases:
-Accepted values: DeletedItems, RecoverableItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -254,12 +324,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

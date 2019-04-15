@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Test-IRMConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Test-IRMConfiguration [[-Identity] <OrganizationIdParameter>] -Sender <SmtpAddress> [-Confirm]
- [-DomainController <Fqdn>] [-Recipient <SmtpAddress[]>] [-WhatIf] [-RMSOnline]
- [-RMSOnlineAuthCertThumbprintOverride <String>] [-RMSOnlineOrgOverride <Guid>] [<CommonParameters>]
+Test-IRMConfiguration [[-Identity] <OrganizationIdParameter>] -Sender <SmtpAddress>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Recipient <SmtpAddress[]>]
+ [-RMSOnline]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,21 +130,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RMSOnline
 This parameter is available only in the cloud-based service.
 
@@ -156,29 +147,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RMSOnlineAuthCertThumbprintOverride
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineOrgOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

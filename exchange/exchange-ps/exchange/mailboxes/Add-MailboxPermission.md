@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxPermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -91,13 +94,9 @@ In Office 365, this example assigns the administrator account admin@contoso.com 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -200,13 +199,9 @@ Accept wildcard characters: False
 ### -Owner
 The Owner parameter specifies the owner of the mailbox object. The default mailbox owner is NT AUTHORITY\\SELF.
 
-The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
-
-For example:
+The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -229,13 +224,9 @@ Accept wildcard characters: False
 ### -User
 The User parameter specifies the user that you're assigning the permission to.
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example:
-
-For example:
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
