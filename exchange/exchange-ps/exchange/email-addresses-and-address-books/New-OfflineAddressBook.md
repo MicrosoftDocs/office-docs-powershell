@@ -263,7 +263,15 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the identity of the public folder database being used to distribute the OAB. To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
+The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
 
 ```yaml
 Type: DatabaseIdParameter

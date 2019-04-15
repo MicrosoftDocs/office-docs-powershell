@@ -81,11 +81,13 @@ This example uses the Database and StoreMailbox parameters to display the Identi
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the database on which you run this command. If you use this parameter, all mailboxes on the database are searched for corruptions. You can use the following values:
+The Database parameter returns mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Mailbox parameter.
 

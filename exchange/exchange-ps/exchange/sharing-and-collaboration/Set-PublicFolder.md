@@ -422,7 +422,15 @@ Accept wildcard characters: False
 ### -Replicas
 This parameter is available or functional only in Exchange Server 2010
 
-The Replicas parameter specifies a list of public folder databases with which to replicate this public folder.
+The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
 
 ```yaml
 Type: DatabaseIdParameter[]
