@@ -120,11 +120,13 @@ Accept wildcard characters: False
 ### -MoveRequestQueue
 This parameter is available only in on-premises Exchange.
 
-The MoveRequestQueue parameter specifies the database on which the move request is queued. You can use the following values:
+The MoveRequestQueue parameter specifies the database on which the move request is queued. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -194,9 +196,7 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

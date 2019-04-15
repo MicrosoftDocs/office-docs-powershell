@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  MailboxIdentity
+### MailboxIdentity
 ```
 Disable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
  [-Confirm]
@@ -72,9 +72,7 @@ This example releases the mailbox for the user Brian Johnson from quarantine.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to release from quarantine. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to release from quarantine. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

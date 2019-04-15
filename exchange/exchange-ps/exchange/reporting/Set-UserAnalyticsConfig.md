@@ -49,9 +49,7 @@ This example sets the MyAnalytics privacy setting to OptIn for the user named Ka
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
-
-For example:
+The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
 

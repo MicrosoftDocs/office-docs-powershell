@@ -287,7 +287,7 @@ Indicates the login type. Valid values are:
 
 * ApplicationLogin 
 
-*LocalDBApplicationLogin 
+* LocalDBApplicationLogin 
 
 * ServerLogin 
 

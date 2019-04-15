@@ -109,9 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user.
-
-For example:
+The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user. For example:
 
 - Name
 

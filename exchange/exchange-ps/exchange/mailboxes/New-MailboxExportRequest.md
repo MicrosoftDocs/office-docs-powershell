@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  Mailbox (Default)
+### Mailbox (Default)
 ```
 New-MailboxExportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
