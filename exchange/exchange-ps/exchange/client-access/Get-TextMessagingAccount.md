@@ -46,9 +46,7 @@ This example returns the text messaging settings for Tony's mailbox.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

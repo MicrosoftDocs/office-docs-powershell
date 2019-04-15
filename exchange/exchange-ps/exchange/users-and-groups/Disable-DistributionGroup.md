@@ -42,9 +42,7 @@ This example mail-disables the distribution group named Distribution Group1.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to mail-disable. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to mail-disable. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

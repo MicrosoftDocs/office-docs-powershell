@@ -40,9 +40,7 @@ This example deletes the dynamic distribution group named Test Users.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the dynamic distribution group that you want to remove. You can use any value that uniquely identifies the dynamic distribution group.
-
-For example:
+The Identity parameter specifies the dynamic distribution group that you want to remove. You can use any value that uniquely identifies the dynamic distribution group. For example:
 
 - Name
 

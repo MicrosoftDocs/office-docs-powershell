@@ -95,7 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
 The Identity parameter specifies the mailbox to get usage statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID

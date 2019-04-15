@@ -179,7 +179,13 @@ Accept wildcard characters: False
 ### -MailboxDatabase
 This parameter is available or functional only in Exchange Server 2010 and 2013.
 
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against.
+The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity or Server parameters.
 

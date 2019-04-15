@@ -218,7 +218,6 @@ You can use any value that uniquely identifies the owner. For example:
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
-
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
