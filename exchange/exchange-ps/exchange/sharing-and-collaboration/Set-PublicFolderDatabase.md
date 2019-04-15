@@ -21,16 +21,29 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter> [-AllowFileRestore <$true | $false>]
- [-BackgroundDatabaseMaintenance <$true | $false>] [-CircularLoggingEnabled <$true | $false>] [-Confirm]
- [-CustomReferralServerList <MultiValuedProperty>] [-DeletedItemRetention <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-EventHistoryRetentionPeriod <EnhancedTimeSpan>] [-IssueWarningQuota <Unlimited>]
- [-ItemRetentionPeriod <Unlimited>] [-MaintenanceSchedule <Schedule>] [-MaxItemSize <Unlimited>]
- [-MountAtStartup <$true | $false>] [-Name <String>] [-ProhibitPostQuota <Unlimited>]
- [-QuotaNotificationSchedule <Schedule>] [-ReplicationMessageSize <ByteQuantifiedSize>]
- [-ReplicationPeriod <UInt32>] [-ReplicationSchedule <Schedule>]
- [-RetainDeletedItemsUntilBackup <$true | $false>] [-UseCustomReferralServerList <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
+ [-AllowFileRestore <$true | $false>]
+ [-BackgroundDatabaseMaintenance <$true | $false>]
+ [-CircularLoggingEnabled <$true | $false>]
+ [-Confirm]
+ [-CustomReferralServerList <MultiValuedProperty>]
+ [-DeletedItemRetention <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-EventHistoryRetentionPeriod <EnhancedTimeSpan>]
+ [-IssueWarningQuota <Unlimited>]
+ [-ItemRetentionPeriod <Unlimited>]
+ [-MaintenanceSchedule <Schedule>]
+ [-MaxItemSize <Unlimited>]
+ [-MountAtStartup <$true | $false>]
+ [-Name <String>]
+ [-ProhibitPostQuota <Unlimited>]
+ [-QuotaNotificationSchedule <Schedule>]
+ [-ReplicationMessageSize <ByteQuantifiedSize>]
+ [-ReplicationPeriod <UInt32>]
+ [-ReplicationSchedule <Schedule>]
+ [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-UseCustomReferralServerList <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,15 +75,13 @@ This example prevents the deleted items in the public folder database PFDB01 fro
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
+The Identity parameter specifies the public folder database that you want to modify. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
-
-If you don't specify the server name, the command searches for databases on the local server. If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

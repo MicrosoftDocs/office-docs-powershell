@@ -162,9 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-The TargetDatabase parameter specifies the mailbox database to which test messages are sent.
+The TargetDatabase parameter specifies the mailbox database to which test messages are sent. You can use any value that uniquely identifies the database. For example:
 
-When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
 
 ```yaml
 Type: DatabaseIdParameter

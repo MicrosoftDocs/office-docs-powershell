@@ -150,9 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mail contact that you want to view. You can use any value that uniquely identifies the mail contact.
-
-For example:
+The Identity parameter specifies the mail contact that you want to view. You can use any value that uniquely identifies the mail contact. For example:
 
 - Name
 

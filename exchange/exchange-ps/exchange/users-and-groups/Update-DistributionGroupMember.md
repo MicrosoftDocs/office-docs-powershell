@@ -40,9 +40,7 @@ This example replaces the existing members of the distribution group name Resear
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -126,9 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the recipients (mail-enabled objects) that will replace the current group members. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Members parameter specifies the recipients (mail-enabled objects) that will replace the current group members. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 

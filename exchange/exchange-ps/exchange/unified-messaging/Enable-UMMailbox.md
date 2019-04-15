@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  Identity (Default)
+### Identity (Default)
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolicyIdParameter>
  [-AutomaticSpeechRecognitionEnabled <$true | $false>]
@@ -80,9 +80,7 @@ This example enables Unified Messaging on a SIP-enabled mailbox for tonysmith@co
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to enable for Unified Messaging. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to enable for Unified Messaging. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

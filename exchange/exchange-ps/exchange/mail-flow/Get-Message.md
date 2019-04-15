@@ -20,7 +20,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-
 ### Filter
 ```
 Get-Message [-Filter <String>]
@@ -49,6 +48,7 @@ Get-Message [[-Identity] <MessageIdentity>]
  [-SearchForward <$true | $false>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
+
 ### Queue
 ```
 Get-Message [-Queue <QueueIdentity>]

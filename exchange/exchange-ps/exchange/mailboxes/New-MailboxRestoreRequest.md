@@ -52,7 +52,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [<CommonParameters>]
 ```
 
-###  MailboxIDMigrationLocalMailboxRestore
+### MailboxIDMigrationLocalMailboxRestore
 ```
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
@@ -293,7 +293,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies the identity of the database from which you're restoring the soft-deleted or disconnected mailbox.
+The SourceDatabase parameter specifies the identity of the database from which you're restoring the soft-deleted or disconnected mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

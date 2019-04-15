@@ -128,13 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox database. You can use the following values:
+The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
+- GUID
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
 
