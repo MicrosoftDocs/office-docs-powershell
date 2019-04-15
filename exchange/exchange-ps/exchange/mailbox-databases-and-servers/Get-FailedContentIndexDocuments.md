@@ -123,13 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDatabase
-The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use the following values:
+The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-- DN
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

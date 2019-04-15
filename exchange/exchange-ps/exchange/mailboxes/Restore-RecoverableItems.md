@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in the Recoverable Items folder in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -27,6 +29,8 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-FilterItemType <String>]
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
+ [-NoOutput]
  [-ResultSize <Unlimited>]
  [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>]
  [-SubjectContains <String>]
@@ -75,6 +79,24 @@ laura@contoso.com
 julia@contoso.com
 
 The first command reads the CSV file and writes the information to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
+
+### -------------------------- Example 3 --------------------------
+```
+Restore-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY18 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+```
+
+After using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items from multiple specified mailboxes:
+
+- Mailbox: malik@contoso.com, lillian@contoso.com
+
+- Item type: Email message
+
+- Message subject: COGS FY18 Review
+
+- Location: Recoverable Items\Deletions
+
+- Date range: 3/15/2019 to 3/25/2019
+
 
 ## PARAMETERS
 
@@ -202,6 +224,45 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -MaxParallelSize
+The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoOutput
+The NoOutput switch restores items directly without any output in console. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoOutput
+
+
+```
+Restore-RecoverableItems -Identity alvin@contoso.com -NoOutput
 ```
 
 ### -ResultSize
