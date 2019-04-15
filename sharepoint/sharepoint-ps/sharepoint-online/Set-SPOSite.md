@@ -78,10 +78,10 @@ Example 1 updates the owner of site collection https://contoso.sharepoint.com/si
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 3000
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 1024
 ```
 
-Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 3000 gigabytes (3 TB) and the resource quota is updated to 0 megabytes. 
+Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes. 
 
 
 ### -----------------------EXAMPLE 3-----------------------------
@@ -89,7 +89,7 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400000
 ```
 
-This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 gigabytes and the storage quota warning level is updated to 1400000 megabytes. 
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400000 megabytes. 
 
 
 ### -----------------------EXAMPLE 4-----------------------------
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuota
-Specifies the storage quota in gigabytes of the site collection.
+Specifies the storage quota in megabytes of the site collection.
 
 
 ```yaml
