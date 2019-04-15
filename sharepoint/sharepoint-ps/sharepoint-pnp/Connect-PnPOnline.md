@@ -334,7 +334,7 @@ This will authenticate you using the provided access token
 Connect-PnPOnline -Scopes $arrayOfScopes
 ```
 
-Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
+Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
 
 ### ------------------EXAMPLE 14------------------
 ```powershell

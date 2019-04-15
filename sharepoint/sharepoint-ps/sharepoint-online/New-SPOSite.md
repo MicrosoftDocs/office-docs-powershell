@@ -36,14 +36,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-New-SPOSite -Url http://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -Title "My new site collection"
+New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -Title "My new site collection"
 ```
 
 Example 1 creates a new site collection for the current company with specified site URL, title and owner. The storage quota is set to 1000 megabytes.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-New-SPOSite -Url http://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -ResourceQuota 300 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
+New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -ResourceQuota 300 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
 ```
 
 Example 2 creates a new site collection for the current company with specified site URL, title, owner and template. The storage quota is set to 1000 megabytes and the resource quota is set to 300 megabytes. The template compatibility level is set to 15 which means that the site collection only supports the SharePoint 2013 template. The language is set to English - United States (LocaleID = 1033) and the time zone is set to (GMT-08:00) Pacific Time (US and Canada) (TimeZone = 13).
