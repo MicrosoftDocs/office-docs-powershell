@@ -37,7 +37,7 @@ Returns the termset named "Departments" from the termgroup called "Corporate" fr
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate
+Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate"
 ```
 
 Returns the termset with the given id from the termgroup called "Corporate" from the site collection termstore
