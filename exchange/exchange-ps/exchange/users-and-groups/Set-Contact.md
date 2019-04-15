@@ -54,9 +54,7 @@ Change the Company parameter value to Contoso.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact. For example:
 
 - Name
 

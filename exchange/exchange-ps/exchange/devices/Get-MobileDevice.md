@@ -71,7 +71,6 @@ Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 
 This example returns a summary list of all mobile devices in the organization.
 
-
 ### -------------------------- Example 3 --------------------------
 ```
 Get-MobileDevice -Identity lila\ExchangeActiveSyncDevices\Android§android94732903 | Format-List
@@ -82,9 +81,7 @@ This example returns detailed information about the specified device on Lila's m
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

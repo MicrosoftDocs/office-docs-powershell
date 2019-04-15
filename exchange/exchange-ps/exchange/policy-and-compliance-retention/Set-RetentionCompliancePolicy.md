@@ -30,7 +30,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
 ### Identity
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddDynamicScopeLocation <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddExchangeLocationException <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
@@ -46,7 +45,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <$true | $false>]
  [-Force]
- [-RemoveDynamicScopeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -132,21 +130,6 @@ Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddDynamicScopeLocation
-{{Fill AddDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -515,21 +498,6 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveDynamicScopeLocation
-{{Fill RemoveDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False

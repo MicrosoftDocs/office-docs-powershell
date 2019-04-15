@@ -47,6 +47,12 @@ New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -
 ```
 
 This example creates a new Sweep rule named "From Lila" in Felipe Apodaca's mailbox that moves messages from lila@fabrikam.com in the Inbox folder that are older than 10 days to the Deleted Items folder.
+### -------------------------- Example 3 --------------------------
+```
+New-SweepRule -Name "From Jeff" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender jeffm@fabrikam.com -SourceFolder "Felipe:\Sent Items" -KeepForDays 10
+```
+
+This example creates a new Sweep rule named "From Jeff" in Felipe Apodaca's mailbox that moves messages from jeffm@fabrikam.com in the Sent Items folder that are older than 10 days to the Deleted Items folder.
 
 ## PARAMETERS
 
@@ -253,9 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to create the Sweep rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox where you want to create the Sweep rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -290,9 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
-The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender.
-
-For example:
+The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender. For example:
 
 - Name
 

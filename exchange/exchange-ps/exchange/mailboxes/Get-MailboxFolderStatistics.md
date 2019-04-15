@@ -75,9 +75,7 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user.
-
-For example:
+The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
 
@@ -98,7 +96,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter

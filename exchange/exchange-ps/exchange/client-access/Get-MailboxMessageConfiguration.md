@@ -49,9 +49,7 @@ This example returns the Outlook on the web settings for Tony's mailbox and spec
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

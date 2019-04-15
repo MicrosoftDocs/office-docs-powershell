@@ -109,9 +109,7 @@ In Exchange Online, this example removes the specified soft-deleted mailbox mail
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
