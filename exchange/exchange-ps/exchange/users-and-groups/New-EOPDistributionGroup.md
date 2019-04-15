@@ -109,9 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user.
-
-For example:
+The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -150,9 +148,7 @@ The Members parameter specifies the initial list of recipients (mail-enabled obj
 
 - Mail-enabled security groups
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 

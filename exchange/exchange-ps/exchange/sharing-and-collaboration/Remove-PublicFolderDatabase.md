@@ -42,15 +42,13 @@ This example removes the database Public Folder Database after all the prerequis
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
+The Identity parameter specifies the public folder database that you want to remove. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
-
-If you don't specify the server name, the command searches for databases on the local server. If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

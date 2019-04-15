@@ -63,9 +63,11 @@ This example permanently purges all soft-deleted mailboxes from mailbox database
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database on which the mailbox that you want to remove resides. This parameter accepts the following values:
+The Database parameter specifies the mailbox database that contains the mailbox to remove. You can use any value that uniquely identifies the database. For example:
 
-- Database name
+- Name
+
+- Distinguished name (DN)
 
 - GUID
 

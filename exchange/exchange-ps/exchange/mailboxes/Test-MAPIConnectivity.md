@@ -96,7 +96,15 @@ This example tests connectivity to a mailbox, specified as a domain name and use
 ### -Database
 This parameter is available only in on-premises Exchange.
 
-The Database parameter specifies the database on which to test the connectivity to the system mailbox. If you don't specify this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the server that you specify, or on the local server if you don't specify the Server parameter.
+The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
 
 ```yaml
 Type: DatabaseIdParameter

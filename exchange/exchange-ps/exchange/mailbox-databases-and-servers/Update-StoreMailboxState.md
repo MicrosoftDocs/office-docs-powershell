@@ -56,9 +56,11 @@ This example updates the mailbox state for all disconnected mailboxes on the mai
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database that contains the mailbox that you want to update the store state for. This parameter accepts the following values:
+The Database parameter specifies the mailbox database that contains the mailbox. You can use any value that uniquely identifies the database. For example:
 
-- Database name
+- Name
+
+- Distinguished name (DN)
 
 - GUID
 
@@ -75,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox that you want to update the store state for. Use the mailbox GUID as the value for this parameter.
+The Identity parameter specifies the mailbox that you want to update. Use the mailbox GUID as the value for this parameter.
 
 Run the following command to obtain the mailbox GUID and other information for all mailboxes in your organization: Get-MailboxDatabase | Get-MailboxStatistics | Format-List DisplayName,MailboxGuid,Database,DisconnectReason,DisconnectDate.
 

@@ -183,9 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the user object that you want to modify. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user object that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
