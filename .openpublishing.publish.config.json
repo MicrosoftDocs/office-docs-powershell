@@ -267,6 +267,7 @@
   },
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "error_log_codes": ["DuplicateOutputFiles"],
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
