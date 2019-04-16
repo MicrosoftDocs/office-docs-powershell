@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ### -RoutingMethod
 The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
 
-PARAMVALUE: Attendant | Serial
+PARAMVALUE: Attendant | Serial | RoundRobin
 
 ```yaml
 Type: Object
