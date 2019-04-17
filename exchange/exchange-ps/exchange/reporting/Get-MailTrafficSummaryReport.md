@@ -30,11 +30,11 @@ Get-MailTrafficSummaryReport [-Category <String>] [-DlpPolicy <MultiValuedProper
 ## DESCRIPTION
 This cmdlet has C1, C2 and C3 as header names and the meaning of them depends on the category you choose. Next you can see an explanation about each category:
 
-* InboundTransportRuleHits and OutboundTransportRuleHits: C1 is the transport rule name, C2 the audit level and C3 the hits.
+- InboundTransportRuleHits and OutboundTransportRuleHits: C1 is the transport rule name, C2 the audit level and C3 the hits.
 
-* TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of emails.
+- TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of email messages.
 
-* TopMalware: C1 is the malware name and C2 the quantity of appearances.
+- TopMalware: C1 is the malware name and C2 the quantity of appearances.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
