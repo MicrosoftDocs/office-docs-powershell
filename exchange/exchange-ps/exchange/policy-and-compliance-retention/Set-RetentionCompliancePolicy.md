@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocation
-{{Fill AddTeamsChannelLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocationException
-{{Fill AddTeamsChannelLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocation
-{{Fill AddTeamsChatLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocationException
-{{Fill AddTeamsChatLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -772,7 +772,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocation
-{{Fill RemoveTeamsChannelLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -787,7 +787,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocationException
-{{Fill RemoveTeamsChannelLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -802,7 +802,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocation
-{{Fill RemoveTeamsChatLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -817,7 +817,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocationException
-{{Fill RemoveTeamsChatLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
