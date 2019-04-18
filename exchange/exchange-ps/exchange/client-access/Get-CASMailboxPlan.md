@@ -57,8 +57,6 @@ The Identity parameter specifies the CAS mailbox plan that you want to view. You
 
 - Name
 
-- Display Name
-
 - Distinguished name (DN)
 
 - GUID
@@ -148,7 +146,7 @@ If the default view doesn't include the property you're sorting by, you can appe
 
 You can sort by the following attributes:
 
-- Display name
+- DisplayName
 
 - Name
 

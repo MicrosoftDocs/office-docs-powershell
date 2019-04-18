@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Get-PnPUPABulkImportStatus
 
@@ -20,7 +17,7 @@ Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]
 ```
 
 ## DESCRIPTION
-Retreieve information about the status of submitted user profile bulk upload jobs.
+Retrieve information about the status of submitted user profile bulk upload jobs.
 
 ## EXAMPLES
 
@@ -92,4 +89,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

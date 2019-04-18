@@ -97,7 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database on which the mailbox data for the site mailbox resides.
+The Database parameter specifies the mailbox database that holds the mailbox data for the site mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

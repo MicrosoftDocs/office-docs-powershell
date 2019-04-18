@@ -22,7 +22,11 @@ After creating the `"Custom Cyan"` theme, hiding the default themes leaves only 
 
 Specify the setting as either `$true` to hide the default themes, or `$false` (the default setting) to allow use of the default themes. 
 
-Note that this cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+> [!NOTE] 
+> This cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+
+> [!TIP] 
+> Allows you to hide or show **ALL**  default themes, no any particular ones.
 
 ## EXAMPLES
 
@@ -30,7 +34,7 @@ Note that this cmdlet was named **Set-HideDefaultThemes** until the December 201
 
 In this example, the cmdlet hides the default themes.
 
-```
+```powershell
 Set-SPOHideDefaultThemes $true
 ```
 
@@ -38,7 +42,7 @@ Set-SPOHideDefaultThemes $true
 
 In this example, the cmdlet restores the default themes to the theme picker list.
 
-```
+```powershell
 Set-SPOHideDefaultThemes $false
 ```
 
@@ -46,4 +50,11 @@ Set-SPOHideDefaultThemes $false
 ## INPUTS
 
 ## OUTPUTS
+## NOTES
+
+## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOHideDefaultThemes](Get-SPOHideDefaultThemes.md)
 

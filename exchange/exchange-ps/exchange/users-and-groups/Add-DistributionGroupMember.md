@@ -41,13 +41,9 @@ This example adds John Evans to the distribution group named Staff.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -129,13 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the recipient (mail-enabled object) that you want to add to the group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Member parameter specifies the recipient (mail-enabled object) that you want to add to the group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -147,13 +139,9 @@ For example:
 
 - GUID
 
-The Member parameter specifies the recipient that you want to add to the group. A member can be any mail-enabled recipient in your organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Member parameter specifies the recipient that you want to add to the group. A member can be any mail-enabled recipient in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

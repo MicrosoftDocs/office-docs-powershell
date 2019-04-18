@@ -66,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to update. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to update. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -105,13 +101,9 @@ The Members parameter specifies the list of recipients (mail-enabled objects) in
 
 - Mail-enabled security groups
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

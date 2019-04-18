@@ -42,13 +42,9 @@ This example mail-enables the universal distribution group named Distribution Gr
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the universal security group or universal distribution group that you want to mail-enable. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the universal security group or universal distribution group that you want to mail-enable. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -147,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 By default, the primary SMTP address is generated based on the default email address policy and the value of the Alias parameter or the Name property. If you use the PrimarySmtpAddress parameter to specify the primary email address, the EmailAddressPolicyEnabled property is set to the value False, which means the email addresses of this group won't be automatically updated by email address policies.
 

@@ -56,13 +56,9 @@ This example specifies that the group Human Resources is a hierarchical group an
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -213,8 +209,6 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -337,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -Universal
-The Universal swtich changes the scope of the group from Global or DomainLocal to Universal. You don't need to specify a value with this switch.
+The Universal switch changes the scope of the group from Global or DomainLocal to Universal. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

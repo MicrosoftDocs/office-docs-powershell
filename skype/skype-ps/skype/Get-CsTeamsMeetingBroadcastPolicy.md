@@ -30,7 +30,7 @@ Get-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalSto
 ```
 
 ## DESCRIPTION
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
 
 ## EXAMPLES
 

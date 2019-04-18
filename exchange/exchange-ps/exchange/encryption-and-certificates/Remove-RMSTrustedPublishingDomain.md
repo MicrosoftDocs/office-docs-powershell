@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Remove-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParameter>
+ [-Confirm]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,21 +75,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

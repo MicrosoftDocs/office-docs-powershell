@@ -437,7 +437,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -TargetDeliveryDomain
 The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote or RemoteLegacy parameter.
 
@@ -534,13 +533,16 @@ Accept wildcard characters: False
 ### -ArchiveTargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The ArchiveTargetDatabase parameter specifies the Exchange target database to which you're moving the personal archive. If this parameter isn't specified, the archive is moved to the same database as the primary mailbox.
+The ArchiveTargetDatabase parameter specifies the destination mailbox database for the personal archive. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values for this parameter:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+If you don't use this parameter, the archive is moved to the same database as the primary mailbox.
+
 
 ```yaml
 Type: DatabaseIdParameter
@@ -935,13 +937,9 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1135,13 +1133,15 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. If you don't use this parameter, the automatic distribution logic will select a random database from the Active Directory site where you are running the command.
+The TargetDatabase parameter specifies the destination mailbox database for the mailbox. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+If you don't use this parameter, the automatic distribution logic will select a random database in the Active Directory site where you are running the command.
 
 ```yaml
 Type: DatabaseIdParameter

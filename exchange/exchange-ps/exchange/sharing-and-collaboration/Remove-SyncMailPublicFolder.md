@@ -42,9 +42,7 @@ This cmdlet is only used by the Sync-MailPublicFolders.ps1 script. Don't run thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365.
-
-For example:
+The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365. For example:
 
 - Name
 
