@@ -30,7 +30,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
 ### Identity
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddDynamicScopeLocation <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddExchangeLocationException <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
@@ -46,7 +45,6 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <$true | $false>]
  [-Force]
- [-RemoveDynamicScopeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -132,21 +130,6 @@ Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddDynamicScopeLocation
-{{Fill AddDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -397,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocation
-{{Fill AddTeamsChannelLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -412,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocationException
-{{Fill AddTeamsChannelLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -427,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocation
-{{Fill AddTeamsChatLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -442,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocationException
-{{Fill AddTeamsChatLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -515,21 +498,6 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveDynamicScopeLocation
-{{Fill RemoveDynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -804,7 +772,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocation
-{{Fill RemoveTeamsChannelLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -819,7 +787,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocationException
-{{Fill RemoveTeamsChannelLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -834,7 +802,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocation
-{{Fill RemoveTeamsChatLocation Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -849,7 +817,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocationException
-{{Fill RemoveTeamsChatLocationException Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty

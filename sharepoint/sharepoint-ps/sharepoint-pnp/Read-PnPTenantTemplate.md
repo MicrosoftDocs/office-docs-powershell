@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Read-PnPTenantTemplate
 
@@ -25,7 +22,7 @@ Read-PnPTenantTemplate -Path <String>
 Read-PnPTenantTemplate -Path template.pnp
 ```
 
-Reads a PnP tenant templatey file from the file system and returns an in-memory instance
+Reads a PnP tenant template file from the file system and returns an in-memory instance
 
 ## PARAMETERS
 
@@ -55,4 +52,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -43,13 +43,9 @@ This example removes an eDiscovery Administrator.
 ## PARAMETERS
 
 ### -User
-The User parameter specifies the user that you want to remove from the list of eDiscovery Administrators. You can use any value that uniquely identifies the user.
-
-For example:
+The User parameter specifies the user that you want to remove from the list of eDiscovery Administrators. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

@@ -58,13 +58,9 @@ This example exports Ayla Kol's picture file to the local computer.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox or mail contact from which you want to export the recipient data. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the mailbox or mail contact from which you want to export the recipient data. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

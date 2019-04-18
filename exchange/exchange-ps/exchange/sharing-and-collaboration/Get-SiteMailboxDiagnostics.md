@@ -52,23 +52,19 @@ This example returns the event information for the Marketing Events 2015 site ma
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the site mailbox. You can use the following values:
+The Identity parameter specifies the site mailbox that you want to view. You can use any value that uniquely identifies the site mailbox. For example:
+
+- Name
 
 - Alias
 
-- Display name
-
-- Domain\\Account
-
-- SMTP address
-
 - Distinguished name (DN)
 
-- Object GUID
+- Canonical DN
 
-- User principal name (UPN)
+- Email address
 
-- LegacyExchangeDN
+- GUID
 
 ```yaml
 Type: RecipientIdParameter

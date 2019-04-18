@@ -174,5 +174,5 @@ You can pipe any object to ConvertTo-JsonForPSWS.
 
 ## RELATED LINKS
 
-[ConvertTo-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)
+[ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)
 

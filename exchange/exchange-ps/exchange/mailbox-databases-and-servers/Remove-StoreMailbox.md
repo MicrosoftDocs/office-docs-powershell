@@ -63,9 +63,11 @@ This example permanently purges all soft-deleted mailboxes from mailbox database
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database on which the mailbox that you want to remove resides. This parameter accepts the following values:
+The Database parameter specifies the mailbox database that contains the mailbox to remove. You can use any value that uniquely identifies the database. For example:
 
-- Database name
+- Name
+
+- Distinguished name (DN)
 
 - GUID
 
@@ -82,19 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox that you want to remove. This parameter accepts the following values:
+The Identity parameter specifies the identity of the mailbox that you want to remove. Use the mailbox GUID as the value for this parameter.
 
-- GUID
-
-- Distinguished name (DN)
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- Domain\\Account Name
-
-- SMTP address
+Run the following command to obtain the mailbox GUID and other information for all mailboxes in your organization: Get-MailboxDatabase | Get-MailboxStatistics | Format-List DisplayName,MailboxGuid,Database,DisconnectReason,DisconnectDate.
 
 ```yaml
 Type: StoreMailboxIdParameter

@@ -123,7 +123,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -435,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -994,6 +995,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -InterestingCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
@@ -1090,7 +1092,7 @@ Accept wildcard characters: False
 ### -JunkEmailEnabled
 This parameter is available only in on-premises Exchange.
 
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
 - $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 
@@ -1501,7 +1503,7 @@ The ReportJunkEmailEnabled parameter specifies whether users can report messages
 
 - $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
 
-- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available.
+- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available. Users can stil mark messages as junk, phishing, or not junk, but they won't be able to report messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
@@ -1613,7 +1615,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoURL
-The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
+The SetPhotoURL parameter controls where users go to select their photo. Note that you can't specify a URL that contains one or more picture files, as there is no mechanism to copy a URL photo to the properties of the users' Exchange Online mailboxes.
 
 ```yaml
 Type: String

@@ -118,6 +118,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/new-csadditionalinternaldomain?view=skype-ps)
+[New-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/new-csadditionalinternaldomain?view=skype-ps)
 
-[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
+[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)

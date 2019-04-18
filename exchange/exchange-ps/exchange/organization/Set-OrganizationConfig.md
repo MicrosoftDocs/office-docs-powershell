@@ -93,6 +93,7 @@ Set-OrganizationConfig
  [-SmtpActionableMessagesEnabled <$true | $false>]
  [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
  [-VisibleMeetingUpdateProperties <String>]
+ [-WebPushNotificationsDisabled <$true | $false>]
  [-WebSuggestedRepliesDisabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -308,7 +309,6 @@ Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
 ## PARAMETERS
-
 
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
@@ -869,6 +869,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAuthenticationPolicy
+This parameter is available only in the cloud-based service.
+
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -1415,13 +1417,9 @@ Accept wildcard characters: False
 ```
 
 ### -HierarchicalAddressBookRoot
-The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -1564,7 +1562,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
@@ -1804,13 +1801,9 @@ Accept wildcard characters: False
 ### -MicrosoftExchangeRecipientReplyRecipient
 This parameter is available only in on-premises Exchange.
 
-The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient:
-
-For example:
+The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -2353,6 +2346,26 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -WebPushNotificationsDisabled
+This parameter is available only in the cloud-based service.
+
+The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
+
+- $true: Web Push Notifications are disabled. 
+
+- $false: Web Push Notifications are enabled. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
