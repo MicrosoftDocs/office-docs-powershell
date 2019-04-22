@@ -108,7 +108,7 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
-- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain. 
+- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
 - None: No automatic replies are sent to recipients in the remote domain.
 
