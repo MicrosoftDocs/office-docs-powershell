@@ -12,10 +12,12 @@ ms.collection: Strat_EX_Admin
 ms.custom: 
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 search.appverid: MET150
+monikerRange: "exchonline-ps"
 description: "Learn how to use remote PowerShell to connect to Exchange Online."
 ---
 
 # Connect to Exchange Online PowerShell
+
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!IMPORTANT]
@@ -39,7 +41,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-    <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+    <sup>*</sup>For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -81,9 +83,9 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
    - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
 
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
-      
+
      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
-      
+
      For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command.
