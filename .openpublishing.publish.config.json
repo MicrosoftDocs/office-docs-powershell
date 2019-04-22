@@ -267,6 +267,7 @@
   },
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "enable_incremental_build": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
