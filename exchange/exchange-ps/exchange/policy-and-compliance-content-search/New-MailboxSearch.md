@@ -483,7 +483,9 @@ Accept wildcard characters: False
 ### -SearchDumpster
 This parameter is available or functional only in Exchange Server 2010.
 
-The SearchDumpster parameter enables searching the dumpster, which is a storage location where items deleted from the Deleted Items folder are located until they are purged from the mailbox database.
+The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
+
+By default, items in the dumpster are searched. Set the value to $false to disable searching the dumpster.
 
 ```yaml
 Type: SwitchParameter
@@ -492,7 +494,7 @@ Aliases:
 Applicable: Exchange Server 2010
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
