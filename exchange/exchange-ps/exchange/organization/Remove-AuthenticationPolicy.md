@@ -3,15 +3,15 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Remove-AuthenticationPolicy
 schema: 2.0.0
-author: chrisda
-ms.author: chrisda
-ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
 # Remove-AuthenticationPolicy
 
 ## SYNOPSIS
+> [!NOTE]
+> This topic describes a preview feature that isn't available to everyone, and is subject to change.
+
 This cmdlet is available only in the cloud-based service.
 
 Use the Remove-AuthenticationPolicy cmdlet to remove authentication policies from Exchange Online.
@@ -99,10 +99,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
