@@ -4,7 +4,7 @@
 It is best practice to keep each sentence or idea on its own line.
 This is so that anyone that is reviewing a commit can quickly and easily see what changed.
 If you have a giant string of text on a single line then Git just flags that entire line as a 'change'.
-To learn more about this concept, see http://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
+To learn more about this concept, see https://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
 
 ## When will my content go live?
 

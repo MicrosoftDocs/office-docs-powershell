@@ -32,7 +32,7 @@ The managed property can be one of the following data types:
 
 See https://go.microsoft.com/fwlink/?LinkId=163234 (https://go.microsoft.com/fwlink/?LinkId=163234) for more detailed information about the valid value ranges for each of these data types, and how illegal values are handled.
 
-For IEEE-754, see http://ieeexplore.ieee.org/servlet/opac?punumber=2355 (http://ieeexplore.ieee.org/servlet/opac?punumber=2355).
+For IEEE-754, see https://ieeexplore.ieee.org/servlet/opac?punumber=2355 (https://ieeexplore.ieee.org/servlet/opac?punumber=2355).
 
 For details about the options that can be set on a managed property, see Set-FASTSearchMetadataManagedProperty.
 
