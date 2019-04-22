@@ -24,7 +24,7 @@ Update-CsUserDatabase [[-Fqdn] <Fqdn>] [-Force] [<CommonParameters>]
 
 ## DESCRIPTION
 The Skype for Business Server user database holds detailed information about such things as contacts, groups, and access permissions.
-As such, the database is required to periodically synch its contents with the information stored in Active Directory.
+As such, the database is required to periodically synchronize its contents with the information stored in Active Directory.
 
 More often than not, the automatic synch between the user database and Active Directory will keep the information in the user database up to date.
 However, it is possible that a problem might occur that prevents this automatic synchronization from taking place.
