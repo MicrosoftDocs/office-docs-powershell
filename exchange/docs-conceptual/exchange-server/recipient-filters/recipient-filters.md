@@ -9,12 +9,10 @@ ms.topic: reference
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell."
 ---
 
 # Recipient filters in Exchange Management Shell commands
-
 You can use several Exchange Management Shell commands to filter a set of recipients. You can create the following types of filters in an Exchange command:
 
 - Precanned filters
@@ -28,7 +26,6 @@ You can use several Exchange Management Shell commands to filter a set of recipi
 Older versions of Exchange used LDAP filtering syntax to create custom address lists, global address lists (GALs), email address policies, and distribution groups. In Exchange Server 2007 and later versions, OPATH filtering syntax replaced LDAP filtering syntax. 
 
 ## Precanned filters
-
 A precanned filter is a commonly used Exchange filter that you can use to meet a variety of recipient-filtering criteria for creating dynamic distribution groups, email address policies, address lists, or GALs. With precanned filters, you can use either the Exchange Management Shell or the Exchange admin center (EAC). Using precanned filters, you can do the following:
 
 - Determine the scope of recipients.
@@ -93,7 +90,6 @@ Get-DynamicDistributionGroup -Identity "Contoso Finance" | Format-List Recipient
 ```
 
 ## Custom filters using the RecipientFilter parameter
-
 If precanned filters don't meet your needs for creating or modifying dynamic distribution groups, email address policies, and address lists, you can create a custom filter by using the _RecipientFilter_ parameter.
 
 The recipient filter parameter is available for the following cmdlets:
@@ -127,7 +123,6 @@ New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.c
 ```
 
 ## Custom filters using the Filter parameter
-
 You can use the _Filter_ parameter to filter the results of a command to specify which objects to retrieve. For example, instead of retrieving all users or groups, you can specify a set of users or groups by using a filter string. This type of filter doesn't modify any configuration or attributes of objects. It only modifies the set of objects that the command returns.
 
 Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. The Exchange Management Shell also supports client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://technet.microsoft.com/library/8320e1a5-d3f5-4615-878d-b23e2aaa6b1e.aspx).
@@ -179,11 +174,9 @@ Get-User -Filter {Title -like 'Manager*'}
 ```
 
 ## Custom filters using the ContentFilter parameter
-
 You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../../exchange-ps/exchange/mailboxes/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
 ### Example
-
 This example creates an export request that searches Ayla's mailbox for messages where the body contains the phrase "company prospectus". If that phrase is found, the command exports all messages with that phrase to a .pst file.
 
 ```
@@ -193,7 +186,6 @@ New-MailboxExportRequest -Mailbox Ayla -ContentFilter {Body -like "company prosp
 For more information about the filterable properties you can use with the _ContentFilter_ parameter, see [Filterable Properties for the ContentFilter Parameter](https://technet.microsoft.com/library/cf504a59-1938-489c-bb48-b27b2ac3234e.aspx).
 
 ## Additional OPATH syntax information
-
 When creating your own custom filters, be aware of the following:
 
 - Use braces { } around the entire OPATH filter string with the _Filter_ or _RecipientFilter_ parameters.
@@ -227,10 +219,9 @@ When creating your own custom filters, be aware of the following:
   - [About Comparison Operators](https://technet.microsoft.com/library/hh847759.aspx)
 
 ## Recipient filter documentation
-
 The following table contains links to topics that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
 
 |**Topic**|**Description**|
 |:-----|:-----|
-|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md)|Learn more about the filterable properties for the _RecipientFilter_ parameter.|
-|[Filterable properties for the Filter parameter](filter-properties.md)|Learn more about the filterable properties for the _Filter_ parameter.|
+|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md) |Learn more about the filterable properties for the _RecipientFilter_ parameter. |
+|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties for the _Filter_ parameter. |
