@@ -2,6 +2,10 @@
 external help file: New-CsCallQueue.xml
 applicable: Skype for Business Online
 title: New-CsCallQueue
+author: waseemhashem
+ms.author: waseemh
+manager: msekaran
+ms.reviewer:
 schema: 2.0.0
 ---
 
