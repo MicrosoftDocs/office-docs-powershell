@@ -26,10 +26,10 @@ Specify the setting as either `$true` to hide the default themes, or `$false` (t
 > This cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
 > [!TIP] 
-> Allows you to hide or show **ALL**  default themes, no any particular ones.
+> Allows you to hide or show **ALL** default themes, no any particular ones.
 
 > [!NOTE] 
-> This cmdlet hides default themes on **Modern Sites**. You cannot hide default themes on Classic Sites.
+> This cmdlet hides the default themes on **Modern Sites**. You cannot hide the default themes on Classic Sites.
 
 ## EXAMPLES
 
