@@ -28,6 +28,9 @@ Specify the setting as either `$true` to hide the default themes, or `$false` (t
 > [!TIP] 
 > Allows you to hide or show **ALL**  default themes, no any particular ones.
 
+> [!NOTE] 
+> This cmdlet hides default themes on **Modern Sites**. You cannot hide default themes on Classic Sites.
+
 ## EXAMPLES
 
 ### Example 1
