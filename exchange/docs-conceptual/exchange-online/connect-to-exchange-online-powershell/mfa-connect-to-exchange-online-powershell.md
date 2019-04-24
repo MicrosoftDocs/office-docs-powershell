@@ -93,6 +93,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
      |Office 365 Germany|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
      |Office 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
      |Office 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
+
      This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
 
      ```
