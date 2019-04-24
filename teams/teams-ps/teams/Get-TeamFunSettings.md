@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-TeamFunSettings
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
+Note: This cmdlet is deprecated as of our 1.0 PowerShell release, and is not supported in our 1.0 release.  To retrieve a Team's fun settings, run Get-Team.
 
 Gets a team's fun settings.
 
