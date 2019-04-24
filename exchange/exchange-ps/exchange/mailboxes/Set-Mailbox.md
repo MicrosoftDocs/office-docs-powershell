@@ -3414,8 +3414,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
@@ -3424,7 +3422,7 @@ In Office 365, the value is determined by the subscriptions and licenses that ad
 
 In Office 365, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, the default value unlimited indicates the maximum receive size for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
+In on-premises Exchange, the default value unlimited indicates the maximum receive size for the mailbox is imposed elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
@@ -3470,8 +3468,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
@@ -3480,7 +3476,7 @@ In Office 365, the value is determined by the subscriptions and licenses that ad
 
 In Office 365, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, the default value unlimited indicates the maximum send size for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
+In on-premises Exchange, the default value unlimited indicates the maximum send size for the mailbox is imposed elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
