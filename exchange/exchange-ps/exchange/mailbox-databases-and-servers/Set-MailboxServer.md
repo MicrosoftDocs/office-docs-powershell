@@ -1394,8 +1394,6 @@ The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the me
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are treated as bytes. The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB).
 
 ```yaml

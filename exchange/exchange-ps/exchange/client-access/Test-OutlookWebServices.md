@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and user name in the domain\\user name format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
 
 ```yaml
 Type: RecipientIdParameter
