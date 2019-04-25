@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-Team classification using the strings set for your organization via AAD's Group Classifications.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Classification, Visibility, Alias, Description, or DisplayName.
+Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
 
 ```yaml
 Type: String
