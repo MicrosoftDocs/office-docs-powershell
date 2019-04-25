@@ -148,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The Password parameter specifies the password used to sign in to the Hotmail mailbox. You must specify the value for this parameter in a secure format, for example, (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
+The Password parameter specifies the password used to sign in to the Hotmail mailbox.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
