@@ -46,7 +46,7 @@ This example returns the text messaging settings for Tony's mailbox.
 ### -------------------------- Example 2 --------------------------
 ```
 $mbx = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited
-$mbx | foreach {Get-TextMessagingAccount -Identity $_ | where {($_.NotificationPhoneNumberVerified -eq $true)} | Format-Table Identity,NotificationPhoneNumber}
+$mbx | foreach {Get-TextMessagingAccount -Identity $_.Identity | where {($_.NotificationPhoneNumberVerified -eq $true)} | Format-Table Identity,NotificationPhoneNumber}
 ```
 
 This example finds all user mailboxes where text messaging notifications are enabled.
