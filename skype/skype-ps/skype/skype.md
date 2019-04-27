@@ -3098,7 +3098,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [New-CsAdditionalInternalDomain](New-CsAdditionalInternalDomain.md)
 {{Manually Enter New-CsAdditionalInternalDomain Description Here}}
 
-### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
+c### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
 {{Manually Enter Remove-CsAdditionalInternalDomain Description Here}}
 
 ### [Get-CsHybridApplicationEndpoint](Get-CsHybridApplicationEndpoint.md)
@@ -3182,3 +3182,13 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 
 ### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+### [Get-CsTeamsChannelsPolicy](Get-CsTeamsChannelsPolicy.md)
+
+### [Set-CsTeamsChannelsPolicy](Set-CsTeamsChannelsPolicy.md)
+
+### [New-CsTeamsChannelsPolicy](New-CsTeamsChannelsPolicy.md)
+
+### [Grant-CsTeamsChannelsPolicy](Grant-CsTeamsChannelsPolicy.md)
+
+### [Remove-CsTeamsChannelsPolicy](Remove-CsTeamsChannelsPolicy.md)
