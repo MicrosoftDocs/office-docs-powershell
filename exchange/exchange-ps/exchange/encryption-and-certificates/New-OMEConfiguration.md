@@ -39,15 +39,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```
-{{ Add example code here }}
+New-OMEConfiguration -Identity "Expire in 7 days" ExternalMailExpiryInDays 7
 ```
 
-{{ Add example description here }}
+This example configures encrypted email messages that are sent to external recipients to expire after 7 days.
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies a unique name for the OME configuration object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: OrganizationIdParameter
@@ -260,12 +260,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
