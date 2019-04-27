@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -147,8 +147,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
 
-[New-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
+[New-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
 
-[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)
+[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)

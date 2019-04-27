@@ -89,9 +89,9 @@ Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defi
 
 The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the Get-MonitoringItemIdentity (https://go.microsoft.com/fwlink/p/?LinkId=510841) cmdlet to see what probes are active.
 
-This example lists the probes running in the backend services on a Mailbox server.
+This example lists the probes running in the backend services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook.protocol | ?{$_.Name -like '*probe'}`.
 
-This example lists the probes running in the client access services on a Mailbox server.
+This example lists the probes running in the client access services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook | ?{$_.Name -like '*probe'}`.
 
 For more information on probes and the monitoring framework, see Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510838), Managed Availability and Server Health (https://go.microsoft.com/fwlink/p/?LinkId=510839), and Customizing Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510840)
 
@@ -109,60 +109,67 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Test-OutlookConnectivity -Protocol:HTTP -GetDefaultsFromAutoDiscover:$true
+Test-OutlookConnectivity -ProbeIdentity OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe
+```
+
+In Exchange 2013 or later, this example runs an MAPI over HTTP OutlookRpcSelfTestProbe on the Mailbox server that you're currently connected to.
+
+### -------------------------- Example 2 --------------------------
+```
+Test-OutlookConnectivity "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
+```
+
+In Exchange 2013 or later, this example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
+
+### -------------------------- Example 3 --------------------------
+```
+Test-OutlookConnectivity -Protocol HTTP -GetDefaultsFromAutoDiscover $true
 ```
 
 In Exchange 2010, this example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
 
-### -------------------------- Example 2 --------------------------
-```
-Test-OutlookConnectivity -ProbeIdentity "OutlookRpcSelfTestProbe"
-```
-
-In Exchange 2013 or later, this example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
-
-### -------------------------- Example 3 --------------------------
+### -------------------------- Example 4 --------------------------
 ```
 Test-OutlookConnectivity -RpcProxyTestType:Internal -RpcTestType:Server
 ```
 
 In Exchange 2010, this example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
 
-### -------------------------- Example 4 --------------------------
-```
-Test-OutlookConnectivity "OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
-```
-
-In Exchange 2013 or later, this example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
-
 ### -------------------------- Example 5 --------------------------
 ```
-Test-OutlookConnectivity -RpcProxyServer:RpcProxySrv01 -RpcProxyAuthenticationType:Basic -RpcClientAccessServer:CAS01 -RpcAuthenticationType:NTLM
+Test-OutlookConnectivity -RpcProxyServer RpcProxySrv01 -RpcProxyAuthenticationType Basic -RpcClientAccessServer CAS01 -RpcAuthenticationType NTLM
 ```
 
 In Exchange 2010, this example validates Outlook connectivity through RpcProxy on one server to a different server running the Client Access server role with Basic for the outer authentication layer and NTLM for the inner authentication layer. Using these parameters should allow you to validate most types of Outlook connectivity configurations. This command can also be used with the GetDefaultsFromAutoDiscover parameter set to $true if you only need to override one or two parameters. This following command is similar to running a connectivity test using the RPC Ping utility but provides stronger validation.
-
-### -------------------------- Example 6 --------------------------
-```
-$TestCredentials = Get-Credential; 
-Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
-```
-
-In Exchange 2013 or later, this example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
-
-### -------------------------- Example 7 --------------------------
-```
-Test-OutlookConnectivity -ProbeIdentity "OutlookRpcCTPProbe" -MailboxID johnd@contoso.com
-```
-
-In Exchange 2013 or later, this example runs a logon test from the client access services on a Mailbox server for the mailbox johnd@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
 This parameter is available or functional only in Exchange Server 2010.
 
-The Identity parameter specifies a target user mailbox. This value can be the mailbox GUID or can be the domain name\\user, for example, contoso.com\\erin. If the parameter isn't specified, the command looks for a test user in Active Directory. You need to create the test user with the New-TestCasConnectivityUser.ps1 script.
+The Identity parameter specifies a target user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the command looks for a test user in Active Directory that you previously created by using the New-TestCasConnectivityUser.ps1 script.
 
 ```yaml
 Type: MailboxIdParameter
@@ -213,7 +220,11 @@ Accept wildcard characters: False
 ### -RpcTestType
 This parameter is available or functional only in Exchange Server 2010.
 
-The RpcTestType parameter specifies which type of RPC endpoint the command should test. Valid values are Server or Array. If Server is specified, the command uses the local server as the RPC endpoint. If Array is specified, the command looks for a ClientAccessArray object in the same Active Directory site where the command is being run.
+The RpcTestType parameter specifies which type of RPC endpoint the command should test. Valid values are:
+
+- Server: The command uses the local server as the RPC endpoint.
+
+- Array: The command looks for a ClientAccessArray object in the local Active Directory site.
 
 ```yaml
 Type: Array | Server
@@ -232,13 +243,11 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The WSTestType parameter specifies type of servers that you want to include in your Outlook connectivity test. You can use the following values:
 
-- Unknown
+- Unknown (This is the default value.)
 
 - Internal
 
 - External
-
-- The default value is Unknown.
 
 ```yaml
 Type: Unknown | Internal | External
@@ -255,7 +264,11 @@ Accept wildcard characters: False
 ### -Archive
 This parameter is available or functional only in Exchange Server 2010.
 
-The Archive parameter specifies whether tests should be performed to connect to the user's on-premises archive mailbox. You don't need to specify a value for this parameter.
+The Archive parameter specifies whether tests should be performed to connect to the user's on-premises archive mailbox. Valid values are:
+
+$true: Connect to the user's on-premises archive mailbox.
+
+$false: Don't connect to the user's on-premises mailbox. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -291,7 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -325,6 +340,8 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MailboxCredential parameter specifies certain credentials to allow logon access to a user's mailbox. Use the parameter along with the Identity parameter to access a user's mailbox when you don't have access permissions.
 
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+
 ```yaml
 Type: PSCredential
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
@@ -338,7 +355,31 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxId
-The MailboxID parameter specifies the target mailbox. IF not specified, this uses the test account.
+The MailboxID parameter specifies the target mailbox.
+
+In Exchange 2013 or later, the Identity parameter specifies a target user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the command uses the test account.
 
 ```yaml
 Type: MailboxIdParameter
@@ -355,7 +396,7 @@ Accept wildcard characters: False
 ### -MonitoringContext
 This parameter is available or functional only in Exchange Server 2010.
 
-The MonitoringContext parameter specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager 2007. The default value is $false.
+The MonitoringContext switch specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -370,11 +411,23 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeIdentity
-The ProbeIdentity parameter specifies the probe to use.
+The ProbeIdentity parameter specifies the probe to use. Valid values are:
 
-- RPC over HTTP (Outlook Anywhere) probes
+Outlook Anywhere (RPC over HTTP) probes:
 
-- MAPI over HTTP probes
+- Outlook.Protocol\OutlookRpcSelfTestProbe: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+
+- Outlook.Protocol\OutlookRpcDeepTestProbe: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+
+- Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
+
+MAPI over HTTP probes:
+
+- OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+
+- OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+
+- OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
 
 ```yaml
 Type: String
@@ -467,7 +520,11 @@ Accept wildcard characters: False
 ### -RpcProxyTestType
 This parameter is available or functional only in Exchange Server 2010.
 
-The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. The value can be Internal or External. The Internal value refers to the local computer name (http://\<localcomputername\>, for example, http://CAS01). The External value refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, http://mail.contoso.com).
+The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. Valid values are:
+
+- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, httpS://CAS01). 
+
+- External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
 
 ```yaml
 Type: External | Internal
@@ -531,7 +588,7 @@ Accept wildcard characters: False
 ### -TrustAnySslCert
 This parameter is available or functional only in Exchange Server 2010.
 
-The TrustAnySslCert parameter can be set to $true to ignore any Secure Sockets Layer (SSL) certificate warnings. The default value is $false.
+The TrustAnySslCert switch specifies whether to ignore any Secure Sockets Layer (SSL) certificate warnings. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

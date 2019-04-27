@@ -24,8 +24,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValuedProperty> -Reason <String>
- -Section <String> [-Confirm] [-DomainController <Fqdn>] [-FixVersion <Version>] [-Force]
- [-MaxVersion <Version>] [-MinVersion <Version>] [-Server <String[]>] [-WhatIf] [<CommonParameters>]
+ -Section <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-MaxVersion <Version>]
+ [-MinVersion <Version>]
+ [-Server <String[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
-
-For example:
+The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...). For example:
 
 - @("Enabled=true")
 
@@ -164,21 +168,6 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FixVersion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Version
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -1,9 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Remove-TeamUser
-online version: 
+online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -13,27 +11,25 @@ ms.reviewer:
 # Remove-TeamUser
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
-Remove an owner or member from a team,
-and from the unified group which backs the team. 
+Remove an owner or member from a team, and from the unified group which backs the team.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
+Note: the command will return immediately, but the Teams application will not reflect the update immediately.
+The Teams application may need to be open for up to an hour before changes are reflected.
 
 Note: last owner cannot be removed from the team.
-
 
 ## SYNTAX
 
 ```
-Remove-TeamUser -GroupId <String> -User <String> -Role <String>
+Remove-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
 Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
 ```
@@ -47,7 +43,6 @@ GroupId of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -64,7 +59,6 @@ johndoe@example.com)
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -80,14 +74,17 @@ Use this to demote a user from owner to member of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,4 +93,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

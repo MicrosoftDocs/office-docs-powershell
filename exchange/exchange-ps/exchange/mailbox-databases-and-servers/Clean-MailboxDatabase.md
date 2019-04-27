@@ -46,13 +46,13 @@ This example cleans the mailbox database MBD01.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox database that you want to update. You can use one of the following values:
+The Identity parameter specifies the mailbox database that you want to update. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Name of the mailbox database
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

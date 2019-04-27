@@ -70,13 +70,9 @@ This example displays the UM call data records for the UM-enabled user Tony.
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed for. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed for. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

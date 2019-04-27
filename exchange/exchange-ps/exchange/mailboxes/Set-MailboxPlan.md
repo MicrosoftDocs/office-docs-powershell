@@ -61,6 +61,8 @@ The Identity parameter specifies the mailbox plan that you want to modify. You c
 
 - Name
 
+- Alias
+
 - Display name
 
 - Distinguished name (DN)
@@ -174,10 +176,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - MB (megabytes)
 
-- GB (gigabytes)
-
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 36 MB.
@@ -208,10 +206,6 @@ When you enter a value, qualify the value with one of the following units:
 - KB (kilobytes)
 
 - MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 

@@ -21,21 +21,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter> [-AddExchangeLocation <String[]>]
- [-AddExchangeLocationExclusion <String[]>] [-AddOneDriveLocation <String[]>]
- [-AddOneDriveLocationExclusion <String[]>] [-AddPublicFolderLocation <String[]>]
- [-AddPublicFolderLocationExclusion <String[]>] [-AddSharePointLocation <String[]>]
- [-AddSharePointLocationExclusion <String[]>] [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
- [-Confirm] [-ContentMatchQuery <String>] [-Description <String>] [-ExchangeLocation <String[]>]
- [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>] [-Language <CultureInfo>]
- [-Name <String>] [-OneDriveLocation <String[]>] [-OneDriveLocationExclusion <String[]>]
- [-PublicFolderLocation <String[]>] [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>]
- [-RemoveExchangeLocation <String[]>] [-RemoveExchangeLocationExclusion <String[]>]
- [-RemoveOneDriveLocation <String[]>] [-RemoveOneDriveLocationExclusion <String[]>]
- [-RemovePublicFolderLocation <String[]>] [-RemovePublicFolderLocationExclusion <String[]>]
- [-RemoveSharePointLocation <String[]>] [-RemoveSharePointLocationExclusion <String[]>]
- [-SearchNames <String[]>] [-SharePointLocation <String[]>] [-SharePointLocationExclusion <String[]>] [-WhatIf]
- [<CommonParameters>]
+Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
+ [-AddExchangeLocation <String[]>]
+ [-AddExchangeLocationExclusion <String[]>]
+ [-AddOneDriveLocation <String[]>]
+ [-AddOneDriveLocationExclusion <String[]>]
+ [-AddSharePointLocation <String[]>]
+ [-AddSharePointLocationExclusion <String[]>]
+ [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-Description <String>]
+ [-ExchangeLocation <String[]>]
+ [-ExchangeLocationExclusion <String[]>]
+ [-Force]
+ [-HoldNames <String[]>]
+ [-IncludeUserAppContent <$true | $false>]
+ [-Language <CultureInfo>]
+ [-Name <String>]
+ [-OneDriveLocation <String[]>]
+ [-OneDriveLocationExclusion <String[]>]
+ [-PublicFolderLocation <String[]>]
+ [-RefinerNames <String[]>]
+ [-RemoveExchangeLocation <String[]>]
+ [-RemoveExchangeLocationExclusion <String[]>]
+ [-RemoveOneDriveLocation <String[]>]
+ [-RemoveOneDriveLocationExclusion <String[]>]
+ [-RemovePublicFolderLocation <String[]>]
+ [-RemoveSharePointLocation <String[]>]
+ [-RemoveSharePointLocationExclusion <String[]>]
+ [-SharePointLocation <String[]>]
+ [-SharePointLocationExclusion <String[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,17 +119,7 @@ The AddExchangeLocation parameter specifies the mailboxes to add to the list of 
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -133,17 +140,7 @@ This parameter specifies the mailboxes to add to the list of excluded mailboxes 
 
 - A distribution group or mail-enabled security group
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -173,36 +170,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddPublicFolderLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddPublicFolderLocationExclusion
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -340,15 +307,7 @@ The ExchangeLocation parameter specifies the mailboxes to include. Valid values 
 
 - The value All for all mailboxes. You can only use this value by itself.
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -371,17 +330,7 @@ This parameter specifies the mailboxes to exclude when you use the value All for
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -527,21 +476,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RefinerNames
 This parameter is reserved for internal Microsoft use.
 
@@ -564,17 +498,7 @@ The RemoveExchangeLocation parameter specifies the mailboxes to remove from the 
 
 - A distribution group or mail-enabled security group
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -595,17 +519,7 @@ This parameter specifies the mailboxes to remove from the list of excluded mailb
 
 - A distribution group or mail-enabled security group
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -664,21 +578,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemovePublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveSharePointLocation
 The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
@@ -700,21 +599,6 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchNames
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
