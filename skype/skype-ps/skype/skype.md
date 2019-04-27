@@ -3098,7 +3098,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [New-CsAdditionalInternalDomain](New-CsAdditionalInternalDomain.md)
 {{Manually Enter New-CsAdditionalInternalDomain Description Here}}
 
-c### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
+### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
 {{Manually Enter Remove-CsAdditionalInternalDomain Description Here}}
 
 ### [Get-CsHybridApplicationEndpoint](Get-CsHybridApplicationEndpoint.md)
