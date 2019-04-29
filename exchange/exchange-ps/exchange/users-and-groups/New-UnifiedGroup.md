@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: New-UnifiedGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -123,13 +126,9 @@ This example creates a new Office 365 Group named Engineering Department.
 ## PARAMETERS
 
 ### -DlIdentity
-The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to an Office 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group.
-
-For example:
+The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to an Office 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -143,7 +142,7 @@ For example:
 
 All the properties and membership of the distribution group are copied to the Office 365 Group.
 
-The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 attribute of the distribution group.
+The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
 
 Office 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Office 365 Group. The Office 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Office 365 Group.
 
@@ -309,7 +308,6 @@ The DataEncryptionPolicy parameter specifies the data encryption policy that's a
 
 - GUID
 
-
 ```yaml
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
@@ -377,7 +375,7 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
-- If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+- Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -492,13 +490,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the recipients (mail-enabled objects) that are members of the Office 365 Group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Members parameter specifies the recipients (mail-enabled objects) that are members of the Office 365 Group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -561,11 +555,7 @@ The Owner parameter specifies the for the Office 365 Group. An owner is a group 
 
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
-For example:
-
 - Name
-
-- Display name
 
 - Alias
 
@@ -573,17 +563,9 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
-
 - Email address
 
 - GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
 
 ```yaml
 Type: RecipientIdParameter
@@ -598,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 ```yaml
 Type: SmtpAddress
@@ -682,12 +664,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

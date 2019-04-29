@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Complete-MigrationBatch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-NotificationEmails <MultiValuedProperty>] [-WhatIf] [-Partition <MailboxIdParameter>] [-SyncAndComplete]
- [<CommonParameters>]
+Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-SyncAndComplete]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -121,29 +128,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Partition
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +153,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

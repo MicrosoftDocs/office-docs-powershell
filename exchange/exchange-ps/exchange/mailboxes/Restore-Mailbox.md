@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -67,49 +70,27 @@ This example bulk restores all the mailboxes in the MyDatabase mailbox database 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox.
+The Identity parameter specifies the mailbox that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
-This parameter accepts the following values:
+- Name
 
 - Alias
 
-  Example: JPhillips
+- Distinguished name (DN)
 
 - Canonical DN
 
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
+- \<domain name\>\\\<account name\>
 
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
+- Email address
 
 - GUID
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
+- LegacyExchangeDN
 
-- Immutable ID
+- SamAccountName
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -124,11 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryDatabase
-The RecoveryDatabase parameter specifies the recovery database from which you're restoring the mailbox. You can use the following values:
+The RecoveryDatabase parameter specifies the recovery database where you are restoring the mailbox from. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -144,6 +127,8 @@ Accept wildcard characters: False
 
 ### -RecoveryMailbox
 The RecoveryMailbox parameter specifies the mailbox to be used as the source mailbox. This parameter is required if the source mailbox is different from the target mailbox.
+
+You identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
 
 ```yaml
 Type: StoreMailboxIdParameter
@@ -460,12 +445,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

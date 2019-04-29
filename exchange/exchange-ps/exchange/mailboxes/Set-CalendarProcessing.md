@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CalendarProcessing
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,23 +21,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-CalendarProcessing [-Identity] <MailboxIdParameter> [-AddAdditionalResponse <$true | $false>]
- [-AdditionalResponse <String>] [-AddNewRequestsTentatively <$true | $false>]
- [-AddOrganizerToSubject <$true | $false>] [-AllBookInPolicy <$true | $false>]
- [-AllowConflicts <$true | $false>] [-AllowRecurringMeetings <$true | $false>]
- [-AllRequestInPolicy <$true | $false>] [-AllRequestOutOfPolicy <$true | $false>]
- [-AutomateProcessing <None | AutoUpdate | AutoAccept>] [-BookingType <Standard | Reserved>] [-BookingWindowInDays <Int32>]
- [-BookInPolicy <RecipientIdParameter[]>] [-Confirm] [-ConflictPercentageAllowed <Int32>]
- [-DeleteAttachments <$true | $false>] [-DeleteComments <$true | $false>]
- [-DeleteNonCalendarItems <$true | $false>] [-DeleteSubject <$true | $false>] [-DomainController <Fqdn>]
- [-EnableResponseDetails <$true | $false>] [-EnforceSchedulingHorizon <$true | $false>]
- [-ForwardRequestsToDelegates <$true | $false>] [-IgnoreDefaultScope] [-MaximumConflictInstances <Int32>]
- [-MaximumDurationInMinutes <Int32>] [-OrganizerInfo <$true | $false>]
- [-ProcessExternalMeetingMessages <$true | $false>] [-RemoveForwardedMeetingNotifications <$true | $false>]
- [-RemoveOldMeetingMessages <$true | $false>] [-RemovePrivateProperty <$true | $false>]
- [-RequestInPolicy <RecipientIdParameter[]>] [-RequestOutOfPolicy <RecipientIdParameter[]>]
- [-ResourceDelegates <RecipientIdParameter[]>] [-ScheduleOnlyDuringWorkHours <$true | $false>]
- [-TentativePendingApproval <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-CalendarProcessing [-Identity] <MailboxIdParameter>
+ [-AddAdditionalResponse <$true | $false>]
+ [-AdditionalResponse <String>]
+ [-AddNewRequestsTentatively <$true | $false>]
+ [-AddOrganizerToSubject <$true | $false>]
+ [-AllBookInPolicy <$true | $false>]
+ [-AllowConflicts <$true | $false>]
+ [-AllowRecurringMeetings <$true | $false>]
+ [-AllRequestInPolicy <$true | $false>]
+ [-AllRequestOutOfPolicy <$true | $false>]
+ [-AutomateProcessing <None | AutoUpdate | AutoAccept>]
+ [-BookingType <Standard | Reserved>]
+ [-BookingWindowInDays <Int32>]
+ [-BookInPolicy <RecipientIdParameter[]>]
+ [-Confirm]
+ [-ConflictPercentageAllowed <Int32>]
+ [-DeleteAttachments <$true | $false>]
+ [-DeleteComments <$true | $false>]
+ [-DeleteNonCalendarItems <$true | $false>]
+ [-DeleteSubject <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-EnableResponseDetails <$true | $false>]
+ [-EnforceSchedulingHorizon <$true | $false>]
+ [-ForwardRequestsToDelegates <$true | $false>]
+ [-IgnoreDefaultScope]
+ [-MaximumConflictInstances <Int32>]
+ [-MaximumDurationInMinutes <Int32>]
+ [-OrganizerInfo <$true | $false>]
+ [-ProcessExternalMeetingMessages <$true | $false>]
+ [-RemoveForwardedMeetingNotifications <$true | $false>]
+ [-RemoveOldMeetingMessages <$true | $false>]
+ [-RemovePrivateProperty <$true | $false>]
+ [-RequestInPolicy <RecipientIdParameter[]>]
+ [-RequestOutOfPolicy <RecipientIdParameter[]>]
+ [-ResourceDelegates <RecipientIdParameter[]>]
+ [-ScheduleOnlyDuringWorkHours <$true | $false>]
+ [-TentativePendingApproval <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,13 +118,9 @@ This example rejects meeting requests from any user who isn't a member of the Ex
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -305,18 +325,24 @@ Accept wildcard characters: False
 ```
 
 ### -BookingType
-Description of this parameter
+This parameter is available only in the cloud-based service.
+
+The BookingType parameter specifies how reservations work on the resource mailbox. Valid values are:
+
+- Standard: The resource can be reserved based on the other settings in this cmdlet. This is the default value
+
+- Reserved: The resource can't be reserved.
 
 ```yaml
-Type: 
-Parameter Sets: ()
+Type: <Standard | Reserved>
+Parameter Sets: (All)
 Aliases:
-Applicable: 
-Required: 
-Position: 
-Default value: 
-Accept pipeline input:
-Accept wildcard characters: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BookingWindowInDays
@@ -335,15 +361,9 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. Any in-policy meeting requests from these users are automatically approved.
-
-You can use any value that uniquely identifies the recipient.
-
-For example:
+The BookInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the users. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -354,6 +374,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -673,7 +695,7 @@ Accept wildcard characters: False
 ### -RemovePrivateProperty
 The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
 
-By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set tthis parameter to $false.
+By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set this parameter to $false.
 
 ```yaml
 Type: $true | $false
@@ -688,15 +710,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestInPolicy
-The RequestInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. All in-policy meeting requests from these users are subject to approval by a resource mailbox delegate.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -707,6 +723,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -721,15 +739,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestOutOfPolicy
-The RequestOutOfPolicy parameter specifies a comma-separated list of users who are allowed to submit out-of-policy requests.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestOutOfPolicy parameter specifies users who are allowed to submit out-of-policy requests that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -741,7 +753,7 @@ For example:
 
 - GUID
 
-Out-of-policy requests are subject to approval by a resource mailbox delegate.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -756,15 +768,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceDelegates
-The ResourceDelegates parameter specifies a comma-separated list of users who are resource mailbox delegates. Resource mailbox delegates can approve or reject requests sent to the resource mailbox.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The ResourceDelegates parameter specifies users can approve or reject requests that are sent to the resource mailbox. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -775,6 +781,8 @@ For example:
 - Email address
 
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]

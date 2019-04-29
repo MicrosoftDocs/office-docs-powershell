@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-User
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -104,13 +107,9 @@ Performing this procedure on a linked mailbox removes all permissions on the mai
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -148,7 +147,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to modify arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -461,11 +462,11 @@ Accept wildcard characters: False
 ### -LinkedCredential
 This parameter is available only in on-premises Exchange.
 
-The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter.
+The LinkedCredential parameter specifies the username and password that's used to access the domain controller specified by the LinkedDomainController parameter.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 You can only use the LinkedCredential parameter with a linked user.
-
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -748,9 +749,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the user is a public folder mailbox. This switch is required to only when you change the settings of public folder mailboxes. You don't need to specify a value with this switch.
+The PublicFolder switch is required to modify public folder mailboxes. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter

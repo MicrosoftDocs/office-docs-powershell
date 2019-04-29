@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -125,13 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox database. You can use the following values:
+The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
+- GUID
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
 

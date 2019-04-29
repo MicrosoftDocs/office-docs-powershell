@@ -3,13 +3,16 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTeamsInteropPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsInteropPolicy
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. See description for more information. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype).
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. See description for more information. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype).
 
 
 
@@ -180,4 +183,4 @@ This policy has been deprecated and should not be used. Instead, customers shoul
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype)

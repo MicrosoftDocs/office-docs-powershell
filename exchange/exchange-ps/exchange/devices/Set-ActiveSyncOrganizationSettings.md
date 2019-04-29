@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-ActiveSyncOrganizationSettings
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -38,7 +41,7 @@ This example sets the default access level to quarantine and sets two administra
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -108,7 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAccessLevel
-The DefaultAccessLevel parameter specifies the access level for new devices. Valid values are Allow,Block or Quarantine. The default value is Allow.
+The DefaultAccessLevel parameter specifies the access level for new and existing device partnerships. Valid values are:
+
+- Allow (This is the default value)
+
+- Block
+
+- Quarantine
+
+If you change this value from Allow to Block or Quarantine, all existing connected devices are immediately affected, unless the devices are subject to device access rules or individual allow or block list entries.
 
 ```yaml
 Type: Allow | Block | Quarantine

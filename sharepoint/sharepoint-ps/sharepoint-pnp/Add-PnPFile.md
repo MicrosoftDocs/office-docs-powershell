@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Add-PnPFile
@@ -67,7 +67,7 @@ This will upload the file displaytemplate.html to the test folder in the display
 Add-PnPFile -Path .\sample.doc -Folder "Shared Documents" -Values @{Modified="1/1/2016"}
 ```
 
-This will upload the file sample.doc to the Shared Documnets folder. After uploading it will set the Modified date to 1/1/2016.
+This will upload the file sample.doc to the Shared Documents folder. After uploading it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
@@ -284,7 +284,7 @@ Multi value lookup (id of lookup values as string): -Values @{"MultiLookupField"
 
 Yes/No: -Values @{"YesNo" = $false}
 
-Person/Group (id of user/group in Site User Info List or email of the user, seperate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
+Person/Group (id of user/group in Site User Info List or email of the user, separate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
 
 Managed Metadata (single value with path to term): -Values @{"MetadataField" = "CORPORATE|DEPARTMENTS|FINANCE"}
 
@@ -335,4 +335,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,11 +1,17 @@
+module.exports.general = {
+	TOOL_PLATFORM_TYPE: "The Cmdlet Updater is only supported on x64 architecture. X86 is not supported."
+};
+
 module.exports.powerShellErrors = {
-	PS_GALLERY_INSTALL_ERROR: "You should using x64 version of PowerShell",
+	PS_GALLERY_INSTALL_ERROR: "You should use x64 version of PowerShell",
 	DOC_PATH_DOESNT_EXIST: "Path to documentation folder doesn't exist",
 	INSTALL_PLATYPS_ERROR: "Can't install 'platyPS' module",
 	IMPORT_PLATYPS_ERROR: "Cant't import 'platyPS' module",
 	INSTALL_MICROSOFT_TEAM_ERROR: "Can't install 'Microsoft team' module",
 	AUTH_MICROSOFT_TEAM_ERROR: "Can't auth into 'Microsoft team'",
-	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, feel 'platyPS.credentials' section into a config file"
+	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, fill 'platyPS.credentials' section into a config file",
+	SKYPE_INSTALL_ERROR: "The Skype PowerShell module does not appear to be installed. Please review the README to install the Skype module and try again.",
+	EXCHANGE_INSTALL_ERROR: "The Exchange PowerShell module does not appear to be installed. Please review the README to install the Exchange module and try again.",
 };
 
 module.exports.markdownErrors = {

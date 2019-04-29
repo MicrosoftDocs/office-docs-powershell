@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-AvailabilityConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -25,7 +28,7 @@ Set-AvailabilityConfig [-Confirm] [-DomainController <Fqdn>] [-OrgWideAccount <S
 ## DESCRIPTION
 The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per-user free/busy proxy account or group, and an organization-wide free/busy proxy account or group. These accounts and groups are trusted by all availability services in the current organization for availability proxy requests.
 
-For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a user name and password for one of the specified accounts or security groups.
+For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a username and password for one of the specified accounts or security groups.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -43,7 +46,7 @@ This example is useful with a trusted cross-forest Availability service. If the 
 Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
 ```
 
-This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the user name and password.
+This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the username and password.
 
 ## PARAMETERS
 

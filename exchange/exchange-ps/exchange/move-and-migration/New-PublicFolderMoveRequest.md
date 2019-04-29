@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-PublicFolderMoveRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -79,25 +82,27 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the target public folder mailbox that you want to move the public folders to. This parameter accepts the following:
+The TargetMailbox parameter specifies the target public folder mailbox that you want to move the public folders to. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
 
 - Alias
 
-- Canonical DN
-
-- Display name
-
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
 
 - GUID
 
-- ImmutableId
+- LegacyExchangeDN
 
-- SMTP address
+- SamAccountName
 
-- User principal name (UPN)
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

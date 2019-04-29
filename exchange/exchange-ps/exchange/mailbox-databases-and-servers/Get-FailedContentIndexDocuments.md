@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-FailedContentIndexDocuments
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -85,21 +88,27 @@ This example retrieves a list of items that couldn't be indexed by Exchange Sear
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox. You can use one of the following values:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -114,13 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDatabase
-The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use the following values:
+The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-- DN
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

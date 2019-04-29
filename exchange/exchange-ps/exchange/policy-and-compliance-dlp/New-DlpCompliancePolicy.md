@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-DlpCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -18,13 +21,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-DlpCompliancePolicy [-Name] <String> [-Comment <String>] [-Confirm]
- [-ExchangeLocation <MultiValuedProperty>] [-ExchangeOnPremisesLocation <MultiValuedProperty>] [-Force]
+New-DlpCompliancePolicy [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-ExchangeSenderMemberOf <SmtpAddress[]>]
+ [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-Force]
  [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
- [-OneDriveLocation <MultiValuedProperty>] [-OneDriveLocationException <MultiValuedProperty>]
- [-SharePointLocation <MultiValuedProperty>] [-SharePointLocationException <MultiValuedProperty>]
+ [-OneDriveLocation <MultiValuedProperty>]
+ [-OneDriveLocationException <MultiValuedProperty>]
+ [-Priority <Int32>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-SharePointLocationException <MultiValuedProperty>]
  [-SharePointOnPremisesLocationException <MultiValuedProperty>]
- [-SharePointServerLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-SharePointServerLocation <MultiValuedProperty>]
+ [-TeamsLocation <MultiValuedProperty>]
+ [-TeamsLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,11 +126,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExchangeOnPremisesLocation
-This parameter is reserved for internal Microsoft use.
+### -ExchangeSenderMemberOf
+{{ Fill ExchangeSenderMemberOf Description }}
 
 ```yaml
-Type: MultiValuedProperty
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOfException
+{{ Fill ExchangeSenderMemberOfException Description }}
+
+```yaml
+Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -199,6 +228,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Priority
+{{ Fill Priority Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharePointLocation
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
@@ -237,7 +281,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MultiValuedProperty
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -250,6 +294,36 @@ Accept wildcard characters: False
 
 ### -SharePointServerLocation
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLocation
+{{ Fill TeamsLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLocationException
+{{ Fill TeamsLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -284,12 +358,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

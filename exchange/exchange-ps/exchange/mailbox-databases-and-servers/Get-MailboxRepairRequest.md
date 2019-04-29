@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxRepairRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -78,11 +81,13 @@ This example uses the Database and StoreMailbox parameters to display the Identi
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the database on which you run this command. If you use this parameter, all mailboxes on the database are searched for corruptions. You can use the following values:
+The Database parameter returns mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Mailbox parameter.
 
@@ -114,21 +119,27 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use the following values:
+The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SMTP address
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.
 

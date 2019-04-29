@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-UMCallAnsweringRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -245,7 +248,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule will be changed. The default is the user's mailbox that's running the cmdlet.
+The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule will be changed. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the mailbox of the user who is running the command is used.
 
 ```yaml
 Type: MailboxIdParameter

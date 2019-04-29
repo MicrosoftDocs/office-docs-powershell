@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOTenantContentTypeReplicationParameters
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOTenantContentTypeReplicationParameters
@@ -17,7 +20,7 @@ Get-SPOTenantContentTypeReplicationParameters [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use “Connect-SPOService” to connect to SharePoint Online first.
+Before you run the cmdlets, please use ï¿½Connect-SPOServiceï¿½ to connect to SharePoint Online first.
 This Cmdlets gets the content types that are being replicated from primary location to satellite
 
 ## EXAMPLES
@@ -31,7 +34,7 @@ Gets content types for replication parameters
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## RELATED LINKS

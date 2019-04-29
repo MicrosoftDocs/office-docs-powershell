@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -131,13 +134,9 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox and the folder that you want to view. If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: \<Mailbox Identity\>:\<Parent\>.
 
-Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox.
-
-For example:
+Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

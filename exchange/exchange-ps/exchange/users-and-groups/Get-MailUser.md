@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-MailUser
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -96,7 +99,7 @@ Accept wildcard characters: False
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
 This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
@@ -147,13 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user.
-
-For example:
+The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -285,9 +284,7 @@ Accept wildcard characters: False
 ### -SoftDeletedMailUser
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailUser switch specifies whether to include only soft-deleted mail users in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted mail users.
+The SoftDeletedMailUser switch specifies whether to include soft-deleted mail users in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mail users are deleted mail users that are still recoverable.
 

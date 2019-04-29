@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-App
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -187,13 +190,9 @@ Accept wildcard characters: False
 ### -UserList
 The UserList parameter specifies who can use an organizational app. This parameter is currently limited to 1000 users. This will not change in the future as we are planning on moving to Centralized Deployment (https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
 
-Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
-
-For example:
+Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

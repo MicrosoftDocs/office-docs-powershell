@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServicesDatabaseServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAccessServicesDatabaseServer
@@ -284,7 +287,7 @@ Indicates the login type. Valid values are:
 
 * ApplicationLogin 
 
-*LocalDBApplicationLogin 
+* LocalDBApplicationLogin 
 
 * ServerLogin 
 

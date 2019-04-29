@@ -26,7 +26,6 @@ See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/bulk-user-
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS C:\>Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 @" 
  {
   "value": [
@@ -42,13 +41,10 @@ PS C:\>Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 }
 "@ > profiles.json
 
-PS C:\>New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
+New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
 ```
 
 This will submit a new user profile bulk import job to SharePoint Online.
-
-> [!NOTE]
-> You must upload the json document to the Shared Documents library in the SharePoint Online tenant admin prior to running this cmdlet. You also must connect to the tenant admin via `Connect-PnPOnline` prior to running `New-PnPUPABulkImportJob`.
 
 ## PARAMETERS
 
@@ -126,4 +122,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

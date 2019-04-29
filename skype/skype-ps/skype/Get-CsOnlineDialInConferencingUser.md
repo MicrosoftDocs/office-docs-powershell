@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineDialInConferencingUser
@@ -28,15 +31,15 @@ The see a list of users with conferencing providers other than Microsoft use the
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:> Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
+```powershell
+Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
 ```
 
 This example uses the LdapFilter parameter to limit the returned data to users who work in the Finance department.
 
 ### -------------------------- Example 2 --------------------------
-```
-PS C:> Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
+```powershell
+Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
 ```
 
 This example returns users who have been enabled for audio conferencing provided by Microsoft, and are assigned to the specified service number.
@@ -233,7 +236,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -249,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS
@@ -259,8 +262,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
+[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

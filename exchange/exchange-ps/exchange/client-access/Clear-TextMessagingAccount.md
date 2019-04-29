@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Clear-TextMessagingAccount
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Clear-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Clear-TextMessagingAccount [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,13 +45,9 @@ This example clears the text messaging account settings and notification setting
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox. You can any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox. You can any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

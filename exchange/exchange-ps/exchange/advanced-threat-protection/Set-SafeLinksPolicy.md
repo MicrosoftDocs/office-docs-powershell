@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Set-SafeLinksPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -168,11 +171,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The policy is enabled.
 
-- $false: The rule or policy is disabled.
+- $false: The policy is disabled.
 
 ```yaml
 Type: $true | $false
@@ -187,7 +190,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForInternalSenders
-PARAMVALUE: $true | $false
+The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to internal senders. Valid values are:
+
+- $true: The policy is applied to internal and external senders.
+
+- $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -221,7 +228,7 @@ This parameter specifies whether the rule or policy is enabled. Valid values are
 
 - $true: The rule or policy is enabled.
 
-- $false: The rule or policy is disabled.
+- $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -305,12 +312,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

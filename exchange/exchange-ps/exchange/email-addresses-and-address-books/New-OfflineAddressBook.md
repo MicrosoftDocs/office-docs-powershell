@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OfflineAddressBook
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -177,13 +180,9 @@ Accept wildcard characters: False
 ### -GeneratingMailbox
 This parameter is available only in on-premises Exchange.
 
-The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -264,7 +263,15 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the identity of the public folder database being used to distribute the OAB. To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
+The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -298,9 +305,31 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available or functional only in Exchange Server 2010.
 
-The Schedule parameter specifies the interval scheduled for generating the new OAB.
+The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The Schedule parameter takes the following format and must include a range: Weekday.Hour:Minute[AM/PM]-Weekday.Hour:Minute[AM/PM].
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule

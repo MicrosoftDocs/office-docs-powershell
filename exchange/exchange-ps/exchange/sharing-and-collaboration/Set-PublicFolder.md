@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-PublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -321,7 +324,27 @@ Accept wildcard characters: False
 ### -OverrideContentMailbox
 This parameter is available only in on-premises Exchange.
 
-The OverrideContentMailbox parameter specifies the identity of the public folder mailbox that you want to move this public folder's content to.
+The OverrideContentMailbox parameter specifies the target public folder mailbox whereyou want to move this public folder's content to. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -399,7 +422,15 @@ Accept wildcard characters: False
 ### -Replicas
 This parameter is available or functional only in Exchange Server 2010
 
-The Replicas parameter specifies a list of public folder databases with which to replicate this public folder.
+The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
 
 ```yaml
 Type: DatabaseIdParameter[]
@@ -418,27 +449,27 @@ This parameter is available or functional only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
-The format is StartDay.Hour:Minute [AM/PM]-EndDay.Hour:Minute [AM/PM]. You can use the following values for the start and end days:
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
 
-- Full name of the day
+You can use the following values for days:
 
-- Abbreviated name of the day
+- Full name of the day.
 
-- Integer from 0 through 6, where 0 = Sunday
+- Abbreviated name of the day.
 
-If you prefer to use a 24-hour clock, omit AM/PM. If you use AM/PM, you must include a space between the time and AM or PM.
+- Integer from 0 through 6, where 0 = Sunday.
 
-Formats can be mixed.
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
 
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+You can mix and match date/time formats.
 
-The following are examples:
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (Maintenance will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Maintenance will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 

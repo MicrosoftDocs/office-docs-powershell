@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-TransportService
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,78 +21,146 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-TransportService [-Identity] <ServerIdParameter> [-ActiveUserStatisticsLogMaxAge <EnhancedTimeSpan>]
+Set-TransportService [-Identity] <ServerIdParameter>
+ [-ActiveUserStatisticsLogMaxAge <EnhancedTimeSpan>]
  [-ActiveUserStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
- [-ActiveUserStatisticsLogMaxFileSize <ByteQuantifiedSize>] [-ActiveUserStatisticsLogPath <LocalLongFullPath>]
- [-AgentLogEnabled <$true | $false>] [-AgentLogMaxAge <EnhancedTimeSpan>]
- [-AgentLogMaxDirectorySize <Unlimited>] [-AgentLogMaxFileSize <Unlimited>] [-AgentLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>] [-Confirm] [-ConnectivityLogEnabled <$true | $false>]
- [-ConnectivityLogMaxAge <EnhancedTimeSpan>] [-ConnectivityLogMaxDirectorySize <Unlimited>]
- [-ConnectivityLogMaxFileSize <Unlimited>] [-ConnectivityLogPath <LocalLongFullPath>]
- [-ContentConversionTracingEnabled <$true | $false>] [-DelayNotificationTimeout <EnhancedTimeSpan>]
- [-DnsLogEnabled <$true | $false>] [-DnsLogMaxAge <EnhancedTimeSpan>] [-DnsLogMaxDirectorySize <Unlimited>]
- [-DnsLogMaxFileSize <Unlimited>] [-DnsLogPath <LocalLongFullPath>] [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>] [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>] [-ExternalDNSServers <MultiValuedProperty>]
- [-ExternalIPAddress <IPAddress>] [-InternalDNSAdapterEnabled <$true | $false>]
- [-InternalDNSAdapterGuid <Guid>] [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
- [-InternalDNSServers <MultiValuedProperty>] [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
- [-IntraOrgConnectorSmtpMaxMessagesPerConnection <Int32>] [-IrmLogEnabled <$true | $false>]
- [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>]
- [-JournalLogEnabled <$true | $false>] [-JournalLogMaxAge <EnhancedTimeSpan>]
- [-JournalLogMaxDirectorySize <Unlimited>] [-JournalLogMaxFileSize <Unlimited>]
- [-JournalLogPath <LocalLongFullPath>] [-MaxConcurrentMailboxDeliveries <Int32>]
- [-MaxConcurrentMailboxSubmissions <Int32>] [-MaxConnectionRatePerMinute <Int32>]
- [-MaxOutboundConnections <Unlimited>] [-MaxPerDomainOutboundConnections <Unlimited>]
- [-MessageExpirationTimeout <EnhancedTimeSpan>] [-MessageRetryInterval <EnhancedTimeSpan>]
- [-MessageTrackingLogEnabled <$true | $false>] [-MessageTrackingLogMaxAge <EnhancedTimeSpan>]
- [-MessageTrackingLogMaxDirectorySize <Unlimited>] [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>]
- [-MessageTrackingLogPath <LocalLongFullPath>] [-MessageTrackingLogSubjectLoggingEnabled <$true | $false>]
+ [-ActiveUserStatisticsLogMaxFileSize <ByteQuantifiedSize>]
+ [-ActiveUserStatisticsLogPath <LocalLongFullPath>]
+ [-AgentLogEnabled <$true | $false>]
+ [-AgentLogMaxAge <EnhancedTimeSpan>]
+ [-AgentLogMaxDirectorySize <Unlimited>]
+ [-AgentLogMaxFileSize <Unlimited>]
+ [-AgentLogPath <LocalLongFullPath>]
+ [-AntispamAgentsEnabled <$true | $false>]
+ [-Confirm]
+ [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-ContentConversionTracingEnabled <$true | $false>]
+ [-DelayNotificationTimeout <EnhancedTimeSpan>]
+ [-DnsLogEnabled <$true | $false>]
+ [-DnsLogMaxAge <EnhancedTimeSpan>]
+ [-DnsLogMaxDirectorySize <Unlimited>]
+ [-DnsLogMaxFileSize <Unlimited>]
+ [-DnsLogPath <LocalLongFullPath>]
+ [-DomainController <Fqdn>]
+ [-ExternalDNSAdapterEnabled <$true | $false>]
+ [-ExternalDNSAdapterGuid <Guid>]
+ [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-ExternalDNSServers <MultiValuedProperty>]
+ [-ExternalIPAddress <IPAddress>]
+ [-InternalDNSAdapterEnabled <$true | $false>]
+ [-InternalDNSAdapterGuid <Guid>]
+ [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-InternalDNSServers <MultiValuedProperty>]
+ [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
+ [-IntraOrgConnectorSmtpMaxMessagesPerConnection <Int32>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-MaxConcurrentMailboxDeliveries <Int32>]
+ [-MaxConcurrentMailboxSubmissions <Int32>]
+ [-MaxConnectionRatePerMinute <Int32>]
+ [-MaxOutboundConnections <Unlimited>]
+ [-MaxPerDomainOutboundConnections <Unlimited>]
+ [-MessageExpirationTimeout <EnhancedTimeSpan>]
+ [-MessageRetryInterval <EnhancedTimeSpan>]
+ [-MessageTrackingLogEnabled <$true | $false>]
+ [-MessageTrackingLogMaxAge <EnhancedTimeSpan>]
+ [-MessageTrackingLogMaxDirectorySize <Unlimited>]
+ [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>]
+ [-MessageTrackingLogPath <LocalLongFullPath>]
+ [-MessageTrackingLogSubjectLoggingEnabled <$true | $false>]
  [-OutboundConnectionFailureRetryInterval <EnhancedTimeSpan>]
- [-PickupDirectoryMaxHeaderSize <ByteQuantifiedSize>] [-PickupDirectoryMaxMessagesPerMinute <Int32>]
- [-PickupDirectoryMaxRecipientsPerMessage <Int32>] [-PickupDirectoryPath <LocalLongFullPath>]
- [-PipelineTracingEnabled <$true | $false>] [-PipelineTracingPath <LocalLongFullPath>]
- [-PipelineTracingSenderAddress <SmtpAddress>] [-PoisonMessageDetectionEnabled <$true | $false>]
- [-PoisonThreshold <Int32>] [-QueueLogMaxAge <EnhancedTimeSpan>] [-QueueLogMaxDirectorySize <Unlimited>]
- [-QueueLogMaxFileSize <Unlimited>] [-QueueLogPath <LocalLongFullPath>] [-QueueMaxIdleTime <EnhancedTimeSpan>]
- [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>] [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
- [-ReceiveProtocolLogMaxFileSize <Unlimited>] [-ReceiveProtocolLogPath <LocalLongFullPath>]
- [-RecipientValidationCacheEnabled <$true | $false>] [-ReplayDirectoryPath <LocalLongFullPath>]
- [-ResourceLogEnabled <$true | $false>] [-ResourceLogMaxAge <EnhancedTimeSpan>]
- [-ResourceLogMaxDirectorySize <Unlimited>] [-ResourceLogMaxFileSize <Unlimited>]
- [-ResourceLogPath <LocalLongFullPath>] [-RootDropDirectoryPath <String>]
- [-RoutingTableLogMaxAge <EnhancedTimeSpan>] [-RoutingTableLogMaxDirectorySize <Unlimited>]
- [-RoutingTableLogPath <LocalLongFullPath>] [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
- [-SendProtocolLogMaxDirectorySize <Unlimited>] [-SendProtocolLogMaxFileSize <Unlimited>]
- [-SendProtocolLogPath <LocalLongFullPath>] [-ServerStatisticsLogMaxAge <EnhancedTimeSpan>]
+ [-PickupDirectoryMaxHeaderSize <ByteQuantifiedSize>]
+ [-PickupDirectoryMaxMessagesPerMinute <Int32>]
+ [-PickupDirectoryMaxRecipientsPerMessage <Int32>]
+ [-PickupDirectoryPath <LocalLongFullPath>]
+ [-PipelineTracingEnabled <$true | $false>]
+ [-PipelineTracingPath <LocalLongFullPath>]
+ [-PipelineTracingSenderAddress <SmtpAddress>]
+ [-PoisonMessageDetectionEnabled <$true | $false>]
+ [-PoisonThreshold <Int32>]
+ [-QueueLogMaxAge <EnhancedTimeSpan>]
+ [-QueueLogMaxDirectorySize <Unlimited>]
+ [-QueueLogMaxFileSize <Unlimited>]
+ [-QueueLogPath <LocalLongFullPath>]
+ [-QueueMaxIdleTime <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RecipientValidationCacheEnabled <$true | $false>]
+ [-ReplayDirectoryPath <LocalLongFullPath>]
+ [-RequestBrokerLogEnabled <$true | $false>]
+ [-RequestBrokerLogMaxAge <EnhancedTimeSpan>]
+ [-RequestBrokerLogMaxDirectorySize <Unlimited>]
+ [-RequestBrokerLogMaxFileSize <Unlimited>]
+ [-RequestBrokerLogPath <LocalLongFullPath>]
+ [-ResourceLogEnabled <$true | $false>]
+ [-ResourceLogMaxAge <EnhancedTimeSpan>]
+ [-ResourceLogMaxDirectorySize <Unlimited>]
+ [-ResourceLogMaxFileSize <Unlimited>]
+ [-ResourceLogPath <LocalLongFullPath>]
+ [-RootDropDirectoryPath <String>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-ServerStatisticsLogMaxAge <EnhancedTimeSpan>]
  [-ServerStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
- [-ServerStatisticsLogMaxFileSize <ByteQuantifiedSize>] [-ServerStatisticsLogPath <LocalLongFullPath>]
- [-TransientFailureRetryCount <Int32>] [-TransientFailureRetryInterval <EnhancedTimeSpan>]
- [-TransportMaintenanceLogEnabled <$true | $false>] [-TransportMaintenanceLogMaxAge <EnhancedTimeSpan>]
- [-TransportMaintenanceLogMaxDirectorySize <Unlimited>] [-TransportMaintenanceLogMaxFileSize <Unlimited>]
- [-TransportMaintenanceLogPath <LocalLongFullPath>] [-TransportSyncAccountsPoisonAccountThreshold <Int32>]
+ [-ServerStatisticsLogMaxFileSize <ByteQuantifiedSize>]
+ [-ServerStatisticsLogPath <LocalLongFullPath>]
+ [-TransientFailureRetryCount <Int32>]
+ [-TransientFailureRetryInterval <EnhancedTimeSpan>]
+ [-TransportHttpLogEnabled <$true | $false>]
+ [-TransportHttpLogMaxAge <EnhancedTimeSpan>]
+ [-TransportHttpLogMaxDirectorySize <Unlimited>]
+ [-TransportHttpLogMaxFileSize <Unlimited>]
+ [-TransportHttpLogPath <LocalLongFullPath>]
+ [-TransportMaintenanceLogEnabled <$true | $false>]
+ [-TransportMaintenanceLogMaxAge <EnhancedTimeSpan>]
+ [-TransportMaintenanceLogMaxDirectorySize <Unlimited>]
+ [-TransportMaintenanceLogMaxFileSize <Unlimited>]
+ [-TransportMaintenanceLogPath <LocalLongFullPath>]
+ [-TransportSyncAccountsPoisonAccountThreshold <Int32>]
  [-TransportSyncAccountsPoisonDetectionEnabled <$true | $false>]
  [-TransportSyncAccountsPoisonItemThreshold <Int32>]
- [-TransportSyncAccountsSuccessivePoisonItemThreshold <Int32>] [-TransportSyncEnabled <$true | $false>]
- [-TransportSyncExchangeEnabled <$true | $false>] [-TransportSyncHubHealthLogEnabled <$true | $false>]
- [-TransportSyncHubHealthLogFilePath <LocalLongFullPath>] [-TransportSyncHubHealthLogMaxAge <EnhancedTimeSpan>]
+ [-TransportSyncAccountsSuccessivePoisonItemThreshold <Int32>]
+ [-TransportSyncEnabled <$true | $false>]
+ [-TransportSyncExchangeEnabled <$true | $false>]
+ [-TransportSyncHubHealthLogEnabled <$true | $false>]
+ [-TransportSyncHubHealthLogFilePath <LocalLongFullPath>]
+ [-TransportSyncHubHealthLogMaxAge <EnhancedTimeSpan>]
  [-TransportSyncHubHealthLogMaxDirectorySize <ByteQuantifiedSize>]
- [-TransportSyncHubHealthLogMaxFileSize <ByteQuantifiedSize>] [-TransportSyncImapEnabled <$true | $false>]
- [-TransportSyncLogEnabled <$true | $false>] [-TransportSyncLogFilePath <LocalLongFullPath>]
+ [-TransportSyncHubHealthLogMaxFileSize <ByteQuantifiedSize>]
+ [-TransportSyncImapEnabled <$true | $false>]
+ [-TransportSyncLogEnabled <$true | $false>]
+ [-TransportSyncLogFilePath <LocalLongFullPath>]
  [-TransportSyncLogLoggingLevel <None | Error | Information | Verbose | RawData | Debugging>]
- [-TransportSyncLogMaxAge <EnhancedTimeSpan>] [-TransportSyncLogMaxDirectorySize <ByteQuantifiedSize>]
- [-TransportSyncLogMaxFileSize <ByteQuantifiedSize>] [-TransportSyncMaxDownloadItemsPerConnection <Int32>]
+ [-TransportSyncLogMaxAge <EnhancedTimeSpan>]
+ [-TransportSyncLogMaxDirectorySize <ByteQuantifiedSize>]
+ [-TransportSyncLogMaxFileSize <ByteQuantifiedSize>]
+ [-TransportSyncMaxDownloadItemsPerConnection <Int32>]
  [-TransportSyncMaxDownloadSizePerConnection <ByteQuantifiedSize>]
- [-TransportSyncMaxDownloadSizePerItem <ByteQuantifiedSize>] [-TransportSyncPopEnabled <$true | $false>]
- [-TransportSyncRemoteConnectionTimeout <EnhancedTimeSpan>] [-UseDowngradedExchangeServerAuth <$true | $false>]
- [-WhatIf] [-WindowsLiveHotmailTransportSyncEnabled <$true | $false>] [-WlmLogMaxAge <EnhancedTimeSpan>]
- [-WlmLogMaxDirectorySize <Unlimited>] [-WlmLogMaxFileSize <Unlimited>] [-WlmLogPath <LocalLongFullPath>]
- [-RequestBrokerLogEnabled <$true | $false>] [-RequestBrokerLogMaxAge <EnhancedTimeSpan>]
- [-RequestBrokerLogMaxDirectorySize <Unlimited>] [-RequestBrokerLogMaxFileSize <Unlimited>]
- [-RequestBrokerLogPath <LocalLongFullPath>] [-TransportHttpLogEnabled <$true | $false>]
- [-TransportHttpLogMaxAge <EnhancedTimeSpan>] [-TransportHttpLogMaxDirectorySize <Unlimited>]
- [-TransportHttpLogMaxFileSize <Unlimited>] [-TransportHttpLogPath <LocalLongFullPath>] [<CommonParameters>]
+ [-TransportSyncMaxDownloadSizePerItem <ByteQuantifiedSize>]
+ [-TransportSyncPopEnabled <$true | $false>]
+ [-TransportSyncRemoteConnectionTimeout <EnhancedTimeSpan>]
+ [-UseDowngradedExchangeServerAuth <$true | $false>]
+ [-WhatIf]
+ [-WindowsLiveHotmailTransportSyncEnabled <$true | $false>]
+ [-WlmLogMaxAge <EnhancedTimeSpan>]
+ [-WlmLogMaxDirectorySize <Unlimited>]
+ [-WlmLogMaxFileSize <Unlimited>]
+ [-WlmLogPath <LocalLongFullPath>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -707,7 +778,7 @@ Accept wildcard characters: False
 ### -ExternalDNSServers
 The ExternalDNSServers parameter specifies the list of external DNS servers that the server queries when resolving a remote domain. DNS servers are specified by IP address. The default value is an empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -790,7 +861,7 @@ Accept wildcard characters: False
 ### -InternalDNSServers
 The InternalDNSServers parameter specifies the list of DNS servers that should be used when resolving a domain name. DNS servers are specified by IP address. The default value is any empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -952,81 +1023,6 @@ Accept wildcard characters: False
 
 ### -IrmLogPath
 The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%Logging\\IRMLogs. If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled attribute is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled to $false.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalLogEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalLogMaxAge
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalLogMaxDirectorySize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalLogMaxFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JournalLogPath
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1237,8 +1233,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB). If you enter a value of unlimited, no size limit is imposed on the message tracking log files.
@@ -1316,8 +1310,6 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
@@ -1707,6 +1699,81 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestBrokerLogEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestBrokerLogMaxAge
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestBrokerLogMaxDirectorySize
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestBrokerLogMaxFileSize
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestBrokerLogPath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2120,6 +2187,81 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportHttpLogEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportHttpLogMaxAge
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportHttpLogMaxDirectorySize
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportHttpLogMaxFileSize
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportHttpLogPath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2649,156 +2791,6 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestBrokerLogEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestBrokerLogMaxAge
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestBrokerLogMaxDirectorySize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestBrokerLogMaxFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestBrokerLogPath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportHttpLogEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportHttpLogMaxAge
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportHttpLogMaxDirectorySize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportHttpLogMaxFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportHttpLogPath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

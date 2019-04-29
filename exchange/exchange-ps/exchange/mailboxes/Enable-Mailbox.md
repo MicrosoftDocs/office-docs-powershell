@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Enable-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -267,7 +270,7 @@ This example creates a mailbox for the existing user named Ayla.
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
-This example creates an In-Place archive for the existing user name Ayla who already has a mailbox.
+This example creates an In-Place archive for the existing username Ayla who already has a mailbox.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -279,13 +282,9 @@ This example creates a remote archive for the existing on-premises user named Ay
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -308,7 +307,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to mailbox-enable arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -342,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
-The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a Discovery mailbox.
+The Discovery switch is required to mailbox-enable Discovery mailboxes. You don't need to specify a value with this switch.
 
 Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
@@ -361,7 +362,9 @@ Accept wildcard characters: False
 ### -Equipment
 This parameter is available only in on-premises Exchange.
 
-The Equipment parameter specifies that the resource mailbox is an equipment mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling an equipment resource mailbox.
+The Equipment switch is required to mailbox-enable equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -397,13 +400,9 @@ Accept wildcard characters: False
 ### -LinkedMasterAccount
 This parameter is available only in on-premises Exchange.
 
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
-
-For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -428,7 +427,7 @@ Accept wildcard characters: False
 ### -LinkedRoom
 This parameter is available only in on-premises Exchange.
 
-The LinkedRoomswitchspecifies that the mailbox is a linked resource mailbox. You don't need to specify a value with this switch.
+The LinkedRoom switch is required to mailbox-enable linked resource mailboxes. You don't need to specify a value with this switch.
 
 A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
 
@@ -447,7 +446,7 @@ Accept wildcard characters: False
 ### -PublicFolder
 This parameter is available only in on-premises Exchange.
 
-The PublicFolderswitch specifies that the mailbox is a public folder mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a public folder mailbox.
+The PublicFolder switch is required to mailbox-enable public folder mailboxes. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
@@ -466,7 +465,9 @@ Accept wildcard characters: False
 ### -Room
 This parameter is available only in on-premises Exchange.
 
-The Roomswitch specifies that the resource mailbox is a room mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a room resource mailbox.
+The Room switch is required to mailbox-enable room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
@@ -483,7 +484,7 @@ Accept wildcard characters: False
 ### -Shared
 This parameter is available only in on-premises Exchange.
 
-The Sharedswitch specifies that the mailbox is a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. The mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -581,7 +582,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitchcreates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
+The Archive switch creates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -786,7 +787,7 @@ Accept wildcard characters: False
 ### -HoldForMigration
 This parameter is available only in on-premises Exchange.
 
-The HoldForMigrationswitch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
+The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
 
 You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
 
@@ -809,7 +810,7 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies the credentials used to access the domain controller that's specified by the LinkedDomainController parameter. This parameter is optional, even if you're enabling a linked mailbox.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -862,7 +863,7 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 This parameter is available only in on-premises Exchange.
 
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 If you use the PrimarySmtpAddress parameter to specify the primary email address, the command sets the EmailAddressPolicyEnabled property of the mailbox to False, which means the email addresses of the mailbox aren't automatically updated by email address policies.
 
@@ -881,7 +882,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchiveswitch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
+The RemoteArchive switch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
 
 You need to use this parameter with the ArchiveDomain parameter, and you can't use this parameter with the Archive parameter.
 
