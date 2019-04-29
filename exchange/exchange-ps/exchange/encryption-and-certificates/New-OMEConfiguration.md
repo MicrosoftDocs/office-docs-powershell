@@ -20,11 +20,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-BackgroundColor <String>]
- [-ClientEncryptionEnabled <$true | $false>]
  [-DisclaimerText <String>]
  [-EmailText <String>]
- [-ExpirationOptionEnabled <$true | $false>]
- [-Image <Byte[]>] [-IntroductionText <String>]
+ [-ExternalMailExpiryInDays <Int32>]
+ [-Image <Byte[]>] 
+ [-Identity <String>]
+ [-IntroductionText <String>]
  [-OTPEnabled <$true | $false>]
  [-PortalText <String>]
  [-ReadButtonText <String>]
@@ -84,21 +85,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClientEncryptionEnabled
-{{Fill ClientEncryptionEnabled Description}}
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisclaimerText
 The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters.
 
@@ -133,11 +119,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpirationOptionEnabled
-{{Fill ExpirationOptionEnabled Description}}
+### -ExternalMailExpiryInDays
+The ExternalMailExpiryInDays parameter specifies when access to the mail through the Office 365 web portal will expire.  The range of the parameter is between 1 and 730.
 
 ```yaml
-Type: $true | $false
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -174,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntroductionText
-{{Fill IntroductionText Description}}
+The IntroductionText parameter specifies the default text that accompanies encrypted email messages. The default text appears below the recipient email address for viewing encrypted message.
 
 ```yaml
 Type: String
@@ -225,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadButtonText
-{{Fill ReadButtonText Description}}
+The ReadButtonText parameter specifies the default text on the Read email button that accompanies encrypted email messages.
 
 ```yaml
 Type: String
@@ -240,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-{{Fill SocialIdSignIn Description}}
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Office 365 portal using their own social network id (Google, Yahoo, etc).
 
 ```yaml
 Type: $true | $false
