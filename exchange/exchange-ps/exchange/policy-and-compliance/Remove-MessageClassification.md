@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-MessageClassification [-Identity] <MessageClassificationIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-MessageClassification [-Identity] <MessageClassificationIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,17 +33,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-
-```powershell
-Remove-MessageClassification MyMessageClassification
+```
+Remove-MessageClassification -Identity "My Message Classification"
 ```
 
-This example removes the message classification named MyMessageClassification.
+This example removes the message classification named "My Message Classification".
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the message classification instance that you want to remove. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name".
+The Identity parameter specifies the message classification that you want to remove. You can use any value that uniquely identifies the message classification. For example:
+
+- Name
+
+- Identity: Default\\<Name\> or \<Locale\>\\<Name\>; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
+
+- ClassificationID (GUID)
 
 ```yaml
 Type: MessageClassificationIdParameter

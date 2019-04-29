@@ -53,10 +53,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-MessageClassification -Name MyMessageClassification -DisplayName "New Message Classification" -SenderDescription "This is the description text"
+New-MessageClassification -Name "My Message Classification" -DisplayName "New Message Classification" -SenderDescription "This is the description text"
 ```
 
-This example creates the message classification named MyMessageClassification with the following properties:
+This example creates the message classification named My Message Classification with the following properties:
 
 - The display name is New Message Classification.
 
@@ -64,21 +64,34 @@ This example creates the message classification named MyMessageClassification wi
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-MessageClassification MyMessageClassification -Locale es-ES -DisplayName "España Example" -SenderDescription "Este es el texto de la descripción"
+New-MessageClassification -Name "My Message Classification" -Locale es-ES -DisplayName "España Example" -SenderDescription "Este es el texto de la descripción"
 ```
 
-This example creates a locale-specific (Spanish - Spain) version of an existing message classification MyMessageClassification.
+In on-premises Exchange, this example creates a locale-specific (Spanish - Spain) version of an existing message classification named "My Message Classification".
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name for the message classification. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
-The DisplayName parameter specifies the display name for the message classification instance. The display name is used by Outlook users to select the appropriate message classification before they send a message.
+The DisplayName parameter specifies the title of the message classification that's displayed in Outlook and selected by users. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 The message classification XML file must be present on the sender's computer for the display name to be displayed.
 
-If the UserDisplayEnabled parameter is set to $true, the display name is displayed for the recipient, even if no message classification XML file is installed.
-
-When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Display Name". The DisplayName parameter can contain a maximum of 64 characters.
+If the UserDisplayEnabled parameter is set to $true, the value of this parameter is displayed for the recipient, even if no message classification XML file is installed.
 
 ```yaml
 Type: String
@@ -93,15 +106,17 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-The Locale parameter specifies a locale-specific version of the message classification. You must also pass the Identity parameter of the default existing message classification when you create a new locale-specific version.
+This parameter is available or functional on in on-premises Exchange.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+The Locale parameter specifies a locale-specific version of an existing message classification. You use the -Name parameter to identify the existing message classification, and the SenderDescription parameter to specify the descriptive text in another language.
+
+A valid value for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class (for example, da-DK for Danish or ja-JP for Japanese). For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: CultureInfo
 Parameter Sets: Localized
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -109,23 +124,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name". The Name parameter can contain a maximum of 256 characters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SenderDescription
-The SenderDescription parameter specifies the purpose of the message classification to the sender. The value of this parameter is used by Outlook users to select the appropriate message classification before they send a message. Enclose the value in quotation marks ("), for example, "This is the sender description that explains when to use this message classification". The SenderDescription parameter can contain a maximum of 1,024 characters.
+The SenderDescription parameter specifies the the detailed text that's shown to Outlook senders when they select a message classification to apply to a message before they send the message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -140,7 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClassificationID
-The ClassificationID parameter specifies a classification ID of an existing message classification that you want to import and use in your Exchange organization. Use this parameter if you're configuring message classifications that span two Exchange forests in the same enterprise.
+The ClassificationID parameter specifies the classification ID (GUID) of an existing message classification that you want to import and use in your Exchange organization. Use this parameter if you're configuring message classifications that span two Exchange forests in the same organization.
+
+To find the ClassificationID value of the message classification, replace \<MessageClassificationName\> with the name of the message classification and run the following command: Get-MessageCalssification -Identity "\<MessageClassificationName\>.
 
 ```yaml
 Type: Guid
@@ -174,11 +176,27 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPrecedence
-The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Although Outlook only lets a user specify a single classification per message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
+The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Valid values are:
 
-Valid input for the DisplayPrecedence parameter is Highest, Higher, High, MediumHigh, Medium, MediumLow, Low, Lower and Lowest.
+- Highest
 
-The default value is Medium.
+- Higher
+
+- High
+
+- MediumHigh
+
+- Medium (This is the default value)
+
+- MediumLow
+
+- Low
+
+- Lower
+
+- Lowest
+
+Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
 
 ```yaml
 Type: Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest
@@ -212,11 +230,11 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionMenuVisible
-The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message.
+The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message. Valid values are:
 
-If you set the PermissionMenuVisible parameter to $false, users won't be able to assign this message classification to the messages they are composing. However, messages received with this message classification still display the classification information.
+- $true: Users can assign the message classification to messages before they're sent, and the classification information is displayed. This is the default value.
 
-The default value is $true.
+- $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml
 Type: $true | $false
@@ -231,9 +249,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDescription
-The RecipientDescription parameter specifies the purpose of the message classification to the recipient. The value of this parameter is shown to Outlook users when they receive a message that has this message classification. Enclose the value in quotation marks ("), for example, "This is the recipient description that explains how to treat the message that has been classified". The RecipientDescription parameter can contain a maximum of 1,024 characters.
+The RecipientDescription parameter specifies the the detailed text that's shown to Outlook recipient when they receive a message that has the message classification applied. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-If you don't enter a value for this parameter, the description that you enter for the SenderDescription parameter is used.
+If you don't use this parameter, the value of the SenderDescription parameter is used.
 
 ```yaml
 Type: String
