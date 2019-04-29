@@ -205,17 +205,7 @@ The ExchangeLocation parameter specifies the mailboxes to include. Valid values 
 
 - The value All for all mailboxes. You can only use this value by itself.
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -236,17 +226,7 @@ This parameter specifies the mailboxes to exclude when you use the value All for
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]

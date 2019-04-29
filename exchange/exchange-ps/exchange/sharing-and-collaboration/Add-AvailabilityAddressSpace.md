@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
 ```
 
-This example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a user name and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
+This example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -118,9 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-The Credentials parameter specifies the credentials for an account that has permission to access the Availability services in the target forest.
+The Credentials parameter specifies the username and password that's used to access the Availability services in the target forest.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

@@ -455,7 +455,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
 
-By default, items in the dumpster aren't searched. Set the value to $true to enable searching the dumpster.
+Set the value to $true to enable searching the dumpster, or set to $false to disable it.
 
 ```yaml
 Type: $true | $false

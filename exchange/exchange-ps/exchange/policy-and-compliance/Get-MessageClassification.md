@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MessageClassification [[-Identity] <MessageClassificationIdParameter>] 
-[-DomainController <Fqdn>] [-IncludeLocales] [<CommonParameters>]
+Get-MessageClassification [[-Identity] <MessageClassificationIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeLocales]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +40,27 @@ Get-MessageClassification
 This example lists all message classifications in your organization.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the message classification that you want to view. You can use any value that uniquely identifies the message classification. For example:
+
+- Name
+
+- Identity: Default\\<Name\> or \<Locale\>\\<Name\>; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
+
+- ClassificationID (GUID)
+
+```yaml
+Type: MessageClassificationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 This parameter is available only in on-premises Exchange.
@@ -58,23 +81,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the name of the message classification instance that you want to view. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name".
-
-```yaml
-Type: MessageClassificationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -IncludeLocales
-The IncludeLocales switch specifies whether the command output includes the message classification locale data. When you use the IncludeLocales switch, the output includes the message classification locale data.
+The IncludeLocales switch specifies whether to return message classification locale information in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
