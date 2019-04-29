@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-AuthServer
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-AuthServer
@@ -17,29 +20,35 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AuthMetadataUrl
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
- -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### NativeClientAuthServer
+```
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD> [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AppSecret
 ```
 New-AuthServer [-Name] <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD>
- [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange.
-
-The New-AuthServer cmdlet creates a trusted authorization server object in Exchange, which allows it to trust tokens issued by the authorization server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -47,36 +56,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-AuthServer HRAppAuth -AuthMetadataUrl http://hrappauth.contoso.com/metadata/json/1
+New-AuthServer -Name WindowsAzureACS -AuthMetadataUrl https://accounts.accesscontrol.windows.net/contoso.onmicrosoft.com/metadata/json/1
 ```
 
-This command creates an authorization server.
+This command creates an authorization server object with the specified settings.
 
 ## PARAMETERS
 
-### -AuthMetadataUrl
-The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
-
-```yaml
-Type: String
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
-The Name parameter specifies a name for the authorization server.
+The Name parameter specifies a unique name for the authorization server object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -84,14 +78,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuthMetadataUrl
+The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
+
+```yaml
+Type: String
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Type
-This parameter is reserved for internal Microsoft use.
+The Type parameter specifies the type of authorization tokens that are issued by the authorization server. Valid values are:
+
+- ADFS
+
+- AzureAD
+
+- Facebook
+
+- LinkedIn
+
+- MicrosoftACS
 
 ```yaml
 Type: Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD
-Parameter Sets: Set2, Set3
+Parameter Sets: NativeClientAuthServer, AppSecret
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -110,7 +129,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +144,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -134,13 +153,17 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter specifies whether the authorization server is enabled. Set the parameter to $false to prevent authorization tokens issued by this authorization server from being accepted.
+The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
+
+- $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
+
+- $false: Authorization tokens that are issued by the authorization server are are not accepted.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -149,13 +172,15 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-This parameter is reserved for internal Microsoft use.
+The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +195,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Import-ExchangeCertificate
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Import-ExchangeCertificate
@@ -17,25 +20,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### FileData
 ```
-Import-ExchangeCertificate -FileData <Byte[]> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Import-ExchangeCertificate -Instance <String[]> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Import-ExchangeCertificate -FileData <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### FileName
 ```
-Import-ExchangeCertificate -FileName <String> [-Confirm] [-DomainController <Fqdn>] [-FriendlyName <String>]
- [-Password <SecureString>] [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Import-ExchangeCertificate -Instance <String[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Instance
+```
+Import-ExchangeCertificate -FileName <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FriendlyName <String>]
+ [-Password <SecureString>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,9 +100,9 @@ If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: FileData
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -97,9 +115,9 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: FileName
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +136,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +153,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +170,7 @@ The friendly name value is descriptive text and doesn't affect the functionality
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -163,13 +181,13 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password that's required to import the certificate.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +206,7 @@ The PrivateKeyExportable parameter specifies whether the certificate has an expo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -211,21 +229,9 @@ If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +246,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -257,9 +263,9 @@ If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None

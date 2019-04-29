@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MigrationUser
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MigrationUser
@@ -17,23 +20,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### MailboxGuid
 ```
-Get-MigrationUser -MailboxGuid <Guid> [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
-```
-
-### Set3
-```
-Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
- [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
- [-StatusSummary <Active | Failed | Synced | Completed | Stopped>] [-Partition <MailboxIdParameter>]
+Get-MigrationUser -MailboxGuid <Guid>
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 
-### Set1
+### StatusAndBatchId
 ```
-Get-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
+Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
+ [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
+ [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>] [<CommonParameters>]
 ```
 
@@ -63,9 +74,9 @@ The MailboxGuid parameter specifies the GUID of a mailbox for which you want to 
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2
+Parameter Sets: MailboxGuid
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -78,9 +89,9 @@ The BatchId parameter specifies the name of the migration batch for which you wa
 
 ```yaml
 Type: MigrationBatchIdParameter
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +108,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -110,13 +121,30 @@ The Identity parameter specifies the particular user that you want to retrieve i
 
 ```yaml
 Type: MigrationUserIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -127,7 +155,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -182,9 +210,9 @@ The Status parameter returns information about migration users that have the spe
 
 ```yaml
 Type: Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -207,24 +235,9 @@ The StatusSummary parameter returns abbreviated information about migration user
 
 ```yaml
 Type: Active | Failed | Synced | Completed | Stopped
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

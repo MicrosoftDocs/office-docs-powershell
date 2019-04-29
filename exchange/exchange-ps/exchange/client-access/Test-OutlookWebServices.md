@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Test-OutlookWebServices
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -24,7 +27,7 @@ Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
 ```
 
 ## DESCRIPTION
-The Test-OutlookWebServices cmdlet uses a specified e-mail address to verify that the Outlook provider is configured correctly.
+The Test-OutlookWebServices cmdlet uses a specified  address to verify that the Outlook provider is configured correctly.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -101,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies any valid e-mail address in the forest. If you specify this parameter, incorrectly formed e-mail addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and user name in the domain\\user name format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
 
 ```yaml
 Type: RecipientIdParameter

@@ -102,19 +102,19 @@ For example, suppose your Exchange servers are running Exchange 2016 version `15
       <Version>15.01.0225.030-15.01.0225.050</Version>
        <Revision>001</Revision>
       <CulturesUpdated>en</CulturesUpdated>
-      <CabinetUrl>http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab</CabinetUrl>
+      <CabinetUrl>https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab</CabinetUrl>
     </HelpVersion>
     <HelpVersion>
       <Version>15.01.0225.030-15.01.0225.050</Version>
       <Revision>002</Revision>
       <CulturesUpdated>de, es, fr, it, ja, ko, pt, pu, ru, zh-HanS, zh-HanT</CulturesUpdated>
-      <CabinetUrl>http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_Loc.cab</CabinetUrl>
+      <CabinetUrl>https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_Loc.cab</CabinetUrl>
     </HelpVersion>
     <HelpVersion>
       <Version>15.01.0225.030-15.01.0225.050</Version>
        <Revision>003</Revision>
       <CulturesUpdated>en</CulturesUpdated>
-      <CabinetUrl>http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En2.cab</CabinetUrl>
+      <CabinetUrl>https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En2.cab</CabinetUrl>
     </HelpVersion>
   </HelpVersions>
 </ExchangeHelpInfo>
@@ -140,7 +140,7 @@ To download all of the update packages, follow these steps.
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Save the customized ExchangeHelpInfo.xml manifest file.
     
@@ -174,7 +174,7 @@ After you identify the update packages that apply to you, follow these steps:
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Optionally, you can delete the **\<HelpInfo\>** sections that don't apply to you.
     
@@ -213,7 +213,7 @@ Now, when you run **Update-ExchangeHelp** in the Exchange Management Shell on yo
   
 More interesting is the long-term maintenance of this customized configuration. Basically, you'll need to repeat Step 1 through Step 3 when you discover an update has been made available for Exchange cmdlet reference help, and you want to deploy that updated help to your Exchange servers. 
   
-An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an Internet-connected Exchange server, or computer that has the Exchange mangement tools installed.
+An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an Internet-connected Exchange server, or computer that has the Exchange management tools installed.
   
 [Return to top](use-update-exchangehelp.md#RTT)
   

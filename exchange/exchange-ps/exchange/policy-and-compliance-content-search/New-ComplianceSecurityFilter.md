@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-ComplianceSecurityFilter
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -71,10 +74,10 @@ This example requires you to connect to Security & Compliance Center PowerShell 
 
 ### -------------------------- Example 6 --------------------------
 ```
-New-ComplianceSecurityFilter -FilterName EmailDateRestrictionFilter -Users donh@contoso.com -Filters "MailboxContent_Received -ge '01-01-2015' -and MailboxContent_Received -le '12-31-2015'" -Action All
+New-ComplianceSecurityFilter -FilterName EmailDateRestrictionFilter -Users donh@contoso.com -Filters "MailboxContent_Received -ge '01-01-2018' -and MailboxContent_Received -le '12-31-2018'" -Action All
 ```
 
-This example restricts the user to performing all compliance search actions only on email messages sent during the calendar year 2015.
+This example restricts the user to performing all compliance search actions only on email messages sent during the calendar year 2018.
 
 ### -------------------------- Example 7 --------------------------
 ```
@@ -85,10 +88,10 @@ This example allows members of the OneDrive eDiscovery Managers custom role grou
 
 ### -------------------------- Example 8 --------------------------
 ```
-New-ComplianceSecurityFilter -FilterName DocumentDateRestrictionFilter -Users donh@contoso.com -Filters "SiteContent_LastModifiedTime -ge '01-01-2015' -and SiteContent_LastModifiedTime -le '12-31-2015'" -Action All
+New-ComplianceSecurityFilter -FilterName DocumentDateRestrictionFilter -Users donh@contoso.com -Filters "SiteContent_LastModifiedTime -ge '01-01-2018' -and SiteContent_LastModifiedTime -le '12-31-2018'" -Action All
 ```
 
-This example restricts the user to performing all compliance search actions on documents that were last changed sometime in the calendar year 2015.
+This example restricts the user to performing all compliance search actions on documents that were last changed sometime in the calendar year 2018.
 
 ### -------------------------- Example 9 --------------------------
 ```
@@ -257,12 +260,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

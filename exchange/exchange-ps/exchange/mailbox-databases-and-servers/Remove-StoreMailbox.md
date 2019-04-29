@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-StoreMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-StoreMailbox
@@ -18,8 +21,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter>
- -MailboxState <Disabled | SoftDeleted> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <Disabled | SoftDeleted>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +55,7 @@ This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
+Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -match "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
 ```
 
 This example permanently purges all soft-deleted mailboxes from mailbox database MBD01.
@@ -59,9 +63,11 @@ This example permanently purges all soft-deleted mailboxes from mailbox database
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database on which the mailbox that you want to remove resides. This parameter accepts the following values:
+The Database parameter specifies the mailbox database that contains the mailbox to remove. You can use any value that uniquely identifies the database. For example:
 
-- Database name
+- Name
+
+- Distinguished name (DN)
 
 - GUID
 
@@ -69,7 +75,7 @@ The Database parameter specifies the identity of the mailbox database on which t
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -78,25 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox that you want to remove. This parameter accepts the following values:
+The Identity parameter specifies the identity of the mailbox that you want to remove. Use the mailbox GUID as the value for this parameter.
 
-- GUID
-
-- Distinguished name (DN)
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- Domain\\Account Name
-
-- SMTP address
+Run the following command to obtain the mailbox GUID and other information for all mailboxes in your organization: Get-MailboxDatabase | Get-MailboxStatistics | Format-List DisplayName,MailboxGuid,Database,DisconnectReason,DisconnectDate.
 
 ```yaml
 Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +111,7 @@ The MailboxState parameter specifies the mailbox state on the source mailbox dat
 Type: Disabled | SoftDeleted
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +130,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +145,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

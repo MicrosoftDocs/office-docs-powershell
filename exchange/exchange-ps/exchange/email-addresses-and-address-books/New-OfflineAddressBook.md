@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OfflineAddressBook
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-OfflineAddressBook
@@ -20,13 +23,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParameter[]> [-Confirm]
- [-DiffRetentionPeriod <Unlimited>] [-DomainController <Fqdn>] [-GlobalWebDistributionEnabled <$true | $false>]
- [-IsDefault <$true | $false>] [-PublicFolderDatabase <DatabaseIdParameter>] [-PublicFolderDistributionEnabled <$true | $false>]
- [-Schedule <Schedule>] [-Server <ServerIdParameter>] [-SkipPublicFolderInitialization]
- [-Versions <MultiValuedProperty>] [-VirtualDirectories <VirtualDirectoryIdParameter[]>] [-WhatIf]
- [-GeneratingMailbox <MailboxIdParameter>] [-ShadowMailboxDistributionEnabled <$true | $false>]
- [<CommonParameters>]
+New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParameter[]>
+ [-Confirm]
+ [-DiffRetentionPeriod <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-GeneratingMailbox <MailboxIdParameter>]
+ [-GlobalWebDistributionEnabled <$true | $false>]
+ [-IsDefault <$true | $false>]
+ [-PublicFolderDatabase <DatabaseIdParameter>]
+ [-PublicFolderDistributionEnabled <$true | $false>]
+ [-Schedule <Schedule>]
+ [-Server <ServerIdParameter>]
+ [-ShadowMailboxDistributionEnabled <$true | $false>]
+ [-SkipPublicFolderInitialization]
+ [-Versions <MultiValuedProperty>]
+ [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,6 +86,21 @@ If you configure OABs to use public folder distribution, but your organization d
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name of the OAB. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddressLists
 The AddressLists parameter specifies the address lists or global address lists that are included in the OAB. You can use any value that uniquely identifies the address list. For example:
 
@@ -91,24 +118,9 @@ You can find the identify values of address lists and global address lists by us
 Type: AddressBookBaseIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name of the OAB. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -125,7 +137,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +152,7 @@ The DiffRetentionPeriod parameter specifies the number of days that the OAB diff
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +169,48 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneratingMailbox
+This parameter is available only in on-premises Exchange.
+
+The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
+
+A single organization mailbox can generate multiple OABs (you can use the same value for this parameter in the settings of multiple OABs), but in Exchange 2013 CU5 or later, an OAB can only be generated by a single organization mailbox (this parameter doesn't accept multiple values). To have a read only copy of the OAB (also known as a shadow copy) available in other organization mailboxes, use the ShadowMailboxDistributionEnabled parameter.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +233,7 @@ In Exchange 2013 CU7 or later, we recommend that you use the value $true for thi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -199,7 +252,7 @@ The IsDefault parameter specifies whether the OAB is used by all mailboxes and m
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +263,15 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the identity of the public folder database being used to distribute the OAB. To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
+The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -244,9 +305,31 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available or functional only in Exchange Server 2010.
 
-The Schedule parameter specifies the interval scheduled for generating the new OAB.
+The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The Schedule parameter takes the following format and must include a range: Weekday.Hour:Minute[AM/PM]-Weekday.Hour:Minute[AM/PM].
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule
@@ -274,6 +357,29 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ShadowMailboxDistributionEnabled
+This parameter is available only in on-premises Exchange.
+
+The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
+
+- $true: The OAB is distributed to all other organization mailboxes.
+
+- $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
+
+The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -344,7 +450,7 @@ In Exchange 2013 CU7 or later, we recommend that you set the GlobalWebDistributi
 Type: VirtualDirectoryIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -359,75 +465,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeneratingMailbox
-This parameter is available only in on-premises Exchange.
-
-The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
-
-A single organization mailbox can generate multiple OABs (you can use the same value for this parameter in the settings of multiple OABs), but in Exchange 2013 CU5 or later, an OAB can only be generated by a single organization mailbox (this parameter doesn't accept multiple values). To have a read only copy of the OAB (also known as a shadow copy) available in other organization mailboxes, use the ShadowMailboxDistributionEnabled parameter.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShadowMailboxDistributionEnabled
-This parameter is available only in on-premises Exchange.
-
-The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
-
-- $true: The OAB is distributed to all other organization mailboxes.
-
-- $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
-
-The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

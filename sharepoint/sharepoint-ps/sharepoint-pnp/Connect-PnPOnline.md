@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Connect-PnPOnline
@@ -334,7 +334,7 @@ This will authenticate you using the provided access token
 Connect-PnPOnline -Scopes $arrayOfScopes
 ```
 
-Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
+Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
 
 ### ------------------EXAMPLE 14------------------
 ```powershell
@@ -368,7 +368,7 @@ Connect to an on-premises SharePoint environment using a high trust certificate 
 ## PARAMETERS
 
 ### -AADDomain
-The AAD where the O365 app is registred. Eg.: contoso.com, or contoso.onmicrosoft.com.
+The AAD where the O365 app is registered. Eg.: contoso.com, or contoso.onmicrosoft.com.
 
 Only applicable to: SharePoint Online
 
@@ -575,7 +575,7 @@ Accept pipeline input: False
 ### -HighTrustCertificate
 The certificate which has been registered in SharePoint as a Trusted Security Token issuer to use for the High Trust connection. Note that CNG key storage providers are not supported.
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: X509Certificate2
@@ -589,7 +589,7 @@ Accept pipeline input: False
 ### -HighTrustCertificateIssuerId
 The IssuerID under which the certificate has been registered in SharePoint as a Trusted Security Token issuer to use for the High Trust connection. Uses the ClientID if not specified.
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -603,7 +603,7 @@ Accept pipeline input: False
 ### -HighTrustCertificatePassword
 The password of the private key certificate (.pfx) to use for the High Trust connection
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -617,7 +617,7 @@ Accept pipeline input: False
 ### -HighTrustCertificatePath
 The path to the private key certificate (.pfx) to use for the High Trust connection
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -920,4 +920,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

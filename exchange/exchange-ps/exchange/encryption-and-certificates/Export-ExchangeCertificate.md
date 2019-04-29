@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-ExchangeCertificate
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Export-ExchangeCertificate
@@ -17,22 +20,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Thumbprint
 ```
-Export-ExchangeCertificate [-Thumbprint] <String> [-BinaryEncoded] [-Confirm] [-DomainController <Fqdn>]
- [-Password <SecureString>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Export-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+ [-BinaryEncoded]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FileName <String>]
+ [-Password <SecureString>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Export-ExchangeCertificate [-Thumbprint] <String> [-BinaryEncoded] [-Confirm] [-DomainController <Fqdn>]
- [-FileName <String>] [-Password <SecureString>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] [-BinaryEncoded] [-Confirm]
- [-DomainController <Fqdn>] [-FileName <String>] [-Password <SecureString>] [-WhatIf] [<CommonParameters>]
+Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
+ [-BinaryEncoded]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FileName <String>]
+ [-Password <SecureString>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,9 +90,9 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -102,7 +109,7 @@ Typically, you use this switch when you export a certificate, because you can st
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +128,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +145,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -149,13 +156,13 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the private key or chain of trust in the exported certificate file. To import the exported certificate file on another server, you need to know the password.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -180,9 +187,9 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +204,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -210,9 +217,9 @@ The FileName parameter specifies the name and path of the exported certificate o
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +230,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate or certificate request that you want to export. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
 
 - \<Thumbprint\>
 
@@ -235,9 +242,9 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: ExchangeCertificateIdParameter
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-LinkedUser
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,17 +20,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-LinkedUser [-Anr <String>] [-Filter <String>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+Get-LinkedUser [-Anr <String>]
+ [-Filter <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-LinkedUser [[-Identity] <UserIdParameter>] [-Filter <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [<CommonParameters>]
+Get-LinkedUser [[-Identity]
+ <UserIdParameter>]
+ [-Filter <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +75,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -100,13 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user.
-
-For example:
+The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -116,7 +121,7 @@ For example:
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False

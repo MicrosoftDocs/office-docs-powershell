@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,28 +20,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
-```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
+### Identity
 ```
 Get-MailboxLocation -Identity <MailboxLocationIdParameter> [-Confirm]
  [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
  [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
-```
-Get-MailboxLocation -Organization <OrganizationIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
+### User
 ```
 Get-MailboxLocation -User <UserIdParameter> [-Confirm]
  [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
@@ -59,21 +48,6 @@ This example returns the mailbox location for the user chris@contoso.com.
 
 ## PARAMETERS
 
-### -Database
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.
 
@@ -81,22 +55,7 @@ You can't use this parameter with the User parameter.
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: Set4
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -107,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user.
-
-For example:
+The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -125,7 +80,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set2
+Parameter Sets: User
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -219,15 +174,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b6393122-1556-4b0b-b80d-c7737b09eb9c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxlocation)

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: Start-RetentionAutoTagLearning
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -19,16 +22,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CrossValidate
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-CrossValidate] [-Confirm]
- [-DomainController <Fqdn>] [-NumberOfSegments <Int32>] [-WhatIf] [<CommonParameters>]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-CrossValidate] [-NumberOfSegments <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Train
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Confirm] [-DomainController <Fqdn>]
- [-Train] [-WhatIf] [<CommonParameters>]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Train]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +71,7 @@ The CrossValidate switch specifies whether items in the specified mailbox are be
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -75,21 +82,27 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter identifies the mailbox. You can use one of the following values:
+The Identity parameter identifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -108,7 +121,7 @@ The Clear switch specifies whether to clear auto-tags from the specified mailbox
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -159,11 +172,11 @@ The default value is 10.
 
 The minimum value is 2.
 
-The NumberOfSegments parameter can be used only in conjunction with the CrossValidate parameter.
+You csn only use this parameter with the CrossValidate parameter.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -178,7 +191,7 @@ The Train switch specifies whether to start the training algorithm for auto-tagg
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -209,12 +222,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

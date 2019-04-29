@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-ExchangeCertificate
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Enable-ExchangeCertificate
@@ -19,26 +22,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Thumbprint
 ```
-Enable-ExchangeCertificate [-Thumbprint] <String> -Services <None | IMAP | POP | UM | IIS | SMTP | Federation>
- [-Confirm] [-DomainController <Fqdn>] [-DoNotRequireSsl] [-Force] [-NetworkServiceAllowed]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Enable-ExchangeCertificate [-Thumbprint] <String>
- -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter> [-Confirm]
- [-DomainController <Fqdn>] [-DoNotRequireSsl] [-Force] [-NetworkServiceAllowed] [-Server <ServerIdParameter>]
+Enable-ExchangeCertificate [-Thumbprint] <String> -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotRequireSsl]
+ [-Force]
+ [-NetworkServiceAllowed]
+ [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
- -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter> [-Confirm]
- [-DomainController <Fqdn>] [-DoNotRequireSsl] [-Force] [-NetworkServiceAllowed] [-WhatIf] [<CommonParameters>]
+Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotRequireSsl]
+ [-Force]
+ [-NetworkServiceAllowed]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,10 +91,10 @@ The values that you specify with this parameter are additive. When you enable a 
 Different services have different certificate requirements. For example, some services may require a server name in the certificate's Subject Name or Subject Alternative Name fields, but other services may require an FQDN. Verify that the certificate supports the services that you want to configure.
 
 ```yaml
-Type: None | IMAP | POP | UM | IIS | SMTP | Federation
+Type: None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -105,9 +109,9 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -126,7 +130,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +147,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +164,7 @@ If you don't use this switch, and you use the Services parameter to enable the c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -177,9 +181,34 @@ By default, when you enable a certificate for SMTP, the command prompts you to r
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to configure. Valid values are:
+
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
+
+- \<Thumbprint\>
+
+You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -192,7 +221,7 @@ The NetworkServiceAllowed switch gives the built-in Network Service account perm
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -217,9 +246,9 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -234,34 +263,9 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the certificate that you want to configure. Valid values are:
-
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
-
-- \<Thumbprint\>
-
-You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

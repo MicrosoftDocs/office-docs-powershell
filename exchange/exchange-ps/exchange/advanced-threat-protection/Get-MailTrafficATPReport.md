@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficATPReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -49,21 +52,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2017 -EndDate 06/15/2017
+Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2018 -EndDate 06/15/2018
 ```
 
-This example retrieves details for incoming messages between June 13, 2017 and June 15, 2017.
+This example retrieves details for incoming messages between June 13, 2018 and June 15, 2018.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
-This example retrieves the statistics for outgoing messages on July 20, 2017 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
+This example retrieves the statistics for outgoing messages on July 20, 2018 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced and values of MessageCount are correspondingly larger on each row.
@@ -135,7 +138,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -152,31 +155,47 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced phish filter\*
+- Message passed (Indicates a good message.)
 
-- Anti-malware engine
+Email phish EventTypes:
 
-- ATP safe attachments\*
+- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
 
-- ATP safe links\*
+- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
-- Anti-spoof: Intra-org
+- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- Anti-spoof: external domain\*
+- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
-- Domain impersonation\*
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
-- General phish filter
+- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
 
-- Malicious URL reputation
+- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
 
-- Message passed
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
 
-- Phish ZAP
+- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
-- User impersonation\*
+Email malware EventTypes:
 
-- ZAP
+- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
+
+- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
+
+- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
+
+- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+
+- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+Content malware EventTypes:
+
+- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
+
+- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP/E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 
@@ -257,7 +276,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -294,12 +313,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

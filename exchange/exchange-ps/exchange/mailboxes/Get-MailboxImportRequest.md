@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxImportRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxImportRequest
@@ -19,18 +22,41 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>] [-DomainController <Fqdn>]
+Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>]
+ [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxFiltering
 ```
-Get-MailboxImportRequest [-BatchName <String>] [-Database <DatabaseIdParameter>] [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>] [-Mailbox <MailboxOrMailUserIdParameter>] [-Name <String>]
- [-ResultSize <Unlimited>] [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+Get-MailboxImportRequest
+ [-BatchName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Mailbox <MailboxOrMailUserIdParameter>]
+ [-Name <String>]
+ [-ResultSize <Unlimited>]
+ [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
+ [-Suspend <$true | $false>]
+ [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+```
+
+### MailboxLocationFiltering
+```
+Get-MailboxImportRequest
+ [-BatchName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Mailbox <MailboxLocationIdParameter>]
+ [-Name <String>]
+ [-ResultSize <Unlimited>]
+ [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
+ [-Suspend <$true | $false>]
+ [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,9 +115,9 @@ You can't use this parameter with the following parameters:
 
 ```yaml
 Type: MailboxImportRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -102,13 +128,13 @@ Accept wildcard characters: False
 ### -BatchName
 The BatchName parameter specifies the name given to a batch import request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -119,17 +145,19 @@ Accept wildcard characters: False
 ### -Database
 This parameter is available or functional only in Exchange Server 2010.
 
-The Database parameter specifies the database in which the user's mailbox or archive resides. You can use the following values:
+The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-You can't use this parameter in conjunction with the Identity parameter.
+- GUID
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -148,7 +176,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -169,9 +197,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -180,29 +208,51 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the mailbox or mail user into which content is being imported. You can use the following values:
+The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 
-- GUID
+In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+
+In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
 
-- Legacy Exchange DN
+- Email address
 
-- SMTP address
+- GUID
 
-- Alias
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocationFiltering
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -219,9 +269,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +286,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -273,9 +323,9 @@ CompletionInProgress and AutoSuspended don't apply to import requests and won't 
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -290,9 +340,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -305,17 +355,19 @@ This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -4,5 +4,9 @@ _site/
 .optemp/
 _themes*/
 .vs/
+.local/
 
 .openpublishing.buildcore.ps1
+**/node_modules
+
+\.idea/

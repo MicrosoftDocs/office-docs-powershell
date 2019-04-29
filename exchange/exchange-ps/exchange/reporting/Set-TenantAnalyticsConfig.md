@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-TenantAnalyticsConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -11,43 +14,45 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAnalyticsConfig cmdlet to modify the minimum number of recipients that are required for MyAnalytics to show email statistics.
+**This cmdlet has been deprecated and no longer used.**
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set1
+### MyAnalytics
 ```
-Set-TenantAnalyticsConfig -MinRecipients <Int32> [<CommonParameters>]
+Set-TenantAnalyticsConfig -MinRecipients <Int32>
+ [<CommonParameters>]
 ```
 
-### Set2
+### TeamAnalytics
 ```
-Set-TenantAnalyticsConfig [-MinRecipients <Int32>] -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+ [-MinRecipients <Int32>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+This cmdlet has been deprecated and no longer used.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-TenantAnalyticsConfig -MinRecipients 10
+Set-TenantAnalyticsConfig
 ```
 
-This example configures the minimum number of recipients required by MyAnalytics to 10 recipients.
+This cmdlet has been deprecated and no longer used.
 
 ## PARAMETERS
 
 ### -MinRecipients
-The MinRecipients parameter specifies the minimum number of recipients required for MyAnalytics to show email statistics. The default value is 5.
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set1
+Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -59,7 +64,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -70,11 +75,11 @@ Accept wildcard characters: False
 ```
 
 ### -MinTeamSize
-PARAMVALUE: Int32
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -85,11 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -TeamAnalyticsEnabled
-PARAMVALUE: $true | $false
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -105,12 +110,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

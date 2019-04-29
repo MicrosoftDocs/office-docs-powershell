@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MobileDevice
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MobileDevice
@@ -17,18 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Mailbox
 ```
-Get-MobileDevice -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainController <Fqdn>] [-Filter <String>]
- [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice -Mailbox <MailboxIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>] [-ActiveSync] [-DomainController <Fqdn>]
- [-Filter <String>] [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>]
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,11 +66,10 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
+Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
-
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -63,13 +81,9 @@ This example returns detailed information about the specified device on Lila's m
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -91,9 +105,9 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +122,7 @@ The ActiveSync switch specifies whether to include mobile devices that synchroni
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +139,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +200,7 @@ You can filter by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -205,9 +219,9 @@ The Identity parameter specifies the mobile device that you want to view. You ca
 
 ```yaml
 Type: MobileDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -218,13 +232,15 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring parameter specifies whether mobile devices that are created by monitoring accounts are exposed by the Get-MobileDevice cmdlet. The default value is $false.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +263,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -262,7 +278,7 @@ The OWAforDevices switch filters the results by whether Outlook on the web for d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +293,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -326,7 +342,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -341,7 +357,7 @@ The RestApi switch filters the results by REST API devices. You don't need to sp
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -356,7 +372,7 @@ The UniversalOutlook switch filters the results by Mail and Calendar devices. Yo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

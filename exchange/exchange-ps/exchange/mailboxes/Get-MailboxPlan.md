@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Get-MailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -18,14 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>] [-AllMailboxPlanReleases] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ResultSize <Unlimited>] [-SortBy <String>]
+Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>]
+ [-AllMailboxPlanReleases]
+ [-Credential <PSCredential>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A mailbox plan is a template that automatically configures properties on new mailboxes. Mailbox plans correspond to Microsoft Office 365 license types. The availability of a mailbox plan is determined by the selections you make when you enroll your domain in Office 365.
+A mailbox plan is a template that automatically configures mailbox properties. Mailbox plans correspond to license types, and are applied when you license the user. The availability of a mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -47,10 +55,35 @@ This example returns detailed information for the mailbox plan that has the disp
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox plan that you want to view. You can use any value that uniquely identifies the mailbox plan. For example:
+
+- Name
+
+- Alias
+
+- Display name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: MailboxPlanIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AllMailboxPlanReleases
 The AllMailboxPlanReleases switch specifies whether to include mailbox plans that were used in previous versions of the service in the results. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command displays only mailbox plans that are used in the current version of the service. This parameter has meaning only for organizations that were enrolled in previous versions of the cloud-based service.
+If you don't use this switch, the command returns only mailbox plans that are used in the current version of the service. This parameter has meaning only for organizations that were enrolled in previous versions of the service.
 
 ```yaml
 Type: SwitchParameter
@@ -65,27 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -110,33 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox plan that you want to view. You can use any value that uniquely identifies the mailbox plan. For example:
-
-- Name
-
-- Alias
-
-- Display name
-
-- Distinguished name (DN)
-
-- GUID
-
-- LegacyExchangeDN
-
-```yaml
-Type: MailboxPlanIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

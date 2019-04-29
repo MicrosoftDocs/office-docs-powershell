@@ -4,7 +4,7 @@
 It is best practice to keep each sentence or idea on its own line.
 This is so that anyone that is reviewing a commit can quickly and easily see what changed.
 If you have a giant string of text on a single line then Git just flags that entire line as a 'change'.
-To learn more about this concept, see http://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
+To learn more about this concept, see https://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
 
 ## When will my content go live?
 
@@ -41,6 +41,10 @@ Every cmdlet reference topic needs at least the following in the metadata field 
 external help file: 
 applicable: Skype for Business Server 2015
 title: Add-CsSlaDelegates
+author:
+ms.author:
+ms.reviewer:
+manager:
 schema: 2.0.0
 ```
 The *external help file* tag is for the docs.microsoft.com infrastructure. 
@@ -52,6 +56,12 @@ These tags have to be added to the docs.microsoft.com infrastructure.
 If you try to include a tag that has not been added then the build will fail.
 
 The *title* tag is for metrics. More information about metrics coming.
+
+The *author* is the GitHub alias of the person that owns this topic. Usually the PM or sometimes a dev that owns the cmdlet.
+The *ms.author* is the Microsoft alias of the same author.
+The *ms.reviewer* is the Microsoft alias of someone that can approve any technical changes (if different than the author).
+The *manager* is the Microsoft alias of a manager for the team that owns the cmdlet. This is useful if the person that owns the cmdlet leaves the company. The manager will be reached to in order to find the new author.
+
 
 The *schema* tag let's the build system know what schema to use. 
 The 2.0.0 is the only supported schema currently.
@@ -72,7 +82,7 @@ Some examples are:
 
 Every folder must have this TOC file.
 When you browse the list of cmdlets in the Reference folder this is the file you see.
-For example, https://docs.microsoft.com/en-us/powershell/module/skype/?view=skype-ps.
+For example, https://docs.microsoft.com/powershell/module/skype/?view=skype-ps.
 Note that docs.microsoft.com automatically strips out the note about manually entering a description.
 It ONLY strips this out if it is in the exact format given. 
 Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
@@ -89,7 +99,7 @@ You can find the PowerShell Browser here: https://docs.microsoft.com/powershell/
 
 ## I am a Microsoft employee but new to GitHub, what should I do?
 
-You can learn about workign with GitHub as a Microsoft employee here: https://docs.opensource.microsoft.com/github/
+You can learn about working with GitHub as a Microsoft employee here: https://docs.opensource.microsoft.com/github/
 
 In a nutshell you need to create a GitHub account and link it with your Microsoft account so you can contribute openly.
 
@@ -140,7 +150,7 @@ The system was designed to be as simple as possible in order to achieve three pr
     The first two places the PowerShell reference content is surfaces is Get-Help in PowerShell itself and the docs.microsoft.com website.
     In the future the content can also be surfaced in an iOS app, Android app, Windows Universal app, and other mechanisms. 
     With a simple, centralized, system for the source of truth, in GitHub, it becomes much easier to surface content using multiple mechanisms since GitHub is not tailored for once specific location, such as Get-Help. 
-    If the GitHub repo focused on one specific site or mechanism then surfacing from other mechansisms could become too complex or could exponentially expound the effort required.
+    If the GitHub repo focused on one specific site or mechanism then surfacing from other mechanisms could become too complex or could exponentially expound the effort required.
 
 1. Keep content fresh and up to date.
 

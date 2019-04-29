@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxSearch
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxSearch
@@ -17,22 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### SearchObjectIdentity
 ```
-Get-MailboxSearch [[-Identity] <SearchObjectIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
-```
-
-### Set2
-```
-Get-MailboxSearch -InPlaceHoldIdentity <String> [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
- [-ShowDeletionInProgressSearches] [<CommonParameters>]
+Get-MailboxSearch [[-Identity] <SearchObjectIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### EwsStoreObjectIdentity
 ```
-Get-MailboxSearch [[-Identity] <EwsStoreObjectIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-ShowDeletionInProgressSearches] [<CommonParameters>]
+Get-MailboxSearch [[-Identity] <EwsStoreObjectIdParameter>] [-ShowDeletionInProgressSearches]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### InPlaceHoldIdentity
+```
+Get-MailboxSearch -InPlaceHoldIdentity <String> [-ShowDeletionInProgressSearches]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +76,21 @@ This example retrieves the In-Place Holds that a user is placed on. The first co
 
 ## PARAMETERS
 
+### -InPlaceHoldIdentity
+The InPlaceHoldIdentity parameter specifies the GUID of an In-Place Hold. Use this parameter to search for an In-Place Hold that a user is placed on. GUIDs of all In-Place Holds that a user is placed on are added to the user's InPlaceHolds property. You can retrieve the property by using the Get-Mailbox cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: InPlaceHoldIdentity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -76,7 +100,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -105,9 +129,21 @@ To view these properties, you have to provide the name of a mailbox search.
 
 ```yaml
 Type: SearchObjectIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: EwsStoreObjectIdentity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SearchObjectIdParameter
+Parameter Sets: SearchObjectIdentity
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: 1
 Default value: None
@@ -122,23 +158,8 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InPlaceHoldIdentity
-The InPlaceHoldIdentity parameter specifies the GUID of an In-Place Hold. Use this parameter to search for an In-Place Hold that a user is placed on. GUIDs of all In-Place Holds that a user is placed on are added to the user's InPlaceHolds property. You can retrieve the property by using the Get-Mailbox cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -150,9 +171,9 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set1
+Parameter Sets: EwsStoreObjectIdentity, InPlaceHoldIdentity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

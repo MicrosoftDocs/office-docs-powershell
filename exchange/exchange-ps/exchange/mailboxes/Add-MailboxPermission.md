@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxPermission
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Add-MailboxPermission
@@ -17,38 +20,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AccessRights
 ```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]>
- -User <SecurityPrincipalIdParameter> [-AutoMapping <$true | $false>] [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipalIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-AutoMapping <$true | $false>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Owner
 ```
-Add-MailboxPermission [[-Identity] <MailboxIdParameter>] [-AccessRights <MailboxRights[]>]
- -Instance <MailboxAcePresentationObject> [-User <SecurityPrincipalIdParameter>]
- [-AutoMapping <$true | $false>] [-Confirm] [-Deny] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### Instance
 ```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission -Instance <MailboxAcePresentationObject>
+ [-AccessRights <MailboxRights[]>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-AutoMapping <$true | $false>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [[-Identity] <MailboxIdParameter>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,13 +94,9 @@ In Office 365, this example assigns the administrator account admin@contoso.com 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -117,9 +118,9 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1, Set2, Set4, Set5
+Parameter Sets: AccessRights, Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -129,9 +130,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -158,9 +159,9 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -170,9 +171,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -185,9 +186,9 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: MailboxAcePresentationObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -198,13 +199,9 @@ Accept wildcard characters: False
 ### -Owner
 The Owner parameter specifies the owner of the mailbox object. The default mailbox owner is NT AUTHORITY\\SELF.
 
-The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
-
-For example:
+The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -214,9 +211,9 @@ For example:
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -227,13 +224,9 @@ Accept wildcard characters: False
 ### -User
 The User parameter specifies the user that you're assigning the permission to.
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example:
-
-For example:
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -243,9 +236,9 @@ For example:
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -255,9 +248,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -276,9 +269,9 @@ If you've already assign the user Full Access to the mailbox, and you want to pr
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: $true
@@ -297,7 +290,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -310,9 +303,9 @@ The Deny switch specifies whether to deny the specified permissions to the user 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +322,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +343,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -371,9 +364,9 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 
 ```yaml
 Type: None | All | Descendents | SelfAndChildren | Children
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -388,7 +381,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

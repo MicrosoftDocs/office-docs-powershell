@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: New-ConnectSubscription
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,16 +20,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Facebook
 ```
-New-ConnectSubscription -AppAuthorizationCode <String> [-Facebook] -Mailbox <MailboxIdParameter>
- -RedirectUri <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription -Mailbox <MailboxIdParameter> -RedirectUri <String>
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### LinkedIn
 ```
-New-ConnectSubscription [-LinkedIn] -Mailbox <MailboxIdParameter> -OAuthVerifier <String>
- -RequestSecret <String> -RequestToken <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription [-LinkedIn] -Mailbox <MailboxIdParameter> -OAuthVerifier <String> -RequestSecret <String> -RequestToken <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,49 +42,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifyer value> -RequestSecret <Request Secret value> -RequestToken <Request Token value>
+New-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -RequestSecret <Request Secret value> -RequestToken <Request Token value>
 ```
 
 This example modifies a people connection to LinkedIn.
 
 ## PARAMETERS
 
-### -AppAuthorizationCode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Facebook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LinkedIn
 The LinkedIn parameter specifies whether you want to edit a LinkedIn subscription.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -91,13 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that will contain the subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that will contain the subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -134,7 +104,7 @@ The OAuthVerifier parameter specifies the verification code associated with the 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -149,7 +119,7 @@ The RedirectUri parameter specifies the host name used to connect to the Exchang
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -164,7 +134,7 @@ The RequestSecret parameter specifies the secret associated with the access toke
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -179,7 +149,7 @@ The RequestToken parameter specifies the access token that provides access to pr
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True

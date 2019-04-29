@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: New-ManagedFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -19,21 +22,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ManagedDefaultFolder
 ```
-New-ManagedFolder [-Name] <String>
- -DefaultFolderType <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory>
- [-BaseFolderOnly <$true | $false>] [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
- [-LocalizedComment <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+New-ManagedFolder [-Name] <String> -DefaultFolderType <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory>
+ [-BaseFolderOnly <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Organization <OrganizationIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### ManagedCustomFolder
 ```
-New-ManagedFolder [-Name] <String> -FolderName <String> [-BaseFolderOnly <$true | $false>] [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-StorageQuota <Unlimited>] [-WhatIf] [<CommonParameters>]
+New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <MultiValuedProperty>] [-StorageQuota <Unlimited>]
+ [-BaseFolderOnly <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Organization <OrganizationIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,7 +135,7 @@ The default folder types that you can specify are:
 
 ```yaml
 Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory
-Parameter Sets: Set2
+Parameter Sets: ManagedDefaultFolder
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -140,7 +152,7 @@ The FolderName parameter shouldn't be confused with the Name parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -151,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in e-mail clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
+The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in  clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
 
 The Name parameter shouldn't be confused with the FolderName parameter.
 
@@ -251,7 +263,7 @@ The LocalizedFolderName parameter specifies the localized folder names and their
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -298,7 +310,7 @@ The StorageQuota parameter specifies the storage size limit for the mailbox fold
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -329,12 +341,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data. 
 
 ## NOTES
 

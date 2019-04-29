@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailDetailATPReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MailDetailATPReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>]
+Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
  [-Expression <Expression>] [-MalwareName <MultiValuedProperty>] [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
@@ -37,27 +40,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MailDetailATPReport -StartDate 7/1/2017 -EndDate 7/31/2017
+Get-MailDetailATPReport -StartDate 7/1/2018 -EndDate 7/31/2018
 ```
 
-This example returns the Advanced Threat Protection actions for July, 2017.
+This example returns the Advanced Threat Protection actions for July, 2018.
 
 ## PARAMETERS
-
-### -Action
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Direction
 The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
@@ -92,7 +80,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -109,31 +97,45 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced phish filter\*
+Email phish EventTypes:
 
-- Anti-malware engine
+- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
 
-- ATP safe attachments\*
+- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
-- ATP safe links\*
+- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- Anti-spoof: Intra-org
+- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
-- Anti-spoof: external domain\*
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
-- Domain impersonation\*
+- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
 
-- General phish filter
+- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
 
-- Malicious URL reputation
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
 
-- Message passed
+- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
-- Phish ZAP
+Email malware EventTypes:
 
-- User impersonation\*
+- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
 
-- ZAP
+- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
+
+- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
+
+- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+
+- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+Content malware EventTypes:
+
+- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
+
+- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP or E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 
@@ -198,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string. This may include angle brackets.
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
 ```yaml
 Type: MultiValuedProperty
@@ -305,7 +307,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -325,12 +327,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

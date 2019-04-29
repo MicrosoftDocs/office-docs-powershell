@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsThirdPartyVideoSystemPolicy
@@ -53,7 +56,7 @@ Get-CsThirdPartyVideoSystemPolicy | Remove-CsThirdPartyVideoSystemPolicy
 ```
 
 In Example 2, all the third-party video system policies configured for use in the organization are deleted.
-This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
+This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
 Note that the global policy will not actually be deleted; Skype for Business Server does not allow you to delete global policies.
 However, all the properties within the global policy will be reset to their default values.
 
@@ -176,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

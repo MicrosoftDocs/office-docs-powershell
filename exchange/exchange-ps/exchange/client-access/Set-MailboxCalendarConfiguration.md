@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxCalendarConfiguration
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxCalendarConfiguration
@@ -18,27 +21,47 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter> [-Confirm] [-DefaultReminderTime <TimeSpan>]
- [-DomainController <Fqdn>] [-RemindersEnabled <$true | $false>] [-ReminderSoundEnabled <$true | $false>]
- [-ShowWeekNumbers <$true | $false>] [-TimeIncrement <FifteenMinutes | ThirtyMinutes>]
- [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>] [-WhatIf]
- [-WorkDays <None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays>]
- [-WorkingHoursEndTime <TimeSpan>] [-WorkingHoursStartTime <TimeSpan>]
- [-WorkingHoursTimeZone <ExTimeZoneValue>]
+Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
+ [-AgendaMailEnabled <$true | $false>]
+ [-AgendaPaneEnabled <$true | $false>]
+ [-CalendarFeedsPreferredLanguage <String>]
+ [-CalendarFeedsPreferredRegion <String>]
+ [-CalendarFeedsRootPageId <String>]
+ [-Confirm]
+ [-ConversationalSchedulingEnabled <$true | $false>]
+ [-CreateEventsFromEmailAsPrivate <$true | $false>]
+ [-DailyAgendaMailSchedule <Default | AM | PM>]
+ [-DefaultMeetingDuration <Int32>]
+ [-DefaultReminderTime <TimeSpan>]
+ [-DiningEventsFromEmailEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-EntertainmentEventsFromEmailEnabled <$true | $false>]
+ [-EventsFromEmailEnabled <$true | $false>]
  [-FirstWeekOfYear <LegacyNotSet | FirstDay | FirstFourDayWeek | FirstFullWeek>]
- [-WeatherEnabled <$true | $false>] [-WeatherLocations <MultiValuedProperty>]
- [-WeatherUnit <Default | Celsius | Fahrenheit>] [-AgendaMailEnabled <$true | $false>]
- [-AgendaPaneEnabled <$true | $false>] [-CalendarFeedsPreferredLanguage <String>]
- [-CalendarFeedsPreferredRegion <String>] [-CalendarFeedsRootPageId <String>]
- [-ConversationalSchedulingEnabled <$true | $false>] [-CreateEventsFromEmailAsPrivate <$true | $false>]
- [-DailyAgendaMailSchedule <Default | AM | PM>] [-DefaultMeetingDuration <Int32>]
- [-DiningEventsFromEmailEnabled <$true | $false>] [-EntertainmentEventsFromEmailEnabled <$true | $false>]
- [-EventsFromEmailEnabled <$true | $false>] [-FlightEventsFromEmailEnabled <$true | $false>]
- [-HotelEventsFromEmailEnabled <$true | $false>] [-InvoiceEventsFromEmailEnabled <$true | $false>]
- [-LocalEventsEnabled <FirstRun | Disabled | Enabled>] [-LocalEventsLocation <LocalEventsLocation>]
- [-PackageDeliveryEventsFromEmailEnabled <$true | $false>] [-RentalCarEventsFromEmailEnabled <$true | $false>]
- [-SkipAgendaMailOnFreeDays <$true | $false>] [-UseBrightCalendarColorThemeInOwa <$true | $false>]
- [-WeatherLocationBookmark <Int32>] [<CommonParameters>]
+ [-FlightEventsFromEmailEnabled <$true | $false>]
+ [-HotelEventsFromEmailEnabled <$true | $false>]
+ [-InvoiceEventsFromEmailEnabled <$true | $false>]
+ [-LocalEventsEnabled <FirstRun | Disabled | Enabled>]
+ [-LocalEventsLocation <LocalEventsLocation>]
+ [-PackageDeliveryEventsFromEmailEnabled <$true | $false>]
+ [-ReminderSoundEnabled <$true | $false>]
+ [-RemindersEnabled <$true | $false>]
+ [-RentalCarEventsFromEmailEnabled <$true | $false>]
+ [-ShowWeekNumbers <$true | $false>]
+ [-SkipAgendaMailOnFreeDays <$true | $false>]
+ [-TimeIncrement <FifteenMinutes | ThirtyMinutes>]
+ [-UseBrightCalendarColorThemeInOwa <$true | $false>]
+ [-WeatherEnabled <$true | $false>]
+ [-WeatherLocationBookmark <Int32>]
+ [-WeatherLocations <MultiValuedProperty>]
+ [-WeatherUnit <Default | Celsius | Fahrenheit>]
+ [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>]
+ [-WhatIf]
+ [-WorkDays <None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays>]
+ [-WorkingHoursEndTime <TimeSpan>]
+ [-WorkingHoursStartTime <TimeSpan>]
+ [-WorkingHoursTimeZone <ExTimeZoneValue>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,13 +95,9 @@ This example sets the working day's starting hour to 7 A.M. for the calendar of 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -102,420 +121,11 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultReminderTime
-The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-Note that the value can't contain seconds. Valid values are:
-
-- 00:00:00
-
-- 00:05:00 (5 minutes)
-
-- 00:10:00 (10 minutes)
-
-- 00:15:00 (15 minutes) This is the default value.
-
-- 00:30:00 (30 minutes)
-
-- 01:00:00 (1 hour)
-
-- 02:00:00 (2 hours)
-
-- 03:00:00 (3 hours)
-
-- 04:00:00 (4 hours)
-
-- 08:00:00 (8 hours)
-
-- 12:00:00 (12 hours)
-
-- 1.00:00:00 (1 day)
-
-- 2.00:00:00 (2 days)
-
-- 3.00:00:00 (3 days)
-
-- 7.00:00:00 (7 days)
-
-- 14.00:00:00 (14 days)
-
-This parameter is ignored when the RemindersEnabled parameter is set to $false.
-
-```yaml
-Type: TimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FirstWeekOfYear
-The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
-
-- FirstDay: Week numbers start on the first day of the year. This is the default value.
-
-- FirstFourDayWeek: Week numbers start on the first week that has at least four days.
-
-- FirstFullWeek: Week numbers start on the first week that has seven days.
-
-- LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
-
-You configure the first day of the week by using the WeekStartDay parameter.
-
-```yaml
-Type:
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: false
-Accept wildcard characters: False
-```
-
-### -RemindersEnabled
-The RemindersEnabled parameter enables or disables reminders for calendar items. Valid values are:
-
-- $true: Reminders are enabled. This is the default value.
-
-- $false: Reminders are disabled.
-
-When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReminderSoundEnabled
-The ReminderSoundEnabled parameter specifies whether a sound is played along with the reminder. Valid values are:
-
-- $true: A sound is played with the reminder. This is the default value.
-
-- $false: No sound is played with the reminder.
-
-This parameter is ignored when the RemindersEnabled parameter is set to $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowWeekNumbers
-The ShowWeekNumbers parameter specifies whether the week number is displayed in the Outlook on the web calendar. Valid values are:
-
-- $true: The week number is displayed.
-
-- $false: The week number isn't displayed. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TimeIncrement
-The TimeIncrement parameter specifies the scale that the Outlook on the web calendar uses to show time. Valid values are:
-
-- FifteenMinutes
-
-- ThirtyMinutes (This is the default value)
-
-```yaml
-Type: FifteenMinutes | ThirtyMinutes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WeekStartDay
-The WeekStartDay parameter specifies the first day of the week. Valid values are:
-
-- Sunday (This is the default value)
-
-- Monday
-
-- Tuesday
-
-- Wednesday
-
-- Thursday
-
-- Friday
-
-- Saturday
-
-```yaml
-Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkDays
-The WorkDays parameter specifies the work days in the calendar. Valid values are:
-
-- None
-
-- AllDays
-
-- Weekdays (This is the default value)
-
-- WeekEndDays
-
-- Sunday
-
-- Monday
-
-- Tuesday
-
-- Wednesday
-
-- Thursday
-
-- Friday
-
-- Saturday
-
-You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.
-
-```yaml
-Type: None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkingHoursEndTime
-The WorkingHoursEndTime parameter specifies the time that the work day ends.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-The default value is 17:00:00 (5:00 P.M.).
-
-```yaml
-Type: TimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkingHoursStartTime
-The WorkingHoursStartTime parameter specifies the time that the work day starts.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-The default value is 08:00:00(8:00 A.M.).
-
-```yaml
-Type: TimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkingHoursTimeZone
-The WorkingHoursTimeZone parameter specifies the time zone that's used by the WorkingHoursStartTime and WorkingHoursEndTime parameters.
-
-A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
-
-To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
-
-If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
-
-```yaml
-Type: ExTimeZoneValue
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WeatherEnabled
-This parameter is available only in the cloud-based service.
-
-The WeatherEnabled specifies whether weather is displayed in the calendar in Outlook on the web. Valid values are:
-
-- FirstRun (This is the default value)
-
-- Disabled: Hide weather on the calendar.
-
-- Enabled: Show weather on the calendar.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WeatherLocations
-This parameter is available only in the cloud-based service.
-
-The WeatherLocations parameter specifies one or more locations to display the weather for in the calendar in Outlook on the web.
-
-This parameter uses the syntax: LocationId:\<LocationID\>;Name:\<Name\>;Latitude:\<Latitude\>;Longitude:\<Longitude\>. For example, LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132.
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-For this parameter, "\<value1\>" is "LocationId:\<LocationID1\>;Name:\<Name1\>;Latitude:\<Latitude1\>;Longitude:\<Longitude1\>", and "\<value2\>" is "LocationId:\<LocationID2\>;Name:\<Name2\>;Latitude:\<Latitude2\>;Longitude:\<Longitude2\>"
-
-You can configure a maximum of 5 weather locations.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WeatherUnit
-This parameter is available only in the cloud-based service.
-
-The WeatherUnit parameter specifies the temperature scale that's used to display the weather in the calendar in Outlook on the web. Valid values are:
-
-- Default (This is the default value)
-
-- Celsius
-
-- Fahrenheit
-
-```yaml
-Type: Default | Celsius | Fahrenheit
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -612,6 +222,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConversationalSchedulingEnabled
 The ConversationalSchedulingEnabled parameter specifies whether to enable or disable conversational scheduling. Valid values are:
 
@@ -623,7 +252,7 @@ The ConversationalSchedulingEnabled parameter specifies whether to enable or dis
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -665,7 +294,7 @@ The DailyAgendaMailSchedule parameter specifies whether to receive a daily or ni
 Type: Default | AM | PM
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -674,13 +303,66 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMeetingDuration
-The DefaultMeetingDuration parameter specifies the default duration in minutes for new meetings. The default value is 30 minutes.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultReminderTime
+The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+Note that the value can't contain seconds. Valid values are:
+
+- 00:00:00
+
+- 00:05:00 (5 minutes)
+
+- 00:10:00 (10 minutes)
+
+- 00:15:00 (15 minutes) This is the default value.
+
+- 00:30:00 (30 minutes)
+
+- 01:00:00 (1 hour)
+
+- 02:00:00 (2 hours)
+
+- 03:00:00 (3 hours)
+
+- 04:00:00 (4 hours)
+
+- 08:00:00 (8 hours)
+
+- 12:00:00 (12 hours)
+
+- 1.00:00:00 (1 day)
+
+- 2.00:00:00 (2 days)
+
+- 3.00:00:00 (3 days)
+
+- 7.00:00:00 (7 days)
+
+- 14.00:00:00 (14 days)
+
+This parameter is ignored when the RemindersEnabled parameter is set to $false.
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -704,6 +386,23 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -792,6 +491,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FirstWeekOfYear
+The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
+
+- FirstDay: Week numbers start on the first day of the year. This is the default value.
+
+- FirstFourDayWeek: Week numbers start on the first week that has at least four days.
+
+- FirstFullWeek: Week numbers start on the first week that has seven days.
+
+- LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
+
+You configure the first day of the week by using the WeekStartDay parameter.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: false
+Accept wildcard characters: False
+```
+
 ### -HotelEventsFromEmailEnabled
 This parameter is available only in the cloud-based service.
 
@@ -843,7 +567,7 @@ PARAMVALUE: FirstRun | Disabled | Enabled
 Type: FirstRun | Disabled | Enabled
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -858,7 +582,7 @@ PARAMVALUE: LocalEventsLocation
 Type: LocalEventsLocation
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -889,6 +613,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemindersEnabled
+The RemindersEnabled parameter enables or disables reminders for calendar items. Valid values are:
+
+- $true: Reminders are enabled. This is the default value.
+
+- $false: Reminders are disabled.
+
+When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReminderSoundEnabled
+The ReminderSoundEnabled parameter specifies whether a sound is played along with the reminder. Valid values are:
+
+- $true: A sound is played with the reminder. This is the default value.
+
+- $false: No sound is played with the reminder.
+
+This parameter is ignored when the RemindersEnabled parameter is set to $false.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RentalCarEventsFromEmailEnabled
 This parameter is available only in the cloud-based service.
 
@@ -912,6 +678,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowWeekNumbers
+The ShowWeekNumbers parameter specifies whether the week number is displayed in the Outlook on the web calendar. Valid values are:
+
+- $true: The week number is displayed.
+
+- $false: The week number isn't displayed. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipAgendaMailOnFreeDays
 The SkipAgendaMailOnFreeDays parameter specifies whether to skip sending the daily agenda email message on days with no events or tasks. Valid values are:
 
@@ -923,7 +708,26 @@ The SkipAgendaMailOnFreeDays parameter specifies whether to skip sending the dai
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeIncrement
+The TimeIncrement parameter specifies the scale that the Outlook on the web calendar uses to show time. Valid values are:
+
+- FifteenMinutes
+
+- ThirtyMinutes (This is the default value)
+
+```yaml
+Type: FifteenMinutes | ThirtyMinutes
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -942,7 +746,59 @@ The UseBrightCalendarColorThemeInOwa parameter specifies whether to use light co
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WeekStartDay
+The WeekStartDay parameter specifies the first day of the week. Valid values are:
+
+- Sunday (This is the default value)
+
+- Monday
+
+- Tuesday
+
+- Wednesday
+
+- Thursday
+
+- Friday
+
+- Saturday
+
+```yaml
+Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WeatherEnabled
+This parameter is available only in the cloud-based service.
+
+The WeatherEnabled specifies whether weather is displayed in the calendar in Outlook on the web. Valid values are:
+
+- FirstRun (This is the default value)
+
+- Disabled: Hide weather on the calendar.
+
+- Enabled: Show weather on the calendar.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -962,6 +818,169 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WeatherLocations
+This parameter is available only in the cloud-based service.
+
+The WeatherLocations parameter specifies one or more locations to display the weather for in the calendar in Outlook on the web.
+
+This parameter uses the syntax: LocationId:\<LocationID\>;Name:\<Name\>;Latitude:\<Latitude\>;Longitude:\<Longitude\>. For example, LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+For this parameter, "\<value1\>" is "LocationId:\<LocationID1\>;Name:\<Name1\>;Latitude:\<Latitude1\>;Longitude:\<Longitude1\>", and "\<value2\>" is "LocationId:\<LocationID2\>;Name:\<Name2\>;Latitude:\<Latitude2\>;Longitude:\<Longitude2\>"
+
+You can configure a maximum of 5 weather locations.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WeatherUnit
+This parameter is available only in the cloud-based service.
+
+The WeatherUnit parameter specifies the temperature scale that's used to display the weather in the calendar in Outlook on the web. Valid values are:
+
+- Default (This is the default value)
+
+- Celsius
+
+- Fahrenheit
+
+```yaml
+Type: Default | Celsius | Fahrenheit
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkDays
+The WorkDays parameter specifies the work days in the calendar. Valid values are:
+
+- None
+
+- AllDays
+
+- Weekdays (This is the default value)
+
+- WeekEndDays
+
+- Sunday
+
+- Monday
+
+- Tuesday
+
+- Wednesday
+
+- Thursday
+
+- Friday
+
+- Saturday
+
+You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.
+
+```yaml
+Type: None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkingHoursEndTime
+The WorkingHoursEndTime parameter specifies the time that the work day ends.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+The default value is 17:00:00 (5:00 P.M.).
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkingHoursStartTime
+The WorkingHoursStartTime parameter specifies the time that the work day starts.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+The default value is 08:00:00(8:00 A.M.).
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkingHoursTimeZone
+The WorkingHoursTimeZone parameter specifies the time zone that's used by the WorkingHoursStartTime and WorkingHoursEndTime parameters.
+
+A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
+
+To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
+
+If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
+
+```yaml
+Type: ExTimeZoneValue
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

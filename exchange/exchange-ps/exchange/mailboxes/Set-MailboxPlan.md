@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Set-MailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -18,15 +21,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailboxPlan [-Identity] <MailboxPlanIdParameter> [-Confirm] [-Force] [-IsDefault]
- [-IssueWarningQuota <Unlimited>] [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>]
- [-ProhibitSendQuota <Unlimited>] [-ProhibitSendReceiveQuota <Unlimited>]
- [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
+ [-Confirm]
+ [-Force]
+ [-IsDefault]
+ [-IssueWarningQuota <Unlimited>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A mailbox plan is a template that automatically configures properties on new mailboxes. Mailbox plans correspond to Microsoft Office 365 license types. The availability of a mailbox plan is determined by the selections you make when you enroll your domain in Office 365.
+A mailbox plan is a template that automatically configures mailbox properties. Mailbox plans correspond to license types, and are applied when you license the user. The availability of a mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
+
+Modifying the settings in a mailbox plan doesn't affect existing mailboxes that were created using the mailbox plan. The only way to use a mailbox plan to modify the settings on an existing mailbox is to assign a different license to the user, which will apply the corresponding mailbox plan to the mailbox.
+
+Each mailbox plan has a corresponding Client Access services (CAS) mailbox plan with the same name and display name value. You can use the Set-CasMailboxPlan cmdlet to enable or disable POP3, IMAP4 or Exchange ActiveSync (EAS) access to new or newly-enabled mailboxes, and you can specify the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailboxes.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -53,8 +68,6 @@ The Identity parameter specifies the mailbox plan that you want to modify. You c
 - Distinguished name (DN)
 
 - GUID
-
-- LegacyExchangeDN
 
 ```yaml
 Type: MailboxPlanIdParameter
@@ -105,7 +118,7 @@ Accept wildcard characters: False
 ### -IsDefault
 The IsDefault switch specifies that the mailbox plan is the default mailbox plan. You don't need to specify a value with this switch.
 
-New and enabled mailboxes receive the settings in the default mailbox plan.
+New and newly-enabled mailboxes receive the settings in the default mailbox plan.
 
 ```yaml
 Type: SwitchParameter
@@ -120,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -IssueWarningQuota
-The IssueWarningQuota parameter specifies the warning threshold for the size of the mailbox. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
+The IssueWarningQuota parameter specifies the warning threshold for the size of the mailboxes that are created or enabled using the mailbox plan. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
@@ -153,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to created or enabled mailboxes that have the mailbox plan applied to them. Messages larger than the maximum size are rejected.
+The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mailbox. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -163,13 +176,9 @@ When you enter a value, qualify the value with one of the following units:
 
 - MB (megabytes)
 
-- GB (gigabytes)
-
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is a number up to 150MB. The default value is 36MB.
+A valid value is a number up to 150 MB. The default value is 36 MB.
 
 The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
@@ -188,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSendSize
-The MaxSendSize parameter specifies the maximum size of a message that can be sent by created or enabled mailboxes that have the mailbox plan applied to them.
+The MaxSendSize parameter specifies the maximum size of a message that can be sent by the mailbox.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -198,13 +207,9 @@ When you enter a value, qualify the value with one of the following units:
 
 - MB (megabytes)
 
-- GB (gigabytes)
-
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is a number up to 150MB. The default value is 35MB.
+A valid value is a number up to 150 MB. The default value is 35 MB.
 
 The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
@@ -299,11 +304,11 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
 
-Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange Online (https://docs.microsoft.com/Exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-The default value is 14 days (14.00:00:00). In Office 365, you can increase the value to a maximum of 30 days.
+The default value is 14 days (14.00:00:00). In Exchange Online, you can increase the value to a maximum of 30 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -318,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicy
-The RetentionPolicy parameter specifies the retention policy that you want applied to mailboxes that have the mailbox plan applied to them. You can use any value that uniquely identifies the policy. For example:
+The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -326,7 +331,7 @@ The RetentionPolicy parameter specifies the retention policy that you want appli
 
 - GUID
 
-Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained.
+Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained. The default value is Default MRM Policy.
 
 Use the Get-RetentionPolicy cmdlet to see the available retention policies.
 
@@ -343,17 +348,15 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the management role assignment policy that's associated with the mailbox plan. This role assignment policy is assigned to all created or enabled mailboxes that have the mailbox plan assigned to them.
-
-The default value is blank ($null). This value means that new mailboxes receive the default role assignment policy that's configured for the organization. By default, the default role assignment policy is named Default Role Assignment Policy.
-
-To associate a role assignment policy with the mailbox plan, you use any value that uniquely identifies the role assignment policy. For example:
+The RoleAssignmentPolicy parameter specifies the role assignment policy that's applied to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
 
 - Distinguished name (DN)
 
 - GUID
+
+The default value is Default Role Assignment Policy.
 
 To see the available role assignment policies, use the Get-RoleAssignmentPolicy cmdlet.
 

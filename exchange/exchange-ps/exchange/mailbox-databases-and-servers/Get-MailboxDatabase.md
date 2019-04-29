@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxDatabase
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxDatabase
@@ -17,16 +20,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-MailboxDatabase -Server <ServerIdParameter> [-DomainController <Fqdn>] [-DumpsterStatistics]
- [-IncludePreExchange2010] [-Status] [-IncludePreExchange2013] [-IncludeCorrupted] [<CommonParameters>]
+Get-MailboxDatabase -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [-DumpsterStatistics]
+ [-IncludeCorrupted]
+ [-IncludePreExchange2010]
+ [-IncludePreExchange2013]
+ [-Status] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>] [-DomainController <Fqdn>] [-DumpsterStatistics]
- [-IncludePreExchange2010] [-Status] [-IncludePreExchange2013] [-IncludeCorrupted] [<CommonParameters>]
+Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-DumpsterStatistics]
+ [-IncludeCorrupted]
+ [-IncludePreExchange2010]
+ [-IncludePreExchange2013]
+ [-Status] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,9 +87,9 @@ The Server parameter specifies the name of the server from which to retrieve mai
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +104,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +119,7 @@ The DumpsterStatistics switch specifies that transport dumpster statistics be re
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -115,21 +128,21 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox database. You can use the following values:
+The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
+- GUID
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -137,16 +150,46 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -IncludeCorrupted
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.
 
-The IncludePreExchange2010 parameter specifies whether to return information about the mailbox databases that reside on computers running Microsoft Exchange Server 2010 and earlier versions of Exchange.
+The IncludePreExchange2010 switch specifies whether to return information about Exchange 2007 ore earlier mailbox databases. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludePreExchange2013
+The IncludePreExchange2013 switch specifies whether to return information about Exchange 2010 or earlier mailbox databases. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -171,37 +214,7 @@ If you specify this switch, you should format the output in such a way that you 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludePreExchange2013
-The IncludePreExchange2013 switch parameter specifies whether to return information about Exchange 2010 mailbox databases. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeCorrupted
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

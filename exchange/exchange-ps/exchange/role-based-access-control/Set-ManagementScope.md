@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-ManagementScope
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-ManagementScope
@@ -17,22 +20,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### DatabaseFilter
 ```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -DatabaseRestrictionFilter <String> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Name <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -ServerRestrictionFilter <String> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -DatabaseRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### ServerFilter
 ```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-Name <String>] [-RecipientRestrictionFilter <String>] [-RecipientRoot <OrganizationalUnitIdParameter>]
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -ServerRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RecipientFilter
+```
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-RecipientRestrictionFilter <String>] [-RecipientRoot <OrganizationalUnitIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -75,9 +89,9 @@ The DatabaseRestrictionFilter parameter specifies the filter to apply to databas
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: DatabaseFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +106,7 @@ The Identity parameter specifies the name of the management scope to modify. If 
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -107,9 +121,9 @@ The ServerRestrictionFilter parameter specifies the filter to apply to server ob
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ServerFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +142,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +159,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +174,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +189,7 @@ The Name parameter specifies the name of the management scope. The management sc
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -188,9 +202,9 @@ The RecipientRestrictionFilter parameter specifies the filter to apply to recipi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -203,9 +217,9 @@ The RecipientRoot parameter specifies the organizational unit (OU) under which t
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +234,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

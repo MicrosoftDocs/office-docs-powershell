@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Get-CASMailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -11,20 +14,23 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-CASMailboxPlan cmdlet to view Client Access services (CAS) mailbox plans in the cloud-based organization.
+Use the Get-CASMailboxPlan cmdlet to view Client Access services (CAS) mailbox plans in cloud-based organizations.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>]
+ [-Credential <PSCredential>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-CAS mailbox plans control client access settings for all mailboxes that have the plans assigned to them (for example, Exchange ActiveSync, POP, IMAP, and Outlook on the web settings).
+A CAS mailbox plan is tied to the corresponding mailbox plan that has the same name (and display name). Like mailbox plans, CAS mailbox plans correspond to license types, and are applied to a mailbox when you license the user. The availability of a CAS mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -42,32 +48,40 @@ This example returns a summary list of all CAS mailbox plans in the organization
 Get-CASMailboxPlan -Identity ExchangeOnlineEnterprise
 ```
 
-This example returns detailed information about the CAS mailbox plan named ExchangeOnlineEnterprise.
+This example returns detailed information about the specified CAS mailbox plan.
 
 ## PARAMETERS
 
-### -Credential
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+### -Identity
+The Identity parameter specifies the CAS mailbox plan that you want to view. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>).
 
 ```yaml
-Type: PSCredential
+Type: MailboxPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
-Position: Named
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
+### -Credential
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
-Type: Fqdn
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -95,47 +109,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the CAS mailbox plan that you want to view. You can use any value that uniquely identifies the CAS mailbox plan. For example:
-
-- Name
-
-- Display Name
-
-- Distinguished name (DN)
-
-- GUID
-
-Typically, the name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise).
-
-```yaml
-Type: MailboxPlanIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -IgnoreDefaultScope
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReadFromDomainController
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -172,7 +146,7 @@ If the default view doesn't include the property you're sorting by, you can appe
 
 You can sort by the following attributes:
 
-- Display name
+- DisplayName
 
 - Name
 

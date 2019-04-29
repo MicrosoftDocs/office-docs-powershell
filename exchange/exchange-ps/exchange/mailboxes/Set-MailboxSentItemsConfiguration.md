@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010
 title: Set-MailboxSentItemsConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -49,8 +52,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf cf
-
+Aliases: cf
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -74,13 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox whose Sent Items configuration you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For exampple:
+The Identity parameter specifies the mailbox whose Sent Items configuration you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -113,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendAsItemsCopiedTo
-The SendAsItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send As permmission are are saved. Valid values are:
+The SendAsItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send As permission are saved. Valid values are:
 
 - Sender: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message. This is the default value.
 
@@ -132,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendOnBehalfOfItemsCopiedTo
-The SendOnBehalfOfItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send On Behalf Of permmission are are saved. Valid values are:
+The SendOnBehalfOfItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send On Behalf Of permission are saved. Valid values are:
 
 - Sender: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message. This is the default value.
 
@@ -171,12 +170,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

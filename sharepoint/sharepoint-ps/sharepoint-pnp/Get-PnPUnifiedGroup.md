@@ -13,6 +13,7 @@ Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups
 ```powershell
 Get-PnPUnifiedGroup [-Identity <UnifiedGroupPipeBind>]
                     [-ExcludeSiteUrl [<SwitchParameter>]]
+                    [-IncludeClassification [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -78,6 +79,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -IncludeClassification
+Include Classification value of Office 365 Groups.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,16 +1,17 @@
 ---
-external help file:
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Enable-SPOTenantServicePrincipal
 
 ## SYNOPSIS
-Enables the current tenant's "SharePoint Online Client" service principal.
 
-> [!NOTE] 
-> This is a preview feature and should not be used in production.
+Enables the current tenant's "SharePoint Online Client" service principal.
 
 ## SYNTAX
 

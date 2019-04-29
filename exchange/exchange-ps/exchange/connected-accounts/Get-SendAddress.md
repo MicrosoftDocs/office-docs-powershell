@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Get-SendAddress
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,12 +20,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### LookUpId
 ```
 Get-SendAddress [-AddressId <String>] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-SendAddress [[-Identity] <SendAddressIdParameter>] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
 ```
@@ -72,7 +75,7 @@ If you use the AddressId parameter, you must also use the Mailbox parameter. If 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LookUpId
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -97,7 +100,7 @@ If you use the Identity parameter, you can't use the AddressId parameter.
 
 ```yaml
 Type: SendAddressIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -108,13 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

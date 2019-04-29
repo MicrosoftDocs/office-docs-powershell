@@ -1,20 +1,22 @@
 ---
-external help file:
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
-Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
-> [!NOTE] 
-> This is a preview feature and should not be used in production.
+Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionRequests
 ```

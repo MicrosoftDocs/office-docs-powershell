@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-RetentionComplianceRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -17,25 +20,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ComplianceTag
 ```
-New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentMatchQuery <String>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm]
- [-ContentMatchQuery <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
+New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Default
+```
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <Days | Months | Years>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### PublishComplianceTag
 ```
 New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String> [-Confirm]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-WhatIf] [<CommonParameters>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +73,7 @@ You can't use this parameter with the Name or PublishComplianceTag parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -80,7 +90,7 @@ You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -114,7 +124,7 @@ You can't use this parameter with the Name or ApplyComplianceTag parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: PublishComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -129,7 +139,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -169,7 +179,7 @@ You can use this parameter with the ApplyComplianceTag parameter.
 
 ```yaml
 Type: PswsHashtable[]
-Parameter Sets: Set2
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -186,7 +196,7 @@ This parameter uses a text search string or a query that's formatted by using th
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set1
+Parameter Sets: ComplianceTag, Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -219,7 +229,7 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -278,7 +288,7 @@ The RetentionDuration parameter specifies the hold duration for the retention ru
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -301,7 +311,7 @@ For example, if this parameter is set to the value Years, and the RetentionDurat
 
 ```yaml
 Type: Days | Months | Years
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -332,12 +342,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

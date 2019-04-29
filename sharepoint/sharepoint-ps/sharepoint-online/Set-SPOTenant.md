@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenant
@@ -25,6 +28,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
+ [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -39,7 +43,11 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
- [-UserVoiceForFeedbackEnabled <Boolean>] [<CommonParameters>]
+ [-UserVoiceForFeedbackEnabled <Boolean>] 
+ [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
+ [-CustomizedExternalSharingServiceUrl <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +60,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
 Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
@@ -60,25 +68,75 @@ This example blocks access to https://contoso.sharepoint.com/sites/team1 and red
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false 
 ```
 This example hides the "Everyone Except External Users" claim in People Picker.
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowAllUsersClaim $false 
 ```
 This example hides the "All Users" claim group in People Picker.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
+### -----------------------EXAMPLE 5-----------------------------
+
+```powershell
+Set-SPOTenant -LegacyAuthProtocolsEnabled $True
+```
+
+This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
+
+### -----------------------EXAMPLE 6------------------------------
+
+```powershell
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
+```
+
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
+
+### -----------------------EXAMPLE 7-------------------------------
+
+```powershell
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
+```
+
+This example stops publishing content types to OneDrive for Business sites. 
+
+
+### -----------------------EXAMPLE 8-------------------------------
+
+```powershell
+Set-SPOTenant -SearchResolveExactEmailOrUPN $true
+```
+
+This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
+
+
+### -----------------------EXAMPLE 9-------------------------------
+
+```powershell
+Set-SPOTenant -UseFindPeopleInPeoplePicker $true
+```
+
+This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
+
+
+### -----------------------EXAMPLE 10-------------------------------
+
+```powershell
+Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
+```
+
+This example enable the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
 
@@ -87,7 +145,7 @@ When the feature is enabled, all guest users are subject to conditional access p
 
 The valid values are:  
 False (default) - Guest access users are exempt from conditional access policy.  
-True - Conditional access policy is applieda also to guest users.
+True - Conditional access policy is also applied to guest users.
 
 
 ```yaml
@@ -300,6 +358,12 @@ The valid values are:
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
 
+> [!NOTE] 
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation). 
+
+> [!NOTE] 
+> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
+
 
 ```yaml
 Type: Boolean
@@ -321,7 +385,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
-True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
 
 ```yaml
@@ -345,7 +409,7 @@ ExternalUserAndGuestSharing (default) - External user sharing (share by email) a
 Disabled - External user sharing (share by email) and guest link sharing are both disabled.  
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 
 ```yaml
@@ -364,7 +428,7 @@ Accept wildcard characters: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users (authenticated) group is equivalent to the Everyone claim, and shows as Everyone.
 To change this, see -ShowEveryoneClaim.
@@ -440,7 +504,7 @@ Specifies the home realm discovery value to be sent to Azure Active Directory (A
 When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
-Acceleration will not occur on site collections that are shared externally.
+Acceleration will not occur on site collections that are shared externally. 
 
 This value should be configured with the login domain that is used by your company (that is, example@contoso.com).
 
@@ -571,6 +635,31 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisabledWebPartIds
+PARAMVALUE: <Guid>[,<Guid>,...]
+ 
+Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
+ 
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
+
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
+
+To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
+
+ 
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+ 
 Required: False
 Position: Named
 Default value: None
@@ -712,18 +801,20 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
-By default this value is set to $True. 
+By default this value is set to $True, which means that authentication using legacy protocols is enabled.
 
-Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+Setting this parameter to $False prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 A value of True- Enables Office clients using non-modern authentication protocols (such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. 
 
-A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+A value of False- Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 > [!NOTE] 
 > This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
+> [!NOTE] 
+> The change is not instant. It might take up to 24 hours to be applied.
 
 ```yaml
 Type: Boolean
@@ -1102,7 +1193,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.
 
 
 ```yaml
@@ -1147,6 +1238,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
+This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
 > [!NOTE] 
 > When set to $true, users aren't able to share with security groups or SharePoint groups.  
@@ -1168,9 +1260,27 @@ Accept wildcard characters: False
 ### -UserVoiceForFeedbackEnabled
 PARAMVALUE: $true | $false
 
+When set to $true, the "Feedback" link will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. When set to $false, feedback link will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomizedExternalSharingServiceUrl
+Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "https://www.contoso.com/sharingpolicies".
+
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -1182,8 +1292,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
+In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
+```powershell
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
+```
+When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
+
+Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
+```powershell
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
+```
+
+### -ConditionalAccessPolicy  
+PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+Please read documentation here to understand Conditional Access Policy usage in SharePoint Online "https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices"
+```powershell
+Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess 
+```
+
+### -AllowEditing  
+PARAMVALUE: $true | $false 
+Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+```powershell
+Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
+```
+
+### -LimitedAccessFileType 
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
+-OfficeOnlineFilesOnly Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default) Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+```powershell
+Set-SPOTenant -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1193,9 +1340,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 

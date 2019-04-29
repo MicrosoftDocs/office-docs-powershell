@@ -5,6 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsCallingPolicy
@@ -15,13 +18,20 @@ Cmdlet to assign a specific Teams Calling Policy to a user.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsCallingPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Global]
- [-Tenant <Object>] [-DomainController <Object>] [-WhatIf] [-AsJob]
+Grant-CsTeamsCallingPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsCallingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
+The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interoperability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
 
 ## EXAMPLES
 
@@ -53,7 +63,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -83,7 +93,7 @@ Accept wildcard characters: False
 The user object to whom the policy is being assigned.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -113,7 +123,7 @@ Accept wildcard characters: False
 The name of the policy being assigned.  To remove an existing user level policy assignment, specify PolicyName as null.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -128,7 +138,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -155,30 +165,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

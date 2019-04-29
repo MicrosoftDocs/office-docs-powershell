@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxDatabase
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MailboxDatabase
@@ -17,23 +20,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### NonRecovery
 ```
-New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-EdbFilePath <EdbFilePath>] [-IsExcludedFromProvisioning <$true | $false>]
- [-IsSuspendedFromProvisioning <$true | $false>] [-LogFolderPath <NonRootLocalLongFullPath>]
- [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-PublicFolderDatabase <DatabaseIdParameter>] [-WhatIf]
- [-AutoDagExcludeFromMonitoring <$true | $false>] [-IsExcludedFromInitialProvisioning]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>] [-SkipDatabaseLogFolderCreation]
- [<CommonParameters>]
+New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter> [-AutoDagExcludeFromMonitoring <$true | $false>] [-IsExcludedFromProvisioning <$true | $false>] [-IsExcludedFromInitialProvisioning] [-IsSuspendedFromProvisioning <$true | $false>] [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-PublicFolderDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EdbFilePath <EdbFilePath>]
+ [-LogFolderPath <NonRootLocalLongFullPath>]
+
+ [-SkipDatabaseLogFolderCreation]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Recovery
 ```
-New-MailboxDatabase [[-Name] <String>] [-Recovery] -Server <ServerIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-EdbFilePath <EdbFilePath>] [-LogFolderPath <NonRootLocalLongFullPath>] [-WhatIf]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>] [-SkipDatabaseLogFolderCreation]
- [<CommonParameters>]
+New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter> [-Recovery]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EdbFilePath <EdbFilePath>]
+ [-LogFolderPath <NonRootLocalLongFullPath>]
+ [-SkipDatabaseLogFolderCreation]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,9 +62,9 @@ The Name parameter specifies the name of the new mailbox database.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -67,9 +74,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Recovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -82,9 +89,9 @@ The Recovery parameter specifies that the new database is designated as a recove
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Recovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -99,11 +106,26 @@ The Server parameter specifies the server on which you want to create the databa
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoDagExcludeFromMonitoring
+The AutoDagExcludeFromMonitoring parameter specifies that the database being created should not be monitored by managed availability.
+
+```yaml
+Type: $true | $false
+Parameter Sets: NonRecovery
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -118,7 +140,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +155,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +170,22 @@ The EdbFilePath parameter specifies the path to the database files. The default 
 Type: EdbFilePath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromInitialProvisioning
+The IsExcludedFromInitialProvisioning parameter specifies that this database is temporarily not considered by the mailbox provisioning load balancer. If the IsExcludedFromInitialProvisioning parameter is enabled, new mailboxes aren't added automatically to this database.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NonRecovery
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -161,9 +198,9 @@ The IsExcludedFromProvisioning parameter specifies whether this database is cons
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -176,9 +213,9 @@ The IsSuspendedFromProvisioning parameter specifies whether this database is tem
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +230,7 @@ The LogFolderPath parameter specifies the folder location for log files.
 Type: NonRootLocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -206,9 +243,9 @@ The OfflineAddressBook parameter specifies the associated offline address book (
 
 ```yaml
 Type: OfflineAddressBookIdParameter
-Parameter Sets: Set1
+Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -217,73 +254,19 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database.
+The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database. You can use any value that uniquely identifies the public folder database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1
+Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDagExcludeFromMonitoring
-The AutoDagExcludeFromMonitoring parameter specifies that the database being created should not be monitored by managed availability.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromInitialProvisioning
-The IsExcludedFromInitialProvisioning parameter specifies that this database is temporarily not considered by the mailbox provisioning load balancer. If the IsExcludedFromInitialProvisioning parameter is enabled, new mailboxes aren't added automatically to this database.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningAttributes
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningAttributes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -298,7 +281,22 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

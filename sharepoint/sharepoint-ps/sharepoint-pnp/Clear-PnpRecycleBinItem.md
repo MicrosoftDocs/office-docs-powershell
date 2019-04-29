@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Clear-PnPRecycleBinItem
@@ -29,7 +29,7 @@ Clear-PnPRecycleBinItem -Identity <RecycleBinItemPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPRecycleBinItems | ? FileLeafName -like "*.docx" | Clear-PnpRecycleBinItem
+Get-PnPRecycleBinItem | ? FileLeafName -like "*.docx" | Clear-PnpRecycleBinItem
 ```
 
 Permanently deletes all the items in the first and second stage recycle bins of which the file names have the .docx extension
@@ -114,4 +114,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

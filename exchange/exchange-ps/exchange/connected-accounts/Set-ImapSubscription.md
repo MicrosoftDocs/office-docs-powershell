@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Set-ImapSubscription
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,25 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SubscriptionModification
 ```
-Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm] [-DisplayName <String>]
- [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Ntlm>]
- [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>]
- [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-Mailbox <MailboxIdParameter>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set4
-```
-Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm]
- [-Mailbox <MailboxIdParameter>] [-ResendVerification] [-WhatIf] [<CommonParameters>]
+Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Ntlm>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ResendVerificationEmail
 ```
-Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm]
- [-Mailbox <MailboxIdParameter>] [-ValidateSecret <String>] [-WhatIf] [<CommonParameters>]
+Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-ResendVerification]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ValidateSendAs
+```
+Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-ValidateSecret <String>]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +112,7 @@ The DisplayName parameter specifies the friendly name of the subscription.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -121,7 +127,7 @@ The EmailAddress parameter specifies the email address of the IMAP mailbox.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -136,7 +142,7 @@ The Enabled parameter specifies whether the IMAP subscription is enabled. This p
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -151,7 +157,7 @@ The Force parameter instructs the command to modify the specified subscription s
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -166,7 +172,7 @@ The IncomingAuth parameter sets the authentication method used by IMAP clients t
 
 ```yaml
 Type: Basic | Ntlm
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -177,11 +183,13 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingPassword
-The IncomingPassword parameter specifies the password used to sign in to the IMAP mailbox. You must specify the value for this parameter in a secure format, for example, (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
+The IncomingPassword parameter specifies the password used to sign in to the IMAP mailbox.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -196,7 +204,7 @@ The IncomingPort parameter specifies the TCP port number used by IMAP clients to
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -211,7 +219,7 @@ The IncomingSecurity parameter specifies the encryption method used by IMAP clie
 
 ```yaml
 Type: None | Ssl | Tls
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -226,7 +234,7 @@ The IncomingServer parameter specifies the fully qualified domain name (FQDN) of
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -237,11 +245,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingUserName
-The IncomingUserName parameter specifies the user name used to sign in to the IMAP mailbox.
+The IncomingUserName parameter specifies the username used to sign in to the IMAP mailbox.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -252,13 +260,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that contains the IMAP subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that contains the IMAP subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -297,7 +301,7 @@ The ResendVerification parameter can't be specified with any other parameters th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -314,7 +318,7 @@ The ValidateSecret parameter can't be specified with any other parameters that m
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
 Required: False

@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || o365scc-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Get-ComplianceSearchAction
@@ -17,27 +20,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Identity
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-Export]
- [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>] [-Case <String>] [-Details]
- [-DomainController <Fqdn>] [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Preview
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential]
- [-Preview] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [-Preview]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set4
+### Purge
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential] [-Purge]
+Get-ComplianceSearchAction [-Purge]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
+```
+
+### Export
+```
+Get-ComplianceSearchAction [-Export]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -75,7 +94,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +109,7 @@ The Details switch specifies whether to include detailed information in the resu
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +126,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -120,9 +139,9 @@ The Export switch filters the results by Export compliance search actions. You d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -139,9 +158,9 @@ The Identity parameter specifies the compliance search action that you want to v
 
 ```yaml
 Type: ComplianceSearchActionIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: 1
 Default value: None
@@ -156,7 +175,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -169,9 +188,9 @@ The Preview switch filters the results by Preview compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Preview
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -184,9 +203,9 @@ The Purge switch filters the results by Purge compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +220,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -215,12 +234,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

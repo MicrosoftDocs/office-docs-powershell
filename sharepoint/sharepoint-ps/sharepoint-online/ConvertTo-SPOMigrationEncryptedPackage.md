@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationEncryptedPackage
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # ConvertTo-SPOMigrationEncryptedPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use this Cmdlet to convert your XML files into a new encrypted migration package.
 
 ## SYNTAX
 
@@ -27,21 +30,33 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command convert the XML file on your temporary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
 
 ## EXAMPLES
 
 ### Example 1 
-```
-PS C:\> {{ Add example code here }}
+```powershell
+PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA256
+ -MigrationSourceLocations $MigrationPackageLocation -NoLogFile -TargetFilesPath $TargetFilesPath
+ -TargetPackagePath $TargetPackagePath
 ```
 
-{{ Add example description here }}
+Changes a migration package to a migration encrypted package on the "migrationSourceLocations" , with log file on the current tenant
+
+### Example 2 
+```powershell
+PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA384
+ -MigrationSourceLocations $MigrationPackageLocation  -TargetFilesPath $TargetFilesPath
+ -TargetPackagePath $TargetPackagePath
+```
+
+Same as example1 but without log file and using an encryption type SHA384
 
 ## PARAMETERS
 
 ### -EncryptionParameters
-{{Fill EncryptionParameters Description}}
+Parameters of the encryption, it doesn't accept wildcard characters.
+It accepts parameters like SHA384, SHA256, etc.
 
 ```yaml
 Type: EncryptionParameters
@@ -57,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationSourceLocations
-{{Fill MigrationSourceLocations Description}}
+Possible Source locations to migrate
 
 ```yaml
 Type: MigrationPackageLocation
@@ -73,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Switch Parameter to determine if you should get or not a log file.
 
 ```yaml
 Type: SwitchParameter
@@ -89,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-{{Fill SourceFilesPath Description}}
+Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: String
@@ -105,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePackagePath
-{{Fill SourcePackagePath Description}}
+Defines the source package path location.
 
 ```yaml
 Type: String
@@ -121,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetFilesPath
-{{Fill TargetFilesPath Description}}
+Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: String
@@ -137,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPackagePath
-{{Fill TargetPackagePath Description}}
+Defines the source package path location of the package to be encrypted.
 
 ```yaml
 Type: String
@@ -153,17 +168,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[ConvertTo-SPOMigrationTargetedPackage](ConvertTo-SPOMigrationTargetedPackage.md)
+[Migrate to SharePoint Online using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets)

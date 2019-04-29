@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OfflineAddressBook
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OfflineAddressBook
@@ -21,16 +24,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter>
- [-AddressLists <AddressBookBaseIdParameter[]>] [-ApplyMandatoryProperties]
- [-ConfiguredAttributes <MultiValuedProperty>] [-Confirm] [-DiffRetentionPeriod <Unlimited>]
- [-DomainController <Fqdn>] [-GlobalWebDistributionEnabled <$true | $false>] [-IsDefault <$true | $false>]
- [-MaxBinaryPropertySize <Int32>] [-MaxMultivaluedBinaryPropertySize <Int32>]
- [-MaxMultivaluedStringPropertySize <Int32>] [-MaxStringPropertySize <Int32>] [-Name <String>]
- [-PublicFolderDistributionEnabled <$true | $false>] [-Schedule <Schedule>] [-UseDefaultAttributes]
- [-Versions <MultiValuedProperty>] [-VirtualDirectories <VirtualDirectoryIdParameter[]>] [-WhatIf]
- [-GeneratingMailbox <MailboxIdParameter>] [-ShadowMailboxDistributionEnabled <$true | $false>]
- [-FullOabDownloadPreventionThreshold <Int32>] [-HttpHomeMdbLastProcessedBucket <Int32>] [-UpgradeFromE14]
- [-ZipOabFilesBeforeUploading <$true | $false>] [<CommonParameters>]
+ [-AddressLists <AddressBookBaseIdParameter[]>]
+ [-ApplyMandatoryProperties]
+ [-ConfiguredAttributes <MultiValuedProperty>]
+ [-Confirm]
+ [-DiffRetentionPeriod <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-FullOabDownloadPreventionThreshold <Int32>]
+ [-GeneratingMailbox <MailboxIdParameter>]
+ [-GlobalWebDistributionEnabled <$true | $false>]
+ [-IsDefault <$true | $false>]
+ [-MaxBinaryPropertySize <Int32>]
+ [-MaxMultivaluedBinaryPropertySize <Int32>]
+ [-MaxMultivaluedStringPropertySize <Int32>]
+ [-MaxStringPropertySize <Int32>]
+ [-Name <String>]
+ [-PublicFolderDistributionEnabled <$true | $false>]
+ [-Schedule <Schedule>]
+ [-ShadowMailboxDistributionEnabled <$true | $false>]
+ [-UpgradeFromE14]
+ [-UseDefaultAttributes]
+ [-Versions <MultiValuedProperty>]
+ [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
+ [-WhatIf]
+ [-ZipOabFilesBeforeUploading <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +85,7 @@ The Identity parameter specifies the OAB that you want to modify. You can use an
 Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -92,7 +110,7 @@ You can find the identify values of address lists and global address lists by us
 Type: AddressBookBaseIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyMandatoryProperties
-The ApplyMandatoryPropertiesswitch specifies whether to update the mandatory properties of a legacy OAB. You don't need to specify a value with this switch.
+The ApplyMandatoryProperties switch specifies whether to update the mandatory properties of a legacy OAB. You don't need to specify a value with this switch.
 
 This switch was used in coexistence environments when an OAB was migrated from Exchange 2003.
 
@@ -109,7 +127,7 @@ This switch was used in coexistence environments when an OAB was migrated from E
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -118,9 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredAttributes
-The ConfiguredAttributes parameter specifies the recipient MAPI propertiesthat are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
+The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -130,7 +148,7 @@ To reset this parameter back to the default values, use the UseDefaultAttributes
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +167,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +182,7 @@ The DiffRetentionPeriod parameter specifies the number of days that the OAB diff
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +199,63 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FullOabDownloadPreventionThreshold
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneratingMailbox
+This parameter is available only in on-premises Exchange.
+
+The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
+
+A single organization mailbox can generate multiple OABs (you can use the same value for this parameter in the settings of multiple OABs), but in Exchange 2013 CU5 or later, an OAB can only be generated by a single organization mailbox (this parameter doesn't accept multiple values). To have a read only copy of the OAB (also known as a shadow copy) available in other organization mailboxes, use the ShadowMailboxDistributionEnabled parameter.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +278,7 @@ In Exchange 2013 CU7 or later, we recommend that you use the value $true for thi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +297,7 @@ The IsDefault parameter specifies whether the OAB is used by all mailboxes and m
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +314,7 @@ The MaxBinaryPropertySize parameter specifies the maximum size in bytes for bina
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +331,7 @@ The MaxMultivaluedBinaryPropertySize parameter specifies the maximum size in byt
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +348,7 @@ The MaxMultivaluedStringPropertySize parameter specifies the maximum size for mu
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -291,7 +365,7 @@ The MaxStringPropertySize parameter specifies the maximum size in bytes for stri
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +380,7 @@ The Name parameter specifies the unique name of the OAB. The maximum length is 6
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -338,23 +412,27 @@ Note: In Exchange 2013 or later, this parameter is no longer responsible for the
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-You can use the following values for the start and end days:
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
 
-- Full name of the day
+You can use the following values for days:
 
-- Abbreviated name of the day
+- Full name of the day.
 
-- Integer from 0 through 6, where 0 = Sunday
+- Abbreviated name of the day.
 
-The start time and end time must be at least 15 minutes apart. Minutes will be rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+- Integer from 0 through 6, where 0 = Sunday.
 
-The following are examples:
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (The assistant will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 
@@ -364,7 +442,45 @@ Note: In Office 365, the read only value of this property is displayed in Coordi
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShadowMailboxDistributionEnabled
+This parameter is available only in on-premises Exchange.
+
+The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
+
+- $true: The OAB is distributed to all other organization mailboxes.
+
+- $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
+
+The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpgradeFromE14
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -373,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultAttributes
-The UseDefaultAttributesswitch specifies whether to revert the recipient MAPI properties that are available in the OAB to the default list. You don't need to specify a value with this switch.
+The UseDefaultAttributes switch specifies whether to revert the recipient MAPI properties that are available in the OAB to the default list. You don't need to specify a value with this switch.
 
 You can use this switch to undo changes that you've made to the default list by using the ConfiguredAttributes parameter.
 
@@ -381,7 +497,7 @@ You can use this switch to undo changes that you've made to the default list by 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +512,7 @@ The Versions parameter specifies the OAB versions that are generated for client 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -429,7 +545,7 @@ In Exchange 2013 CU7 or later, we recommend that you set this parameter to $null
 Type: VirtualDirectoryIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -444,120 +560,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeneratingMailbox
-This parameter is available only in on-premises Exchange.
-
-The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
-
-A single organization mailbox can generate multiple OABs (you can use the same value for this parameter in the settings of multiple OABs), but in Exchange 2013 CU5 or later, an OAB can only be generated by a single organization mailbox (this parameter doesn't accept multiple values). To have a read only copy of the OAB (also known as a shadow copy) available in other organization mailboxes, use the ShadowMailboxDistributionEnabled parameter.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShadowMailboxDistributionEnabled
-This parameter is available only in on-premises Exchange.
-
-The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
-
-- $true: The OAB is distributed to all other organization mailboxes.
-
-- $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
-
-The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FullOabDownloadPreventionThreshold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpHomeMdbLastProcessedBucket
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UpgradeFromE14
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -576,7 +579,7 @@ The ZipOabFilesBeforeUploading specifies whether to use ZIP file compression on 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

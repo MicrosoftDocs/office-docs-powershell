@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-StoreUsageStatistics
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-StoreUsageStatistics
@@ -17,28 +20,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
-Get-StoreUsageStatistics -Database <DatabaseIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
- [[-Identity] <GeneralMailboxIdParameter>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
- [-CopyOnServer <ServerIdParameter>] [<CommonParameters>]
+Get-StoreUsageStatistics -Database <DatabaseIdParameter> [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>] [<CommonParameters>]
 ```
 
-### Set3
+### Identity
 ```
-Get-StoreUsageStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
- -Database <DatabaseIdParameter> [-CopyOnServer <ServerIdParameter>] [<CommonParameters>]
+Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter> [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>] [<CommonParameters>]
 ```
 
-### Set4
+### Server
 ```
-Get-StoreUsageStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
- [-IncludePassive] [<CommonParameters>]
+Get-StoreUsageStatistics -Server <ServerIdParameter> [-IncludePassive]
+ [-DomainController <Fqdn>]
+ [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,17 +72,21 @@ This example retrieves store usage statistics for database DB1 and sorts the out
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the name of the mailbox database. When you specify a value for the Database parameter, the Exchange Management Shell returns usage statistics for the top 25 mailboxes on the database specified.
+The Database parameter specifies the name of the mailbox database to get usage statistics from (the top 25 largest mailboxes on the specified mailbox database). You can use any value that uniquely identifies the mailbox database. For example:
 
-You can use the following value:
+- Name
 
-- Database
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the Identity or Server parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox. When you specify a value for the Identity parameter, the command looks up the mailbox specified in the Identity parameter, connects to the server where the mailbox resides, and returns the statistics for the mailbox. You can use one of the following values:
+The Identity parameter specifies the mailbox to get usage statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID
 
@@ -107,25 +111,15 @@ The Identity parameter specifies a mailbox. When you specify a value for the Ide
 
 - Alias
 
-Results are returned for the mailbox only if it's one of the top 25 users of store resources.
+The command returns results for the mailbox only if it's one of the top 25 users of store resources.
+
+You can't use this parameter with the Database or Server parameters.
 
 ```yaml
 Type: GeneralMailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: GeneralMailboxIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -134,23 +128,46 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server from which you want to obtain mailbox statistics. You can use one of the following values:
+The Server parameter specifies the Mailbox server to get usage statistics from (the top 25 mailboxes on all active databases on the specified server). You can use one of the following values to identify the server:
 
 - Fully qualified domain name (FQDN)
 
 - NetBIOS name
 
-When you specify a value for the Server parameter, the command returns usage statistics for the top 25 mailboxes on all the active databases on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
+You can't use this parameter with the Database or Identity parameters.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CopyOnServer
+The CopyOnServer parameter specifies the mailbox database copy to get usage statistics from. You can use any value that uniquely identifies the mailbox database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You use this parameter with the Server or Identity parameters.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Database, Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -161,7 +178,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -176,22 +193,7 @@ The Filter parameter indicates the OPath filter used to filter recipients.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CopyOnServer
-The CopyOnServer parameter is used to retrieve statistics from a specific database copy from the server specified with the Server parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -200,13 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePassive
-Without the IncludePassive parameter, the cmdlet retrieves statistics from active database copies only. Using the IncludePassive parameter, you can have the cmdlet return statistics from all active and passive database copies.
+The IncludePassive switch specifies whether to include usage statistics from active and passive copies of mailbox databases on the Mailbox server you specified with the Server parameter. You don't need to specify a value with this switch.
+
+To only include statistics from active copies of mailbox databases on the specified Mailbox server, don't use this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

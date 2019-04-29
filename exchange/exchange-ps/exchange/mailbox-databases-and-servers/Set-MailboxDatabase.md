@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxDatabase
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxDatabase
@@ -18,39 +21,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailboxDatabase [-Identity] <DatabaseIdParameter> [-AllowFileRestore <$true | $false>]
- [-BackgroundDatabaseMaintenance <$true | $false>] [-CircularLoggingEnabled <$true | $false>] [-Confirm]
- [-DataMoveReplicationConstraint <None | SecondCopy | SecondDatacenter | AllDatacenters | AllCopies>]
- [-DeletedItemRetention <EnhancedTimeSpan>] [-DomainController <Fqdn>]
- [-EventHistoryRetentionPeriod <EnhancedTimeSpan>] [-IndexEnabled <$true | $false>]
- [-IsExcludedFromProvisioning <$true | $false>] [-IssueWarningQuota <Unlimited>]
- [-IsSuspendedFromProvisioning <$true | $false>] [-JournalRecipient <RecipientIdParameter>]
- [-MailboxRetention <EnhancedTimeSpan>] [-MaintenanceSchedule <Schedule>] [-MountAtStartup <$true | $false>]
- [-Name <String>] [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-ProhibitSendQuota <Unlimited>]
- [-ProhibitSendReceiveQuota <Unlimited>] [-PublicFolderDatabase <DatabaseIdParameter>]
- [-QuotaNotificationSchedule <Schedule>] [-RecoverableItemsQuota <Unlimited>]
- [-RecoverableItemsWarningQuota <Unlimited>] [-RetainDeletedItemsUntilBackup <$true | $false>]
- [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>] [-WhatIf]
+Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
+ [-AllowFileRestore <$true | $false>]
  [-AutoDagExcludeFromMonitoring <$true | $false>]
- [-AutoDatabaseMountDial <Lossless | GoodAvailability | BestAvailability>] [-CalendarLoggingQuota <Unlimited>]
- [-DatabaseGroup <String>] [-IsExcludedFromInitialProvisioning <$true | $false>]
- [-MailboxLoadBalanceEnabled <$true | $false>] [-MailboxLoadBalanceMaximumEdbFileSize <ByteQuantifiedSize>]
- [-MailboxLoadBalanceOverloadedThreshold <Int32>] [-MailboxLoadBalanceRelativeLoadCapacity <Int32>]
- [-MailboxLoadBalanceUnderloadedThreshold <Int32>]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>] [-BackgroundDatabaseMaintenanceDelay <Int32>]
- [-BackgroundDatabaseMaintenanceSerialization <$true | $false>] [-CachedClosedTables <Int32>]
- [-CachePriority <Int32>] [-CafeEndpoints <String[]>] [-DatabaseExtensionSize <Int32>]
+ [-AutoDatabaseMountDial <Lossless | GoodAvailability | BestAvailability>]
+ [-BackgroundDatabaseMaintenance <$true | $false>]
+ [-CalendarLoggingQuota <Unlimited>]
+ [-CircularLoggingEnabled <$true | $false>]
+ [-Confirm]
+ [-DatabaseGroup <String>]
+ [-DataMoveReplicationConstraint <DataMoveReplicationConstraintParameter>]
+ [-DeletedItemRetention <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-EventHistoryRetentionPeriod <EnhancedTimeSpan>]
+ [-IndexEnabled <$true | $false>]
+ [-IsExcludedFromInitialProvisioning <$true | $false>]
+ [-IsExcludedFromProvisioning <$true | $false>]
  [-IsExcludedFromProvisioningByOperator <$true | $false>]
  [-IsExcludedFromProvisioningDueToLogicalCorruption <$true | $false>]
- [-IsExcludedFromProvisioningReason <String>] [-LogBuffers <Int32>] [-LogCheckpointDepth <Int32>]
- [-MasterDatabaseAvailabilityGroup <DatabaseAvailabilityGroupIdParameter>] [-MasterServer <ServerIdParameter>]
- [-MaximumBackgroundDatabaseMaintenanceInterval <Int32>] [-MaximumCursors <Int32>] [-MaximumOpenTables <Int32>]
- [-MaximumPreReadPages <Int32>] [-MaximumReplayPreReadPages <Int32>] [-MaximumSessions <Int32>]
- [-MaximumTemporaryTables <Int32>] [-MaximumVersionStorePages <Int32>]
- [-MetaCacheDatabaseMaxCapacityInBytes <Int64>] [-MimimumBackgroundDatabaseMaintenanceInterval <Int32>]
- [-PreferredVersionStorePages <Int32>] [-ReplayBackgroundDatabaseMaintenance <$true | $false>]
- [-ReplayBackgroundDatabaseMaintenanceDelay <Int32>] [-ReplayCachePriority <Int32>]
- [-ReplayCheckpointDepth <Int32>] [<CommonParameters>]
+ [-IsExcludedFromProvisioningReason <String>]
+ [-IssueWarningQuota <Unlimited>]
+ [-IsSuspendedFromProvisioning <$true | $false>]
+ [-JournalRecipient <RecipientIdParameter>]
+ [-MailboxRetention <EnhancedTimeSpan>]
+ [-MaintenanceSchedule <Schedule>]
+ [-MetaCacheDatabaseMaxCapacityInBytes <Int64>]
+ [-MountAtStartup <$true | $false>]
+ [-Name <String>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-PublicFolderDatabase <DatabaseIdParameter>]
+ [-QuotaNotificationSchedule <Schedule>]
+ [-RecoverableItemsQuota <Unlimited>]
+ [-RecoverableItemsWarningQuota <Unlimited>]
+ [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,7 +96,7 @@ The Identity parameter specifies the mailbox database that you want to modify. Y
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -108,7 +115,41 @@ The AllowFileRestore parameter specifies whether to allow a database to be resto
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDagExcludeFromMonitoring
+The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
+
+- $true: No alert is issued when there's only one healthy copy of the replicated database.
+
+- $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDatabaseMountDial
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Lossless | GoodAvailability | BestAvailability
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +168,42 @@ The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Sto
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CalendarLoggingQuota
+The CalendarLoggingQuota parameter specifies the maximum size of the log in the Recoverable Items folder of the mailbox that stores changes to calendar items. When the log exceeds this size, calendar logging is disabled until messaging records management (MRM) removes older calendar logs to free up more space.
+
+A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 6 gigabytes (6442450944 bytes).
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
+
+This setting applies to all mailboxes in the database that don't have their own calendar logging quota configured.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +224,7 @@ For more information about circular logging, see Exchange Native Data Protection
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +243,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DatabaseGroup
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +271,16 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 
 - None: Moves shouldn't be throttled to ensure high availability. Use this setting if the database isn't part of a database availability group (DAG).
 
+- AllCopies (Exchange 2013 or earlier): If the database is replicated, all passive mailbox database copies must have the most recent changes synchronized.
+
+- AllDatacenters (Exchange 2013 or earlier): If the database is replicated to multiple Active Directory sites, at least one passive mailbox database copy in each site must have the most recent changes replicated.
+
+- CINoReplication (Exchange 2013 or later): Moves shouldn't be throttled to ensure high availability, but the content indexing service must be up to date.
+
+- CISecondCopy (Exchange 2013 or later): At least one passive mailbox database copy must have the most recent changes synchronized, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
+
+- CISecondDatacenter (Exchange 2013 or later): At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
+
 - SecondCopy: At least one passive mailbox database copy must have the most recent changes synchronized. This is the default value. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
 
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
@@ -187,10 +288,10 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see Active Manager (https://technet.microsoft.com/library/dd776123.aspx).
 
 ```yaml
-Type: None | SecondCopy | SecondDatacenter | AllDatacenters | AllCopies
+Type: DataMoveReplicationConstraintParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +314,7 @@ For more information, see Recoverable Items folder in Exchange 2016 (https://tec
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -228,7 +329,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +348,7 @@ Valid values are 00:00:01 to 30.00:00:00. The default value is 7.00:00:00 (7 day
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +357,8 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
+This parameter isn't available in Exchange Server 2019.
+
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
 - $true: Exchange Search indexes the mailbox database. This is the default value.
@@ -267,6 +370,21 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromInitialProvisioning
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +405,86 @@ The value is automatically set to $true when you set the IsExcludedFromProvision
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromProvisioningByOperator
+The IIsExcludedFromProvisioningByOperator parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
+
+Valid values are:
+
+- $true: Indicates that you manually excluded the database. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
+
+- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
+
+Note that setting this parameter to the value $true has these additional effects on the database:
+
+- The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
+
+- The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromProvisioningDueToLogicalCorruption
+The IsExcludedFromProvisioningDueToLogicalCorruption parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
+
+Valid values are:
+
+- $true: Indicates that you excluded the database due to database corruption. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
+
+- $false: This is the default value. The database can be used in new or move mailbox operations when you don't specify the target mailbox database. You should manually configure this value only after the database corruption is fixed, or after the database is recreated.
+
+Note that setting this parameter to the value $true has these additional effects on the database:
+
+- The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
+
+- The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
+
+- The IsExcludedFromProvisioning property is automatically set to $true.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromProvisioningReason
+The IsExcludedFromProvisioningReason parameter specifies the reason why you excluded the mailbox database from the mailbox provisioning load balancer. If the value contains spaces, enclose the value in quotation marks ("). The value must contain at least 10 characters.
+
+This parameter requires a value when you set any of the following parameters to $true:
+
+- IsExcludedFromProvisioning
+
+- IsExcludedFromProvisioningByOperator
+
+- IsSuspendedFromProvisioning
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +517,7 @@ This setting applies to all mailboxes in the database that don't have their own 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -345,7 +542,7 @@ Note that setting this parameter to the value $true has these additional effects
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -356,11 +553,7 @@ Accept wildcard characters: False
 ### -JournalRecipient
 The JournalRecipient parameter specifies the journal recipient to use for per-database journaling for all mailboxes on the database. You can use any value that uniquely identifies the recipient. For example:
 
-For example:
-
 - Name
-
-- Display name
 
 - Alias
 
@@ -376,7 +569,7 @@ For example:
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +588,7 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 30.00:00:00 (3
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -408,27 +601,27 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MaintenanceSchedule parameter specifies when maintenance will be performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
 
-The format is StartDay.Hour:Minute [AM/PM]-EndDay.Hour:Minute [AM/PM]. You can use the following values for the start and end days:
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
 
-- Full name of the day
+You can use the following values for days:
 
-- Abbreviated name of the day
+- Full name of the day.
 
-- Integer from 0 through 6, where 0 = Sunday
+- Abbreviated name of the day.
 
-If you prefer to use a 24-hour clock, omit AM/PM. If you use AM/PM, you must include a space between the time and AM or PM.
+- Integer from 0 through 6, where 0 = Sunday.
 
-Formats can be mixed.
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
 
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+You can mix and match date/time formats.
 
-The following are examples:
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (Maintenance will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Maintenance will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 
@@ -437,6 +630,23 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MetaCacheDatabaseMaxCapacityInBytes
+The MetaCacheDatabaseMaxCapacityInBytes parameter specifies the size of the metacache database in bytes. To convert gigabytes to bytes, multiply the value by 1024^3. For terabytes to bytes, multiply by 1024^4.
+
+The default value is blank ($null).
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +665,7 @@ The MountAtStartup parameter specifies whether to mount the mailbox database whe
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -470,7 +680,7 @@ The Name parameter specifies the unique name of the mailbox database. The maximu
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -493,7 +703,7 @@ By default, this setting is blank ($null).
 Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -526,7 +736,7 @@ This settings applies to all mailboxes in the database that don't have their own
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -559,7 +769,7 @@ This setting applies to all mailboxes in the database that don't have their own 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -570,15 +780,13 @@ Accept wildcard characters: False
 ### -PublicFolderDatabase
 This parameter is available or functional only in Exchange Server 2010.
 
-The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use the following values:
+The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use any value that uniquely identifies the public folder database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Name of the public folder database
-
-- Database name
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -597,27 +805,27 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The QuotaNotificationSchedule parameter specifies when quota messages are sent to mailboxes that have reached one of the quota values.
 
-The format is StartDay.Hour:Minute [AM/PM]-EndDay.Hour:Minute [AM/PM]. You can use the following values for the start and end days:
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
 
-- Full name of the day
+You can use the following values for days:
 
-- Abbreviated name of the day
+- Full name of the day.
 
-- Integer from 0 through 6, where 0 = Sunday
+- Abbreviated name of the day.
 
-If you prefer to use a 24-hour clock, omit AM/PM.
+- Integer from 0 through 6, where 0 = Sunday.
 
-Formats can be mixed.
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
 
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+You can mix and match date/time formats.
 
-The following are examples:
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (Notification will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Notification will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 
@@ -660,7 +868,7 @@ This settings applies to all mailboxes in the database that don't have their own
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -695,7 +903,7 @@ This settings applies to all mailboxes in the database that don't have their own
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -718,7 +926,7 @@ This settings applies to all mailboxes in the database that don't have this valu
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -752,650 +960,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDagExcludeFromMonitoring
-The AutoDagExcludedFromMonitoringparameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
-
-- $true: No alert is issued when there's only one healthy copy of the replicated database.
-
-- $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDatabaseMountDial
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Lossless | GoodAvailability | BestAvailability
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CalendarLoggingQuota
-The CalendarLoggingQuota parameter specifies the maximum size of the log in the Recoverable Items folder of the mailbox that stores changes to calendar items. When the log exceeds this size, calendar logging is disabled until messaging records management (MRM) removes older calendar logs to free up more space.
-
-A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 6 gigabytes (6442450944 bytes).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
-
-This setting applies to all mailboxes in the database that don't have their own calendar logging quota configured.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseGroup
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromInitialProvisioning
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceMaximumEdbFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceOverloadedThreshold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceRelativeLoadCapacity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxLoadBalanceUnderloadedThreshold
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningAttributes
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningAttributes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackgroundDatabaseMaintenanceDelay
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackgroundDatabaseMaintenanceSerialization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CachedClosedTables
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CachePriority
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CafeEndpoints
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseExtensionSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromProvisioningByOperator
-The IIsExcludedFromProvisioningByOperator parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
-
-Valid values are:
-
-- $true: Indicates that you manually excluded the database. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
-- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
-
-Note that setting this parameter to the value $true has these additional effects on the database:
-
-- The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
-
-- The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromProvisioningDueToLogicalCorruption
-The IsExcludedFromProvisioningDueToLogicalCorruption parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
-
-Valid values are:
-
-- $true: Indicates that you excluded the database due to database corruption. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
-- $false: This is the default value. The database can be used in new or move mailbox operations when you don't specify the target mailbox database. You should manually configure this value only after the database corruption is fixed, or after the database is recreated.
-
-Note that setting this parameter to the value $true has these additional effects on the database:
-
-- The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
-
-- The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
-
-- The IsExcludedFromProvisioning property is automatically set to $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromProvisioningReason
-The IsExcludedFromProvisioningReason parameter specifies the reason why you excluded the mailbox database from the mailbox provisioning load balancer. If the value contains spaces, enclose the value in quotation marks ("). The value must contain at least 10 characters.
-
-This parameter requires a value when you set any of the following parameters to $true:
-
-- IsExcludedFromProvisioning
-
-- IsExcludedFromProvisioningByOperator
-
-- IsSuspendedFromProvisioning
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogBuffers
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogCheckpointDepth
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MasterDatabaseAvailabilityGroup
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseAvailabilityGroupIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MasterServer
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumBackgroundDatabaseMaintenanceInterval
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumCursors
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumOpenTables
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumPreReadPages
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumReplayPreReadPages
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumSessions
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumTemporaryTables
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaximumVersionStorePages
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MetaCacheDatabaseMaxCapacityInBytes
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MimimumBackgroundDatabaseMaintenanceInterval
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreferredVersionStorePages
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayBackgroundDatabaseMaintenance
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayBackgroundDatabaseMaintenanceDelay
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayCachePriority
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayCheckpointDepth
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

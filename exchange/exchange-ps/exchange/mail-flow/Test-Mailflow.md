@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-Mailflow
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-Mailflow
@@ -17,51 +20,76 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set5
+### AutoDiscoverTargetMailboxServer
 ```
 Test-Mailflow [[-Identity] <ServerIdParameter>] [-AutoDiscoverTargetMailboxServer]
- [-ActiveDirectoryTimeout <Int32>] [-Confirm] [-DomainController <Fqdn>] [-ErrorLatency <Int32>]
- [-ExecutionTimeout <Int32>] [-MonitoringContext <$true | $false>] [-WhatIf]
- -TargetDatabase <DatabaseIdParameter> [<CommonParameters>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### CrossPremises
 ```
-Test-Mailflow -CrossPremises <$true | $false> [-ActiveDirectoryTimeout <Int32>] [-Confirm]
- [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
- [-DomainController <Fqdn>] [-ErrorLatency <Int32>] [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>] [-WhatIf] [<CommonParameters>]
+Test-Mailflow -CrossPremises <$true | $false> [-ActiveDirectoryTimeout <Int32>] [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### TargetDatabase
 ```
 Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetDatabase <DatabaseIdParameter>
- [-ActiveDirectoryTimeout <Int32>] [-Confirm] [-DomainController <Fqdn>] [-ErrorLatency <Int32>]
- [-ExecutionTimeout <Int32>] [-MonitoringContext <$true | $false>] [-WhatIf]
- -TargetMailboxServer <ServerIdParameter> [<CommonParameters>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### TargetEmailAddress
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String> [-ActiveDirectoryTimeout <Int32>]
- [-Confirm] [-DomainController <Fqdn>] [-ErrorLatency <Int32>] [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>] [-TargetEmailAddressDisplayName <String>] [-WhatIf]
- [-AutoDiscoverTargetMailboxServer] [<CommonParameters>]
+Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String> [-TargetEmailAddressDisplayName <String>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### TargetMailboxServer
 ```
 Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetMailboxServer <ServerIdParameter>
- [-ActiveDirectoryTimeout <Int32>] [-Confirm] [-DomainController <Fqdn>] [-ErrorLatency <Int32>]
- [-ExecutionTimeout <Int32>] [-MonitoringContext <$true | $false>] [-WhatIf] -TargetEmailAddress <String>
- [-TargetEmailAddressDisplayName <String>] -TargetDatabase <DatabaseIdParameter> [<CommonParameters>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
-### Set1
+### SourceServer
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] [-ActiveDirectoryTimeout <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-ErrorLatency <Int32>] [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>] [-WhatIf] [<CommonParameters>]
+Test-Mailflow [[-Identity] <ServerIdParameter>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ErrorLatency <Int32>]
+ [-ExecutionTimeout <Int32>]
+ [-MonitoringContext <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -104,9 +132,9 @@ When you use this switch, you can't use the CrossPremises, TargetDatabase, Targe
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set4
+Parameter Sets: AutoDiscoverTargetMailboxServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -123,9 +151,9 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set6
+Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -134,15 +162,21 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-The TargetDatabase parameter specifies the mailbox database to which test messages are sent.
+The TargetDatabase parameter specifies the mailbox database to which test messages are sent. You can use any value that uniquely identifies the database. For example:
 
-When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set5, Set2, Set3
+Parameter Sets: TargetDatabase
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -157,9 +191,9 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 
 ```yaml
 Type: String
-Parameter Sets: Set4, Set3
+Parameter Sets: TargetEmailAddress
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -174,9 +208,9 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: TargetMailboxServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -191,7 +225,7 @@ The ActiveDirectoryTimeout parameter specifies the number of seconds that elapse
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +244,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -223,9 +257,9 @@ The CrossPremisesExpirationTimeout parameter is used when this cmdlet is run by 
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set6
+Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -238,9 +272,9 @@ The CrossPremisesPendingErrorCount parameter is used when this cmdlet is run by 
 
 ```yaml
 Type: Int32
-Parameter Sets: Set6
+Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +289,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +304,7 @@ The ErrorLatency parameter specifies how long to wait for a test message to be d
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -285,7 +319,7 @@ The ExecutionTimeout parameter specifies the maximum time that this task can run
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -298,9 +332,9 @@ The Identity parameter specifies the source Mailbox server name from which a tes
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set5, Set2, Set4, Set3, Set1
+Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -315,7 +349,7 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -330,9 +364,9 @@ This parameter is available only with the TargetEmailAddress parameter and has n
 
 ```yaml
 Type: String
-Parameter Sets: Set4, Set3
+Parameter Sets: TargetEmailAddress
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +381,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

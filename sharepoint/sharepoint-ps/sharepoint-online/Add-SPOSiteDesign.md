@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOSiteDesign
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Add-SPOSiteDesign
@@ -138,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/customize-default-site-design). 
+A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design). 
 
 ```yaml
 Type: SwitchParameter

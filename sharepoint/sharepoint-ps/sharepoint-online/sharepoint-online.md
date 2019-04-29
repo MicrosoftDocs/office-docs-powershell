@@ -22,6 +22,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
 {{Manually Enter Add-SPOSiteDesign Description Here}}
 
+### [Add-SPOSiteDesign](Add-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesignTask Description Here}}
+
 ### [Add-SPOSiteScript](Add-SPOSiteScript.md)
 {{Manually Enter Add-SPOSiteScript Description Here}}
 
@@ -54,9 +57,6 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}
-
-### [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
-{{Manually Enter Get-SPO365LinkSettings Description Here}}
 
 ### [Get-SPOAppErrors](Get-SPOAppErrors.md)
 {{Manually Enter Get-SPOAppErrors Description Here}}
@@ -118,13 +118,25 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteDesign](Get-SPOSiteDesign.md)
 {{Manually Enter Get-SPOSiteDesign Description Here}}
 
+### [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
 ### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
 {{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
 
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 {{Manually Enter Get-SPOSiteGroup Description Here}}
 
 ### [Get-SPOSiteScript](Get-SPOSiteScript.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
 {{Manually Enter Get-SPOSiteScript Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
@@ -244,6 +256,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOSiteDesign](Remove-SPOSiteDesign.md)
 {{Manually Enter Remove-SPOSiteDesign Description Here}}
 
+### [Remove-SPOSiteDesignTask](Remove-SPOSiteDesignTask.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 {{Manually Enter Remove-SPOSiteGroup Description Here}}
 
@@ -288,9 +303,6 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 {{Manually Enter Revoke-SPOUserSession Description Here}}
-
-### [Set-SPO365LinkSettings](Set-SPO365LinkSettings.md)
-{{Manually Enter Set-SPO365LinkSettings Description Here}}
 
 ### [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
 {{Manually Enter Set-SPODataConnectionSetting Description Here}}
@@ -358,9 +370,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Submit-SPOMigrationJob](Submit-SPOMigrationJob.md)
 {{Manually Enter Submit-SPOMigrationJob Description Here}}
 
-### [Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)
-{{Manually Enter Test-SPO365LinkSettings Description Here}}
-
 ### [Test-SPOSite](Test-SPOSite.md)
 {{Manually Enter Test-SPOSite Description Here}}
 
@@ -371,4 +380,4 @@ The following cmdlet references are for SharePoint Online.
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
 
-<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->

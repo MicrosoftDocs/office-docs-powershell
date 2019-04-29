@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsOnlineUser
@@ -14,9 +17,9 @@ This cmdlet can only be used with Skype for Business Online.
 ## SYNTAX
 
 ```
-Get-CsOnlineUser [[-Identity] <Object>] [-Credential <Object>] [-DomainController <Object>] [-Filter <Object>]
- [-LdapFilter <Object>] [-OnModernServer] [-OnOfficeCommunicationServer] [-OU <Object>] [-ResultSize <Object>]
- [-SkipUserPolicies] [-UnassignedUser] [-AsJob] [<CommonParameters>]
+Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer]
+ [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>]
+ [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,7 +96,7 @@ This filter limits the returned data to online users assigned to the tenant "bf1
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +112,7 @@ Accept wildcard characters: False
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -131,7 +134,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 `{EnterpriseVoiceEnabled -eq $True}`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -144,12 +147,14 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user online voice routing policy. User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
+Indicates the Identity of the user account to be retrieved.
+User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
-You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity. For example, the Identity "\*Smith" returns all the users who have a display name that ends with the string value "Smith".
+You can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
+For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith".
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -169,7 +174,7 @@ The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -218,7 +223,7 @@ Accept wildcard characters: False
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -240,7 +245,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -302,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

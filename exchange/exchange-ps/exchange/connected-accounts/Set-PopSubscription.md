@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Set-PopSubscription
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,25 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SubscriptionModification
 ```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm] [-DisplayName <String>]
- [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Spa>]
- [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>]
- [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <$true | $false>]
- [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm] [-Mailbox <MailboxIdParameter>]
- [-ResendVerification] [-WhatIf] [<CommonParameters>]
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Spa>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <$true | $false>]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ResendVerificationEmail
 ```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm] [-Mailbox <MailboxIdParameter>]
- [-ValidateSecret <String>] [-WhatIf] [<CommonParameters>]
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-ResendVerification]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ValidateSendAs
+```
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-ValidateSecret <String>]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,7 +105,7 @@ The DisplayName parameter specifies the friendly name of the subscription.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -114,7 +120,7 @@ The EmailAddress parameter specifies the email address of the POP mailbox.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -129,7 +135,7 @@ The Enabled parameter specifies whether the POP subscription is enabled. This pa
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -144,7 +150,7 @@ The Force parameter instructs the command to modify the specified subscription s
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -159,7 +165,7 @@ The IncomingAuth parameter sets the authentication method used by POP clients to
 
 ```yaml
 Type: Basic | Spa
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -170,11 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingPassword
-The IncomingPassword parameter specifies the password used to sign in to the POP mailbox. You must specify the value for this parameter in a secure format, for example, (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
+The IncomingPassword parameter specifies the password used to sign in to the POP mailbox.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -189,7 +197,7 @@ The Incoming Port parameter specifies the TCP port number used by POP clients to
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -204,7 +212,7 @@ The IncomingSecurity parameter specifies the encryption method used by POP clien
 
 ```yaml
 Type: None | Ssl | Tls
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -219,7 +227,7 @@ The IncomingServer parameter specifies the fully qualified domain name (FQDN) of
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -230,11 +238,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingUserName
-The IncomingUserName parameter specifies the user name used to sign in to the POP mailbox.
+The IncomingUserName parameter specifies the username used to sign in to the POP mailbox.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -249,7 +257,7 @@ The LeaveOnServer parameter configures the behavior of retrieved messages in the
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -260,13 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that contains the POP subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that contains the POP subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -305,7 +309,7 @@ The ResendVerification parameter can't be specified with any other parameters th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -322,7 +326,7 @@ The ValidateSecret parameter can't be specified with any other parameters that m
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
 Required: False

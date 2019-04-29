@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-DomainController
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-DomainController
@@ -17,14 +20,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### GlobalCatalog
 ```
-Get-DomainController [-GlobalCatalog] [-Credential <NetworkCredential>] [-Forest <Fqdn>] [<CommonParameters>]
+Get-DomainController [-GlobalCatalog] [-Forest <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
-### Set1
+### DomainController
 ```
-Get-DomainController [-Credential <NetworkCredential>] [-DomainName <Fqdn>] [<CommonParameters>]
+Get-DomainController [-DomainName <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,9 +45,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 $UserCredentials = Get-Credential; Get-DomainController -DomainName corp.contoso.com -Credential $UserCredentials | Format-Table -AutoSize Name, ADSite
 ```
 
-This example retrieves a list of global catalog servers in the corp.contoso.com domain. Because a different set of credentials are required to access this domain, the Get-Credential cmdlet is used to obtain the user name and password from the user.
+This example retrieves a list of global catalog servers in the corp.contoso.com domain. Because a different set of credentials are required to access this domain, the Get-Credential cmdlet is used to obtain the username and password from the user.
 
-The first command displays a prompt to the user that accepts the user name and password. The credentials are then stored in the $UserCredentials variable. The second command uses the $UserCredentials variable for the Credential parameter value. To make the list more readable, the output is piped to the Format-Table cmdlet and only the Name and ADSite properties are displayed.
+The first command displays a prompt to the user that accepts the username and password. The credentials are then stored in the $UserCredentials variable. The second command uses the $UserCredentials variable for the Credential parameter value. To make the list more readable, the output is piped to the Format-Table cmdlet and only the Name and ADSite properties are displayed.
 
 For more information about pipelining and the Format-Table cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
@@ -53,9 +58,9 @@ The GlobalCatalog switch specifies whether the command should return a list of g
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
 This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
@@ -74,7 +79,7 @@ If you use the Forest parameter, the credentials are used to access the forest.
 Type: NetworkCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -87,9 +92,9 @@ The DomainName parameter specifies the fully qualified domain name (FQDN) of the
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: DomainController
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -102,9 +107,9 @@ The Forest parameter specifies the FQDN of the root domain of the forest for whi
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

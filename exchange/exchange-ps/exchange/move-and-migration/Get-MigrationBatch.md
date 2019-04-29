@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MigrationBatch
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MigrationBatch
@@ -19,17 +22,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### BatchesFromEndpoint
 ```
-Get-MigrationBatch [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-Endpoint <MigrationEndpointIdParameter>] [-IncludeReport]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+Get-MigrationBatch [-Endpoint <MigrationEndpointIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
  [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
  [<CommonParameters>]
 ```
 
@@ -75,7 +88,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +105,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +122,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +156,7 @@ If you use this parameter, you can't include the Identity parameter.
 Type: MigrationEndpointIdParameter
 Parameter Sets: BatchesFromEndpoint
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +173,7 @@ If you use this parameter, you can't include the Endpoint parameter.
 Type: MigrationBatchIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -177,7 +190,7 @@ This information is displayed in the Report field.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +252,7 @@ The Status parameter returns a list of migration batches that have the specified
 Type: Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

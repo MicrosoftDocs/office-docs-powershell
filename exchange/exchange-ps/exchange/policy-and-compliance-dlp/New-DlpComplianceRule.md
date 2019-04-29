@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-DlpComplianceRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -19,22 +22,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
- [-AccessScope <InOrganization | NotInOrganization | None>] [-AccessTimeControl <PswsHashtable>]
- [-ActivationDate <DateTime>] [-BlockAccess <$true | $false>] [-Comment <String>] [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentPropertyContainsWords <MultiValuedProperty>]
- [-Disabled <$true | $false>] [-DocumentIsUnsupported <$true | $false>]
+ [-AccessScope <InOrganization | NotInOrganization | None>]
+ [-ActivationDate <DateTime>]
+ [-BlockAccess <$true | $false>]
+ [-BlockAccessScope <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentPropertyContainsWords <MultiValuedProperty>]
+ [-Disabled <$true | $false>]
+ [-DocumentIsUnsupported <$true | $false>]
  [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
- [-ExceptIfDocumentIsUnsupported <$true | $false>] [-ExceptIfFrom <SmtpAddress[]>]
- [-ExceptIfFromMemberOf <SmtpAddress[]>] [-ExceptIfProcessingLimitExceeded <$true | $false>]
- [-ExpiryDate <DateTime>] [-From <SmtpAddress[]>] [-FromMemberOf <SmtpAddress[]>]
- [-GenerateAlert <MultiValuedProperty>] [-GenerateIncidentReport <MultiValuedProperty>] [-ImmutableId <Guid>]
- [-IncidentReportContent <ReportContentOption[]>] [-NotifyAllowOverride <OverrideOption[]>]
- [-NotifyEmailCustomText <String>] [-NotifyPolicyTipCustomText <String>]
- [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>] [-NotifyUser <MultiValuedProperty>]
- [-ProcessingLimitExceeded <$true | $false>] [-ReportSeverityLevel <Low | Medium | High | None>]
- [-RuleErrorAction <Ignore | RetryThenBlock>] [-WhatIf] [<CommonParameters>]
+ [-ExceptIfDocumentIsUnsupported <$true | $false>]
+ [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExpiryDate <DateTime>]
+ [-From <SmtpAddress[]>]
+ [-FromMemberOf <SmtpAddress[]>]
+ [-GenerateAlert <MultiValuedProperty>]
+ [-GenerateIncidentReport <MultiValuedProperty>]
+ [-IncidentReportContent <ReportContentOption[]>]
+ [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomText <String>]
+ [-NotifyPolicyTipCustomText <String>]
+ [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-ProcessingLimitExceeded <$true | $false>]
+ [-ReportSeverityLevel <Low | Medium | High | None>]
+ [-RuleErrorAction <Ignore | RetryThenBlock>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,21 +129,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AccessTimeControl
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PswsHashtable
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ActivationDate
 This parameter is reserved for internal Microsoft use.
 
@@ -167,6 +169,18 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - All: Block access to everyone except the owner and the last modifier.
 
 - PerUser: Block access to external users.
+ 
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
@@ -332,36 +346,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptIfFrom
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfFromMemberOf
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExceptIfProcessingLimitExceeded
 This parameter is reserved for internal Microsoft use.
 
@@ -456,21 +440,6 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImmutableId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -713,12 +682,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

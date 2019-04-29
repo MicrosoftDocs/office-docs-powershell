@@ -1,44 +1,47 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOGeoAdministrator
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Add-SPOGeoAdministrator
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
 
 
 ## SYNTAX
 
-### Group
-```
-Add-SPOGeoAdministrator [-Group] <String> [<CommonParameters>]
-```
-
-### User
-```
-Add-SPOGeoAdministrator [-User] <String> [<CommonParameters>]
+```powershell
+Add-SPOGeoAdministrator
+  -UserPrincipalName <string>
+  -GroupAlias <string>
+  -ObjectId <guid>
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet requires a connection to a multi-geo tenant to run correctly. 
+You must be a SharePoint Online global Administrator to run this cmdlet.
 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
+```powershell
+Add-SPOGeoAdministrator -UserPrincipalName admin@contoso.onmicrosoft.com
 ```
-{{ Add example code here }}
-```
-{{ Add example description here }}
+Adds the user **admin@contoso.onmicrosoft.com**  as administrator to the SharePoint Online multi-geo tenant.
 
 
 ## PARAMETERS
 
-### -Group
+### -GroupAlias
 PARAMVALUE: String
 
 
@@ -55,7 +58,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -User
+### -ObjectId
+PARAMVALUE: Guid
+
+
+```yaml
+Type: Guid
+Parameter Sets: ObjectId
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UserPrincipalName
 PARAMVALUE: String
 
 
@@ -73,16 +92,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
+
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
+
+[Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
+
+
+

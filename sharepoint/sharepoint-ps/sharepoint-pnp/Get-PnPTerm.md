@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPTerm
@@ -12,12 +12,27 @@ Returns a taxonomy term
 
 ### 
 ```powershell
+Get-PnPTerm [-Includes <String[]>]
+            [-IncludeChildTerms [<SwitchParameter>]]
+            [-Connection <SPOnlineConnection>]
+```
+
+### By Term Id
+```powershell
+Get-PnPTerm -Identity <Id, Name or Object>
+            [-TermStore <Id, Name or Object>]
+            [-IncludeChildTerms [<SwitchParameter>]]
+            [-Connection <SPOnlineConnection>]
+```
+
+### By Termset
+```powershell
 Get-PnPTerm -TermSet <Id, Title or TaxonomyItem>
             -TermGroup <Id, Title or TermGroup>
-            [-Includes <String[]>]
             [-Identity <Id, Name or Object>]
             [-TermStore <Id, Name or Object>]
             [-Recursive [<SwitchParameter>]]
+            [-IncludeChildTerms [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -58,7 +73,19 @@ The Id or Name of a Term
 
 ```yaml
 Type: Id, Name or Object
-Parameter Sets: (All)
+Parameter Sets: By Term Id, By Termset
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -IncludeChildTerms
+Includes the hierarchy of child terms if available
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -78,11 +105,11 @@ Accept pipeline input: False
 ```
 
 ### -Recursive
-Find the first term recursivly matching the label in a term hierarchy.
+Find the first term recursively matching the label in a term hierarchy.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: False
 Position: Named
@@ -94,7 +121,7 @@ Name of the termgroup to check.
 
 ```yaml
 Type: Id, Title or TermGroup
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: True
 Position: 0
@@ -106,7 +133,7 @@ Name of the termset to check.
 
 ```yaml
 Type: Id, Title or TaxonomyItem
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: True
 Position: 0
@@ -118,7 +145,7 @@ Term store to check; if not specified the default term store is used.
 
 ```yaml
 Type: Id, Name or Object
-Parameter Sets: (All)
+Parameter Sets: By Term Id, By Termset
 
 Required: False
 Position: Named
@@ -143,4 +170,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

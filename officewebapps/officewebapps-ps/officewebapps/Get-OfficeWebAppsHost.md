@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: Get-OfficeWebAppsHost
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-OfficeWebAppsHost
@@ -42,8 +45,7 @@ This example returns the host domains that are on the Allow List.
 If there are multiple domains in the Allow List, please run the following:
 
 ```
-FormatEnumerationLimit=-1
-Get-OfficeWebAppsHost
+Get-OfficeWebAppsHost | Select allowList -ExpandProperty allowList
 ```
 
 This example returns the host domains that are on the Allow List without ellipsis truncation in the case of multiple domains.

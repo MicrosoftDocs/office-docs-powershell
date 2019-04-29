@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticAnalysis
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-CalendarDiagnosticAnalysis
@@ -17,16 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### DefaultSet
 ```
-Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### LocationSet
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation <String[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +81,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced> "C:\My Documents\Oscar Evans Analysis.csv"
+$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
 This example gets the specified calendar item from Oscar Evans' mailbox, stores the item as a variable and writes the advanced analysis of the item to a CSV file.
@@ -81,7 +90,7 @@ For basic analysis of the item, don't include the DetailLevel parameter, or use 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML > "C:\My Documents\Jasen Kozma Analysis.html"
+Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
 This example analyzes the calendar items that were exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter and writes the advanced analysis of the items to an HTML file.
@@ -101,9 +110,9 @@ You can't use this parameter with the LogLocation parameter.
 
 ```yaml
 Type: CalendarLog[]
-Parameter Sets: Set1
+Parameter Sets: DefaultSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -114,15 +123,15 @@ Accept wildcard characters: False
 ### -LogLocation
 The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>\\\<User\>). If the value contains spaces, enclose the value in quotation marks (").
 
-You export the calender items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
+You export the calendar items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
 
 You can't use this parameter with the CalendarLogs parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: LocationSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -141,7 +150,7 @@ The DetailLevel parameter specifies the level of detail you want to see in the a
 Type: Basic | Advanced
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +167,7 @@ The GlobalObjectId property of the meeting uses the same format as the CleanGlob
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +188,7 @@ The OutputAs parameter specifies the output format of the command. Valid values 
 Type: HTML | CSV | XML
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

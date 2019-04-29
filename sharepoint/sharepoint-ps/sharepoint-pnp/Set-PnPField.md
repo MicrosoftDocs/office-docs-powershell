@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Set-PnPField
@@ -57,7 +57,7 @@ Accept pipeline input: True
 ```
 
 ### -List
-The list object, name or id where to update the field. If omited the field will be updated on the web.
+The list object, name or id where to update the field. If omitted the field will be updated on the web.
 
 ```yaml
 Type: ListPipeBind
@@ -122,4 +122,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

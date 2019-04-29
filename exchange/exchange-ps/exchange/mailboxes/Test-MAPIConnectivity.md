@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Test-MAPIConnectivity
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Test-MAPIConnectivity
@@ -17,26 +20,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
-Test-MAPIConnectivity -Database <DatabaseIdParameter> [-ActiveDirectoryTimeout <Int32>]
- [-AllConnectionsTimeout <Int32>] [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <$true | $false>]
- [-PerConnectionTimeout <Int32>] [-WhatIf] [-CopyOnServer <ServerIdParameter>] [<CommonParameters>]
-```
-
-### Set3
-```
-Test-MAPIConnectivity [-Identity] <MailboxIdParameter> [-ActiveDirectoryTimeout <Int32>]
- [-AllConnectionsTimeout <Int32>] [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <$true | $false>] [-PerConnectionTimeout <Int32>] [-WhatIf]
- [-CopyOnServer <ServerIdParameter>] [<CommonParameters>]
+Test-MAPIConnectivity -Database <DatabaseIdParameter>
+ [-ActiveDirectoryTimeout <Int32>]
+ [-AllConnectionsTimeout <Int32>]
+ [-Confirm]
+ [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <$true | $false>]
+ [-PerConnectionTimeout <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-MAPIConnectivity [-ActiveDirectoryTimeout <Int32>] [-AllConnectionsTimeout <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-MonitoringContext <$true | $false>] [-PerConnectionTimeout <Int32>]
- [-Server <ServerIdParameter>] [-WhatIf] [-IncludePassive] [<CommonParameters>]
+Test-MAPIConnectivity [-Identity] <MailboxIdParameter>
+ [-ActiveDirectoryTimeout <Int32>]
+ [-AllConnectionsTimeout <Int32>]
+ [-Archive]
+ [-Confirm]
+ [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <$true | $false>]
+ [-PerConnectionTimeout <Int32>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Server
+```
+Test-MAPIConnectivity [-Server <ServerIdParameter>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-AllConnectionsTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IncludePassive]
+ [-MonitoringContext <$true | $false>]
+ [-PerConnectionTimeout <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,13 +96,21 @@ This example tests connectivity to a mailbox, specified as a domain name and use
 ### -Database
 This parameter is available only in on-premises Exchange.
 
-The Database parameter specifies the database on which to test the connectivity to the system mailbox. If you don't specify this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the server that you specify, or on the local server if you don't specify the Server parameter.
+The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -90,31 +119,37 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox to test. You can use the following values:
+The Identity parameter specifies a mailbox to test. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
+- Name
 
 - Alias
 
-This parameter accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If an object is piped from the Get-Mailbox cmdlet or Get-Recipient cmdlet, this parameter isn't required.
+- Distinguished name (DN)
 
-If you don't specify this parameter, the cmdlet tests the SystemMailbox on the database that you specify.
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+This cmdlet accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If you pipe the identify from the Get-Mailbox or Get-Recipient cmdlets, you don't need to use this parameter.
+
+If you don't use this parameter, the cmdlet tests the SystemMailbox on the database that you specify.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set3
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -131,7 +166,7 @@ The ActiveDirectoryTimeout parameter specifies the amount of time, in seconds, a
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +183,7 @@ The AllConnectionsTimeout parameter specifies the amount of time, in seconds, al
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -161,9 +196,9 @@ The Archive parameter specifies whether to test the MAPI connectivity of the per
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +217,24 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CopyOnServer
+This parameter is available only in on-premises Exchange.
+
+The CopyOnServer parameter is used to test MAPI connectivity to a specific database copy on the servers specified with the Server parameter.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Database, Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -199,7 +251,24 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludePassive
+This parameter is available only in on-premises Exchange.
+
+Without the IncludePassive parameter, the cmdlet tests MAPI connectivity from active database copies only. Using the IncludePassive parameter, you can have the cmdlet test MAPI connectivity from all active and passive database copies.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Server
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +285,7 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +302,7 @@ The PerConnectionTimeout parameter specifies the amount of time, in seconds, all
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -250,9 +319,9 @@ If you don't specify this parameter, the command tests the mailbox on the local 
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -267,41 +336,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CopyOnServer
-This parameter is available only in on-premises Exchange.
-
-The CopyOnServer parameter is used to test MAPI connectivity to a specific database copy on the servers specified with the Server parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludePassive
-This parameter is available only in on-premises Exchange.
-
-Without the IncludePassive parameter, the cmdlet tests MAPI connectivity from active database copies only. Using the IncludePassive parameter, you can have the cmdlet test MAPI connectivity from all active and passive database copies.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

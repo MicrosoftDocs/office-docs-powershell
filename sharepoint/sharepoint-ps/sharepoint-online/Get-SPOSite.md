@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Get-SPOSite
@@ -40,14 +43,14 @@ Additional site collections are now displayed. For example, all group and video 
 
 The Detailed parameter has been deprecated. It will continue to work with earlier versions
 
-You may see an impact on performance when the Filter parameter is used.
+Currently, Filter parameter is not functional.
 
 > [!NOTE] 
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
 You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832.
 
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
@@ -71,7 +74,7 @@ Example 2 lists the site collection with detailed properties.
 ```
 Get-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwnersStatus
 ```
-Example 3 disables the ability for non owners of a site collection to share. 
+Example 3 Updates status on if the non owners of a site collection can share the site collection (does not set this value).
 
 ### -----------------------EXAMPLE 4-----------------------------
 ```
@@ -182,19 +185,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: ParamSet3
-Aliases: 
-Applicable: SharePoint Online
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -IncludePersonalSite
 Displays personal sites when value is set to $true.
 
@@ -249,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

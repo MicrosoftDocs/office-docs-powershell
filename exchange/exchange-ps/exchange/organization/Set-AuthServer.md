@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-AuthServer
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-AuthServer
@@ -17,24 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AuthMetadataUrl
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Name <String>] [-TrustAnySSLCertificate] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-IsDefaultAuthorizationEndpoint <$true | $false>]
- [-Name <String>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### NativeClientAuthServer
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-Name <String>] [-RefreshAuthMetadata] [-WhatIf] [<CommonParameters>]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <$true | $false>] [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RefreshAuthMetadata
+```
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-RefreshAuthMetadata]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,13 +69,19 @@ This command disables the authorization server ACS.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of authorization server.
+The Identity parameter specifies the authorization server object that you want to modify. You can use any value that uniquely identifies the authorization server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: AuthServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -75,9 +94,9 @@ The AuthMetadataUrl parameter specifies the URL of the authorization server. Thi
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +115,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +130,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -122,11 +141,17 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the authorization server is enabled. Only enabled authorization servers can issue and accept tokens. Disabling the authorization server prevents any partner applications configured to use the authorization server from getting a token.
 
+The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
+
+- $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
+
+- $false: The authorization server does not issue or accept authorization tokens.
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -135,15 +160,17 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultAuthorizationEndpoint
-The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. This server's authorization URL is advertised to calling partner applications and applications need to get their OAuth access tokens from this authorization server.
+The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+$true: The authorization server's URL is advertised to calling partner applications and applications that need to get their OAuth access tokens from the authorization server.
+
+$false: The authorization server's URL is not advertised. The default value is $false.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -152,13 +179,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a name for the authorization server.
+The Name parameter specifies a unique name for the authorization server object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -167,13 +194,13 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshAuthMetadata
-The RefreshAuthMetadata switch specifies whether Exchange should refresh the auth metadata from the specified URL.
+The RefreshAuthMetadata switch specifies whether Exchange should refresh the auth metadata from the specified URL. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: RefreshAuthMetadata
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -182,13 +209,15 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. We don't recommend using this switch in a production environment.
+The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +232,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

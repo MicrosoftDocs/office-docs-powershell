@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Undo-SoftDeletedMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,16 +20,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### PublicFolder
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-PublicFolder] [-Confirm]
- [-DisplayName <String>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-DisplayName <String>] [-PublicFolder]
+ [-Confirm]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### SoftDeletedMailbox
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Confirm] [-DisplayName <String>]
- [-Name <String>] [-Password <SecureString>] [-WhatIf] [-WindowsLiveID <WindowsLiveId>] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Password <SecureString>] [-WindowsLiveID <WindowsLiveId>]
+ [-Confirm] [-DisplayName <String>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,11 +62,13 @@ This example recovers the deleted mailbox for the user Brian Johnson. When this 
 ## PARAMETERS
 
 ### -PublicFolder
-The PublicFolder switch specifies that the deleted mailbox you want to recover is a public folder mailbox. You don't need to specify a value with this switch.
+The PublicFolder switch is required to recover public folder mailboxes. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -70,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the identity of the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
+The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
 
 ```yaml
 Type: MailboxIdParameter
@@ -136,13 +145,13 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies a new password for the mailbox.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 You have to include the Password parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -170,11 +179,11 @@ Accept wildcard characters: False
 ### -WindowsLiveID
 The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
 
-You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
+You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account that wasn't deleted with the mailbox.
 
 ```yaml
 Type: WindowsLiveId
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
 Required: False

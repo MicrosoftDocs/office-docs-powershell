@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-UnifiedGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -11,26 +14,34 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-UnifiedGroup cmdlet to view Office 365 groups in your cloud-based organization. To view members, owners and subscribers for Office 365 groups, use the Get-UnifiedGroupLinks cmdlet.
+Use the Get-UnifiedGroup cmdlet to view Office 365 Groups in your cloud-based organization. To view members, owners and subscribers for Office 365 Groups, use the Get-UnifiedGroupLinks cmdlet.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set2
+### Identity (Default)
 ```
-Get-UnifiedGroup [-Anr <String>] [-Filter <String>] [-IncludeSoftDeletedGroups] [-ResultSize <Unlimited>]
+Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>]
+ [-Filter <String>]
+ [-IncludeAllProperties]
+ [-IncludeSoftDeletedGroups]
+ [-ResultSize <Unlimited>]
  [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set1
+### AnrSet
 ```
-Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>] [-Filter <String>] [-IncludeSoftDeletedGroups]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+Get-UnifiedGroup [-Anr <String>]
+ [-Filter <String>]
+ [-IncludeAllProperties]
+ [-IncludeSoftDeletedGroups]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Office 365 Groups are group objects that are available across Office 365 services.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -41,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UnifiedGroup
 ```
 
-This example returns a summary list of all Office 365 groups.
+This example returns a summary list of all Office 365 Groups.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
 
-This example returns the following information about all Office 365 groups:
+This example returns the following information about all Office 365 Groups:
 
 - Display name
 
@@ -74,7 +85,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -108,13 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -128,7 +135,7 @@ For example:
 
 ```yaml
 Type: UnifiedGroupIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -141,12 +148,22 @@ Accept wildcard characters: False
 ### -IncludeAllProperties
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
-If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+If you don't use this switch, the values of some properties (for example, CalendarMemberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -IncludeSoftDeletedGroups
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted Office 365 groups.
 
 Soft-deleted Office 365 groups are deleted groups that are still recoverable.
 
@@ -208,12 +225,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

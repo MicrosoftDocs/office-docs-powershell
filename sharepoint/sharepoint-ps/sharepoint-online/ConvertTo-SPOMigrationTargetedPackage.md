@@ -1,14 +1,17 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationTargetedPackage
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # ConvertTo-SPOMigrationTargetedPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use this cmdlet to convert your XML files into a new migration package.
 
 ## SYNTAX
 
@@ -32,21 +35,22 @@ ConvertTo-SPOMigrationTargetedPackage [-SourceFilesPath] <String> [-SourcePackag
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use this Cmdlets to create a migration package from one Library to Another Library in form of a package. It converts the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
+
 
 ## EXAMPLES
 
 ### Example 1 
-```
-PS C:\> {{ Add example code here }}
+This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the �ParallelImport parameter to boost file share migration performance.
+```Powershell
+$finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFilesPath $sourceFiles -SourcePackagePath $sourcePackage -OutputPackagePath $targetPackage -Credentials $cred -TargetWebUrl $targetWeb -TargetDocumentLibraryPath $targetDocLib
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AzureADUserCredentials
-{{Fill AzureADUserCredentials Description}}
+Receives Azure Active Directory User Credentials
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-{{Fill Credentials Description}}
+Fill out the Regular Credentials (Get-Credential)
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoAzureADLookup
-{{Fill NoAzureADLookup Description}}
+Switch parameter that says if the command should or should not look up for Azure AD.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Switch Parameter to determine if you should get or not a log file.
 
 ```yaml
 Type: SwitchParameter
@@ -110,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPackagePath
-{{Fill OutputPackagePath Description}}
+Output package path
 
 ```yaml
 Type: String
@@ -126,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParallelImport
-{{Fill ParallelImport Description}}
+Switch parameter to boost file share migration performance.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionSizeInBytes
-{{Fill PartitionSizeInBytes Description}}
+Define the partition size in Bytes where it will be located the target package.
 
 ```yaml
 Type: Int64
@@ -158,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-{{Fill SourceFilesPath Description}}
+Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: String
@@ -174,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePackagePath
-{{Fill SourcePackagePath Description}}
+Defines the source package path location.
 
 ```yaml
 Type: String
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibraryPath
-{{Fill TargetDocumentLibraryPath Description}}
+Defines the target document library path.
 
 ```yaml
 Type: String
@@ -206,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibrarySubFolderPath
-{{Fill TargetDocumentLibrarySubFolderPath Description}}
+Defines the target document library subfolder path.
 
 ```yaml
 Type: String
@@ -222,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetEnvironment
-{{Fill TargetEnvironment Description}}
+Defines the Target environment: Production, ProductionChina, None or OnPremises.
 
 ```yaml
 Type: TargetEnvironment
@@ -239,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetListPath
-{{Fill TargetListPath Description}}
+Defines the Target list path
 
 ```yaml
 Type: String
@@ -255,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+Defines the Target Web URL of the package.
 
 ```yaml
 Type: String
@@ -271,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserMappingFile
-{{Fill UserMappingFile Description}}
+Defines the file mapping of the user.
 
 ```yaml
 Type: String
@@ -287,17 +291,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+
+[ConvertTo-SPOMigrationEncryptedPackage](ConvertTo-SPOMigrationEncryptedPackage.md)
 

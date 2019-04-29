@@ -1,9 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-MailUser
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-MailUser
@@ -17,35 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### AnrSet
 ```
-Get-MailUser [<CommonParameters>]
-```
-
-### Set3
-```
-Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-Anr <String>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-ResultSize <Unlimited>]
- [-SoftDeletedMailUser] [-SortBy <String>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
-```
-
-### Set2
-```
-Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-ArchiveDatabase <DatabaseIdParameter>]
- [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
+Get-MailUser [-Anr <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SoftDeletedMailUser] [-SortBy <String>]
- [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailUser]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailUser [[-Identity] <MailUserIdParameter>] [-AccountPartition <AccountPartitionIdParameter>]
- [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
+Get-MailUser [[-Identity] <MailUserIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SoftDeletedMailUser] [-SortBy <String>]
- [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailUser]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +67,7 @@ This example returns a summary list of all mail users in the organization.
 Get-MailUser -Identity Ed | Format-List
 ```
 
-This example returnsdetailed information for the mail user named Ed.
+This example returns detailed information for the mail user named Ed.
 
 ## PARAMETERS
 
@@ -84,9 +86,9 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type:
-Parameter Sets: Set3
+Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -97,15 +99,15 @@ Accept wildcard characters: False
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
 This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -120,9 +122,9 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -137,9 +139,9 @@ For more information about the filterable properties, see Filterable properties 
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -148,13 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user.
-
-For example:
+The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -168,9 +166,9 @@ For example:
 
 ```yaml
 Type:
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: 1
 Default value: None
@@ -191,9 +189,9 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -214,9 +212,9 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -233,9 +231,9 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -248,9 +246,9 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -273,9 +271,9 @@ You can sort by the following properties:
 
 ```yaml
 Type:
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -283,65 +281,18 @@ Accept pipeline input: false
 Accept wildcard characters: False
 ```
 
-### -AccountPartition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArchiveDatabase
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -SoftDeletedMailUser
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailUser switch specifies whether to include only soft-deleted mail users in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted mail users.
+The SoftDeletedMailUser switch specifies whether to include soft-deleted mail users in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mail users are deleted mail users that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set2, Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsnForReconciliationSearch
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int64
-Parameter Sets: Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

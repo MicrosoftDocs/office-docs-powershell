@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Remove-PublicFolderAdministrativePermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -17,20 +20,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter> [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Instance
 ```
-Remove-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>]
- [-AccessRights <MultiValuedProperty>] -Instance <PublicFolderAdministrativeAceObject>
- [-User <SecurityPrincipalIdParameter>] [-Confirm] [-Deny] [-DomainController <Fqdn>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-Server <ServerIdParameter>]
+Remove-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+ [-AccessRights <MultiValuedProperty>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [[-Identity] <PublicFolderIdParameter>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
+ [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -73,7 +84,7 @@ The AccessRights parameter specifies the rights being removed. Valid values incl
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -85,7 +96,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -102,7 +113,7 @@ You can omit the parameter label so that only the public folder name or GUID is 
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -114,7 +125,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -129,7 +140,7 @@ The Instance parameter specifies whether to pass an entire object to the command
 
 ```yaml
 Type: PublicFolderAdministrativeAceObject
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -144,7 +155,7 @@ The User parameter specifies the user principal name (UPN), domain\\user, or ali
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -156,7 +167,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -276,12 +287,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -1,15 +1,18 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SiteMailboxProvisioningPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
 Use the Set-SiteMailboxProvisioningPolicy cmdlet to modify an existing site mailbox provisioning policy.
 
@@ -18,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter> [-AliasPrefix <String>] [-Confirm]
- [-DefaultAliasPrefixEnabled <$true | $false>] [-DomainController <Fqdn>] [-IsDefault]
- [-IssueWarningQuota <ByteQuantifiedSize>] [-MaxReceiveSize <ByteQuantifiedSize>] [-Name <String>]
- [-ProhibitSendReceiveQuota <ByteQuantifiedSize>] [-WhatIf] [<CommonParameters>]
+Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AliasPrefix <String>]
+ [-Confirm]
+ [-DefaultAliasPrefixEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-IsDefault]
+ [-IssueWarningQuota <ByteQuantifiedSize>]
+ [-MaxReceiveSize <ByteQuantifiedSize>]
+ [-Name <String>]
+ [-ProhibitSendReceiveQuota <ByteQuantifiedSize>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +77,7 @@ The Identity parameter specifies the identity of the site mailbox provisioning p
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -86,7 +96,7 @@ The AliasPrefix parameter specifies the custom text prefix to add to the aliases
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +115,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +126,7 @@ Accept wildcard characters: False
 ### -DefaultAliasPrefixEnabled
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
-- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
+- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
 
 - $false: Aliases don't get the default prefix text.
 
@@ -126,7 +136,7 @@ The value of this parameter is related to the value of the AliasPrefix parameter
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -135,15 +145,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -152,8 +160,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-This parameter is available only in on-premises Exchange.
-
 The IsDefault switch specifies that the site mailbox provisioning policy is the default policy. You don't need to specify a value with this switch.
 
 You can have multiple policies, but only the default policy is followed when users create site mailboxes.
@@ -162,7 +168,7 @@ You can have multiple policies, but only the default policy is followed when use
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -171,8 +177,6 @@ Accept wildcard characters: False
 ```
 
 ### -IssueWarningQuota
-This parameter is available only in on-premises Exchange.
-
 The IssueWarningQuota parameter specifies the warning threshold for the size of the mailbox. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
@@ -197,7 +201,7 @@ The default value is 49 GB.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -206,8 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-This parameter is available only in on-premises Exchange.
-
 The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the site mailbox. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
@@ -220,8 +222,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited. The default value is 36 MB.
@@ -230,7 +230,7 @@ A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the val
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -239,15 +239,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-This parameter is available only in on-premises Exchange.
-
 The Name parameter specifies the unique name of the site mailbox provisioning policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -256,8 +254,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProhibitSendReceiveQuota
-This parameter is available only in on-premises Exchange.
-
 The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send or receive new messages. Messages sent to the mailbox are returned to the sender with a descriptive error message. This value effectively determines the maximum size of the mailbox.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
@@ -282,7 +278,7 @@ The default value is 50 GB.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -297,7 +293,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
