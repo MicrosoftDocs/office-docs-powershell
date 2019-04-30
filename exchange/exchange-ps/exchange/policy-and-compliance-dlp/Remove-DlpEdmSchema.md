@@ -10,14 +10,13 @@ monikerRange: "o365scc-ps"
 ---
 
 # Remove-DlpEdmSchema
+
+## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
 Use the Remove-DlpEdmSchema cmdlet to remove DLP EDM schemas in the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-
-## SYNOPSIS
 
 ## SYNTAX
 
