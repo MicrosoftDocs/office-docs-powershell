@@ -162,6 +162,32 @@ Accept wildcard characters: False
 ### -GrammarGenerationSchedule
 The GrammarGenerationSchedule parameter specifies the scheduled times to start speech grammar generation. This parameter allows only one start time per day. The default scheduled time for grammar generation is 02:00-02:30 local time each day.
 
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
+
+- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
+
 ```yaml
 Type: ScheduleInterval[]
 Parameter Sets: (All)

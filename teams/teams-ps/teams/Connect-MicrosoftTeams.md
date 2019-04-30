@@ -1,9 +1,7 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Connect-MicrosoftTeams
-online version: 
+online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
