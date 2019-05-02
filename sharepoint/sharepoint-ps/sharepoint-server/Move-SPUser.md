@@ -50,7 +50,7 @@ This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\
 ### ------------------EXAMPLE 3------------------ 
 ```
 $user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
-Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
+Move-SPUser -Identity $user -NewAlias "i:0#.w|Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith when using Windows Claims. `-IgnoreSid` must always be used with `Move-SPUser` when using a Claims Identity, such as Windows Claims.
