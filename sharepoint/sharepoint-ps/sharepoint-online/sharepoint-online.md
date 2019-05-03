@@ -55,6 +55,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 {{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
 
+### [Enable-SPOCommSite](Enable-SPOCommSite.md)
+{{This cmdlet can be used to enable the modern communication site experience in the classic team site collection at the root of a tenant.}}
+
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}
 
