@@ -19,7 +19,6 @@ Use the Remove-DlpCompliancePolicy cmdlet to remove Data Loss Prevention (DLP) p
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
-
 ```
 Remove-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
  [<CommonParameters>]
@@ -88,21 +87,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceDeletion
-The ForceDeletion switch forces the removal of the policy. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
@@ -133,4 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ec054c7f-f5b9-44b9-91e6-674bfc5b845c.aspx)
