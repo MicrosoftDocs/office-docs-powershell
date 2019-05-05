@@ -28,14 +28,14 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 
 |Identity|Mode|NotifySfbUsers|Comments|
 |---|---|---|---|
-|Islands|Islands|False||
-|IslandsWithNotify|Islands|True||
-|SfBOnly|SfBOnly|False|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
-|SfBOnlyWithNotify|SfBOnly|True|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
-|SfBWithTeamsCollab|SfBWithTeamsCollab|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. In the future, this will only allow Channels in Teams app.|
-|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. In the future, this will only allow Channels in Teams app.|
-|SfBWithTeamsCollabAndMeetings|SfBWithTeamsCollabAndMeetings|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. In the future, this will  allow Channels and meeting scheduling in the Teams app.|
-|SfBWithTeamsCollabAndMeetingsWithNotify|SfBWithTeamsCollabAndMeetings|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. In the future, this will allow Channels and meeting scheduling in the Teams app.|
+|Islands|Islands|False|Default configuration. Allows a single user to evaluate both clients side by side. Chats and calls can land in either client, so users must always run both clients.|
+|IslandsWithNotify|Islands|True|Same as Islands and it adds a banner in the Skype for Business client informing the user that Teams will soon replace Skype for Business.|
+|SfBOnly|SfBOnly|False|Calling, chat functionality and meeting scheduling in the Teams app are disabled.|
+|SfBOnlyWithNotify|SfBOnly|True|Same as SfBOnly and it adds a banner in the Skype for Business client informing the user that Teams will soon replace Skype for Business.|
+|SfBWithTeamsCollab|SfBWithTeamsCollab|False|Calling, chat functionality and meeting scheduling in the Teams app are disabled.|
+|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|Same as SfBWithTeamsCollab and it adds a banner in the Skype for Business client informing the user that Teams will soon replace Skype for Business.|
+|SfBWithTeamsCollabAndMeetings|SfBWithTeamsCollabAndMeetings|False|Calling and chat functionality in the Teams app are disabled.|
+|SfBWithTeamsCollabAndMeetingsWithNotify|SfBWithTeamsCollabAndMeetings|True|Same as SfBWithTeamsCollabAndMeetings and it adds a banner in the Skype for Business client informing the user that Teams will soon replace Skype for Business.|
 |UpgradeToTeams|TeamsOnly|False|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
 |Global|Islands|False||
 
