@@ -15,7 +15,6 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 
 ## SYNTAX
-
 ```
 Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-MigrateMeetingsToTeams] [-Confirm] [<CommonParameters>]
 ```
@@ -25,11 +24,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
 
-
 Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
-</br>
-</br>
-
 
 |Identity|Mode|NotifySfbUsers|Comments|
 |---|---|---|---|
@@ -43,9 +38,6 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 |SfBWithTeamsCollabAndMeetingsWithNotify|SfBWithTeamsCollabAndMeetings|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. In the future, this will allow Channels and meeting scheduling in the Teams app.|
 |UpgradeToTeams|TeamsOnly|False|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
 |Global|Islands|False||
-|||||
-</br>
-</br>
 
 **NOTES:** 
 - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
@@ -65,8 +57,6 @@ The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the correspo
 `Grant-CsTeamsUpgradePolicy -Identity user1@contoso.com -PolicyName SfBWithTeamsCollab`
 
 `WARNING: The user 'user1@contoso.com' currently has enabled values for: AllowUserChat, AllowPrivateCalling, AllowPrivateMeetingScheduling, AllowChannelMeetingScheduling, however these values will be ignored. This is because you are granting this user TeamsUpgradePolicy with mode=SfBWithTeamsCollab, which causes the Teams client to behave as if they are disabled.`
-
-
 
 ## EXAMPLES
 
@@ -91,17 +81,13 @@ PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 
 To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
 
-
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
-
-
 You can get the output on the screen, on CSV or Html format. For Screen Report
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 ```
 
 ### Example 5 Get a report on existing TeamsUpgradePolicy users (CSV Report)
-
 ```
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
@@ -109,7 +95,6 @@ $objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\deskto
 This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
 
 ### Example 6 Get a report on existing TeamsUpgradePolicy users (HTML Report)
-
 ```
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
@@ -118,24 +103,18 @@ $objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.htm
 After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
 
 ### Example 7 Get a report on existing TeamsUpgradePolicy users (CSV Report - Oneliner version)
-
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
 This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
 
 ### Example 8 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
-
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
-
 ```
 After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
 
-
-
 ## PARAMETERS
-
 
 ### -Identity
 The user you want to grant policy to. This can be specified as SIP address, UserPrincipalName, or ObjectId.
@@ -205,7 +184,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -221,7 +199,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Tenant
 Do not use.
@@ -239,13 +216,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
-
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
-
 
 ## OUTPUTS
 
@@ -254,9 +227,6 @@ Accept wildcard characters: False
 ## NOTES
 
 Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Both Legacy mode and TeamsInteropPolicy have been retired.
-
-
-
 
 ## RELATED LINKS
 
