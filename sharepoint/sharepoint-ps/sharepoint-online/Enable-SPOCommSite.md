@@ -75,4 +75,3 @@ Mandatory requirements
 2.	The root site should not currently have the classic publishing feature enabled (at the site or web level)
 3.	The root site should not have had the classic publishing feature enabled in the past (at the site or web level)
 4.	The site must have quick launch site navigation enabled
-
