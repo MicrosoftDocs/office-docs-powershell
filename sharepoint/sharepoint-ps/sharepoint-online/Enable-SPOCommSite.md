@@ -20,7 +20,7 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. T
+Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant.
 
 ## EXAMPLES
 
