@@ -40,16 +40,39 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UMServer
 ```
 
-This example displays a list of all the Unified Messaging servers in the Active Directory forest.
+This example returns a summary list of Unified Messaging servers in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-UMServer -Identity MyUMServer | Format-List
 ```
 
-This example displays a formatted list of properties for the Unified Messaging server named MyUMServer.
+This example returns detailed information for the Unified Messaging server named MyUMServer.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the Unified Messaging server that you want to view. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+```yaml
+Type: UMServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
@@ -63,21 +86,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the Unified Messaging server. If this parameter isn't supplied, a list of all Unified Messaging servers is returned.
-
-```yaml
-Type: UMServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
