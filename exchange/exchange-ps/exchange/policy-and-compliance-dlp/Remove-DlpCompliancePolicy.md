@@ -19,8 +19,9 @@ Use the Remove-DlpCompliancePolicy cmdlet to remove Data Loss Prevention (DLP) p
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
+
 ```
-Remove-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
+Remove-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
