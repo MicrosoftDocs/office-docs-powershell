@@ -10,8 +10,10 @@ ms.reviewer:
 
 # Enable-SPOCommSite
 
+
 ## SYNOPSIS
 Enables the modern comunication site experience on an existing site.
+
 
 ## SYNTAX
 
@@ -22,12 +24,15 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ## DESCRIPTION
 Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization](https://docs.microsoft.com/en-us/office365/admin/manage/release-options-in-office-365?view=o365-worldwide) program, you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
 
-## CURRENT LIMITATIONS
+
+### CURRENT LIMITATIONS
+
 1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://<tenantname>.sharepoint.com
 2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/en-us/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
 3.	The root site **should not have had** the classic publishing feature enabled in the past (at the site or web level)
 4.	The site must have quick launch site navigation enabled. [How do I do this?](https://support.office.com/en-us/article/customize-site-navigation-c040f014-acbb-4c98-8174-48428cf02b25#bm1a)
  
+
 ## EXAMPLES
 
 ### Example 1
@@ -37,6 +42,7 @@ Enable-SPOCommSite -SiteUrl https://contoso.sharepoint.com
 ```
 
 This example enables the communication site experience at this https://contoso.sharepoint.com site. 
+
 
 ## PARAMETERS
 
@@ -51,6 +57,7 @@ GUID identifying the [communication site design](https://support.office.com/en-g
 1. Topic:	96c933ac-3698-44c7-9f4a-5fd17d71af9e
 2. Showcase:	6142d2a0-63a5-4ba0-aede-d9fefca2c767
 3. Blank:	f6cc5403-0d63-442e-96c0-285923709ffc
+
 
 ## STEP BY STEP INSTRUCTIONS
 
