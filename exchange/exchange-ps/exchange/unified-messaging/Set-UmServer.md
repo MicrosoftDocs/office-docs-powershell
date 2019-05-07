@@ -73,7 +73,7 @@ This example adds the Unified Messaging server MyUMServer to the UM dial plan My
 
 ### -------------------------- Example 4 --------------------------
 ```
-Set-UMServer -Identity MyUMServer -GrammarGenerationSchedule 0.02:30-1.03:00, 1.02:30-1.03:00, 2.02:30-2.03:00, 3.02:30-3.03:00, 4.02:30-4.03:00, 5.02:30-5.03:00, 6.02:30-6.03:00
+Set-UMServer -Identity MyUMServer -GrammarGenerationSchedule 0.02:30-1.03:00,1.02:30-1.03:00,2.02:30-2.03:00,3.02:30-3.03:00,4.02:30-4.03:00,5.02:30-5.03:00,6.02:30-6.03:00
 ```
 
 This example changes the grammar generation schedule to 02:30-03:00 every day on the Unified Messaging server MyUMServer.
@@ -81,7 +81,15 @@ This example changes the grammar generation schedule to 02:30-03:00 every day on
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the ID for the Unified Messaging server object to be configured. This parameter specifies the directory object ID for the Unified Messaging server.
+The Identity parameter specifies the Unified Messaging server that you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: UMServerIdParameter
@@ -319,7 +327,11 @@ Accept wildcard characters: False
 ```
 
 ### -SIPAccessService
-The SIPAccessService parameter specifies the FQDN and Transmission Control Protocol (TCP) port of Office Communications Server A/V Edge servers used for inbound or outbound calls from remote users located outside the network.
+The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server Edge pool or Skype for Business Server Edge pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network.
+
+We recommend that you always use this parameter in Lync Server or Skype for Business Server deployments that span multiple geographic regions; otherwise, the Unified Messaging server might select a pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
+
+You configure this parameter for each Unified Messaging server so the value identifies the closest Lync Server Edge pool or Skype for Business Server Edge pool to the Exchange server.
 
 ```yaml
 Type: ProtocolConnectionSettings
