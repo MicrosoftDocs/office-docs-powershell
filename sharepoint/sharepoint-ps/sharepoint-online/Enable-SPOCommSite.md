@@ -25,7 +25,7 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization](https://docs.microsoft.com/en-us/office365/admin/manage/release-options-in-office-365?view=o365-worldwide) program, you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
 
 
-## CURRENT LIMITATIONS
+## REQUIREMENTS
 
 1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://<tenantname>.sharepoint.com
 2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/en-us/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
@@ -104,4 +104,3 @@ If the site URL input points to a site that does not exist, you will see the fol
 We do not support root site that currently have or have had in the past enabled the classic publishing features. If you see this error, your root site is not eligible for this feature enablement
 
 >*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
-
