@@ -11,7 +11,7 @@ ms.reviewer:
 # Enable-SPOCommSite
 
 ## SYNOPSIS
-Enables the modern comunication site experience at the classic root site of a tenant. If you already have a modern communication site at the root, you do not need this cmdlet.
+Enables the modern communication site experience at the classic root site of a tenant. If you already have a modern communication site at the root, you do not need this cmdlet.
 
 ## SYNTAX
 
