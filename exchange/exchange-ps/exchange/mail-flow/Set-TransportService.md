@@ -192,7 +192,17 @@ This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the server that you want to modify.
+The Identity parameter specifies the Mailbox server that hosts the Transport service configuration you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+You can't use this parameter on an Edge Transport server.
 
 ```yaml
 Type: ServerIdParameter
@@ -1233,8 +1243,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB). If you enter a value of unlimited, no size limit is imposed on the message tracking log files.
@@ -1312,8 +1320,6 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 

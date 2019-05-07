@@ -1248,7 +1248,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowMacOutlook
-The EwsAllowMacOutlook parameter specifies whether to enable or disable Microsoft Outlook for Mac 2011 to access EWS for the entire organization.
+The EwsAllowMacOutlook parameter enables or disables access to mailboxes by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later).
 
 ```yaml
 Type: $true | $false
@@ -1263,7 +1263,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowOutlook
-The EwsAllowOutlook parameter enables or disables Microsoft Office Outlook 2007 to access EWS for the entire organization. Outlook 2007 uses EWS for free and busy information, out-of-office settings, and calendar sharing.
+The EwsAllowOutlook parameter enables or disables access to mailboxes by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing.
 
 ```yaml
 Type: $true | $false
