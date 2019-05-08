@@ -53,7 +53,7 @@ This example maps the created crawled property MyCrawlProp to the managed proper
 ### -CrawledProperty
 Specifies the crawled property to map.
 
-The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form http://server_name, or an instance of a valid CrawledProperty object.
+The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form https://server_name, or an instance of a valid CrawledProperty object.
 
 ```yaml
 Type: CrawledPropertyPipeBind

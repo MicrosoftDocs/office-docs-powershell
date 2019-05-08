@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
+Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "https://TestSite"
 ```
 
 This example activates an InfoPath form template to a site collection named TestSite.
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ### -Site
 Specifies the site collection that contains the InfoPath form template to activate.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind
