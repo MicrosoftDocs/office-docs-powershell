@@ -26,10 +26,10 @@ Returns an approximate size, in megabytes (MB) of the Project Web App data used 
 
 ### Example 1 
 ```
-Get-SPProjectDatabaseUsage -Url  http://contoso.com/sites/pwa
+Get-SPProjectDatabaseUsage -Url  https://contoso.com/sites/pwa
 ```
 
-This example shows the size of the Project Web App data in the content data for the Project Web App site at http://contoso.com/sites/pwa.
+This example shows the size of the Project Web App data in the content data for the Project Web App site at https://contoso.com/sites/pwa.
 
 ## PARAMETERS
 

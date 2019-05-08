@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 $searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-Remove-SPEnterpriseSearchCrawlRule -Identity http://mySPSite -SearchApplication $searchApp
+Remove-SPEnterpriseSearchCrawlRule -Identity https://mySPSite -SearchApplication $searchApp
 ```
 
-This example removes a crawl rule pertaining to the path http://mySPSite from the mySearchServiceApp search service application.
+This example removes a crawl rule pertaining to the path https://mySPSite from the mySearchServiceApp search service application.
 
 
 ## PARAMETERS
@@ -44,7 +44,7 @@ This example removes a crawl rule pertaining to the path http://mySPSite from th
 ### -Identity
 The crawl rule to delete.
 
-A valid crawl rule URL, such as http://server_name, or an instance of a valid CrawlRule object.
+A valid crawl rule URL, such as https://server_name, or an instance of a valid CrawlRule object.
 
 ```yaml
 Type: CrawlRulePipeBind

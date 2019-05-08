@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Remove-SPAlternateURL -WebApplication http://sitename -Zone Extranet
+Remove-SPAlternateURL -WebApplication https://sitename -Zone Extranet
 ```
 
 This example deletes the extranet URL for the given Web application.
@@ -49,7 +49,7 @@ This example removes all extranet alternate URLs in the farm.
 
 ### -Identity
 Specifies the identity of the alternate URL to delete.
-The identity can be either a valid URL, in the form http://server_name, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The identity can be either a valid URL, in the form https://server_name, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPAlternateUrlPipeBind
