@@ -27,9 +27,9 @@ Gets the user managed solutions gallery configured on the specified web applicat
 
 ### Example 1 
 ```
-Get-SPUserSolutionAllowList -WebApplication http://webAppUrl
+Get-SPUserSolutionAllowList -WebApplication https://webAppUrl
 ```
-This example gets the user managed solutions gallery on the web application with root http://webAppUrl.
+This example gets the user managed solutions gallery on the web application with root https://webAppUrl.
 
 ## PARAMETERS
 

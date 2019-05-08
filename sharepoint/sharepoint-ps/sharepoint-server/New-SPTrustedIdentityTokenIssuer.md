@@ -55,7 +55,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
+New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 ```
 
 This example creates a new identity provider in the farm named LiveIDSTS.
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ### -SignInUrl
 Specifies the sign-in URLs for this trusted STS identity provider.
 
-The type must be a valid URL, in the form http://int.live.com/.
+The type must be a valid URL, in the form https://int.live.com/.
 
 ```yaml
 Type: String

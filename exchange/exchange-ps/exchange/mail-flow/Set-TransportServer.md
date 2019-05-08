@@ -23,58 +23,111 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-TransportServer [-Identity] <ServerIdParameter> [-ActiveUserStatisticsLogMaxAge <EnhancedTimeSpan>]
+Set-TransportServer [-Identity] <ServerIdParameter>
+ [-ActiveUserStatisticsLogMaxAge <EnhancedTimeSpan>]
  [-ActiveUserStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
- [-ActiveUserStatisticsLogMaxFileSize <ByteQuantifiedSize>] [-ActiveUserStatisticsLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>] [-Confirm] [-ConnectivityLogEnabled <$true | $false>]
- [-ConnectivityLogMaxAge <EnhancedTimeSpan>] [-ConnectivityLogMaxDirectorySize <Unlimited>]
- [-ConnectivityLogMaxFileSize <Unlimited>] [-ConnectivityLogPath <LocalLongFullPath>]
- [-ContentConversionTracingEnabled <$true | $false>] [-DelayNotificationTimeout <EnhancedTimeSpan>]
- [-DeltaSyncClientCertificateThumbprint <String>] [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>] [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>] [-ExternalDNSServers <MultiValuedProperty>]
- [-ExternalIPAddress <IPAddress>] [-HttpProtocolLogEnabled <$true | $false>]
- [-HttpProtocolLogFilePath <LocalLongFullPath>] [-HttpProtocolLogLoggingLevel <None | Verbose>]
- [-HttpProtocolLogMaxAge <EnhancedTimeSpan>] [-HttpProtocolLogMaxDirectorySize <ByteQuantifiedSize>]
- [-HttpProtocolLogMaxFileSize <ByteQuantifiedSize>] [-HttpTransportSyncProxyServer <String>]
- [-InternalDNSAdapterEnabled <$true | $false>] [-InternalDNSAdapterGuid <Guid>]
- [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>] [-InternalDNSServers <MultiValuedProperty>]
+ [-ActiveUserStatisticsLogMaxFileSize <ByteQuantifiedSize>]
+ [-ActiveUserStatisticsLogPath <LocalLongFullPath>]
+ [-AgentLogEnabled <$true | $false>]
+ [-AgentLogMaxAge <EnhancedTimeSpan>]
+ [-AgentLogMaxDirectorySize <Unlimited>]
+ [-AgentLogMaxFileSize <Unlimited>]
+ [-AgentLogPath <LocalLongFullPath>]
+ [-AntispamAgentsEnabled <$true | $false>]
+ [-Confirm]
+ [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-ContentConversionTracingEnabled <$true | $false>]
+ [-DelayNotificationTimeout <EnhancedTimeSpan>]
+ [-DeltaSyncClientCertificateThumbprint <String>]
+ [-DnsLogEnabled <$true | $false>]
+ [-DnsLogMaxAge <EnhancedTimeSpan>]
+ [-DnsLogMaxDirectorySize <Unlimited>]
+ [-DnsLogMaxFileSize <Unlimited>]
+ [-DnsLogPath <LocalLongFullPath>]
+ [-DomainController <Fqdn>]
+ [-ExternalDNSAdapterEnabled <$true | $false>]
+ [-ExternalDNSAdapterGuid <Guid>]
+ [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-ExternalDNSServers <MultiValuedProperty>]
+ [-ExternalIPAddress <IPAddress>]
+ [-HttpProtocolLogEnabled <$true | $false>]
+ [-HttpProtocolLogFilePath <LocalLongFullPath>]
+ [-HttpProtocolLogLoggingLevel <None | Verbose>]
+ [-HttpProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-HttpProtocolLogMaxDirectorySize <ByteQuantifiedSize>]
+ [-HttpProtocolLogMaxFileSize <ByteQuantifiedSize>]
+ [-HttpTransportSyncProxyServer <String>]
+ [-InternalDNSAdapterEnabled <$true | $false>]
+ [-InternalDNSAdapterGuid <Guid>]
+ [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-InternalDNSServers <MultiValuedProperty>]
  [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
- [-IntraOrgConnectorSmtpMaxMessagesPerConnection <Int32>] [-IrmLogEnabled <$true | $false>]
- [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>]
- [-MaxActiveTransportSyncJobsPerProcessor <Int32>] [-MaxConcurrentMailboxDeliveries <Int32>]
- [-MaxConcurrentMailboxSubmissions <Int32>] [-MaxConnectionRatePerMinute <Int32>]
- [-MaxNumberOfTransportSyncAttempts <Int32>] [-MaxOutboundConnections <Unlimited>]
- [-MaxPerDomainOutboundConnections <Unlimited>] [-MessageExpirationTimeout <EnhancedTimeSpan>]
- [-MessageRetryInterval <EnhancedTimeSpan>] [-MessageTrackingLogEnabled <$true | $false>]
- [-MessageTrackingLogMaxAge <EnhancedTimeSpan>] [-MessageTrackingLogMaxDirectorySize <Unlimited>]
- [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>] [-MessageTrackingLogPath <LocalLongFullPath>]
+ [-IntraOrgConnectorSmtpMaxMessagesPerConnection <Int32>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-MaxActiveTransportSyncJobsPerProcessor <Int32>]
+ [-MaxConcurrentMailboxDeliveries <Int32>]
+ [-MaxConcurrentMailboxSubmissions <Int32>]
+ [-MaxConnectionRatePerMinute <Int32>]
+ [-MaxNumberOfTransportSyncAttempts <Int32>]
+ [-MaxOutboundConnections <Unlimited>]
+ [-MaxPerDomainOutboundConnections <Unlimited>]
+ [-MessageExpirationTimeout <EnhancedTimeSpan>]
+ [-MessageRetryInterval <EnhancedTimeSpan>]
+ [-MessageTrackingLogEnabled <$true | $false>]
+ [-MessageTrackingLogMaxAge <EnhancedTimeSpan>]
+ [-MessageTrackingLogMaxDirectorySize <Unlimited>]
+ [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>]
+ [-MessageTrackingLogPath <LocalLongFullPath>]
  [-MessageTrackingLogSubjectLoggingEnabled <$true | $false>]
  [-OutboundConnectionFailureRetryInterval <EnhancedTimeSpan>]
- [-PickupDirectoryMaxHeaderSize <ByteQuantifiedSize>] [-PickupDirectoryMaxMessagesPerMinute <Int32>]
- [-PickupDirectoryMaxRecipientsPerMessage <Int32>] [-PickupDirectoryPath <LocalLongFullPath>]
- [-PipelineTracingEnabled <$true | $false>] [-PipelineTracingPath <LocalLongFullPath>]
- [-PipelineTracingSenderAddress <SmtpAddress>] [-PoisonMessageDetectionEnabled <$true | $false>]
- [-PoisonThreshold <Int32>] [-QueueMaxIdleTime <EnhancedTimeSpan>]
- [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>] [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
- [-ReceiveProtocolLogMaxFileSize <Unlimited>] [-ReceiveProtocolLogPath <LocalLongFullPath>]
- [-RecipientValidationCacheEnabled <$true | $false>] [-ReplayDirectoryPath <LocalLongFullPath>]
- [-RootDropDirectoryPath <String>] [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
- [-RoutingTableLogMaxDirectorySize <Unlimited>] [-RoutingTableLogPath <LocalLongFullPath>]
- [-SendProtocolLogMaxAge <EnhancedTimeSpan>] [-SendProtocolLogMaxDirectorySize <Unlimited>]
- [-SendProtocolLogMaxFileSize <Unlimited>] [-SendProtocolLogPath <LocalLongFullPath>]
- [-ServerStatisticsLogMaxAge <EnhancedTimeSpan>] [-ServerStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
- [-ServerStatisticsLogMaxFileSize <ByteQuantifiedSize>] [-ServerStatisticsLogPath <LocalLongFullPath>]
- [-TransientFailureRetryCount <Int32>] [-TransientFailureRetryInterval <EnhancedTimeSpan>]
+ [-PickupDirectoryMaxHeaderSize <ByteQuantifiedSize>]
+ [-PickupDirectoryMaxMessagesPerMinute <Int32>]
+ [-PickupDirectoryMaxRecipientsPerMessage <Int32>]
+ [-PickupDirectoryPath <LocalLongFullPath>]
+ [-PipelineTracingEnabled <$true | $false>]
+ [-PipelineTracingPath <LocalLongFullPath>]
+ [-PipelineTracingSenderAddress <SmtpAddress>]
+ [-PoisonMessageDetectionEnabled <$true | $false>]
+ [-PoisonThreshold <Int32>]
+ [-QueueLogMaxAge <EnhancedTimeSpan>]
+ [-QueueLogMaxDirectorySize <Unlimited>]
+ [-QueueLogMaxFileSize <Unlimited>]
+ [-QueueLogPath <LocalLongFullPath>]
+ [-QueueMaxIdleTime <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RecipientValidationCacheEnabled <$true | $false>]
+ [-ReplayDirectoryPath <LocalLongFullPath>]
+ [-RootDropDirectoryPath <String>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-ServerStatisticsLogMaxAge <EnhancedTimeSpan>]
+ [-ServerStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
+ [-ServerStatisticsLogMaxFileSize <ByteQuantifiedSize>]
+ [-ServerStatisticsLogPath <LocalLongFullPath>]
+ [-TransientFailureRetryCount <Int32>]
+ [-TransientFailureRetryInterval <EnhancedTimeSpan>]
  [-UseDowngradedExchangeServerAuth <$true | $false>]
- [-WhatIf] [-AgentLogEnabled <$true | $false>]
- [-AgentLogMaxAge <EnhancedTimeSpan>] [-AgentLogMaxDirectorySize <Unlimited>]
- [-AgentLogMaxFileSize <Unlimited>] [-AgentLogPath <LocalLongFullPath>] [-DnsLogEnabled <$true | $false>]
- [-DnsLogMaxAge <EnhancedTimeSpan>] [-DnsLogMaxDirectorySize <Unlimited>] [-DnsLogMaxFileSize <Unlimited>]
- [-DnsLogPath <LocalLongFullPath>] [-QueueLogMaxAge <EnhancedTimeSpan>] [-QueueLogMaxDirectorySize <Unlimited>]
- [-QueueLogMaxFileSize <Unlimited>] [-QueueLogPath <LocalLongFullPath>] [-WlmLogMaxAge <EnhancedTimeSpan>]
- [-WlmLogMaxDirectorySize <Unlimited>] [-WlmLogMaxFileSize <Unlimited>] [-WlmLogPath <LocalLongFullPath>]
+ [-WhatIf]
+ [-WlmLogMaxAge <EnhancedTimeSpan>]
+ [-WlmLogMaxDirectorySize <Unlimited>]
+ [-WlmLogMaxFileSize <Unlimited>]
+ [-WlmLogPath <LocalLongFullPath>]
  [<CommonParameters>]
 ```
 
@@ -107,7 +160,15 @@ This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the server that you want to modify.
+The Identity parameter specifies the Transport server that you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
@@ -210,6 +271,117 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentLogEnabled
+The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentLogMaxAge
+The AgentLogMaxAge parameter specifies the maximum age for the agent log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentLogMaxDirectorySize
+The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentLogMaxFileSize
+The AgentLogMaxFileSize parameter specifies the maximum size of each agent log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentLogPath
+The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -397,6 +569,117 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DnsLogEnabled
+The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DnsLogMaxAge
+The DnsLogMaxAge parameter specifies the maximum age for the DNS log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automatic removal of DNS log files because of their age.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DnsLogMaxDirectorySize
+The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs in the DNS log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 100 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log directory.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DnsLogMaxFileSize
+The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log files.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DnsLogPath
+The DnsLogPath parameter specifies the DNS log directory location. The default value is blank ($null), which indicates no location is configured. If you enable DNS logging, you need to specify a local file path for the DNS log files by using this parameter. If the path contains spaces, enclose the entire path value in quotation marks (").
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -918,8 +1201,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB). If you enter a value of unlimited, no size limit is imposed on the message tracking log files.
@@ -997,8 +1278,6 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
@@ -1154,6 +1433,102 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QueueLogMaxAge
+The QueueLogMaxAge parameter specifies the maximum age of the queue log files. Log files that are older than the specified value are deleted. The default value is 7 days.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the QueueLogMaxAge parameter to 00:00:00 prevents the automatic removal of queue log files because of their age.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QueueLogMaxDirectorySize
+The QueueLogMaxDirectorySize parameter specifies the maximum size of the queue log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 200 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log directory.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QueueLogMaxFileSize
+The QueueLogMaxFileSize parameter specifies the maximum size of the queue log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log files.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QueueLogPath
+The QueueLogPath parameter specifies the path of the queue log directory. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\QueueViewer. Setting the value of this parameter to $null disables queue logging.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1590,324 +1965,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentLogEnabled
-The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentLogMaxAge
-The AgentLogMaxAge parameter specifies the maximum age for the agent log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentLogMaxDirectorySize
-The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentLogMaxFileSize
-The AgentLogMaxFileSize parameter specifies the maximum size of each agent log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentLogPath
-The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsLogEnabled
-The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsLogMaxAge
-The DnsLogMaxAge parameter specifies the maximum age for the DNS log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automatic removal of DNS log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsLogMaxDirectorySize
-The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs in the DNS log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 100 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsLogMaxFileSize
-The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log files.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsLogPath
-The DnsLogPath parameter specifies the DNS log directory location. The default value is blank ($null), which indicates no location is configured. If you enable DNS logging, you need to specify a local file path for the DNS log files by using this parameter. If the path contains spaces, enclose the entire path value in quotation marks (").
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueueLogMaxAge
-The QueueLogMaxAge parameter specifies the maximum age of the queue log files. Log files that are older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the QueueLogMaxAge parameter to 00:00:00 prevents the automatic removal of queue log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueueLogMaxDirectorySize
-The QueueLogMaxDirectorySize parameter specifies the maximum size of the queue log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 200 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueueLogMaxFileSize
-The QueueLogMaxFileSize parameter specifies the maximum size of the queue log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log files.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueueLogPath
-The QueueLogPath parameter specifies the path of the queue log directory. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\QueueViewer. Setting the value of this parameter to $null disables queue logging.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

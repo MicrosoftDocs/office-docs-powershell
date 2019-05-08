@@ -25,8 +25,11 @@ New-ComplianceTag [-Name] <String>
  [-Comment <String>]
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
  [-IsRecordLabel <$true | $false>]
  [-Notes <String>]
+ [-Regulatory <$true | $false>]
  [-RetentionAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
@@ -126,6 +129,68 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePlanProperty
+The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
+
+- Get-FilePlanPropertyAuthority | Format-List Name
+
+- Get-FilePlanPropertyCategory | Format-List Name
+
+- Get-FilePlanPropertyCitation | Format-List Name
+
+- Get-FilePlanPropertyDepartment | Format-List Name
+
+- Get-FilePlanPropertyReferenceId | Format-List Name
+
+- Get-FilePlanPropertySubCategory | Format-List Name
+
+A valid value for this parameter involves two steps:
+
+- A variable to store the file plan properties as a PSCustomObject using the following syntax:
+
+  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+
+  For example:
+
+  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+
+- A second variable to convert the PSCustomObject to a JSON object using the following syntax:
+
+  $Variable2 = ConvertTo-Json $Variable1
+
+  For example:
+
+  $fpStr = ConvertTo-Json $retentionLabelAction
+
+You use the second variable as the value for this parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsRecordLabel
 The IsRecordLabel parameter specifies whether the label is a record label. Valid values are:
 
@@ -150,6 +215,21 @@ The Notes parameter specifies an optional note. If you specify a value that cont
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Regulatory
+{{ Fill Regulatory Description }}
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

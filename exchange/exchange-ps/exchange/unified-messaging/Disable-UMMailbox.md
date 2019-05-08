@@ -42,13 +42,9 @@ This example disables Unified Messaging on the mailbox for tonysmith@contoso.com
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to disable for Unified Messaging. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to disable for Unified Messaging. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

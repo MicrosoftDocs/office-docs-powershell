@@ -66,21 +66,27 @@ This example updates all public folder mailboxes.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the public folder mailbox. This parameter accepts the following values:
+The Identity parameter specifies the public folder mailbox that you want to update. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
 
-- Legacy Exchange DN
+- Email address
 
-- SMTP address
+- GUID
 
-- Alias
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

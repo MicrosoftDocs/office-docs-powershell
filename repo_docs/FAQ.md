@@ -4,7 +4,7 @@
 It is best practice to keep each sentence or idea on its own line.
 This is so that anyone that is reviewing a commit can quickly and easily see what changed.
 If you have a giant string of text on a single line then Git just flags that entire line as a 'change'.
-To learn more about this concept, see http://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
+To learn more about this concept, see https://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
 
 ## When will my content go live?
 
@@ -41,6 +41,10 @@ Every cmdlet reference topic needs at least the following in the metadata field 
 external help file: 
 applicable: Skype for Business Server 2015
 title: Add-CsSlaDelegates
+author:
+ms.author:
+ms.reviewer:
+manager:
 schema: 2.0.0
 ```
 The *external help file* tag is for the docs.microsoft.com infrastructure. 
@@ -52,6 +56,12 @@ These tags have to be added to the docs.microsoft.com infrastructure.
 If you try to include a tag that has not been added then the build will fail.
 
 The *title* tag is for metrics. More information about metrics coming.
+
+The *author* is the GitHub alias of the person that owns this topic. Usually the PM or sometimes a dev that owns the cmdlet.
+The *ms.author* is the Microsoft alias of the same author.
+The *ms.reviewer* is the Microsoft alias of someone that can approve any technical changes (if different than the author).
+The *manager* is the Microsoft alias of a manager for the team that owns the cmdlet. This is useful if the person that owns the cmdlet leaves the company. The manager will be reached to in order to find the new author.
+
 
 The *schema* tag let's the build system know what schema to use. 
 The 2.0.0 is the only supported schema currently.

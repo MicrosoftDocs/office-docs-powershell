@@ -198,7 +198,8 @@ Accept wildcard characters: False
 ```
 
 ### -Hosted
-{{Fill Hosted Description}}
+
+Not used.
 
 ```yaml
 Type: Boolean
@@ -266,7 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPointObjective
-{{Fill RecoveryPointObjective Description}}
+
+Not used.
 
 ```yaml
 Type: Int32
@@ -336,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustServerCertificate
-{{Fill TrustServerCertificate Description}}
+Sets a value that indicates whether the channel will be encrypted while bypassing walking the certificate chain to validate trust.
 
 ```yaml
 Type: Boolean

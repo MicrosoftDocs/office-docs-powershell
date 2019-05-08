@@ -81,7 +81,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced> "C:\My Documents\Oscar Evans Analysis.csv"
+$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
 This example gets the specified calendar item from Oscar Evans' mailbox, stores the item as a variable and writes the advanced analysis of the item to a CSV file.
@@ -90,7 +90,7 @@ For basic analysis of the item, don't include the DetailLevel parameter, or use 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML > "C:\My Documents\Jasen Kozma Analysis.html"
+Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
 This example analyzes the calendar items that were exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter and writes the advanced analysis of the items to an HTML file.

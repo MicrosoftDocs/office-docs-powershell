@@ -51,7 +51,13 @@ This example sets a new path for the mailbox database specified by the mailbox d
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID, distinguished name (DN) or name of the database.
+The Identity parameter specifies the database that you want to move. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

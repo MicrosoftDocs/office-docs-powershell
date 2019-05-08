@@ -68,7 +68,13 @@ This example adds a copy of mailbox database DB3 to the Mailbox server MBX4. Rep
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the mailbox database being copied. Database names must be unique within the Exchange organization.
+The Identity parameter specifies the mailbox database that's being copied. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

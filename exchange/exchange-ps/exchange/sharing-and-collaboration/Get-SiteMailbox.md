@@ -135,23 +135,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. You can use one of the following values:
+The Identity parameter specifies the identity of the site mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
-- Domain\\Account
+- Email address
 
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
+- GUID
 
 ```yaml
 Type: RecipientIdParameter

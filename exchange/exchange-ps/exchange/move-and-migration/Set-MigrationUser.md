@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MigrationUser [-Identity] <MigrationUserIdParameter> [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>] [-Confirm] [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>]
- [-Partition <MailboxIdParameter>] [-StartAfter <DateTime>] [-SyncNow] [-WhatIf] [<CommonParameters>]
+Set-MigrationUser [-Identity] <MigrationUserIdParameter>
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-LargeItemLimit <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-StartAfter <DateTime>]
+ [-SyncNow]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,8 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the cloud-based service.
-
 The CompleteAfter parameter specifies a delay before the user is completed. Data migration for the user will start, but won't complete until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -114,21 +118,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -176,8 +165,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the user is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".

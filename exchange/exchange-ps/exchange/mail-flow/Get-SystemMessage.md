@@ -60,7 +60,7 @@ This example displays detailed information for the specified custom quota messag
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html > "C:\My Documents\Default System Messages.html"
+Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default System Messages.html"
 ```
 
 This example outputs the list of all default system messages in all languages to an HTML file named C:\\My Documents\\Default System Messages.html.

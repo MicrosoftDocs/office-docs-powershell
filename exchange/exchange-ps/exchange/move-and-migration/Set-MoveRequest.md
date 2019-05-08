@@ -21,17 +21,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MoveRequest [-Identity] <MoveRequestIdParameter> [-AcceptLargeDataLoss] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>] [-IgnoreRuleLimitErrors <$true | $false>]
- [-Priority <Normal | High>] [-Protect <$true | $false>] [-RemoteCredential <PSCredential>]
- [-RemoteGlobalCatalog <Fqdn>] [-RemoteHostName <Fqdn>] [-SuspendWhenReadyToComplete <$true | $false>]
- [-WhatIf] [-ArchiveTargetDatabase <DatabaseIdParameter>] [-CompleteAfter <DateTime>]
- [-CompletedRequestAgeLimit <Unlimited>] [-IncrementalSyncInterval <TimeSpan>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-PreventCompletion <$true | $false>]
- [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>] [-TargetDatabase <DatabaseIdParameter>]
- [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>]
- [-ProxyToMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+Set-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-AcceptLargeDataLoss]
+ [-ArchiveTargetDatabase <DatabaseIdParameter>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreRuleLimitErrors <$true | $false>]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-PreventCompletion <$true | $false>]
+ [-Priority <Normal | High>]
+ [-Protect <$true | $false>]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteGlobalCatalog <Fqdn>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-SuspendWhenReadyToComplete <$true | $false>]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,6 +110,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ArchiveTargetDatabase
+This parameter is available only in on-premises Exchange.
+
+The ArchiveTargetDatabase parameter specifies the target mailbox database for the personal archive. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BadItemLimit
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
@@ -121,6 +163,46 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompleteAfter
+The CompleteAfter parameter specifies a delay before the request is completed. The request is started, but not completed until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -172,194 +254,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-This parameter is available only in on-premises Exchange.
-
-The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
-
-- Lowest
-
-- Lower
-
-- Low
-
-- Normal: This is the default value.
-
-- High
-
-- Higher
-
-- Highest
-
-- Emergency
-
-```yaml
-Type: Normal | High
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protect
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteCredential
-The RemoteCredential parameter specifies an administrator who has permission to perform the mailbox move, for example, Administrator@ humongousinsurance.com.
-
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteGlobalCatalog
-The RemoteGlobalCatalog parameter specifies the FQDN of the global catalog server for the remote forest.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-The RemoteHostName parameter specifies the FQDN of the cross-forest organization from which you're moving the mailbox.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete parameter specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this parameter, we recommend using CompleteAfter parameter.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArchiveTargetDatabase
-This parameter is available only in on-premises Exchange.
-
-The ArchiveTargetDatabase parameter specifies the Exchange target database to which you're moving the personal archive. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
-
-You can use the following values to specify the target database:
-
-- GUID of the database
-
-- Database name
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompleteAfter
-The CompleteAfter parameter specifies a delay before the request is completed. The request is started, but not completed until the date/time you specify with this parameter.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
-
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
-
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request is kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -428,6 +322,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MoveOptions
+The MoveOptions parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+
+Don't use this parameter with the SkipMoving parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreventCompletion
 The PreventCompletion parameter specifies whether to run the move request, but not allow it to complete. Valid values are:
 
@@ -440,6 +351,163 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+This parameter is available only in on-premises Exchange.
+
+The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
+
+- Lowest
+
+- Lower
+
+- Low
+
+- Normal: This is the default value.
+
+- High
+
+- Higher
+
+- Highest
+
+- Emergency
+
+```yaml
+Type: Normal | High
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protect
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyToMailbox
+This parameter is available only in the cloud-based service.
+
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteCredential
+The RemoteCredential parameter specifies the username and password an administrator who has permission to perform the mailbox move.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteGlobalCatalog
+The RemoteGlobalCatalog parameter specifies the FQDN of the global catalog server for the remote forest.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteHostName
+The RemoteHostName parameter specifies the FQDN of the cross-forest organization from which you're moving the mailbox.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -489,16 +557,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SuspendWhenReadyToComplete
+The SuspendWhenReadyToComplete parameter specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this parameter, we recommend using CompleteAfter parameter.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+The TargetDatabase parameter specifies the target mailbox database for the mailbox. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -512,110 +597,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MigrationMailbox
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: MailboxIdParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MoveOptions
-The MoveOptions parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
-
-Don't use this parameter with the SkipMoving parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyToMailbox
-This parameter is available only in the cloud-based service.
-
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestExpiryInterval
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceEndpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
