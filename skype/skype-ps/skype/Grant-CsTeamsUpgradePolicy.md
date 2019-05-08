@@ -47,10 +47,10 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  To be upgraded to TeamsOnly mode, users must be either homed in Skype for Business Online or have no Skype account anywhere.    
     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
 - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
-- When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. However, this functionality is currently limited to customers in the Technology Adoption Program (TAP) and is expected to be avaiable for all customers in May 2019. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+- When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 **IMPORTANT**
-When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled. Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled (but chat in the context of a Teams meeting is still allowed). Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the corresponding settings in TeamsMessagingPolicy, TeamsCallingPolicy, and TeamsMeetingPolicy to determine if those settings would be superceded by TeamsUpgradePolicy and if so, an informational message is provided in PowerShell.  It is not necessary to set these other policy settings. This is for informational purposes only. Below is an example of what the PowerShell warning looks like:
 
@@ -167,8 +167,6 @@ Accept wildcard characters: False
 ### -MigrateMeetingsToTeams
 Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
-> [!NOTE]
->The ability to trigger meeting migration when granting TeamsUpgradePolicy  is currently available to TAP customers only. Microsoft expects to make this functionality to all customers in May 2019.
 
 
 ```yaml
