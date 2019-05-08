@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Specifies the site subscription from which to get site collections.
 
-The type must be a valid URL, in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

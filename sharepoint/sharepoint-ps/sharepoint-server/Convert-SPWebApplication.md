@@ -52,7 +52,7 @@ This example converts a web application specified by the Identity parameter from
 ## PARAMETERS
 
 ### -Identity
-Specifies the URL of the web application that you want to convert, for example: http://mysite/app1
+Specifies the URL of the web application that you want to convert, for example: https://mysite/app1
 
 ```yaml
 Type: SPWebApplicationPipeBind

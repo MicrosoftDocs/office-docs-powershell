@@ -61,7 +61,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 $ssap = Get-SPEnterpriseSearchServiceApplicationProxy
 $hostname = hostname
-$web = get-spsite | get-spweb | where {$_.Url-eq "http://$hostname"}
+$web = get-spsite | get-spweb | where {$_.Url-eq "https://$hostname"}
 $owner = new-object Microsoft.Office.Server.Search.Administration.SearchObjectOwner -ArgumentList @([Microsoft.Office.Server.Search.Administration.SearchObjectLevel]::SPWeb,$web)
 $mgr = new-object Microsoft.Office.Server.Search.Administration.Query.FederationManager -ArgumentList $ssap
 $source = $mgr.GetSourceByName("Local SharePoint Results", $owner)
@@ -69,7 +69,7 @@ Import-SPEnterpriseSearchPopularQueries -SearchApplicationProxy $ssap -Filename 
 ```
 
 This example uses the Import-SPEnterpriseSearchPopularQueries cmdlet to import the queries file that is named C:\input.txt and associate with it the Result Source referenced by $source and the SPWeb referenced by $web.
-The example defines the variable $web as the SPWeb with URL http://hostname, and the variable $source as the Result Source named "Local SharePoint Results" at the SPWeb referenced by $web.
+The example defines the variable $web as the SPWeb with URL https://hostname, and the variable $source as the Result Source named "Local SharePoint Results" at the SPWeb referenced by $web.
 
 ## PARAMETERS
 

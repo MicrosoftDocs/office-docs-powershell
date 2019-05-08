@@ -61,7 +61,7 @@ $ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
 $ruleCollection.Add($rule)
 $displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
 $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-$web = Get-SPWeb http://webUrl
+$web = Get-SPWeb https://webUrl
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
 $proxy = Get-SPEnterpriseSearchServiceApplicationProxy
 New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `

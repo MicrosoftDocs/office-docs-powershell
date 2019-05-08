@@ -32,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------------
 ```
-Remove-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
+Remove-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename
 ```
 
-This example removes the sandboxed solution contoso_solution.wsp from the site http://sitename.
+This example removes the sandboxed solution contoso_solution.wsp from the site https://sitename.
 
 
 ## PARAMETERS
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ### -Site
 Remove the sandboxed solution from the specified site collection.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

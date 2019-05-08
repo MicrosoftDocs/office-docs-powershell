@@ -56,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
 ```
 
-Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
+Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL https://contoso-admin.sharepoint.com.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -68,7 +68,7 @@ $cred = New-Object -TypeName System.Management.Automation.PSCredential -argument
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credential $cred
 ```
 
-Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
+Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL https://contoso-admin.sharepoint.com.
 
 ### -----------------------EXAMPLE 3-----------------------------
 

@@ -62,9 +62,9 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### -----------------------EXAMPLE 1-----------------------------
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
+Set-SPOTenant -NoAccessRedirectUrl 'https://www.contoso.com'
 ```
-This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
+This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to https://www.contoso.com. 
 
 
 ### -----------------------EXAMPLE 2-----------------------------

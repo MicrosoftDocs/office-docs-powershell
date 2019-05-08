@@ -74,10 +74,10 @@ This example returns a list of all installed SITE scoped Features.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-Get-SPSite http://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
+Get-SPSite https://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
 ```
 
-This example returns the name and identifier (ID) of each uniquely enabled Feature on every SPWeb object in the site collection at http://somesite.
+This example returns the name and identifier (ID) of each uniquely enabled Feature on every SPWeb object in the site collection at https://somesite.
 
 ## PARAMETERS
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ### -Site
 Specifies the name of the site collection from which to get enabled Features.
 
-The type must be a valid URL for a site collection, in the form http://server_name .
+The type must be a valid URL for a site collection, in the form https://server_name .
 
 ```yaml
 Type: SPSitePipeBind
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ### -Web
 Specifies the URL or GUID of the Web.
 
-The type must be a valid URL, in the form  http://server_name , or a GUID, in the form 1234-5678-9876-0987.
+The type must be a valid URL, in the form  https://server_name , or a GUID, in the form 1234-5678-9876-0987.
 
 ```yaml
 Type: SPWebPipeBind
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the name of the Web application from which to get enabled Features.
 
-The type must be a valid URL to the Web application in the form http://server_name .
+The type must be a valid URL to the Web application in the form https://server_name .
 
 ```yaml
 Type: SPWebApplicationPipeBind

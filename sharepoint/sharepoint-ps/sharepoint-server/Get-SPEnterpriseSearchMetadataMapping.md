@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -CrawledProperty
 Specifies the crawled property from which to return mappings.
 
-The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form http://server_name, or an instance of a valid CrawledProperty object.
+The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form https://server_name, or an instance of a valid CrawledProperty object.
 
 ```yaml
 Type: CrawledPropertyPipeBind
