@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------ 
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-Get-SPEnterpriseSearchQueryAuthority -Identity 'http://contoso.com' -SearchApplication $ssa
+Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
 ```
 
-This example obtains the authoritative page for the URL http://contoso.com from the search service application named 'Search Service Application'.
+This example obtains the authoritative page for the URL https://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
@@ -50,7 +50,7 @@ This example obtains the collection of query authority pages from a search servi
 ### -Identity
 Specifies the query authority to get.
 
-The type must be a valid URL, in the form http://server_name; or an instance of a valid AuthorityPage object.
+The type must be a valid URL, in the form https://server_name; or an instance of a valid AuthorityPage object.
 
 ```yaml
 Type: AuthorityPagePipeBind

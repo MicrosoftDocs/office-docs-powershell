@@ -43,10 +43,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
+Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
-This examples returns the setting for the web application http://sphvm-8044.
+This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```

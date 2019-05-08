@@ -192,7 +192,17 @@ This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the server that you want to modify.
+The Identity parameter specifies the Mailbox server that hosts the Transport service configuration you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+You can't use this parameter on an Edge Transport server.
 
 ```yaml
 Type: ServerIdParameter
