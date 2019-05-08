@@ -37,10 +37,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site http://myserver/sites/team
+New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site https://myserver/sites/team
 ```
 
-This example creates a new query keyword for the site http://myserver/sites/team with the term Tangible.
+This example creates a new query keyword for the site https://myserver/sites/team with the term Tangible.
 
 
 ## PARAMETERS
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ### -Site
 Associates the new keyword term to the specified results URL.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 
 ```yaml

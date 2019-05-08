@@ -44,10 +44,10 @@ Returns all SQL Server instances available for use.
 
 ### Example 2 
 ```
-Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext http://siteUrl -DatabaseServergroup DEFAULT
+Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext https://siteUrl -DatabaseServergroup DEFAULT
 ```
 
-Returns the database server ACCSQL from the DEFAULT database server group using the service context from http://siteUrl.
+Returns the database server ACCSQL from the DEFAULT database server group using the service context from https://siteUrl.
 
 
 ## PARAMETERS

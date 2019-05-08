@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'http://exhelponline'
+Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'https://exhelponline'
 ```
 
 This example changes the Help location for the Exchange admin center.
