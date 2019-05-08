@@ -24,11 +24,21 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ## DESCRIPTION
 Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization program](https://docs.microsoft.com/en-us/office365/admin/manage/release-options-in-office-365?view=o365-worldwide), you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
 
+### Current limitations
+
 1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://<tenantname>.sharepoint.com
 2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/en-us/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
 3.	The root site **should not have had** the classic publishing feature enabled in the past (at the site or web level)
 4.	The site must have quick launch site navigation enabled. [How do I do this?](https://support.office.com/en-us/article/customize-site-navigation-c040f014-acbb-4c98-8174-48428cf02b25#bm1a)
- 
+
+### On successful execution of the cmdlet, customers can expect:
+
+1.	A new modern home page will be created for the root site (only the root site web, not subsites of the root site if there are any)
+2.	Full width pages with horizontal nav will be available (top nav from classic view will be hidden, can be seen in classic pages like the site settings page)
+3.	NoScript will be turned ON
+4.	Minor Versioning on the Site Pages library will be enabled
+5.	Site Pages will be the default content type in the Site Pages library
+6. No change in permissions or content in the root site
 
 ## EXAMPLES
 
