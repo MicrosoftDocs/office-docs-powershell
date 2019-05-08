@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```
-site = Get-SPSite http://myspserver
+site = Get-SPSite https://myspserver
 
 C:\PS>$subscription = $site.SiteSubscription
 

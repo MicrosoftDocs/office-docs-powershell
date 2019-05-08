@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE-------------------- 
 ```
-Get-SPSiteSubscriptionEdiscoverySearchScope - Identity http://contoso.com
+Get-SPSiteSubscriptionEdiscoverySearchScope -Identity https://contoso.com
 ```
 
 This example displays the search scope for the eDiscovery hub for the specified site collection.

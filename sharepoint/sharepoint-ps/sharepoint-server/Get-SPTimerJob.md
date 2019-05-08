@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 ### ---------------------EXAMPLE 01--------------------- 
 ```
-Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
+Get-SPTimerJob -WebApplication "https://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
