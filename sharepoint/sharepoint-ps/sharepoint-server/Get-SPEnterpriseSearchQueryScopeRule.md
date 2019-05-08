@@ -43,10 +43,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 $scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSite | Set-SPEnterpriseSearchQueryScopeRule -Url http://criticalSite -UrlScopeRuleType Url
+Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Set-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite -UrlScopeRuleType Url
 ```
 
-This example gets a reference to a scope rule for the URL http://criticalSite, and sets its rule type to URL.
+This example gets a reference to a scope rule for the URL https://criticalSite, and sets its rule type to URL.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 Returns query scope rules for the specified results URL.
 

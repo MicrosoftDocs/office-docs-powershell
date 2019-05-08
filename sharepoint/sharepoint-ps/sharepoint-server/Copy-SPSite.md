@@ -37,10 +37,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------- 
 ```
-Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
+Copy-SPSite https://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl https://contoso/sites/NewTeam
 ```
 
-This example makes a copy of the http://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, http://contoso/sites/NewTeam and a new Site ID.
+This example makes a copy of the https://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, https://contoso/sites/NewTeam and a new Site ID.
 
 ## PARAMETERS
 

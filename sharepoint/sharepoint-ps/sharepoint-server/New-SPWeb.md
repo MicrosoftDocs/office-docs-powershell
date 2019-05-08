@@ -36,10 +36,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-New-SPWeb http://somesite/subweb1 -Template "STS#0"
+New-SPWeb https://somesite/subweb1 -Template "STS#0"
 ```
 
-This example creates a new subsite by using the Team Site template at the provided URL (http://somesite/subweb1).
+This example creates a new subsite by using the Team Site template at the provided URL (https://somesite/subweb1).
 The Team Site template is a value referenced as the variable STS#0 for the Template parameter.
 
 
@@ -48,7 +48,7 @@ The Team Site template is a value referenced as the variable STS#0 for the Templ
 ### -Url
 Specifies the URL where the new site is to be created.
 The URL must be inside an existing site collection.
-The URL must be a valid URL, in the form http://server_name/site1.
+The URL must be a valid URL, in the form https://server_name/site1.
 
 ```yaml
 Type: String

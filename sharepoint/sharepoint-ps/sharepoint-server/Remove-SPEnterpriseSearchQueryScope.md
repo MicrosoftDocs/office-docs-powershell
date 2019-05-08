@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ### -Url
 Filters to delete scopes of the specified results URL.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: Uri
