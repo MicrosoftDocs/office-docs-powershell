@@ -12,8 +12,7 @@ ms.reviewer:
 
 
 ## SYNOPSIS
-Enables the modern comunication site experience on an existing site.
-
+Enables the modern communication site experience on an existing site.
 
 ## SYNTAX
 
