@@ -65,7 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the server you want to view. When you use this parameter on a Mailbox server, the parameter returns the transport configuration of the Transport service on specified server. You can't use this parameter on an Edge Transport server.
+The Identity parameter specifies the Transport server that you want to view. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: TransportServerIdParameter
