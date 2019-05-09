@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-Get-SPSite http://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
+Get-SPSite https://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
 ```
 
 This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
@@ -57,10 +57,10 @@ This example sets the secondary owner on a set of site collections to DOMAIN\Jdo
 
 ### --------------------EXAMPLE 2---------------------
 ```
-Set-SPSite -identity "http://sitename" -MaxSize 4000000 -WarningSize 2000000
+Set-SPSite -identity "https://sitename" -MaxSize 4000000 -WarningSize 2000000
 ```
 
-This example configures the Quota settings for the site collection http://sitename.
+This example configures the Quota settings for the site collection https://sitename.
 
 
 ## PARAMETERS
@@ -68,7 +68,7 @@ This example configures the Quota settings for the site collection http://sitena
 ### -Identity
 Specifies the URL or GUID of the site collection to configure, or refers to an SPSite object that contains sites to configure.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

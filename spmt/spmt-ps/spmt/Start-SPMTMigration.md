@@ -29,7 +29,7 @@ This cmdlet will start the registered SPMT migration.
 ```
 #Define SharePoint 2013 data source#
 
-$Global:SourceSiteUrl = "http://YourOnPremSite/"
+$Global:SourceSiteUrl = "https://YourOnPremSite/"
 $Global:OnPremUserName = "Yourcomputer\administrator"
 $Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force
 $Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword

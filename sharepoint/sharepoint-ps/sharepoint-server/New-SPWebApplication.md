@@ -39,11 +39,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\jdoe")
+New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "http://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\jdoe")
 ```
 
-This example creates a new Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
+This example creates a new Web application by using an internal host header of sharepoint.contoso.com and a public URL of http://www.contoso.com.
 
+### ------------------EXAMPLE-----------------------
+```
+New-SPWebApplication -Name "Contoso Internet Site" -Port 443 -SecureSocketsLayer -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com:443" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\jdoe")
+```
+
+This example creates a new SSL enabled Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
 
 ## PARAMETERS
 

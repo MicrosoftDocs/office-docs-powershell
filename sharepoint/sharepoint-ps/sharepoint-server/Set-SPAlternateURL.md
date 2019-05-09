@@ -67,7 +67,7 @@ This example changes the zone of the alternate URL for the specified Web applica
 ### -Identity
 Specifies the URL or GUID of the alternate URL to change.
 
-The type must be a valid URL, in the form http://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPAlternateUrlPipeBind
