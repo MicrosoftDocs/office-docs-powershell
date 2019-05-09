@@ -51,7 +51,7 @@ This example sets the job expiration to 14 days and the number of worker process
 ### -Identity
 Specifies the URL or GUID of the instance of the Machine Translation service to set.
 
-The type must be a valid URL in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: TranslationServiceApplicationPipeBind

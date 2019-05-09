@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1-----------------------
 ```
 Start-SPAssignment -global
-$w = Get-SPWeb http://MyWeb
+$w = Get-SPWeb https://MyWeb
 $w | Set-SPWeb -title "Accounting"
 Stop-SPAssignment -global
 ```
@@ -58,7 +58,7 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 ### ------------------EXAMPLE 2-----------------------
 ```
 $gc = Start-SPAssignment
-$web = $gc | Get-SPWeb http://MyWeb
+$web = $gc | Get-SPWeb https://MyWeb
 $web | Set-SPWeb -title "Accounting"
 Stop-SPAssignment -Identity $gc
 ```
