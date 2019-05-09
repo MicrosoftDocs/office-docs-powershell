@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Set-SPWorkflowConfig -webapplication http://sitename DeclarativeWorkflowsEnabled $true -EmailNoPermissionParticipantsEnabled $true -SendDocumentToExternalParticipants $false
+Set-SPWorkflowConfig -webapplication https://sitename DeclarativeWorkflowsEnabled $true -EmailNoPermissionParticipantsEnabled $true -SendDocumentToExternalParticipants $false
 ```
 
 This example sets the workflow settings for the specified Web application to turn on declarative workflows, turn on e-mail to participants who do not have permissions to the site and turn off the functionality to send e-mail messages as attachments to external participants.
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the name or URL of the Web application.
 
-The type must be a valid name or GUID, in the form WebApplication-1212, or a URL, in the form http://server_name/WebApplication-1212.
+The type must be a valid name or GUID, in the form WebApplication-1212, or a URL, in the form https://server_name/WebApplication-1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind
