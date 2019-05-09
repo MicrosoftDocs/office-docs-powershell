@@ -40,14 +40,20 @@ Use this cmdlet to enable the modern communication site experience at the classi
 5.	Site Pages will be the default content type in the Site Pages library
 6. No change in permissions or content in the root site
 
-**STEP BY STEP INSTRUCTIONS**
 
-1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
-2. Make sure you have the SharePoint admin credentials for the tenant
-3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
-4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
+## EXAMPLES
 
-```PowerShell 
+### Example 1
+
+```
+Enable-SPOCommSite -SiteUrl https://contoso.sharepoint.com
+```
+
+This example enables the communication site experience at this https://contoso.sharepoint.com site. 
+
+### Example 2
+
+```
 $orgName="<tenantname>"
 $adminUPN = "<Current SharePoint Online Admin Login ID>"
 $rootSiteURL = "<Root site URL>"
@@ -55,6 +61,12 @@ $userCredential = Get-Credential -UserName $adminUPN -Message "Type the password
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
 Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
+**STEP BY STEP INSTRUCTIONS**
+
+1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
+2. Make sure you have the SharePoint admin credentials for the tenant
+3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
+4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
 5. Open SharePoint Online Management Shell from your computer 
 6. Execute the PowerShell commands from your notepad
 
@@ -86,16 +98,6 @@ We do not support root site that currently have or have had in the past enabled 
 
 >*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
 
-
-## EXAMPLES
-
-### Example 1
-
-```
-Enable-SPOCommSite -SiteUrl https://contoso.sharepoint.com
-```
-
-This example enables the communication site experience at this https://contoso.sharepoint.com site. 
 
 ## PARAMETERS
 
