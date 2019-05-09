@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$wa = Get-SPWebApplication http://webAppUrl
+$wa = Get-SPWebApplication https://webAppUrl
 $req = $wa | Get-SPRequestManagementSettings
 Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
 ```

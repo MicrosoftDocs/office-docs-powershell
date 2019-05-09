@@ -136,11 +136,11 @@ To download all of the update packages, follow these steps.
   
 1. Download all of the .cab files that are defined in the ExchangeHelpInfo.xml manifest file by using the **\<CabinetUrl\>** values. Save the files in a location that's easy to remember.
     
-2. Publish the .cab files on an internal web server (for example `http://intranet.contoso.com/downloads/exchange`).
+2. Publish the .cab files on an internal web server (for example `https://intranet.contoso.com/downloads/exchange`).
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `https://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Save the customized ExchangeHelpInfo.xml manifest file.
     
@@ -170,11 +170,11 @@ After you identify the update packages that apply to you, follow these steps:
   
 1. Download the applicable .cab files by using the **\<CabinetUrl\>** values. Save the files in a location that's easy to remember.
     
-2. Publish the .cab files on an internal web server (for example `http://intranet.contoso.com/downloads/exchange`).
+2. Publish the .cab files on an internal web server (for example `https://intranet.contoso.com/downloads/exchange`).
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `https://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `https://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Optionally, you can delete the **\<HelpInfo\>** sections that don't apply to you.
     
@@ -184,7 +184,7 @@ After you identify the update packages that apply to you, follow these steps:
   
 ### Step 3. Publish the customized ExchangeHelpInfo.xml manifest file on an internal web server
 
-Publish the customized ExchangeHelpInfo.xml manifest file from Step 2 on an internal web server that's accessible to your internal Exchange servers. For example, `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`. You'll use the URL value of this location in Step 4.
+Publish the customized ExchangeHelpInfo.xml manifest file from Step 2 on an internal web server that's accessible to your internal Exchange servers. For example, `https://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`. You'll use the URL value of this location in Step 4.
   
 Note that there's no relationship between the ExchangeHelpInfo.xml manifest file and .cab file locations. You can have them available at the same URL or on different servers.
   
@@ -192,7 +192,7 @@ Note that there's no relationship between the ExchangeHelpInfo.xml manifest file
   
 ### Step 4. Modify the registry of your Exchange servers to point to the customized ExchangeHelpInfo.xml manifest file
 
-You need the download location of the customized ExchangeHelpInfo.xml manifest file that you configured in Step 3. This example uses the value `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`.
+You need the download location of the customized ExchangeHelpInfo.xml manifest file that you configured in Step 3. This example uses the value `https://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`.
   
 1. Copy and paste the following text into Notepad, customize the URL for your environment, and save the file as UpdateExchangeHelp.reg in a location that's easy to remember.
     
@@ -200,7 +200,7 @@ You need the download location of the customized ExchangeHelpInfo.xml manifest f
   Windows Registry Editor Version 5.00
 
  [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\UpdateExchangeHelp]
- "ManifestUrl"="http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml"
+ "ManifestUrl"="https://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml"
   ```
 
 2. Run the UpdateExchangeHelp.reg file on your internal Exchange servers.

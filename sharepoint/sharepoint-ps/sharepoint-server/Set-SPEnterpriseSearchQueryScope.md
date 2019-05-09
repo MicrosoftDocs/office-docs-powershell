@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 $ssa = Get-SPenterpriseSearchServiceApplication
-Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage http://altServer
+Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage https://altServer
 ```
 
 This example obtains a reference to the scope named MustCrawl on the search service application named MySSA and changes the description, compilation type and alternate access URL.
@@ -52,7 +52,7 @@ This example obtains a reference to the scope named MustCrawl on the search serv
 ### -AlternateResultsPage
 Specifies the location to display results for the new query scope.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ### -Url
 Filters to delete scopes for the specified results URL.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml

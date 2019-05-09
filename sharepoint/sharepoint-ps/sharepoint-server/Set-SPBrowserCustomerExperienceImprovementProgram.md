@@ -64,7 +64,7 @@ This example turns off the browser Customer Experience Improvement Program for t
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
+Set-SPWebApplication https://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Sets the Customer Experience Improvement Program opt-in state for the specified site subscription.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Sets the Customer Experience Improvement Program opt-in state for the specified SharePoint Web application.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
 
 ```yaml
 Type: SPWebApplicationPipeBind
