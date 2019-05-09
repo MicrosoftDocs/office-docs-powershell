@@ -3,9 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
-author: DC Padur
+author: divyachapan
 ms.author: dipadur
-ms.reviewer:
+ms.reviewer: 
 ---
 
 # Enable-SPOCommSite
@@ -13,6 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Enables the modern communication site experience on an existing site.
+
 
 ## SYNTAX
 
@@ -39,6 +40,7 @@ Use this cmdlet to enable the modern communication site experience at the classi
 5.	Site Pages will be the default content type in the Site Pages library
 6. No change in permissions or content in the root site
 
+
 ## EXAMPLES
 
 ### Example 1
@@ -49,30 +51,9 @@ Enable-SPOCommSite -SiteUrl https://contoso.sharepoint.com
 
 This example enables the communication site experience at this https://contoso.sharepoint.com site. 
 
+### Example 2
 
-## PARAMETERS
-
-### -SiteUrl
-
-URL of the site for enabling the modern communication site experience. 
-
-### -DesignPackageId
-
-GUID identifying the [communication site design](https://support.office.com/en-gb/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). This is not a required input. If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
-
-1. Topic:	96c933ac-3698-44c7-9f4a-5fd17d71af9e
-2. Showcase:	6142d2a0-63a5-4ba0-aede-d9fefca2c767
-3. Blank:	f6cc5403-0d63-442e-96c0-285923709ffc
-
-
-### STEP BY STEP INSTRUCTIONS
-
-1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
-2. Make sure you have the SharePoint admin credentials for the tenant
-3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
-4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
-
-```PowerShell 
+```
 $orgName="<tenantname>"
 $adminUPN = "<Current SharePoint Online Admin Login ID>"
 $rootSiteURL = "<Root site URL>"
@@ -80,33 +61,79 @@ $userCredential = Get-Credential -UserName $adminUPN -Message "Type the password
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
 Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
+**STEP BY STEP INSTRUCTIONS**
+
+1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
+2. Make sure you have the SharePoint admin credentials for the tenant
+3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
+4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
 5. Open SharePoint Online Management Shell from your computer 
 6. Execute the PowerShell commands from your notepad
 
 
-### TROUBLESHOOTING
+**TROUBLESHOOTING**
 
-### Error case 1: Wrong credentials
+**Error case 1: Wrong credentials**
 If the SharePoint admin user credentials is wrong or invalid, you will see this error:
 
 >*Connect-SPOService : The sign-in name or password does not match one in the Microsoft account system.*
 
-### Error case 2: Feature is not yet enabled for your tenant
+**Error case 2: Feature is not yet enabled for your tenant**
 The use of this cmdlet is subject to the feature rollout. If the feature is not yet available for your tenant, the cmdlet will not execute and will show this error:
 
 >*Enable-SPOCommSite : The requested operation is part of an experimental feature that is not supported in the current environment.*
 
-### Error case 3: Site URL input is not of root site
+**Error case 3: Site URL input is not of root site**
 Currently only the root site of a tenant is supported for this cmdlet. IF the site URL input is wrong, you will see this error:
 
 >*Enable-SPOCommSite : The site provided is not the root site collection. Please provide a valid root site URL.*
 
-### Error case 4: Site URL input is invalid
+**Error case 4: Site URL input is invalid**
 If the site URL input points to a site that does not exist, you will see the following error message:
 
 >*Enable-SPOCommSite : File Not Found.*
 
-### Error case 5: Classic publishing feature is currently enabled
+**Error case 5: Classic publishing feature is currently enabled**
 We do not support root site that currently have or have had in the past enabled the classic publishing features. If you see this error, your root site is not eligible for this feature enablement
 
 >*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
+
+
+## PARAMETERS
+
+### -SiteUrl
+
+URL of the site for enabling the modern communication site experience. **This is a required parameter**
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DesignPackageId
+
+GUID identifying the [communication site design](https://support.office.com/en-gb/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
+
+1. Topic:	96c933ac-3698-44c7-9f4a-5fd17d71af9e
+2. Showcase:	6142d2a0-63a5-4ba0-aede-d9fefca2c767
+3. Blank:	f6cc5403-0d63-442e-96c0-285923709ffc
+
+
+```yaml
+Type: GUID
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: 96c933ac-3698-44c7-9f4a-5fd17d71af9e
+Accept pipeline input: False
+Accept wildcard characters: False
+```
