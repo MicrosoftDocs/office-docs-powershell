@@ -1323,7 +1323,7 @@ Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions Microsoft Lync Server 2010 it was possible to add a Send Feedback option to Microsoft Lync 2010.
 That was done by using code similar to this:
 
-`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"`
+`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"`
 
 `Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
 
