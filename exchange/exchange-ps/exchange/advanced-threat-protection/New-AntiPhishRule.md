@@ -21,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String> [-Comments <String>] [-Confirm]
- [-Enabled <$true | $false>] [-ExceptIfRecipientDomainIs <Word[]>] [-ExceptIfSentTo <RecipientIdParameter[]>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter[]>] [-Priority <Int32>] [-RecipientDomainIs <Word[]>]
- [-SentTo <RecipientIdParameter[]>] [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
+ [-Comments <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Priority <Int32>] [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,6 +56,21 @@ This example creates an antiphishing rule named Research Department Phishing Rul
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AntiPhishPolicy
 The AntiPhishPolicy parameter specifies the antiphishing policy that's associated with the antiphishing rule. The rule defines the conditions, and the policy defines the actions.
 
@@ -67,21 +89,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -288,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -304,7 +311,6 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
-Note:  
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.  
 
 ```yaml
