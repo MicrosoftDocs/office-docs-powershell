@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
+- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0xFFFFFF is white\).
 
 - An available text value \(for example, yellow is 0x00FFFF00\).
 
