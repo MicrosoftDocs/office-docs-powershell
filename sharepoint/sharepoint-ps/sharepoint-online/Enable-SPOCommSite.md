@@ -12,7 +12,7 @@ ms.reviewer:
 
 
 ## SYNOPSIS
-Enables the modern comunication site experience on an existing site.
+Enables the modern communication site experience on an existing site.
 
 
 ## SYNTAX
@@ -137,4 +137,3 @@ Default value: 96c933ac-3698-44c7-9f4a-5fd17d71af9e
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
