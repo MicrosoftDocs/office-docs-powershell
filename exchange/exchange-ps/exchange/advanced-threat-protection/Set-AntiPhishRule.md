@@ -21,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AntiPhishRule [-Identity] <RuleIdParameter> [-AntiPhishPolicy <AntiPhishPolicyIdParameter>]
- [-Comments <String>] [-Confirm] [-ExceptIfRecipientDomainIs <Word[]>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSentToMemberOf <RecipientIdParameter[]>] [-Name <String>]
- [-Priority <Int32>] [-RecipientDomainIs <Word[]>] [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+Set-AntiPhishRule [-Identity] <RuleIdParameter>
+ [-AntiPhishPolicy <AntiPhishPolicyIdParameter>]
+ [-Comments <String>]
+ [-Confirm]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -278,6 +286,24 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.  
+
 ```yaml
 Type:
 Parameter Sets: (All)

@@ -21,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-SafeLinksRule [-Identity] <RuleIdParameter> [-Comments <String>] [-Confirm]
- [-ExceptIfRecipientDomainIs <Word[]>] [-ExceptIfSentTo <RecipientIdParameter[]>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter[]>] [-Name <String>] [-Priority <Int32>]
- [-RecipientDomainIs <Word[]>] [-SafeLinksPolicy <SafeLinksPolicyIdParameter>]
- [-SentTo <RecipientIdParameter[]>] [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+Set-SafeLinksRule [-Identity] <RuleIdParameter>
+ [-Comments <String>]
+ [-Confirm]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
+ [-SafeLinksPolicy <SafeLinksPolicyIdParameter>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -286,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
