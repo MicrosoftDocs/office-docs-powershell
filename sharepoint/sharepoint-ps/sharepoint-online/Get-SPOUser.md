@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance
 ```
-Example 1 returns all user or security group accounts from the site collection http://contoso.sharepoint.com/sites/finance. 
+Example 1 returns all user or security group accounts from the site collection https://contoso.sharepoint.com/sites/finance. 
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -63,7 +63,7 @@ Example 2 returns one user or security group account whose user name is HYPERLIN
 ```
 Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -Group "Team Site Members"
 ```
-Example 3 returns one user or security group account inside group Team Site Members from the site collection http://contoso.sharepoint.com/sites/finance. 
+Example 3 returns one user or security group account inside group Team Site Members from the site collection https://contoso.sharepoint.com/sites/finance. 
 
 ## PARAMETERS
 

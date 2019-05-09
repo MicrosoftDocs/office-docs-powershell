@@ -32,18 +32,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication 'Search Service Application'
+$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity https://somesite.com -SearchApplication 'Search Service Application'
 Remove-SPEnterpriseSearchQueryDemoted -Identity $demotedRule -SearchApplication 'Search Service Application'
 ```
 
-This example obtains a reference to a site demotion rule for the URL http://somesite.com, and removes it.
+This example obtains a reference to a site demotion rule for the URL https://somesite.com, and removes it.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the demoted site rule to get.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance a valid Demoted object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance a valid Demoted object.
 
 ```yaml
 Type: DemotedPipeBind

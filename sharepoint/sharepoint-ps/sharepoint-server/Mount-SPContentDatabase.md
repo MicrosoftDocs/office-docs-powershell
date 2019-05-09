@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1--------------------- 
 ```
-Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
+Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication https://sitename
 ```
 
 This example mounts an existing database to the sitename web application.
@@ -50,7 +50,7 @@ This operation does not changed the CompatibilityLevel for existing site collect
 
 ### -----------------EXAMPLE 2--------------------- 
 ```
-Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename -NoB2BSiteUpgrade
+Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication https://sitename -NoB2BSiteUpgrade
 ```
 
 This example mounts an existing database to the sitename web application but it prevents any site upgrades from occurring.

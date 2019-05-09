@@ -7,7 +7,6 @@ author: kenwith
 ms.author: kenwith
 ms.reviewer:
 ---
-
 # Connect-MicrosoftTeams
 
 ## SYNOPSIS

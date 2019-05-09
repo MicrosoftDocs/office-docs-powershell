@@ -41,7 +41,7 @@ This example detaches the content database with the GUID 12345678-90ab-cdef-1234
 
 ### --------------EXAMPLE 2------------ 
 ```
-Get-SPContentDatabase -WebApplication http://sitename | Dismount-SPContentDatabase -WhatIf
+Get-SPContentDatabase -WebApplication https://sitename | Dismount-SPContentDatabase -WhatIf
 ```
 
 This example detaches all content databases from the Web application on port 80 of the local machine.

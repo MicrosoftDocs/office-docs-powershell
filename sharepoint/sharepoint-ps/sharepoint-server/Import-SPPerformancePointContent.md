@@ -30,7 +30,7 @@ The Import-SPPerformancePointContent imports a PPS dashboard and its dependencie
 ```
 $ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
 $DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
-Import-SPPerformancePointContent -ImportFileURL "http://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "http://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
+Import-SPPerformancePointContent -ImportFileURL "https://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "https://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
 ```
 
 This example imports a dashboard by using the $Datasourcelist and $ContentList variables.
