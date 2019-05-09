@@ -51,7 +51,7 @@ This example gets every trusted file location for the Excel Services Application
 
 ### --------------EXAMPLE 2--------------
 ```
-Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
+Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "https://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.
@@ -63,7 +63,7 @@ This example changes the description of the default file location for every Exce
 Specifies the FileLocation object to update.
 The name must be unique in the list of file locations.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string identifying the file location, in the form http://myPortal/myTeam; a valid string identifying the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string identifying the file location, in the form https://myPortal/myTeam; a valid string identifying the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
 
 ```yaml
 Type: SPExcelFileLocationPipeBind
@@ -121,7 +121,7 @@ System.String
 
 Specifies a Web folder, or file directory from which Excel Services Application can load workbooks.
 
-The type must be a valid URL, in the form http://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
+The type must be a valid URL, in the form https://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
 
 ```yaml
 Type: String
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -IncludeChildren
 Indicates that subordinate URLs, directories and libraries are trusted.
-For example, if the trusted file location is http://portal, and IncludeChildren is true, then http://portal/subSite is also trusted, as is any subURL under the URL specified in Address.
+For example, if the trusted file location is https://portal, and IncludeChildren is true, then https://portal/subSite is also trusted, as is any subURL under the URL specified in Address.
 
 ```yaml
 Type: SwitchParameter
