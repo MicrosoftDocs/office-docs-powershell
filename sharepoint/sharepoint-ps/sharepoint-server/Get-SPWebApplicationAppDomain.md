@@ -52,7 +52,7 @@ Returns a list of SPAppDomain objects, one for each of the app domains for the D
 
 ### -----------EXAMPLE 3--------- 
 ```
-Get-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
+Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
 ```
 
 Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.

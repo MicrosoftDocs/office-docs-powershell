@@ -43,7 +43,7 @@ This example sets the authentication method to Digest authentication for the Aut
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'http://www.contoso.com'
+Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'https://www.contoso.com'
 ```
 
 In Exchange Server 2010, this example sets the external URL for the Autodiscover virtual directory.

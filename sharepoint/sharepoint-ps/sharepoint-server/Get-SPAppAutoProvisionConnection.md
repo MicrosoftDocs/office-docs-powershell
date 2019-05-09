@@ -39,7 +39,7 @@ This example returns the entire app auto provisioning connection information for
 
 ### ---------------EXAMPLE 2---------- 
 ```
-$subscription = Get-SPSiteSubscription http://Contoso.com
+$subscription = Get-SPSiteSubscription https://Contoso.com
 Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
 ```
 

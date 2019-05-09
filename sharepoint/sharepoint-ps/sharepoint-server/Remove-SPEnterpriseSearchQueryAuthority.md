@@ -30,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-Remove-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -SearchApplication MySSA
+Remove-SPEnterpriseSearchQueryAuthority -Identity https://contoso.com -SearchApplication MySSA
 ```
 
-This example removes the query authority URL http://contoso.com from the search service application named MySSA.
+This example removes the query authority URL https://contoso.com from the search service application named MySSA.
 
 
 ## PARAMETERS
@@ -41,7 +41,7 @@ This example removes the query authority URL http://contoso.com from the search 
 ### -Identity
 Specifies the query authority page to delete.
 
-The type must be a valid URL, in the form http://server_name; or an instance a valid AuthorityPage object.
+The type must be a valid URL, in the form https://server_name; or an instance a valid AuthorityPage object.
 
 ```yaml
 Type: AuthorityPagePipeBind

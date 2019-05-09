@@ -49,7 +49,7 @@ This example displays all the data connection libraries that have descriptions c
 Specifies the DataConnectionLibrary object to return.
 If the identity parameter is not specified, this cmdlet returns all the data connection libraries that have connection files that can be loaded by Excel Services Application.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form http://server_name; or an instance of a valid SPExcelDCL object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form https://server_name; or an instance of a valid SPExcelDCL object.
 
 ```yaml
 Type: SPExcelDCLPipeBind
