@@ -736,13 +736,13 @@ The Server parameter filters the results by Exchange server. When you use this p
 
 You can use any value that uniquely identifies the server. For example:
 
-- Name (for example, Exchange01)
+- Name
 
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- FQDN
 
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- Distinguished name (DN)
 
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+- Exchange Legacy DN
 
 You can't use this parameter with the Anr, Database, or Identity parameters.
 

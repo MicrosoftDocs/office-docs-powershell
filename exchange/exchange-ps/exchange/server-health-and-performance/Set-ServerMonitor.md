@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ServerMonitor [-Server] <ServerIdParameter> -Name <String> -Repairing <$true | $false> [-Confirm]
- [-TargetResource <String>] [-WhatIf] [<CommonParameters>]
+Set-ServerMonitor [-Server] <ServerIdParameter> -Name <String> -Repairing <$true | $false>
+ [-Confirm]
+ [-TargetResource <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,8 +83,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Distinguished name (DN)
 
 - Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

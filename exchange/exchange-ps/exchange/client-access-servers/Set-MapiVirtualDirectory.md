@@ -53,9 +53,7 @@ This example makes the following configuration changes to the MAPI virtual direc
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the MAPI virtual directory that you want to configure.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the MAPI virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
