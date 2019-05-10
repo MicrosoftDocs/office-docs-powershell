@@ -76,18 +76,18 @@ This example creates a new application access policy with the following settings
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId * -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Members of distribution group OddUsers are denied access to all apps." 
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of distribution group OddUsers." 
 ```
 
 This example creates a new application access policy with the following settings:
 
 - AccessRight: DenyAccess
 
-- AppIDs: *
+- AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
 
 - PolicyScopeGroupId: OddUsers@AppPolicyTest2.com
 
-- Description: Members of distribution group OddUsers are denied access to all apps.
+- Description: Deny this app access to members of distribution group OddUsers.
 
 ## PARAMETERS
 
