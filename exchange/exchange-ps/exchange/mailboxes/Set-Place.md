@@ -10,13 +10,13 @@ monikerRange: "exchonline-ps"
 ---
 
 # Set-Place
+
+## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
 Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-## SYNOPSIS
 
 ## SYNTAX
 
