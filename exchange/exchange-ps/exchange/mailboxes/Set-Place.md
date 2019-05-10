@@ -75,7 +75,7 @@ The Identity parameter specifies the room mailbox that you want to modify. You c
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: True
 Position: 0
 Default value: None
@@ -92,7 +92,7 @@ The default value is blank ($null). To indicate that this room has no audio devi
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +107,7 @@ The Building parameter specifies the building name or number that the room is in
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +122,7 @@ The Capacity parameter specifies the capacity of the room. A valid value is an i
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +137,7 @@ The City parameter specifies the room's city. If the value contains spaces, encl
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
