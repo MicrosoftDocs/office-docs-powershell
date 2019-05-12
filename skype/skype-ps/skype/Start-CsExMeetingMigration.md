@@ -17,7 +17,7 @@ This cmdlet manually trigger a meeting migration request for the specified user.
 
 ```
 Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-TargetMeetingType <MmsTargetMeetingTypes>]
- [-Tenant <Guid>] [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tenant <Guid>] [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
