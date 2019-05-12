@@ -39,7 +39,7 @@ This example below shows how to initiate meeting migration for user ashaw@contos
 ## PARAMETERS
 
 ### -Identity
-Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 
+Specifies the Identity of the user account to be modified. A user identity can be specified by using one of four formats: 
 1. The user's SIP address 
 2. The user's user principal name (UPN)
 3. The user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer)
