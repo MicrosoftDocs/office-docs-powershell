@@ -116,6 +116,7 @@ The possible values are:
 Type: Object
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -133,6 +134,7 @@ The possible values are:
 Type: Object
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -155,6 +157,7 @@ For more information about Windows PowerShell background jobs, see about_Jobs (h
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
