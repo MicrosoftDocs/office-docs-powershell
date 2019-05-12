@@ -39,7 +39,11 @@ This example below shows how to initiate meeting migration for user ashaw@contos
 ## PARAMETERS
 
 ### -Identity
-Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
+Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 
+1. The user's SIP address 
+2. The user's user principal name (UPN)
+3. The user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer)
+4. The user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: UserIdParameter
