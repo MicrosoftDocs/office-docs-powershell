@@ -100,9 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMeetingType
-* Using **SfB** indicates that only Skype for Business meetings (whether on-premises or online) should be updated.
-* Using **Teams** indicates that only Teams meetings should be updated.
-* Using **All** indicates that both Skype for Business meetings and Teams meetings should be updated. This is the **default value** for SourceMeetingType.
+The possible values are:
+* **All:** indicates that both Skype for Business meetings and Teams meetings should be updated. This is the **default value** for SourceMeetingType.
+* **SfB:** indicates that only Skype for Business meetings (whether on-premises or online) should be updated.
+* **Teams:** indicates that only Teams meetings should be updated.
 
 ```yaml
 Type: Object
@@ -117,8 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMeetingType
-* Using TargetMeetingType **Current** specifies that Skype for Business meetings remain Skype for Business meetings and Teams meetings remain Teams meetings. However audio conferencing coordinates might be changed, and any on-premises Skype for Business meetings would be migrated to Skype for Business Online. This is the **default value** for TargetMeetingType.
-* Using TargetMeetingType **Teams** specifies that any existing meeting must be migrated to Teams, regardless of whether the meeting is hosted in Skype for Business online or on-premises, and regardless of whether any audio conferencing updates are required.
+The possible values are:
+* **Current:** specifies that Skype for Business meetings remain Skype for Business meetings and Teams meetings remain Teams meetings. However audio conferencing coordinates might be changed, and any on-premises Skype for Business meetings would be migrated to Skype for Business Online. This is the **default value** for TargetMeetingType.
+* **Teams:** specifies that any existing meeting must be migrated to Teams, regardless of whether the meeting is hosted in Skype for Business online or on-premises, and regardless of whether any audio conferencing updates are required.
 
 ```yaml
 Type: Object
