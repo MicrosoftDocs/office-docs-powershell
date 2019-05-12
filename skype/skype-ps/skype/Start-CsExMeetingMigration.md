@@ -21,7 +21,10 @@ Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-Target
 ```
 
 ## DESCRIPTION
-This cmdlet manually trigger a meeting migration request for the specified user.
+Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users.
+MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings.
+
+Also, with \`Start-CsExMeetingMigration\` cmdlet, you can start a meeting migration manually.
 
 ## EXAMPLES
 
@@ -130,6 +133,28 @@ Aliases:
 Required: False
 Position: Named
 Default value: Current
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job.
+You can continue to work in the session while the job finishes.
+The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer.
+To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see about_Jobs (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and \[about_Remote_Jobs\](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
