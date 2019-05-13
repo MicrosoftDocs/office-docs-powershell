@@ -63,7 +63,7 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
 **STEP BY STEP INSTRUCTIONS**
 
-1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
+1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
 2. Make sure you have the SharePoint admin credentials for the tenant
 3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
 4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
