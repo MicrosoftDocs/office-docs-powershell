@@ -22,14 +22,14 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ```
 
 ## DESCRIPTION
-Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization program](https://docs.microsoft.com/en-us/office365/admin/manage/release-options-in-office-365?view=o365-worldwide), you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
+Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization program](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide), you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
 
 **Current limitations**
 
 1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://<tenantname>.sharepoint.com
-2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/en-us/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
+2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
 3.	The root site **should not have had** the classic publishing feature enabled in the past (at the site or web level)
-4.	The site must have quick launch site navigation enabled. [How do I do this?](https://support.office.com/en-us/article/customize-site-navigation-c040f014-acbb-4c98-8174-48428cf02b25#bm1a)
+4.	The site must have quick launch site navigation enabled. [How do I do this?](https://support.office.com/article/customize-site-navigation-c040f014-acbb-4c98-8174-48428cf02b25#bm1a)
 
 **On successful execution of the cmdlet, customers can expect:**
 
@@ -63,7 +63,7 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
 **STEP BY STEP INSTRUCTIONS**
 
-1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
+1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
 2. Make sure you have the SharePoint admin credentials for the tenant
 3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
 4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 ### -DesignPackageId
 
-GUID identifying the [communication site design](https://support.office.com/en-gb/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
+GUID identifying the [communication site design](https://support.office.com/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
 
 1. Topic:	96c933ac-3698-44c7-9f4a-5fd17d71af9e
 2. Showcase:	6142d2a0-63a5-4ba0-aede-d9fefca2c767
