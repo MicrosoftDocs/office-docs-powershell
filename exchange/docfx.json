@@ -22,13 +22,13 @@
       },
       {
       "files": ["**/*.md"],
-      "src": "exchange-ps",
+      "src": "exchange-ps/exchange",
       "version": "exchange-ps",
       "dest": "module"
     },
     {
       "files": ["toc.yml"],
-      "src": "exchange-ps",
+      "src": "exchange-ps/exchange",
       "version": "exchange-ps",
       "dest": "module/exchange-ps"
     }
