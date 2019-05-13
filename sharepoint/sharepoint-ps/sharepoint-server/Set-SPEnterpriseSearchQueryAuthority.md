@@ -32,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-Set-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -Level 0.5 -SearchApplication MySSA
+Set-SPEnterpriseSearchQueryAuthority -Identity https://contoso.com -Level 0.5 -SearchApplication MySSA
 ```
 
-This example adjusts the authoritative level of the URL http://contoso.com to 0.5 on the search service application named MySSA.
+This example adjusts the authoritative level of the URL https://contoso.com to 0.5 on the search service application named MySSA.
 
 
 ## PARAMETERS
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ### -Identity
 Specifies the query authority page to update.
 
-The type must be a valid URL, in the form http://server_name; or an instance of a valid AuthorityPage object.
+The type must be a valid URL, in the form https://server_name; or an instance of a valid AuthorityPage object.
 
 
 ```yaml

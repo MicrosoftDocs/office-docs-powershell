@@ -59,7 +59,7 @@ This example enables bad item reporting and turns on the option to send Watson r
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "http://contoso.com/mail"
+Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "https://contoso.com/mail"
 ```
 
 This example configures the external URL on the default Exchange ActiveSync virtual directory on the server Contoso.

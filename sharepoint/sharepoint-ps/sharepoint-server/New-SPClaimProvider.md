@@ -39,7 +39,7 @@ This example registers a claim provider in the farm.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Scope (Get-SPWebApplication http://test)
+New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Scope (Get-SPWebApplication https://test)
 ```
 
 This example registers a claim provider scoped to a given Web application.

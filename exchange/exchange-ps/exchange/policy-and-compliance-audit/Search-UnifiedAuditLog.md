@@ -131,8 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Formatted
-The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch. 
-In addition it will make AuditData more readable.
+The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch.
+
+In addition, this switch makes AuditData more readable.
 
 ```yaml
 Type: SwitchParameter

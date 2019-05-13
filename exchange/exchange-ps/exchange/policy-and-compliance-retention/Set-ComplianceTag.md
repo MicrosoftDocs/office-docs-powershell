@@ -126,7 +126,39 @@ Accept wildcard characters: False
 ```
 
 ### -FilePlanProperty
-{{ Fill FilePlanProperty Description }}
+The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
+
+- Get-FilePlanPropertyAuthority | Format-List Name
+
+- Get-FilePlanPropertyCategory | Format-List Name
+
+- Get-FilePlanPropertyCitation | Format-List Name
+
+- Get-FilePlanPropertyDepartment | Format-List Name
+
+- Get-FilePlanPropertyReferenceId | Format-List Name
+
+- Get-FilePlanPropertySubCategory | Format-List Name
+
+A valid value for this parameter involves two steps:
+
+- A variable to store the file plan properties as a PSCustomObject using the following syntax:
+
+  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+
+  For example:
+
+  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+
+- A second variable to convert the PSCustomObject to a JSON object using the following syntax:
+
+  $Variable2 = ConvertTo-Json $Variable1
+
+  For example:
+
+  $fpStr = ConvertTo-Json $retentionLabelAction
+
+You use the second variable as the value for this parameter.
 
 ```yaml
 Type: String

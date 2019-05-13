@@ -46,6 +46,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisplayPhotosEnabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-ExplicitLogonEnabled <$true | $false>]
+ [-ExternalImageProxyEnabled <$true | $false>]
  [-ExternalSPMySiteHostURL <String>]
  [-ForceSaveAttachmentFilteringEnabled <$true | $false>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
@@ -704,6 +705,27 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalImageProxyEnabled
+This parameter is available only in the cloud-based service.
+
+The ExternalImageProxyEnabled parameter specifies whether to load all external images through the Outlook external image proxy. Valid values are:
+
+- $true: All external images are loaded through the Outlook external image proxy. This is the default value.
+
+- $false: All external images are loaded through the web browser. This is potentially unsafe, as the images could have mixed content or malformed images that ask for user credentials.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1615,7 +1637,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoURL
-The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
+The SetPhotoURL parameter controls where users go to select their photo. Note that you can't specify a URL that contains one or more picture files, as there is no mechanism to copy a URL photo to the properties of the users' Exchange Online mailboxes.
 
 ```yaml
 Type: String

@@ -29,23 +29,23 @@ Instead, it is scheduled to occur on the background when it causes the least eff
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Request-SPOUpgradeEvaluationSite http://contoso.sharepoint.com/sites/marketing
+Request-SPOUpgradeEvaluationSite https://contoso.sharepoint.com/sites/marketing
 ```
-Example 1 requests a site upgrade evaluation for the marketing site http://contoso.sharepoint.com/sites/marketing using the default options of sending an email message and automatically trying to upgrade the evaluation site.
+Example 1 requests a site upgrade evaluation for the marketing site https://contoso.sharepoint.com/sites/marketing using the default options of sending an email message and automatically trying to upgrade the evaluation site.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-Request-SPOUpgradeEvaluationSite http://contoso.sharepoint.com/sites/marketing -NoEmail $true -NoUpgrade $true
+Request-SPOUpgradeEvaluationSite https://contoso.sharepoint.com/sites/marketing -NoEmail $true -NoUpgrade $true
 ```
-This example requests a site upgrade evaluation for the marketing site http://contoso.sharepoint.com/sites/marketing. It specifies to not send email messages and not automatically try upgrade of the evaluation site. By using the cmdlet in this way, a SharePoint Online global administrator can make changes to the upgrade evaluation site before starting the actual upgrade.
+This example requests a site upgrade evaluation for the marketing site https://contoso.sharepoint.com/sites/marketing. It specifies to not send email messages and not automatically try upgrade of the evaluation site. By using the cmdlet in this way, a SharePoint Online global administrator can make changes to the upgrade evaluation site before starting the actual upgrade.
 
 
 ## PARAMETERS
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

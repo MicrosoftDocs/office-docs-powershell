@@ -46,18 +46,18 @@ This example creates a new site subscription.
 ### ------------------EXAMPLE 2-----------------------
 ```
 $subscription = New-SPSiteSubscription
-Set-SPSite -Identity http://siteUrl -SiteSubscription $subscription
+Set-SPSite -Identity https://siteUrl -SiteSubscription $subscription
 ```
 
-This example creates a new Site Subscription and sets it on the site collection http://siteUrl.
+This example creates a new Site Subscription and sets it on the site collection https://siteUrl.
 
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-New-SPSite -URL http://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
+New-SPSite -URL https://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
 ```
 
-This example creates a new Site Collection at http://siteUrl along with a new Site Subscription.
+This example creates a new Site Collection at https://siteUrl along with a new Site Subscription.
 
 
 ## PARAMETERS
