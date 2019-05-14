@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
+Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>[]
  [-EntryID <String>]
  [-FilterEndTime <DateTime>]
  [-FilterItemType <String>]
@@ -63,10 +63,10 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 ### -------------------------- Example 2 --------------------------
 ```
-$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
+$mailboxes = Import-CSV "C:\My Documents\RestoreMailboxes.csv" |%{$_.SMTPAddress};Restore-RecoverableItems -Identity $mailboxes -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note -MaxParallelSize 5
 ```
 
-This example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
+This example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMailboxes.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
 
 SMTPAddress
 
@@ -78,7 +78,7 @@ laura@contoso.com
 
 julia@contoso.com
 
-The first command reads the CSV file and writes the information to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
+The first command reads the CSV file and writes the SMTPAddress to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes in parallel per 5 mailboxes.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -101,7 +101,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the list of mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -124,7 +124,7 @@ The Identity parameter specifies the mailbox that contains the Recoverable Items
 - User ID or user principal name (UPN)
 
 ```yaml
-Type: GeneralMailboxOrMailUserIdParameter
+Type: GeneralMailboxOrMailUserIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -227,7 +227,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxParallelSize
-The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
+The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems for the multiple mailbox restoring scenario. it cannot work on single mailbox restoring scenario. Valid values are integers from 1 to 10. 
+By default, -MaxParallelSize value is 4.
 
 ```yaml
 Type: Int32
@@ -237,7 +238,7 @@ Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: 4
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -292,7 +293,7 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 If you don't use this parameter, the command will search all locations.
 
 ```yaml
-Type: DeletedItems | RecoverableItems
+Type: DeletedItems | RecoverableItems | PurgedItems
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

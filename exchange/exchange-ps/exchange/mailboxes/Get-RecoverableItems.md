@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
+Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>[]
  [-EntryID <String>]
  [-FilterEndTime <DateTime>]
  [-FilterItemType <String>]
@@ -57,7 +57,7 @@ This example returns all of the available recoverable deleted messages with the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the list of mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -80,7 +80,7 @@ The Identity parameter specifies the mailbox that contains the Recoverable Items
 - User ID or user principal name (UPN)
 
 ```yaml
-Type: GeneralMailboxOrMailUserIdParameter
+Type: GeneralMailboxOrMailUserIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
-Type: Unlimited
+Type: Unlimited<int>
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -209,7 +209,7 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 If you don't use this parameter, the command will search all locations.
 
 ```yaml
-Type: DeletedItems | RecoverableItems
+Type: DeletedItems | RecoverableItems | PurgedItems
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
