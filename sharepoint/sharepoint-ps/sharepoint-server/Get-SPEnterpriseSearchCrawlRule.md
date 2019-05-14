@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE 1----------------- 
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application' 
-Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity http://webAppUrl
+Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity https://webAppUrl
 ```
 
 This example uses the `Get-SPEnterpriseSearchCrawlRule` cmdlet to retrieve a crawl rule.
@@ -49,7 +49,7 @@ This example returns a list of crawl rules with paths that contain the word exam
 ### -Identity
 Specifies the search crawl rule path.
 
-A valid URL, such as "http://webAppUrl", or an instance of a valid CrawlRule object
+A valid URL, such as "https://webAppUrl", or an instance of a valid CrawlRule object
 
 ```yaml
 Type: CrawlRulePipeBind

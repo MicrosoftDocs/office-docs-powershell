@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
+Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "https://www.contoso.com/powershell"
 ```
 
 This example modifies the external URL of the Contoso Windows PowerShell virtual directory.

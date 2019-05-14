@@ -22,7 +22,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
   [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
- [-PreventTollBypass <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -30,12 +30,12 @@ Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-All
 Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
   [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
- [-PreventTollBypass <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business. 
-This cmdlet allows admins to set values in a given calling policy
+This cmdlet allows admins to set values in a given calling policy.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ This cmdlet allows admins to set values in a given calling policy
 PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 ```
 
-Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy
+Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy.
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrivateCalling
-controls all calling capabilities in Teams.
+Controls all calling capabilities in Teams.
 Turning this off will turn off all calling functionality in Teams.
 If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppresses all non-fatal errors
+Suppresses all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Internal Microsoft use
+Internal Microsoft use.
 
 ```yaml
 Type: System.Guid
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToPhone
-Determines whether or not the a user can leverage the call park functionality to 
+Enables call forwarding or simultaneous ringing of inbound calls to any phone number.
 
 ```yaml
 Type: Boolean
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToUser
-Enables call forwarding or simultaneous ringing of inbound calls to other users
+Enables call forwarding or simultaneous ringing of inbound calls to other users in your tenant.
 
 ```yaml
 Type: Boolean
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallGroups
-Enables inbound calls to be routed to call groups 
+Enables inbound calls to be routed to call groups.
 
 ```yaml
 Type: Boolean
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voice mail.  Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride
+Enables inbound calls to be routed to voice mail.  Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride.
 
 ```yaml
 Type: String
@@ -252,6 +252,21 @@ Setting this parameter to True will send calls through PSTN and incur charges ra
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BusyOnBusyEnabledType
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. New or incoming calls will be rejected with a busy signal. Valid options are: Enabled, Disabled.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

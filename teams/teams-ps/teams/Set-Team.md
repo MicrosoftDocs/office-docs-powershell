@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-Team
 
 ## SYNOPSIS
-This cmdlet allows you to update properties of a team, including its displayname, classification, and team-specific settings.
+This cmdlet allows you to update properties of a team, including its displayname, description, and team-specific settings.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Mai
 
 ## DESCRIPTION
 
-This cmdlet allows you to update properties of a team, including its displayname, classification, and team-specific settings.  This cmdlet includes all settings that used to be set using the Set-TeamFunSettings, Set-TeamGuestSettings, etc. cmdlets
+This cmdlet allows you to update properties of a team, including its displayname, description, and team-specific settings.  This cmdlet includes all settings that used to be set using the Set-TeamFunSettings, Set-TeamGuestSettings, etc. cmdlets
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-Team classification as determined by the AAD group classification list.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

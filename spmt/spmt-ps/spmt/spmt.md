@@ -10,7 +10,7 @@ content_git_url: https://github.com/MicrosoftDocs/office-docs-powershell/blob/ma
 ## Description
 The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine. It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013 lists to Office 365. 
 
-[Install SPMT and Get PowerShell module](http://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
+[Install SPMT and Get PowerShell module](https://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
 
 Notes:
 

@@ -45,10 +45,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "http://server_name/mywebapp"
+Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "https://server_name/mywebapp"
 ```
 
-This example maps the specified path for the AccessDenied layout page in the Web application "http://server_name/mywebapp".
+This example maps the specified path for the AccessDenied layout page in the Web application "https://server_name/mywebapp".
 
 
 ## PARAMETERS
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the SharePoint Web application that contains the custom layout page.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
 
 ```yaml
 Type: SPWebApplicationPipeBind

@@ -51,10 +51,10 @@ This example returns all claim-to-user license mappings for the web application 
 
 ### ---------------EXAMPLE 3 ----------------- 
 ```
-Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
+Get-SPUserLicenseMapping -WebApplication https://<server_name>/sitename
 ```
 
-This example returns all claim-to-user license mappings for the Web application with the URL http://\<server_name\>/sites/sitename.
+This example returns all claim-to-user license mappings for the Web application with the URL https://\<server_name\>/sites/sitename.
 
 ## PARAMETERS
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -WebApplication
 Specifies the URL, GUID, web application name, or instance of a web application object from which to get the user license mappings.
-The type must be an URL in the form http://server_name or http://server_name/sites/sitename, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh), a web application name (that is, SharePoint - 80), or an instance of a web application object.
+The type must be an URL in the form https://server_name or https://server_name/sites/sitename, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh), a web application name (that is, SharePoint - 80), or an instance of a web application object.
 
 ```yaml
 Type: SPWebApplicationPipeBind
