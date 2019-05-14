@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchCrawlRule
@@ -192,7 +195,7 @@ Accept wildcard characters: False
 ### -Identity
 Specifies the name of the crawl rule.
 
-The type must be a valid crawl rule URL, such as http://server_name, or an instance of a valid CrawlRule object.
+The type must be a valid crawl rule URL, such as https://server_name, or an instance of a valid CrawlRule object.
 
 
 ```yaml

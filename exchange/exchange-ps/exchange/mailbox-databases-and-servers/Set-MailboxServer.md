@@ -408,27 +408,33 @@ Accept wildcard characters: False
 ### -CalendarRepairSchedule
 This parameter is available or functional only in Exchange Server 2010.
 
-The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
+The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures.
 
-- Full name of the day
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
 
-- Abbreviated name of the day
+You can use the following values for days:
 
-- Integer from 0 through 6, where 0 = Sunday
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
 
 The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
 
-The following are examples:
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (The assistant will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 
-If the Calendar Repair Assistant doesn't finish processing the mailboxes on the server during the time that you've scheduled, it automatically resumes processing where it left off the next time it runs.
+- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
 Type: ScheduleInterval[]
@@ -973,7 +979,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -JunkEmailOptionsCommitterWorkCycle
 This parameter is available or functional only in Exchange Server 2013.
 
@@ -1178,25 +1183,33 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderAssistantSchedule
-The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders in mailboxes on the Mailbox server. The interval format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
+The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders in mailboxes on the Mailbox server.
 
-- Full name of the day
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
 
-- Abbreviated name of the day
+You can use the following values for days:
 
-- Integer from 0 through 6, where 0 = Sunday
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
 
 The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
 
-The following are examples:
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (The assistant will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
+
+- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 If the Managed Folder Assistant doesn't finish processing the mailboxes on the server during the time that you've scheduled, it automatically resumes processing where it left off the next time it runs.
 
@@ -1394,8 +1407,6 @@ The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the me
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are treated as bytes. The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB).
 
@@ -1791,21 +1802,33 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicySchedule
-The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs on the Mailbox server. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
+The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs on the Mailbox server. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy.
 
-- Full name of the day
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
 
-- Abbreviated name of the day
+You can use the following values for days:
 
-- Integer from 0 through 6, where 0 = Sunday
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
 
 The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
 
-The following are examples:
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday 10:15 PM.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
+
+- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
 Type: ScheduleInterval[]

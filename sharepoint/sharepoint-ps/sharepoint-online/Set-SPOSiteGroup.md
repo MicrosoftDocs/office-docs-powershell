@@ -24,17 +24,17 @@ Set-SPOSiteGroup -Identity <String> [-Name <String>] [-Owner <String>] [-Permiss
 ## DESCRIPTION
 You must be a SharePoint Online global administrator and a site collection administrator to run the `Set-SPOSiteGroup` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Set-SPOSiteGroup -Site http://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
+Set-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
 ```
 
-Example 1 changes permission level of the ProjectViewers group inside site collection http://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
+Example 1 changes permission level of the ProjectViewers group inside site collection https://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOSiteGroup](Get-SPOSiteGroup.md)

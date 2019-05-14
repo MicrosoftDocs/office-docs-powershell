@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchResultItemType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchResultItemType
@@ -45,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$web = Get-SPWeb http://webUrl
+$web = Get-SPWeb https://webUrl
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa

@@ -47,7 +47,7 @@ For example, if you don't want to return all your Skype for Business Server user
 (These parameters are mutually exclusive: if you use Filter in a command you cannot use LdapFilter in that same command, and vice-versa.) The Filter parameter enables you to limit the returned data to users who meet the specified Skype for Business Server criteria; for example, you might decide to return only users with accounts on the specified Registrar pool, or only users who have been enabled for Enterprise Voice.
 The LdapFilter parameter enables you to limit the returned data to users who fit other Active Directory-based criteria; for example, users who work in a specified state or province, users who do or do not have a pager, or users with a designated job title.
 
-**Note: the equivalent command for Skype for Business Online is [Get-CsOnlineUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlineuser?view=skype-ps)**.
+**Note: the equivalent command for Skype for Business Online is [Get-CsOnlineUser](https://docs.microsoft.com/powershell/module/skype/get-csonlineuser?view=skype-ps)**.
 
 
 ## EXAMPLES
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

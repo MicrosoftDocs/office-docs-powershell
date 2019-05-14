@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
 ```
 
-This example associates a user with a user name of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
+This example associates a user with a username of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
 
 ### -------------------------- Example 2 --------------------------
 ```

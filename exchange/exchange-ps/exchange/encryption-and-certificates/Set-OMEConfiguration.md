@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
 ```
 
-This example uses the Set-OMEConfiguration cmdlet to set all the parameters. Note the use of the Get-Content command to provide the input for the Image parameter.
+This example configures the specified values for the default OME configuration named "OME Configuration". Note the use of the Get-Content command to provide the input for the Image parameter.
 
 ## PARAMETERS
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
+- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0xFFFFFF is white\).
 
 - An available text value \(for example, yellow is 0x00FFFF00\).
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisclaimerText
-The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters.
+The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 To remove existing text and use the default value, use the value $null for this parameter.
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailText
-The EmailText parameter specifies the default text that accompanies encrypted email messages. The default text appears above the instructions for viewing encrypted messages. The maximum length is 1024 characters.
+The EmailText parameter specifies the default text that accompanies encrypted email messages. The default text appears above the instructions for viewing encrypted messages. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 To remove existing text and use the default value, use the value $null for this parameter.
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntroductionText
-The IntroductionText parameter specifies the text that appears next to the sender's name and email address. The maximum length is 1024 characters.
+The IntroductionText parameter specifies the text that appears next to the sender's name and email address. If the value contains spaces, enclose the value in quotation marks (").
 
 To remove existing text and use the default value, use the value $null for this parameter.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortalText
-The PortalText parameter specifies the text that appears at the top of the encrypted mail viewing portal. The maximum length is 128 characters.
+The PortalText parameter specifies the text that appears at the top of the encrypted mail viewing portal. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 To remove existing text and use the default value, use the value $null for this parameter.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadButtonText
-The ReadButtonText parameter specifies the text that appears on the "Read Message" button. The maximum length is 128 characters.
+The ReadButtonText parameter specifies the text that appears on the "Read Message" button. If the value contains spaces, enclose the value in quotation marks (").
 
 To remove existing text and use the default value, use the value $null for this parameter.
 
@@ -216,11 +216,11 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialSignIn parameter specifies whether to enable or disable authentication with Microsoft, Google, or Yahoo identities for this custom template. Valid values are:
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Office 365 portal using their own social network id (Google, Yahoo, etc). Valid values are:
 
-- $true: Authentication using Microsoft, Google, or Yahoo identities is enabled. This is the default value.
+- $true: Social network ID sign in is allowed. This is the default value.
 
-- $false: Authentication using Microsoft, Google, or Yahoo identities is disabled.
+- $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Office 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
 Type: $true | $false

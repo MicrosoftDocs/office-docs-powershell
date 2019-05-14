@@ -22,28 +22,49 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-FrontendTransportService [-Identity] <FrontendTransportServerIdParameter>
- [-AgentLogEnabled <$true | $false>] [-AgentLogMaxAge <EnhancedTimeSpan>]
- [-AgentLogMaxDirectorySize <Unlimited>] [-AgentLogMaxFileSize <Unlimited>] [-AgentLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>] [-Confirm] [-ConnectivityLogEnabled <$true | $false>]
- [-ConnectivityLogMaxAge <EnhancedTimeSpan>] [-ConnectivityLogMaxDirectorySize <Unlimited>]
- [-ConnectivityLogMaxFileSize <Unlimited>] [-ConnectivityLogPath <LocalLongFullPath>]
- [-DnsLogEnabled <$true | $false>] [-DnsLogMaxAge <EnhancedTimeSpan>] [-DnsLogMaxDirectorySize <Unlimited>]
- [-DnsLogMaxFileSize <Unlimited>] [-DnsLogPath <LocalLongFullPath>] [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>] [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>] [-ExternalDNSServers <MultiValuedProperty>]
- [-ExternalIPAddress <IPAddress>] [-InternalDNSAdapterEnabled <$true | $false>]
- [-InternalDNSAdapterGuid <Guid>] [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
- [-InternalDNSServers <MultiValuedProperty>] [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
- [-MaxConnectionRatePerMinute <Int32>] [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
- [-ReceiveProtocolLogMaxDirectorySize <Unlimited>] [-ReceiveProtocolLogMaxFileSize <Unlimited>]
- [-ReceiveProtocolLogPath <LocalLongFullPath>] [-ResourceLogEnabled <$true | $false>]
- [-ResourceLogMaxAge <EnhancedTimeSpan>] [-ResourceLogMaxDirectorySize <Unlimited>]
- [-ResourceLogMaxFileSize <Unlimited>] [-ResourceLogPath <LocalLongFullPath>]
- [-SendProtocolLogMaxAge <EnhancedTimeSpan>] [-SendProtocolLogMaxDirectorySize <Unlimited>]
- [-SendProtocolLogMaxFileSize <Unlimited>] [-SendProtocolLogPath <LocalLongFullPath>]
- [-TransientFailureRetryCount <Int32>] [-TransientFailureRetryInterval <EnhancedTimeSpan>] [-WhatIf]
- [-RoutingTableLogMaxAge <EnhancedTimeSpan>] [-RoutingTableLogMaxDirectorySize <Unlimited>]
- [-RoutingTableLogPath <LocalLongFullPath>] [<CommonParameters>]
+ [-AgentLogEnabled <$true | $false>]
+ [-AgentLogMaxAge <EnhancedTimeSpan>]
+ [-AgentLogMaxDirectorySize <Unlimited>]
+ [-AgentLogMaxFileSize <Unlimited>]
+ [-AgentLogPath <LocalLongFullPath>]
+ [-AntispamAgentsEnabled <$true | $false>]
+ [-Confirm]
+ [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-DnsLogEnabled <$true | $false>]
+ [-DnsLogMaxAge <EnhancedTimeSpan>]
+ [-DnsLogMaxDirectorySize <Unlimited>]
+ [-DnsLogMaxFileSize <Unlimited>]
+ [-DnsLogPath <LocalLongFullPath>]
+ [-DomainController <Fqdn>]
+ [-ExternalDNSAdapterEnabled <$true | $false>]
+ [-ExternalDNSAdapterGuid <Guid>]
+ [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-ExternalDNSServers <MultiValuedProperty>]
+ [-ExternalIPAddress <IPAddress>]
+ [-InternalDNSAdapterEnabled <$true | $false>]
+ [-InternalDNSAdapterGuid <Guid>]
+ [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-InternalDNSServers <MultiValuedProperty>]
+ [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
+ [-MaxConnectionRatePerMinute <Int32>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-TransientFailureRetryCount <Int32>]
+ [-TransientFailureRetryInterval <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -755,29 +776,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogEnabled
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogMaxAge
+The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
 
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-### -ResourceLogMaxAge
-This parameter is reserved for internal Microsoft use.
+For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
 
 ```yaml
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -785,14 +795,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogMaxDirectorySize
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogMaxDirectorySize
+The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -800,29 +826,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogMaxFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceLogPath
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogPath
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Routing. Setting this parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -984,71 +995,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxAge
-The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxDirectorySize
-The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Routing. Setting this parameter to $null disables routing table logging.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Online, SharePoint 2016
+applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Measure-PnPWeb
 
@@ -41,7 +38,7 @@ Gets statistics on the provided web including all its subwebs
 ### -Identity
 
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: WebPipeBind
@@ -55,7 +52,7 @@ Accept pipeline input: True
 ### -IncludeHiddenList
 Include hidden lists in statistics calculation
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +66,7 @@ Accept pipeline input: False
 ### -Recursive
 Iterate all sub webs recursively
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +80,7 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection
@@ -96,4 +93,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

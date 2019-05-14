@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppPrincipalPermission
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppPrincipalPermission
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE-------------
 ```
 $clientID = "11111111-2222-3333-4444-555555555555"
-$site = Get-SPSite http://siteUrl
+$site = Get-SPSite https://siteUrl
 $realm = Get-SPAuthenticationRealm -ServiceContext $site
 $appIdentifier = $clientID + "@" + $realm
 $appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb

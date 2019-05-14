@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPUser
@@ -276,7 +279,7 @@ Accept wildcard characters: False
 Specifies the name of the URL or GUID to be used as a scope.
 This parameter is not needed if the SPUser object is provided as the identity.
 
-The value must be an authentic URL, in the form http://server_name, or GUID, in the form 1234-5678-9807.
+The value must be an authentic URL, in the form https://server_name, or GUID, in the form 1234-5678-9807.
 
 ```yaml
 Type: SPWebPipeBind

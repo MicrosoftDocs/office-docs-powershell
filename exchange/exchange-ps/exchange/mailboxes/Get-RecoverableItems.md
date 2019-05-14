@@ -15,21 +15,23 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-RecoverableItems items cmdlet to view deleted items in the Recoverable Items folder in mailboxes. After you find the deleted items, you use the Restore-RecoverableItems cmdlet to restore them.
 
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
 Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
-[-EntryID <String>]
-[-FilterEndTime <DateTime>]
-[-FilterItemType <String>]
-[-FilterStartTime <DateTime>]
-[-LastParentFolderID <String>]
-[-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
-[-SubjectContains <String>]
-[<CommonParameters>]
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,16 +46,20 @@ Get-RecoverableItems -Identity laura@contoso.com -Subject -SubjectContains "FY17
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailbox laura@contoso.com for the specified date/time range.
 
+### -------------------------- Example 2 --------------------------
+```
+Get-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+```
+
+This example returns all of the available recoverable deleted messages with the specified subject in the mailboxes of both malik@contoso.com and lillian@contoso.com for the specified date/time range.
+
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -168,7 +174,7 @@ The LastParentFolderID parameter specifies the FolderID value of the item before
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +212,6 @@ If you don't use this parameter, the command will search all locations.
 Type: DeletedItems | RecoverableItems
 Parameter Sets: (All)
 Aliases:
-Accepted values: DeletedItems, RecoverableItems
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named

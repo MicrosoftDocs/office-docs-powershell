@@ -66,11 +66,10 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
+Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
-
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -82,13 +81,9 @@ This example returns detailed information about the specified device on Lila's m
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
