@@ -224,7 +224,6 @@ The Enabled parameter enables or disable the policy. Valid values are:
 
 - $false: The policy is disabled.
 
-
 ```yaml
 Type: $true | $false
 Parameter Sets: Identity
