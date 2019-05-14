@@ -22,12 +22,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### NonRecovery
 ```
-New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter> [-AutoDagExcludeFromMonitoring <$true | $false>] [-IsExcludedFromProvisioning <$true | $false>] [-IsExcludedFromInitialProvisioning] [-IsSuspendedFromProvisioning <$true | $false>] [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-PublicFolderDatabase <DatabaseIdParameter>]
+New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
+ [-AutoDagExcludeFromMonitoring <$true | $false>]
+ [-IsExcludedFromProvisioning <$true | $false>]
+ [-IsExcludedFromInitialProvisioning]
+ [-IsSuspendedFromProvisioning <$true | $false>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>]
+ [-PublicFolderDatabase <DatabaseIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
-
  [-SkipDatabaseLogFolderCreation]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -58,7 +63,7 @@ This example creates the mailbox database DB1. This example also uses a non-defa
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the new mailbox database.
+The Name parameter specifies the name of the new mailbox database. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -85,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recovery
-The Recovery parameter specifies that the new database is designated as a recovery database.
+The Recovery switch specifies that the new database is designated as a recovery database. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server on which you want to create the database.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

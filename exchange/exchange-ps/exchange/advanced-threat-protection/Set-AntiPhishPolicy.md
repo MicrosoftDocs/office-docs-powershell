@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
- [-AdminDisplayName <Basic | High>]
+ [-AdminDisplayName <String>]
  [-AuthenticationFailAction <MoveToJmf | Quarantine>]
  [-Confirm]
  [-EnableAntispoofEnforcement <$true | $false>]
