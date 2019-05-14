@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-RPCClientAccess -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Remove-RPCClientAccess -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +44,15 @@ This example removes the configuration information for the Exchange RPC Client A
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Client Access server.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter

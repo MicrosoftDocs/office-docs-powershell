@@ -238,7 +238,20 @@ Accept wildcard characters: False
 ### -CopyOnServer
 This parameter is available only in on-premises Exchange.
 
-The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the server specified with the Server parameter.
+The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the specified server.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
+
 
 ```yaml
 Type: ServerIdParameter

@@ -68,7 +68,15 @@ This example removes an Exchange server from the Customer Experience Improvement
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID, distinguished name (DN), or name of the server.
+The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
