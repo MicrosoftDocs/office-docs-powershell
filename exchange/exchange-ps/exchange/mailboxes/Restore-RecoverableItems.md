@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Restore-RecoverableItems items cmdlet to restore deleted items in the Recoverable Items folder in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
+Use the Restore-RecoverableItems items cmdlet to restore deleted items in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
+### OnPremises
 ```
 Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-EntryID <String>]
@@ -32,7 +33,23 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-MaxParallelSize <Int32>]
  [-NoOutput]
  [-ResultSize <Unlimited>]
- [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>]
+ [-SourceFolder <RecoverableItemsFolderType>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
+```
+
+### Cloud
+```
+Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
+ [-NoOutput]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
  [<CommonParameters>]
 ```
@@ -46,7 +63,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Restore-RecoverableItems -Identity laura@contoso.com -FilterItemType IPM.Note -SubjectContains "FY17 Accounting" -FilterStartTime "2/1/2018 12:00:00 AM" -FilterEndTime "2/5/2018 11:59:59 PM"
+Restore-RecoverableItems -Identity laura@contoso.com -FilterItemType IPM.Note -SubjectContains "FY18 Accounting" -FilterStartTime "2/1/2018 12:00:00 AM" -FilterEndTime "2/5/2018 11:59:59 PM"
 ```
 
 After using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted item from the specified mailbox:
@@ -55,7 +72,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 - Item type: Email message
 
-- Message subject: FY17 Accounting
+- Message subject: FY18 Accounting
 
 - Location: Recoverable Items\Deletions
 
@@ -63,10 +80,10 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 ### -------------------------- Example 2 --------------------------
 ```
-$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
+$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note -MaxParallelSize 5}
 ```
 
-This example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
+In Exchange Server, this example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
 
 SMTPAddress
 
@@ -82,26 +99,25 @@ The first command reads the CSV file and writes the information to the variable 
 
 ### -------------------------- Example 3 --------------------------
 ```
-Restore-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY18 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+Restore-RecoverableItems -Identity "malik@contoso.com","lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY17 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
 ```
 
-After using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items from multiple specified mailboxes:
+In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items in the specified mailboxes:
 
-- Mailbox: malik@contoso.com, lillian@contoso.com
+- Mailboxes: malik@contoso.com, lillian@contoso.com
 
 - Item type: Email message
 
-- Message subject: COGS FY18 Review
+- Message subject: COGS FY17 Review
 
 - Location: Recoverable Items\Deletions
 
 - Date range: 3/15/2019 to 3/25/2019
 
-
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder where you want to restore items from. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox that contains the deleted items that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -117,18 +133,32 @@ The Identity parameter specifies the mailbox that contains the Recoverable Items
 
 - GUID
 
-- LegacyExchangeDN 
+- LegacyExchangeDN
 
-- SamAccountName 
+- SamAccountName
 
 - User ID or user principal name (UPN)
 
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: OnPremises
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: GeneralMailboxOrMailUserIdParameter[]
+Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -227,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxParallelSize
-The MaxParallelSize paramater controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
+The MaxParallelSize parameter controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
 
 ```yaml
 Type: Int32
@@ -258,13 +288,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoOutput
-
-
-```
-Restore-RecoverableItems -Identity alvin@contoso.com -NoOutput
-```
-
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -281,21 +304,35 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolder
-The SourceFolder parameter specifies the folder in the mailbox to search for deleted items. Valid values are:
+The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
 
-- RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
+- RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 
-- PurgedItems: If either Litigation Hold or single item recovery is enabled on the mailbox, this folder contains all items that are hard deleted. This folder isn't visible to end users.
+- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all locations.
+If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
-Type: DeletedItems | RecoverableItems
-Parameter Sets: (All)
+Type: RecoverableItemsFolderType
+Parameter Sets: OnPremises
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Accepted values: DeletedItems | RecoverableItems
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: RecoverableItemsFolderType
+Parameter Sets: Cloud
+Aliases:
+Accepted values: DeletedItems | RecoverableItems | PurgedItems
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
