@@ -18,7 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-LabelExplorerConfig [[-Identity] <LabelExplorerConfigIdParameter>] [-DisplayName <String>] [-User <String>]
+Get-LabelExplorerConfig [[-Identity] <LabelExplorerConfigIdParameter>]
+ [-DisplayName <String>]
+ [-User <String>]
  [<CommonParameters>]
 ```
 

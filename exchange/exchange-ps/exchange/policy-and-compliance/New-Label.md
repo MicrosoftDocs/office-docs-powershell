@@ -33,7 +33,6 @@ New-Label [-Name] <String> -DisplayName <String>
 ## DESCRIPTION
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -42,7 +41,6 @@ Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
-
 
 ## PARAMETERS
 

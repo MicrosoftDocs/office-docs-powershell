@@ -18,7 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-LabelPolicyRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>]  [<CommonParameters>]
+Get-LabelPolicyRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-Policy <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
