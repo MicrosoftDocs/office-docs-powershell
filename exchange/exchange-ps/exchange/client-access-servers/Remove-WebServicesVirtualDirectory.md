@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Remove-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,9 +45,7 @@ This example removes the Exchange Web Services virtual directory named Sales fro
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies Exchange Web Services virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the EWS virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

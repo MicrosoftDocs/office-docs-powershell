@@ -21,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-PublicFolderStatistics [[-Identity] <PublicFolderIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-PublicFolderStatistics [[-Identity] <PublicFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,38 +77,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-This parameter is available or functional only in Exchange Server 2010.
-
-The Server parameter specifies which server to check. If a server isn't specified, the command uses the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the identity of the hierarchy public folder mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -138,6 +109,46 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResultSize
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
