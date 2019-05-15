@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Remove-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -40,9 +42,7 @@ This example removes the MAPI virtual directory from the local server named Cont
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the MAPI virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the MAPI virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

@@ -49,8 +49,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 
 - Exchange Legacy DN
 
-If you don't use this parameter, the command is run on the local server.
-
 You can't use this parameter to configure other Edge Transport servers remotely.
 
 ```yaml

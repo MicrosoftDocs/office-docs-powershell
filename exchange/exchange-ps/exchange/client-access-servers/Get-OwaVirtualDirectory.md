@@ -68,6 +68,31 @@ This example returns a summary list of all Outlook on the web virtual directorie
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the OWA virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
+
+- Name or \<Server\>\\Name
+
+- Distinguished name (DN)
+
+- GUID
+
+The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+
+You can't use the Identity and Server parameters in the same command.
+
+```yaml
+Type: VirtualDirectoryIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
@@ -120,33 +145,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the virtual directory that you want to view.
-
-You can use any value that uniquely identifies the virtual directory. For example:
-
-- Name or \<Server\>\\Name
-
-- Distinguished name (DN)
-
-- GUID
-
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-You can't use the Identity and Server parameters in the same command.
-
-```yaml
-Type: VirtualDirectoryIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
