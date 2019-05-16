@@ -72,11 +72,7 @@ This example returns all of the available recoverable deleted messages with the 
 ## PARAMETERS
 
 ### -Identity
-<<<<<<< HEAD
-The Identity parameter specifies the list of mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox. For example:
-=======
 The Identity parameter specifies the mailbox that contains the deleted items that you want to view. You can use any value that uniquely identifies the mailbox. For example:
->>>>>>> ce0e728af1d6b7bc7db58c03fc3e22047634af5d
 
 - Name
 
