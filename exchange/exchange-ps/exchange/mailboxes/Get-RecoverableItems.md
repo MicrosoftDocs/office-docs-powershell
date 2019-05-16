@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### OnPremises
 ```
-Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>[]
+Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-EntryID <String>]
  [-FilterEndTime <DateTime>]
  [-FilterItemType <String>]
