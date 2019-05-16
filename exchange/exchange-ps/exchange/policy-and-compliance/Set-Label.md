@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-{{Fill AdvancedSettings Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -120,7 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -Disabled
-{{Fill Disabled Description}}
+The disabled parameter specifies whether to enable or disable the sensitivity label. Valid values are:
+
+- $true: The label is disabled.
+
+- $False: The label is enabled.
 
 ```yaml
 Type: Boolean
@@ -184,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentId
-The ParentId parameter specifies the policy that contains the sensitivity label. You can use any value that uniquely identifies the policy. For example:
+The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
 
@@ -260,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tooltip
-{{Fill Tooltip Description}}
+The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

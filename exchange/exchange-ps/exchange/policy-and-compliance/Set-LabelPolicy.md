@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-AddLabels <MultiValuedProperty>]
- [-AddModernGroupLocation <MultiValuedProperty>]
- [-AddModernGroupLocationException <MultiValuedProperty>]
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddExchangeLocationException <MultiValuedProperty>]
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
@@ -30,8 +30,8 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
- [-RemoveModernGroupLocation <MultiValuedProperty>]
- [-RemoveModernGroupLocationException <MultiValuedProperty>]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-Settings <PswsHashtable>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. You don't need to specify a value with this switch.
+
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddLabels
-{{Fill AddLabels Description}}
+The AddLabels parameter specifies the sensitivity labels that you want to add to the policy. You can use any value that uniquely identifies the label. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -114,10 +124,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddModernGroupLocation
-The AddModernGroupLocation parameter specifies the Office 365 groups to add to the list of included Office 365 groups when you aren't using the value All for the ModernGroupLocation parameter.
+### -AddExchangeLocation
+The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+- A mailbox
+
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -141,10 +155,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddModernGroupLocationException
-The AddModernGroupLocationException parameter specifies the Office 365 groups to add to the list of excluded Office 365 groups when you're using the value All for the ModernGroupLocation parameter.
+### -AddExchangeLocationException
+The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+- A mailbox
+
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -153,8 +171,6 @@ You can use any value that uniquely identifies the Office 365 Group. For example
 - Email address
 
 - GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -282,7 +298,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLabels
-{{Fill RemoveLabels Description}}
+The RemoveLabels parameter specifies the sensitivity labels that you want to remove from the policy. You can use any value that uniquely identifies the label. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -296,10 +320,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveModernGroupLocation
-The RemoveModernGroupLocation parameter specifies the Office 365 groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
+### -RemoveExchangeLocation
+The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+- A mailbox
+
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -323,10 +351,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveModernGroupLocationException
-The RemoveModernGroupLocationException parameter specifies the Office 365 groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
+### -RemoveExchangeLocationException
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you're using the value All for the ExchangeLocation parameter. Valid values are:
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+- A mailbox
+
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 

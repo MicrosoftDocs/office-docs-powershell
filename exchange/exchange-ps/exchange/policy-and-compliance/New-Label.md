@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-{{Fill AdvancedSettings Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MasterIdParameter
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tooltip
-{{Fill Tooltip Description}}
+The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

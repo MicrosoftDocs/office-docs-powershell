@@ -22,9 +22,9 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
+ [-ExchangeLocationLocation <MultiValuedProperty>]
+ [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
- [-ModernGroupLocation <MultiValuedProperty>]
- [-ModernGroupLocationException <MultiValuedProperty>]
  [-Settings <PswsHashtable>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -130,14 +130,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ModernGroupLocation
-The ModernGroupLocation parameter specifies the Office 365 groups to include in the policy. Valid values are:
+### -ExchangeLocation
+The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
 
-- An Office 365 Group
+- A mailbox
 
-- The value All for all Office 365 groups. You can only use this value by itself.
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
-To identify the Office 365 Group, you can use any value that uniquely identifies it. For example:
+- The value All for all mailboxes. You can only use this value by itself.
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -161,10 +163,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Office 365 groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+### -ExchangeLocationException
+The ExchangeLocationException parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+- A mailbox
+
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -180,6 +186,21 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-PARAMVALUE: SwitchParameter
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

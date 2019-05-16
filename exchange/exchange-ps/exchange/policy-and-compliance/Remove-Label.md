@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-The ForceDeletion switch forces the removal of the sensitivity label. You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
