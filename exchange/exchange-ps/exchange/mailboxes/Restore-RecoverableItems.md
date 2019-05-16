@@ -30,8 +30,6 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
  [-FilterItemType <String>]
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
- [-MaxParallelSize <Int32>]
- [-NoOutput]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -80,7 +78,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 ### -------------------------- Example 2 --------------------------
 ```
-$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note -MaxParallelSize 5}
+$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
 In Exchange Server, this example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
@@ -95,11 +93,11 @@ laura@contoso.com
 
 julia@contoso.com
 
-The first command reads the CSV file and writes the information to the variable $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
+The first command reads the CSV file to the variable named $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Restore-RecoverableItems -Identity "malik@contoso.com","lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY17 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+Restore-RecoverableItems -Identity "malik@contoso.com","lillian@contoso.com" -FilterItemType IPM.Note -SubjectContains "COGS FY17 Review" -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM" -MaxParallelSize 2
 ```
 
 In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the existence of the item, this example restores the specified deleted items in the specified mailboxes:
@@ -113,6 +111,8 @@ In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the ex
 - Location: Recoverable Items\Deletions
 
 - Date range: 3/15/2019 to 3/25/2019
+
+- Number of mailboxes processed simultaneously: 2
 
 ## PARAMETERS
 
@@ -257,11 +257,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxParallelSize
-The MaxParallelSize parameter controls the maximum number of parallel threads restoring. Higher numbers of parallel threads running will typically increase the speed of Restore-RecoverableItems. Valid values are integers from 1 to 10.
+This parameter is available only in the cloud-based service.
+
+The MaxParallelSize parameter specifies the maximum number of mailboxes that are processed by the command in parallel. A valid value is an integer from 1 to 10. Typically, a higher value decreases the amount of time it takes to complete the command on multiple mailboxes.
+
+The value of this parameter has no effect when the Identity parameter specifies only one mailbox.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: Cloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -272,11 +276,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoOutput
-The NoOutput switch restores items directly without any output in console. You don't need to specify a value with this switch.
+This parameter is available only in the cloud-based service.
+
+The NoOutput switch specifies whether to restore the deleted items directly without any command output in the console. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Cloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -339,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectContains
-The SubjectContains parameter filters the items by the specified text value in the Subject field. If the value contains spaces, enclose the value in quotation marks (").
+The SubjectContains parameter filters the deleted items by the specified text value in the Subject field. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
