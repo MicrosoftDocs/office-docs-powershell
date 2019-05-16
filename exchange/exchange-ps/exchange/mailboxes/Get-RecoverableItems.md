@@ -43,6 +43,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-FilterItemType <String>]
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -204,6 +205,25 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxParallelSize
+This parameter is available only in the cloud-based service.
+
+The MaxParallelSize parameter specifies the maximum number of mailboxes that are processed by the command in parallel. A valid value is an integer from 1 to 10. Typically, a higher value decreases the amount of time it takes to complete the command on multiple mailboxes.
+
+The value of this parameter has no effect when the Identity parameter specifies only one mailbox.
+
+```yaml
+Type: Int32
+Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

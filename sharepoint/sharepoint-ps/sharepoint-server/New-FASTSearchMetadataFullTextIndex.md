@@ -1,4 +1,4 @@
- ---
+---
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
