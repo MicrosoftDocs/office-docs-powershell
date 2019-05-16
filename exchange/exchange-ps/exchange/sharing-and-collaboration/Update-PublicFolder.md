@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Update-PublicFolder [-Identity] <PublicFolderIdParameter> -Server <ServerIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Update-PublicFolder [-Identity] <PublicFolderIdParameter> -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +66,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the identity of a Mailbox server with a public folder database that's the source of the replication.
+The Server parameter specifies the Mailbox server that holds the source public folder database for replication. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
