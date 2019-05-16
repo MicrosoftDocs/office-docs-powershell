@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Update-FileDistributionService [-Identity] <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Type <String>] [-WhatIf] [<CommonParameters>]
+Update-FileDistributionService [-Identity] <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Type <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,9 +61,15 @@ This example polls Server1 for changes to Group Metrics files associated with Se
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or server name that represents a specific server.
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
-You can omit the parameter label Identity so that only the server name or GUID is supplied.
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
