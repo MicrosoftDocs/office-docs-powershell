@@ -1,4 +1,4 @@
- ---
+---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOHubSiteAssociation

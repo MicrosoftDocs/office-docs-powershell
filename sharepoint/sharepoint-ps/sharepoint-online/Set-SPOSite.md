@@ -267,7 +267,8 @@ Accept wildcard characters: False
 
 ### -LockState
 Sets the lock state on a site.
-Valid values are: NoAccess and Unlock.
+Valid values are: NoAccess, ReadOnly and Unlock.
+When the lock state of a site is ReadOnly, a message will appear on the site stating that the site is under maintenance and it is read-only.
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
