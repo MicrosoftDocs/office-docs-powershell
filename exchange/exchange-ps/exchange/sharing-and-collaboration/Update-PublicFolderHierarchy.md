@@ -40,7 +40,15 @@ This example pipes the output of the Get-MailboxServer command to the Update-Pub
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the identity of a Mailbox server with a public folder database that's the source of the replication.
+The Server parameter specifies the Mailbox server that holds the source public folder database for replication. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

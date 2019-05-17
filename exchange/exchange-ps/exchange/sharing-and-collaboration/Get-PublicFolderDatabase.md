@@ -70,8 +70,43 @@ This example returns information about all public folders on Server01.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the public folder database that you want to view. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't the Identity and Server parameters in the same command.
+
+If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
-The Server parameter specifies the name of a server that contains a public folder database. If specified, only the public folder database on the specified server is returned. This parameter can't be used with the Identity parameter.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can't use the Server and Identity parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter
@@ -100,30 +135,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies a public folder database. You can use any value that uniquely identifies the database. For example:
 
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-You can't use this parameter with the Server parameter.
-
-If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.

@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-RpcClientAccess -Server <ServerIdParameter> [-BlockedClientVersions <String>] [-Confirm]
- [-DomainController <Fqdn>] [-EncryptionRequired <$true | $false>] [-MaximumConnections <Int32>] [-WhatIf]
- [<CommonParameters>]
+New-RpcClientAccess -Server <ServerIdParameter>
+ [-BlockedClientVersions <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EncryptionRequired <$true | $false>]
+ [-MaximumConnections <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +47,15 @@ This example creates configuration information for the Exchange RPC Client Acces
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Client Access server.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
