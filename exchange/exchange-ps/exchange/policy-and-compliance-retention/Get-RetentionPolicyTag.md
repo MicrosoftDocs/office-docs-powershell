@@ -129,9 +129,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies a mailbox to return the retention tags that are assigned to the retention policy that's applied to the specified mailbox. You can use any value that uniquely identifies the mailbox. 
+The Mailbox parameter returns the retention tags that are assigned to the retention policy that's applied to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-This parameter only returns default policy tags (DPTs) and personal tags; it doesn't return retention policy tags (DPT). 
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+This parameter only returns default policy tags (DPTs) and personal tags; it doesn't return retention policy tags. 
 
 ```yaml
 Type: MailboxIdParameter
