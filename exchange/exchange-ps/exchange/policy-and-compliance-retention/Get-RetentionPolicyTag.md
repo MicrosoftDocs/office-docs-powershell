@@ -129,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter isn't available in this release.
+The Mailbox parameter specifies a mailbox to return the retention tags that are assigned to the retention policy that's applied to the specified mailbox. You can use any value that uniquely identifies the mailbox. 
+
+This parameter only returns default policy tags (DPT) and personal tags; it doesn't return retention policy tags (DPT). 
 
 ```yaml
 Type: MailboxIdParameter
@@ -144,7 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -OptionalInMailbox
-The OptionalInMailbox parameter isn't available in this release.
+The OptionalInMailbox parameter is used with the Mailbox parameter to return any opt-in retention tags that are assigned to the specified mailbox. You don't need to specify a value with this switch.
+
+An opt-in retention tag is a personal tag that was explicitly assigned to the mailbox with the Set-RetentionPolicyTag -Mailbox -OptionalInMailbox command.
 
 ```yaml
 Type: SwitchParameter
