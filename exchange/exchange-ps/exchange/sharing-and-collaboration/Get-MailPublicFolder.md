@@ -225,7 +225,15 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies the identity of the server to perform the operation from. If a server isn't specified, the command checks whether the local server is a Mailbox server with a public folder store. If it is, the folder is created locally. If it isn't, the command finds the closest (by site cost) computer running Microsoft Exchange Server 2010 that has the Mailbox server role installed and that has a mounted public folder store.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

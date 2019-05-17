@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-RpcClientAccess -Server <ServerIdParameter> [-BlockedClientVersions <String>] [-Confirm]
- [-DomainController <Fqdn>] [-EncryptionRequired <$true | $false>] [-MaximumConnections <Int32>]
- [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-RpcClientAccess -Server <ServerIdParameter>
+ [-BlockedClientVersions <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EncryptionRequired <$true | $false>]
+ [-MaximumConnections <Int32>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,17 +59,15 @@ Note: You can determine specific client software versions by parsing the RPC Cli
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Exchange server that you want to modify.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
-You can use any value that uniquely identifies the server. For example:
+- Name
 
-- Name (for example, Exchange01)
+- FQDN
 
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- Distinguished name (DN)
 
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
