@@ -196,7 +196,19 @@ Accept wildcard characters: False
 ### -ServerList
 This parameter is available only in on-premises Exchange.
 
-The ServerList parameter specifies a list of servers to which the scope should be applied. Multiple servers can be specified, separated by commas. If you use the ServerList parameter, you can't use the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerRestrictionFilter parameters.
+The ServerList parameter specifies a list of servers to which the scope should be applied. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can specify multiple values separated by commas. If the values contains spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>,"..."\<ValueN\>".
+
+You can't use this parameter with the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerRestrictionFilter parameters.
 
 ```yaml
 Type: ServerIdParameter[]

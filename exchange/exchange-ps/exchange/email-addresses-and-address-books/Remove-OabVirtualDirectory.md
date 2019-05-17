@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [<CommonParameters>]
+Remove-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,9 +52,7 @@ This example removes the default OAB virtual directory from Server1.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the OAB virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OAB virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

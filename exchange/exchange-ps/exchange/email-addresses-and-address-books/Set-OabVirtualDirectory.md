@@ -21,11 +21,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-BasicAuthentication <$true | $false>]
- [-Confirm] [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-PollInterval <Int32>] [-RequireSSL <$true | $false>] [-WhatIf]
- [-WindowsAuthentication <$true | $false>] [-OAuthAuthentication <$true | $false>] [<CommonParameters>]
+Set-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-BasicAuthentication <$true | $false>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-OAuthAuthentication <$true | $false>]
+ [-PollInterval <Int32>]
+ [-RequireSSL <$true | $false>]
+ [-WhatIf]
+ [-WindowsAuthentication <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,9 +53,7 @@ This example changes the external URL of the OAB virtual directory OAB (Default 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the OAB virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OAB virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -221,6 +229,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OAuthAuthentication
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PollInterval
 The PollInterval parameter specifies the time interval in minutes that the distribution service should poll the offline address book generation server for updates.
 
@@ -284,21 +307,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OAuthAuthentication
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
