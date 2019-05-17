@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantSyncClientRestriction
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOTenantSyncClientRestriction
@@ -83,12 +86,12 @@ When the feature is enabled the following will occur:
 > [!NOTE] 
 > To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
-* The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](http://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](http://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
+* The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](https://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](https://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
 
 > [!IMPORTANT] 
 > This capability doesn’t support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
 
-For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](http://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
+For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](https://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
 
 **Block specific file extensions from syncing**
 
@@ -270,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

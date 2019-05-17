@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-Message
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -16,7 +19,6 @@ Use the Get-Message cmdlet to view the details of one or more messages in queues
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
-
 
 ### Filter
 ```
@@ -46,6 +48,7 @@ Get-Message [[-Identity] <MessageIdentity>]
  [-SearchForward <$true | $false>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
+
 ### Queue
 ```
 Get-Message [-Queue <QueueIdentity>]

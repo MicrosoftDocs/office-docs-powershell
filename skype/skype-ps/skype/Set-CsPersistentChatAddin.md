@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatAddin
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatAddin
@@ -45,11 +48,11 @@ Skype for Business Server Control Panel: To modify an existing Persistent Chat a
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "http://atl-cs-001.litwareinc.com/itchat2"
+Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "https://atl-cs-001.litwareinc.com/itchat2"
 ```
 
 Example 1 modifies the URL assigned to the Persistent Chat add-in ITPersistentChatAddin.
-In this case, the URL is changed to http://atl-cs-001.litwareinc.com/itchat2.
+In this case, the URL is changed to https://atl-cs-001.litwareinc.com/itchat2.
 
 
 ## PARAMETERS
@@ -156,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

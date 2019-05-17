@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWeb
@@ -44,14 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------- 
 ```
-Get-SPWeb -site http://sitename/sites/site1
+Get-SPWeb -site https://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
 ### --------------------EXAMPLE 2---------------------- 
 ```
-Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
+Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
@@ -60,9 +63,9 @@ This example displays all subsites that use the "STS#0" template.
 ```
 Start-SPAssignment -Global
 
-C:\PS>$w = Get-SPWeb http://sitename
+C:\PS>$w = Get-SPWeb https://sitename
 
-C:\PS>$w.set_SiteLogoUrl("http://PathToImage/test.jpg")
+C:\PS>$w.set_SiteLogoUrl("https://PathToImage/test.jpg")
 
 C:\PS>$w.Update()
 
@@ -77,7 +80,7 @@ This example demonstrates how to save a subsite as a variable and to call object
 Specifies the name or full or partial URL of the subsite.
 If you use a relative path, you must specify the Site parameter.
 
-A valid URL in the form http://server_name or a relative path in the form of /SubSites/MySubSite.
+A valid URL in the form https://server_name or a relative path in the form of /SubSites/MySubSite.
 
 ```yaml
 Type: SPWebPipeBind
@@ -188,7 +191,7 @@ Accept wildcard characters: False
 ### -Site
 Specifies the URL or GUID of the site collection from which to list subsites.
 
-The type must be a valid URL, in the form  of http://server_name; a GUID, in the form 1234-5678-9807, or an SPSite object.
+The type must be a valid URL, in the form  of https://server_name; a GUID, in the form 1234-5678-9807, or an SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

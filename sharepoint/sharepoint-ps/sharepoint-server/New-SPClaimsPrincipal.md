@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPClaimsPrincipal
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPClaimsPrincipal
@@ -59,21 +62,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------------EXAMPLE 1----------------------------- 
 ```
-New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
+New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows user.
 
 ### -------------------------EXAMPLE 2----------------------------- 
 ```
-New-SPSite http://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
+New-SPSite https://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows group.
 
 ### -------------------------EXAMPLE 3----------------------------- 
 ```
-New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
+New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
 ```
 
 This example creates a claim principal for a trusted identity token issuer claim.
@@ -81,14 +84,14 @@ This example creates a claim principal for a trusted identity token issuer claim
 ### -------------------------EXAMPLE 4----------------------------- 
 ```
 $ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
-New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
+New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
 ```
 
 This example creates a claim principal for a ASPNet Membership User.
 
 ### -------------------------EXAMPLE 5----------------------------- 
 ```
-New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
+New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
 ```
 
 This example creates a claim principal for a ASPNet Role.
@@ -96,7 +99,7 @@ This example creates a claim principal for a ASPNet Role.
 ### -------------------------EXAMPLE 6----------------------------- 
 ```
 $cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
-New-SPSite http://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
+New-SPSite https://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
 ```
 
 This example creates a claim principal for a Basic Claim Role, which is also called an encoded claim).

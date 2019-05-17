@@ -55,6 +55,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 {{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
 
+### [Enable-SPOCommSite](Enable-SPOCommSite.md)
+{{Manually Enter Enable-SPOCommSite Description Here}}
+
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}
 
@@ -380,4 +383,4 @@ The following cmdlet references are for SharePoint Online.
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
 
-<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->

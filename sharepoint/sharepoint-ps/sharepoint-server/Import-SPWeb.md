@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPWeb
@@ -33,17 +36,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE---------------------- 
 ```
-Import-SPWeb http://site -Path export.cmp -UpdateVersions Overwrite
+Import-SPWeb https://site -Path export.cmp -UpdateVersions Overwrite
 ```
 
-This example imports the contents of export.cmp into a site at http://site, overwriting the versioned content on the site with the contents of the export.cmp file.
+This example imports the contents of export.cmp into a site at https://site, overwriting the versioned content on the site with the contents of the export.cmp file.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the URL or GUID of the Web to import into.
 
-The type must be a valid URL, GUID, or object; for example, a valid URL, in the form http://server_name, or a GUID, in the form, 1234-4567-5678a.
+The type must be a valid URL, GUID, or object; for example, a valid URL, in the form https://server_name, or a GUID, in the form, 1234-4567-5678a.
 
 ```yaml
 Type: SPWebPipeBind

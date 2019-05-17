@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-AdminAuditLogConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,12 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>] [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
- [-AdminAuditLogCmdlets <MultiValuedProperty>] [-AdminAuditLogEnabled <$true | $false>]
- [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>] [-AdminAuditLogParameters <MultiValuedProperty>]
- [-Confirm] [-DomainController <Fqdn>] [-Force] [-Name <String>] [-TestCmdletLoggingEnabled <$true | $false>]
- [-WhatIf] [-LogLevel <None | Verbose>] [-LoadBalancerCount <Int32>] [-RefreshInterval <Int32>]
- [-UnifiedAuditLogIngestionEnabled <$true | $false>] [<CommonParameters>]
+Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
+ [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AdminAuditLogCmdlets <MultiValuedProperty>]
+ [-AdminAuditLogEnabled <$true | $false>]
+ [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>]
+ [-AdminAuditLogParameters <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LogLevel <None | Verbose>]
+ [-Name <String>]
+ [-TestCmdletLoggingEnabled <$true | $false>]
+ [-UnifiedAuditLogIngestionEnabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -227,6 +237,25 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -LogLevel
+This parameter is available only in on-premises Exchange.
+
+The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
+
+By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
+
+```yaml
+Type: None | Verbose
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 This parameter is available only in on-premises Exchange.
 
@@ -265,70 +294,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogLevel
-This parameter is available only in on-premises Exchange.
-
-The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
-
-By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
-
-```yaml
-Type: None | Verbose
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoadBalancerCount
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RefreshInterval
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UnifiedAuditLogIngestionEnabled
 This parameter is available only in the cloud-based service.
 
@@ -343,6 +308,21 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPProfilePhotoStore
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPProfilePhotoStore
@@ -29,7 +32,7 @@ If the operation fails for certain users for any reason, it continues on to the 
 During the migration of profile photos from one server URL to another, one can use the OldBaseUri and NewBaseUri parameters.
 You just need to specify the starting portion of the URL that has changed from old to new and an attempt to rebase the profile picture URLs will occur.
 
-For example, OldBaseUri: http://server1/my/ProfilePhotos; NewBaseUri: http://server1/my/NewLocation/ProfilePhotos
+For example, OldBaseUri: https://server1/my/ProfilePhotos; NewBaseUri: https://server1/my/NewLocation/ProfilePhotos
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -37,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-------------------
 ```
-Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
+Update-SPProfilePhotoStore -MySiteHostLocation https://mysites
 ```
 
 This example uploads photos to a specified My Site host location.
@@ -100,7 +103,7 @@ Accept wildcard characters: False
 
 ### -NewBaseUri
 Specifies the new URL for profile pictures.
-For example, http://server2/.
+For example, https://server2/.
 
 ```yaml
 Type: Uri
@@ -135,7 +138,7 @@ Accept wildcard characters: False
 
 ### -OldBaseUri
 Specifies the old URL for profile pictures.
-For example, http://server1/.
+For example, https://server1/.
 
 ```yaml
 Type: Uri

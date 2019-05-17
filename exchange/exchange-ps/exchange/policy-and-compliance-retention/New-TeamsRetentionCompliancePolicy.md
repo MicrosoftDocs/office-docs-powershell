@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-TeamsRetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -34,7 +37,6 @@ New-TeamsRetentionCompliancePolicy -Name "Teams - Regulation 123 Compliance" -Te
 ```
 
 This example creates a retention policy named "Teams - Regulation 123 Compliance" for the Teams channel messages in the teams by the names of Engineering Team and UX Design Team and Teams chats in the mailboxes of Kitty Petersen and Scott Nakamura.
-
 
 ## PARAMETERS
 
@@ -252,13 +254,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+###  
 
 ## OUTPUTS
 
-### 
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+###  
 
 ## NOTES
 

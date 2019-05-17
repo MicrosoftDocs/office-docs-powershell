@@ -3,13 +3,16 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsInteropPolicy
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 
@@ -23,14 +26,14 @@ Get-CsTeamsInteropPolicy  [-Identity] <Object>] [-Tenant <Object>] [-Filter <Obj
 Previously, TeamsInteropPolicy could determined how calls are routed between Skype for Business and Microsoft Teams, if TeamsUpgradePolicy had mode=Legacy. However, TeamsInteropPolicy and Legacy mode are both now fully retired. Instead, use TeamsUpgradePolicy to manage routing.
 
  
-For comprehensive documentation on this policy and its settings, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+For comprehensive documentation on this policy and its settings, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsTeamsInteropPolicy
+```powershell
+Get-CsTeamsInteropPolicy
 ```
 
 List all available instances of TeamsInteropPolicy.
@@ -116,4 +119,4 @@ TeamsInteropPolicy is no longer honored by the system and has been replaced by T
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype)

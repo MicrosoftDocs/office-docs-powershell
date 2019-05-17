@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPProjectDatabase
@@ -27,10 +30,10 @@ Server and the SharePoint farm account must have full access to the Project Serv
 
 ### Example 1 
 ```
-Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "http://contoso1/sites/PWA"
+Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "https://contoso1/sites/PWA"
 ```
 
-This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing http://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
+This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing https://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
 
 ## PARAMETERS
 

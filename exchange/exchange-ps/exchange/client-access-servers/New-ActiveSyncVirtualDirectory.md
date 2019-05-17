@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-ActiveSyncVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -36,21 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl http://www.contoso.com/Microsoft-Server-ActiveSync
+New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl https://www.contoso.com/Microsoft-Server-ActiveSync
 ```
 
 This example creates an Exchange ActiveSync virtual directory and specifies the external URL used to connect to the virtual directory.
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl http://www.contoso.com/mail -InternalUrl http://contoso/mail
+New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl https://www.contoso.com/mail -InternalUrl https://contoso/mail
 ```
 
 This example creates an Exchange ActiveSync virtual directory and specifies the external and internal URLs used to connect to the virtual directory.
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl "http://www.fourthcoffee.com/Microsoft-Server-ActiveSync"
+New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl "https://www.fourthcoffee.com/Microsoft-Server-ActiveSync"
 ```
 
 This example creates an Exchange ActiveSync virtual directory for the company Fourth Coffee.

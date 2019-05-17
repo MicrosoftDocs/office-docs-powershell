@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsGraphPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsGraphPolicy
@@ -32,7 +35,7 @@ Use the Grant-CsGraphPolicy cmdlet to assign a predefined graph policy to users 
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}`
 
 ## EXAMPLES
 
@@ -51,10 +54,10 @@ Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
 Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled"`.
 
 Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled"`.
 
 ```yaml
 Type: String
@@ -172,7 +175,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

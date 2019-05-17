@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlMapping
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa -Url "file://location1" -Target "http://location2"
+New-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa -Url "file://location1" -Target "https://location2"
 ```
 
 This example will change the query results link from the file share where the item was crawled to the Web site location from which the item can be browsed.
@@ -40,7 +43,7 @@ This example will change the query results link from the file share where the it
 ### -Url
 Specifies the source URI for the crawl mapping.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String

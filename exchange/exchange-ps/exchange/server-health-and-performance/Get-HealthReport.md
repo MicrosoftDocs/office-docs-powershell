@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-HealthReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-HealthReport [-Identity] <ServerIdParameter> [-GroupSize <Int32>] [-HaImpactingOnly] [-HealthSet <String>]
- [-MinimumOnlinePercent <Int32>] [-RollupGroup] [<CommonParameters>]
+Get-HealthReport [-Identity] <ServerIdParameter>
+ [-GroupSize <Int32>]
+ [-HaImpactingOnly]
+ [-HealthSet <String>]
+ [-MinimumOnlinePercent <Int32>]
+ [-RollupGroup]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,13 +59,15 @@ This example retrieves health information for the server named Mailbox01.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Exchange server that you want to view. You can use the following values to identify the server:
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
 
+- FQDN
+
 - Distinguished name (DN)
 
-- FQDN
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

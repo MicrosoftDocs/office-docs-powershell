@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelDataConnectionLibrary
@@ -44,7 +47,7 @@ Workbooks that depend on any connection files might not refresh data.
 ### -Identity
 Specifies the data connection library to remove.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form http://server_name; or an instance of a valid SPExcelDCL object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form https://server_name; or an instance of a valid SPExcelDCL object.
 
 ```yaml
 Type: SPExcelDCLPipeBind

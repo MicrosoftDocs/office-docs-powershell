@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-ThrottlingPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -193,7 +196,7 @@ This example creates a non-default user throttling policy that can be associated
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ThrottlingPolicy -Name <NewPolicyName > EWSPercentTimeInCAS 80
+New-ThrottlingPolicy -Name <NewPolicyName> -EWSPercentTimeInCAS 80
 ```
 
 In Exchange Server 2010, this example creates a policy for a tenant that sets the EWSPercentTimeInCAS parameter value to 80.

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlRule
@@ -34,10 +37,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchCrawlRule -SearchApplication $ssa -Identity http://ExampleSharePointSite -CrawlAsHttp 1 -Type InclusionRule
+New-SPEnterpriseSearchCrawlRule -SearchApplication $ssa -Identity https://ExampleSharePointSite -CrawlAsHttp 1 -Type InclusionRule
 ```
 
-This example creates an inclusion type crawl rule for the site at http://ExampleSharePointSite.
+This example creates an inclusion type crawl rule for the site at https://ExampleSharePointSite.
 The rule specifies that the site be crawled as an HTTP site.
 
 

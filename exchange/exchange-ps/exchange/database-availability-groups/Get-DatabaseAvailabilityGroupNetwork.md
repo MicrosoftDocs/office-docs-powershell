@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-DatabaseAvailabilityGroupNetwork
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -109,7 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies health information for the DAG network from a specific Mailbox server in the DAG.
+The Server parameter specifies the Mailbox server in the DAG to retrieve health information for the DAG network from. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -78,7 +81,6 @@ In Exchange Online, we recommend that you don't use the `Search-Mailbox -DeleteC
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 **Note**: By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see the "Add a role to a role group" section in [Manage role groups](https://technet.microsoft.com/library/jj657480.aspx).
 
 ## EXAMPLES
@@ -129,13 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -183,25 +181,29 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the identity of the destination mailbox where search results are copied. You can use the following values:
+The TargetMailbox parameter specifies the destination mailbox where search results are copied. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
 
 - Alias
 
-- Display name
+- Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- SMTP address
+- \<domain name\>\\\<account name\>
 
-- DN
+- Email address
 
-- Object GUID
-
-- UPN
+- GUID
 
 - LegacyExchangeDN
 
-When you specify a value for the TargetMailbox parameter, you must also specify the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You must use this parameter with the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
 
 ```yaml
 Type: MailboxIdParameter

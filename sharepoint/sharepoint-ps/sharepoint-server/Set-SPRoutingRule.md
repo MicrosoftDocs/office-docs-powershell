@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRoutingRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRoutingRule
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$wa = Get-SPWebApplication http://webAppUrl
+$wa = Get-SPWebApplication https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
 Get-SPRoutingRule -RequestManagementSettings $rm
 $machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm

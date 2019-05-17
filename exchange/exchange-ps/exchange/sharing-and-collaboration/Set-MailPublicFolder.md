@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailPublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -20,33 +23,69 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailPublicFolder [-Identity] <MailPublicFolderIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+Set-MailPublicFolder [-Identity] <MailPublicFolderIdParameter>
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
- [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
- [-Confirm] [-Contacts <RecipientIdParameter[]>] [-CreateDTMFMap <$true | $false>] [-CustomAttribute1 <String>]
- [-CustomAttribute10 <String>] [-CustomAttribute11 <String>] [-CustomAttribute12 <String>]
- [-CustomAttribute13 <String>] [-CustomAttribute14 <String>] [-CustomAttribute15 <String>]
- [-CustomAttribute2 <String>] [-CustomAttribute3 <String>] [-CustomAttribute4 <String>]
- [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
- [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-DeliverToMailboxAndForward <$true | $false>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-EmailAddresses <ProxyAddressCollection>]
- [-EmailAddressPolicyEnabled <$true | $false>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
- [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
- [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
- [-ForwardingAddress <RecipientIdParameter>] [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>] [-IgnoreDefaultScope] [-MailTip <String>]
- [-MailTipTranslations <MultiValuedProperty>] [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Name <String>]
- [-PhoneticDisplayName <String>] [-PrimarySmtpAddress <SmtpAddress>]
- [-PublicFolderType <GeneralPurpose | Mapi | Nntp | NotSpecified>] [-RejectMessagesFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-Confirm]
+ [-Contacts <RecipientIdParameter[]>]
+ [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DeliverToMailboxAndForward <$true | $false>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EntryId <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IgnoreDefaultScope]
+ [-IgnoreMissingFolderLink <$true | $false>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Name <String>]
+ [-OnPremisesObjectId <Guid>]
+ [-PhoneticDisplayName <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-PublicFolderType <GeneralPurpose | Mapi | Nntp | NotSpecified>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SendModerationNotifications <Never | Internal | Always>] [-Server <ServerIdParameter>]
- [-SimpleDisplayName <String>] [-UMDtmfMap <MultiValuedProperty>] [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [-EntryId <String>] [-ExternalEmailAddress <ProxyAddress>]
- [-ExternalDirectoryObjectId <Guid>] [-IgnoreMissingFolderLink <$true | $false>] [-OnPremisesObjectId <Guid>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-Server <ServerIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -88,8 +127,6 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -126,8 +163,6 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -167,8 +202,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -232,7 +265,27 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available or functional only in Exchange Server 2010.
 
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
+The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -252,8 +305,6 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -305,6 +356,22 @@ Accept wildcard characters: False
 ### -Contacts
 The Contacts parameter specifies the contacts for the public folder. Contacts are persons about whom you can save several types of information, such as addresses, telephone numbers, and web page URLs.
 
+Valid values for this parameter are recipients in your organization. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
@@ -333,7 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute1
-The CustomAttribute1 parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -348,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute10
-The CustomAttribute10 parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -363,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute11
-The CustomAttribute11 parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -378,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute12
-The CustomAttribute12 parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -393,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute13
-The CustomAttribute13 parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -408,7 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute14
-The CustomAttribute14 parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -423,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute15
-The CustomAttribute15 parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -438,7 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute2
-The CustomAttribute2 parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -453,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute3
-The CustomAttribute3 parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -468,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute4
-The CustomAttribute4 parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -483,7 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute5
-The CustomAttribute5 parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -498,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute6
-The CustomAttribute6 parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -513,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute7
-The CustomAttribute7 parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -528,7 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute8
-The CustomAttribute8 parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -543,7 +610,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute9
-The CustomAttribute9 parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -631,7 +698,7 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
-- If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+- Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -668,14 +735,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EntryId
+The EntryId parameter specifies the EntryID value for the public folder. You use this parameter to correct an existing EntryID that points to a folder that can't be found.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExtensionCustomAttribute1
-The ExtensionCustomAttribute1 parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+This parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
 To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter {ExtensionCustomAttribute1 -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -690,13 +772,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-The ExtensionCustomAttribute2 parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+This parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
 To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter {ExtensionCustomAttribute2 -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -711,13 +793,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-The ExtensionCustomAttribute3 parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+This parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
 To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter {ExtensionCustomAttribute3 -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -732,13 +814,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-The ExtensionCustomAttribute4 parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+This parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
 To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter {ExtensionCustomAttribute4 -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -753,13 +835,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-The ExtensionCustomAttribute5 parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+This parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
 To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter {ExtensionCustomAttribute5 -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -773,14 +855,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForwardingAddress
-The ForwardingAddress parameter specifies a forwarding address for messages that are sent to this public folder. A valid value for this parameter is a recipient in your organization. You can use any value that uniquely identifies the recipient.
+### -ExternalEmailAddress
+The ExternalEmailAddress parameter specifies an email address outside the organization.
 
-For example:
+```yaml
+Type: ProxyAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForwardingAddress
+The ForwardingAddress parameter specifies a forwarding address for messages that are sent to this public folder. A valid value for this parameter is a recipient in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -815,13 +908,9 @@ Accept wildcard characters: False
 ### -GrantSendOnBehalfTo
 The GrantSendOnBehalfTo parameter specifies who can send on behalf of this public folder. Although messages sent on behalf of the mail user clearly show the sender in the From field (\<Sender\> on behalf of \<Public folder\>), replies to these messages are delivered to the public folder, not the sender.
 
-The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender.
-
-For example:
+The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -899,6 +988,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IgnoreMissingFolderLink
+The IgnoreMissingFolderLink parameter specifies whether to exclude the mail-enabled public folder from a specific validation check that's used during a public folder migration. Valid values are:
+
+- $true: Skip the validation check. If the Active Directory object for the mail-enabled public folder doesn't have EntryId or ContentMailbox property values, the public folder is ignored, and the public folder migration can continue.
+
+- $false: Don't skip the validation check. If the Active Directory object for the mail-enabled public folder doesn't have EntryId or ContentMailbox property values, the entire public folder migration will fail. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MailTip
 The MailTip parameter specifies the custom MailTip text for this recipient. The MailTip is shown to senders when they start drafting an email message to this recipient. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -956,13 +1064,9 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
-
-The value unlimited indicates the maximum receive size for the public folder is controlled elsewhere (for example, organization, server, or connector limits).
+A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
@@ -991,13 +1095,9 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
-
-The value unlimited indicates the maximum send size for the public folder is controlled elsewhere (for example, organization, server, or connector limits).
+A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
@@ -1014,13 +1114,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
-
-For example:
+The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1086,6 +1182,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OnPremisesObjectId
+The OnPremisesObjectId parameter specifies the ObjectID (GUID) value of the mail-enabled public folder from the on-premises environment.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhoneticDisplayName
 The PhoneticDisplayName parameter specifies an alternate spelling of the user's name that's used for text to speech in Unified Messaging (UM) environments. Typically, you use this parameter when the pronunciation and spelling of the user's name don't match. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -1102,7 +1213,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress
@@ -1146,8 +1257,6 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -1184,8 +1293,6 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1225,8 +1332,6 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1301,7 +1406,17 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the identity of the server to perform the operation from. If a server isn't specified, the command checks if the local server is a Mailbox server that is running Microsoft Exchange Server 2010 with a public folder database. If it is, the folder is created locally. If it isn't, the command finds the closest (by site cost) Exchange 2010 Mailbox server that has a mounted public folder database.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter
@@ -1376,85 +1491,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EntryId
-The EntryId parameter specifies the EntryID value for the public folder. You use this parameter to correct an existing EntryID that points to a folder that can't be found.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalEmailAddress
-The ExternalEmailAddress parameter specifies an email address outside the organization.
-
-```yaml
-Type: ProxyAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreMissingFolderLink
-The IgnoreMissingFolderLink parameter specifies whether to exclude the mail-enabled public folder from a specific validation check that's used during a public folder migration. Valid values are:
-
-- $true: Skip the validation check. If the Active Directory object for the mail-enabled public folder doesn't have EntryId or ContentMailbox property values, the public folder is ignored, and the public folder migration can continue.
-
-- $false: Don't skip the validation check. If the Active Directory object for the mail-enabled public folder doesn't have EntryId or ContentMailbox property values, the entire public folder migration will fail. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OnPremisesObjectId
-The OnPremisesObjectId parameter specifies the ObjectID (GUID) value of the mail-enabled public folder from the on-premises environment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

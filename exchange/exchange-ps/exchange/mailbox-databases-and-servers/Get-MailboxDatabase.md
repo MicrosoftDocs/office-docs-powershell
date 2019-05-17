@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -58,29 +61,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MailboxDatabase -IncludePreExchange2010
+Get-MailboxDatabase
 ```
-
-In Exchange Server 2010, this example retrieves information about all the mailbox databases in the Exchange organization, including the mailbox databases that reside on computers running Exchange 2010 and earlier versions of Exchange.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MailboxDatabase -IncludePreExchange2013
+Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
 ```
 
-This example retrieves information about all the mailbox databases in the Exchange organization, including Exchange 2010 mailbox databases.
-
-### -------------------------- Example 3 --------------------------
-```
-Get-MailboxDatabase -Identity MailboxDatabase01 -Server Server01 -Status | Format-List
-```
-
-This example retrieves information about MailboxDatabase01 on Server01. This example also retrieves the status information, and pipes the output to the Format-List cmdlet so that you can view all the information about the mailbox database.
+This example returns detailed information about the mailbox database named MailboxDatabase01.
 
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the name of the server from which to retrieve mailbox database information. If you specify this parameter, the command retrieves information about all of the mailbox databases on the server that you specify.
+The Server parameter filters the results by the specified Mailbox server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: ServerIdParameter
@@ -125,13 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox database. You can use the following values:
+The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
+- GUID
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
 

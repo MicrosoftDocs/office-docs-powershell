@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
+author: vesajuvonen
+ms.author: vesaj
+ms.reviewer:
 ---
 
 # Set-SPOSite
@@ -13,19 +16,14 @@ Sets or updates one or more properties' values for a site collection.
 
 ## SYNTAX
 
-### ParamSet2
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
 ### ParamSet1
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-AllowLimitedAccess <Boolean>] [-BlockDownloadOfNonViewableFiles <Boolean>]
+ [-Title <String>] [-WhatIf] [-BlockDownloadOfNonViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
@@ -34,17 +32,29 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+```
+### ParamSet2
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
+
+
 ### ParamSet3
-```
+```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwners] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### ParamSet4
-```
-Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
+### ParamSet4 (valid for Group Site Collection)
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+ [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+ [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+ [<CommonParameters>]
 ```
 
 
@@ -53,13 +63,13 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832.
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
 ```
 
@@ -67,23 +77,23 @@ Example 1 updates the owner of site collection https://contoso.sharepoint.com/si
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
-Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 15000
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 1024
 ```
 
-Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 15000 megabytes and the resource quota is updated to 0 megabytes. 
+Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes. 
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
-Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 3000 -StorageQuotaWarningLevel 2000
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400000
 ```
 
-This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 3000 megabytes and the storage quota warning level is updated to 2000 megabytes. 
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400000 megabytes. 
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
 ```
 
@@ -91,15 +101,24 @@ Example 4 prevents non-owners of a site from inviting new users to the site.
 
 
 ### -----------------------EXAMPLE 5-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
 ```
 
 This example sets the quota for the site.
 
+
+
 > [!NOTE] 
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
+
+### -----------------------EXAMPLE 6-----------------------------
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
+```
+
+Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
 ## PARAMETERS
 
@@ -230,7 +249,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911).
+For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 
 ```yaml
@@ -248,7 +267,8 @@ Accept wildcard characters: False
 
 ### -LockState
 Sets the lock state on a site.
-Valid values are: NoAccess and Unlock.
+Valid values are: NoAccess, ReadOnly and Unlock.
+When the lock state of a site is ReadOnly, a message will appear on the site stating that the site is under maintenance and it is read-only.
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
@@ -304,7 +324,7 @@ Accept wildcard characters: False
 ### -ResourceQuota
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
+For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (https://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
 
 ```yaml
@@ -564,23 +584,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NewUrl
-PARAMVALUE: String
-
-
-```yaml
-Type: String
-Parameter Sets: ParamSet4
-Aliases: 
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RestrictedToGeo
 PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
 
@@ -664,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
 
 
 ```yaml
@@ -748,8 +751,68 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ConditionalAccessPolicy
+
+Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+
+PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+
+```yaml
+Type: SPOConditionalAccessPolicyType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEditing  
+
+Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LimitedAccessFileType 
+
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
+-OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
+```yaml
+Type: SPOLimitedAccessFileType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -759,6 +822,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOTenant](Set-SPOTenant.md)

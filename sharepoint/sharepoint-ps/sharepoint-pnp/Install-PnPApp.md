@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Online
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
 # Install-PnPApp
@@ -35,14 +35,14 @@ This will install an app that is available in the site collection scoped app cat
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
+Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
 ```
 
 This will install the given app from the tenant scoped app catalog into the site.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-Get-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site | Install-PnPApp
+Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site | Install-PnPApp
 ```
 
 This will install the given app from the site collection scoped app catalog into the site.
@@ -51,6 +51,8 @@ This will install the given app from the site collection scoped app catalog into
 
 ### -Identity
 Specifies the Id or an actual app metadata instance
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: AppMetadataPipeBind
@@ -64,6 +66,8 @@ Accept pipeline input: True
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppCatalogScope
 Parameter Sets: (All)
@@ -75,6 +79,8 @@ Accept pipeline input: False
 
 ### -Wait
 If specified the execution will pause until the app has been installed in the site.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -88,6 +94,8 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SPOnlineConnection
 Parameter Sets: (All)
@@ -99,4 +107,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

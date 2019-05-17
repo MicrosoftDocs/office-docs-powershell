@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchQueryDemoted
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchQueryDemoted
@@ -31,10 +34,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE-----------------
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchQueryDemoted -Url http://examplesite -SearchApplication $ssa
+New-SPEnterpriseSearchQueryDemoted -Url https://examplesite -SearchApplication $ssa
 ```
 
-This example adds a demoted site rule for the URL http://examplesite.com to a search service application.
+This example adds a demoted site rule for the URL https://examplesite.com to a search service application.
 
 
 ## PARAMETERS
@@ -42,7 +45,7 @@ This example adds a demoted site rule for the URL http://examplesite.com to a se
 ### -Url
 Specifies the identity of the new demoted site rule.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String

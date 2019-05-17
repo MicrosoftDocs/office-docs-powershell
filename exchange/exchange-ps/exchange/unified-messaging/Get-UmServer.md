@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010
 title: Get-UmServer
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -37,16 +40,39 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UMServer
 ```
 
-This example displays a list of all the Unified Messaging servers in the Active Directory forest.
+This example returns a summary list of Unified Messaging servers in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-UMServer -Identity MyUMServer | Format-List
 ```
 
-This example displays a formatted list of properties for the Unified Messaging server named MyUMServer.
+This example returns detailed information for the Unified Messaging server named MyUMServer.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the Unified Messaging server that you want to view. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+```yaml
+Type: UMServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
@@ -63,33 +89,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the name of the Unified Messaging server. If this parameter isn't supplied, a list of all Unified Messaging servers is returned.
-
-```yaml
-Type: UMServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data. 
 
 ## NOTES
 

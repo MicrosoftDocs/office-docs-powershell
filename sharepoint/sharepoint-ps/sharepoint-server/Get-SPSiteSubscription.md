@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteSubscription
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteSubscription
@@ -30,19 +33,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------- 
 ```
-C:\PS>$SiteSub = Get-SPSiteSubscription http://Contoso.com
+C:\PS>$SiteSub = Get-SPSiteSubscription https://Contoso.com
 
-C:\PS>$SiteSub = Get-SPSite http://contoso.com | Get-SPSiteSubscription
+C:\PS>$SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
 ```
 
-This example retrieves the site subscription for http://Contoso.com.
+This example retrieves the site subscription for https://Contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the ID of the subscription.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

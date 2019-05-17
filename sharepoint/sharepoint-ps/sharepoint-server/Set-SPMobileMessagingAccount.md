@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPMobileMessagingAccount
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPMobileMessagingAccount
@@ -29,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Set-SPMobileMessagingAccount -WebApplication http://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
+Set-SPMobileMessagingAccount -WebApplication https://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
 ```
 
-This example changes the SMS mobile account settings of the Web application, http://sitename, to the following values:service name: SMSLink; service URL: https://www.adatum.com/Service/MessagingService.asmx; user ID: someone@example.com; and password: password1.
+This example changes the SMS mobile account settings of the Web application, https://sitename, to the following values:service name: SMSLink; service URL: https://www.adatum.com/Service/MessagingService.asmx; user ID: someone@example.com; and password: password1.
 
 
 ## PARAMETERS

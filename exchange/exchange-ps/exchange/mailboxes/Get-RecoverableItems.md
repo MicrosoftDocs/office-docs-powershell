@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RecoverableItems
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 # Get-RecoverableItems
@@ -10,23 +13,41 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-RecoverableItems items cmdlet to view deleted items in the Recoverable Items folder in mailboxes. After you find the deleted items, you use the Restore-RecoverableItems cmdlet to restore them.
+Use the Get-RecoverableItems items cmdlet to view deleted items in mailboxes. After you find the deleted items, you use the Restore-RecoverableItems cmdlet to restore them.
+
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### OnPremises
 ```
 Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
-[-EntryID <String>]
-[-FilterEndTime <DateTime>]
-[-FilterItemType <String>]
-[-FilterStartTime <DateTime>]
-[-LastParentFolderID <String>]
-[-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
-[-SubjectContains <String>]
-[<CommonParameters>]
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <RecoverableItemsFolderType>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
+```
+
+### Cloud
+```
+Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
+ [-EntryID <String>]
+ [-FilterEndTime <DateTime>]
+ [-FilterItemType <String>]
+ [-FilterStartTime <DateTime>]
+ [-LastParentFolderID <String>]
+ [-MaxParallelSize <Int32>]
+ [-ResultSize <Unlimited>]
+ [-SourceFolder <RecoverableItemsFolderType>]
+ [-SubjectContains <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,16 +62,20 @@ Get-RecoverableItems -Identity laura@contoso.com -Subject -SubjectContains "FY17
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailbox laura@contoso.com for the specified date/time range.
 
+### -------------------------- Example 2 --------------------------
+```
+Get-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -FilterItemType IPM.Note -FilterStartTime "3/15/2019 12:00:00 AM" -FilterEndTime "3/25/2019 11:59:59 PM"
+```
+
+This example returns all of the available recoverable deleted messages with the specified subject in the mailboxes of both malik@contoso.com and lillian@contoso.com for the specified date/time range.
+
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the Recoverable Items folder that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the deleted items that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -64,17 +89,31 @@ For example:
 
 - GUID
 
-- LegacyExchangeDN 
+- LegacyExchangeDN
 
-- SamAccountName 
+- SamAccountName
 
 - User ID or user principal name (UPN)
 
+In tExchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: OnPremises
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: GeneralMailboxOrMailUserIdParameter[]
+Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -165,6 +204,25 @@ The LastParentFolderID parameter specifies the FolderID value of the item before
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxParallelSize
+This parameter is available only in the cloud-based service.
+
+The MaxParallelSize parameter specifies the maximum number of mailboxes that are processed by the command in parallel. A valid value is an integer from 1 to 10. Typically, a higher value decreases the amount of time it takes to complete the command on multiple mailboxes.
+
+The value of this parameter has no effect when the Identity parameter specifies only one mailbox.
+
+```yaml
+Type: Int32
+Parameter Sets: Cloud
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -189,22 +247,35 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolder
-The SourceFolder parameter specifies the folder in the mailbox to search for deleted items. Valid values are:
+The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
 
-- RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
+- RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 
-- Purgeditems: If either Litigation Hold or single item recovery is enabled on the mailbox, this subfolder contains all items that are hard deleted. This folder isn't visible to end users.
+- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all locations.
+If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
-Type: DeletedItems | RecoverableItems
-Parameter Sets: (All)
+Type: RecoverableItemsFolderType
+Parameter Sets: OnPremises
 Aliases:
-Accepted values: DeletedItems, RecoverableItems
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Accepted values: DeletedItems | RecoverableItems
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: RecoverableItemsFolderType
+Parameter Sets: Cloud
+Aliases:
+Accepted values: DeletedItems | RecoverableItems | PurgedItems
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -233,12 +304,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

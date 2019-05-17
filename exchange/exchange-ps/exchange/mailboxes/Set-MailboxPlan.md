@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Set-MailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -57,6 +60,8 @@ This example lowers the default mailbox quotas in the mailbox plan named Exchang
 The Identity parameter specifies the mailbox plan that you want to modify. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
+
+- Alias
 
 - Display name
 
@@ -171,10 +176,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - MB (megabytes)
 
-- GB (gigabytes)
-
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 36 MB.
@@ -205,10 +206,6 @@ When you enter a value, qualify the value with one of the following units:
 - KB (kilobytes)
 
 - MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 

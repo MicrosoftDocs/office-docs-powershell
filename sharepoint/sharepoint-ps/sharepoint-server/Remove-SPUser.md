@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPUser
@@ -30,20 +33,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Remove-SPUser "Contoso\jdoe" -web http://test/web1
+Remove-SPUser "Contoso\jdoe" -web https://test/web1
 
-Get-SPWeb "http://test/web1" | Remove-SPUser "Contoso\jdoe"
+Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
 
-This example removes the user (Contoso\jdoe) from the Web application http://test/web1.
+This example removes the user (Contoso\jdoe) from the Web application https://test/web1.
 
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-Get-SPSite http://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
+Get-SPSite https://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
 ```
 
-This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at http://contoso.com.
+This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at https://contoso.com.
 
 
 ## PARAMETERS
@@ -70,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of the URL or GUID from which the user is to be removed.
 This parameter is needed only if the identity provided is the user name.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-5678-9807.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-5678-9807.
 
 ```yaml
 Type: SPWebPipeBind

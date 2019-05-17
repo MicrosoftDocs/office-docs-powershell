@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPFeature
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPFeature
@@ -31,18 +34,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-Disable-SPFeature -identity "MyCustom" -URL http://somesite
+Disable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
-This example disables the "MyCustom" Web site scoped feature at   http://somesite.
+This example disables the "MyCustom" Web site scoped feature at   https://somesite.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
+C:\PS>$w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
 Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
 ```
 
-This example disables all features in the subsite at http://somesite/myweb.
+This example disables all features in the subsite at https://somesite/myweb.
 
 You do not need to use the SPAssignment cmdlets in this case because the Web object is not stored -- only the string value for the URL.
 
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 ### -Url
 Specifies the URL of the Web application, site collection, or Web site to which the Feature is being disabled.
 
-The type must be a valid URL, such as http://server_name.
+The type must be a valid URL, such as https://server_name.
 
 ```yaml
 Type: String

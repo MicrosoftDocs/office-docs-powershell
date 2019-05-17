@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-DlpComplianceRuleV2
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -19,22 +22,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-DlpComplianceRuleV2 [-Name] <String> -Policy <PolicyIdParameter>
- [-AccessScope <InOrganization | NotInOrganization | None>] [-AccessTimeControl <PswsHashtable>]
- [-ActivationDate <DateTime>] [-BlockAccess <$true | $false>] [-BlockAccessScope <All | PerUser>]
- [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
- [-ContentPropertyContainsWords <MultiValuedProperty>] [-Disabled <$true | $false>]
- [-DocumentIsUnsupported <$true | $false>] [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
+ [-AccessScope <InOrganization | NotInOrganization | None>]
+ [-AccessTimeControl <PswsHashtable>]
+ [-ActivationDate <DateTime>]
+ [-BlockAccess <$true | $false>]
+ [-BlockAccessScope <All | PerUser>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentPropertyContainsWords <MultiValuedProperty>]
+ [-Disabled <$true | $false>]
+ [-DocumentIsUnsupported <$true | $false>]
+ [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
- [-ExceptIfDocumentIsUnsupported <$true | $false>] [-ExceptIfFrom <SmtpAddress[]>]
- [-ExceptIfFromMemberOf <SmtpAddress[]>] [-ExceptIfProcessingLimitExceeded <$true | $false>]
- [-ExpiryDate <DateTime>] [-From <SmtpAddress[]>] [-FromMemberOf <SmtpAddress[]>]
- [-GenerateAlert <MultiValuedProperty>] [-GenerateIncidentReport <MultiValuedProperty>] [-ImmutableId <Guid>]
- [-IncidentReportContent <ReportContentOption[]>] [-NotifyAllowOverride <OverrideOption[]>]
- [-NotifyEmailCustomText <String>] [-NotifyPolicyTipCustomText <String>]
- [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>] [-NotifyUser <MultiValuedProperty>]
- [-ProcessingLimitExceeded <$true | $false>] [-ReportSeverityLevel <Low | Medium | High | None>]
- [-RuleErrorAction <Ignore | RetryThenBlock>] [-WhatIf] [<CommonParameters>]
+ [-ExceptIfDocumentIsUnsupported <$true | $false>]
+ [-ExceptIfFrom <SmtpAddress[]>]
+ [-ExceptIfFromMemberOf <SmtpAddress[]>]
+ [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExpiryDate <DateTime>]
+ [-From <SmtpAddress[]>]
+ [-FromMemberOf <SmtpAddress[]>]
+ [-GenerateAlert <MultiValuedProperty>]
+ [-GenerateIncidentReport <MultiValuedProperty>]
+ [-ImmutableId <Guid>]
+ [-IncidentReportContent <ReportContentOption[]>]
+ [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomText <String>]
+ [-NotifyPolicyTipCustomText <String>]
+ [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-ProcessingLimitExceeded <$true | $false>]
+ [-ReportSeverityLevel <Low | Medium | High | None>]
+ [-RuleErrorAction <Ignore | RetryThenBlock>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -709,12 +730,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppAutoProvisionConnection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppAutoProvisionConnection
@@ -36,7 +39,7 @@ This example returns the entire app auto provisioning connection information for
 
 ### ---------------EXAMPLE 2---------- 
 ```
-$subscription = Get-SPSiteSubscription http://Contoso.com
+$subscription = Get-SPSiteSubscription https://Contoso.com
 Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
 ```
 

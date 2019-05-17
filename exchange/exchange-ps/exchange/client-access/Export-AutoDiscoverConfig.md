@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-AutoDiscoverConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -25,7 +28,7 @@ Export-AutoDiscoverConfig -TargetForestDomainController <String> [-Confirm] [-De
 ```
 
 ## DESCRIPTION
-The Autodiscover service connection point pointer resides in Active Directory and contains the names of the Exchange Web Services URLs.
+The Autodiscover Service Connection Point pointer resides Active Directory in the user account forest and includes the LDAP URL of the resource forest that the client will use to locate the Autodiscover service in the resource forest.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -144,6 +147,8 @@ Accept wildcard characters: False
 ### -SourceForestCredential
 The SourceForestCredential parameter specifies the credentials to use when connecting to the source forest.
 
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -158,6 +163,8 @@ Accept wildcard characters: False
 
 ### -TargetForestCredential
 The TargetForestCredential parameter specifies the credentials to use to connect to the target forest.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AuthServer
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -30,12 +33,40 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-AuthServer | Format-List *
+Get-AuthServer
 ```
 
-This example retrieves all settings for all authorization servers in the Exchange organization.
+This example returns a summary list of all authorization servers in the Exchange organization.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-AuthServer -Identity WindowsAzureAC | Format-List
+```
+
+This example retrieves detailed information for the authorization server named WindowsAzureAC.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the authorization server object that you want to view. You can use any value that uniquely identifies the authorization server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: AuthServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 This parameter is available only in on-premises Exchange.
@@ -51,21 +82,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of an authorization server.
-
-```yaml
-Type: AuthServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

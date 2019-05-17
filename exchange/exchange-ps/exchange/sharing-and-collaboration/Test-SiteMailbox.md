@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-SiteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -94,19 +97,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. You can use any of the following values:
-
-- Distinguished name (DN)
-
-- GUID
+The Identity parameter specifies the site mailbox that you want to test. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
 
-- Display name
-
 - Alias
 
-- Primary SMTP address
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 You can't use this parameter with the SharePointUrl parameter.
 
@@ -123,21 +126,23 @@ Accept wildcard characters: False
 ```
 
 ### -RequestorIdentity
-The RequestorIdentity parameter specifies the identity of a user for whom you want to test to make sure that they have the correct permissions to connect to the SharePoint site mailbox. If you don't specify this parameter, the command uses the identification of the user running this command. You can use any of the following values:
-
-- DN
-
-- GUID
+The RequestorIdentity parameter specifies the user to test for correct permissions to the SharePoint site mailbox. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
-- Display name
-
 - Alias
 
-- Primary SMTP address
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 You can't use this parameter with the UseAppTokenOnly parameter.
+
+If you don't specify this parameter, the command uses the identification of the user running this command.
 
 ```yaml
 Type: RecipientIdParameter

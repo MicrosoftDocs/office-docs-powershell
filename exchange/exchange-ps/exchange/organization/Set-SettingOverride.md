@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SettingOverride
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -20,9 +23,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-SettingOverride [-Identity] <SettingOverrideIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-FixVersion <Version>] [-MaxVersion <Version>] [-MinVersion <Version>] [-Parameters <MultiValuedProperty>]
- [-Reason <String>] [-Server <String[]>] [-WhatIf] [-Force] [<CommonParameters>]
+Set-SettingOverride [-Identity] <SettingOverrideIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxVersion <Version>]
+ [-MinVersion <Version>]
+ [-Parameters <MultiValuedProperty>]
+ [-Reason <String>]
+ [-Server <String[]>]
+ [-WhatIf]
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,14 +107,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FixVersion
-This parameter is reserved for internal Microsoft use.
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Version
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -150,9 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
-
-For example:
+The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...). For example:
 
 - @("Enabled=true")
 
@@ -217,33 +226,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

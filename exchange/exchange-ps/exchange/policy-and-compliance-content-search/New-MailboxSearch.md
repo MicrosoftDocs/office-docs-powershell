@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -43,7 +46,6 @@ New-MailboxSearch [-Name] <String>
  [-Language <CultureInfo>]
  [-LogLevel <Suppress | Basic | Full>]
  [-MessageTypes <KindKeyword[]>]
- [-PublicFolderSources <PublicFolderIdParameter[]>]
  [-Recipients <String[]>]
  [-SearchDumpster]
  [-SearchQuery <String>]
@@ -461,22 +463,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicFolderSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PublicFolderIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 ### -Recipients
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.
 
@@ -497,7 +483,9 @@ Accept wildcard characters: False
 ### -SearchDumpster
 This parameter is available or functional only in Exchange Server 2010.
 
-The SearchDumpster parameter enables searching the dumpster, which is a storage location where items deleted from the Deleted Items folder are located until they are purged from the mailbox database.
+The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
+
+By default, items in the dumpster are searched. Set the value to $false to disable searching the dumpster.
 
 ```yaml
 Type: SwitchParameter
@@ -506,7 +494,7 @@ Aliases:
 Applicable: Exchange Server 2010
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -558,13 +546,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMailboxes
-The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -576,7 +560,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -618,13 +602,9 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
-The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient.
-
-For example:
+The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -636,7 +616,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -651,13 +631,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox.
-
-For example:
+The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

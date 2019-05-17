@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -16,13 +19,6 @@ Use the Get-MailboxLocation cmdlet to view mailbox location information in Excha
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
-
-### DatabaseSet
-```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
 
 ### Identity
 ```
@@ -52,21 +48,6 @@ This example returns the mailbox location for the user chris@contoso.com.
 
 ## PARAMETERS
 
-### -Database
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: DatabaseSet
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.
 
@@ -85,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user.
-
-For example:
+The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -197,12 +174,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

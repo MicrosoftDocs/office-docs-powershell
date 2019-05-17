@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-Mailflow
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -159,9 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-The TargetDatabase parameter specifies the mailbox database to which test messages are sent.
+The TargetDatabase parameter specifies the mailbox database to which test messages are sent. You can use any value that uniquely identifies the database. For example:
 
-When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -193,7 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailboxServer
-The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to which test messages are sent.
+The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to send test messages to. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetDatabase or TargetEmailAddress parameters.
 
@@ -319,7 +336,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the source Mailbox server name from which a test message is sent. If you don't use this parameter, the local Mailbox server is used.
+The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the local Mailbox server is used.
 
 ```yaml
 Type: ServerIdParameter

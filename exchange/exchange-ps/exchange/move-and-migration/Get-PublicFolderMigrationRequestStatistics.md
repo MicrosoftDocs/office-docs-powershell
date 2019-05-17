@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderMigrationRequestStatistics
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -77,7 +80,7 @@ The Identity parameter specifies the identity of the public folder migration req
 
 - Name
 
-This parameter can't be used in conjunction with the RequestQueue or RequestGuid parameter.
+You can't use this parameter with the RequestQueue or RequestGuid parameter.
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
@@ -98,9 +101,11 @@ This parameter is for debugging purposes only.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -219,7 +224,7 @@ This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the GUID of a migration request.
 
-This parameter can't be used in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid

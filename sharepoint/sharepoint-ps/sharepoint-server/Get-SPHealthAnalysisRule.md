@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPHealthAnalysisRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPHealthAnalysisRule
@@ -30,8 +33,8 @@ To return a specify health analyzer rule, use the Identity parameter; otherwise,
 
 The SPHealthAnalysisRule cmdlets were first introduced in the February 2011 Cumulative Update, which is available for download as follows:
 
---Description of the SharePoint Foundation Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (http://support.microsoft.com/kb/2475880)
---Description of the SharePoint Server Cumulative Update Server Hotfix Package (MOSS server-package (http://support.microsoft.com/kb/2475878)
+--Description of the SharePoint Foundation Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (https://support.microsoft.com/kb/2475880)
+--Description of the SharePoint Server Cumulative Update Server Hotfix Package (MOSS server-package (https://support.microsoft.com/kb/2475878)
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 

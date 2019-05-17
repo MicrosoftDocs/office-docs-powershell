@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInfoPathWebServiceProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPInfoPathWebServiceProxy
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-Get-SPInfoPathWebServiceProxy -Identity "http://server_name"
+Get-SPInfoPathWebServiceProxy -Identity "https://server_name"
 ```
 
 This example displays the Web service proxy settings for a specified Web application.
@@ -36,7 +39,7 @@ This example displays the Web service proxy settings for a specified Web applica
 ### -Identity
 Specifies the SharePoint Web application to get.
 
-The type must be a valid URL, in the form http://server_name, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL, in the form https://server_name, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPWebServiceProxyPipeBind

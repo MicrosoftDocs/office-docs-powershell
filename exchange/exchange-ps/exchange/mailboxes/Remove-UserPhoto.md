@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-UserPhoto
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -52,13 +55,9 @@ This example deletes the photo associated with Ann Beebe's user account.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

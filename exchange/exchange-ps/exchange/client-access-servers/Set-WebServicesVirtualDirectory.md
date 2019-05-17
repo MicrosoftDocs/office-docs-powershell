@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-WebServicesVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,14 +22,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>] [-CertificateAuthentication <$true | $false>] [-Confirm]
- [-DigestAuthentication <$true | $false>] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-ExternalUrl <Uri>] [-Force]
- [-GzipLevel <Off | Low | High | Error>] [-InternalNLBBypassUrl <Uri>] [-InternalUrl <Uri>]
- [-MRSProxyEnabled <$true | $false>] [-MRSProxyMaxConnections <Unlimited>] [-UpdateManagementVirtualDirectory]
- [-WhatIf] [-WindowsAuthentication <$true | $false>] [-WSSecurityAuthentication <$true | $false>]
- [-OAuthAuthentication <$true | $false>] [<CommonParameters>]
+ [-BasicAuthentication <$true | $false>]
+ [-CertificateAuthentication <$true | $false>]
+ [-Confirm]
+ [-DigestAuthentication <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExternalUrl <Uri>]
+ [-Force]
+ [-GzipLevel <Off | Low | High | Error>]
+ [-InternalNLBBypassUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-MRSProxyEnabled <$true | $false>]
+ [-MRSProxyMaxConnections <Unlimited>]
+ [-OAuthAuthentication <$true | $false>] [-OAuthAuthentication <$true | $false>]
+ [-UpdateManagementVirtualDirectory]
+ [-WhatIf]
+ [-WindowsAuthentication <$true | $false>]
+ [-WSSecurityAuthentication <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,9 +74,7 @@ This example enables MRSProxy on the EWS default website. MRSProxy is the servic
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Exchange Web Services virtual directory that you want to view.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the EWS virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -359,6 +373,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OAuthAuthentication
+The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
+
+- $true: OAuth authentication is enabled. This is the default value.
+
+- $false: OAuth authentication is disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UpdateManagementVirtualDirectory
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -422,25 +455,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OAuthAuthentication
-The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
-
-- $true: OAuth authentication is enabled. This is the default value.
-
-- $false: OAuth authentication is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

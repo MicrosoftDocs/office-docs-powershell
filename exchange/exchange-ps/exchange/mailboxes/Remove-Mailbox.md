@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -96,16 +99,19 @@ $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
 
+### -------------------------- Example 4 --------------------------
+```
+Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
+```
+
+In Exchange Online, this example removes the specified soft-deleted mailbox mailbox.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -169,7 +175,7 @@ Accept wildcard characters: False
 ### -StoreMailboxIdentity
 This parameter is available only in on-premises Exchange.
 
-The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
+The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its MailboxGUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
 
 When you use this parameter with the Database parameter to identify and remove the mailbox, the mailbox is immediately and permanently deleted from the database, so you can't reconnect or restore the mailbox. You can't either of these parameters with the Identity parameter.
 
@@ -278,7 +284,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -382,11 +388,9 @@ The PermanentlyDelete switch specifies whether to immediately and permanently de
 
 Notes:
 
-- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes).
+- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 3 in this topic.
 
 - This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
-
-Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet with this switch. For example, Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 
 ```yaml
 Type: SwitchParameter
