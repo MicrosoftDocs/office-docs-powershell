@@ -84,9 +84,7 @@ In Exchange 2010 and Exchange 2013, this example sets the available authenticati
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Outlook Anywhere virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the Outlook Anywhere virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

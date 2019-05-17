@@ -408,7 +408,17 @@ Accept wildcard characters: False
 ```
 
 ### -SourceServer
-The SourceServer parameter specifies the name of a Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
+The SourceServer parameter specifies the Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
+
+ You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter

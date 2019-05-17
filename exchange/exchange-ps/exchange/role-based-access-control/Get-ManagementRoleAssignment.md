@@ -488,7 +488,17 @@ Accept wildcard characters: False
 ### -WritableServer
 This parameter is available only in on-premises Exchange.
 
-The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the server object name contains spaces, enclose it in quotation marks (").
+The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
 
