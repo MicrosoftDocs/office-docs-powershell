@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
-author: divyachapan
-ms.author: dipadur
+author: trent-green
+ms.author: trgreen
 ms.reviewer: 
 ---
 
