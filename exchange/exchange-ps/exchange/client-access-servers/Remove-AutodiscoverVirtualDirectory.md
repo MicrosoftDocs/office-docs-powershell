@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-AutodiscoverVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-AutodiscoverVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,9 +42,7 @@ This example removes the Autodiscover virtual directory from the site autodiscov
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Autodiscover virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the Autodiscover virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
