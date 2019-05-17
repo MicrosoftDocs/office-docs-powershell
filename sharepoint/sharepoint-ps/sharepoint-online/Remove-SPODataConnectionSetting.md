@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Remove-SPODataConnectionSetting
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
