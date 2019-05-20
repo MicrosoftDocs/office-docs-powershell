@@ -33,6 +33,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <$true | $false>]
  [-Label <String>]
+ [-Nickname <String>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -251,6 +252,21 @@ Accept wildcard characters: False
 
 ### -Label
 The Label parameter specifies a descriptive label for the room (for example, a number or name). If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Nickname
+The Nickname parameter specifies a nickname for the room (for example, conf room). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
