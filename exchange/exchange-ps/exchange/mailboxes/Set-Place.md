@@ -29,7 +29,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-DisplayDeviceName <String>]
- [-Floor <System.Int32>]
+ [-FloorNumber <System.Int32>]
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <$true | $false>]
  [-Label <String>]
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Building
-The Building parameter specifies the building name or number that the room is in. If the value contains spaces, enclose the value in quotation marks (").
+The Building parameter specifies the building name or building number that the room is in. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -196,8 +196,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Floor
-The Floor parameter specifies the floor that the room is on. If the value contains spaces, enclose the value in quotation marks (").
+### -FloorNumber
+The FloorNumber parameter specifies the floor number that the room is on. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: System.Int32
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-The Label parameter specifies a descriptive label for the room. If the value contains spaces, enclose the value in quotation marks (").
+The Label parameter specifies a descriptive label for the room (for example, a number or name). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The Tags parameter specifies additional features of the room.
+The Tags parameter specifies additional features of the room (for example, detials like the type of view or furniture type).
 
 You can specify multiple labels separated by commas: \<Label1\>,\<Label2\>,...\<LabelN\>. If the labels contains spaces, enclose the value in quotation marks: "\<Label1\>","\<Label2\>",..."\<LabelN\>".
 
