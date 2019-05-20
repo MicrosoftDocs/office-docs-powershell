@@ -196,7 +196,7 @@ This example creates a non-default user throttling policy that can be associated
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ThrottlingPolicy -Name <NewPolicyName > EWSPercentTimeInCAS 80
+New-ThrottlingPolicy -Name <NewPolicyName> -EWSPercentTimeInCAS 80
 ```
 
 In Exchange Server 2010, this example creates a policy for a tenant that sets the EWSPercentTimeInCAS parameter value to 80.
