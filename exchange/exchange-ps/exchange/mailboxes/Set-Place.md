@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-The Label parameter specifies a descriptive label for the room. Label code be a number or name. If the value contains spaces, enclose the value in quotation marks (").
+The Label parameter specifies a descriptive label for the room (for example, a number or name). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The Tags parameter specifies additional features of the room. Add more detials like type of view or furniture type.
+The Tags parameter specifies additional features of the room (for example, detials like the type of view or furniture type).
 
 You can specify multiple labels separated by commas: \<Label1\>,\<Label2\>,...\<LabelN\>. If the labels contains spaces, enclose the value in quotation marks: "\<Label1\>","\<Label2\>",..."\<LabelN\>".
 
