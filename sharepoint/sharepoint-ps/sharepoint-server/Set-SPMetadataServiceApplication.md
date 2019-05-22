@@ -50,7 +50,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE 1---------------------
 ```
 $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
+Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -SyndicationErrorReportEnabled
 ```
 
 This example adds a content type hub to an existing managed metadata service application.

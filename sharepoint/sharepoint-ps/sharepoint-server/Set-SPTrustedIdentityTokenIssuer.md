@@ -53,7 +53,7 @@ This example sets the identity provider to LiveIDSTS.
 ### -------------------------EXAMPLE 2----------------------
 ```
 C:\PS>$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
-New-SPWebApplication http://contoso.com -IdentityProvider $ip
+New-SPWebApplication https://contoso.com -IdentityProvider $ip
 ```
 
 This example sets the identity provider using the .ASPNetMembership and Role parameters.
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ### -SignInUrl
 Specifies the sign-in URLs for this trusted identity provider STS.
 
-The type must be a valid URL, in the form http://int.live.com/.
+The type must be a valid URL, in the form https://int.live.com/.
 
 ```yaml
 Type: String

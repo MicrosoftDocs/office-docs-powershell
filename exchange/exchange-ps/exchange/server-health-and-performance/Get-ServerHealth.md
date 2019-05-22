@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-ServerHealth [-Identity] <ServerIdParameter> [-HaImpactingOnly] [-HealthSet <String>] [<CommonParameters>]
+Get-ServerHealth [-Identity] <ServerIdParameter>
+ [-HaImpactingOnly]
+ [-HealthSet <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +58,15 @@ This example returns the server health for server Server01.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the server you want health information for.
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
