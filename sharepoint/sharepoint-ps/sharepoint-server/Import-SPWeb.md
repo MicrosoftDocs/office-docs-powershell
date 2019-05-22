@@ -273,7 +273,7 @@ If the UpdateVersions parameter is absent, the import operation by default uses 
 
 The type must be any one of the following:
 
--Append, which Adds new versions to the current file
+-Append, which adds new versions to the current file
 
 -Overwrite the file and all of its versions (delete then insert)
 
