@@ -1061,9 +1061,9 @@ This parameter is available only in the cloud-based service.
 
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled. This is the default value.
+- $true: The automatic creation of direct report Office 365 groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled.
+- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
