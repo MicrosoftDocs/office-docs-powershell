@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -VideoDeviceName
-The VideoDeviceName parameter specifies the name of the audio device in the room. If the value contains spaces, enclose the value in quotation marks (").
+The VideoDeviceName parameter specifies the name of the video device in the room. If the value contains spaces, enclose the value in quotation marks (").
 
 The default value is blank ($null). To indicate that this room has no video device, use the value $null for this parameter.
 
