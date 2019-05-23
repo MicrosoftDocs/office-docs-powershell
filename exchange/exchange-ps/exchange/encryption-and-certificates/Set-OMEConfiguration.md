@@ -25,6 +25,7 @@ Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-BackgroundColor <String>]
  [-DisclaimerText <String>]
  [-EmailText <String>]
+ [-ExternalMailExpiryInDays <Int32>]
  [-Image <Byte[]>]
  [-IntroductionText <String>]
  [-OTPEnabled <$true | $false>]
@@ -109,6 +110,23 @@ To remove existing text and use the default value, use the value $null for this 
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalMailExpiryInDays 
+This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
+
+The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
+
+```yaml
+Type: String
+Parameter Sets: Int32
 Aliases:
 Applicable: Exchange Online
 Required: False
