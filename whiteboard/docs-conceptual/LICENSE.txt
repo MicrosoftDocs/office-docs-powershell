@@ -1,6 +1,6 @@
 ﻿------------------------------------------- START OF LICENSE -----------------------------------------
 
-Microsoft Whiteboard Admin PowerShell Cmdlets 
+Microsoft Whiteboard Admin PowerShell Cmdlets
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 

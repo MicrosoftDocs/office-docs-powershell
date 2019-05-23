@@ -8,7 +8,7 @@ To install and use the Microsoft Whiteboard cmdlets:
 2. Right-click on Windows PowerShell and choose Run As Administrator
 3. Type or copy this command into the window and press the Enter key: Install-Module -Name WhiteboardAdmin
 
-You may need to update your execution policy, which you can do by typing or copying this command into the window and pressing the Enter key: Set-ExecutionPolicy RemoteSigned 
+You may need to update your execution policy, which you can do by typing or copying this command into the window and pressing the Enter key: Set-ExecutionPolicy RemoteSigned
 
 Note: For more information on Execution_Policies, go to https://go.microsoft.com/fwlink/?LinkID=135170
 
