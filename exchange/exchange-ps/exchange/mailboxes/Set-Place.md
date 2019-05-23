@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The Tags parameter specifies additional features of the room (for example, detials like the type of view or furniture type).
+The Tags parameter specifies additional features of the room (for example, details like the type of view or furniture type).
 
 You can specify multiple labels separated by commas: \<Label1\>,\<Label2\>,...\<LabelN\>. If the labels contains spaces, enclose the value in quotation marks: "\<Label1\>","\<Label2\>",..."\<LabelN\>".
 
