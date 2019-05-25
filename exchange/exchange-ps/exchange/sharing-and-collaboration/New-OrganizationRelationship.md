@@ -98,9 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNames
-This parameter is available only in on-premises Exchange.
-
-The DomainNames parameter specifies the SMTP domains of the external organization. You can specify multiple domains separated by commas (for example, "contoso.com","northamerica.contoso.com").
+The DomainNames parameter specifies the SMTP domains of the external organization. You can specify multiple domains separated by commas (for example, "contoso.com","northamerica.contoso.com"), limited to 238 domains in one request.
 
 ```yaml
 Type: MultiValuedProperty
