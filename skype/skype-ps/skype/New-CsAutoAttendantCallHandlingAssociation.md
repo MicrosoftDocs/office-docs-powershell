@@ -11,7 +11,7 @@ ms.reviewer:
 # New-CsAutoAttendantCallHandlingAssociation
 
 ## SYNOPSIS
-Use the New-CsAutoAttendantCallHandlingAssociation cmdlet to create a new call handling association.
+Use the `New-CsAutoAttendantCallHandlingAssociation` cmdlet to create a new call handling association.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-CsAutoAttendantCallHandlingAssociation -CallFlowId <String> -ScheduleId <Str
 ```
 
 ## DESCRIPTION
-The New-CsAutoAttendantCallHandlingAssociation cmdlet creates a new call handling association to be used with the Auto Attendant (AA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
+The `New-CsAutoAttendantCallHandlingAssociation` cmdlet creates a new call handling association to be used with the Auto Attendant (AA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ $callFlowId = $callFlow.Id
 $callHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new after-hours schedule
 - a new after-hours call flow
@@ -58,7 +58,7 @@ $callFlowId = $callFlow.Id
 $disabledCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId -Disable
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new after-hours schedule
 - a new after-hours call flow
@@ -79,7 +79,7 @@ $callFlowId = $callFlow.Id
 $callHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $scheduleId -CallFlowId $callFlowId
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new holiday schedule
 - a new holiday call flow
@@ -162,9 +162,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
