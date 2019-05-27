@@ -94,7 +94,7 @@ You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](New-CsAu
 
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
