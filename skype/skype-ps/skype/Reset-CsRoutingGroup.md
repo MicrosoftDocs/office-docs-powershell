@@ -140,12 +140,11 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Invalid
-
 Permanent
 
 Transient
 
+Recreate
 ```yaml
 Type: RgResetType
 Parameter Sets: (All)
