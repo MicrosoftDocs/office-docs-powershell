@@ -60,7 +60,7 @@ New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
+$group = New-Team -MailNickname "TestTeam" -displayname "Test Teams" -Visibility "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
