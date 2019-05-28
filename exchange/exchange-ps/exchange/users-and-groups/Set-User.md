@@ -117,6 +117,8 @@ The Identity parameter specifies the user that you want to modify. You can use a
 
 - GUID
 
+- UserPrincipalName
+
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
