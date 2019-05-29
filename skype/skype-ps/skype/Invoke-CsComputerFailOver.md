@@ -34,13 +34,19 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
-
 Invoke-CsComputerFailOver -ComputerName "atl-mcs-001.litwareinc.com" -Report "C:\Logs\S1_FailOverLog.html" -WaitTime 1:30:00
 ```
 
 This example directs that the users assigned to server "atl-mcs-001.litwareinc.com" will be moved to other servers in the pool.
 The log output path is specified and the cmdlet will wait 1 hour 30 minutes before timing out.
 
+### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+```
+$TimeSpan = New-TimeSpan -Minutes 30
+Invoke-CsComputerFailOver -ComputerName "atl-mcs-001.litwareinc.com" -DrainingTimeout $TimeSpan
+```
+
+This example force to drain all conferences and sessions after 30 minutes. If users aren't moved to different front end after 30 minutes, it will drain all conferences and sessions and stop all services in the front end.
 
 ## PARAMETERS
 
