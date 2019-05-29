@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
-author: divyachapan
-ms.author: dipadur
+author: trent-green
+ms.author: trgreen
 ms.reviewer: 
 ---
 
@@ -26,7 +26,7 @@ Use this cmdlet to enable the modern communication site experience at the classi
 
 **Current limitations**
 
-1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://<tenantname>.sharepoint.com
+1.	This cmdlet can only be run on the root site of a tenant. Typically the root site url is https://\<tenantname\>.sharepoint.com
 2.	The root site should not currently have the classic publishing feature enabled (at the site or web level). [What is classic publishing feature?](https://support.office.com/article/enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518)
 3.	The root site **should not have had** the classic publishing feature enabled in the past (at the site or web level)
 4.	The site must have quick launch site navigation enabled. [How do I do this?](https://support.office.com/article/customize-site-navigation-c040f014-acbb-4c98-8174-48428cf02b25#bm1a)
@@ -66,8 +66,8 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 
 1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version. Alternatively, if you have used Install-Module Microsoft.Online.SharePoint.PowerShell to install the SharePoint Online Management Shell, you can run Update-Module Microsoft.Online.SharePoint.PowerShell to update the PowerShell module to the latest available version.
 2. Make sure you have the SharePoint admin credentials for the tenant
-3. Make sure you have the correct root site URL. Typically its https://<tenantname>.sharepoint.com
-4. Copy this block of PowerShell commands into a notepad and fill in the missing details denoted by <>
+3. Make sure you have the correct root site URL. Typically its https://\<tenantname\>.sharepoint.com
+4. Copy the above PowerShell command(s) into a notepad and fill in the missing details denoted by <>
 5. Open SharePoint Online Management Shell from your computer 
 6. Execute the PowerShell commands from your notepad
 
