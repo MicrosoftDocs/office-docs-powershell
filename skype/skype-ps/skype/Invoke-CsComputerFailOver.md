@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -DrainingTimeout
-Draining timeout in minutes to gracefully drain MCUs.
+Draining timeout in TimeSpan format to gracefully drain MCUs.
 
 ```yaml
 Type: TimeSpan
