@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Exchange.Management-Help.xml
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0
