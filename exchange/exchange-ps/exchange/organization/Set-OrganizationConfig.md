@@ -1494,11 +1494,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAgendaMailEnabled
-The IsAgendaMailEnabled parameter specifies whether to enable or disable daily agenda messages. Valid values are:
-
-- $true: Users receive a daily agenda message in their Inbox from the Microsoft Outlook Calendar. This is the default value.
-
-- $false: The daily agenda message is disabled for all users.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false

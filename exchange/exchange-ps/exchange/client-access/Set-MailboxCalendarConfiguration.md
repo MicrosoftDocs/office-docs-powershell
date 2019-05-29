@@ -698,11 +698,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipAgendaMailOnFreeDays
-The SkipAgendaMailOnFreeDays parameter specifies whether to skip sending the daily agenda email message on days with no events or tasks. Valid values are:
-
-- $true: Don't send the daily agenda email message on free days. This is the default value.
-
-- $false: Send the daily agenda email message every day.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
