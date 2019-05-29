@@ -1061,9 +1061,9 @@ This parameter is available only in the cloud-based service.
 
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled. This is the default value.
+- $true: The automatic creation of direct report Office 365 groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled.
+- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -1494,11 +1494,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAgendaMailEnabled
-The IsAgendaMailEnabled parameter specifies whether to enable or disable daily agenda messages. Valid values are:
-
-- $true: Users receive a daily agenda message in their Inbox from the Microsoft Outlook Calendar. This is the default value.
-
-- $false: The daily agenda message is disabled for all users.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
