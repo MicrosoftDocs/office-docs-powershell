@@ -22,7 +22,7 @@ New-LabelExplorerConfig [-Name] <String> -Filter <String> -Labels <MultiValuedPr
  [-Actions <None | View | ChangeLabel | UnRecord>]
  [-Confirm]
  [-DisplayName <String>]
- [-WhatIf] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,21 +140,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

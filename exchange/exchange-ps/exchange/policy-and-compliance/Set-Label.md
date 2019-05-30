@@ -32,7 +32,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-Priority <Int32>]
  [-Settings <PswsHashtable>]
  [-Tooltip <String>]
- [-WhatIf] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -270,21 +270,6 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

@@ -18,7 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-LabelPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+Remove-LabelPolicy [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,36 +69,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceDeletion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

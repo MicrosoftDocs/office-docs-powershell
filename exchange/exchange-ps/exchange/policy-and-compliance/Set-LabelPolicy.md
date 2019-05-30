@@ -27,13 +27,12 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <$true | $false>]
- [-Force]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-Settings <PswsHashtable>]
- [-WhatIf] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### RetryDistribution
@@ -46,7 +45,7 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
  [-PreviousLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
  [-Settings <PswsHashtable>]
- [-WhatIf] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

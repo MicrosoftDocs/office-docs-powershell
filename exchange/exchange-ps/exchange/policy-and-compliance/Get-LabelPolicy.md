@@ -21,22 +21,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Get-LabelPolicy [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
 ```
 
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-Get-Label
-```
-
-This example returns a summary list of all sensitivity label policies in the organization.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-Label -Identity "Engineering Group" | Format-List
-```
-
-This example returns detailed information for the policy named Engineering Group.
-
 ## DESCRIPTION
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
@@ -59,7 +43,7 @@ This example returns detailed information for the policy named Engineering Group
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the sensitivity label policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

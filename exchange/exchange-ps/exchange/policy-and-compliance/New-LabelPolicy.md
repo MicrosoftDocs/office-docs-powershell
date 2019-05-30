@@ -24,9 +24,8 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-Confirm]
  [-ExchangeLocationLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
- [-Force]
  [-Settings <PswsHashtable>]
- [-WhatIf] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -186,21 +185,6 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
