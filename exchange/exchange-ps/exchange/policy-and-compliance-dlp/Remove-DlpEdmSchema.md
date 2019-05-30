@@ -14,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-DlpEdmSchema cmdlet to remove DLP EDM schemas in the Security & Compliance Center.
+Use the Remove-DlpEdmSchema cmdlet to remove exact data match (EDM) data loss prevention (DLP) schemas from the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -49,7 +49,7 @@ The Identity parameter specifies the DLP EDM schema that you want to remove. You
 Type: EdmStorageIdParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
 Default value: None
@@ -68,7 +68,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +83,7 @@ The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
