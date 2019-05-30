@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
-The 'Set-CsOnlineApplicationEndpoint' is used to update a Trusted Application Endpoint for a tenant.
+The `Set-CsOnlineApplicationEndpoint` is used to update a Trusted Application Endpoint for a tenant.
 
 ## SYNTAX
 ```
