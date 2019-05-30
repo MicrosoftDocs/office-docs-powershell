@@ -36,7 +36,7 @@ This example assigns the service number "19841110909" to the trusted application
 ## PARAMETERS
 
 ### -Uri
-Sip Uri that identifies the tenant specific endpoint for the application. This must be a unique URI that does not conflict with an existing user in the tenant. Requests sent to this endpoint will trigger the Trusted Application API sending an event to the application, indicating that someone has sent a request. Eg. helpdesk@contoso.com
+Sip Uri that identifies the tenant specific endpoint for the application. This must be a unique URI that does not conflict with an existing user in the tenant. Requests sent to this endpoint will trigger the Trusted Application API sending an event to the application, indicating that someone has sent a request. For example: helpdesk@contoso.com.
 
 ```yaml
 Type: String
