@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-Phone number for the endpoint.
+The service number assigned to the trusted application endpoint.
 
 ```yaml
 Type: String
