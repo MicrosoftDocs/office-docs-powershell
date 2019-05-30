@@ -17,11 +17,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
+### InformationBarrierDefault (Default)
 ```
-New-InformationBarrierPolicy [-Name] <String> -AssigneeFilter <String> -AssigneeFilterName <String> -CommunicationAllowedFilter <String> -CommunicationAllowedFilterName <String>
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
  [-Comment <String>]
  [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### OrganizationSegmentsAllowed
+```
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>>
+ [-Comment <String>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### OrganizationSegmentAllowedFilter
+```
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentAllowedFilter <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### OrganizationSegmentsBlocked
+```
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
+ [-Comment <String>]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -54,8 +79,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilter
-{{Fill AssigneeFilter Description}}
+### -AssignedSegment
+{{ Fill AssignedSegment Description }}
 
 ```yaml
 Type: String
@@ -69,12 +94,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilterName
-{{Fill AssigneeFilterName Description}}
+### -SegmentsAllowed
+{{ Fill SegmentsAllowed Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: MultiValuedProperty>
+Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -84,12 +109,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CommunicationAllowedFilter
-{{Fill CommunicationAllowedFilter Description}}
+### -SegmentAllowedFilter
+{{ Fill SegmentAllowedFilter Description }}
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -99,12 +124,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CommunicationAllowedFilterName
-{{Fill CommunicationAllowedFilterName Description}}
+### -SegmentsBlocked
+{{ Fill SegmentsBlocked Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: MultiValuedProperty>
+Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True

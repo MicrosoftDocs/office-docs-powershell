@@ -19,13 +19,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Default (Default)
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All <$true | $false>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
- [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +60,7 @@ Accept wildcard characters: False
 {{Fill All Description}}
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

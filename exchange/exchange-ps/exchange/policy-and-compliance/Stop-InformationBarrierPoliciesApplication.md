@@ -18,8 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Stop-InformationBarrierPoliciesApplication [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Stop-InformationBarrierPoliciesApplication [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

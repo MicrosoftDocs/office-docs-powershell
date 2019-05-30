@@ -11,10 +11,9 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPolicy cmdlet to view information barrier policies in the Office 365 Security & Compliance Center. 
+Use the Get-InformationBarrierPolicy cmdlet to view information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
 
 ### Identity
 ```
-Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>] [-ExoPolicyId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
