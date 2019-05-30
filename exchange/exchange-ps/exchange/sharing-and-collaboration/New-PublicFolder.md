@@ -145,9 +145,17 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies the server on which to create the public folder.
+The Server parameter specifies the Mailbox server where you want to create the new public folder. You can use any value that uniquely identifies the server. For example:
 
-If a server isn't specified, the command checks whether the local server is running Microsoft Exchange Server 2010 or Exchange Server 2007 with the Mailbox server role installed and with a public folder database. If it is, the public folder is created locally. If it isn't, Exchange finds the closest (by site cost) Exchange 2010 or Exchange 2007 Mailbox server with a public folder database on which to create the public folder.
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server if the server is a Mailbox server with a public folder database. If not, Exchange creates the new public folder on the closest (by site cost) Exchange 2007 or Exchange 2010 Mailbox server with a public folder database.
 
 ```yaml
 Type: ServerIdParameter

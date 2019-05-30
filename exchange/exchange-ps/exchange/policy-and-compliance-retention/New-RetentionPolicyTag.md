@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 

@@ -31,10 +31,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-Set- SPBusinessDataCatalogEntityNotificationWeb -Web "http://contoso"
+Set-SPBusinessDataCatalogEntityNotificationWeb -Web "https://contoso"
 ```
 
-This example sets http://contoso as the entity notification site for the service context of the site at http://contoso.
+This example sets https://contoso as the entity notification site for the service context of the site at https://contoso.
 
 
 ## PARAMETERS

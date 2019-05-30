@@ -60,7 +60,7 @@ New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
+$group = New-Team -MailNickname "TestTeam" -displayname "Test Teams" -Visibility "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

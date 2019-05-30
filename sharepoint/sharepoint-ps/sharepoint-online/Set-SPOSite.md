@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -32,7 +32,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
 ```
 ### ParamSet2
 ```powershell
@@ -267,7 +267,8 @@ Accept wildcard characters: False
 
 ### -LockState
 Sets the lock state on a site.
-Valid values are: NoAccess and Unlock.
+Valid values are: NoAccess, ReadOnly and Unlock.
+When the lock state of a site is ReadOnly, a message will appear on the site stating that the site is under maintenance and it is read-only.
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
@@ -750,28 +751,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConditionalAccessPolicy  
+### -ConditionalAccessPolicy
+
+Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+
 PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
-Please read documentation here to understand Conditional Access Policy usage in SharePoint Online "https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices"
-```powershell
-Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess 
+
+```yaml
+Type: SPOConditionalAccessPolicyType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowEditing  
-PARAMVALUE: $true | $false 
+
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
-```powershell
-Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LimitedAccessFileType 
-PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
--OfficeOnlineFilesOnly Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
--LimitedAccessFileType WebPreviewableFiles (default) Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
--LimitedAccessFileType OtherFiles Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
-```powershell
-Set-SPOSite -identity <url> -ConditionalAccessPolicy AllowLimitedAccess -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
+-OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
+```yaml
+Type: SPOLimitedAccessFileType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters
