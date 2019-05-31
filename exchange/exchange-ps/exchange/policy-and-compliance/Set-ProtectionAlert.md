@@ -18,6 +18,9 @@ Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Co
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
+> [!NOTE]
+> You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
+
 ## SYNTAX
 
 ```

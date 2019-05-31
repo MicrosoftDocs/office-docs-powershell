@@ -1,61 +1,51 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Office 365 Security & Compliance Center
-title: Remove-DlpComplianceRule
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
+applicable: Exchange Online
+title: Remove-ApplicationAccessPolicy
 schema: 2.0.0
-author: chrisda
-ms.author: chrisda
-ms.reviewer:
-monikerRange: "o365scc-ps"
+monikerRange: "exchonline-ps"
 ---
 
-# Remove-DlpComplianceRule
+# Remove-ApplicationAccessPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in the cloud-based service.
 
-Use the Remove-DlpComplianceRule cmdlet to remove Data Loss Prevention (DLP) rules from the Security & Compliance Center.
+Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes may take upto 30 minutes to go live. 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### Set1
 ```
-Remove-DlpComplianceRule [-Identity] <PolicyIdParameter>
+Remove-ApplicationAccessPolicy -[Identity] <ApplicationAccessPolicyIdParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-DlpComplianceRule -Identity "PII SS# Custom"
+Remove-ApplicationAccessPolicy -Identity "596ade3a-1abe-4c5b-b7d5-a169c4b05d4a\7a774f0c-7a6f-11e0-85ad-07fb4824019b:S-1-5-21-724521725-2336880675-2689004279-1821338;8b6ce428-cca2-459a-ac50-d38bcc932258"
 ```
 
-This example removes the DLP rule named "PII SS# Custom".
+This example removes the specified policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the DLP rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-- Id
+The Identity parameter specifies the application access policy that you want to remove. To find the Identity value for the policy, run the command Get-ApplicationAccessPolicy | Format-List Identity,Description,ScopeName,AccessRight,AppID.
 
 ```yaml
-Type: PolicyIdParameter
+Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -74,7 +64,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -83,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -112,4 +102,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1e09f210-e067-4455-a0ed-852bb4a87dec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-applicationaccesspolicy)

@@ -38,10 +38,10 @@ This example returns a summary list of all OME configurations in the organizatio
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-OMEConfiguration -Identity "OME Configuration" | Format-List
+Get-OMEConfiguration | Format-List
 ```
 
-This example returns detailed information for the default OME configuration named OME Configuration.
+This example returns detailed information for all OME configurations in the organization.
 
 ## PARAMETERS
 
