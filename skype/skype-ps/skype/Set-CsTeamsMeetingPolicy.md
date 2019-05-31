@@ -18,26 +18,30 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ### Identity (Default)
 ```
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
- [-Confirm] [-AllowPSTNUsersToBypassLobby <Boolean>] [<CommonParameters>]
+ [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-AllowOrganizersToOverrideLobbySettings <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-AllowOrganizersToOverrideLobbySettings <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
