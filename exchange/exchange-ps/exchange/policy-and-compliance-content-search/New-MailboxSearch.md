@@ -18,7 +18,7 @@ On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to
 
 Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as Litigation Hold.
 
-By default, mailbox searches are performed across all Exchange 2016 and Exchange 2013 Mailbox servers in an Exchange organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
+By default, mailbox searches are performed across all Exchange 2013 or later Mailbox servers in an Exchange organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
 
 For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx) and In-Place Hold and Litigation Hold (https://technet.microsoft.com/library/ff637980.aspx).
 
@@ -71,17 +71,17 @@ New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Execut
 
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
 
-SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
+- SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
 
-Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
+- Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
 
-SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
+- SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
 
-StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
+- StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
 
-TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
+- TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
-StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
+- StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### -------------------------- Example 2 --------------------------
 ```

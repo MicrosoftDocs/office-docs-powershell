@@ -269,11 +269,11 @@ Accept wildcard characters: False
 
 ### -UpdateVersions
 Indicates how to resolve situations where a file to be imported to a site already exists in that site.
-If the UpdateVersions parameter is absent, the import operation by default uses a value of 1.
+If the UpdateVersions parameter is absent, the import operation by default uses a value of 1 (Append).
 
 The type must be any one of the following:
 
--Add new versions to the current file
+-Append, which adds new versions to the current file
 
 -Overwrite the file and all of its versions (delete then insert)
 
