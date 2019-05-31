@@ -198,10 +198,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-(New-CsTeamsChannelsPolicy)[https://docs.microsoft.com/powershell/module/skype/new-csteamschannelspolicy]
+[New-CsTeamsChannelsPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamschannelspolicy)
 
-(Remove-CsTeamsChannelsPolicy)[https://docs.microsoft.com/powershell/module/skype/remove-csteamschannelspolicy]
+[Remove-CsTeamsChannelsPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csteamschannelspolicy)
 
-(Grant-CsTeamsChannelsPolicy)[https://docs.microsoft.com/powershell/module/skype/grant-csteamschannelspolicy]
+[Grant-CsTeamsChannelsPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csteamschannelspolicy)
 
-(Get-CsTeamsChannelsPolicy)[https://docs.microsoft.com/powershell/module/skype/get-csteamschannelspolicy]
+[Get-CsTeamsChannelsPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamschannelspolicy)
