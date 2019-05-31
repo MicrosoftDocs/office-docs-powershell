@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -SiteDesignId
 
-A description of the hub site.
+Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
 
 ```yaml
 Type: String
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -RequiresJoinApproval
 
-A description of the hub site.
+Determines if joining a Hub site requires approval.
 
 ```yaml
 Type: Boolean
