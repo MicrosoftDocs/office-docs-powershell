@@ -44,7 +44,7 @@ Instead, you will need to wait for notification from Microsoft regarding names a
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 
-$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"
+$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"
 
 $y = Get-CsClientPolicy -Identity global
 
@@ -58,7 +58,7 @@ This example adds a new feedback option to Skype for Business.
 Note that this example is for demonstration purposes.
 You should not expect to be able to run these commands and add a similar feedback option to your copy of Skype for Business.
 
-In order to add the new policy entry, the first command in the example uses the New-CsClientPolicyEntry cmdlet to create an entry with the Name OnlineFeedbackURL and the Value http://www.litwareinc.com/feedback.
+In order to add the new policy entry, the first command in the example uses the New-CsClientPolicyEntry cmdlet to create an entry with the Name OnlineFeedbackURL and the Value https://www.litwareinc.com/feedback.
 The resulting policy entry object is stored in a variable named $x.
 
 In the second command, the Get-CsClientPolicy cmdlet is used to create an object reference ($y) to the global client policy.
@@ -72,7 +72,7 @@ If you do not call the Set-CsClientPolicy cmdlet, your changes will exist only i
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"
+$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"
 
 Set-CsClientPolicy -Identity global -PolicyEntry $x
 ```
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -Value
 Value to be assigned to the new policy entry.
-For example: `-Value http://www.litwareinc.com/feedback.`
+For example: `-Value https://www.litwareinc.com/feedback.`
 
 ```yaml
 Type: String

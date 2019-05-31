@@ -41,7 +41,7 @@ This example activates a form with a specified name.
 ### -Identity
 Specifies the InfoPath form template to start.
 
-The type must be a valid URL, in the form http://server_name; a valid name of a Web application (for example, WebApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPWebServiceProxy object.
+The type must be a valid URL, in the form https://server_name; a valid name of a Web application (for example, WebApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPWebServiceProxy object.
 
 
 ```yaml

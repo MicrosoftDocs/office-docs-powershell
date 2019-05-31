@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOSiteDesign
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviewImageUrl
-The URL of a preview image. If none is specified, SharePoint uses a generic image.
+The URL of a preview image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 421 pixels.
 
 ```yaml
 Type: String

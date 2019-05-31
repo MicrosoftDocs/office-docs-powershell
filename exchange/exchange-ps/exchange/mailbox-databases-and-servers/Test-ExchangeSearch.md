@@ -217,7 +217,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
+The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 You can't use this parameter with the MailboxDatabase or Identity parameters.
 

@@ -48,11 +48,11 @@ Skype for Business Server Control Panel: To modify an existing Persistent Chat a
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "http://atl-cs-001.litwareinc.com/itchat2"
+Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "https://atl-cs-001.litwareinc.com/itchat2"
 ```
 
 Example 1 modifies the URL assigned to the Persistent Chat add-in ITPersistentChatAddin.
-In this case, the URL is changed to http://atl-cs-001.litwareinc.com/itchat2.
+In this case, the URL is changed to https://atl-cs-001.litwareinc.com/itchat2.
 
 
 ## PARAMETERS

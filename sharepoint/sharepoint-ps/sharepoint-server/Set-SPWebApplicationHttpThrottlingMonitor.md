@@ -33,20 +33,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$buckets=(2000,1000,500,300,200,100,50,30,20,10)
-Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint -
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint -
 Category Memory -Counter 'Available Mbytes' -IsDesc -HealthScoreBuckets $buckets
 ```
 
-This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the http://sharepoint Web application.
+This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the https://sharepoint Web application.
 
 
 ### ------------------EXAMPLE 2------------------
 ```
-Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
 ```
 
-This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the http://sharepoint Web application.
+This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the https://sharepoint Web application.
 
 
 ## PARAMETERS
