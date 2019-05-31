@@ -22,7 +22,7 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ```
 
 ## DESCRIPTION
-Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization program](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide), you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
+Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. At this time, based on early adopter feedback, we have decided to postpone rolling out this feature. We apologize for any inconvenience and will communicate a new schedule via Message Center, once it is available. We expect to have an update in the Q3 time frame
 
 **Current limitations**
 
