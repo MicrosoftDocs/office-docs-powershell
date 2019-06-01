@@ -19,6 +19,9 @@ Office 365 Security & Compliance Center PowerShell allows you to manage your Off
 > [!NOTE]
 > If you want to use multi-factor authentication (MFA) to connect to Security & Compliance Center PowerShell, or if your organization uses federated authentication, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). For some features (for example, mailbox archiving), the Security & Compliance Center links to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online instead of the Security & Compliance Center. For more information, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md). 
 
+> [!NOTE]
+> If you are using location condition in Azure Active Directory conditional access policy to restrict access to trusted IPs, this method is not supported. You need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md).
+
 For more information about the Security & Compliance Center, see [Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
 
 ## What do you need to know before you begin?
