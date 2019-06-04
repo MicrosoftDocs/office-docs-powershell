@@ -24,8 +24,6 @@ Set-CsOnlineVoicemailUserSettings -Identity <String> [-VoicemailEnabled <Boolean
 The Set-CsOnlineVoicemailUserSettings cmdlet lets tenant admin modify the online voicemail user settings of a specific user in the organization. New online voicemail user settings of the user would be returned after executing.
 For example, tenant admin could enable/disable voicemail, change voicemail prompt language, modify out-of-office voicemail greeting settings, or setup simple call answer rules. Only those properties that tenant admin have actually provided with be modified. If an online voicemail user setting was not set by tenant admin, it would remain the old value after this cmdlet has been executed.
 
-**NOTE** 
-- **This cmdlet is currently available to PREVIEW customers only.** 
 
 ## EXAMPLES
 
