@@ -47,7 +47,7 @@ Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba
 ```
 
 ## DESCRIPTION
-The Enable-OutlookAnywhere cmdlet enables the Exchange 2010 Client Access server for Outlook Anywhere. This lets the server accept requests from Outlook 2007 and Outlook 2003 clients from the Internet by using Outlook Anywhere.
+Enabling Outlook Anywhere on the Client Access server allows the server to accept external connections by Outlook 2003 or later clients by using Outlook Anywhere.
 
 This cmdlet can be successfully run only if the RPC over HTTP proxy Windows networking component is already installed.
 
@@ -285,7 +285,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the name of the Client Access server to be enabled for Outlook Anywhere.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

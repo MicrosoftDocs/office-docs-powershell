@@ -112,7 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies health information for the DAG network from a specific Mailbox server in the DAG.
+The Server parameter specifies the Mailbox server in the DAG to retrieve health information for the DAG network from. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
