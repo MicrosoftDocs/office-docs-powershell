@@ -59,10 +59,8 @@ This example enables the communication site experience at this https://contoso.s
 
 ```
 $orgName="<tenantname>"
-$adminUPN = "<Current SharePoint Online Admin Login ID>"
 $rootSiteURL = "<Root site URL>"
-$userCredential = Get-Credential -UserName $adminUPN -Message "Type the password."
-Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
+Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
 **STEP BY STEP INSTRUCTIONS**
