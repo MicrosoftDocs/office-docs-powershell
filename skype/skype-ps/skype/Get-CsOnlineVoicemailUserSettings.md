@@ -22,9 +22,6 @@ Get-CsOnlineVoicemailUserSettings -Identity <String> [-Tenant <Guid>] [<CommonPa
 ## DESCRIPTION
 The Get-CsOnlineVoicemailUserSettings cmdlet returns information about online voicemail user settings of a specific user in your organization.
 
-**NOTE** 
-- **This cmdlet is currently available to PREVIEW customers only.** 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
