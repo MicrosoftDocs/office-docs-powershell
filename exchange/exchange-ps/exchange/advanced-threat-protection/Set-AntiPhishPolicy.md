@@ -326,11 +326,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnauthenticatedSender
-The EnableUnauthenticatedSender parameter specifies whether to apply a "?" symbol in Outlook's sender card if the sender fails authentication checks.
+The EnableUnauthenticatedSender parameter specifies whether to apply a "?" symbol in Outlook's sender card if the sender fails authentication checks. Valid values are:
 
-- $true: Apply the "?" symbol
+- $true: Apply the "?" symbol.
 
-- $false: Do not apply the "?" symbol
+- $false: Do not apply the "?" symbol.
 
 ```yaml
 Type: $true | $false
