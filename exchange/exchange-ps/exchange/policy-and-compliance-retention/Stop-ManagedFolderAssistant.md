@@ -83,7 +83,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the names of servers on which the Managed Folder Assistant is to be stopped. If a server isn't specified, the Managed Folder Assistant on the local server is stopped.
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter
