@@ -35,6 +35,7 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-EnableSimilarUsersSafetyTips <$true | $false>]
  [-EnableTargetedDomainsProtection <$true | $false>]
  [-EnableTargetedUserProtection <$true | $false>]
+ [-EnableUnauthenticatedSender <$true | $false>]
  [-EnableUnusualCharactersSafetyTips <$true | $false>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
@@ -320,6 +321,25 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableUnauthenticatedSender
+The EnableUnauthenticatedSender parameter specifies whether to apply a "?" symbol in Outlook's sender card if the sender fails authentication checks. Valid values are:
+
+- $true: Apply the "?" symbol.
+
+- $false: Do not apply the "?" symbol.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
