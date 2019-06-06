@@ -56,7 +56,7 @@ The command shown in Example 1 migrates the Response Group application from atl-
 ## PARAMETERS
 
 ### -Destination
-FQDN of the computer where the Skype for Business Server Response Group application is to be hosted (the "copy to" location).
+FQDN of the computer where the newer server Response Group application is to be hosted (the "copy to" location).
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-FQDN of the pool where the Office Communications Server 2007 R2 or Lync Server 2010Response Group application is currently hosted (the "copy from" location).
+FQDN of the pool where the legacy Response Group application is currently hosted (the "copy from" location).
 
 ```yaml
 Type: String
