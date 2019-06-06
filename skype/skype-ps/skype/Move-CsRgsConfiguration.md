@@ -32,14 +32,15 @@ Move-CsRgsConfiguration will then move all the configuration settings, audio fil
 After the service has been migrated, all calls to a Response Group phone number will be handled by the newer server.
 Calls will no longer be handled by the previous version of the service.
 
-> !Note:
+>[!Note]
 > If you are running this service on Office Communications Server 2007 R2 or Lync Server 2010, before you can run Move-CsRgsConfiguration, you must first install the Windows Management Instrumentation (WMI) Backward Compatibility interfaces package; this application is installed by running OCSWMIBC.msi. The file OCSWMIBC.msi can be found on the installation DVD in the Setup folder.
 
-> !Note:
+>[!Note]
 > If Office Communications Server 2007 is running Microsoft SQL Server 2005 then, before you attempt to migrate the Response Group application, you must install the Microsoft SQL Server 2005 Native Client on the computer where you will be running the Move-CsRgsConfiguration cmdlet.
 If the Native Client is not installed you will receive the error message "Cannot access WMI settings" when you call Move-CsRgsConfiguration.
 
-The Move-CsRgsConfiguration cmdlet is only for migrating from legacy version to newer version; you cannot use this cmdlet to migrate between the same version (for example, one instance of Skype for Business Server 2015 to a new instance of Skype for Business Server 2015).
+>[!Note]
+> The Move-CsRgsConfiguration cmdlet is only for migrating from legacy version to newer version; you cannot use this cmdlet to migrate between the same version (for example, one instance of Skype for Business Server 2015 to a new instance of Skype for Business Server 2015).
 That type of migration can only be done by using the new Import-CsRgsConfiguration and Export-CsRgsConfiguration cmdlets.
 
 ## EXAMPLES
