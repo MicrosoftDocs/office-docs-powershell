@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter>
- -LinkType <Members | Owners | Subscribers | Aggregators> [-ResultSize <Unlimited>]
+ -LinkType <Members | Owners | Subscribers | Aggregators | EventSubscribers> [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -77,6 +77,10 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 - Owners
 
 - Subscribers
+
+- Aggregators
+
+- EventSubscribers
 
 ```yaml
 Type: Members | Owners | Subscribers | Aggregators | EventSubscribers
