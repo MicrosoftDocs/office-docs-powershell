@@ -2138,11 +2138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSessionEnabled
-The RefreshSessionEnabled parameter specifies whether to enable or disable the use of refresh tokens when using OpenID Connect for authentication. Valid values are:
-
-- $true: Refresh tokens are enabled.
-
-- $false: Refresh tokens are disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
