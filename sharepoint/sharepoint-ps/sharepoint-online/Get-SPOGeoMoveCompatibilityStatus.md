@@ -1,14 +1,14 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Get-SPOGeoCrossMoveCompatibilityStatus
+title: Get-SPOGeoMoveCrossCompatibilityStatus
 schema: 2.0.0
 author: trent-green
 ms.author: trgreen
 ms.reviewer:
 ---
 
-# Get-SPOGeoCrossMoveCompatibilityStatus
+# Get-SPOGeoMoveCrossCompatibilityStatus
 
 ## SYNOPSIS
 This cmdlet returns the compatibility status between geographic locations.
@@ -17,7 +17,7 @@ This cmdlet returns the compatibility status between geographic locations.
 ## SYNTAX
 
 ```
-Get-SPOGeoCrossMoveCompatibilityStatus [<CommonParameters>]
+Get-SPOGeoMoveCrossCompatibilityStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ This cmdlet returns the compatibility between sites and locations for a move in 
 
 ### EXAMPLE 1
 ```powershell
-Get-SPOGeoCrossMoveCompatibilityStatus
+Get-SPOGeoMoveCrossCompatibilityStatus
 ```
 
 Get the compatibility status for all locations.
