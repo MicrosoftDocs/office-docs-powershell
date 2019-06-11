@@ -31,7 +31,7 @@ Remove-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParame
 
 ### Example 1
 ```
-Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
+Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com -Role Owner
 ```
 
 ## PARAMETERS
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Use this to demote a user from owner to member of the team
+Use this to demote a user from owner to member of the team. Need to specify the role when removing user from the team.
 
 ```yaml
 Type: String
