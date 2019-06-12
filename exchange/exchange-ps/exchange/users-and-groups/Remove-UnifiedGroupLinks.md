@@ -103,11 +103,15 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Office 365 Group property that you want to modify. Valid values are:
 
-- EventSubscribers
-
 - Members
 
 - Owners
+
+- Subscribers
+
+- Aggregators
+
+- EventSubscribers
 
 ```yaml
 Type: Members | Owners | Subscribers | Aggregators
