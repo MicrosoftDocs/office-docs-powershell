@@ -34,10 +34,17 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-InformationBarrierPoliciesApplicationStatus
 ```
 
-{{ Add example description here }}
+This will display information about whether all policy applications completed, failed, or is in progress.
+
+### Example 2
+```
+Get-InformationBarrierPoliciesApplicationStatus -All $true
+```
+
+This will display information about whether policy application completed, failed, or is in progress.
 
 ## PARAMETERS
 
