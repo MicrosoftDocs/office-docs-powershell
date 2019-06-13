@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+Start-InformationBarrierPoliciesApplication
 ```
 
 {{ Add example description here }}
