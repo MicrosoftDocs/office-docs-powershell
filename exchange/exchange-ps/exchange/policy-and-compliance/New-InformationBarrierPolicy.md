@@ -34,14 +34,6 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
  [-WhatIf] [<CommonParameters>]
 ```
 
-### OrganizationSegmentAllowedFilter
-```
-New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentAllowedFilter <String>
- [-Comment <String>]
- [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### OrganizationSegmentsBlocked
 ```
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
@@ -57,10 +49,17 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive
 ```
 
-{{ Add example description here }}
+In this example, we defined a policy called *Sales-Research* for a segment called *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in a segment called *Research*.
+
+### Example 2
+```
+New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive
+```
+
+In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
 
 ## PARAMETERS
 
