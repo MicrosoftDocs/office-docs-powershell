@@ -154,7 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -AccountOnly
-The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch. Note that this switch is not needed when executing the command against a DeviceType of Outlook, as for the Outlook DeviceType, only the account is removed whether this switch is present or not.
+The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch.
+
+You don't need to use this switch for the DeviceType value Outlook, because an account-only remote devices wipe is the only type of wipe that's used on Outlook devices.
 
 ```yaml
 Type: SwitchParameter
