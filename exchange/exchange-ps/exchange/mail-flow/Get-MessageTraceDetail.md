@@ -14,17 +14,26 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message.
+Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace cmdlets.  
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Get-MessageTraceDetail [-Action <MultiValuedProperty>] [-EndDate <DateTime>] [-Event <MultiValuedProperty>]
- [-Expression <Expression>] [-MessageId <String>] [-MessageTraceId <Guid>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-RecipientAddress <String>] [-SenderAddress <String>] [-StartDate <DateTime>]
- [<CommonParameters>]
+Get-MessageTraceDetail
+ [-Action <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-Event <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MessageId <String>]
+ [-MessageTraceId <Guid>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <String>]
+ [-SenderAddress <String>]
+ [-StartDate <DateTime>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
