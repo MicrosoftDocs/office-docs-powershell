@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -98,15 +101,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
+The Identity parameter specifies a public folder database. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
+- GUID
 
-If you don't specify the server name, the cmdlet searches for databases on the local server. If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope. This parameter can't be used with the Server parameter.
+You can't use this parameter with the Server parameter.
+
+If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -123,7 +128,9 @@ Accept wildcard characters: False
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.
 
-The IncludePreExchange2010 parameter specifies whether information about all the public folder databases in the organization is returned, including versions of Microsoft Exchange prior to Exchange Server 2010. If the IncludePreExchange2010 parameter is included in the command, information about all of the public folder databases in the organization is returned. This parameter isn't necessary when the Server or Identity parameter is included in the command.
+The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
+
+This parameter isn't useful in commands where you use the Server parameter or Identity parameter.
 
 ```yaml
 Type: SwitchParameter

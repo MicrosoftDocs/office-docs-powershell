@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-UserPhoto
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -170,13 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the user account. You can use any value that uniquely identifies the user account.
-
-For example:
+The Identity parameter specifies the user account. You can use any value that uniquely identifies the user account. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

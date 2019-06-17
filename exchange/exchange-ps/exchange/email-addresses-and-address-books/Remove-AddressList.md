@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-AddressList
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -25,7 +28,7 @@ Remove-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-The Remove-AddressList cmdlet can be used in conjunction with the Get-AddressList cmdlet as follows:
+You can use the Remove-AddressList cmdlet with the Get-AddressList cmdlet in the following scenarios:
 
 - Use the Get-AddressList cmdlet to get address list information, and then pipe the output to the Format-List cmdlet to get the GUID, distinguished name (DN), or path and name of an existing address list.
 

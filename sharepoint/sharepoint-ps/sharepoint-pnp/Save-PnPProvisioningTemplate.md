@@ -1,12 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Save-PnPProvisioningTemplate
 
 ## SYNOPSIS
-
 Saves a PnP site template to the file system
 
 ## SYNTAX 
@@ -26,13 +25,6 @@ Save-PnPSiteTemplate -InputInstance $template -Out .\template.pnp
 ```
 
 Saves a PnP site template to the file system as a PnP file.
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Save-PnPProvisioningTemplate -InputInstance $template -Out .\template.pnp
-```
-
-Saves a PnP file to the file systems
 
 ## PARAMETERS
 
@@ -86,4 +78,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

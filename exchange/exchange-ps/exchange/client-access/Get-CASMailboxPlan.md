@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Get-CASMailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -53,8 +56,6 @@ This example returns detailed information about the specified CAS mailbox plan.
 The Identity parameter specifies the CAS mailbox plan that you want to view. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
 - Name
-
-- Display Name
 
 - Distinguished name (DN)
 
@@ -145,7 +146,7 @@ If the default view doesn't include the property you're sorting by, you can appe
 
 You can sort by the following attributes:
 
-- Display name
+- DisplayName
 
 - Name
 

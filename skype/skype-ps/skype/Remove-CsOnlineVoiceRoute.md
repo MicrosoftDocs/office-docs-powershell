@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsOnlineVoiceRoute
@@ -144,8 +147,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
 
-[New-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
+[New-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
 
-[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)
+[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)

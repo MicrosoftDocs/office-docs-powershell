@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsTeamsCallParkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 
@@ -15,7 +18,7 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 ## SYNTAX
 
 ```
-Remove-CsClientPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+Remove-CsTeamsCallParkPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

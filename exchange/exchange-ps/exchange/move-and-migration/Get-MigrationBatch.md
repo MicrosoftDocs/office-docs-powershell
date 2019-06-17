@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MigrationBatch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,17 +22,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### BatchesFromEndpoint
 ```
-Get-MigrationBatch [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-Endpoint <MigrationEndpointIdParameter>] [-IncludeReport]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+Get-MigrationBatch [-Endpoint <MigrationEndpointIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
  [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
  [<CommonParameters>]
 ```
 

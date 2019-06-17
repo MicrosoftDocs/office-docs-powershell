@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2019, Exchange Online
 title: Set-ClientAccessRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,13 +21,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter> [-Action <AllowAccess | DenyAccess>]
- [-AnyOfAuthenticationTypes <MultiValuedProperty>] [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
- [-AnyOfProtocols <MultiValuedProperty>] [-Confirm] [-DatacenterAdminsOnly] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
- [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>] [-ExceptAnyOfProtocols <MultiValuedProperty>]
- [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-Name <String>] [-Priority <Int32>]
- [-Scope <All | Users>] [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>] [-UserRecipientFilter <String>]
+Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
+ [-Action <AllowAccess | DenyAccess>]
+ [-AnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-AnyOfProtocols <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
+ [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
+ [-ExceptAnyOfProtocols <MultiValuedProperty>]
+ [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-Scope <All | Users>]
+ [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-UserRecipientFilter <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -206,21 +219,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatacenterAdminsOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
@@ -468,7 +466,7 @@ The UserRecipientFilter parameter specifies a condition for the client access ru
 
 - CountryOrRegion
 
-- CustomAttribute1-15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 

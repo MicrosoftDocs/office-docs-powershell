@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Get-MailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -56,6 +59,8 @@ This example returns detailed information for the mailbox plan that has the disp
 The Identity parameter specifies the mailbox plan that you want to view. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
+
+- Alias
 
 - Display name
 

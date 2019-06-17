@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-OwaVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -143,7 +146,8 @@ Set-OwaVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-WhatIf]
  [-WindowsAuthentication <$true | $false>]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -333,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedMimeTypes
-The AllowedMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
+The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
 - image/bmp
 
@@ -456,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedMimeTypes
-The BlockedMimeTypes parameter specifies MIME extentions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
+The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
 - application/hta
 
@@ -1164,7 +1168,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveMimeTypes
-The ForceSaveMimeTypes parameter specifies the MIME extentions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
+The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
 - Application/futuresplash
 
@@ -1551,11 +1555,11 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEnabled
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
-- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
+- $true: The Journal folder is visible in Outlook on the web. This is the default value.
 
-- $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
+- $false: The Journal folder isn't visible in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -1570,7 +1574,11 @@ Accept wildcard characters: False
 ```
 
 ### -JunkEmailEnabled
-The JunkEmailEnabled parameter specifies whether the Junk Email management tools are enabled.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
+
+- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
+
+- $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -1632,7 +1640,6 @@ The LogonFormat parameter specifies the type of logon format that's required for
 - UserName: Requires only the username, but you also need to specify a value for the DefaultDomain parameter.
 
 - PrincipalName: Requires the user principal name (UPN) (for example, user@contoso.com). This sign-in method works only for users whose UPN name is the same as their email address.
-
 
 ```yaml
 Type: FullDomain | PrincipalName | UserName
@@ -2084,6 +2091,8 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFoldersEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
 - $true: Search Folders are visible in Outlook on the Web. This is the default value.
@@ -2637,7 +2646,7 @@ Accept wildcard characters: False
 ### -WebReadyMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
+The WebReadyMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
 
 - application/msword
 

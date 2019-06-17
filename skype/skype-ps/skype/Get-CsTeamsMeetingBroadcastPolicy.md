@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 
@@ -27,7 +30,7 @@ Get-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalSto
 ```
 
 ## DESCRIPTION
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
 
 ## EXAMPLES
 

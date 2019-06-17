@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Remove-PnPNavigationNode
@@ -37,7 +37,7 @@ Removes the navigation node with the specified id
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$nodes = Get-PnPNavigationNode -Location QuickLaunch
+$nodes = Get-PnPNavigationNode -QuickLaunch
 PS:>$nodes | Select-Object -First 1 | Remove-PnPNavigationNode -Force
 ```
 
@@ -128,4 +128,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

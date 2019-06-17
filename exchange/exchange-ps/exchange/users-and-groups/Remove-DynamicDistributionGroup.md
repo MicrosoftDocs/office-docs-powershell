@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-DynamicDistributionGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -37,13 +40,9 @@ This example deletes the dynamic distribution group named Test Users.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the dynamic distribution group that you want to remove. You can use any value that uniquely identifies the dynamic distribution group.
-
-For example:
+The Identity parameter specifies the dynamic distribution group that you want to remove. You can use any value that uniquely identifies the dynamic distribution group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -25,7 +25,7 @@ New-PnPTenantSequenceTeamNoGroupSite -Url <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$site = New-PnPTenantSequenceTeamNoGroupSite -Alias "MyTeamSite" -Title "My Team Site"
+$site = New-PnPTenantSequenceTeamNoGroupSite -Url "/sites/MyTeamSite" -Title "My Team Site"
 ```
 
 Creates a new team site object with the specified variables
@@ -130,4 +130,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

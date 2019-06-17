@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-PublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -321,7 +324,27 @@ Accept wildcard characters: False
 ### -OverrideContentMailbox
 This parameter is available only in on-premises Exchange.
 
-The OverrideContentMailbox parameter specifies the identity of the public folder mailbox that you want to move this public folder's content to.
+The OverrideContentMailbox parameter specifies the target public folder mailbox whereyou want to move this public folder's content to. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -399,7 +422,15 @@ Accept wildcard characters: False
 ### -Replicas
 This parameter is available or functional only in Exchange Server 2010
 
-The Replicas parameter specifies a list of public folder databases with which to replicate this public folder.
+The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
 
 ```yaml
 Type: DatabaseIdParameter[]

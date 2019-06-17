@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MoveRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -84,13 +87,9 @@ This example retrieves the status of move requests in the FromDB01ToDB02 batch t
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the move request, which is the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user.
-
-For example:
+The Identity parameter specifies the identity of the move request, which is the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -377,13 +376,9 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -475,11 +470,13 @@ Accept wildcard characters: False
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourceDatabase parameter specifies that all mailboxes being moved from the specified source database are returned. You can use the following values:
+The SourceDatabase parameter returns all mailboxes that are being moved from the specified source mailbox database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -532,11 +529,13 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies whether to return all mailboxes that are being moved to the specified target database. You can use the following values:
+The TargetDatabase parameter returns all mailboxes that are being moved to the specified target mailbox database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsAutoAttendantMenuOption
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsAutoAttendantMenuOption
@@ -13,7 +16,7 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ## SYNTAX
 
 ```
-New-CsAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <Object>] [-CallTarget <Object>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <List>] [-CallTarget <Object>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

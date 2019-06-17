@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-ManagementRoleAssignment
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -443,9 +446,15 @@ Accept wildcard characters: False
 ### -WritableDatabase
 This parameter is available only in on-premises Exchange.
 
-The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the database name contains spaces, enclose it in quotation marks (").
+The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. You can use any value that uniquely identifies the database. For example:
 
-If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+If you use this parameter with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
 
 ```yaml
 Type: DatabaseIdParameter

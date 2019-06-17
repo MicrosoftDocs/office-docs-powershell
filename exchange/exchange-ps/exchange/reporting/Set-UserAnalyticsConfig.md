@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-UserAnalyticsConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -46,13 +49,9 @@ This example sets the MyAnalytics privacy setting to OptIn for the user named Ka
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
-
-For example:
+The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -145,12 +144,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

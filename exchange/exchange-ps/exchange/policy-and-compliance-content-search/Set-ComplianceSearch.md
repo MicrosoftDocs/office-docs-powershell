@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Set-ComplianceSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
@@ -18,21 +21,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter> [-AddExchangeLocation <String[]>]
- [-AddExchangeLocationExclusion <String[]>] [-AddOneDriveLocation <String[]>]
- [-AddOneDriveLocationExclusion <String[]>] [-AddPublicFolderLocation <String[]>]
- [-AddPublicFolderLocationExclusion <String[]>] [-AddSharePointLocation <String[]>]
- [-AddSharePointLocationExclusion <String[]>] [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
- [-Confirm] [-ContentMatchQuery <String>] [-Description <String>] [-ExchangeLocation <String[]>]
- [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>] [-Language <CultureInfo>]
- [-Name <String>] [-OneDriveLocation <String[]>] [-OneDriveLocationExclusion <String[]>]
- [-PublicFolderLocation <String[]>] [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>]
- [-RemoveExchangeLocation <String[]>] [-RemoveExchangeLocationExclusion <String[]>]
- [-RemoveOneDriveLocation <String[]>] [-RemoveOneDriveLocationExclusion <String[]>]
- [-RemovePublicFolderLocation <String[]>] [-RemovePublicFolderLocationExclusion <String[]>]
- [-RemoveSharePointLocation <String[]>] [-RemoveSharePointLocationExclusion <String[]>]
- [-SearchNames <String[]>] [-SharePointLocation <String[]>] [-SharePointLocationExclusion <String[]>] [-WhatIf]
- [<CommonParameters>]
+Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
+ [-AddExchangeLocation <String[]>]
+ [-AddExchangeLocationExclusion <String[]>]
+ [-AddOneDriveLocation <String[]>]
+ [-AddOneDriveLocationExclusion <String[]>]
+ [-AddSharePointLocation <String[]>]
+ [-AddSharePointLocationExclusion <String[]>]
+ [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-Description <String>]
+ [-ExchangeLocation <String[]>]
+ [-ExchangeLocationExclusion <String[]>]
+ [-Force]
+ [-HoldNames <String[]>]
+ [-IncludeUserAppContent <$true | $false>]
+ [-Language <CultureInfo>]
+ [-Name <String>]
+ [-OneDriveLocation <String[]>]
+ [-OneDriveLocationExclusion <String[]>]
+ [-PublicFolderLocation <String[]>]
+ [-RefinerNames <String[]>]
+ [-RemoveExchangeLocation <String[]>]
+ [-RemoveExchangeLocationExclusion <String[]>]
+ [-RemoveOneDriveLocation <String[]>]
+ [-RemoveOneDriveLocationExclusion <String[]>]
+ [-RemovePublicFolderLocation <String[]>]
+ [-RemoveSharePointLocation <String[]>]
+ [-RemoveSharePointLocationExclusion <String[]>]
+ [-SharePointLocation <String[]>]
+ [-SharePointLocationExclusion <String[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -170,36 +190,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddPublicFolderLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddPublicFolderLocationExclusion
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -524,21 +514,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RefinerNames
 This parameter is reserved for internal Microsoft use.
 
@@ -661,21 +636,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemovePublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveSharePointLocation
 The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
@@ -697,21 +657,6 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchNames
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
@@ -782,12 +727,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Undo-SoftDeletedMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -76,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the identity of the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
+The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
 
 ```yaml
 Type: MailboxIdParameter

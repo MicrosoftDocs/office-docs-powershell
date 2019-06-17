@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-MessageTrackingReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -72,13 +75,9 @@ This example returns the message tracking reports that the Help desk can analyze
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

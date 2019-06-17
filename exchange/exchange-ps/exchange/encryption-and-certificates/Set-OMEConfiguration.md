@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: Set-OMEConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -213,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialSignIn parameter specifies whether to enable or disable authentication with Microsoft, Google, or Yahoo identities for this custom template. Valid values are:
+The SocialSignIn parameter specifies whether to enable or disable authentication with Microsoft, Google, or Yahoo identities for this custom template. This only applies to the new version of OME that is built on Azure RMS. Valid values are:
 
 - $true: Authentication using Microsoft, Google, or Yahoo identities is enabled. This is the default value.
 

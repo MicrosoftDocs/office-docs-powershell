@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOnlinePstnUsage
@@ -191,4 +194,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlinePstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinepstnusage?view=skype-ps)
+[Get-CsOnlinePstnUsage](https://docs.microsoft.com/powershell/module/skype/get-csonlinepstnusage?view=skype-ps)
