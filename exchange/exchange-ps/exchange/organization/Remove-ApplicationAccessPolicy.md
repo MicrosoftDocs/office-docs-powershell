@@ -1,65 +1,48 @@
 ---
-external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
-title: Remove-UnifiedGroupLinks
+title: Remove-ApplicationAccessPolicy
 schema: 2.0.0
-author: chrisda
-ms.author: chrisda
-ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Remove-UnifiedGroupLinks
+# Remove-ApplicationAccessPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-UnifiedGroupLinks cmdlet to remove members, owners and subscribers from Office 365 groups in your cloud-based organization. To add members, owners and subscribers, use the Add-UnifiedGroupLinks cmdlet. To modify other properties of Office 365 groups, use the Set-UnifiedGroup cmdlet.
+Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes may take upto 30 minutes to go live. 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### Set1
 ```
-Remove-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter> -Links <RecipientIdParameter[]>
- -LinkType <LinkType>
+Remove-ApplicationAccessPolicy -[Identity] <ApplicationAccessPolicyIdParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links laura@contoso.com,julia@contoso.com
+Remove-ApplicationAccessPolicy -Identity "596ade3a-1abe-4c5b-b7d5-a169c4b05d4a\7a774f0c-7a6f-11e0-85ad-07fb4824019b:S-1-5-21-724521725-2336880675-2689004279-1821338;8b6ce428-cca2-459a-ac50-d38bcc932258"
 ```
 
-This example removes members laura@contoso.com and julia@contoso.com from the Office 365 Group named Legal Department.
+This example removes the specified policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
+The Identity parameter specifies the application access policy that you want to remove. To find the Identity value for the policy, run the command Get-ApplicationAccessPolicy | Format-List Identity,Description,ScopeName,AccessRight,AppID.
 
 ```yaml
-Type: UnifiedGroupIdParameter
+Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -67,62 +50,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Links
-The Links parameter specifies the recipients to remove from the Office 365 Group. You specify whether these recipients are members, owners, or subscribers by using the LinkType parameter.
-
-You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LinkType
-The LinkType parameter specifies the Office 365 Group property that you want to modify. Valid values are:
-
-- Members
-
-- Owners
-
-- Subscribers
-
-- Aggregators
-
-- EventSubscribers
-
-```yaml
-Type: LinkType
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -137,7 +64,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +79,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -175,4 +102,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5c2b4a0e-a8cb-4b29-a771-e6ebd13957a3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-applicationaccesspolicy)
