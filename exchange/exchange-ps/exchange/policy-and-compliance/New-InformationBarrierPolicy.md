@@ -127,7 +127,7 @@ Accept wildcard characters: False
 {{ Fill SegmentsBlocked Description }}
 
 ```yaml
-Type: MultiValuedProperty>
+Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center

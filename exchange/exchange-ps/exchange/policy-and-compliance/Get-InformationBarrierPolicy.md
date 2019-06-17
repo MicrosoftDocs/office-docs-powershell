@@ -32,12 +32,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-InformationBarrierPolicy
 ```
 
-This will display a list of information barrier policies that were defined, and their status.
+This example displays a list of information barrier policies that were defined, and their status.
 
 ## PARAMETERS
 

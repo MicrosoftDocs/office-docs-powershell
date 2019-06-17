@@ -1,25 +1,27 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Remove-InformationBarrierPolicy
+title: Remove-OrganizationSegment
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# Remove-InformationBarrierPolicy
+# Remove-OrganizationSegment
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-InformationBarrierPolicy cmdlet to remove information barrier policies from the Office 365 Security & Compliance Center. 
+Use the Remove-OrganizationSegment cmdlet to remove organization segments from the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 
 ## SYNTAX
 
 ```
-Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter>
+Remove-OrganizationSegment [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -31,22 +33,28 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Remove-OrganizationSegment -Identity "Engineering Group"
 ```
 
-{{ Add example description here }}
+This example removes the organization segment named Engineering Group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy that you want to remove.
+The Identity parameter specifies the organization segment that you want to remove. You can use any value that uniquely identifies the segment. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -102,4 +110,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-informationbarrierpolicy)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-organizationsegment)
