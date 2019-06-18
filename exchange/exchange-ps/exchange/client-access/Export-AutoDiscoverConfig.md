@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the 'Export-AutoDiscoverConfig' cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest.
+Use the `Export-AutoDiscoverConfig` cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
