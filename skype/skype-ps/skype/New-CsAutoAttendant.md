@@ -247,6 +247,9 @@ This example creates a new AA named _Main auto attendant_ that has the following
 - It references a call queue as a menu option.
 - The default language is en-US.
 - The time zone is set to Romance Standard.
+- It sets user1 as operator.
+- It has user2 also as a menu option.
+- The Auto Attendant is voice enabled.
 
 ## PARAMETERS
 
