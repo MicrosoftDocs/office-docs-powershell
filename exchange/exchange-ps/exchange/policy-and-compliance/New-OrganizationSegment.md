@@ -33,10 +33,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"
 ```
 
-{{ Add example description here }}
+In this example, a segment called HR is defined using HR, a value in the Department attribute.
 
 ## PARAMETERS
 
@@ -120,3 +120,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-organizationsegment)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
