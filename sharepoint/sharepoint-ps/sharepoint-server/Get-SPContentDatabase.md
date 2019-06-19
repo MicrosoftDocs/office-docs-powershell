@@ -32,6 +32,11 @@ Get-SPContentDatabase -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmen
 Get-SPContentDatabase -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-NoStatusFilter] [<CommonParameters>]
 ```
+### ContentDatabasesSinceLastProfileSync
+```
+Get-SPContentDatabase -DaysSinceLastProfileSync <Int32> [-NoStatusFilter]
+ [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```
 
 ### Unattached
 ```
@@ -63,6 +68,12 @@ PS C:\>Get-SPContentDatabase -Site http://siteUrl
 ```
 
 This example returns the content database that contains the site collection at http://siteUrl.
+
+### ----------------EXAMPLE 3------------ 
+```
+PS C:\>Get-SPContentDatabase -DaysSinceLastProfileSync 7
+```
+This example returns all content databases that were last synchronized with the User Profile service 7 or more days ago. Content databases that were last synchronized with the User Profile service less than 7 days ago would not be returned.
 
 ## PARAMETERS
 
@@ -203,6 +214,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DaysSinceLastProfileSync
+Specifies the minimum number of days since the User Profile service last synchronized the content database.
+
+```yaml
+Type: Int32
+Parameter Sets: ContentDatabasesSinceLastProfileSync
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 
 ### -NoStatusFilter
 Specifies whether a status filter is turned on.
