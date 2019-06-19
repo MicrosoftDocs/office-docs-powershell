@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2019
 title: Remove-SPApplicationCredentialKey
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPApplicationCredentialKey
@@ -26,7 +29,7 @@ Use the **Remove-SPApplicationCredentialKey** cmdlet to remove the application c
 
 ### EXAMPLE 
 ```powershell
-PS C:\> Remove-SPApplicationCredentialKey -Confirm:$false
+ Remove-SPApplicationCredentialKey -Confirm:$false
 ```
 This example removes the application credential key from the local server without prompting for user confirmation.
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchQueryKeyword
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchQueryKeyword
@@ -30,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site http://myserver/sites/engineering | Remove-SPEnterpriseSearchQueryKeyword -Site http://myserver/sites/engineering
+Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site https://myserver/sites/engineering | Remove-SPEnterpriseSearchQueryKeyword -Site https://myserver/sites/engineering
 ```
 
-This example removes the Engineering keyword from the site collection at http://myserver/sites/engineering.
+This example removes the Engineering keyword from the site collection at https://myserver/sites/engineering.
 
 
 ## PARAMETERS
@@ -59,7 +62,7 @@ Accept wildcard characters: False
 ### -Site
 Filters to delete keywords from the specified site collection of results.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

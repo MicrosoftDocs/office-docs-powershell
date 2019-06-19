@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Grant-SPObjectSecurity
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Grant-SPObjectSecurity
@@ -30,11 +33,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$principal = New-SPClaimsPrincipal "CONTOSO\JaneDoe" -IdentityType WindowsSamAccountName 
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-PS C:\>$security = Get-SPServiceApplicationSecurity $sa -Admin
-PS C:\>Grant-SPObjectSecurity $security $principal "Full Control"
-PS C:\>Set-SPServiceApplicationSecurity $sa -Admin $security
+$principal = New-SPClaimsPrincipal "CONTOSO\JaneDoe" -IdentityType WindowsSamAccountName 
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
+$security = Get-SPServiceApplicationSecurity $sa -Admin
+Grant-SPObjectSecurity $security $principal "Full Control"
+Set-SPServiceApplicationSecurity $sa -Admin $security
 ```
 
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on the User Profile Service Application and adds a new user principal to that ACL.

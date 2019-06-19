@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchCrawlDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchCrawlDatabase
@@ -32,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
 ```
 
 This example sets the failover database server for the crawl database, SearchApp_CrawlStore, to the \\\\failoverServer server.

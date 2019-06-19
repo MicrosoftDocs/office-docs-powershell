@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityPublicFilter
 ---
 
@@ -26,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityPublicFilter
+Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
+Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information for a security worker with the server name of "workerserver".

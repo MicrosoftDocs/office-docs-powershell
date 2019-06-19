@@ -1,9 +1,8 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
-
 # Connect-PnPOnline
 
 ## SYNOPSIS
@@ -61,7 +60,7 @@ Connect-PnPOnline -Scopes <String[]>
                   [-NoTelemetry [<SwitchParameter>]]
 ```
 
-### WebLogin 
+### WebLogin
 ```powershell
 Connect-PnPOnline -Url <String>
                   -UseWebLogin [<SwitchParameter>]
@@ -242,19 +241,6 @@ Connect-PnPOnline -Url <String>
 ## DESCRIPTION
 If no credentials have been specified, and the CurrentCredentials parameter has not been specified, you will be prompted for credentials.
 
-*For SharePoint Online*: If legacy authentication protocols have been disabled the connection attempt will fail with a message such as the following or when using the default options, which prompts for a username and password within the shell:
-
->Failed to connect to (site), Exception calling "ExecuteQuery" with "0" argument(s): "Cannot contact web site (site) or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'. The response headers are 'X-SharePointHealthScore=0, X-MSDAVEXT_Error=917656; Access+denied.+Before+opening+files+in+this+location%2c+you+must+first+browse+to+the+web+site+and+select+the+option+to+login+automatically.
-
-You can determine whether the SharePoint Online Tenant has disabled legacy authentication methods by running the following powershell snippet
-`
-(Get-PnPTenant).LegacyAuthProtocolsEnabled
-` 
-and if this returns False, then legacy authentication methods have been disabled on the tenant that you are connecting to.
-
-This will then instead mean that you need to ensure that you specify the appropriate options that support modern authentication, such as connections with the "-UseWebLogin" or "-PnPO365ManagementShell" parameters or certificate based authentication.
-
-
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
@@ -348,7 +334,7 @@ This will authenticate you using the provided access token
 Connect-PnPOnline -Scopes $arrayOfScopes
 ```
 
-Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
+Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
 
 ### ------------------EXAMPLE 14------------------
 ```powershell
@@ -382,7 +368,7 @@ Connect to an on-premises SharePoint environment using a high trust certificate 
 ## PARAMETERS
 
 ### -AADDomain
-The AAD where the O365 app is registred. Eg.: contoso.com, or contoso.onmicrosoft.com.
+The AAD where the O365 app is registered. Eg.: contoso.com, or contoso.onmicrosoft.com.
 
 Only applicable to: SharePoint Online
 
@@ -589,7 +575,7 @@ Accept pipeline input: False
 ### -HighTrustCertificate
 The certificate which has been registered in SharePoint as a Trusted Security Token issuer to use for the High Trust connection. Note that CNG key storage providers are not supported.
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: X509Certificate2
@@ -603,7 +589,7 @@ Accept pipeline input: False
 ### -HighTrustCertificateIssuerId
 The IssuerID under which the certificate has been registered in SharePoint as a Trusted Security Token issuer to use for the High Trust connection. Uses the ClientID if not specified.
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -617,7 +603,7 @@ Accept pipeline input: False
 ### -HighTrustCertificatePassword
 The password of the private key certificate (.pfx) to use for the High Trust connection
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -631,7 +617,7 @@ Accept pipeline input: False
 ### -HighTrustCertificatePath
 The path to the private key certificate (.pfx) to use for the High Trust connection
 
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
+Only applicable to: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String
@@ -934,4 +920,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

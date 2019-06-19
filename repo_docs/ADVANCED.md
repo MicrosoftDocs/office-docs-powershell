@@ -136,7 +136,7 @@ Since GitHub is a source control system and marks edits on a per-line basis it i
 Markdown will still show paragraphs with each sentence on its own line. 
 To break into another paragraph add a blank line in between the paragraphs. 
 Here is a great article that describes this writing system:
-http://rhodesmill.org/brandon/2012/one-sentence-per-line/ 
+https://rhodesmill.org/brandon/2012/one-sentence-per-line/ 
 
 Learn how to write good Markdown (which is a type of Markup language):
 https://guides.github.com/features/mastering-markdown/

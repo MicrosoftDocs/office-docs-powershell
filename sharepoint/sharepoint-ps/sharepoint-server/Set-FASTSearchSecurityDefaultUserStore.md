@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchSecurityDefaultUserStore
 ---
 
@@ -31,7 +34,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
+Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
 ```
 
 This example sets the default user store to "win".

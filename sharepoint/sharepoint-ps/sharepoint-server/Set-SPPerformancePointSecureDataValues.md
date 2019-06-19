@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPerformancePointSecureDataValues
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPPerformancePointSecureDataValues
@@ -28,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1--------------------
 ```
-PS C:\>Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (get-credential)
+Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (get-credential)
 ```
 
 This example shows how to set the unattended service account by prompting the user for the user name and password.
 
 ### --------------------EXAMPLE 2--------------------
 ```
-PS C:\>Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (New-Object System.Management.Automation.PSCredential "domain\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
+Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (New-Object System.Management.Automation.PSCredential "domain\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
 ```
 
 This example shows how to pass the user name and password as parameters to the cmdlet.

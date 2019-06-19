@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Set-CASMailboxPlan
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -11,36 +14,24 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-CASMailboxPlan cmdlet to modify Client Access services (CAS) mailbox plans in the cloud-based organization.
+Use the Set-CASMailboxPlan cmdlet to modify Client Access services (CAS) mailbox plans in cloud-based organizations.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter> [-ActiveSyncDebugLogging <$true | $false>]
- [-ActiveSyncEnabled <$true | $false>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-ECPEnabled <$true | $false>]
- [-EwsAllowEntourage <$true | $false>] [-EwsAllowList <MultiValuedProperty>]
- [-EwsAllowMacOutlook <$true | $false>] [-EwsAllowOutlook <$true | $false>]
- [-EwsApplicationAccessPolicy <EnforceAllowList | EnforceBlockList>] [-EwsBlockList <MultiValuedProperty>]
- [-EwsEnabled <$true | $false>] [-IgnoreDefaultScope] [-ImapEnabled <$true | $false>]
- [-ImapEnableExactRFC822Size <$true | $false>] [-ImapForceICalForCalendarRetrievalOption <$true | $false>]
- [-ImapMessagesRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
- [-ImapProtocolLoggingEnabled <$true | $false>] [-ImapSuppressReadReceipt <$true | $false>]
- [-ImapUseProtocolDefaults <$true | $false>] [-MAPIBlockOutlookNonCachedMode <$true | $false>]
- [-MAPIBlockOutlookRpcHttp <$true | $false>] [-MAPIBlockOutlookVersions <String>]
- [-MAPIEnabled <$true | $false>] [-OWAEnabled <$true | $false>] [-OWAforDevicesEnabled <$true | $false>]
- [-OwaMailboxPolicy <MailboxPolicyIdParameter>] [-PopEnabled <$true | $false>]
- [-PopEnableExactRFC822Size <$true | $false>] [-PopForceICalForCalendarRetrievalOption <$true | $false>]
- [-PopMessagesRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
- [-PopProtocolLoggingEnabled <$true | $false>] [-PopSuppressReadReceipt <$true | $false>]
- [-PopUseProtocolDefaults <$true | $false>] [-RemotePowerShellEnabled <$true | $false>]
+Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
+ [-ActiveSyncEnabled <$true | $false>]
+ [-Confirm]
+ [-ImapEnabled <$true | $false>]
+ [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
+ [-PopEnabled <$true | $false>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-CAS mailbox plans control client access settings for all mailboxes that have the plans assigned to them (for example, Exchange ActiveSync, POP, IMAP, and Outlook on the web settings).
+A CAS mailbox plan is tied to the corresponding mailbox plan that has the same name (and display name). Like mailbox plans, CAS mailbox plans correspond to license types, and are applied to a mailbox when you license the user. The availability of a CAS mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -60,13 +51,11 @@ The Identity parameter specifies the CAS mailbox plan that you want to modify. Y
 
 - Name
 
-- Display Name
-
 - Distinguished name (DN)
 
 - GUID
 
-Typically, the name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise).
+The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>, respectively).
 
 ```yaml
 Type: MailboxPlanIdParameter
@@ -80,45 +69,15 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -ActiveSyncDebugLogging
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ActiveSyncEnabled
-The ActiveSyncEnabled parameter specifies whether to enable or disable Exchange ActiveSync access to mailboxes that have the CAS mailbox plan applied to them. Valid values are:
+The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
-- $true: ActiveSync access to mailboxes is enabled.
+- $true: ActiveSync access to the mailbox is enabled. This is the default value.
 
-- $false: ActiveSync access to mailboxes is disabled.
+- $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActiveSyncMailboxPolicy
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -148,357 +107,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisplayName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ECPEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowEntourage
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowList
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowMacOutlook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowOutlook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsApplicationAccessPolicy
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnforceAllowList | EnforceBlockList
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsBlockList
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ImapEnabled
-The ImapEnabled parameter specifies whether to enable or disable IMAP4 access to mailboxes that have the CAS mailbox plan applied to them. Valid values are:
+The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
-- $true: IMAP4 access to mailboxes is enabled.
+- $true: IMAP4 access to the mailbox is enabled. This is default value for all CAS mailbox plans except ExchangeOnlineDeskless.
 
-- $false: IMAP4 access to mailboxes is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapEnableExactRFC822Size
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapForceICalForCalendarRetrievalOption
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapMessagesRetrievalMimeFormat
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapProtocolLoggingEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapSuppressReadReceipt
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapUseProtocolDefaults
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookNonCachedMode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookRpcHttp
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookVersions
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OWAEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OWAforDevicesEnabled
-This parameter is reserved for internal Microsoft use.
+- $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
 Type: $true | $false
@@ -513,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaMailboxPolicy
-The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy that you want applied to mailboxes that have the CAS mailbox plan applied to them. You can use any value that uniquely identifies the Outlook on the web mailbox policy. For example:
+The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -521,7 +135,9 @@ The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known 
 
 - GUID
 
-You can use the Get-OwaMailboxPolicy cmdlet to view the avaliable Outlook on the web mailbox policies.
+The default value is OwaMailboxPolicy-Default.
+
+You can use the Get-OwaMailboxPolicy cmdlet to view the available Outlook on the web mailbox policies.
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -536,116 +152,11 @@ Accept wildcard characters: False
 ```
 
 ### -PopEnabled
-The PopEnabled parameter specifies whether to enable or disable POP3 access to mailboxes that have the mailbox plan applied to them. Valid values are:
+The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
-- $true: POP3 access to mailboxes is enabled.
+- $true: POP3 access to the mailbox is enabled. This is the default value.
 
-- $false: POP3 access to mailboxes is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopEnableExactRFC822Size
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopForceICalForCalendarRetrievalOption
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopMessagesRetrievalMimeFormat
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopProtocolLoggingEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopSuppressReadReceipt
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopUseProtocolDefaults
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemotePowerShellEnabled
-This parameter is reserved for internal Microsoft use.
+- $false: POP3 access to the mailbox is disabled.
 
 ```yaml
 Type: $true | $false
@@ -665,12 +176,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

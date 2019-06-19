@@ -1,15 +1,18 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-SiteMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Update-SiteMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
 Use the Update-SiteMailbox cmdlet to trigger a Microsoft SharePoint synchronization. This command synchronizes document content membership and permissions into Microsoft Exchange. You may need to perform this action when troubleshooting document or membership synchronization issues.
 
@@ -18,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-FullSync]
+Update-SiteMailbox [-Identity] <RecipientIdParameter>
+ [-BypassOwnerCheck]
+ [-Confirm]
+ [-FullSync]
+ [-Organization <OrganizationIdParameter>]
  [-Server <String>]
- [-Target <All | Document | Membership | Maintenance>] [-WhatIf] [<CommonParameters>]
+ [-Target <All | Document | Membership | Maintenance>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,13 +55,17 @@ This example updates the site mailbox WinterHoliday@tailspintoys.com and perform
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. This parameter accepts the following values:
-
-- DisplayName
-
-- SMTP address
+The Identity parameter specifies the site mailbox that you want to update. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
 
 - GUID
 
@@ -61,7 +73,7 @@ The Identity parameter specifies the identity of the site mailbox. This paramete
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -76,7 +88,7 @@ The BypassOwnerCheck parameter specifies that the user running the command in th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +107,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +122,23 @@ The FullSync parameter specifies full sync is expensive and will have a performa
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,8 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available only in on-premises Exchange.
-
 The Server parameter specifies the fully qualified domain name (FQDN) or the Microsoft SharePoint server on which the site mailbox is located.
 
 ```yaml
@@ -150,7 +176,7 @@ If you don't specify this parameter when you run the cmdlet, this parameter valu
 Type: All | Document | Membership | Maintenance
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +191,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

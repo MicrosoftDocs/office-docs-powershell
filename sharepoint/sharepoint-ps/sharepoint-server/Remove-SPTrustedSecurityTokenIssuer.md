@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPTrustedSecurityTokenIssuer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPTrustedSecurityTokenIssuer
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPTrustedSecurityTokenService -Identity FarmA
+Remove-SPTrustedSecurityTokenService -Identity FarmA
 ```
 
 This example removes the trusted security token issuer object named FarmA from the farm.

@@ -1,56 +1,45 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Use the `Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
+Assigns a online voice mail policy at the per-user scope. Online voicemail policies manage usages for Voicemail service.
 
 ## SYNTAX
+
 ```
-Grant-CsOnlineVoicemailPolicy [-PassThru] [-Confirm] [[-PolicyName] <String>] [[-Identity] <UserIdParameter>]
- [-Tenant <Guid>] [-DomainController <Fqdn>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsOnlineVoicemailPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail policies are used to manage Voicemail-related features such as transcription. 
-
-You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
-
-Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
-
-For example: 
-
-Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
+This cmdlet assigns an existing user-specific online voicemail policy to a user. Online voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled"
+Grant-CsOnlineVoicemailPolicy -Identity "sip:user@contoso.com" -PolicyName TranscriptionDisabled
 ```
 
-This example assigns the voicemail policy with the Identity TranscriptionDisabled to the user with the display name Ken Myer.
-
-### -------------------------- Example 2 --------------------------
-```
-Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionProfanityMaskingEnabled -Identity "Ken Myer"
-```
-
-This example assigns the voicemail policy with the Identity TranscriptionProfanityMaskingEnabled to the user with the display name Ken Myer.
+The command shown in Example 1 assigns the per-user online voicemail policy TranscriptionDisabled to a single user with SIP URI sip:user@contoso.com.
 
 
 ## PARAMETERS
 
 ### -Identity
-A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Global policy is modified.
+The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
-Type: UserIdParameter
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -63,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name (Identity) of the voicemail policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName)
+A unique identifier(name) of the policy.
 
 ```yaml
 Type: String
@@ -79,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use
+Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy. If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
 
 ```yaml
 Type: Fqdn
@@ -111,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the results of the command. By default, this cmdlet does not generate any output.
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsOnlineVoicemailPolicy cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
@@ -127,15 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -151,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -171,7 +154,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -196,7 +179,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
+[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
 
-[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
+[Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
 
+[New-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+
+[Remove-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)

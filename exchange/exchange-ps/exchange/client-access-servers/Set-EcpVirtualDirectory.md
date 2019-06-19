@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EcpVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -20,14 +23,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-BasicAuthentication <$true | $false>]
- [-Confirm] [-DigestAuthentication <$true | $false>] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
+Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-AdfsAuthentication <$true | $false>]
+ [-AdminEnabled <$true | $false>]
+ [-BasicAuthentication <$true | $false>]
+ [-Confirm]
+ [-DigestAuthentication <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalAuthenticationMethods <MultiValuedProperty>] [-ExternalUrl <Uri>]
- [-FormsAuthentication <$true | $false>] [-GzipLevel <Off | Low | High | Error>] [-InternalUrl <Uri>]
- [-LiveIdAuthentication <$true | $false>] [-WhatIf] [-WindowsAuthentication <$true | $false>]
- [-AdfsAuthentication <$true | $false>] [-AdminEnabled <$true | $false>] [-OwaOptionsEnabled <$true | $false>]
+ [-ExternalAuthenticationMethods <MultiValuedProperty>]
+ [-ExternalUrl <Uri>]
+ [-FormsAuthentication <$true | $false>]
+ [-GzipLevel <Off | Low | High | Error>]
+ [-InternalUrl <Uri>]
+ [-LiveIdAuthentication <$true | $false>]
+ [-OwaOptionsEnabled <$true | $false>]
+ [-WhatIf]
+ [-WindowsAuthentication <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -48,14 +62,12 @@ This example disables Basic authentication on the default ECP virtual directory 
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -AdminEnabled $false
 ```
 
-This example turns off the Internet access to the EAC on server named SErver01.
+This example turns off the Internet access to the EAC on server named Server01.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the ECP virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -65,7 +77,7 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
-To manage the first ECP virtual directory created in an Exchange organization, you need touse this cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
+To manage the first ECP virtual directory created in an Exchange organization, you need to use this cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -76,6 +88,38 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AdfsAuthentication
+The AdfsAuthentication parameter specifies that the ECP virtual directory allows users to authenticate through Active Directory Federation Services (AD FS) authentication. This parameter accepts $true or $false. The default value is $false.
+
+The ADFS authentication settings for Set-OwaVirtualDirectory and Set-EcpVirtualDirectory are related. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $true before you can set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $true. Likewise, you need to set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $false before you can set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $false.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdminEnabled
+The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see Turn off access to the Exchange admin center (https://technet.microsoft.com/library/jj218639.aspx). This parameter accepts $true or $false.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -322,6 +366,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OwaOptionsEnabled
+The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -349,53 +408,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AdfsAuthentication
-The AdfsAuthentication parameter specifies that the ECP virtual directory allows users to authenticate through Active Directory Federation Services (AD FS) authentication. This parameter accepts $true or $false. The default value is $false.
-
-The ADFS authentication settings for Set-OwaVirtualDirectory and Set-EcpVirtualDirectory are related. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $true before you can set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $true. Likewise, you need to set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $false before you can set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AdminEnabled
-The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see Turn off access to the Exchange admin center (https://technet.microsoft.com/library/jj218639.aspx). This parameter accepts $true or $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OwaOptionsEnabled
-The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

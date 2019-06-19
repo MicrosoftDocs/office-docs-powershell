@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # New-PnPWeb
@@ -106,7 +106,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The URL of the new web
+The URL of the new web relative to the site collection
 
 ```yaml
 Type: String
@@ -147,4 +147,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

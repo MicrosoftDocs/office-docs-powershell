@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String> [-Comments <String>] [-Confirm]
- [-Enabled <$true | $false>] [-ExceptIfRecipientDomainIs <Word[]>] [-ExceptIfSentTo <RecipientIdParameter[]>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter[]>] [-Priority <Int32>] [-RecipientDomainIs <Word[]>]
- [-SentTo <RecipientIdParameter[]>] [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
+ [-Comments <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Priority <Int32>] [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +56,21 @@ This example creates an antiphishing rule named Research Department Phishing Rul
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AntiPhishPolicy
 The AntiPhishPolicy parameter specifies the antiphishing policy that's associated with the antiphishing rule. The rule defines the conditions, and the policy defines the actions.
 
@@ -64,21 +89,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -119,11 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The rule is enabled. This is the default value.
 
-- $false: The rule or policy is disabled.
+- $false: The rule is disabled.
+
+In the properties of the rule, the value of this parameter is visible in the State property.
 
 ```yaml
 Type: $true | $false
@@ -157,9 +169,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -184,9 +198,11 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -254,9 +270,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -277,13 +295,15 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -291,7 +311,6 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
-Note:  
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.  
 
 ```yaml
@@ -327,12 +346,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

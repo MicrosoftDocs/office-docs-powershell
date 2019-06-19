@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPMarketplaceWebServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPMarketplaceWebServiceApplicationProxy
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPMarketplaceWebServiceApplicationProxy -Name ApplicationIdentityData -ServiceEndpointUri http://server:7800/ApplicationIdentityData.svc -DefaultProxyGroup
+New-SPMarketplaceWebServiceApplicationProxy -Name ApplicationIdentityData -ServiceEndpointUri http://server:7800/ApplicationIdentityData.svc -DefaultProxyGroup
 ```
 
 This example adds a proxy named ApplicationIdentityData to the app identity web service.

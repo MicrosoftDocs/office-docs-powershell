@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPBusinessDataCatalogEntityNotificationWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPBusinessDataCatalogEntityNotificationWeb
@@ -28,10 +31,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set- SPBusinessDataCatalogEntityNotificationWeb -Web "http://contoso"
+Set-SPBusinessDataCatalogEntityNotificationWeb -Web "https://contoso"
 ```
 
-This example sets http://contoso as the entity notification site for the service context of the site at http://contoso.
+This example sets https://contoso as the entity notification site for the service context of the site at https://contoso.
 
 
 ## PARAMETERS

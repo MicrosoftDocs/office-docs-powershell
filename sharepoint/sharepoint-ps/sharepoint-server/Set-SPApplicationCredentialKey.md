@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2019
 title: Set-SPApplicationCredentialKey
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPApplicationCredentialKey
@@ -28,7 +31,7 @@ The application credential key must be identical on each server in the farm wher
 
 ### EXAMPLE 
 ```powershell
-PS C:\> $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
+ $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
 Set-SPApplicationCredentialKey -Password $key
 ```
 

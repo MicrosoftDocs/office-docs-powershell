@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ServerComponentState
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,8 +22,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String>
- -State <Inactive | Active | Draining> [-Confirm] [-DomainController <Fqdn>] [-LocalOnly] [-RemoteOnly]
- [-TimeoutInSeconds <Int32>] [-WhatIf] [<CommonParameters>]
+ -State <Inactive | Active | Draining>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LocalOnly]
+ [-RemoteOnly]
+ [-TimeoutInSeconds <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the server you want to configure.
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
@@ -150,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalOnly
-The LocalOnlyswitch specifies that the changes are written to the registry of the Exchange server only and not to Active Directory. You don't need to specify a value with this switch.
+The LocalOnly switch specifies that the changes are written to the registry of the Exchange server only and not to Active Directory. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteOnly
-The RemoteOnlyswitch specifies that the changes are written to Active Directory only and not to the registry of the Exchange server. You don't need to specify a value with this switch.
+The RemoteOnly switch specifies that the changes are written to Active Directory only and not to the registry of the Exchange server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

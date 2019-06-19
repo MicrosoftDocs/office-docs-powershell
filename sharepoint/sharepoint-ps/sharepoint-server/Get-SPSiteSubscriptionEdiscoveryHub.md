@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteSubscriptionEdiscoveryHub
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteSubscriptionEdiscoveryHub
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------- 
 ```
-PS C:\>Get-SPSiteSubscriptionEdiscoveryHub -Identity http://contoso.com
+Get-SPSiteSubscriptionEdiscoveryHub -Identity https://contoso.com
 ```
 
 This example displays the eDiscovery hub for the specified site collection.
@@ -35,7 +38,7 @@ This example displays the eDiscovery hub for the specified site collection.
 
 ### -Identity
 Specifies the URL of the site collections to the eDiscovery hub.
-Can pipe the result from the Get-SPSiteSubcription cmdlet.
+Can pipe the result from the Get-SPSiteSubscription cmdlet.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAlternateURL
@@ -45,14 +48,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPAlternateURL -WebApplication http://sitename
+Get-SPAlternateURL -WebApplication https://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPAlternateURL -ResourceName "MyResource"
+Get-SPAlternateURL -ResourceName "MyResource"
 ```
 
 This example displays all the alternate URLs for a given resource.
@@ -62,7 +65,7 @@ This example displays all the alternate URLs for a given resource.
 ### -Identity
 Specifies the URL or GUID of the alternate URL to get.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, or a valid URL, in the form http://server_name.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, or a valid URL, in the form https://server_name.
 
 ```yaml
 Type: SPAlternateUrlPipeBind

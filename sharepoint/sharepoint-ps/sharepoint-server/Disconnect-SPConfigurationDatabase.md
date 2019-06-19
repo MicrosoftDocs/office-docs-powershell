@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disconnect-SPConfigurationDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disconnect-SPConfigurationDatabase
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Disconnect-SPConfigurationDatabase -Confirm:$false
+Disconnect-SPConfigurationDatabase -Confirm:$false
 ```
 
 This example removes the local server computer from a farm without prompting for user confirmation.

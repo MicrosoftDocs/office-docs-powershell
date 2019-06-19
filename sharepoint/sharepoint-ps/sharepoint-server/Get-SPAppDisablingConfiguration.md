@@ -3,16 +3,16 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppDisablingConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppDisablingConfiguration
 
 ## SYNOPSIS
 
-Applies to:
-
-
-
+Returns the disable sync list state for an app.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Get-SPAppDisablingConfiguration [-AssignmentCollection <SPAssignmentCollection>]
 
 ## DESCRIPTION
 
-Use the Get-SPAppDisablingConfiguration cmdlet to return the disable sync list state for an app .
+Use the Get-SPAppDisablingConfiguration cmdlet to return the disable sync list state for an app.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------- 
 ```
-PS C:\>Get-SPAppDisablingConfiguration
+Get-SPAppDisablingConfiguration
 ```
 
 This example returns disable list sync state of a pp.

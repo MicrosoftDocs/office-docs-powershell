@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPManagedPath
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPManagedPath
@@ -44,14 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPManagedPath -WebApplication http://sitename
+Get-SPManagedPath -WebApplication https://sitename
 ```
 
 This example returns all managed paths for the specified Web application.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPManagedPath -identity "Sites" -HostHeader
+Get-SPManagedPath -identity "Sites" -HostHeader
 ```
 
 This example gets the Sites managed path from the host-named site collections-scoped managed paths.
@@ -61,7 +64,7 @@ This example gets the Sites managed path from the host-named site collections-sc
 ### -Identity
 Specifies the URL or GUID of the managed path to return.
 
-The type must be a valid URL, in the http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPPrefixPipeBind
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL or GUID of the Web application from which to get the managed path.
 
-The type must be a valid URL, in the form http://server_name, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form https://server_name, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPWebApplicationPipeBind

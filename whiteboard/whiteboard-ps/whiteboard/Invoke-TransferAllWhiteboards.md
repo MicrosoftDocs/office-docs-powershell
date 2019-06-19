@@ -3,8 +3,11 @@ external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftWhiteboard
 applicable: Microsoft Whiteboard
 title: Set-WhiteboardOwner
-online version: 
+online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Invoke-TransferAllWhiteboards
@@ -52,7 +55,7 @@ The Azure AD bearer token corresponding to the specified credentials. If unspeci
 Type:                        Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult
 Required:                    false
 Position:                    1
-Default value:               None               
+Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
@@ -94,7 +97,7 @@ Optional. Always prompt for auth. Use to ignore cached credentials.
 Type:                        SwitchParameter
 Required:                    false
 Position:                    named
-Default value:               false       
+Default value:               false
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard

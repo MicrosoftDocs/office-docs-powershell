@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWebApplication
@@ -33,14 +36,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1---------------------- 
 ```
-C:\PS>$w = Get-SPWebApplication http://sitename
+C:\PS>$w = Get-SPWebApplication https://sitename
 ```
 
-This example gets the Web application for http://sitename and stores it in a variable.
+This example gets the Web application for https://sitename and stores it in a variable.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
+Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
 ```
 
 This example displays all public properties on the SharePoint Central Administration Web application in list format.
@@ -50,7 +53,7 @@ This example displays all public properties on the SharePoint Central Administra
 ### -Identity
 Specifies the name, URL, or GUID of the Web application.
 
-The type must be a valid URL, in the form http://server_name; a GUID, in the form 1234-5678-9876-0987; or a valid name, in the form SPWebApplication - 1212.
+The type must be a valid URL, in the form https://server_name; a GUID, in the form 1234-5678-9876-0987; or a valid name, in the form SPWebApplication - 1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind

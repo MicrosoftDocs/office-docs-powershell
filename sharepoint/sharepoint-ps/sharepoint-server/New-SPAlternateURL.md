@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAlternateURL
@@ -51,14 +54,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>#create the public URL
-PS C:\>New-SPAlternateURL https://www.contoso.com -Zone "Internet"
+#create the public URL
+New-SPAlternateURL https://www.contoso.com -Zone "Internet"
 
-PS C:\>#create the internal URL
-PS C:\>New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
+#create the internal URL
+New-SPAlternateURL https://sharepoint.contoso.com -Zone "Internet" -internal
 ```
 
-This example translates incoming requests for https://www.contoso.com into http://sharepoint.contoso.com (on the Internet zone).
+This example translates incoming requests for https://www.contoso.com into https://sharepoint.contoso.com (on the Internet zone).
 
 When a reverse proxy is being set up to handle public URL SSL termination, alternate access mappings must be configured to handle the URL translation.
 
@@ -67,7 +70,7 @@ When a reverse proxy is being set up to handle public URL SSL termination, alter
 ### -Url
 Specifies the public URL that users access to sign in to the Web application.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String
@@ -85,7 +88,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the name, URL, or GUID of the Web application for which to create the mapping.
 
-The type must be a valid name, URL, in the form WebApplication-1212, http://server_name, or GUID, in the form 1234-5678-9876-0987.
+The type must be a valid name, URL, in the form WebApplication-1212, https://server_name, or GUID, in the form 1234-5678-9876-0987.
 
 ```yaml
 Type: SPWebApplicationPipeBind

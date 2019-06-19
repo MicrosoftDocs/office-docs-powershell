@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPStateServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPStateServiceApplicationProxy
@@ -28,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------------
 ```
-PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
-PS C:\>$sa = New-SPStateServiceApplication -Name 'State Service' -Database $db
-PS C:\>New-SPStateServiceApplicationProxy -Name 'State Service Proxy' -ServiceApplication $sa -DefaultProxyGroup
+$db = New-SPStateServiceDatabase -Name 'State Service'
+$sa = New-SPStateServiceApplication -Name 'State Service' -Database $db
+New-SPStateServiceApplicationProxy -Name 'State Service Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a State Service database and Service Application. It then associates a new State Service Proxy with the State Service application and adds it to the Default proxy group.

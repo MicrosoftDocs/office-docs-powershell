@@ -1,15 +1,18 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-SiteMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-SiteMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
 Use the Get-SiteMailbox cmdlet to view information about site mailboxes. This cmdlet is primarily used by Microsoft SharePoint and Exchange to display information to users in the user interface. However, you may find it helpful for discovering information such as the site mailbox's owners, members, and lifecycle status.
 
@@ -18,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-SiteMailbox [[-Identity] <RecipientIdParameter>] [-Anr <String>] [-BypassOwnerCheck] [-DeletedSiteMailbox]
- [-DomainController <Fqdn>] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-SiteMailbox [[-Identity] <RecipientIdParameter>]
+ [-Anr <String>]
+ [-BypassOwnerCheck]
+ [-DeletedSiteMailbox]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +77,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +94,7 @@ If you run the command without this parameter, and you aren't a member or owner 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -95,9 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedSiteMailbox
-This parameter is available only in on-premises Exchange.
-
-The DeletedSiteMailboxswitch returns site mailboxes that have been marked for pending deletion. You don't need to specify a value with this switch.
+The DeletedSiteMailbox switch returns site mailboxes that have been marked for pending deletion. You don't need to specify a value with this switch.
 
 When the lifecycle application in SharePoint closes a site mailbox, the site mailbox is retained for the period specified in the lifecycle policy in the closed state. The mailbox can then be reactivated by an end user or by a SharePoint administrator. After the retention period, the Exchange site mailbox that's housed in the mailbox database will have its name prepended with MDEL: to indicate that it has been marked for deletion. To free storage space and the alias, use the Remove-Mailbox cmdlet to manually remove these site mailboxes from the mailbox database.
 
@@ -114,8 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -131,29 +135,25 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. You can use one of the following values:
+The Identity parameter specifies the identity of the site mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
-- Domain\\Account
+- Email address
 
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
+- GUID
 
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -170,7 +170,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +185,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

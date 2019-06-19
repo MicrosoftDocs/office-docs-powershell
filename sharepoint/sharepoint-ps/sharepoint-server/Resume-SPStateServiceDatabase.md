@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Resume-SPStateServiceDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Resume-SPStateServiceDatabase
@@ -28,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------
 ```
-PS C:\>$db = Get-SPStateServiceDatabase -Identity StateServceDbName
-PS C:\>Resume-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase -Identity StateServceDbName
+Resume-SPStateServiceDatabase -Identity $db
 ```
 
 This example resumes a paused state service database.

@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Add-SPMTTask
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Add-SPMTTask
@@ -43,7 +46,7 @@ Json sample for File Share migration:
 
 Json sample for SharePoint migration(lists only): 
 {
-   "SourcePath":"http://YourOnPremSite",
+   "SourcePath":"https://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
    "Items":{
       "Lists":[
@@ -57,7 +60,7 @@ Json sample for SharePoint migration(lists only):
 
 Json sample for SharePoint migration(lists and subsites):
 {  
-   "SourcePath":"http://YourOnPremSite",
+   "SourcePath":"https://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
    "Items":{  
       "Lists":[  
@@ -87,9 +90,49 @@ Json sample for SharePoint migration(lists and subsites):
 
 Json sample for SharePoint migration(whole site):
 {
-   "SourcePath":"http://YourOnPremSite/subsite2",
+   "SourcePath":"https://YourOnPremSite/subsite2",
    "TargetPath":"https://YourTargetSite/targetSubSite2"
 }
+Json sample with task level setting:
+{ 
+  "Tasks": [ 
+    { 
+      "SourcePath": "https://YourOnPremServerSiteURL", 
+      "TargetPath": "https://YourTargetSiteURL", 
+      "Items": { 
+        "Lists": [ 
+          { 
+            "SourceList": "SourceListName", 
+            "TargetList": "TargetListName" 
+          } 
+        ], 
+        "SubSites": [] 
+      }, 
+      "Settings": { 
+        "MigrateFileVersionHistory": true, 
+        "KeepFileVersions": 100, 
+        "MigrateHiddenItems": false, 
+        "MigrateItemsCreatedAfter": "yyyy-MM-dd", 
+        "MigrateItemsModifiedAfter": "yyyy-MM-dd", 
+        "SkipFilesWithExtensions": "txt:mp3:OtherFileExtentionsYouwantSkip", 
+        "EnableAzureDirectoryLookup": false, 
+        "PreservePermission": true, 
+        "UseCustomAzureStorage": false, 
+        "CustomAzureStorageAccount": null, 
+        "CustomAzureAccessKey": null, 
+        "CustomAzureDeletionAfterMig": false, 
+        "UserMappingCSVFile": null, 
+        "SkipListWithAudienceEnabled": true, 
+        "EnableIncremental": false, 
+        "MigrateOneNoteNotebook": true, 
+        "MigrateAllWebStructures": false, 
+        "FilterOutPathSpecialCharacters": false 
+      } 
+    } 
+  ] 
+}
+
+Note: Datetime format is "yyyy-MM-dd"
 ```
 ## EXAMPLES
 
@@ -97,7 +140,7 @@ Json sample for SharePoint migration(whole site):
 ```
 #Define SharePoint 2013 data source#
 
-$Global:SourceSiteUrl = "http://YourOnPremSite/"
+$Global:SourceSiteUrl = "https://YourOnPremSite/"
 $Global:OnPremUserName = "Yourcomputer\administrator"
 $Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force 
 $Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
@@ -162,7 +205,7 @@ Three migration tasks are defined in the file of spmt.json.
 {
    "Tasks":[
       {
-         "SourcePath":"http://On-prem/sites/test",
+         "SourcePath":"https://On-prem/sites/test",
          "TargetPath":"https://YourSPO.sharepoint.com",
          "Items":{
             "Lists":[
@@ -177,7 +220,7 @@ Three migration tasks are defined in the file of spmt.json.
          }
       },
       {
-         "SourcePath":"http://On-prem/sites/test",
+         "SourcePath":"https://On-prem/sites/test",
          "TargetPath":"https://YourSPO.sharepoint.com",
          "Items":{
             "Lists":[
@@ -192,7 +235,7 @@ Three migration tasks are defined in the file of spmt.json.
          }
       },
       {
-         "SourcePath":"http://On-prem/sites/test",
+         "SourcePath":"https://On-prem/sites/test",
          "TargetPath":"https://YourSPO.sharepoint.com",
          "Items":{
             "Lists":[

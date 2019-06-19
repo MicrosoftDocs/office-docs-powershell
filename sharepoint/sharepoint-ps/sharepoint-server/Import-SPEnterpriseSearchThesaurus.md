@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPEnterpriseSearchThesaurus
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPEnterpriseSearchThesaurus
@@ -13,7 +16,7 @@ Deploys the dictionary to the thesaurus component in the query processing flow.
 ## SYNTAX
 
 ```
-PS C:\>Import-SPEnterpriseSearchThesaurus -FileName <String> -SearchApplication <SearchServiceApplicationPipeBind>
+Import-SPEnterpriseSearchThesaurus -FileName <String> -SearchApplication <SearchServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

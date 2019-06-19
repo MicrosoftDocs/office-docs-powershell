@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTrustedIdentityTokenIssuer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTrustedIdentityTokenIssuer
@@ -41,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------------EXAMPLE 1----------------------
 ```
-PS C:\>Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
+Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
 ```
 
 This example sets the identity provider to LiveIDSTS.
@@ -50,7 +53,7 @@ This example sets the identity provider to LiveIDSTS.
 ### -------------------------EXAMPLE 2----------------------
 ```
 C:\PS>$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
-New-SPWebApplication http://contoso.com -IdentityProvider $ip
+New-SPWebApplication https://contoso.com -IdentityProvider $ip
 ```
 
 This example sets the identity provider using the .ASPNetMembership and Role parameters.
@@ -206,7 +209,7 @@ Accept wildcard characters: False
 ### -SignInUrl
 Specifies the sign-in URLs for this trusted identity provider STS.
 
-The type must be a valid URL, in the form http://int.live.com/.
+The type must be a valid URL, in the form https://int.live.com/.
 
 ```yaml
 Type: String

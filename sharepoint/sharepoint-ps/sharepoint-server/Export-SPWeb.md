@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPWeb
@@ -32,10 +35,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------. 
 ```
-PS C:\>Export-SPWeb http://site -Path "site export.cmp"
+Export-SPWeb https://site -Path "site export.cmp"
 ```
 
-This example exports the site at http://site/ to a file called site export.cmp in the current directory.
+This example exports the site at https://site/ to a file called site export.cmp in the current directory.
 
 ## PARAMETERS
 
@@ -252,7 +255,7 @@ Accept wildcard characters: False
 ### -ItemUrl
 Specifies the URL of the Web application, GUID, or object to be exported.
 
-The type must be a valid URL; for example, http://server_name.
+The type must be a valid URL; for example, https://server_name.
 
 ```yaml
 Type: String

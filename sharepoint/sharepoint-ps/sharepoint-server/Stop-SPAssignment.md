@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPAssignment
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Stop-SPAssignment
@@ -30,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Start-SPAssignment -global
-PS C:\>$w = Get-SPWeb http://MyWeb
-PS C:\>$w | Set-SPWeb -title "Accounting"
-PS C:\>Stop-SPAssignment -global
+Start-SPAssignment -global
+$w = Get-SPWeb https://MyWeb
+$w | Set-SPWeb -title "Accounting"
+Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.

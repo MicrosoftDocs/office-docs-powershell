@@ -1,115 +1,19 @@
 ---
-Module Name: SharePoint PNP PowerShell
+Module Name: SharePoint PnP PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-pnp
 Locale: en-US
 ---
 
-# SharePoint PNP PowerShell
+# SharePoint PnP PowerShell
+
 ## Description
-The following cmdlet references are for the SharePoint PNP module.
+
+The following cmdlet references are for SharePoint PnP.
 
 ## sharepoint-pnp Cmdlets
-### [Add-PnPApp](Add-PnPApp.md)
-{{Manually Enter Add-PnPApp Description Here}}
 
-### [Add-PnPClientSidePage](Add-PnPClientSidePage.md)
-{{Manually Enter Add-PnPClientSidePage Description Here}}
-
-### [Add-PnPClientSidePageSection](Add-PnPClientSidePageSection.md)
-{{Manually Enter Add-PnPClientSidePageSection Description Here}}
-
-### [Add-PnPClientSideText](Add-PnPClientSideText.md)
-{{Manually Enter Add-PnPClientSideText Description Here}}
-
-### [Add-PnPClientSideWebPart](Add-PnPClientSideWebPart.md)
-{{Manually Enter Add-PnPClientSideWebPart Description Here}}
-
-### [Add-PnPContentType](Add-PnPContentType.md)
-{{Manually Enter Add-PnPContentType Description Here}}
-
-### [Add-PnPContentTypeToDocumentSet](Add-PnPContentTypeToDocumentSet.md)
-{{Manually Enter Add-PnPContentTypeToDocumentSet Description Here}}
-
-### [Add-PnPContentTypeToList](Add-PnPContentTypeToList.md)
-{{Manually Enter Add-PnPContentTypeToList Description Here}}
-
-### [Add-PnPCustomAction](Add-PnPCustomAction.md)
-{{Manually Enter Add-PnPCustomAction Description Here}}
-
-### [Add-PnPDataRowsToProvisioningTemplate](Add-PnPDataRowsToProvisioningTemplate.md)
-{{Manually Enter Add-PnPDataRowsToProvisioningTemplate Description Here}}
-
-### [Add-PnPDocumentSet](Add-PnPDocumentSet.md)
-{{Manually Enter Add-PnPDocumentSet Description Here}}
-
-### [Add-PnPEventReceiver](Add-PnPEventReceiver.md)
-{{Manually Enter Add-PnPEventReceiver Description Here}}
-
-### [Add-PnPField](Add-PnPField.md)
-{{Manually Enter Add-PnPField Description Here}}
-
-### [Add-PnPFieldFromXml](Add-PnPFieldFromXml.md)
-{{Manually Enter Add-PnPFieldFromXml Description Here}}
-
-### [Add-PnPFieldToContentType](Add-PnPFieldToContentType.md)
-{{Manually Enter Add-PnPFieldToContentType Description Here}}
-
-### [Add-PnPFile](Add-PnPFile.md)
-{{Manually Enter Add-PnPFile Description Here}}
-
-### [Add-PnPFileToProvisioningTemplate](Add-PnPFileToProvisioningTemplate.md)
-{{Manually Enter Add-PnPFileToProvisioningTemplate Description Here}}
-
-### [Add-PnPFolder](Add-PnPFolder.md)
-{{Manually Enter Add-PnPFolder Description Here}}
-
-### [Add-PnPHtmlPublishingPageLayout](Add-PnPHtmlPublishingPageLayout.md)
-{{Manually Enter Add-PnPHtmlPublishingPageLayout Description Here}}
-
-### [Add-PnPHubSiteAssociation](Add-PnPHubSiteAssociation.md)
-{{Manually Enter Add-PnPHubSiteAssociation Description Here}}
-
-### [Add-PnPIndexedProperty](Add-PnPIndexedProperty.md)
-{{Manually Enter Add-PnPIndexedProperty Description Here}}
-
-### [Add-PnPJavaScriptBlock](Add-PnPJavaScriptBlock.md)
-{{Manually Enter Add-PnPJavaScriptBlock Description Here}}
-
-### [Add-PnPJavaScriptLink](Add-PnPJavaScriptLink.md)
-{{Manually Enter Add-PnPJavaScriptLink Description Here}}
-
-### [Add-PnPListFoldersToProvisioningTemplate](Add-PnPListFoldersToProvisioningTemplate.md)
-{{Manually Enter Add-PnPListFoldersToProvisioningTemplate Description Here}}
-
-### [Add-PnPListItem](Add-PnPListItem.md)
-{{Manually Enter Add-PnPListItem Description Here}}
-
-### [Add-PnPMasterPage](Add-PnPMasterPage.md)
-{{Manually Enter Add-PnPMasterPage Description Here}}
-
-### [Add-PnPNavigationNode](Add-PnPNavigationNode.md)
-{{Manually Enter Add-PnPNavigationNode Description Here}}
-
-### [Add-PnPOffice365GroupToSite](Add-PnPOffice365GroupToSite.md)
-{{Manually Enter Add-PnPOffice365GroupToSite Description Here}}
-
-### [Add-PnPPublishingImageRendition](Add-PnPPublishingImageRendition.md)
-{{Manually Enter Add-PnPPublishingImageRendition Description Here}}
-
-### [Add-PnPPublishingPage](Add-PnPPublishingPage.md)
-{{Manually Enter Add-PnPPublishingPage Description Here}}
-
-### [Add-PnPPublishingPageLayout](Add-PnPPublishingPageLayout.md)
-{{Manually Enter Add-PnPPublishingPageLayout Description Here}}
-
-### [Add-PnPRoleDefinition](Add-PnPRoleDefinition.md)
-{{Manually Enter Add-PnPRoleDefinition Description Here}}
-
-### [Add-PnPSiteClassification](Add-PnPSiteClassification.md)
-{{Manually Enter Add-PnPSiteClassification Description Here}}
-
-### [Add-PnPSiteCollectionAdmin](Add-PnPSiteCollectionAdmin.md)
+## [Add-PnPSiteCollectionAdmin](Add-PnPSiteCollectionAdmin.md)
 {{Manually Enter Add-PnPSiteCollectionAdmin Description Here}}
 
 ### [Add-PnPSiteCollectionAppCatalog](Add-PnPSiteCollectionAppCatalog.md)
@@ -117,6 +21,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Add-PnPSiteDesign](Add-PnPSiteDesign.md)
 {{Manually Enter Add-PnPSiteDesign Description Here}}
+
+### [Add-PnPSiteDesignTask](Add-PnPSiteDesignTask.md)
+{{Manually Enter Add-PnPSiteDesignTask Description Here}}
 
 ### [Add-PnPSiteScript](Add-PnPSiteScript.md)
 {{Manually Enter Add-PnPSiteScript Description Here}}
@@ -129,6 +36,15 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Add-PnPTenantCdnOrigin](Add-PnPTenantCdnOrigin.md)
 {{Manually Enter Add-PnPTenantCdnOrigin Description Here}}
+
+### [Add-PnPTenantSequence](Add-PnPTenantSequence.md)
+{{Manually Enter Add-PnPTenantSequence Description Here}}
+
+### [Add-PnPTenantSequenceSite](Add-PnPTenantSequenceSite.md)
+{{Manually Enter Add-PnPTenantSequenceSite Description Here}}
+
+### [Add-PnPTenantSequenceSubSite](Add-PnPTenantSequenceSubSite.md)
+{{Manually Enter Add-PnPTenantSequenceSubSite Description Here}}
 
 ### [Add-PnPTenantTheme](Add-PnPTenantTheme.md)
 {{Manually Enter Add-PnPTenantTheme Description Here}}
@@ -160,8 +76,14 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Apply-PnPProvisioningTemplate](Apply-PnPProvisioningTemplate.md)
 {{Manually Enter Apply-PnPProvisioningTemplate Description Here}}
 
+### [Apply-PnPTenantTemplate](Apply-PnPTenantTemplate.md)
+{{Manually Enter Apply-PnPTenantTemplate Description Here}}
+
 ### [Approve-PnPTenantServicePrincipalPermissionRequest](Approve-PnPTenantServicePrincipalPermissionRequest.md)
 {{Manually Enter Approve-PnPTenantServicePrincipalPermissionRequest Description Here}}
+
+### [Clear-PnPDefaultColumnValues](Clear-PnPDefaultColumnValues.md)
+{{Manually Enter Clear-PnPDefaultColumnValues Description Here}}
 
 ### [Clear-PnPListItemAsRecord](Clear-PnPListItemAsRecord.md)
 {{Manually Enter Clear-PnPListItemAsRecord Description Here}}
@@ -183,6 +105,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Convert-PnPProvisioningTemplate](Convert-PnPProvisioningTemplate.md)
 {{Manually Enter Convert-PnPProvisioningTemplate Description Here}}
+
+### [ConvertTo-PnPClientSidePage](ConvertTo-PnPClientSidePage.md)
+{{Manually Enter ConvertTo-PnPClientSidePage Description Here}}
 
 ### [Copy-PnPFile](Copy-PnPFile.md)
 {{Manually Enter Copy-PnPFile Description Here}}
@@ -232,6 +157,9 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Enable-PnPTenantServicePrincipal](Enable-PnPTenantServicePrincipal.md)
 {{Manually Enter Enable-PnPTenantServicePrincipal Description Here}}
 
+### [Export-PnPClientSidePage](Export-PnPClientSidePage.md)
+{{Manually Enter Export-PnPClientSidePage Description Here}}
+
 ### [Export-PnPTaxonomy](Export-PnPTaxonomy.md)
 {{Manually Enter Export-PnPTaxonomy Description Here}}
 
@@ -243,6 +171,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Get-PnPAccessToken](Get-PnPAccessToken.md)
 {{Manually Enter Get-PnPAccessToken Description Here}}
+
+### [Get-PnPAlert](Get-PnPAlert.md)
+{{Manually Enter Get-PnPAlert Description Here}}
 
 ### [Get-PnPApp](Get-PnPApp.md)
 {{Manually Enter Get-PnPApp Description Here}}
@@ -298,6 +229,9 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Get-PnPEventReceiver](Get-PnPEventReceiver.md)
 {{Manually Enter Get-PnPEventReceiver Description Here}}
 
+### [Get-PnPException](Get-PnPException.md)
+{{Manually Enter Get-PnPException Description Here}}
+
 ### [Get-PnPFeature](Get-PnPFeature.md)
 {{Manually Enter Get-PnPFeature Description Here}}
 
@@ -342,6 +276,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Get-PnPJavaScriptLink](Get-PnPJavaScriptLink.md)
 {{Manually Enter Get-PnPJavaScriptLink Description Here}}
+
+### [Get-PnPLabel](Get-PnPLabel.md)
+{{Manually Enter Get-PnPLabel Description Here}}
 
 ### [Get-PnPList](Get-PnPList.md)
 {{Manually Enter Get-PnPList Description Here}}
@@ -415,6 +352,15 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Get-PnPSiteDesignRights](Get-PnPSiteDesignRights.md)
 {{Manually Enter Get-PnPSiteDesignRights Description Here}}
 
+### [Get-PnPSiteDesignRun](Get-PnPSiteDesignRun.md)
+{{Manually Enter Get-PnPSiteDesignRun Description Here}}
+
+### [Get-PnPSiteDesignRunStatus](Get-PnPSiteDesignRunStatus.md)
+{{Manually Enter Get-PnPSiteDesignRunStatus Description Here}}
+
+### [Get-PnPSiteDesignTask](Get-PnPSiteDesignTask.md)
+{{Manually Enter Get-PnPSiteDesignTask Description Here}}
+
 ### [Get-PnPSitePolicy](Get-PnPSitePolicy.md)
 {{Manually Enter Get-PnPSitePolicy Description Here}}
 
@@ -456,6 +402,12 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Get-PnPTenantRecycleBinItem](Get-PnPTenantRecycleBinItem.md)
 {{Manually Enter Get-PnPTenantRecycleBinItem Description Here}}
+
+### [Get-PnPTenantSequence](Get-PnPTenantSequence.md)
+{{Manually Enter Get-PnPTenantSequence Description Here}}
+
+### [Get-PnPTenantSequenceSite](Get-PnPTenantSequenceSite.md)
+{{Manually Enter Get-PnPTenantSequenceSite Description Here}}
 
 ### [Get-PnPTenantServicePrincipal](Get-PnPTenantServicePrincipal.md)
 {{Manually Enter Get-PnPTenantServicePrincipal Description Here}}
@@ -625,8 +577,26 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [New-PnPSite](New-PnPSite.md)
 {{Manually Enter New-PnPSite Description Here}}
 
+### [New-PnPTenantSequence](New-PnPTenantSequence.md)
+{{Manually Enter New-PnPTenantSequence Description Here}}
+
+### [New-PnPTenantSequenceCommunicationSite](New-PnPTenantSequenceCommunicationSite.md)
+{{Manually Enter New-PnPTenantSequenceCommunicationSite Description Here}}
+
+### [New-PnPTenantSequenceTeamNoGroupSite](New-PnPTenantSequenceTeamNoGroupSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamNoGroupSite Description Here}}
+
+### [New-PnPTenantSequenceTeamNoGroupSubSite](New-PnPTenantSequenceTeamNoGroupSubSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamNoGroupSubSite Description Here}}
+
+### [New-PnPTenantSequenceTeamSite](New-PnPTenantSequenceTeamSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamSite Description Here}}
+
 ### [New-PnPTenantSite](New-PnPTenantSite.md)
 {{Manually Enter New-PnPTenantSite Description Here}}
+
+### [New-PnPTenantTemplate](New-PnPTenantTemplate.md)
+{{Manually Enter New-PnPTenantTemplate Description Here}}
 
 ### [New-PnPTerm](New-PnPTerm.md)
 {{Manually Enter New-PnPTerm Description Here}}
@@ -655,8 +625,14 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Read-PnPProvisioningTemplate](Read-PnPProvisioningTemplate.md)
 {{Manually Enter Read-PnPProvisioningTemplate Description Here}}
 
+### [Read-PnPTenantTemplate](Read-PnPTenantTemplate.md)
+{{Manually Enter Read-PnPTenantTemplate Description Here}}
+
 ### [Register-PnPHubSite](Register-PnPHubSite.md)
 {{Manually Enter Register-PnPHubSite Description Here}}
+
+### [Remove-PnPAlert](Remove-PnPAlert.md)
+{{Manually Enter Remove-PnPAlert Description Here}}
 
 ### [Remove-PnPApp](Remove-PnPApp.md)
 {{Manually Enter Remove-PnPApp Description Here}}
@@ -727,6 +703,9 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Remove-PnPRoleDefinition](Remove-PnPRoleDefinition.md)
 {{Manually Enter Remove-PnPRoleDefinition Description Here}}
 
+### [Remove-PnPSearchConfiguration](Remove-PnPSearchConfiguration.md)
+{{Manually Enter Remove-PnPSearchConfiguration Description Here}}
+
 ### [Remove-PnPSiteClassification](Remove-PnPSiteClassification.md)
 {{Manually Enter Remove-PnPSiteClassification Description Here}}
 
@@ -738,6 +717,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Remove-PnPSiteDesign](Remove-PnPSiteDesign.md)
 {{Manually Enter Remove-PnPSiteDesign Description Here}}
+
+### [Remove-PnPSiteDesignTask](Remove-PnPSiteDesignTask.md)
+{{Manually Enter Remove-PnPSiteDesignTask Description Here}}
 
 ### [Remove-PnPSiteScript](Remove-PnPSiteScript.md)
 {{Manually Enter Remove-PnPSiteScript Description Here}}
@@ -805,6 +787,9 @@ The following cmdlet references are for the SharePoint PNP module.
 ### [Request-PnPReIndexWeb](Request-PnPReIndexWeb.md)
 {{Manually Enter Request-PnPReIndexWeb Description Here}}
 
+### [Reset-PnPFileVersion](Reset-PnPFileVersion.md)
+{{Manually Enter Reset-PnPFileVersion Description Here}}
+
 ### [Resolve-PnPFolder](Resolve-PnPFolder.md)
 {{Manually Enter Resolve-PnPFolder Description Here}}
 
@@ -825,6 +810,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Save-PnPProvisioningTemplate](Save-PnPProvisioningTemplate.md)
 {{Manually Enter Save-PnPProvisioningTemplate Description Here}}
+
+### [Save-PnPTenantTemplate](Save-PnPTenantTemplate.md)
+{{Manually Enter Save-PnPTenantTemplate Description Here}}
 
 ### [Send-PnPMail](Send-PnPMail.md)
 {{Manually Enter Send-PnPMail Description Here}}
@@ -891,6 +879,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Set-PnPInPlaceRecordsManagement](Set-PnPInPlaceRecordsManagement.md)
 {{Manually Enter Set-PnPInPlaceRecordsManagement Description Here}}
+
+### [Set-PnPLabel](Set-PnPLabel.md)
+{{Manually Enter Set-PnPLabel Description Here}}
 
 ### [Set-PnPList](Set-PnPList.md)
 {{Manually Enter Set-PnPList Description Here}}
@@ -1011,6 +1002,9 @@ The following cmdlet references are for the SharePoint PNP module.
 
 ### [Test-PnPOffice365GroupAliasIsUsed](Test-PnPOffice365GroupAliasIsUsed.md)
 {{Manually Enter Test-PnPOffice365GroupAliasIsUsed Description Here}}
+
+### [Test-PnPTenantTemplate](Test-PnPTenantTemplate.md)
+{{Manually Enter Test-PnPTenantTemplate Description Here}}
 
 ### [Uninstall-PnPApp](Uninstall-PnPApp.md)
 {{Manually Enter Uninstall-PnPApp Description Here}}

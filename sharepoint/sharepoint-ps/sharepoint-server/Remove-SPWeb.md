@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWeb
@@ -28,7 +31,7 @@ Deleting the top level Web site of a site collection causes the entire site coll
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPWeb http://sitename/subsite
+Remove-SPWeb https://sitename/subsite
 ```
 
 This example completely deletes a subsite.
@@ -39,7 +42,7 @@ This example completely deletes a subsite.
 ### -Identity
 Specifies the identity of the Web to delete.
 
-The type must be a valid full URL, in the form http://server_name/site_name, or an SPWeb object.
+The type must be a valid full URL, in the form https://server_name/site_name, or an SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWebApplicationHttpThrottlingMonitor
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWebApplicationHttpThrottlingMonitor
@@ -30,20 +33,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$buckets=(2000,1000,500,300,200,100,50,30,20,10)
-Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint -
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint -
 Category Memory -Counter 'Available Mbytes' -IsDesc -HealthScoreBuckets $buckets
 ```
 
-This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the http://sharepoint Web application.
+This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the https://sharepoint Web application.
 
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
 ```
 
-This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the http://sharepoint Web application.
+This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the https://sharepoint Web application.
 
 
 ## PARAMETERS

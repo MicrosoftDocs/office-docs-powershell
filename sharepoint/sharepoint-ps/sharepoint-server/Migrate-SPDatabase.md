@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016
 title: Migrate-SPDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPDatabase
@@ -34,7 +37,7 @@ Do not use.
 
 ### Example 1 
 ```
-PS C:\>#Do not use.
+#Do not use.
 ```
 
 Do not use.

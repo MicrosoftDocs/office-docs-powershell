@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPScaleOutDatabaseDataSubRange
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPScaleOutDatabaseDataSubRange
@@ -46,7 +49,7 @@ C:\PS>$database = $databases[0]
 
 C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
 
-PS C:\>Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 ```
 
 This example creates a read-only subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.

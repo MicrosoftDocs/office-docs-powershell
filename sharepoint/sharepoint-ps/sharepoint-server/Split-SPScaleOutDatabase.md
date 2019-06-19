@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Split-SPScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Split-SPScaleOutDatabase
@@ -40,16 +43,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE---------------
+### ---------------EXAMPLE 1---------------
 ```
-PS C:\>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
 
-The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
+The example also moves 30% of the data from the upper side of the data range in the first scale-out database of the given service application.
+
+### ---------------EXAMPLE 2---------------
+
+```
+$ssa = Get-SPEnterpriseSearchServiceApplication
+
+$newReportingDb = "Search_AnalyticsReporting2"
+$reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
+Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
+
+```
+This example scales out the Search Analytics database, moving 33% of data to the new databases.
 
 ## PARAMETERS
 

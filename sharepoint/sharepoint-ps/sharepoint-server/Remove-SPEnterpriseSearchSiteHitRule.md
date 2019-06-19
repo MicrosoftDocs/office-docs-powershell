@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchSiteHitRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchSiteHitRule
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-------------------
 ```
-PS C:\>Remove-SPEnterpriseSearchSiteHitRule -Identity myHost
+Remove-SPEnterpriseSearchSiteHitRule -Identity myHost
 ```
 
 This example removes a site hit rule for the myHost host.

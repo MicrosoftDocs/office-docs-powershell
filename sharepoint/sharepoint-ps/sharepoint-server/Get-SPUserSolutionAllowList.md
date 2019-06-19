@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserSolutionAllowList
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUserSolutionAllowList
@@ -24,9 +27,9 @@ Gets the user managed solutions gallery configured on the specified web applicat
 
 ### Example 1 
 ```
-PS C:\>Get-SPUserSolutionAllowList -WebApplication http://webAppUrl
+Get-SPUserSolutionAllowList -WebApplication https://webAppUrl
 ```
-This example gets the user managed solutions gallery on the web application with root http://webAppUrl.
+This example gets the user managed solutions gallery on the web application with root https://webAppUrl.
 
 ## PARAMETERS
 

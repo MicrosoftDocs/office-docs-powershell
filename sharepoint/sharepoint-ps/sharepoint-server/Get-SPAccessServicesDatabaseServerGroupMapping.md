@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServicesDatabaseServerGroupMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAccessServicesDatabaseServerGroupMapping
@@ -24,7 +27,7 @@ This cmdlet shows the current mapping of the database server group associated wi
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServerGroupMapping -ServiceContext http://siteUrl
+Get-SPAccessServicesDatabaseServerGroupMapping -ServiceContext http://siteUrl
 ```
 
 Outputs the database server group associated with the site, http://siteUrl.

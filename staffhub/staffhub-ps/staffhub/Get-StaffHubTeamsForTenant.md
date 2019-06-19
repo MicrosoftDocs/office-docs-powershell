@@ -5,6 +5,9 @@ applicable: Microsoft StaffHub
 title: Get-StaffHubTeamsForTenant
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-StaffHubTeamsForTenant
@@ -17,7 +20,7 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>]
+Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>] [[-ManagedBy] <StaffHub|Teams>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +46,13 @@ Get-StaffHubTeamsForTenant
 ```
 
 Get all teams in the tenant with page size restricted to 1000 by default.
+
+### -------------------------- Example 3 --------------------------
+```
+Get-StaffHubTeamsForTenant -ManagedBy Teams
+```
+
+Return Teams that have not been created using StaffHub.
 
 ## PARAMETERS
 
@@ -70,7 +80,24 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Microsoft StaffHub
 Required: False
-Position: 0
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedBy
+Get Teams of a specific type. Valid values are:
+- StaffHub
+- Teams
+
+```yaml
+Type: StaffHub | Teams
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft StaffHub
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

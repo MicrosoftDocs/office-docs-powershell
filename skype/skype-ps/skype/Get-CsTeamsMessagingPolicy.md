@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsTeamsMessagingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsTeamsMessagingPolicy
@@ -14,8 +17,15 @@ Get-CsTeamsMessagingPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalS
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsMessagingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsMessagingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +47,7 @@ In this example all teams messaging policies that have been configured in the or
 Enables you to use wildcard characters when specifying the policy (or policies) to be returned.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -56,7 +66,7 @@ If this parameter is not included, the Get-CsTeamsMessagingPolicy cmdlet will re
 Note that wildcards are not allowed when specifying an Identity. Use the Filter parameter if you need to use wildcards when specifying a messaging policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

@@ -1,56 +1,60 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsOnlineVoicemailPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Modifies an existing Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user.
+Modifies an existing Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription, profanity masking for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify voicemail maximum recording length for a user.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsOnlineVoicemailPolicy [-WhatIf] [-ShareData <ShareDataType>] [-EnableTranscription <Boolean>] [-Confirm]
- [-EnableTranscriptionProfanityMasking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force]
- [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoicemailPolicy [-Tenant <Guid>] [-EnableTranscription <Boolean>] [-ShareData <String>]
+ [-EnableTranscriptionProfanityMasking <Boolean>] [-EnableEditingCallAnswerRulesSetting <Boolean>] [-MaximumRecordingLength <Duration>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsOnlineVoicemailPolicy [-Tenant <Guid>] [-EnableTranscription <Boolean>] [-ShareData <String>]
+ [-EnableTranscriptionProfanityMasking <Boolean>] [-EnableEditingCallAnswerRulesSetting <Boolean>] [-MaximumRecordingLength <Duration>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Online Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
 
-By default, users enabled for Phone System will be enabled for Online Voicemail, and Online Voicemail policy controls whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user. Online Voicemail transcription is enabled by default and transcription profanity masking is disabled by default, and you can modify existing policies to match your organization's requirements.
+By default, users enabled for Phone System will be enabled for Online Voicemail, and Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify voicemail maximum recording length for a user. Online Voicemail transcription is enabled by default, transcription profanity masking is disabled by default, editing call answer rule settings is enabled by default, and voicemail maximum recording length is set to 5 minutes by default. Tenant admin would be able to modify existing policies to match the organization's requirements.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineVoicemailPolicy -EnableTranscription $False
+Set-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -MaximumRecordingLength ([TimeSpan]::FromSeconds(60))
 ```
 
-This example modifies the global online voicemail policy to disable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will not receive transcription as part of their subsequent voicemail emails.
+The command shown in Example 1 changes the MaximumRecordingLength to 60 seconds for the per-user online voicemail policy CustomOnlineVoicemailPolicy.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-CsOnlineVoicemailPolicy -EnableTranscription $True
+Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $false
 ```
 
-This example modifies the global online voicemail policy to enable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will receive transcription as part of their subsequent voicemail emails.
-
-### -------------------------- Example 3 --------------------------
-```
-Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $true
-```
-
-This example enables transcription profanity masking for your organization.
+The command shown in Example 2 changes the EnableTranscriptionProfanityMasking to false for tenant level global online voicemail policy when calling without Identity parameter.
 
 
 ## PARAMETERS
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-Enables or disables automatically transcription of all incoming voicemails and delivery of the text version together with the audio file to the inbox for your organization.
+PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
@@ -82,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionProfanityMasking
-Enables or disables transcription profanity masking for your organization.
+PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
@@ -97,13 +101,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ShareData
-Specifies whether (voicemail and transcription) data is shared with the service for training and improving accuracy. By default, it is "Defer" which means that it is upto the user to decide whether they want to share their voicemail data with the service team (configurable through User Settings Portal). Other possible value is "Deny" which means that the voicemail data for any user in the tenant will not be shared with the service regardless of the users own choice.
+### -EnableEditingCallAnswerRulesSetting
+PARAMVALUE: $true | $false
 
 ```yaml
-Type: ShareDataType
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaximumRecordingLength
+A duration of voicemail maximum recording length. The length should be between 30 seconds to 10 minutes.
+
+```yaml
+Type: Duration
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -113,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Global policy is modified.
+A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Set-CsOnlineVoicemailPolicy would update tenant level Global policy value.
 
 ```yaml
 Type: XdsIdentity
@@ -161,15 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -185,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -200,28 +215,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -230,6 +225,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
+[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)
+[New-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+
+[Remove-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)
+
+[Grant-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)

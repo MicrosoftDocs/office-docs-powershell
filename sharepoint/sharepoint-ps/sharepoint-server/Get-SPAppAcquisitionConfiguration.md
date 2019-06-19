@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppAcquisitionConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppAcquisitionConfiguration
@@ -37,7 +40,7 @@ Use the `Get-SPAppAcquisitionConfiguration` cmdlet to return app acquisition set
 
 ### ------------EXAMPLE 1------- 
 ```
-PS C:\>Get-SPAppAcquisitionConfiguration -WebApplication http://localhost
+Get-SPAppAcquisitionConfiguration -WebApplication https://localhost
 ```
 
 This example returns app acquisition settings for the specified web application.
@@ -45,7 +48,7 @@ This example returns app acquisition settings for the specified web application.
 
 ### ------------EXAMPLE 2------- 
 ```
-PS C:\>Get-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin
+Get-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin
 ```
 
 This example returns app acquisition settings for the specified tenant.

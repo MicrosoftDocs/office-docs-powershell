@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectDatabaseUsage
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectDatabaseUsage
@@ -23,10 +26,10 @@ Returns an approximate size, in megabytes (MB) of the Project Web App data used 
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectDatabaseUsage -Url  http://contoso.com/sites/pwa
+Get-SPProjectDatabaseUsage -Url  https://contoso.com/sites/pwa
 ```
 
-This example shows the size of the Project Web App data in the content data for the Project Web App site at http://contoso.com/sites/pwa.
+This example shows the size of the Project Web App data in the content data for the Project Web App site at https://contoso.com/sites/pwa.
 
 ## PARAMETERS
 

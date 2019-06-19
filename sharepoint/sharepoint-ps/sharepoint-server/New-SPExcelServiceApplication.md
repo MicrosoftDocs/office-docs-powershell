@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelServiceApplication
@@ -52,7 +55,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>New-SPExcelServiceApplication -Name "MyExcelService" -ApplicationPool "SharePoint Services"
+New-SPExcelServiceApplication -Name "MyExcelService" -ApplicationPool "SharePoint Services"
 ```
 
 This example creates a new instance of Excel Services Application with the display name MyExcelService.
@@ -60,7 +63,7 @@ This example creates a new instance of Excel Services Application with the displ
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>New-SPExcelServiceApplication -Name "My Excel Service" -ApplicationPool "SharePoint Services" -SessionsPerUserMax 5
+New-SPExcelServiceApplication -Name "My Excel Service" -ApplicationPool "SharePoint Services" -SessionsPerUserMax 5
 ```
 
 This example creates a new instance of Excel Services Application with the display name My Excel Service and allows only five sessions per user for each back-end application server computer that is running Excel Services Application.

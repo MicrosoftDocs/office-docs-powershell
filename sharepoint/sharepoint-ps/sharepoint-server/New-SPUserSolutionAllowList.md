@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUserSolutionAllowList
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPUserSolutionAllowList
@@ -26,9 +29,9 @@ Creates a user managed solutions gallery.
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-PS C:\>New-SPUserSolutionAllowList -Site http://contoso/sites/site1 -ListTitle "Allow List"
+New-SPUserSolutionAllowList -Site https://contoso/sites/site1 -ListTitle "Allow List"
 ```
-This example creates a user managed solutions gallery named "Allow List" under the root web of the site collection at http://contoso/sites/site1.
+This example creates a user managed solutions gallery named "Allow List" under the root web of the site collection at https://contoso/sites/site1.
 
 
 ## PARAMETERS

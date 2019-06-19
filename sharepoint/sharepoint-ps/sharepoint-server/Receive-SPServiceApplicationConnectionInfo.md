@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.TopologyService-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Receive-SPServiceApplicationConnectionInfo
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Receive-SPServiceApplicationConnectionInfo
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Receive-SPServiceApplicationConnectionInfo -FarmUrl http://FarmB/topology/topology.svc
+Receive-SPServiceApplicationConnectionInfo -FarmUrl https://FarmB/topology/topology.svc
 ```
 
 This example retreives a list of service applications published by a given farm.
@@ -41,7 +44,7 @@ The FarmURL parameter can be obtained by the `Get-SPTopologyServiceApplication` 
 ### -FarmUrl
 Specifies the URL of the farm from which to receive service application information.
 
-The type must be a valid URL, in the form http://site_name.
+The type must be a valid URL, in the form https://site_name.
 
 ```yaml
 Type: Uri

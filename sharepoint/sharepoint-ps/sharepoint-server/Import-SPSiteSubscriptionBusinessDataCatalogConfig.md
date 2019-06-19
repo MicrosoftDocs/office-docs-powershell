@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPSiteSubscriptionBusinessDataCatalogConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPSiteSubscriptionBusinessDataCatalogConfig
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE--------------------------- 
 ```
-PS C:\>Import-SPSiteSubscriptionBusinessDataCatalogConfig -Path "C:\folder\importFile.xml" -ServiceContext http://contoso
+Import-SPSiteSubscriptionBusinessDataCatalogConfig -Path "C:\folder\importFile.xml" -ServiceContext http://contoso
 ```
 
 This example imports the data file named importFile.xml.

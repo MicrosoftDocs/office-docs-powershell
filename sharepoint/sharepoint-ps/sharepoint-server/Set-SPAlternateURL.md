@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAlternateURL
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
+Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -37,7 +40,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
+Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
 ```
 
 This example changes the URL and zone of the alternate URL https://www.contoso.com.
@@ -45,7 +48,7 @@ This example changes the URL and zone of the alternate URL https://www.contoso.c
 
 ### ------------------EXAMPLE 3------------------
 ```
-PS C:\>Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
+Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -53,7 +56,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 4------------------
 ```
-PS C:\>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
 ```
 
 This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.
@@ -64,7 +67,7 @@ This example changes the zone of the alternate URL for the specified Web applica
 ### -Identity
 Specifies the URL or GUID of the alternate URL to change.
 
-The type must be a valid URL, in the form http://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPAlternateUrlPipeBind

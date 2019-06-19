@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPTimerJob
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPTimerJob
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```
-PS C:\>Get-SPTimerJob job-ceip-datacollection | Enable-SPTimerJob
+Get-SPTimerJob job-ceip-datacollection | Enable-SPTimerJob
 ```
 
 This example enables the timer job named job-ceip-datacollection.

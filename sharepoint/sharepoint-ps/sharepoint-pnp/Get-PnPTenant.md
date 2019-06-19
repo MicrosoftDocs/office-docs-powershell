@@ -29,15 +29,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 Get-PnPTenant
 ```
 
-This example returns all tenant settings unsorted
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Get-PnPTenant > tenantprops.txt
-Get-Content .\tenantprops.txt | Sort
-```
-
-This example returns all tenant settings sorted
+This example returns all tenant settings
 
 ## PARAMETERS
 
@@ -55,4 +47,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPLogLevel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPLogLevel
@@ -30,28 +33,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Clear-SPLogLevel -Identity Cat1
+Clear-SPLogLevel -Identity Cat1
 ```
 
 This example resets the log levels for a single category.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
+"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
 ```
 
 This example resets the log levels for multiple categories.
 
 ### --------------EXAMPLE 3----------------- 
 ```
-PS C:\>Get-SPLogLevel | Clear-SPLogLevel
+Get-SPLogLevel | Clear-SPLogLevel
 ```
 
 This example resets the log levels for all categories.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Clear-SPLogLevel -Identity "SharePoint Server:Database"
+Clear-SPLogLevel -Identity "SharePoint Server:Database"
 ```
 
 This example resets the log level for the specific category in the SharePoint Server area only. This is useful when more than one area uses the same named category.

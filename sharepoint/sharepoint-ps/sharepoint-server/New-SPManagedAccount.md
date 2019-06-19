@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPManagedAccount
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPManagedAccount
@@ -29,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$cred = Get-Credential
-PS C:\>New-SPManagedAccount -Credential $cred
+$cred = Get-Credential
+New-SPManagedAccount -Credential $cred
 ```
 
 This example adds a new managed account to the farm by using credentials that are prompted.

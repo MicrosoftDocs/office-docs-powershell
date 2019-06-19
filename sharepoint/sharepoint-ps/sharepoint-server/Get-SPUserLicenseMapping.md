@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserLicenseMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUserLicenseMapping
@@ -34,24 +37,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping
+Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
 ### ---------------EXAMPLE 2 ----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
+Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
 ### ---------------EXAMPLE 3 ----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
+Get-SPUserLicenseMapping -WebApplication https://<server_name>/sitename
 ```
 
-This example returns all claim-to-user license mappings for the Web application with the URL http://\<server_name\>/sites/sitename.
+This example returns all claim-to-user license mappings for the Web application with the URL https://\<server_name\>/sites/sitename.
 
 ## PARAMETERS
 
@@ -79,7 +82,7 @@ Accept wildcard characters: False
 
 ### -WebApplication
 Specifies the URL, GUID, web application name, or instance of a web application object from which to get the user license mappings.
-The type must be an URL in the form http://server_name or http://server_name/sites/sitename, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh), a web application name (that is, SharePoint - 80), or an instance of a web application object.
+The type must be an URL in the form https://server_name or https://server_name/sites/sitename, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh), a web application name (that is, SharePoint - 80), or an instance of a web application object.
 
 ```yaml
 Type: SPWebApplicationPipeBind

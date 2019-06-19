@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-AuthRedirect
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -29,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl http://mbx01.contoso.com
+Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl https://mbx01.contoso.com
 ```
 
-This example sets the TargetURL value to http://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
+This example sets the TargetURL value to https://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-AuthRedirect | Set-AuthRedirect -TargetUrl http://mbx01.contoso.com
+Get-AuthRedirect | Set-AuthRedirect -TargetUrl https://mbx01.contoso.com
 ```
 
 This example sets the TargetURL value for all existing OAuth redirection objects in your organization. However, if you have only one object in your organization, this example has the same result as the first example.

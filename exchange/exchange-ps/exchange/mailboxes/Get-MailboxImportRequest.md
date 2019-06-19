@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxImportRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ### -BatchName
 The BatchName parameter specifies the name given to a batch import request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
@@ -142,13 +145,15 @@ Accept wildcard characters: False
 ### -Database
 This parameter is available or functional only in Exchange Server 2010.
 
-The Database parameter specifies the database in which the user's mailbox or archive resides. You can use the following values:
+The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-You can't use this parameter in conjunction with the Identity parameter.
+- GUID
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -210,8 +215,6 @@ In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParam
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -352,9 +355,11 @@ This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 

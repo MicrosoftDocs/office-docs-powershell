@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchServiceApplication
@@ -35,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" -VerboseQueryMonitoring True
+Set-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" -VerboseQueryMonitoring True
 ```
 
 This example turns on verbose query logging in the default search service application named Search Service Application.

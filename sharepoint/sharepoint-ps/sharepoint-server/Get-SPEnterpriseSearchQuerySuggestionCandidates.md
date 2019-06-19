@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchQuerySuggestionCandidates
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchQuerySuggestionCandidates
@@ -28,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE------------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $ssa
 ```
 
 This example returns popular search queries by using the search application contained in the variable $searchapp.

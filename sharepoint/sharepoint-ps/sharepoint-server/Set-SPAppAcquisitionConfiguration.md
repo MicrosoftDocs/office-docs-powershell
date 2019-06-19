@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppAcquisitionConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppAcquisitionConfiguration
@@ -36,14 +39,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPAppAcquisitionConfiguration -WebApplication http://localhost -Enable:$false
+Set-SPAppAcquisitionConfiguration -WebApplication https://localhost -Enable:$false
 ```
 
 This example disabled app purchases for the specified Web Application.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
+Set-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
 ```
 
 This example disables app purchases for the specified tenant.

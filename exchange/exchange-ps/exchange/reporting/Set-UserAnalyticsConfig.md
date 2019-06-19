@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-UserAnalyticsConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -17,15 +20,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MyAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String> [<CommonParameters>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String>
+ [<CommonParameters>]
 ```
 
-### Set2
+### TeamAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> [-PrivacyMode <String>]
- -TeamAnalyticsEnabled <$true | $false> [-TeamAnalyticsManagerViewEnabled <$true | $false>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <$true | $false>
+ [-PrivacyMode <String>]
+ [-TeamAnalyticsManagerViewEnabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -44,13 +49,9 @@ This example sets the MyAnalytics privacy setting to OptIn for the user named Ka
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
-
-For example:
+The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -77,15 +78,15 @@ Accept wildcard characters: False
 ### -PrivacyMode
 The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user. Valid values are:
 
-- Exclude
+- Excluded
 
-- OptIn
+- Opt-In
 
-- OptOut
+- Opt-Out
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -112,7 +113,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -127,7 +128,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -143,12 +144,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

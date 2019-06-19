@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-RemoteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -122,7 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
+The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 You can't use this switch with the Room or Shared switches.
 
@@ -175,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +205,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -219,9 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox created in the service.
-
-You don't need to specify a value with this switch.
+The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox created in the service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -281,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress

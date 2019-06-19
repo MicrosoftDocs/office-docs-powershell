@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserSolution
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUserSolution
@@ -31,10 +34,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE--------------------- 
 ```
-PS C:\>Get-SPUserSolution -Site http://sitename
+Get-SPUserSolution -Site https://sitename
 ```
 
-This example displays information about sandboxed solutions in the site http://sitename.
+This example displays information about sandboxed solutions in the site https://sitename.
 
 ## PARAMETERS
 
@@ -59,7 +62,7 @@ Accept wildcard characters: False
 ### -Site
 Specifies the site collection that contains the sandboxed solution.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

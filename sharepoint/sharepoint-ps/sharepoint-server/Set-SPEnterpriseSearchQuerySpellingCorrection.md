@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchQuerySpellingCorrection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchQuerySpellingCorrection
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingDictionary dynamic
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingDictionary dynamic
 ```
 
 This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.

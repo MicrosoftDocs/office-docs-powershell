@@ -1,19 +1,25 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: New-CsCallingLineIdentity
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the `New-CsCallingLineIdentity` cmdlet to create a new Caller ID policy for your organization.
+Use the New-CsCallingLineIdentity cmdlet to create a new Caller ID policy for your organization.
 
 ## SYNTAX
 
 ```
-New-CsCallingLineIdentity [-Description <String>] [-ServiceNumber <String>] [-Confirm] [-CallingIDSubstitute <CallingIDSubstituteType>] [[-Identity] <XdsIdentity>] [-EnableUserOverride <Boolean>] [-Tenant <Guid>] [-BlockIncomingPstnCallerID <Boolean>] [-InMemory] [-WhatIf] [-Force] [-AsJob] [<CommonParameters>]
+New-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
+ [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
+ [-BlockIncomingPstnCallerID <Boolean>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,26 +29,28 @@ Note:
 - Identity must be unique.
 - ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
 - If CallerIdSubstitute is given as “Service”, then ServiceNumber cannot be empty.
+ 
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false
+New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to Anonymous.
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose
+New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to a specified service number.
 
 ### -------------------------- Example 3 --------------------------
 ```
-PS C:\> New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
+New-CsCallingLineIdentity  -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
@@ -85,6 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
+PARAMVALUE: Anonymous | Service | LineUri
+
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri.
 
 ```yaml
@@ -101,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed. 
 
 ```yaml
 Type: SwitchParameter
@@ -199,15 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -243,7 +245,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -272,11 +274,12 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsCallingLineIdentity](https://docs.microsoft.com/en-us/powershell/module/skype/grant-cscallinglineidentity?view=skype-ps)
 
-[Get-CsCallingLineIdentity](https://docs.microsoft.com/en-us/powershell/module/skype/get-cscallinglineidentity?view=skype-ps)
+[Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 
-[Remove-CsCallingLineIdentity](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cscallinglineidentity?view=skype-ps)
+[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
 
-[Set-CsCallingLineIdentity](https://docs.microsoft.com/en-us/powershell/module/skype/set-cscallinglineidentity?view=skype-ps)
+[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md) 
+
+[Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 

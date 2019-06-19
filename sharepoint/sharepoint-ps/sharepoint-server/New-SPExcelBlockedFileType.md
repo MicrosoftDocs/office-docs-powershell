@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelBlockedFileType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelBlockedFileType
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 C:\PS>$sa = Get-SPExcelServiceApplication 
-PS C:\>New-SPExcelBlockedFileType -FileType XLSM -ExcelServiceApplication $sa
+New-SPExcelBlockedFileType -FileType XLSM -ExcelServiceApplication $sa
 ```
 
 This example adds an entry for XLSM to the list of file types that Excel Services Application currently prevents from loading.

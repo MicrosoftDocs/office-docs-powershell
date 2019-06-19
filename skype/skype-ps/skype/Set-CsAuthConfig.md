@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsAuthConfig
@@ -31,20 +34,22 @@ Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for y
 
 This cmdlet sets configuration on both the Registrar and the Web Services roles.
 
-It is only meant to be run at the global level (and not at the pool level), and we highly recommend that you only use it in this manner. However, technically it can be run at a pool level. But realize that if the pool only has one of the roles needed (say, Registrar and not Web Services), then only the settings for Registrar will be set and the Web Services settings will come from the global setting. No special warning will be given because some settings were not set. If a client uses the Registrar settings from one pool and the Web Services settings from another pool and the authentication settings are in an inconsistent state, the client may be unable to log on. If neither role is present for a pool, both Get will return an error message. If both roles are present for a pool but policies aren't defined at the pool level, Get will return an error message.
+It is only meant to be run at the global level (and not at the pool level), and we highly recommend that you only use it in this manner. However, technically it can be run at a pool level. But realize that if the pool only has one of the roles needed (say, Registrar and not Web Services), then only the settings for Registrar will be set and the Web Services settings will come from the global setting. No special warning will be given because some settings were not set. If a client uses the Registrar settings from one pool and the Web Services settings from another pool and the authentication settings are in an inconsistent state, the client may be unable to log on. If neither role is present for a pool, Get will return an error message. If both roles are present for a pool but policies aren't defined at the pool level, Get will return an error message.
 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsAuthConfig -BlockWindowsAuthExternally
+PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternally
 ```
 
 This example forces all external clients to use MA but allows NTLM or Kerberos (for clients that don't support ADAL) to work internally. If your clients do support ADAL they will use MA internally.
 
 ### Example 2
-PS C:\> Set-CsAuthConfig -BlockWindowsAuthExternallyAndModernAuthInternally
+```powershell
+PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternallyAndModernAuthInternally
+```
 
 This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
 
@@ -115,7 +120,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -126,6 +131,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
+After changing CsAuthConfig, you must run [Enable-CsComputer](https://docs.microsoft.com/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
 
 ## RELATED LINKS

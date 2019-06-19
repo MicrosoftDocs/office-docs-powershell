@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPAppAutoProvision
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPAppAutoProvision
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------- 
 ```
-PS C:\>Enable-SPAppAutoProvision
+Enable-SPAppAutoProvision
 ```
 
 This example enables auto provisioning for the farm.
@@ -36,8 +39,8 @@ This setting overrides site subscription level setting.
 
 ### --------------EXAMPLE 2-------- 
 ```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-PS C:\>Enable-SPAppAutoProvision -SiteSubscription $subscription
+C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
+Enable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example enables app auto provisioning for the site subscription for Contoso.Com site.

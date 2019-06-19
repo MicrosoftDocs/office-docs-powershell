@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchMetadataCategory
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchMetadataCategory
@@ -34,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa -DiscoverNewProperties $false -MapToContents $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa -DiscoverNewProperties $false -MapToContents $false
 ```
 
 This example sets both DiscoverNewProperties and MapToContents properties to False for the People category for the default search service application.

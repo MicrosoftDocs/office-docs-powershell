@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchMetadataMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchMetadataMapping
@@ -31,16 +34,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>## get the crawl property to set to, in this case a new property is created
-PS C:\>$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
-PS C:\>$cp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
-PS C:\>$ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyNewCrawlProp" -PropSet $cp.PropSet -Category $cp.CategoryName -IsNameEnum $false -VariantType $cp.VariantType -IsMappedToContents $true
-PS C:\>## get the mapping to replace
-PS C:\>$mycp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
-PS C:\>$map = Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp -CrawledProperty $mycp
+$ssa = Get-SPEnterpriseSearchServiceApplication
+## get the crawl property to set to, in this case a new property is created
+$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+$cp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
+$ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyNewCrawlProp" -PropSet $cp.PropSet -Category $cp.CategoryName -IsNameEnum $false -VariantType $cp.VariantType -IsMappedToContents $true
+## get the mapping to replace
+$mycp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
+$map = Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp -CrawledProperty $mycp
 ## set the new crawl property to map to for this mapping
-PS C:\>Set-SPEnterpriseSearchMetadataMapping -Identity $map -SearchApplication $ssa -CrawledProperty $ncp
+Set-SPEnterpriseSearchMetadataMapping -Identity $map -SearchApplication $ssa -CrawledProperty $ncp
 ```
 
 This example updates an existing mapping between the managed property UserName and the crawled property MyCrawlProp (see `New-SPEnterpriseSearchMetadataMapping`) for the default search service application.
@@ -52,7 +55,7 @@ The crawled property is replaced with a new crawled property named MyNewCrawlPro
 ### -Identity
 Specifies the metadata mapping to update.
 
-The type must be a valid URL, in the form http://server_name, or an instance of a valid Mapping object.
+The type must be a valid URL, in the form https://server_name, or an instance of a valid Mapping object.
 
 ```yaml
 Type: MappingPipeBind
@@ -127,7 +130,7 @@ Accept wildcard characters: False
 ### -CrawledProperty
 Specifies the crawled property to map.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form http://server_name, or an instance of a valid CrawledProperty object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form https://server_name, or an instance of a valid CrawledProperty object.
 
 Note: Null indicates that the value is unchanged.
 

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xm
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWorkflowServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWorkflowServiceApplicationProxy
@@ -24,7 +27,7 @@ Returns the Workflow Service Application Proxy.
 
 ### Example 1 
 ```
-PS C:\>Get-SPWorkflowServiceApplicationProxy
+Get-SPWorkflowServiceApplicationProxy
 ```
 Returns the Workflow Service Application Proxy.
 

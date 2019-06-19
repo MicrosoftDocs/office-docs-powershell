@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectPermissionMode
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectPermissionMode
@@ -25,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1------------------- 
 ```
-PS C:\>Get-SPProjectPermissionMode -Url http://AppServer/pwa
+Get-SPProjectPermissionMode -Url https://AppServer/pwa
 ```
 
 This example returns the permission mode setting for a PWA instance.
@@ -35,7 +38,7 @@ This example returns the permission mode setting for a PWA instance.
 ### -Url
 Specifies the URL of the PWA instance for which you want to retrieve the permission mode.
 
-The type must be a valid URL, in the form http://\<ServerName\>/\<PWASite\>.
+The type must be a valid URL, in the form https://\<ServerName\>/\<PWASite\>.
 
 ```yaml
 Type: Uri

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTimerJob
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTimerJob
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------------
 ```
-PS C:\>Get-SPTimerJob job-recycle-bin-cleanup | Set-SPTimerJob -Schedule "weekly at sat 5:00"
+Get-SPTimerJob job-recycle-bin-cleanup | Set-SPTimerJob -Schedule "weekly at sat 5:00"
 ```
 
 This example sets the schedule to run the job-recylce-bin-cleanup timer job to weekly at sat 5:00.

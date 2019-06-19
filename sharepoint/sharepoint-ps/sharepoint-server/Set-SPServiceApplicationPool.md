@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPServiceApplicationPool
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPServiceApplicationPool
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPServiceApplicationPool  TestServiceWebApplicationPool -Account testdomain\testuser1
+Set-SPServiceApplicationPool  TestServiceWebApplicationPool -Account testdomain\testuser1
 ```
 
 This example changes the identity of the selected service application pool.

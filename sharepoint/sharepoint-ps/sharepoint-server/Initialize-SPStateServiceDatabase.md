@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Initialize-SPStateServiceDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Initialize-SPStateServiceDatabase
@@ -27,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>$db = Get-SPStateServiceDatabase -Identity StateServceDbName
-PS C:\>Initialize-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase -Identity StateServceDbName
+Initialize-SPStateServiceDatabase -Identity $db
 ```
 
 This example installs the state service database schema into the database associated with the provided identity.

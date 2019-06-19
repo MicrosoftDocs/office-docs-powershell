@@ -3,6 +3,9 @@ external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPTranslationServiceJobHistory
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPTranslationServiceJobHistory
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE--------------
 ```
-PS C:\>Remove-SPTranslationServiceJobHistory TranslationService -BeforeDate 2012/01/31
+Remove-SPTranslationServiceJobHistory TranslationService -BeforeDate 2012/01/31
 ```
 
 This example removes all jobs completed before 2012/01/31 in the database associated with the Machine Translation Service application named TranslationService.
@@ -40,7 +43,7 @@ This example removes all jobs completed before 2012/01/31 in the database associ
 ### -Identity
 Specifies the URL or GUID of the instance of the Machine Translation service to remove.
 
-The type must be a valid URL, in the form http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: TranslationServiceApplicationPipeBind

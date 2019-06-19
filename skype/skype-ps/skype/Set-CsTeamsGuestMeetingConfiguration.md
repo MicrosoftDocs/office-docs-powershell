@@ -5,6 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsTeamsGuestMeetingConfiguration
@@ -15,10 +18,18 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsGuestMeetingConfiguration [-WhatIf] [-ScreenSharingMode <Object>] [-AllowMeetNow <bool>]
- [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-AllowIPVideo <bool>] [-Force] [-Instance <Object>]
- [-AsJob]
+Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +48,7 @@ Disables Guests' usage of MeetNow and Video calling in the organization; all oth
 ## PARAMETERS
 
 ### -AllowIPVideo
-Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow guests to share their video. Set this to FALSE to prohibit guests from sharing their video
+Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow guests to share their video. Set this to FALSE to prohibit guests from sharing their video
 
 ```yaml
 Type: Boolean
@@ -52,11 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetNow
-Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow guests to start ad-hoc meetings. Set this to FALSE to prohibit guests from starting ad-hoc meetings. 
+Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow guests to start ad-hoc meetings. Set this to FALSE to prohibit guests from starting ad-hoc meetings. 
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -101,7 +112,7 @@ Accept wildcard characters: False
 The only input allowed is "Global"
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -116,7 +127,7 @@ Accept wildcard characters: False
 Pipe the existing configuration from a Get- call.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -128,10 +139,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScreenSharingMode
-Determines the mode in which guests can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens
+Determines the mode in which guests can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -146,7 +157,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -173,30 +184,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPServiceApplication
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------------
 ```
-PS C:\>Remove-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -RemoveData
+Remove-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -RemoveData
 ```
 
 This example deletes the service application and its database.

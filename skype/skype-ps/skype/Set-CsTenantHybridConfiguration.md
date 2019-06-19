@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsTenantHybridConfiguration
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsTenantHybridConfiguration
@@ -13,11 +16,18 @@ A hybrid scenario (also known as a split-domain scenario) is a deployment in whi
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantHybridConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-HybridConfigServiceExternalUrl <Object>] [-HybridConfigServiceInternalUrl <Object>] [-Instance <Object>]
- [-PeerDestination <Object>] [-Tenant <Object>] [-UseOnPremDialPlan <Object>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Set-CsTenantHybridConfiguration [-Tenant <Guid>] [-PeerDestination <String>]
+ [-HybridConfigServiceInternalUrl <String>] [-HybridConfigServiceExternalUrl <String>]
+ [-UseOnPremDialPlan <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantHybridConfiguration [-Tenant <Guid>] [-PeerDestination <String>]
+ [-HybridConfigServiceInternalUrl <String>] [-HybridConfigServiceExternalUrl <String>]
+ [-UseOnPremDialPlan <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,22 +63,6 @@ The command shown in Example 1 sets the internal service URL for the global coll
 
 
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
@@ -106,7 +100,7 @@ Accept wildcard characters: False
 External Web service URL.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -122,7 +116,7 @@ Accept wildcard characters: False
 Internal Web service URL.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -143,7 +137,7 @@ Because you are limited to a single, global collection of hybrid configuration s
 To modify the settings for an individual tenant, use the Tenant parameter instead of the Identity parameter.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -159,7 +153,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -175,7 +169,7 @@ Accept wildcard characters: False
 Fully qualified domain name of your on-premises Access Edge server.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -198,7 +192,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -216,7 +210,7 @@ If set to $false, hybrid users will use the dial plan defined for your Skype for
 The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -244,24 +238,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchComponent
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchComponent
@@ -29,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
-PS C:\>Remove-SPEnterpriseSearchComponent -SearchTopology $topology -Identity c1642176-b9ae-4096-834c-080da5fba90e
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
+Remove-SPEnterpriseSearchComponent -SearchTopology $topology -Identity c1642176-b9ae-4096-834c-080da5fba90e
 ```
 
 This example removes the search component with identity c1642176-b9ae-4096-834c-080da5fba90e from the search topology with identity 10fa59cb-4b32-4fe6-8f8d-065388df201e from the default search application.

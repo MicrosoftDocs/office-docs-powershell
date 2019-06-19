@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPerformancePointServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPPerformancePointServiceApplication
@@ -40,8 +43,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------------
 ```
-PS C:\>$sa = Get-SPPerformancePointServiceApplication
-PS C:\>Set-SPPerformancePointServiceApplication -Identity $sa -DataSourceQueryTimeoutSeconds 5000
+$sa = Get-SPPerformancePointServiceApplication
+Set-SPPerformancePointServiceApplication -Identity $sa -DataSourceQueryTimeoutSeconds 5000
 ```
 
 This example sets the Data Source Query Timeout setting to a value of 5000.

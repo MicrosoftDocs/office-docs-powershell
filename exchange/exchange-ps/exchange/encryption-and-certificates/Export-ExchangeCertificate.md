@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-ExchangeCertificate
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the private key or chain of trust in the exported certificate file. To import the exported certificate file on another server, you need to know the password.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
@@ -227,7 +230,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate or certificate request that you want to export. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
 
 - \<Thumbprint\>
 

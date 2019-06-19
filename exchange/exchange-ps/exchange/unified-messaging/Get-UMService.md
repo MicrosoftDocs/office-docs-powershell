@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-UMService
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -62,17 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+The Identity parameter specifies the Mailbox server that hosts the Unified Messaging service configuration you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
 
-- FQDN
-
 - Distinguished name (DN)
 
-- Exchange Legacy DN
+- ExchangeLegacyDN
 
-If you don't use this parameter, the command is run on the local server.
+- GUID
 
 ```yaml
 Type: UMServerIdParameter

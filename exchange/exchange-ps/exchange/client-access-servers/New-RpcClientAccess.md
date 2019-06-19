@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: New-RpcClientAccess
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -18,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-RpcClientAccess -Server <ServerIdParameter> [-BlockedClientVersions <String>] [-Confirm]
- [-DomainController <Fqdn>] [-EncryptionRequired <$true | $false>] [-MaximumConnections <Int32>] [-WhatIf]
- [<CommonParameters>]
+New-RpcClientAccess -Server <ServerIdParameter>
+ [-BlockedClientVersions <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EncryptionRequired <$true | $false>]
+ [-MaximumConnections <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +47,15 @@ This example creates configuration information for the Exchange RPC Client Acces
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Client Access server.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
@@ -160,12 +175,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

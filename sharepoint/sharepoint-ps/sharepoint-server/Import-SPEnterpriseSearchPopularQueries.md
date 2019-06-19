@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPEnterpriseSearchPopularQueries
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPEnterpriseSearchPopularQueries
@@ -56,17 +59,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$ssap = Get-SPEnterpriseSearchServiceApplicationProxy
-PS C:\>$hostname = hostname
-PS C:\>$web = get-spsite | get-spweb | where {$_.Url-eq "http://$hostname"}
-PS C:\>$owner = new-object Microsoft.Office.Server.Search.Administration.SearchObjectOwner -ArgumentList @([Microsoft.Office.Server.Search.Administration.SearchObjectLevel]::SPWeb,$web)
-PS C:\>$mgr = new-object Microsoft.Office.Server.Search.Administration.Query.FederationManager -ArgumentList $ssap
-PS C:\>$source = $mgr.GetSourceByName("Local SharePoint Results", $owner)
-PS C:\>Import-SPEnterpriseSearchPopularQueries -SearchApplicationProxy $ssap -Filename C:\input.txt -ResultSource $source -Web $web
+$ssap = Get-SPEnterpriseSearchServiceApplicationProxy
+$hostname = hostname
+$web = get-spsite | get-spweb | where {$_.Url-eq "https://$hostname"}
+$owner = new-object Microsoft.Office.Server.Search.Administration.SearchObjectOwner -ArgumentList @([Microsoft.Office.Server.Search.Administration.SearchObjectLevel]::SPWeb,$web)
+$mgr = new-object Microsoft.Office.Server.Search.Administration.Query.FederationManager -ArgumentList $ssap
+$source = $mgr.GetSourceByName("Local SharePoint Results", $owner)
+Import-SPEnterpriseSearchPopularQueries -SearchApplicationProxy $ssap -Filename C:\input.txt -ResultSource $source -Web $web
 ```
 
 This example uses the Import-SPEnterpriseSearchPopularQueries cmdlet to import the queries file that is named C:\input.txt and associate with it the Result Source referenced by $source and the SPWeb referenced by $web.
-The example defines the variable $web as the SPWeb with URL http://hostname, and the variable $source as the Result Source named "Local SharePoint Results" at the SPWeb referenced by $web.
+The example defines the variable $web as the SPWeb with URL https://hostname, and the variable $source as the Result Source named "Local SharePoint Results" at the SPWeb referenced by $web.
 
 ## PARAMETERS
 

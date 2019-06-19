@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-DistributionGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -18,17 +21,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-DistributionGroup [-Name] <String> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>]
- [-BypassNestedModerationEnabled <$true | $false>] [-Confirm] [-CopyOwnerToMember] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-IgnoreNamingPolicy] [-ManagedBy <MultiValuedProperty>]
+New-DistributionGroup [-Name] <String>
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BypassNestedModerationEnabled <$true | $false>]
+ [-Confirm]
+ [-CopyOwnerToMember]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-IgnoreNamingPolicy]
+ [-ManagedBy <MultiValuedProperty>]
  [-MemberDepartRestriction <Closed | Open | ApprovalRequired>]
- [-MemberJoinRestriction <Closed | Open | ApprovalRequired>] [-Members <MultiValuedProperty>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Notes <String>]
+ [-MemberJoinRestriction <Closed | Open | ApprovalRequired>]
+ [-Members <MultiValuedProperty>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Notes <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RoomList] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-Type <Distribution | Security>] [-WhatIf]
- [-ExternalDirectoryObjectId <String>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [<CommonParameters>]
+ [-OverrideRecipientQuotas]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RoomList]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-Type <Distribution | Security>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,7 +109,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -113,13 +130,9 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available only in on-premises Exchange.
 
-The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
-
-For example:
+The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -272,8 +285,6 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -351,13 +362,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the recipients (mail-enabled objects) that are members of the group. You can use any value that uniquely identifies the recipient.
-
-For example:
+The Members parameter specifies the recipients (mail-enabled objects) that are members of the group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -388,13 +395,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-The ModeratedBy parameter specifies one or more moderators for this group. A moderator approves messages sent to the group before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
-
-For example:
+The ModeratedBy parameter specifies one or more moderators for this group. A moderator approves messages sent to the group before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -501,13 +504,34 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireSenderAuthenticationEnabled
+The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
+
+- $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
+
+- $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
+
+The default value is $true.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -601,42 +625,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireSenderAuthenticationEnabled
-The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
-
-- $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
-- $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
-
-The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

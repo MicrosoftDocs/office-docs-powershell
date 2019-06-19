@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelServiceApplication
@@ -27,21 +30,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPExcelServiceApplication "MyExcelServices"
+Get-SPExcelServiceApplication "MyExcelServices"
 ```
 
 This example displays the Excel Services Application Web service application named MyExcelServices.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-PS C:\>Get-SPExcelServiceApplication
+Get-SPExcelServiceApplication
 ```
 
 This example displays every Excel Services Application Web service application that runs in the farm.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
+Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
 ```
 
 This example displays Excel Services Application Web service application named MyExcelService, and then displays all of its settings in a list format.

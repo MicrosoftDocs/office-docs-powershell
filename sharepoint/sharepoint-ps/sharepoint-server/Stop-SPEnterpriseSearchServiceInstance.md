@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPEnterpriseSearchServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Stop-SPEnterpriseSearchServiceInstance
@@ -32,7 +35,7 @@ This can be done in three ways:
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
+Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
 ```
 
 This example stops the local search service instance.

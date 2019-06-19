@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderClientPermission
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,12 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-User <PublicFolderUserIdParameter>] [-Mailbox <MailboxIdParameter>]
+Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter>
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-User <PublicFolderUserIdParameter>]
+ [-Mailbox <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+To view the permissions that are available on public folders, see Public folder permissions for Exchange Server (https://support.microsoft.com/help/2573274/public-folder-permissions-for-exchange-server).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -81,7 +89,15 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies the server on which to perform the selected operations.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
@@ -111,7 +127,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the public folder mailbox for which you want to view the permissions. By default, the permissions are returned for the primary public folder mailbox. Using the Mailbox parameter allows you to specify a different public folder mailbox.
+The Mailbox parameter specifies the public folder mailbox that you want to view the permissions for. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+ 
+By default, the permissions are returned from the primary public folder mailbox. Using this parameter allows you to specify a different public folder mailbox.
 
 ```yaml
 Type: MailboxIdParameter

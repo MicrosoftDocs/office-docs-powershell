@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PolicyTipConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -42,10 +45,10 @@ This example creates a custom Policy Tip with the following settings:
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-PolicyTipConfig Url -Value "http://www.contoso.com/PolicyTipInformation"
+New-PolicyTipConfig Url -Value "https://www.contoso.com/PolicyTipInformation"
 ```
 
-This example sets the informational URL in Policy Tips to the value http://www.contoso.com/PolicyTipInformation.
+This example sets the informational URL in Policy Tips to the value https://www.contoso.com/PolicyTipInformation.
 
 ## PARAMETERS
 

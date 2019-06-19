@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2016
 title: Dismount-SPSiteMapDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Dismount-SPSiteMapDatabase
@@ -24,7 +27,7 @@ Do not use.
 
 ### ------------EXAMPLE------------------
 ```
-PS C:\>
+
 ```
 
 Do not use.

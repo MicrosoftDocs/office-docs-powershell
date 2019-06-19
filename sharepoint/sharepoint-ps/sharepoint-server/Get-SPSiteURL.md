@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteURL
@@ -23,8 +26,8 @@ Get-SPSiteURL [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentC
 ## DESCRIPTION
 Use the Get-SPSiteUrl cmdlet to display all the URL mappings of the site by using the Identity parameter.
 
-The Get-SPSiteUrl cmdlet only applies to the root site collection for a host name, that is http://www.contoso.com.
-This cmdlet cannot be directly run against a managed path site collection underneath the root, that is, http://www.contoso.com/sites/test.
+The Get-SPSiteUrl cmdlet only applies to the root site collection for a host name, that is https://www.contoso.com.
+This cmdlet cannot be directly run against a managed path site collection underneath the root, that is, https://www.contoso.com/sites/test.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -32,12 +35,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE----------
 ```
-C:\PS>$site = Get-SPSite 'http://www.contoso.com'
+C:\PS>$site = Get-SPSite 'https://www.contoso.com'
 
-PS C:\>Get-SPSiteURL -Identity $site
+Get-SPSiteURL -Identity $site
 ```
 
-This example displays all the URLs that bind to the site collection, http://www.contoso.com.
+This example displays all the URLs that bind to the site collection, https://www.contoso.com.
 
 ## PARAMETERS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppStoreWebServiceConfiguration
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```
-PS C:\>Get-SPAppStoreWebServiceConfiguration
+Get-SPAppStoreWebServiceConfiguration
 ```
 
 This example returns the product type and version for a SharePoint Store app.

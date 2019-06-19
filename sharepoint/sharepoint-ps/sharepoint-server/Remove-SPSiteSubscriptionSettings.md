@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteSubscriptionSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSiteSubscriptionSettings
@@ -46,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1--------------
 ```
-PS C:\>Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
+Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
 ```
 
 This example finds all orphans and displays them on the screen.
@@ -55,7 +58,7 @@ Remove the WhatIf parameter to remove these extra settings.
 
 ### ------------EXAMPLE 2--------------
 ```
-PS C:\>Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
+Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
 ```
 
 Use this example if the service application is consumed by a remote farm and you want the clean orphaned site subscription settings data (an array of all site subscriptions whose data must remain in the service application is assigned to the $SubscriptionList variable.

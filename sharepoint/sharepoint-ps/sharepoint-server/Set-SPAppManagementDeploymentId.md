@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppManagementDeploymentId
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppManagementDeploymentId
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------
 ```
-PS C:\>$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
-PS C:\>Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
+$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
 This example sets the deployment identifier of the current farm to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
@@ -39,8 +42,8 @@ This example sets the deployment identifier of the current farm to 3102B7C3-1866
 
 ### -----------EXAMPLE 2----------
 ```
-PS C:\>$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
-PS C:\>Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
+$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
 This example sets the deployment identifier of the tenant with the site subscription identifier 88f16a50-0530-4f3f-b749-24ef0b30d685 to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -32,7 +35,6 @@ Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,7 +53,6 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -98,16 +99,19 @@ $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
 
+### -------------------------- Example 4 --------------------------
+```
+Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
+```
+
+In Exchange Online, this example removes the specified soft-deleted mailbox mailbox.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter identifies the mailbox that you want to remove. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -171,7 +175,7 @@ Accept wildcard characters: False
 ### -StoreMailboxIdentity
 This parameter is available only in on-premises Exchange.
 
-The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
+The StoreMailboxIdentity parameter specifies the mailbox that you want to remove. When you use this parameter, you identify the mailbox by its MailboxGUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
 
 When you use this parameter with the Database parameter to identify and remove the mailbox, the mailbox is immediately and permanently deleted from the database, so you can't reconnect or restore the mailbox. You can't either of these parameters with the Identity parameter.
 
@@ -192,15 +196,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies that the mailbox you're removing is an arbitration mailbox. You don't need to specify a value with this switch.
+The Arbitration switch is required to remove arbitration mailboxes. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find the arbitration mailbox to remove.
-
-- To remove an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To remove arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -217,13 +217,11 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+The AuditLog switch is required to remove audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+To remove other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -240,13 +238,11 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to remove auxillary audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+To remove other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -288,7 +284,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-{{Fill Migration Description}}
+The Migration switch is required to remove migration mailboxes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -392,11 +388,9 @@ The PermanentlyDelete switch specifies whether to immediately and permanently de
 
 Notes:
 
-- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes).
+- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 3 in this topic.
 
 - This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
-
-Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet with this switch. For example, Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 
 ```yaml
 Type: SwitchParameter
@@ -411,9 +405,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolderswitch specifies that the mailbox to remove is a public folder mailbox. You don't need to specify a value with this switch. You need to use this switch to remove public folder mailboxes.
+The PublicFolder switch is required to remove public folder mailboxes. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -454,21 +448,6 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StoreMailboxIdentity, Identity
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

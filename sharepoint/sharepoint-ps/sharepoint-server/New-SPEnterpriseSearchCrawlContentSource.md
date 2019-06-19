@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchCrawlContentSource
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlContentSource
@@ -30,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
 ```
 
 This example creates a new content source of type file to crawl a file system.
@@ -270,7 +273,7 @@ Accept wildcard characters: False
 
 Specifies the comma-separated list of URLs at which to start a crawl for this content source.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 
@@ -292,7 +295,7 @@ Accept wildcard characters: False
 Specifies the URL for the page to modify the settings for a custom content source.
 The string that specifies the URL can contain a maximum of 1,024 characters.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPDataConnectionFile
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Uninstall-SPDataConnectionFile
@@ -26,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Uninstall-SPDataConnectionFile -Identity "Sample.udcx
-PS C:\>"Sample1.udcx", "Sample2.udcx", "Sample3.udcx" | Uninstall-SPDataConnectionFile
+Uninstall-SPDataConnectionFile -Identity "Sample.udcx
+"Sample1.udcx", "Sample2.udcx", "Sample3.udcx" | Uninstall-SPDataConnectionFile
 ```
 
 This example uninstalls a specified data connection file in two different ways.

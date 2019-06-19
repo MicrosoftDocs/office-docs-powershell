@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-RemoteDomain
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -56,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the remote domain object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quoatation marks (").
+The Name parameter specifies a unique name for the remote domain object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

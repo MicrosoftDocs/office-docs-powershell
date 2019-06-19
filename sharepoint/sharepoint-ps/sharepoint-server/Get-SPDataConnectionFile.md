@@ -3,6 +3,9 @@ external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDataConnectionFile
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPDataConnectionFile
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPDataConnectionFile
+Get-SPDataConnectionFile
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties ofeach .udcx file.
@@ -41,7 +44,7 @@ This example lists the Identity, DisplayName, and WebAccessible properties of th
 
 ### ---------------EXAMPLE 3-------------- 
 ```
-PS C:\>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
+Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties of all .udcx files with the specified Category.

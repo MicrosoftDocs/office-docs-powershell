@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPUserSolution
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Uninstall-SPUserSolution
@@ -28,10 +31,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------
 ```
-PS C:\>Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
+Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename
 ```
 
-This example deactivates the sandboxed solution contoso_solution.wsp on the site http://sitename.
+This example deactivates the sandboxed solution contoso_solution.wsp on the site https://sitename.
 
 ## PARAMETERS
 

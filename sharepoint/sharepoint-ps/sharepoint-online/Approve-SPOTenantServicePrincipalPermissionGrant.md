@@ -2,6 +2,9 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Approve-SPOTenantServicePrincipalPermissionGrant
@@ -16,7 +19,7 @@ Approves a permission request for the current tenant's "SharePoint Online Client
 ### Default
 
 ```powershell
-Approve-SPOTenantServicePrincipalPermissionGrant -Resource <string> -Resource <string>
+Approve-SPOTenantServicePrincipalPermissionGrant -Resource <string> -Scope <string>
 ```
 
 ## DESCRIPTION

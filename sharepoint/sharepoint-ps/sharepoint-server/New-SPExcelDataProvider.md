@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelDataProvider
@@ -32,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for the Excel Services Application Web service application named MyExcelService.
@@ -40,7 +43,7 @@ This example adds a new custom OLEDB data provider to the list of safe data prov
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Get-SPExcelServiceApplication | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
+Get-SPExcelServiceApplication | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for all Excel Services Application Web service application in the farm.

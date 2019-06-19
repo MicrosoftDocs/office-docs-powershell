@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-ComplianceTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -18,8 +21,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
- [-RetentionDuration <Unlimited>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
+ [-Notes <String>]
+ [-RetentionDuration <Unlimited>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,6 +102,106 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EventType
+The EventType specifies the retention rule that's associated with the label. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use the Get-RetentionComplianceRule cmdlet to view the available retention rules.
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePlanProperty
+The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
+
+- Get-FilePlanPropertyAuthority | Format-List Name
+
+- Get-FilePlanPropertyCategory | Format-List Name
+
+- Get-FilePlanPropertyCitation | Format-List Name
+
+- Get-FilePlanPropertyDepartment | Format-List Name
+
+- Get-FilePlanPropertyReferenceId | Format-List Name
+
+- Get-FilePlanPropertySubCategory | Format-List Name
+
+A valid value for this parameter involves two steps:
+
+- A variable to store the file plan properties as a PSCustomObject using the following syntax:
+
+  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+
+  For example:
+
+  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+
+- A second variable to convert the PSCustomObject to a JSON object using the following syntax:
+
+  $Variable2 = ConvertTo-Json $Variable1
+
+  For example:
+
+  $fpStr = ConvertTo-Json $retentionLabelAction
+
+You use the second variable as the value for this parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameter specifies an optional note. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is a user note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetentionDuration
 The RetentionDuration parameter specifies the number of days to retain the content. Valid values are:
 
@@ -146,12 +257,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

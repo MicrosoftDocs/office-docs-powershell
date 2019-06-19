@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPUsageService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPUsageService
@@ -30,12 +33,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------
 ```
-PS C:\>Set-SPUsageService -LoggingEnabled $false
+Set-SPUsageService -LoggingEnabled $false
 
-PS C:\>Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
+Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
 
 
-PS C:\>Set-SPUsageService -UsageLogCutTime 5
+Set-SPUsageService -UsageLogCutTime 5
 ```
 
 The examples disables usage logging, changes the directory where usage files are stored and creates a new usage log file every 5 minutes.

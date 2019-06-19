@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDeletedSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPDeletedSite
@@ -30,12 +33,12 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Use the Get-SPDeletedSite cmdlet to display a list of deleted site collections by using the Identity parameter.
-If no parameter is specified, then all deleted site collections in the farm are displayed.
+If no parameter is specified, then all deleted site collections in the farm are displayed. Deleted Sites are sites in the process of gradual delete. For more information on gradual delete, see [Remove-SPSite](https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsite?view=sharepoint-ps).
 
-Unlike the Get-SPSite cmdlet that uses the host name and scheme for the Identity parameter (that is, http://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
+Unlike the Get-SPSite cmdlet that uses the host name and scheme for the Identity parameter (that is, https://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
 Typically, the forward slash character (/) begins the relative URL and also denotes the root site.
 
-For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (http://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
+For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (https://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -43,21 +46,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
+Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example gets a specific deleted site collection by using a site ID.
 
 ### ------------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Get-SPDeletedSite "/"
+Get-SPDeletedSite "/"
 ```
 
 This example gets a deleted site collection from the root site.
 
 ### ------------------EXAMPLE 3--------------------- 
 ```
-PS C:\>Get-SPDeletedSite '/Site/cat*'
+Get-SPDeletedSite '/Site/cat*'
 ```
 
 This example matches a deleted site collection that contains any combination with the string "cat".
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Specifies the site subscription from which to get site collections.
 
-The type must be a valid URL in the form http://server_name or a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL in the form https://server_name or a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -213,7 +216,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL, GUID, or name of the Web application from which to list sites.
 
-The type must be a valid URL in the form http://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
+The type must be a valid URL in the form https://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind

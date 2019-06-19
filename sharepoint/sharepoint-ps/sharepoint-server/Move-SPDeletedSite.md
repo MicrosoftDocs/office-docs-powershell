@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPDeletedSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Move-SPDeletedSite
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE---------- 
 ```
-PS C:\>Move-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c -DestinationDatabase "ContentDB2"
+Move-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c -DestinationDatabase "ContentDB2"
 ```
 
 This example moves deleted site collections from the specified GUID to the database named "ContentDB2".
@@ -39,7 +42,7 @@ This example moves deleted site collections from the specified GUID to the datab
 
 ### -Identity
 Specifies the identity of the site collection to be moved.
-For example, http://servername/sites/sitename.
+For example, https://servername/sites/sitename.
 
 ```yaml
 Type: SPDeletedSitePipeBind
@@ -148,7 +151,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL, GUID, or name of the Web application from which to list sites.
 
-The type must be a valid URL in the form http://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
+The type must be a valid URL in the form https://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind

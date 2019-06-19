@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchServiceInstance
@@ -26,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance -Local
+Get-SPEnterpriseSearchServiceInstance -Local
 ```
 
 This example obtains a reference to the local search service instance.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance | ?{$_.Server -match 'SP01'}
+Get-SPEnterpriseSearchServiceInstance | ?{$_.Server -match 'SP01'}
 ```
 
 This example obtains a reference to the search service instance on the SharePoint server named 'SP01'.

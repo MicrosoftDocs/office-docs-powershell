@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityCCTKServer
 ---
 
@@ -25,7 +28,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityCCTKServer
+Get-FASTSearchSecurityCCTKServer
 ```
 
 This example retrieves the configuration setting for the server that handles CCTK requests.

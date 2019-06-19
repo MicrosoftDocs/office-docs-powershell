@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Invoke-SPProjectActiveDirectoryGroupSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Invoke-SPProjectActiveDirectoryGroupSync
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1------------------- 
 ```
-PS C:\>Invoke-SPProjectActiveDirectoryGroupSync -Url http://AppServer/pwa
+Invoke-SPProjectActiveDirectoryGroupSync -Url https://AppServer/pwa
 ```
 
 This example synchronizes group membership for the specified PWA instance.
@@ -37,7 +40,7 @@ This example synchronizes group membership for the specified PWA instance.
 ### -Url
 Specifies the URL of the Project Web App (PWA) instance where you want to start the Active Directory sync.
 
-The type must be a valid URL, in the form http://\<ServerName\>/\<PWAName\>.
+The type must be a valid URL, in the form https://\<ServerName\>/\<PWAName\>.
 
 ```yaml
 Type: Uri

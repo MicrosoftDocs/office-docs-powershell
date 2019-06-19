@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWorkflowConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWorkflowConfig
@@ -40,10 +43,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPWorkFlowConfig -webapplication http://sitename
+Get-SPWorkFlowConfig -webapplication https://sitename
 ```
 
-This example gets workflow settings for the specified Web application (http://sitename).
+This example gets workflow settings for the specified Web application (https://sitename).
 
 To get farm-level workflow settings for event delivery time-out, postpone threshold, and batch size, use the Get-SPFarmConfig cmdlet.
 
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the name or URL of the Web application.
 
-The type must be a valid name, in the form WebApplication-1212, or a URL, in the form http://server_name/WebApplication-1212.
+The type must be a valid name, in the form WebApplication-1212, or a URL, in the form https://server_name/WebApplication-1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind

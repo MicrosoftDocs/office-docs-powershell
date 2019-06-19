@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Import-ContactList
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -110,13 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

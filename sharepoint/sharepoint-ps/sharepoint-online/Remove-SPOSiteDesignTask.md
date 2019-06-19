@@ -3,6 +3,9 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 applicable: SharePoint Online
 title: Remove-SPOSiteDesignTask
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Remove-SPOSiteDesignTask

@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOHubSite
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Set-SPOHubSite
@@ -17,6 +20,8 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
   [-Title <string>]
   [-LogoUrl <string>]
   [-Description <string>]
+  [-SiteDesignId <guid>]
+  [-RequiresJoinApproval <bool>]
   [<CommonParameters>]
 ```
 
@@ -97,6 +102,40 @@ A description of the hub site.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteDesignId
+
+Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiresJoinApproval
+
+Determines if joining a Hub site requires approval.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online

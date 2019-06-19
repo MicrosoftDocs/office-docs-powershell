@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteUpgradeSessionInfo
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteUpgradeSessionInfo
@@ -45,16 +48,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$db = Get-SPContentDatabase -Identity wss_content
 
-PS C:\>Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
 
 ### -----------EXAMPLE 2---------- 
 ```
-C:\PS>$site=Get-SPSite -Identity http://localhost
+C:\PS>$site=Get-SPSite -Identity https://localhost
 
-PS C:\>Get-SPSiteUpgradeSessionInfo -Site $site
+Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
 This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.

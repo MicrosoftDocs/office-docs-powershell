@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Convert-SPWebApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Convert-SPWebApplication
@@ -34,14 +37,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------- 
 ```
-PS C:\>Convert-SPWebApplication -Identity "https://<webappurl>" -To Claims -RetainPermissions
+Convert-SPWebApplication -Identity "https://<webappurl>" -To Claims -RetainPermissions
 ```
 
 This example converts a web application specified by the Identity parameter to use the claim authentication mode.
 
 ### ------------EXAMPLE 2-------
 ```
-PS C:\>Convert-SPWebApplication -Identity "https://<webappurl>" -From Legacy -To Claims -RetainPermissions
+Convert-SPWebApplication -Identity "https://<webappurl>" -From Legacy -To Claims -RetainPermissions
 ```
 
 This example converts a web application specified by the Identity parameter from Classic Windows authentication to Claims authentication mode while retaining permissions. The -From parameter is required after security update MS04-022 or the April 2014 Cumulative Update for SharePoint Server 2013 is applied. This is required for all versions of SharePoint Server 2016.
@@ -49,7 +52,7 @@ This example converts a web application specified by the Identity parameter from
 ## PARAMETERS
 
 ### -Identity
-Specifies the URL of the web application that you want to convert, for example: http://mysite/app1
+Specifies the URL of the web application that you want to convert, for example: https://mysite/app1
 
 ```yaml
 Type: SPWebApplicationPipeBind

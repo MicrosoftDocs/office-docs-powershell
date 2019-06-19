@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-MailboxAuditLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -23,7 +26,9 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <$true | $false>]
+ [-GroupMailbox]
  [-HasAttachments <$true | $false>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -37,7 +42,9 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <$true | $false>]
+ [-GroupMailbox]
  [-HasAttachments <$true | $false>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -54,17 +61,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Search-MailboxAuditLog -Identity kwok -LogonTypes Admin,Delegate -StartDate 1/1/2015 -EndDate 12/31/2015 -ResultSize 2000
+Search-MailboxAuditLog -Identity kwok -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
-This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by Admin and Delegate logon types between 1/1/2015 and 12/31/2015. A maximum of 2,000 log entries are returned.
+This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Search-MailboxAuditLog -Mailboxes kwok,bsmith -LogonTypes Admin,Delegate -StartDate 1/1/2015 -EndDate 12/31/2015 -ResultSize 2000
+Search-MailboxAuditLog -Mailboxes kwok,bsmith -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
-This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's mailboxes for actions performed by Admin and Delegate logon types between 1/1/2015 and 12/31/2015. A maximum of 2,000 log entries are returned.
+This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's mailboxes for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -74,6 +81,41 @@ Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 
 This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by the mailbox owner between 1/1/2016 and 3/1/2016. The results are piped to the Where-Object cmdlet and filtered to return only entries with the HardDelete action.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies a single mailbox to retrieve mailbox audit log entries from. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 This parameter is available only in on-premises Exchange.
@@ -95,7 +137,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -110,13 +152,34 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalAccess
-The ExternalAccess parameter returns only mailbox audit log entries for mailbox access by users outside of your organization. In Exchange Online, use this parameter to return audit log entries for mailbox access by Microsoft datacenter administrators.
+The ExternalAccess parameter specifies whether to return only audit log entries for mailbox access by users that are outside of your organization. In Exchange Online, this parameter returns audit log entries for mailbox access by Microsoft datacenter administrators. Valid values are:
+
+$true: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are returned.
+
+$false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This is the default value.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to include Office 365 groups in the search. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -143,23 +206,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the mailbox for which to retrieve mailbox audit log entries. You can use this parameter to search a single mailbox.
+### -IncludeInactiveMailbox
+This parameter is available only in the cloud-based service.
+
+The IncludeInactiveMailbox switch is required to include inactive mailboxes in the search. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
 ```yaml
-Type: MailboxIdParameter
-Parameter Sets: Identity
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -LogonTypes
-The LogonTypes parameter specifies the type of logons. Valid values include:
+The LogonTypes parameter specifies the type of logons. Valid values are:
 
 - Admin: Audit log entries for mailbox access by administrator logons are returned.
 
@@ -167,7 +234,7 @@ The LogonTypes parameter specifies the type of logons. Valid values include:
 
 - External: For Exchange Online mailboxes, audit log entries for mailbox access by Microsoft datacenter administrators are returned.
 
-- Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value is available only in Exchange 2016 and also requires the ShowDetails switch.
+- Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value requires the ShowDetails switch.
 
 ```yaml
 Type: MultiValuedProperty
@@ -182,7 +249,11 @@ Accept wildcard characters: False
 ```
 
 ### -Mailboxes
-The Mailboxes parameter specifies the mailboxes for which to retrieve mailbox audit log entries. You can use this parameter to search audit logs for multiple mailboxes. You can't use the ShowDetails switch with the Mailboxes parameter.
+The Mailboxes parameter specifies the mailboxes to retrieve mailbox audit log entries from. You can use this parameter to search audit logs for multiple mailboxes.
+
+You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+You can't use this parameter with the ShowDetails switch.
 
 ```yaml
 Type: MultiValuedProperty
@@ -197,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operations
-The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values for this parameter are:
+The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values are:
 
 - Copy
 
@@ -259,9 +330,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowDetails
-The ShowDetails switch specifies that details of each log entry be retrieved. By default, all fields for each returned log entry are displayed in a list view.
+The ShowDetails switch retrieves the details of each log entry from the mailbox. You don't need to specify a value with this switch.
 
-You can't use the Mailboxes parameter with the ShowDetails switch.
+By default, all fields for each returned log entry are displayed in a list view.
+
+You can't use this switch with the Mailboxes parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -278,7 +351,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime

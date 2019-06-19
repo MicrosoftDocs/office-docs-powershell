@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Suspend-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Suspend-SPEnterpriseSearchServiceApplication
@@ -26,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
-PS C:\>$ssa | Suspend-SPEnterpriseSearchServiceApplication
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
+$ssa | Suspend-SPEnterpriseSearchServiceApplication
 ```
 
 This example obtains a reference to a search service application named MySSA and pauses it, stopping all crawls and other search components such as content processing components, analytics processing components and indexing components.

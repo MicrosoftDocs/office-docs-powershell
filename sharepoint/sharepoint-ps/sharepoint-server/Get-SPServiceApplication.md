@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServiceApplication
@@ -30,21 +33,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1---------------------- 
 ```
-PS C:\>Get-SPServiceApplication
+Get-SPServiceApplication
 ```
 
 This example returns all service applications in the farm.
 
 ### ------------------EXAMPLE 2---------------------- 
 ```
-PS C:\>Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
+Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 
 This example returns the service application that has the Identity "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
 
 ### ------------------EXAMPLE 3---------------------- 
 ```
-PS C:\>Get-SPServiceApplication -Name AccountingServiceApp
+Get-SPServiceApplication -Name AccountingServiceApp
 ```
 
 This example returns the service application that has the friendly name "AccountingServiceApp".

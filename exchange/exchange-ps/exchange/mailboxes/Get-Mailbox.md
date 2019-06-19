@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -41,7 +44,7 @@ Get-Mailbox [-Anr <String>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### DatabaseSet
@@ -65,7 +68,7 @@ Get-Mailbox [-Database <DatabaseIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -92,7 +95,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### ServerSet
@@ -116,7 +119,7 @@ Get-Mailbox [-Server <ServerIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### MailboxPlanSet
@@ -225,15 +228,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch filters the results by arbitration mailboxes. You don't need to specify a value with this switch.
+The Arbitration switch is required to return arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
-Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find arbitration mailboxes.
-
-- To return arbitration mailboxes that are used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To return arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -248,9 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to include only archive mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return archive mailboxes.
+The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -301,13 +298,11 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
+The AuditLog switch is required to return audit log mailboxes in the results. You don't need to specify a value with this switch.
 
-Notes: 
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -324,13 +319,11 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to return auxillary audit log mailboxes in the results. You don't need to specify a value with this switch.
 
-Notes: 
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -347,9 +340,9 @@ Accept wildcard characters: False
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -423,9 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch specifies whether to include only Office 365 groups in the results. You don't need to specify a value with this switch.
-
-This switch is required to return Office 365 groups.
+The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -440,13 +431,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -506,11 +493,11 @@ Accept wildcard characters: False
 ### -InactiveMailboxOnly
 This parameter is available only in the cloud-based service.
 
-The InactiveMailboxOnly switch specifies whether to include only inactive mailboxes in the results. You don't need to specify a value with this switch.
-
-When you use this switch, only inactive mailboxes are included in the results.
+The InactiveMailboxOnly switch specifies whether to return only inactive mailboxes in the results. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+To include active and inactive mailboxes in the results, don't use this switch. Instead, use the IncludeInactiveMailbox switch.
 
 ```yaml
 Type: SwitchParameter
@@ -529,9 +516,9 @@ This parameter is available only in the cloud-based service.
 
 The IncludeInactiveMailbox switch specifies whether to include inactive mailboxes in the results. You don't need to specify a value with this switch.
 
-When you use this switch, active and inactive mailboxes are included in the results.
-
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+To return only inactive mailboxes in the results, don't use this switch. Instead, use the InactiveMailboxOnly switch.
 
 ```yaml
 Type: SwitchParameter
@@ -577,9 +564,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-The Migration switch specifies whether to include only migration mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return migration mailboxes.
+The Migration switch is required to return migration mailboxes in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -596,9 +581,7 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoringswitch specifies whether to include only monitoring mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return monitoring mailboxes.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
 
 Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
@@ -638,9 +621,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies whether to include only public folder mailboxes in the results. You don't need to specify a value with this switch.
+The PublicFolder switch is required to return public folder mailboxes in the results. You don't need to specify a value with this switch.
 
-This switch is required to return public folder mailboxes.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -715,9 +698,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchive switch specifies whether to include only remote archive mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return remote archive mailboxes.
+The RemoteArchive switch is required to return remote archive mailboxes in the results. You don't need to specify a value with this switch.
 
 Remote archive mailboxes are archive mailboxes in the cloud-based service that are associated with mailbox users in on-premises Exchange organizations.
 
@@ -755,13 +736,13 @@ The Server parameter filters the results by Exchange server. When you use this p
 
 You can use any value that uniquely identifies the server. For example:
 
-- Name (for example, Exchange01)
+- Name
 
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- FQDN
 
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- Distinguished name (DN)
 
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+- Exchange Legacy DN
 
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
@@ -782,9 +763,7 @@ Accept wildcard characters: False
 ### -SoftDeletedMailbox
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailbox switch specifies whether to include only soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted mailboxes.
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
@@ -822,23 +801,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-This parameter is available only in on-premises Exchange.
-
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

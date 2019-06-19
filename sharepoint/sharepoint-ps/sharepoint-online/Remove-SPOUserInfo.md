@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOUserInfo
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Remove-SPOUserInfo
@@ -19,15 +22,15 @@ Remove-SPOUserInfo -LoginName <String> -Site <SpoSitePipeBind> [<CommonParameter
 ## DESCRIPTION
 Can be used to remove user from user information lists of the specific site collections.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
 
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
-```
+```powershell
 Remove-SPOUserInfo -LoginName joe.healy@contoso.com -Site https://contoso.sharepoint.com/sites/sc1 
 ```
-Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the user ifnoramtion list of https://contoso.sharepoint.com/sites/sc1 site collection.
+Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the user information list of https://contoso.sharepoint.com/sites/sc1 site collection.
 
 ## PARAMETERS
 
@@ -64,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

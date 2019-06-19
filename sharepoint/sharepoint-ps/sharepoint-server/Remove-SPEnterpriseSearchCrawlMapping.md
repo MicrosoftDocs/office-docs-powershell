@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchCrawlMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchCrawlMapping
@@ -29,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$searchapp = Get-SPEnterpriseSearchServiceApplication "Sample Search Service Application"
-PS C:\>$mappingtodelete = Get-SPEnterpriseSearchCrawlContentSource -Identity "somemapping"
-PS C:\>mappingtodelete | Remove-SPEnterpriseSearchCrawlMapping
+$searchapp = Get-SPEnterpriseSearchServiceApplication "Sample Search Service Application"
+$mappingtodelete = Get-SPEnterpriseSearchCrawlContentSource -Identity "somemapping"
+mappingtodelete | Remove-SPEnterpriseSearchCrawlMapping
 ```
 
 This example removes a crawl mapping from a search application.
@@ -42,7 +45,7 @@ This example removes a crawl mapping from a search application.
 ### -Identity
 The crawl mapping to delete.
 
-A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid CrawlMapping object.
+A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid CrawlMapping object.
 
 ```yaml
 Type: CrawlMappingPipeBind

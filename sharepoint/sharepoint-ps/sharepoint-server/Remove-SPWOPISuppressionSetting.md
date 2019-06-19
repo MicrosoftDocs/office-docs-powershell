@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPWOPISuppressionSetting
@@ -35,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
@@ -43,7 +46,7 @@ This example removes suppression settings for viewing Excel workbooks that have 
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.

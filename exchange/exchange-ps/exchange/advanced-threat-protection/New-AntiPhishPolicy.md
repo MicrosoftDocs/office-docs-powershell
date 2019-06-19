@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,7 +21,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-AntiPhishPolicy -Name <String> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAntispoofEnforcement <$true | $false>] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-TargetedDomainActionRecipients <MultiValuedProperty>] [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedDomainsToProtect <MultiValuedProperty>] [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf] [<CommonParameters>]
+New-AntiPhishPolicy -Name <String>
+ [-AdminDisplayName <String>]
+ [-AuthenticationFailAction <MoveToJmf | Quarantine>]
+ [-Confirm]
+ [-EnableAntiSpoofEnforcement <$true | $false>]
+ [-EnableAuthenticationSafetyTip <$true | $false>]
+ [-EnableAuthenticationSoftPassSafetyTip <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnableMailboxIntelligence <$true | $false>]
+ [-EnableMailboxIntelligenceProtection <$true | $false>]
+ [-EnableOrganizationDomainsProtection <$true | $false>]
+ [-EnableSimilarDomainsSafetyTips <$true | $false>]
+ [-EnableSimilarUsersSafetyTips <$true | $false>]
+ [-EnableTargetedDomainsProtection <$true | $false>]
+ [-EnableTargetedUserProtection <$true | $false>]
+ [-EnableUnauthenticatedSender <$true | $false>]
+ [-EnableUnusualCharactersSafetyTips <$true | $false>]
+ [-ExcludedDomains <MultiValuedProperty>]
+ [-ExcludedSenders <MultiValuedProperty>]
+ [-PhishThresholdLevel <Int32>]
+ [-TargetedDomainActionRecipients <MultiValuedProperty>]
+ [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedDomainsToProtect <MultiValuedProperty>]
+ [-TargetedUserActionRecipients <MultiValuedProperty>]
+ [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedUsersToProtect <MultiValuedProperty>]
+ [-TreatSoftPassAsAuthenticated <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -191,11 +221,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The policy is enabled. This is the default value.
 
-- $false: The rule or policy is disabled.
+- $false: The policy is disabled.
 
 ```yaml
 Type: $true | $false
@@ -215,6 +245,25 @@ The EnableMailboxIntelligence parameter specifies whether to enable or disable m
 - $true: Use mailbox intelligence in domain and user impersonation protection.
 
 - $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMailboxIntelligenceProtection
+The EnableMailboxIntelligenceProtection specifies whether to enable or disable intelligence based impersonation protection. Valid values are:
+
+- $true: Enable intelligence based impersonation protection.
+
+- $false: Don't enable intelligence based impersonation protection. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -323,6 +372,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableUnauthenticatedSender
+The EnableUnauthenticatedSender parameter specifies whether to apply a "?" symbol in Outlook's sender card if the sender fails authentication checks. Valid values are:
+
+- $true: Apply the "?" symbol.
+
+- $false: Do not apply the "?" symbol.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableUnusualCharactersSafetyTips
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for unusual characters in domain and user impersonation detections. Valid values are:
 
@@ -372,6 +440,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ImpersonationProtectionState
+The ImpersonationProtectionState parameter specifies the configuration of impersonation protection. Valid values are:
+
+- Automatic
+
+- Manual (This is the default value)
+
+- Off
+
+```yaml
+Type: ImpersonationProtectionState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxIntelligenceProtectionAction
+The MailboxIntelligenceProtectionAction parameter specifies what to do with messages that fail mailbox intelligence protection. Valid values are:
+
+- NoAction (This is the default value)
+
+- BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
+
+- Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
+
+- MoveToJmf: Move the message to the user's Junk Email folder.
+
+- Quarantine: Move the message to the phishing quarantine.
+
+- Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
+
+```yaml
+Type: ImpersonationAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxIntelligenceProtectionActionRecipients
+The MailboxIntelligenceProtectionActionRecipients parameter specifies the recipients to add to detected messages when the MailboxIntelligenceProtectionAction parameter is set to the value Redirect or BccMessage.
+
+A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhishThresholdLevel
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
@@ -379,7 +512,7 @@ The PhishThresholdLevel parameter specifies the tolerance level that's used by m
 
 - 2: Aggressive
 
-- 3: More agressive
+- 3: More aggressive
 
 - 4: Most aggressive
 
@@ -431,7 +564,6 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -475,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserProtectionAction
-The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages for the users specified by the TargetedUsersToProtect parameter. Valid values are:
+The TargetedUserProtectionAction parameter specifies the action to take on detected messages for the users specified by the TargetedUsersToProtect parameter. Valid values are:
 
 - NoAction (This is the default value)
 
@@ -493,7 +625,6 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: NoAction, MoveToJmf, Redirect, Quarantine, Delete, BccMessage
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -567,12 +698,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

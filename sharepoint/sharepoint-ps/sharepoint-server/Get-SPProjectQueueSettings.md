@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectQueueSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectQueueSettings
@@ -39,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-PS C:\>Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
+Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
 
 This example retrieves the queue settings for the "Project Service Application" service application.

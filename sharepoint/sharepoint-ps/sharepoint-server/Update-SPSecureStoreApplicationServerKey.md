@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPSecureStoreApplicationServerKey
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPSecureStoreApplicationServerKey
@@ -33,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$newPassPhrase = "abcDEF123!"
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
-PS C:\>Update-SPSecureStoreApplicationServerKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
+$newPassPhrase = "abcDEF123!"
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+Update-SPSecureStoreApplicationServerKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
 ```
 
 This example synchronizes the passphrase of the server key on a SharePoint server with the master key for the Secure Store service database.

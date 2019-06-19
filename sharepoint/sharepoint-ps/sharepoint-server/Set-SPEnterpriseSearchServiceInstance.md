@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchServiceInstance
@@ -29,8 +32,8 @@ This cmdlet updates properties of the search service instance for a farm.
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local
-PS C:\>Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
+$si = Get-SPEnterpriseSearchServiceInstance -Local
+Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
 ```
 Sets the default index location to F:\SearchIndex.
 

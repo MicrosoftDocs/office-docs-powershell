@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchCrawlContentSource
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchCrawlContentSource
@@ -87,10 +90,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
-PS C:\>$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Full -DailyCrawlSchedule -CrawlScheduleRunEveryInterval 30
-PS C:\>$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyCrawlSchedule -CrawlScheduleRepeatInterval 60 -CrawlScheduleRepeatDuration 1440
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
+$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Full -DailyCrawlSchedule -CrawlScheduleRunEveryInterval 30
+$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyCrawlSchedule -CrawlScheduleRepeatInterval 60 -CrawlScheduleRepeatDuration 1440
 ```
 
 This example returns the "Local SharePoint Sites" content source and creates a schedule to run a full crawl every 30 days and an incremental crawl every hour every day.
@@ -533,7 +536,7 @@ Accept wildcard characters: False
 ### -StartAddresses
 Specifies the comma-separated list of URLs at which to start a crawl for this content source.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml
@@ -553,7 +556,7 @@ Accept wildcard characters: False
 Specifies the URL for the page to modify the settings for a custom content source.
 The string that specifies the URL can contain a maximum of 1,024 characters.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml

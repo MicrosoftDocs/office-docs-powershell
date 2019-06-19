@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOfficeStoreAppsDefaultActivation
@@ -29,21 +32,21 @@ Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Get-SPOfficeStoreAppsDefaultActivation` cmdlet to return settings for apps for Office that run in a specific web application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
+Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
-This examples returns the setting for the web application http://sphvm-8044.
+This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
@@ -112,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

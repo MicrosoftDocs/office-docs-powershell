@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: New-CsOnlineNumberPortInOrder
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-CsOnlineNumberPortInOrder
@@ -14,20 +17,20 @@ New third party provider ports should be provisioned through the Skype for Busin
 ## SYNTAX
 
 ```
-New-CsOnlineNumberPortInOrder [-InventoryType <Object>] [-BillingTelephoneNumber <Object>]
- [-BypassDualWrite <Object>] [-Confirm] [-DomainController <Object>] [-EmailAddresses <Object>] [-Force]
- [-FriendlyName <Object>] [-IsManual] [-IsPartialPort] [-LOAAuthorizingPerson <Object>]
- [-LOABase64PayLoad <Object>] [-LOAContentType <Object>] [-LosingTelcoAccountId <Object>]
- [-LosingTelcoPin <Object>] [-RangeHolder <Object>] [-RequestedFocDate <Object>]
- [-RequestedFocDateBegin <Object>] [-RequestedFocDateEnd <Object>] [-SubscriberAdditionalInfo <Object>]
- [-SubscriberAddressLine1 <Object>] [-SubscriberAddressLine2 <Object>] [-SubscriberAddressLine3 <Object>]
- [-SubscriberArea <Object>] [-SubscriberBuildingNumber <Object>] [-SubscriberBuildingNumberSuffix <Object>]
- [-SubscriberBusinessName <Object>] [-SubscriberCity <Object>] [-SubscriberCityAlias <Object>]
- [-SubscriberCompanyName <Object>] [-SubscriberCountry <Object>] [-SubscriberCounty <Object>]
- [-SubscriberDescription <Object>] [-SubscriberFirstName <Object>] [-SubscriberLastName <Object>]
- [-SubscriberPostDirectional <Object>] [-SubscriberPreDirectional <Object>] [-SubscriberStreetName <Object>]
- [-SubscriberStreetSuffix <Object>] [-SubscriberZipCode <Object>] [-TelephoneNumberRanges <Object>]
- [-TelephoneNumbers <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsOnlineNumberPortInOrder [-Tenant <Guid>] -InventoryType <String> [-TelephoneNumbers <String[]>]
+ [-LOABase64PayLoad <String>] [-LOAContentType <String>] [-LOAAuthorizingPerson <String>]
+ [-SubscriberArea <String>] [-SubscriberCity <String>] [-SubscriberCountry <String>]
+ [-SubscriberStreetName <String>] [-SubscriberBuildingNumber <String>] [-SubscriberZipCode <String>]
+ [-SubscriberBusinessName <String>] [-BillingTelephoneNumber <String>] [-SubscriberFirstName <String>]
+ [-SubscriberLastName <String>] [-EmailAddresses <String[]>] [-RequestedFocDate <DateTime>]
+ [-LosingTelcoPin <String>] [-LosingTelcoAccountId <String>] [-IsPartialPort]
+ [-SubscriberAddressLine1 <String>] [-SubscriberAddressLine2 <String>] [-SubscriberAddressLine3 <String>]
+ [-FriendlyName <String>] [-IsManual] [-RequestedFocDateBegin <DateTimeOffset>]
+ [-RequestedFocDateEnd <System.DateTimeOffset>] [-RangeHolder <String>] [-TelephoneNumberRanges <String[][]>]
+ [-SubscriberAdditionalInfo <String>] [-SubscriberBuildingNumberSuffix <String>]
+ [-SubscriberStreetSuffix <String>] [-SubscriberPreDirectional <String>] [-SubscriberPostDirectional <String>]
+ [-SubscriberDescription <String>] [-SubscriberCounty <String>] [-SubscriberCompanyName <String>]
+ [-SubscriberCityAlias <String>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +48,7 @@ New-CsOnlineNumberPortInOrder [-InventoryType <Object>] [-BillingTelephoneNumber
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -61,23 +64,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +96,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -125,7 +112,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -157,7 +144,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -205,7 +192,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -221,7 +208,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -237,7 +224,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -253,7 +240,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -269,7 +256,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -285,7 +272,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -301,7 +288,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: DateTime
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -317,7 +304,7 @@ Accept wildcard characters: False
 PARAMVALUE: DateTimeOffset
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -333,7 +320,7 @@ Accept wildcard characters: False
 PARAMVALUE: DateTimeOffset
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -349,7 +336,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -365,7 +352,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -381,7 +368,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -397,7 +384,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -413,7 +400,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -429,7 +416,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -445,7 +432,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -461,7 +448,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -477,7 +464,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -493,7 +480,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -509,7 +496,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -525,7 +512,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -541,7 +528,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -557,7 +544,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -573,7 +560,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -589,7 +576,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -605,7 +592,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -621,7 +608,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -637,7 +624,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -653,7 +640,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -669,7 +656,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -685,7 +672,7 @@ Accept wildcard characters: False
 PARAMVALUE: String\[\]\[\]
 
 ```yaml
-Type: Object
+Type: String[][]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -701,7 +688,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -717,7 +704,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -745,24 +732,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

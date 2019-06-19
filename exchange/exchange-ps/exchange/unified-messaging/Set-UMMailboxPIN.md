@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-UMMailboxPIN
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -63,23 +66,27 @@ This example unlocks the UM-enabled mailbox for tonysmith@contoso.com and allows
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the UM-enabled user PIN being set. The values for this parameter include the following:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
-- ADObjectID
+- Name
 
-- GUID
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- user principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

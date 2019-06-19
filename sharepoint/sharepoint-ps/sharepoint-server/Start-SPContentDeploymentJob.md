@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPContentDeploymentJob
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPContentDeploymentJob
@@ -27,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Job 1" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false | Start-SPContentDeploymentJob
+Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Job 1" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false | Start-SPContentDeploymentJob
 ```
 
 This example creates a content deployment job Job 1 and runs it immediately.

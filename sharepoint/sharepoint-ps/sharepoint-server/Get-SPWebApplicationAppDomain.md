@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebApplicationAppDomain
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWebApplicationAppDomain
@@ -35,28 +38,28 @@ Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a spec
 
 ### -----------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain
+Get-SPWebApplicationAppDomain
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for all web applications in the farm.
 
 ### -----------EXAMPLE 2--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -Zone Default
+Get-SPWebApplicationAppDomain -Zone Default
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for the Default zone for all web applications in the farm.
 
 ### -----------EXAMPLE 3--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
+Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
 ```
 
 Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.
 
 ### -----------EXAMPLE 4--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
+Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
 ```
 
 Returns a list of SPAppDomain objects, one for each web application and zone pair that shares the specified app domain.

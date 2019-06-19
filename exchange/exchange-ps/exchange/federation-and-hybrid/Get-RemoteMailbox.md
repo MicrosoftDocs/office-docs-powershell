@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-RemoteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -46,7 +49,7 @@ Get-RemoteMailbox [[-Identity] <RemoteMailboxIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-RemoteMailbox cmdlet retrieves the mail-related attributes of a mail user in the on-premises Active Directory. It doesn't retrieve the attributes of the associated cloud-based mailbox. Most of the mail-related attributes of the on-premises mail user and the associated cloud-based mailbox should be the same. However, the cloud-based mailbox has additional attributes that you can't view by using this cmdlet. To view the attributes of the cloud-based mailbox, you need to use the Exchange admin center in the cloub-based service, or use remote PowerShell to connect to your cloud-based organization and run the Get-Mailbox cmdlet.
+The Get-RemoteMailbox cmdlet retrieves the mail-related attributes of a mail user in the on-premises Active Directory. It doesn't retrieve the attributes of the associated cloud-based mailbox. Most of the mail-related attributes of the on-premises mail user and the associated cloud-based mailbox should be the same. However, the cloud-based mailbox has additional attributes that you can't view by using this cmdlet. To view the attributes of the cloud-based mailbox, you need to use the Exchange admin center in the cloud-based service, or use remote PowerShell to connect to your cloud-based organization and run the Get-Mailbox cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -103,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to return information about the recipient's archive mailbox.
+The Archive switch is required to return the user's archive mailbox in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -118,9 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -167,13 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the remote mailbox that you want to view. You can use any value that uniquely identifies the remote mailbox.
-
-For example:
+The Identity parameter specifies the remote mailbox that you want to view. You can use any value that uniquely identifies the remote mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSyncDisabledSyncThreshold
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectUserSyncDisabledSyncThreshold
@@ -32,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
+Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
 ```
 
 This example sets the sync disable threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 400.

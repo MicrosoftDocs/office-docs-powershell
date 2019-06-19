@@ -1,8 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsTeamsMessagingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsTeamsMessagingPolicy
@@ -10,21 +13,28 @@ schema: 2.0.0
 ## SYNOPSIS
 The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.
 
-Set-CsTeamsMessagingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowOwnerDeleteMessage \<bool\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-AllowUserTranslation \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMessagingPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowOwnerDeleteMessage \<bool\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\]\[-AllowUserTranslation \<bool\>\]  \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsMessagingPolicy [-WhatIf] [-Description <Object>] [-AllowMemes <Object>] [-AllowGiphy <Object>]
- [-AllowStickers <Object>] [-AllowUserEditMessage <Object>] [-AllowOwnerDeleteMessage <Object>]
- [-AllowUserDeleteMessage <Object>] [[-Identity] <Object>] [-Tenant <Object>] [-AllowUserChat <Object>]
- [-GiphyRatingType <Object>] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
+ [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
+ [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet updates a Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
+ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify. This cmdlet updates a Teams messaging policy. Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
 
 
 ## EXAMPLES
@@ -36,7 +46,7 @@ PS C:\> Set-CsTeamsMessagingPolicy -Identity StudentMessagingPolicy -AllowGiphy 
 ```
 
 In this example two different property values are configured: AllowGiphy is set to false and AllowMemes is set to False.
-All other policy properties will be left as previously assigned
+All other policy properties will be left as previously assigned.
 
 ### Example 2
 ```
@@ -45,16 +55,16 @@ PS C:\> Get-CsTeamsMessagingPolicy | Set-CsTeamsMessagingPolicy -Identity Studen
 ```
 
 In this example two different property values are configured for all teams messaging policies in the organization: AllowGiphy is set to false and AllowMemes is set to False.
-All other policy properties will be left as previously assigned
+All other policy properties will be left as previously assigned.
 
 
 ## PARAMETERS
 
 ### -AllowGiphy
-Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -66,10 +76,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMemes
-Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -81,10 +91,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOwnerDeleteMessage
-Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -96,10 +106,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowStickers
-Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit
+Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -111,10 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserChat
-Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat
+Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -126,10 +136,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserDeleteMessage
-Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -141,10 +151,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserEditMessage
-Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -156,10 +166,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserTranslation
-Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -189,7 +199,7 @@ Accept wildcard characters: False
 Provide a description of your policy to identify purpose of creating it.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -201,6 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -215,10 +226,10 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines the Giphy content restrictions applicable to a user. Set this to STRICT, MODERATE or NORESTRICTION
+Determines the Giphy content restrictions applicable to a user. Set this to STRICT, MODERATE or NORESTRICTION.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -247,11 +258,10 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -263,9 +273,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -292,10 +311,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
+### -AllowUrlPreviews
+Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadReceiptsEnabledType
+Use this setting to specify whether read receipts are user controlled, enabled for everyone, or disabled. Set this to UserPreference, Everyone or None.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

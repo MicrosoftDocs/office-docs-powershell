@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityXMLAliaser
 ---
 
@@ -27,7 +30,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchSecurityXMLAliaser -InputUserStoreId win -OutputUserStoreIds ln3 -InputPropertyName mail
+New-FASTSearchSecurityXMLAliaser -InputUserStoreId win -OutputUserStoreIds ln3 -InputPropertyName mail
 ```
 
 This example creates an XML principal aliaser to map the mail property of a Microsoft user store to users and groups in another user store.
@@ -36,7 +39,7 @@ Use the Set-FASTSearchSecurityXMLAliaser cmdlet to upload the XML mapping file.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Get-FASTSearchSecurityAliaser xmlalias2 | New-FASTSearchSecurityXMLAliaser -Identity myxmlalias -OutputUserStoreIds ln2
+Get-FASTSearchSecurityAliaser xmlalias2 | New-FASTSearchSecurityXMLAliaser -Identity myxmlalias -OutputUserStoreIds ln2
 ```
 
 This example creates an XML principal aliaser based on an existing XML aliaser but sets the output user store IDs to 'ln2'.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-LinkedUser
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -106,13 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user.
-
-For example:
+The Identity parameter specifies the linked user that you want to view. You can use any value that uniquely identifies the linked user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PartnerApplication
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-PartnerApplication [[-Identity] <PartnerApplicationIdParameter>] [-DomainController <Fqdn>]
+Get-PartnerApplication [[-Identity] <PartnerApplicationIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -38,6 +43,21 @@ This example retrieves settings for all partner applications configured in Excha
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of a partner application.
+
+```yaml
+Type: PartnerApplicationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -55,18 +75,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the identity of a partner application.
+### -Organization
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: PartnerApplicationIdParameter
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

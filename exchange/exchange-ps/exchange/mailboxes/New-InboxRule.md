@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-InboxRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -493,13 +496,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
-
-For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -511,7 +510,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding condition parameter to this exception is From.
 
@@ -748,7 +747,7 @@ Accept wildcard characters: False
 ### -ExceptIfReceivedAfterDate
 The ExceptIfReceivedAfterDate parameter specifies an exception for the Inbox rule that looks for messages received after the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding condition parameter to this exception is ReceivedAfterDate.
 
@@ -767,7 +766,7 @@ Accept wildcard characters: False
 ### -ExceptIfReceivedBeforeDate
 The ExceptIfReceivedBeforeDate parameter specifies an exception for the Inbox rule that looks for messages received before the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding condition parameter to this exception is ReceivedBeforeDate.
 
@@ -828,9 +827,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -930,7 +931,7 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-You need to use this parameter with the ExceptIfWithinSizeRangeMainimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
+You need to use this parameter with the ExceptIfWithinSizeRangeMinimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
 
 The corresponding condition parameter to this exception is WithinSizeRangeMaximum.
 
@@ -1059,13 +1060,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardAsAttachmentTo
-The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1077,7 +1074,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1092,13 +1089,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardTo
-The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1110,7 +1103,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1125,13 +1118,9 @@ Accept wildcard characters: False
 ```
 
 ### -From
-The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender.
-
-For example:
+The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1143,7 +1132,7 @@ For example:
 
 - GUID
 
-You can specify multiple senders separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfFrom.
 
@@ -1255,13 +1244,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1508,7 +1493,7 @@ Accept wildcard characters: False
 ### -ReceivedAfterDate
 The ReceivedAfterDate parameter specifies a condition for the Inbox rule that looks for messages received after the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding exception parameter to this condition is ExceptIfReceivedAfterDate.
 
@@ -1527,7 +1512,7 @@ Accept wildcard characters: False
 ### -ReceivedBeforeDate
 The ReceivedBeforeDate parameter specifies a condition for the Inbox rule that looks for messages received before the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding exception parameter to this condition is ExceptIfReceivedBeforeDate.
 
@@ -1563,21 +1548,21 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectTo
-The RedirectTo parameter specifies an action for the Inbox rule that recdirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
-
-For example:
+The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1630,21 +1615,21 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient.
-
-For example:
+The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
-- Display name
+- Alias
 
 - Distinguished name (DN)
 
 - Canonical DN
 
+- Email address
+
 - GUID
 
-You can specify multiple recipients separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 The corresponding exception parameter to this condition is ExceptIfSentTo.
 

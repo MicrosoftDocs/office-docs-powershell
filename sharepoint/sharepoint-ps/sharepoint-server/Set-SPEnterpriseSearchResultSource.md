@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchResultSource
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchResultSource
@@ -33,10 +36,10 @@ The result source cannot be a built-in source (a built-in source has the BuiltIn
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
-PS C:\>$customResultSource = New-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -ProviderId fa947043-6046-4f97-9714-40d4c113963d -Name "Custom SharePoint Result Source"
-PS C:\>Set-SPEnterpriseSearchResultSource -Identity $customResultSource -Name "Basic SharePoint Result Source"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$owner = Get-SPEnterpriseSearchOwner -Level SSA
+$customResultSource = New-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -ProviderId fa947043-6046-4f97-9714-40d4c113963d -Name "Custom SharePoint Result Source"
+Set-SPEnterpriseSearchResultSource -Identity $customResultSource -Name "Basic SharePoint Result Source"
 ```
 
 This example updates the name of the result source and the identity of the result source is specified as a result source instance. 
@@ -45,10 +48,10 @@ SearchApplication and Owner are not required for this update operation.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
-PS C:\>$customResultSource = New-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -ProviderId fa947043-6046-4f97-9714-40d4c113963d -Name "Custom SharePoint Result Source"
-PS C:\>Set-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -Identity "Custom SharePoint Result Source" -Description "A custom SharePoint Result Source for demonstration purposes"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$owner = Get-SPEnterpriseSearchOwner -Level SSA
+$customResultSource = New-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -ProviderId fa947043-6046-4f97-9714-40d4c113963d -Name "Custom SharePoint Result Source"
+Set-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner -Identity "Custom SharePoint Result Source" -Description "A custom SharePoint Result Source for demonstration purposes"
 ```
 
 This example updates the description of the result source and the identity of the result source is specified by name.

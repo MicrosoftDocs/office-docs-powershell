@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TextMessagingAccount
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,13 +21,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-CountryRegionId <RegionInfo>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-MobileOperatorId <Int32>]
- [-NotificationPhoneNumber <E164Number>] [-WhatIf] [<CommonParameters>]
+Set-TextMessagingAccount [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-CountryRegionId <RegionInfo>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-MobileOperatorId <Int32>]
+ [-NotificationPhoneNumber <E164Number>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-TextMessagingAccount cmdlet configures a user's account for text messaging notifications. You can configure several settings, including the mobile phone number and country or region ID.
+When text messaging notifications are enabled on a mailbox, you can configure calendar notifications, voice mail notifications, and email notifications using an inbox rule.
+
+To clear the text messaging settings from your own mailbox, use the Clear-TextMessagingAccount parameter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -47,13 +57,9 @@ This example sets the region, mobile operator and notification phone number for 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -105,7 +111,13 @@ Accept wildcard characters: False
 ```
 
 ### -CountryRegionId
-The CountryRegionId parameter specifies the country or region in which the user's mobile operator resides.
+The CountryRegionId parameter specifies the country that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 alpha-2 country code value, the following values correspond to the country selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+
+- US
+
+- CA
+
+- RO
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
 
@@ -160,7 +172,27 @@ Accept wildcard characters: False
 ```
 
 ### -MobileOperatorId
-The MobileOperatorId parameter specifies the mobile operator ID for the user.
+The MobileOperatorId parameter specifies the mobile operator (carrier) for your phone. Although this parameter accepts any random number, the following values correspond to the country and mobile operator selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+
+United States:
+
+- AT&T: 15001
+
+- Sprint PCS: 15004
+
+- T-Mobile: 15005
+
+- Verizon Wireless: 15006
+
+Canada:
+
+- Bell: 17001
+
+- Telus Mobility: 17002
+
+Romania:
+
+- Orange Romania: 18001
 
 ```yaml
 Type: Int32
@@ -175,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationPhoneNumber
-The NotificationPhoneNumber parameter specifies the telephone number to use for text messaging notifications.
+The NotificationPhoneNumber parameter specifies the telephone number to use for your text messaging notifications. This parameter uses the E.164 format: +\<CountryCode\>\<CompleteTelephoneNumber\> (for example, +15551234567).
 
 ```yaml
 Type: E164Number

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPEnterpriseSearchServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPEnterpriseSearchServiceInstance
@@ -30,7 +33,7 @@ This may lead to a short downtime for queries.
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
+Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
 ```
 
 This example starts the local search service instance.

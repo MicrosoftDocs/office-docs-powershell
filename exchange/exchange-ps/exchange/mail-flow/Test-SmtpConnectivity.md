@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-SmtpConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -96,7 +99,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the transport server for which the cmdlet verifies SMTP connectivity. The cmdlet verifies SMTP connectivity for all Receive connectors hosted on the specified server. If no server is specified, the cmdlet attempts to perform the SMTP connectivity test against all Receive connectors on the local server.
+The Identity parameter specifies the transport server for which the cmdlet verifies SMTP connectivity .
+
+The Identity parameter specifies the transport server where you want to verify SMTP connectivity (test all Receive connectors on the specified server). You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+ If you don't use this parameter, all Receive connectors on the local server are tested.
 
 ```yaml
 Type: ServerIdParameter

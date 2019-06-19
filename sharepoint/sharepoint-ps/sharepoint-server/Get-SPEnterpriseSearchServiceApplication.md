@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchServiceApplication
@@ -26,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 ```
 
 This example obtains a reference to a search service application named 'Search Service Application'.

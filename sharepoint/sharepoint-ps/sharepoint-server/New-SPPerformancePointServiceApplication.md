@@ -3,6 +3,9 @@ external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPPerformancePointServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPPerformancePointServiceApplication
@@ -40,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE------------------------
 ```
-PS C:\>New-SPPerformancePointServiceApplication -Name PPS_Application_01 -ApplicationPool PPS_Application_Pool_01
+New-SPPerformancePointServiceApplication -Name PPS_Application_01 -ApplicationPool PPS_Application_Pool_01
 ```
 
 This example creates a new PerformancePoint Service application named PPSApp_01 and sets it to run under an application pool named PPS_Application_Pool_01.

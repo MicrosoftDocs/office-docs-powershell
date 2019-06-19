@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: New-ConnectSubscription
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -19,9 +22,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Facebook
 ```
-New-ConnectSubscription -AppAuthorizationCode <String> [-Facebook] -Mailbox <MailboxIdParameter> -RedirectUri <String>
- [-Confirm]
- [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription -Mailbox <MailboxIdParameter> -RedirectUri <String>
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### LinkedIn
@@ -40,42 +42,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifyer value> -RequestSecret <Request Secret value> -RequestToken <Request Token value>
+New-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -RequestSecret <Request Secret value> -RequestToken <Request Token value>
 ```
 
 This example modifies a people connection to LinkedIn.
 
 ## PARAMETERS
-
-### -AppAuthorizationCode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Facebook
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Facebook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Facebook
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -LinkedIn
 The LinkedIn parameter specifies whether you want to edit a LinkedIn subscription.
@@ -93,13 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that will contain the subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that will contain the subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

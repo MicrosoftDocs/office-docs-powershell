@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioExternalData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPVisioExternalData
@@ -26,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------------ 
 ```
-PS C:\>Get-SPVisioExternalData -VisioServiceApplication "VGS1"
+Get-SPVisioExternalData -VisioServiceApplication "VGS1"
 ```
 
 This example gets settings related to external data for a Visio Services application.
 
 ### ------------------EXAMPLE 2------------------------ 
 ```
-PS C:\>Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
+Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
 ```
 
 This example uses a pipe bind to get settings related to external data for a Visio Services application.

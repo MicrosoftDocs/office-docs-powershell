@@ -55,16 +55,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\>$ruleCollection.Add($rule)
-PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
+$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
 $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-PS C:\>$web = Get-SPWeb http://webUrl
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\>$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
-PS C:\>New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
+$web = Get-SPWeb https://webUrl
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
+New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
 >> -Name "CustomResultType" `
 >> -Rules $ruleCollection `
 >> -RulePriority 1 `

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderMailboxMigrationRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -64,6 +67,20 @@ Get-PublicFolderMailboxMigrationRequest -HighPriority $true
 ```
 
 In on-premises Exchange, this example returns all migration requests that have a priority value of High, Higher, Highest or Emergency.
+
+### -------------------------- Example 3 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
+```
+
+This example returns public folder mailbox migration requests that don't have a target mailbox.
+
+### -------------------------- Example 4 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
+```
+
+This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
 
 ## PARAMETERS
 
@@ -175,9 +192,11 @@ This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
@@ -268,12 +287,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

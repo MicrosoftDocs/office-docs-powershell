@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPScaleOutDatabaseInconsistency
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPScaleOutDatabaseInconsistency
@@ -31,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\>Get-SPScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
+Get-SPScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
 ```
 
 This example gets all the scale-out inconsistencies for the given service application.

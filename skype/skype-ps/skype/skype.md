@@ -20,21 +20,9 @@ zh-TW Version: 17.0.15229.2100
 
 # Skype for Business PowerShell
 ## Description
-The following cmdlet references are for Skype for Business.
+The following cmdlet references are for Skype for Business and Microsoft Teams. You can find information on installing the module for Skype for Business Online here: https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell. If you are using Skype for Business Server then the cmdlets are available in the Skype for Business Server Management Shell and you can find information about it here: https://docs.microsoft.com/skypeforbusiness/manage/management-shell.
 
 ## Skype for Business Cmdlets
-### [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
-{{Manually Enter New-CSOnlinePSTNGateway Description Here}}
-
-### [Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
-{{Manually Enter Set-CSOnlinePSTNGateway Description Here}}
-
-### [Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
-{{Manually Enter Get-CSOnlinePSTNGateway Description Here}}
-
-### [Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)
-{{Manually Enter Remove-CSOnlinePSTNGateway Description Here}}
-
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
 {{Manually Enter Add-CsSlaDelegates Description Here}}
 
@@ -253,9 +241,6 @@ The following cmdlet references are for Skype for Business.
 
 ### [Get-CsBusyOptions](Get-CsBusyOptions.md)
 {{Manually Enter Get-CsBusyOptions Description Here}}
-
-### [Get-CsCallerIdPolicy](Get-CsCallerIdPolicy.md)
-{{Manually Enter Get-CsCallerIdPolicy Description Here}}
 
 ### [Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 {{Manually Enter Get-CsCallingLineIdentity Description Here}}
@@ -575,6 +560,9 @@ The following cmdlet references are for Skype for Business.
 ### [Get-CsOnlineNumberPortOutOrderPin](Get-CsOnlineNumberPortOutOrderPin.md)
 {{Manually Enter Get-CsOnlineNumberPortOutOrderPin Description Here}}
 
+### [Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
+{{Manually Enter Get-CsOnlinePSTNGateway Description Here}}
+
 ### [Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
 {{Manually Enter Get-CsOnlineTelephoneNumber Description Here}}
 
@@ -761,6 +749,9 @@ The following cmdlet references are for Skype for Business.
 ### [Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 {{Manually Enter Get-CsStorageServiceConfiguration Description Here}}
 
+### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+{{Manually Enter Get-CsTeamsCallingPolicy Description Here}}
+
 ### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
@@ -785,8 +776,20 @@ The following cmdlet references are for Skype for Business.
 ### [Get-CsTenantMigrationConfiguration](Get-CsTenantMigrationConfiguration.md)
 {{Manually Enter Get-CsTenantMigrationConfiguration Description Here}}
 
+### [Get-CsTenantNetworkRegion](Get-CsTenantNetworkRegion.md)
+{{Manually Enter Get-CsTenantNetworkRegion Description Here}}
+
+### [Get-CsTenantNetworkSite](Get-CsTenantNetworkSite.md)
+{{Manually Enter Get-CsTenantNetworkSite Description Here}}
+
+### [Get-CsTenantNetworkSubnet](Get-CsTenantNetworkSubnet.md)
+{{Manually Enter Get-CsTenantNetworkSubnet Description Here}}
+
 ### [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
 {{Manually Enter Get-CsTenantPublicProvider Description Here}}
+
+### [Get-CsTenantTrustedIPAddress](Get-CsTenantTrustedIPAddress.md)
+{{Manually Enter Get-CsTenantTrustedIPAddress Description Here}}
 
 ### [Get-CsTenantUpdateTimeWindow](Get-CsTenantUpdateTimeWindow.md)
 {{Manually Enter Get-CsTenantUpdateTimeWindow Description Here}}
@@ -917,9 +920,6 @@ The following cmdlet references are for Skype for Business.
 ### [Grant-CsBroadcastMeetingPolicy](Grant-CsBroadcastMeetingPolicy.md)
 {{Manually Enter Grant-CsBroadcastMeetingPolicy Description Here}}
 
-### [Grant-CsCallerIdPolicy](Grant-CsCallerIdPolicy.md)
-{{Manually Enter Grant-CsCallerIdPolicy Description Here}}
-
 ### [Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
 {{Manually Enter Grant-CsCallingLineIdentity Description Here}}
 
@@ -982,6 +982,9 @@ The following cmdlet references are for Skype for Business.
 
 ### [Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 {{Manually Enter Grant-CsSetupPermission Description Here}}
+
+### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+{{Manually Enter Grant-CsTeamsCallingPolicy Description Here}}
 
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 {{Manually Enter Grant-CsTeamsMeetingPolicy Description Here}}
@@ -1162,9 +1165,6 @@ The following cmdlet references are for Skype for Business.
 
 ### [New-CsBlockedDomain](New-CsBlockedDomain.md)
 {{Manually Enter New-CsBlockedDomain Description Here}}
-
-### [New-CsCallerIdPolicy](New-CsCallerIdPolicy.md)
-{{Manually Enter New-CsCallerIdPolicy Description Here}}
 
 ### [New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
 {{Manually Enter New-CsCallingLineIdentity Description Here}}
@@ -1382,6 +1382,9 @@ The following cmdlet references are for Skype for Business.
 ### [New-CsOnlineNumberPortInOrder](New-CsOnlineNumberPortInOrder.md)
 {{Manually Enter New-CsOnlineNumberPortInOrder Description Here}}
 
+### [New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
+{{Manually Enter New-CsOnlinePSTNGateway Description Here}}
+
 ### [New-CsOnlineSchedule](New-CsOnlineSchedule.md)
 {{Manually Enter New-CsOnlineSchedule Description Here}}
 
@@ -1565,6 +1568,18 @@ The following cmdlet references are for Skype for Business.
 ### [New-CsTenantDialPlan](New-CsTenantDialPlan.md)
 {{Manually Enter New-CsTenantDialPlan Description Here}}
 
+### [New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+{{Manually Enter New-CsTenantNetworkRegion Description Here}}
+
+### [New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
+{{Manually Enter New-CsTenantNetworkSite Description Here}}
+
+### [New-CsTenantNetworkSubnet](New-CsTenantNetworkSubnet.md)
+{{Manually Enter New-CsTenantNetworkSubnet Description Here}}
+
+### [New-CsTenantTrustedIPAddress](New-CsTenantTrustedIPAddress.md)
+{{Manually Enter New-CsTenantTrustedIPAddress Description Here}}
+
 ### [New-CsTenantUpdateTimeWindow](New-CsTenantUpdateTimeWindow.md)
 {{Manually Enter New-CsTenantUpdateTimeWindow Description Here}}
 
@@ -1711,9 +1726,6 @@ The following cmdlet references are for Skype for Business.
 
 ### [Remove-CsBusyOptions](Remove-CsBusyOptions.md)
 {{Manually Enter Remove-CsBusyOptions Description Here}}
-
-### [Remove-CsCallerIdPolicy](Remove-CsCallerIdPolicy.md)
-{{Manually Enter Remove-CsCallerIdPolicy Description Here}}
 
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 {{Manually Enter Remove-CsCallingLineIdentity Description Here}}
@@ -1928,6 +1940,9 @@ The following cmdlet references are for Skype for Business.
 ### [Remove-CsOnlineNumberPortInOrder](Remove-CsOnlineNumberPortInOrder.md)
 {{Manually Enter Remove-CsOnlineNumberPortInOrder Description Here}}
 
+### [Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)
+{{Manually Enter Remove-CsOnlinePSTNGateway Description Here}}
+
 ### [Remove-CsOnlineTelephoneNumber](Remove-CsOnlineTelephoneNumber.md)
 {{Manually Enter Remove-CsOnlineTelephoneNumber Description Here}}
 
@@ -2047,6 +2062,18 @@ The following cmdlet references are for Skype for Business.
 
 ### [Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
 {{Manually Enter Remove-CsTenantDialPlan Description Here}}
+
+### [Remove-CsTenantNetworkRegion](Remove-CsTenantNetworkRegion.md)
+{{Manually Enter Remove-CsTenantNetworkRegion Description Here}}
+
+### [Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+{{Manually Enter Remove-CsTenantNetworkSite Description Here}}
+
+### [Remove-CsTenantNetworkSubnet](Remove-CsTenantNetworkSubnet.md)
+{{Manually Enter Remove-CsTenantNetworkSubnet Description Here}}
+
+### [Remove-CsTenantTrustedIPAddress](Remove-CsTenantTrustedIPAddress.md)
+{{Manually Enter Remove-CsTenantTrustedIPAddress Description Here}}
 
 ### [Remove-CsTenantUpdateTimeWindow](Remove-CsTenantUpdateTimeWindow.md)
 {{Manually Enter Remove-CsTenantUpdateTimeWindow Description Here}}
@@ -2233,9 +2260,6 @@ The following cmdlet references are for Skype for Business.
 
 ### [Set-CsBusyOptions](Set-CsBusyOptions.md)
 {{Manually Enter Set-CsBusyOptions Description Here}}
-
-### [Set-CsCallerIdPolicy](Set-CsCallerIdPolicy.md)
-{{Manually Enter Set-CsCallerIdPolicy Description Here}}
 
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 {{Manually Enter Set-CsCallingLineIdentity Description Here}}
@@ -2519,6 +2543,9 @@ The following cmdlet references are for Skype for Business.
 ### [Set-CsOnlineNumberPortOutOrderPin](Set-CsOnlineNumberPortOutOrderPin.md)
 {{Manually Enter Set-CsOnlineNumberPortOutOrderPin Description Here}}
 
+### [Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
+{{Manually Enter Set-CsOnlinePSTNGateway Description Here}}
+
 ### [Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
 {{Manually Enter Set-CsOnlineVoicemailPolicy Description Here}}
 
@@ -2651,6 +2678,9 @@ The following cmdlet references are for Skype for Business.
 ### [Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)
 {{Manually Enter Set-CsStorageServiceConfiguration Description Here}}
 
+### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+{{Manually Enter Set-CsTeamsCallingPolicy Description Here}}
+
 ### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
@@ -2659,6 +2689,18 @@ The following cmdlet references are for Skype for Business.
 
 ### [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
 {{Manually Enter Set-CsTenantDialPlan Description Here}}
+
+### [Set-CsTenantNetworkRegion](Set-CsTenantNetworkRegion.md)
+{{Manually Enter Set-CsTenantNetworkRegion Description Here}}
+
+### [Set-CsTenantNetworkSite](Set-CsTenantNetworkSite.md)
+{{Manually Enter Set-CsTenantNetworkSite Description Here}}
+
+### [Set-CsTenantNetworkSubnet](Set-CsTenantNetworkSubnet.md)
+{{Manually Enter Set-CsTenantNetworkSubnet Description Here}}
+
+### [Set-CsTenantTrustedIPAddress](Set-CsTenantTrustedIPAddress.md)
+{{Manually Enter Set-CsTenantTrustedIPAddress Description Here}}
 
 ### [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
 {{Manually Enter Set-CsTenantFederationConfiguration Description Here}}
@@ -3119,8 +3161,34 @@ The following cmdlet references are for Skype for Business.
 
 ### [Get-CsAuthConfig](Get-CsAuthConfig.md)
 
-### [Get-CsOnlineSipDomains](Get-CsOnlineSipDomains.md)
+### [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
 
-### [Enable-CsOnlineSipDomains](Enable-CsOnlineSipDomains.md)
+### [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
 
-### [Disable-CsOnlineSipDomains](Disable-CsOnlineSipDomains.md)
+### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+
+### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+
+### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
+
+### [New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
+
+### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
+
+### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+
+### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+
+### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+### [Get-CsTeamsChannelsPolicy](Get-CsTeamsChannelsPolicy.md)
+
+### [Set-CsTeamsChannelsPolicy](Set-CsTeamsChannelsPolicy.md)
+
+### [New-CsTeamsChannelsPolicy](New-CsTeamsChannelsPolicy.md)
+
+### [Grant-CsTeamsChannelsPolicy](Grant-CsTeamsChannelsPolicy.md)
+
+### [Remove-CsTeamsChannelsPolicy](Remove-CsTeamsChannelsPolicy.md)

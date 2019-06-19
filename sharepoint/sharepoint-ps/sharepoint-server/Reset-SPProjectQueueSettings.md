@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Reset-SPProjectQueueSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Reset-SPProjectQueueSettings
@@ -28,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>Reset-SPProjectQueueSettings -ServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+Reset-SPProjectQueueSettings -ServiceApplication $sa
 ```
 
 This example resets the queue settings for a Project Server Service Application service application.

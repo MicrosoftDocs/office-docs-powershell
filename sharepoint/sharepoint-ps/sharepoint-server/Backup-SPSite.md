@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Backup-SPSite
@@ -32,30 +35,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
-This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
+This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 
 
 ### -------------------EXAMPLE 2-------------------- 
 ```
-PS C:\>Get-SPSiteAdministration http://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
+Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
 ```
 
-This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
+This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 Same result as Example 1, but a different way of performing the operation.
 
 ### -------------------EXAMPLE 3-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
 ```
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
 ### -------------------EXAMPLE 4-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
 ```
 
 This example backs up a site collection and prevents placing the site into a read only mode during the backup phase. Use the -NoSiteLock parameter when backing up a site in production where it is desirable to not place the site into a read only mode while the backup takes place.
@@ -65,7 +68,7 @@ This example backs up a site collection and prevents placing the site into a rea
 ### -Identity
 Specifies the URL or GUID of the site collection to be backed up.
 
-For example, a valid URL, such as http://server_name/sites/site_name or a GUID such as, "01234567-89ab-cdef-0123-456789abcdef"
+For example, a valid URL, such as https://server_name/sites/site_name or a GUID such as, "01234567-89ab-cdef-0123-456789abcdef"
 
 ```yaml
 Type: SPSitePipeBind

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPSite
@@ -41,26 +44,26 @@ If a site collection is backed up and restored to a different URL location withi
 
 ### ----------------------EXAMPLE 1----------------------
 ```
-PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
-This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL http://server_name/sites/site_name.
+This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL https://server_name/sites/site_name.
 
 
 ### ----------------------EXAMPLE 2----------------------
 ```
-PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
+Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
-This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at http://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
+This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at https://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
 
 
 ### ----------------------EXAMPLE 3----------------------
 ```
-PS C:\>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
+Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
 ```
 
-This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection http://www.example.com on the Web application http://server_name.
+This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection https://www.example.com on the Web application https://server_name.
 
 
 ## PARAMETERS
@@ -72,7 +75,7 @@ A site collection does not have to already exist at the URL location to perform 
 However, you must specify a valid URL location that a site collection can be created.
 If a site collection already exists at the specified URL location, you must specify the Force parameter to overwrite it.
 
-The type must be a valid URL, in the form http://server_name/sites/site_name.
+The type must be a valid URL, in the form https://server_name/sites/site_name.
 
 ```yaml
 Type: String
@@ -231,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeaderWebApplication
-A valid URL assigned to the Web application by using alternate access mapping, such as http://server_name
+A valid URL assigned to the Web application by using alternate access mapping, such as https://server_name
 
 Restores a site collection as a host-named site collection instead of a path-based site collection.
 When the HostHeaderWebApplication parameter is present, the value of the Identity parameter is the URL of the host-named site collection and the value of the HostHeaderWebApplication parameter is the URL of the Web application that will hold the host-named site collection.

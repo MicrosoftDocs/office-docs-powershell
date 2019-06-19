@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteMapDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteMapDatabase
@@ -24,7 +27,7 @@ Do not use
 
 ### Example 1 
 ```
-PS C:\>Do not use
+Do not use
 ```
 
 Do not use

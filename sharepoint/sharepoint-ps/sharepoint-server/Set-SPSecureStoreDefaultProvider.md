@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecureStoreDefaultProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSecureStoreDefaultProvider
@@ -35,7 +38,7 @@ C:\PS>[Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
 
 C:\PS>$type = [Contoso.SecureStore.ContosoSecureStoreProvider]
 
-PS C:\>Set-SPSecureStoreDefaultProvider -Type $type
+Set-SPSecureStoreDefaultProvider -Type $type
 ```
 
 This example sets the custom implemented secure store provider.

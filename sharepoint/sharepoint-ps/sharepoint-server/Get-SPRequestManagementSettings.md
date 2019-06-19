@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPRequestManagementSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPRequestManagementSettings
@@ -29,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE------- 
 ```
-PS C:\>Get-SPRequestManagementSettings -Identity <GUID>
+Get-SPRequestManagementSettings -Identity <GUID>
 ```
 
 This example returns a request manager object for a specified identity.

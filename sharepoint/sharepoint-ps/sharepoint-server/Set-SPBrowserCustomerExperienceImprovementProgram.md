@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPBrowserCustomerExperienceImprovementProgram
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPBrowserCustomerExperienceImprovementProgram
@@ -45,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the farm.
@@ -53,7 +56,7 @@ This example turns on the browser Customer Experience Improvement Program for th
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
 ```
 
 This example turns off the browser Customer Experience Improvement Program for the farm.
@@ -61,7 +64,7 @@ This example turns off the browser Customer Experience Improvement Program for t
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
+Set-SPWebApplication https://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.
@@ -88,7 +91,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Sets the Customer Experience Improvement Program opt-in state for the specified site subscription.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -106,7 +109,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Sets the Customer Experience Improvement Program opt-in state for the specified SharePoint Web application.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
 
 ```yaml
 Type: SPWebApplicationPipeBind

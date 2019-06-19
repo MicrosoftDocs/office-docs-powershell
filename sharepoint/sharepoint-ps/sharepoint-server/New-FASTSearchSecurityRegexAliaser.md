@@ -2,6 +2,9 @@
 external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityRegexAliaser
 ---
 
@@ -28,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -Identity regex1 -InputUserStoreId ln1 -OutputUserStoreIds ln2
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -Identity regex1 -InputUserStoreId ln1 -OutputUserStoreIds ln2
 ```
 
 This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -InputUserStoreId ln1 -OutputUserStoreIds ln2,ln3 -CaseSensitive $False -UnicodeCaseSensitive $False
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -InputUserStoreId ln1 -OutputUserStoreIds ln2,ln3 -CaseSensitive $False -UnicodeCaseSensitive $False
 ```
 
 This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.

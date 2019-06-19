@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -18,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime> [-Formatted] [-FreeText <String>]
- [-IPAddresses <String[]>] [-ObjectIds <String[]>] [-Operations <String[]>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ResultSize <Int32>] [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
- [-SessionId <String>] [-SiteIds <String[]>] [-UserIds <String[]>] [<CommonParameters>]
+Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
+ [-Formatted]
+ [-FreeText <String>]
+ [-IPAddresses <String[]>]
+ [-ObjectIds <String[]>]
+ [-Operations <String[]>]
+ [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-ResultSize <Int32>]
+ [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
+ [-SessionId <String>]
+ [-SiteIds <String[]>]
+ [-UserIds <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,53 +49,53 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/2/2017
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
 ```
 
-This example searches the unified audit log for all events from May 1, 201712:00AM to May 2, 2017 12:00AM.
+This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
 
 Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate "6/1/2017 8:00 AM" -EndDate "6/1/2017 6:00 PM" -RecordType ExchangeAdmin
+Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM" -RecordType ExchangeAdmin
 ```
 
-This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2017.
+This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
 
 >[!NOTE]
 > If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
 ```
 
-This example searches the unified audit log for all events from May 1, 2017 to May 8, 2017. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 > [!NOTE]
 > If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
 ### -------------------------- Example 4 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
 ```
 
-This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2017 to May 8, 2017. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 ### -------------------------- Example 5 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
 ```
 
-This example searches the unified audit log from May 1, 2017 to May 8, 2017 for all events relating to a specific Word document identified by its ObjectIDs value.
+This example searches the unified audit log from May 1, 2018 to May 8, 2018 for all events relating to a specific Word document identified by its ObjectIDs value.
 
 ## PARAMETERS
 
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -103,7 +114,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -121,6 +132,8 @@ Accept wildcard characters: False
 
 ### -Formatted
 The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch.
+
+In addition, this switch makes AuditData more readable.
 
 ```yaml
 Type: SwitchParameter
@@ -201,9 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the log entries by record type.
-
-Valid values are:
+The RecordType parameter filters the log entries by record type. Valid values are:
 
 - AzureActiveDirectory
 
@@ -239,7 +250,11 @@ Valid values are:
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
@@ -260,7 +275,7 @@ Valid values are:
 - Yammer
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -367,12 +382,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
+$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; 
+Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 

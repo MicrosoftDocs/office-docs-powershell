@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-ProjectServerLicense
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-ProjectServerLicense
@@ -23,7 +26,7 @@ Retrieves the status of the license for Project Server. If the current license i
 
 ### Example 1 
 ```
-PS C:\>Get-ProjectServerLicense
+Get-ProjectServerLicense
 ```
 
 Gets the status of the Project Server license and when it was activated.

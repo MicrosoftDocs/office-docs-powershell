@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppStoreConfiguration
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
+Set-SPAppStoreConfiguration -Url https://office.microsoft.com -Enable $true
 ```
 
 This example sets the URL to the Office.com server.
@@ -36,14 +39,14 @@ This example sets the URL to the Office.com server.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Enable $false
+Set-SPAppStoreConfiguration -Enable $false
 ```
 
 This example turns off the SharePoint Store.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Enable $true
+Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-pecifies whether the Office Store services lets third- party add-ins to be found or downloaded.
+Specifies whether the Office Store services lets third- party add-ins to be found or downloaded.
 
 This is intended for administrators to disable discovery and downloads of third-party add-ins on their SharePoint tenants and site collections.
 

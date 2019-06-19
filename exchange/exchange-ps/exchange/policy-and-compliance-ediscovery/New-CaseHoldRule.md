@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-CaseHoldRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -37,10 +40,10 @@ This example creates a new case hold rule named 2016 Budget Spreadsheets and add
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2017"
+New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
 ```
 
-This example places email messages received by the recipients between December 1, 2016 and December 31, 2017 on hold.
+This example places email messages received by the recipients between December 1, 2016 and December 31, 2018 on hold.
 
 ## PARAMETERS
 
@@ -60,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the case holdpolicy that contains the rule. You can use any value that uniquely identifies the policy. For example:
+The Policy parameter specifies the case hold policy that contains the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -171,12 +174,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

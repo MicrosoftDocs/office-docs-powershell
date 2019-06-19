@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPConfigurationDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPConfigurationDatabase
@@ -34,21 +37,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential)
+New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential)
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -SkipRegisterAsDistributedCacheHost
+New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -SkipRegisterAsDistributedCacheHost
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account and skips registering the server as Distributed Cache host. Applies to SharePoint Server 2013 and SharePoint Server 2016, SharePoint Server 2019 only.
 
 ### ------------------EXAMPLE 3----------------------- 
 ```
-PS C:\>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -LocalServerRole Custom
+New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -LocalServerRole Custom
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account and sets the Server Role to Custom. Applies to SharePoint Server 2016, SharePoint Server 2019 only.

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPMetadataServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPMetadataServiceApplication
@@ -46,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-------------
 ```
-PS C:\>New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
+New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
 ```
 
 This example creates a new managed metadata service application.
@@ -54,7 +57,7 @@ This example creates a new managed metadata service application.
 
 ### -------------------EXAMPLE 2-------------
 ```
-PS C:\>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
+New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "https://sitename" -SyndicationErrorReportEnabled
 ```
 
 This example creates a new managed metadata service application and specifies a content type hub to be used for syndication.
@@ -63,7 +66,7 @@ It also enables error reporting during syndication.
 
 ### -------------------EXAMPLE 3-------------
 ```
-PS C:\>New-SPMetadataServiceApplication -Name "MetadataServiceApp3" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB3" -PartitionMode
+New-SPMetadataServiceApplication -Name "MetadataServiceApp3" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB3" -PartitionMode
 ```
 
 This example creates a new managed metadata service application that is partitioned, for use by sites in a subscription.

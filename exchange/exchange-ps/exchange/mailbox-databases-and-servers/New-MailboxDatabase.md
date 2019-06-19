@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,12 +22,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### NonRecovery
 ```
-New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter> [-AutoDagExcludeFromMonitoring <$true | $false>] [-IsExcludedFromProvisioning <$true | $false>] [-IsExcludedFromInitialProvisioning] [-IsSuspendedFromProvisioning <$true | $false>] [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-PublicFolderDatabase <DatabaseIdParameter>]
+New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
+ [-AutoDagExcludeFromMonitoring <$true | $false>]
+ [-IsExcludedFromProvisioning <$true | $false>]
+ [-IsExcludedFromInitialProvisioning]
+ [-IsSuspendedFromProvisioning <$true | $false>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>]
+ [-PublicFolderDatabase <DatabaseIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>]
  [-SkipDatabaseLogFolderCreation]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -36,7 +44,6 @@ New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter> [-Recovery]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>]
  [-SkipDatabaseLogFolderCreation]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -56,7 +63,7 @@ This example creates the mailbox database DB1. This example also uses a non-defa
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the new mailbox database.
+The Name parameter specifies the name of the new mailbox database. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -83,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recovery
-The Recovery parameter specifies that the new database is designated as a recovery database.
+The Recovery switch specifies that the new database is designated as a recovery database. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server on which you want to create the database.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
@@ -236,21 +251,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxProvisioningAttributes
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningAttributes
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OfflineAddressBook
 The OfflineAddressBook parameter specifies the associated offline address book (OAB) for the new mailbox database.
 
@@ -267,7 +267,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database.
+The PublicFolderDatabase parameter specifies the associated public folder database for the new mailbox database. You can use any value that uniquely identifies the public folder database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

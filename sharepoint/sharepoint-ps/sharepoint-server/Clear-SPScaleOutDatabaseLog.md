@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPScaleOutDatabaseLog
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPScaleOutDatabaseLog
@@ -27,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE------- 
 ```
-PS C:\>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
 This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.

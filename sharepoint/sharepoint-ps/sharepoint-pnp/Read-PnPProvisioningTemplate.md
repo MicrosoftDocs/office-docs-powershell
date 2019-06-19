@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Read-PnPProvisioningTemplate
@@ -29,7 +29,7 @@ Loads a PnP file from the file system
 Read-PnPProvisioningTemplate -Path template.pnp -TemplateProviderExtensions $extensions
 ```
 
-Loads a PnP file from the file system using some custom template provider extenions while loading the file.
+Loads a PnP file from the file system using some custom template provider extensions while loading the file.
 
 ## PARAMETERS
 
@@ -59,4 +59,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

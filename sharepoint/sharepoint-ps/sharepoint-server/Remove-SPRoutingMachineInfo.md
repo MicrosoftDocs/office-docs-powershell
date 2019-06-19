@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPRoutingMachineInfo
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPRoutingMachineInfo
@@ -34,7 +37,7 @@ C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
 C:\PS>$M=Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName>
 
-PS C:\>Remove-SPRoutingMachineInfo -Identity $M
+Remove-SPRoutingMachineInfo -Identity $M
 ```
 
 This example removes a routing target for a specified identity.

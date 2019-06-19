@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServerScaleOutDatabaseLogEntry
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServerScaleOutDatabaseLogEntry
@@ -35,7 +38,7 @@ C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceAppl
 
 C:\PS>$database = $databases[0]
 
-PS C:\>Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
+Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
 ```
 
 This example gets the 10 most recent scale-out log entries from the first scale-out database of the given service application.

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-MailboxQuarantine
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -17,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  MailboxIdentity
+### MailboxIdentity
 ```
 Enable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
  [-AllowMigration]
@@ -59,13 +62,9 @@ This example quarantines the mailbox for the user Brian Johnson.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to quarantine. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to quarantine. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
