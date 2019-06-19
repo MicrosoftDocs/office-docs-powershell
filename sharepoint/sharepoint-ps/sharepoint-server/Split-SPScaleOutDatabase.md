@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE---------------
+### ---------------EXAMPLE 1---------------
 ```
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -52,7 +52,19 @@ Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabas
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
 
-The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
+The example also moves 30% of the data from the upper side of the data range in the first scale-out database of the given service application.
+
+### ---------------EXAMPLE 2---------------
+
+```
+$ssa = Get-SPEnterpriseSearchServiceApplication
+
+$newReportingDb = "Search_AnalyticsReporting2"
+$reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
+Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
+
+```
+This example scales out the Search Analytics database, moving 33% of data to the new databases.
 
 ## PARAMETERS
 
