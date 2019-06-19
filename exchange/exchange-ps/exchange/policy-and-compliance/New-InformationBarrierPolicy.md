@@ -61,6 +61,13 @@ New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufact
 
 In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
 
+### Example 3
+```
+New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing" -State Inactive
+```
+
+In this example, we defined a policy that allows the *Research* segment to communicate with only *HR* and *Manufacturing*.
+
 ## PARAMETERS
 
 ### -Name
