@@ -29,10 +29,10 @@ Use the Copy-SPTaxonomyGroups cmdlet to copy specified Metadata groups from an o
 ### Example 1 
 ```
 $credential = Get-Credential
-Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "http://sharepoint" -RemoteSiteUrl "http://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
+Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "https://sharepoint" -RemoteSiteUrl "https://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
 ```
 
-This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "http://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
+This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "https://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
 
 ## PARAMETERS
 

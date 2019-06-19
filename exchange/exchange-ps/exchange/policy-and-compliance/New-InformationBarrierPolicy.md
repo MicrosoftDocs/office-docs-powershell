@@ -17,11 +17,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
+### InformationBarrierDefault (Default)
 ```
-New-InformationBarrierPolicy [-Name] <String> -AssigneeFilter <String> -AssigneeFilterName <String> -CommunicationAllowedFilter <String> -CommunicationAllowedFilterName <String>
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
  [-Comment <String>]
  [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### OrganizationSegmentsAllowed
+```
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>>
+ [-Comment <String>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### OrganizationSegmentsBlocked
+```
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
+ [-Comment <String>]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,14 +52,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive
 ```
 
-In this example, we are defining a policy called *Sales-Research* for a segment called *Sales*. When active and applied, this policy will prevent people in *Sales* from communicating with people in a segment called *Research*. Note that this is a one-way policy; another policy must be defined to prevent *Research* from communicating with *Sales*.
+In this example, we defined a policy called *Sales-Research* for a segment called *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in a segment called *Research*.
 
 ### Example 2
 ```
 New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive
 ```
 
-In this example, we are defining a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy will allow people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, *Manufacturing* cannot communicate with any users who are not part of *HR*.)
+In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
 
 ## PARAMETERS
 
@@ -61,8 +78,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilter
-{{Fill AssigneeFilter Description}}
+### -AssignedSegment
+{{ Fill AssignedSegment Description }}
 
 ```yaml
 Type: String
@@ -76,12 +93,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilterName
-{{Fill AssigneeFilterName Description}}
+### -SegmentsAllowed
+{{ Fill SegmentsAllowed Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: MultiValuedProperty>
+Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -91,12 +108,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CommunicationAllowedFilter
-{{Fill CommunicationAllowedFilter Description}}
+### -SegmentAllowedFilter
+{{ Fill SegmentAllowedFilter Description }}
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -106,12 +123,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CommunicationAllowedFilterName
-{{Fill CommunicationAllowedFilterName Description}}
+### -SegmentsBlocked
+{{ Fill SegmentsBlocked Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: MultiValuedProperty
+Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True

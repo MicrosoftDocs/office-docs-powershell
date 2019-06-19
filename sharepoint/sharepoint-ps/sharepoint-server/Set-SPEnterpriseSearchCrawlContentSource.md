@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ### -StartAddresses
 Specifies the comma-separated list of URLs at which to start a crawl for this content source.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 Specifies the URL for the page to modify the settings for a custom content source.
 The string that specifies the URL can contain a maximum of 1,024 characters.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 
 ```yaml

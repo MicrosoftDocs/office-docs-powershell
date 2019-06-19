@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -HubUri "http://sitename" -SyndicationErrorReportEnabled:$false
+Set-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -HubUri "https://sitename" -SyndicationErrorReportEnabled:$false
 ```
 
 This example sets the content type syndication hub and disables syndication error reporting for a specific site subscription on an existing partitioned Metadata Service application.

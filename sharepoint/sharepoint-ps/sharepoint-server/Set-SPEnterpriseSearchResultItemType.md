@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$web = Get-SPWeb http://webUrl
+$web = Get-SPWeb https://webUrl
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa

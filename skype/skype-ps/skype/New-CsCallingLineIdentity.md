@@ -39,21 +39,21 @@ Note:
 New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false
 ```
 
-The following example creates a new Caller ID policy that sets the Caller ID to Anonymous.
+This example creates a new Caller ID policy that sets the Caller ID to Anonymous.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
 ```
 
-The following example creates a new Caller ID policy that sets the Caller ID to a specified service number.
+This example creates a new Caller ID policy that sets the Caller ID to a specified service number.
 
 ### -------------------------- Example 3 --------------------------
 ```
 New-CsCallingLineIdentity  -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
-The following example creates a new Caller ID policy that blocks the incoming Caller ID.
+This example creates a new Caller ID policy that blocks the incoming Caller ID.
 
 ## PARAMETERS
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

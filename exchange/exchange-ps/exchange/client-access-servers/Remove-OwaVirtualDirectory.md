@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-OwaVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Remove-OwaVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -48,9 +50,7 @@ This example removes the specified Outlook on the web virtual directory from the
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Outlook on the web virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OWA virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

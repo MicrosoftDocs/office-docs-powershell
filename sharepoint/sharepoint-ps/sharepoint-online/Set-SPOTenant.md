@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -46,7 +46,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
  [-CustomizedExternalSharingServiceUrl <String>]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -62,9 +62,9 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### -----------------------EXAMPLE 1-----------------------------
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
+Set-SPOTenant -NoAccessRedirectUrl 'https://www.contoso.com'
 ```
-This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
+This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to https://www.contoso.com. 
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -409,7 +409,7 @@ ExternalUserAndGuestSharing (default) - External user sharing (share by email) a
 Disabled - External user sharing (share by email) and guest link sharing are both disabled.  
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 
 ```yaml
@@ -1305,32 +1305,69 @@ Once you have enabled Content Type publishing to OneDrive for Business sites, yo
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
-### -ConditionalAccessPolicy  
+### -ConditionalAccessPolicy
+
+Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+
 PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
-Please read documentation here to understand Conditional Access Policy usage in SharePoint Online "https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices"
-```powershell
-Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess 
+
+```yaml
+Type: SPOConditionalAccessPolicyType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowEditing  
-PARAMVALUE: $true | $false 
+
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
-```powershell
-Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess -AllowEditing $false
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LimitedAccessFileType 
-PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
--OfficeOnlineFilesOnly Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
--LimitedAccessFileType WebPreviewableFiles (default) Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
--LimitedAccessFileType OtherFiles Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
-```powershell
-Set-SPOTenant -LimitedAccessFileType <OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles>
+-OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
+```yaml
+Type: SPOLimitedAccessFileType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

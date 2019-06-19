@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Get-OabVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +34,8 @@ Get-OabVirtualDirectory -Server <ServerIdParameter>
 Get-OabVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,9 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the virtual directory that you want to view.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OAB virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

@@ -21,19 +21,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-ActiveSyncServer <String>]
- [-BadItemReportingEnabled <$true | $false>] [-BasicAuthEnabled <$true | $false>]
- [-ClientCertAuth <Ignore | Accepted | Required>] [-CompressionEnabled <$true | $false>] [-Confirm]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalAuthenticationMethods <MultiValuedProperty>] [-ExternalUrl <Uri>]
- [-InstallIsapiFilter <$true | $false>] [-InternalAuthenticationMethods <MultiValuedProperty>]
- [-InternalUrl <Uri>] [-MobileClientCertificateAuthorityURL <String>]
- [-MobileClientCertificateProvisioningEnabled <$true | $false>] [-MobileClientCertTemplateName <String>]
- [-Name <String>] [-RemoteDocumentsActionForUnknownServers <Allow | Block>]
- [-RemoteDocumentsAllowedServers <MultiValuedProperty>] [-RemoteDocumentsBlockedServers <MultiValuedProperty>]
- [-RemoteDocumentsInternalDomainSuffixList <MultiValuedProperty>] [-SendWatsonReport <$true | $false>]
- [-WhatIf] [-WindowsAuthEnabled <$true | $false>] [<CommonParameters>]
+Set-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-ActiveSyncServer <String>]
+ [-BadItemReportingEnabled <$true | $false>]
+ [-BasicAuthEnabled <$true | $false>]
+ [-ClientCertAuth <Ignore | Accepted | Required>]
+ [-CompressionEnabled <$true | $false>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExternalAuthenticationMethods <MultiValuedProperty>]
+ [-ExternalUrl <Uri>]
+ [-InstallIsapiFilter <$true | $false>]
+ [-InternalAuthenticationMethods <MultiValuedProperty>]
+ [-InternalUrl <Uri>]
+ [-MobileClientCertificateAuthorityURL <String>]
+ [-MobileClientCertificateProvisioningEnabled <$true | $false>]
+ [-MobileClientCertTemplateName <String>]
+ [-Name <String>]
+ [-RemoteDocumentsActionForUnknownServers <Allow | Block>]
+ [-RemoteDocumentsAllowedServers <MultiValuedProperty>]
+ [-RemoteDocumentsBlockedServers <MultiValuedProperty>]
+ [-RemoteDocumentsInternalDomainSuffixList <MultiValuedProperty>]
+ [-SendWatsonReport <$true | $false>]
+ [-WhatIf]
+ [-WindowsAuthEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +74,7 @@ This example enables bad item reporting and turns on the option to send Watson r
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "http://contoso.com/mail"
+Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "https://contoso.com/mail"
 ```
 
 This example configures the external URL on the default Exchange ActiveSync virtual directory on the server Contoso.
@@ -67,9 +82,7 @@ This example configures the external URL on the default Exchange ActiveSync virt
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Exchange ActiveSync virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the ActiveSync virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

@@ -18,8 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+Start-InformationBarrierPoliciesApplication
 ```
 
 {{ Add example description here }}

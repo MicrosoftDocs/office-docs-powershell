@@ -26,12 +26,19 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw
 ```
 
-{{ Add example description here }}
+In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-InformationBarrierRecipientStatus -Identity meganb
+```
+In this example, we refer to one user account in Office 365: *meganb*.
+
 
 ## PARAMETERS
 

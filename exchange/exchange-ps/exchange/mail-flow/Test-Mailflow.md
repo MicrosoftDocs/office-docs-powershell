@@ -202,7 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailboxServer
-The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to which test messages are sent.
+The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to send test messages to. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetDatabase or TargetEmailAddress parameters.
 
@@ -328,7 +336,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the source Mailbox server name from which a test message is sent. If you don't use this parameter, the local Mailbox server is used.
+The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the local Mailbox server is used.
 
 ```yaml
 Type: ServerIdParameter

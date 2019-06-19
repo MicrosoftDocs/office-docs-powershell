@@ -115,9 +115,9 @@ Accept wildcard characters: False
 ### -RemoteCredential
 This parameter is available only in the cloud-based service.
 
-The RemoteCredential parameter specifies an administrator who has permission to perform the migration request, for example, Administrator@humongousinsurance.com.
+The RemoteCredential parameter specifies the username and password of an administrator who has permission to perform the migration request.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

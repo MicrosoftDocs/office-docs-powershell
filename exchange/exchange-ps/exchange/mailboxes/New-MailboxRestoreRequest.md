@@ -215,7 +215,7 @@ This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-MaiboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
+New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
 
 This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.

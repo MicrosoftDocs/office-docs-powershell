@@ -19,13 +19,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Default (Default)
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All <$true | $false>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
- [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,12 +32,19 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-InformationBarrierPoliciesApplicationStatus
 ```
 
-{{ Add example description here }}
+This will display information about whether all policy applications completed, failed, or is in progress.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-InformationBarrierPoliciesApplicationStatus -All $true
+```
+
+This will display information about whether policy application completed, failed, or is in progress.
 
 ## PARAMETERS
 
@@ -61,7 +67,7 @@ Accept wildcard characters: False
 {{Fill All Description}}
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

@@ -3,6 +3,9 @@ Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
 Locale: en-US
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # SharePoint Online PowerShell
@@ -54,6 +57,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 {{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
+
+### [Enable-SPOCommSite](Enable-SPOCommSite.md)
+{{Manually Enter Enable-SPOCommSite Description Here}}
 
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}

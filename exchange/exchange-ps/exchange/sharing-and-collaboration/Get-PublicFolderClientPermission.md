@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-User <PublicFolderUserIdParameter>] [-Mailbox <MailboxIdParameter>]
+Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter>
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-User <PublicFolderUserIdParameter>]
+ [-Mailbox <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -86,7 +89,15 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies the server on which to perform the selected operations.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

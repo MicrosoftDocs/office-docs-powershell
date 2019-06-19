@@ -17,10 +17,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
+### InformationBarrierDefault (Default)
 ```
-Set-InformationBarrierPolicy [-AssigneeFilter <String>] [-AssigneeFilterName <String>] [-Comment <String>]
- [-CommunicationAllowedFilter <String>] [-CommunicationAllowedFilterName <String>]
- [-Identity] <PolicyIdParameter> [-State <EopInformationBarrierPolicyState>] [<CommonParameters>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-Comment <String>]
+ [-State <EopInformationBarrierPolicyState>]
+ [<CommonParameters>]
+```
+
+### OrganizationSegmentsAllowed
+```
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsAllowed <MultiValuedProperty>]
+ [-Comment <String>]
+ [-State <EopInformationBarrierPolicyState>]
+ [<CommonParameters>]
+```
+
+### OrganizationSegmentAllowedFilter
+```
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentAllowedFilter <String>]
+ [-Comment <String>]
+ [-State <EopInformationBarrierPolicyState>]
+ [<CommonParameters>]
+```
+
+### OrganizationSegmentsBlocked
+```
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsBlocked <MultiValuedProperty>]
+ [-Comment <String>]
+ [-State <EopInformationBarrierPolicyState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,12 +54,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active
 ```
 
-{{ Add example description here }}
+This example activates the information barrier policy that has the GUID value *43c37853-ea10-4b90-a23d-ab8c93772471*.
 
 ## PARAMETERS
 
@@ -52,12 +78,12 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilter
-{{Fill AssigneeFilter Description}}
+### -SegmentsAllowed
+{{ Fill SegmentsAllowed Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type:
+Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -67,12 +93,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AssigneeFilterName
-{{Fill AssigneeFilterName Description}}
+### -SegmentAllowedFilter
+{{ Fill SegmentAllowedFilter Description }}
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: OrganizationSegmentAllowedFilter
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SegmentsBlocked
+{{ Fill SegmentsBlocked Description }}
+
+```yaml
+Type:
+Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -84,36 +125,6 @@ Accept wildcard characters: False
 
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CommunicationAllowedFilter
-{{Fill CommunicationAllowedFilter Description}}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CommunicationAllowedFilterName
-{{Fill CommunicationAllowedFilterName Description}}
 
 ```yaml
 Type: String

@@ -188,9 +188,7 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Outlook on the web virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

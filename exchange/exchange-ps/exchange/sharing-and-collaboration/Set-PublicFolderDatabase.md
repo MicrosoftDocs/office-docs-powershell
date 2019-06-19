@@ -254,6 +254,29 @@ Accept wildcard characters: False
 ### -MaintenanceSchedule
 The MaintenanceSchedule parameter specifies the store maintenance schedule.
 
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
+
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
@@ -329,6 +352,29 @@ Accept wildcard characters: False
 ### -QuotaNotificationSchedule
 The QuotaNotificationSchedule parameter specifies the interval at which warning messages are sent when public folders exceed their specified size limit.
 
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
+
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
@@ -343,6 +389,20 @@ Accept wildcard characters: False
 
 ### -ReplicationMessageSize
 The ReplicationMessageSize parameter specifies the size of replication messages. Small items may be aggregated into a single replication message that can be as large as this setting, but items larger than this setting are replicated with messages larger than this size.
+
+A valid value is a number up to 2 gigabytes (2147482624 bytes). The default value is 300 kilobytes (307200 bytes).
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -373,6 +433,30 @@ Accept wildcard characters: False
 
 ### -ReplicationSchedule
 The ReplicationSchedule parameter specifies the time intervals during which replication of public folders or contents may occur.
+
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule

@@ -1,9 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Get-TeamHelp
-online version: 
+online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -13,22 +11,31 @@ ms.reviewer:
 # Get-TeamHelp
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
 Gets a list of commands for Microsoft Teams.
 
 ## SYNTAX
 
 ```
-Get-TeamHelp
+Get-TeamHelp [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 ## EXAMPLES
 
+### Example 1
+```powershell
+PS C:\> {{ Add example code here }}
+```
+
+{{ Add example description here }}
 
 ## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -37,4 +44,3 @@ Get-TeamHelp
 ## NOTES
 
 ## RELATED LINKS
-

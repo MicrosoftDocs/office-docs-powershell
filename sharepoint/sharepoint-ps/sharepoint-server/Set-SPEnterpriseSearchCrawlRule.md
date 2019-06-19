@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -Identity
 Specifies the name of the crawl rule.
 
-The type must be a valid crawl rule URL, such as http://server_name, or an instance of a valid CrawlRule object.
+The type must be a valid crawl rule URL, such as https://server_name, or an instance of a valid CrawlRule object.
 
 
 ```yaml
