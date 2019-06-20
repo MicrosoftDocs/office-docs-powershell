@@ -22,7 +22,9 @@ zh-TW Version: 17.0.15229.2100
 ## Description
 The following cmdlet references are for SharePoint Server.
 
-## Access Services 
+## sharepoint-server Cmdlets
+
+## Access Services (2010)
 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
@@ -30,7 +32,7 @@ Cmdlet|Description|Platform
 **[New-SPAccessServiceApplication](New-SPAccessServiceApplication.md)** |Creates a new instance of an Access Services application in SharePoint Server. |SharePoint 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 **[Set-SPAccessServiceApplication](Set-SPAccessServiceApplication.md)** |Sets global properties of an existing Access Services application in SharePoint Server. |SharePoint 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
-## Access Services 
+## Access Services (2013)
 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
