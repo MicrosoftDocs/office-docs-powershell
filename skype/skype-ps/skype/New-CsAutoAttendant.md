@@ -237,6 +237,9 @@ $greetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt $greetingText
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt $mainMenuText
 $menu = New-CsAutoAttendantMenu -Name "AA menu2" -Prompts @($menuPrompt) -EnableDialByName -MenuOptions @($menuOption0,$menuOption1,$menuOption2)
 $callFlow = New-CsAutoAttendantCallFlow -Name "Default" -Menu $menu -Greetings $greetingPrompt
+
+# Auto attendant
+New-CsAutoAttendant -Name $aaName -Language $language -CallFlows @($afterHoursCallFlow) -TimeZoneId $tz -Operator $operator -DefaultCallFlow $callFlow -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -EnableVoiceResponse
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
