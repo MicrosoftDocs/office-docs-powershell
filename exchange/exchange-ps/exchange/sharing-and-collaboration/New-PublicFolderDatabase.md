@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-EdbFilePath <EdbFilePath>] [-LogFolderPath <NonRootLocalLongFullPath>]
- [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EdbFilePath <EdbFilePath>]
+ [-LogFolderPath <NonRootLocalLongFullPath>]
+ [-Organization <OrganizationIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +62,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server that you want to create the database on.
+The Server parameter specifies the Mailbox server where you want to create the new public folder database. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 A server can have only one public folder database.
 

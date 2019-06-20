@@ -70,8 +70,43 @@ This example returns information about all public folders on Server01.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the public folder database that you want to view. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't the Identity and Server parameters in the same command.
+
+If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
-The Server parameter specifies the name of a server that contains a public folder database. If specified, only the public folder database on the specified server is returned. This parameter can't be used with the Identity parameter.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can't use the Server and Identity parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter
@@ -100,33 +135,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Database name
-
-If you don't specify the server name, the cmdlet searches for databases on the local server. If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope. This parameter can't be used with the Server parameter.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.
 
-The IncludePreExchange2010 parameter specifies whether information about all the public folder databases in the organization is returned, including versions of Microsoft Exchange prior to Exchange Server 2010. If the IncludePreExchange2010 parameter is included in the command, information about all of the public folder databases in the organization is returned. This parameter isn't necessary when the Server or Identity parameter is included in the command.
+The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
+
+This parameter isn't useful in commands where you use the Server parameter or Identity parameter.
 
 ```yaml
 Type: SwitchParameter

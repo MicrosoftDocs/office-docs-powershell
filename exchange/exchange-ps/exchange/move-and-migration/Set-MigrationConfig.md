@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MigrationConfig [-Confirm] [-DomainController <Fqdn>]
- [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>] [-MaxConcurrentMigrations <Unlimited>]
- [-MaxNumberOfBatches <Int32>] [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Set-MigrationConfig
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-MaxNumberOfBatches <Int32>]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,6 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml

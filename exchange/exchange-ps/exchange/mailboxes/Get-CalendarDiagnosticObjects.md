@@ -21,22 +21,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter> [-Credential <PSCredential>]
- [-CustomPropertyNames <String[]>] [-DomainController <Fqdn>] [-EndDate <ExDateTime>] [-EntryId <String>]
- [-ExactMatch <$true | $false>] [-ItemClass <String[]>] [-ItemIds <String[]>] [-MeetingId <String>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-ShouldBindToItem <$true | $false>]
- [-ShouldFetchRecurrenceExceptions <$true | $false>] [-StartDate <ExDateTime>] [-Subject <String>]
+Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
+ [-CustomPropertyNames <String[]>]
+ [-DomainController <Fqdn>]
+ [-EndDate <ExDateTime>]
+ [-EntryId <String>]
+ [-ExactMatch <$true | $false>]
+ [-ItemClass <String[]>]
+ [-ItemIds <String[]>]
+ [-MeetingId <String>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-ShouldBindToItem <$true | $false>]
+ [-ShouldFetchRecurrenceExceptions <$true | $false>]
+ [-StartDate <ExDateTime>]
+ [-Subject <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Some of the more interesting properties that are returned in the results are:
 
+- AppointmentState: 1 = The appointment is a meeting, 2 = The appointment has been received, 4 = The appointment has been cancelled, and 8 = the appointment is a forwarded appointment.
+
 - CalendarLogTriggerAction: The action that's taken on the item (for example, Create or Update).
 
 - ClientInfoString: The entity that made the change (for example, Client=OWA;\<AdditionalDetails\>, Client=WebServices;\<AdditionalDetails\>;, or Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;).
 
+- MeetingRequestType: 1 = The meeting message is a meeting request, 65536 = The meeting message is a full update to an existing meeting, 131072 = The meeting message is an informational update to an existing meeting, 262144 = The meeting message is a silent update, 524288 = The update is outdated, or 1048576 = The meeting message is forwarded to a delegate, and the copy is marked as informational.
+
 - OriginalLastModifiedTime: Used as the primary sort field to order the events.
+
+- ResponseType: 0 = The organizer hasn't received a response, 1 = The organizer's copy of the meeting, 2 = Tentative, 3 = Accept, 4 = Decline, or 5 = The attendee hasn't responded.
 
 - ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant or /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin).
 
@@ -75,13 +91,9 @@ This example returns diagnostic information for meetings with the subject Team L
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox or Office 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Office 365 Group.
-
-For example:
+The Identity parameter specifies the mailbox or Office 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -110,21 +122,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Credential
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

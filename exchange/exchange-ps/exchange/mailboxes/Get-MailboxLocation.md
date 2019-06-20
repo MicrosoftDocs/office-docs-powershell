@@ -12,7 +12,7 @@ monikerRange: "exchonline-ps"
 # Get-MailboxLocation
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxLocation cmdlet to view mailbox location information in Exchange Online.
 
@@ -22,23 +22,29 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### DatabaseSet
 ```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -Database <DatabaseIdParameter>
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxLocation -Identity <MailboxLocationIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -Identity <MailboxLocationIdParameter>
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### User
 ```
-Get-MailboxLocation -User <UserIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -User <UserIdParameter> [-IncludePreviousPrimary]
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,18 +57,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxLocation -User chris@contoso.com
 ```
 
-This example returns the mailbox location for the user chris@contoso.com.
+In Exchange Online, this example returns the mailbox location information for the user chris@contoso.com.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
+```
+
+In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of Get-Mailbox -Identity \<MailboxIdentity\> | Format-List ExchangeGuid).
 
 ## PARAMETERS
 
 ### -Database
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The Database parameter returns the mailbox location information for all mailboxes on the specified mailbox database. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: DatabaseSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -71,7 +94,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.
+The Identity parameter specifies the mailbox location object that you want to view. The value uses the either of the following formats:
+
+- \<TenantGUID\>\\\<MailboxGUID\>
+
+- \<MailboxGUID\>
+
+In Exchange Server or Exchange Online, you can run the following command to find and compare the \<MailboxGUID\> values for the user: Get-Mailbox -Identity \<MailboxIdentity\> \| Format-List *GUID,MailboxLocations.
+
+In Exchange Online, you can find the \<TenantGUID\> and \<MailboxGUID\> values after you run Get-MailboxLocation with the User parameter.
 
 You can't use this parameter with the User parameter.
 
@@ -79,7 +110,7 @@ You can't use this parameter with the User parameter.
 Type: MailboxLocationIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -88,13 +119,11 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user.
+This parameter is available only in the cloud-based service.
 
-For example:
+The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -127,6 +156,25 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludePreviousPrimary
+This parameter is available only in the cloud-based service.
+
+The IncludePreviousPrimary switch specifies whether to include the previous primary mailbox in the results. You don't need to specify a value with this switch.
+
+You can only use this switch with the User parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: User
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -148,15 +196,15 @@ The MailboxLocationType filters the results by the type of mailbox. Valid values
 
 - MainArchive
 
+- PreviousPrimary (Exchange Online only)
+
 - Primary
 
-- RemotePrimary
-
 ```yaml
-Type: Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared
+Type: MailboxLocationType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +219,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +234,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

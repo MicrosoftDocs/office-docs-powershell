@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPIRMSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPIRMSettings
@@ -48,7 +51,7 @@ This example enables IRM for the farm and configures it to use the default RMS s
 
 ### --------------EXAMPLE 2------------
 ```
-Set-SPIRMSettings -RmsEnabled -CertificateServerUrl http://myrmsserver
+Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
@@ -57,7 +60,7 @@ This example enables IRM for the farm and specifies the URL of the RMS server to
 ```
 site = Get-SPSite http://myspserver
 $subscription = $site.SiteSubscription
-Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl http://myrmsserver
+Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.

@@ -84,6 +84,8 @@ This example displays a list of active calls associated with the UM dial plan My
 ### -DialPlan
 The DialPlan parameter specifies the UM dial plan for which you want to retrieve active calls.
 
+You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
+
 ```yaml
 Type: UMDialPlanIdParameter
 Parameter Sets: DialPlan
@@ -99,6 +101,8 @@ Accept wildcard characters: False
 ### -InstanceServer
 The InstanceServer parameter specifies the Mailbox server running the Microsoft Exchange Unified Messaging service for which you want to retrieve active calls.
 
+You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
+
 ```yaml
 Type: UMServer
 Parameter Sets: ServerInstance
@@ -113,6 +117,9 @@ Accept wildcard characters: False
 
 ### -IPGateway
 The IPGateway parameter specifies the UM IP gateway for which you want to retrieve active calls.
+
+
+You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
 
 ```yaml
 Type: UMIPGatewayIdParameter
@@ -142,7 +149,17 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the Mailbox server running the Microsoft Exchange Unified Messaging service for which you want to retrieve active calls.
+The Server parameter filters the results by the specified Unified Messaging server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter

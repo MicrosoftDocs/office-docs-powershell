@@ -82,21 +82,27 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter identifies the mailbox. You can use one of the following values:
+The Identity parameter identifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -166,7 +172,7 @@ The default value is 10.
 
 The minimum value is 2.
 
-The NumberOfSegments parameter can be used only in conjunction with the CrossValidate parameter.
+You csn only use this parameter with the CrossValidate parameter.
 
 ```yaml
 Type: Int32

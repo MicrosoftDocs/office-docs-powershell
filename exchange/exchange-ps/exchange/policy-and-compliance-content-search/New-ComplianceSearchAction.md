@@ -314,9 +314,7 @@ The Format parameter specifies the format of the search results when you use the
 
 - Mime: Export to .eml message files. This the default value when you use cmdlets to export the search results.
 
-- Message: Export to .msg message files.
-
-- BodyText: Export to .txt files.
+- Msg: Export to .msg message files.
 
 ```yaml
 Type: ComplianceDataTransferFormat

@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Add-PnPTenantTheme
 
@@ -21,7 +18,7 @@ Add-PnPTenantTheme -Identity <ThemePipeBind>
 ```
 
 ## DESCRIPTION
-Adds or updates atheme to the tenant.
+Adds or updates a theme to the tenant.
 
 ## EXAMPLES
 
@@ -111,4 +108,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

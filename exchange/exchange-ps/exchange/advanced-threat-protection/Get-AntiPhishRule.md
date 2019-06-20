@@ -73,7 +73,6 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: Enabled | Disabled
 Parameter Sets: (All)
 Aliases:
-Accepted values: Enabled, Disabled
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named

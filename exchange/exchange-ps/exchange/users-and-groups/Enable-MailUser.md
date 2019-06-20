@@ -65,13 +65,9 @@ This example mail-enables user John with the external email address john@contoso
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to mail-enable. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user that you want to mail-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -280,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 

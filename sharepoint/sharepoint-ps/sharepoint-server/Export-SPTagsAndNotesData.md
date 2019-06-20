@@ -28,10 +28,10 @@ The tags and notes are written into separate files, and then the two are compres
 
 ### ----------------EXAMPLE----------------- 
 ```
-Export-SPTagsAndNotesData -Site http://site.contoso.com -FilePath C:\TagsAndNotes.zip
+Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```
 
-This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site http://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file
+This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site https://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: d
 URL of the root site where you want to export the tags and notes from.
 
 You must specify a valid URL to an existing SharePoint root site.
-For example: http://site.contoso.com
+For example: https://site.contoso.com
 
 ```yaml
 Type: SPSitePipeBind
