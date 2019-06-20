@@ -18,7 +18,7 @@ This cmdlet supports retrieving teams with particular properties/information, in
 
 ### Identity
 ```
-Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
+Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
  [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>]
 ```
 
@@ -50,9 +50,9 @@ Returns all teams that are private and have been archived.
 
 ### Example 3
 ```
-PS> Get-Team -MailNickName "BusinessDevelopment"
+PS> Get-Team
 ```
-Returns the team that matches the specified MailNickName
+Return all team
 
 ## PARAMETERS
 
@@ -113,48 +113,6 @@ Accept wildcard characters: False
 
 ### -DisplayName
 Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: Filters
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupId
-Specify the specific GroupId (as a string) of the team to be returned.  This is a unique identifier and returns exact match.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailNickName
-Specify the mailnickname of the team that is being returned.  This is a unique identifier and returns exact match.
 
 ```yaml
 Type: String
