@@ -16,9 +16,9 @@ pt-BR Version: 17.0.15229.2100
 ru-RU Version: 17.0.15229.2100
 zh-CN Version: 17.0.15229.2100
 zh-TW Version: 17.0.15229.2100
-
 ---
-# SharePoint Server PowerShell
+# SharePointServer
+
 ## Description
 The following cmdlet references are for SharePoint Server.
 
