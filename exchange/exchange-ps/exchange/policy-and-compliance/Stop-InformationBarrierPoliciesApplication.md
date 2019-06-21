@@ -33,7 +33,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1
 ```
 
-In this example, we are stopping information barrier policies from being applied.
+In this example, we are stopping information barrier policies from being applied per the policy application that has GUID *46237888-12ca-42e3-a541-3fcb7b5231d1*.
 
 ## PARAMETERS
 
