@@ -68,7 +68,7 @@
         "sharepoint-ps/sharepoint-online/*.md":"sharepoint-powershell"
       },
       "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-2016-powershell"
+        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-powershell"
       }
     },
     "template": [],
