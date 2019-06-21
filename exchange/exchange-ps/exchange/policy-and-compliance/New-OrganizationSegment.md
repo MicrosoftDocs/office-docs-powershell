@@ -38,6 +38,14 @@ New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"
 
 In this example, a segment called HR is defined using HR, a value in the Department attribute.
 
+### -------------------------- Example 2 --------------------------
+```
+New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"
+```
+
+In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
+
+
 ## PARAMETERS
 
 ### -Name
