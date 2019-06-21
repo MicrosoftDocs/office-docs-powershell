@@ -45,6 +45,12 @@ New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales
 
 In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
 
+### -------------------------- Example 3 --------------------------
+```
+New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"
+```
+
+In this example, we defined a segment called LocalFTE that includes people who are locally located and whose positions are not listed as Temporary.
 
 ## PARAMETERS
 
