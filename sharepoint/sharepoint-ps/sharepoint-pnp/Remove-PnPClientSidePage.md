@@ -28,6 +28,13 @@ Removes the Client-Side page named 'MyPage.aspx'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
+Remove-PnPClientSidePage -Identity "Templates/MyPageTemplate"
+```
+
+Removes the specified Client-Side page which is located in the Templates folder of the Site Pages library.
+
+### ------------------EXAMPLE 3------------------
+```powershell
 Remove-PnPClientSidePage $page
 ```
 
