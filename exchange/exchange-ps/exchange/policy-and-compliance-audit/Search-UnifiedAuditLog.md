@@ -27,7 +27,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-IPAddresses <String[]>]
  [-ObjectIds <String[]>]
  [-Operations <String[]>]
- [-RecordType < AeD | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointListOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | ThreatIntelligenceAtpContent | ThreatIntelligenceUrl | WorkplaceAnalytics | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-ResultSize <Int32>]
  [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
  [-SessionId <String>]
@@ -285,7 +285,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 - Yammer
 
 ```yaml
-Type: AeD | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointListOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | ThreatIntelligenceAtpContent | ThreatIntelligenceUrl | WorkplaceAnalytics | Yammer
+Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
