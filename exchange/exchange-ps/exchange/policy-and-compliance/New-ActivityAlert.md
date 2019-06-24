@@ -30,7 +30,7 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-Disabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-ScopeLevel <SingleUser | AllUsers>]
  [-Severity <Low | Medium | High | None>]
  [-UserId <MultiValuedProperty>]
@@ -46,7 +46,7 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-Disabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-Severity <Low | Medium | High | None>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
@@ -62,7 +62,7 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-Disabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-ScopeLevel <SingleUser | AllUsers>]
  [-Severity <Low | Medium | High | None>]
  [-UserId <MultiValuedProperty>]
@@ -78,7 +78,7 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <Custom
  [-Disabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-Severity <Low | Medium | High | None>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
@@ -389,6 +389,8 @@ Accept wildcard characters: False
 ### -RecordType
 The RecordType parameter specifies a record type label for the activity alert. Valid values are:
 
+- AeD
+
 - AzureActiveDirectory
 
 - AzureActiveDirectoryAccountLogon
@@ -433,6 +435,8 @@ The RecordType parameter specifies a record type label for the activity alert. V
 
 - SharePointFileOperation
 
+- SharePointListOperation
+
 - SharePointSharingOperation
 
 - SkypeForBusinessCmdlets
@@ -445,12 +449,18 @@ The RecordType parameter specifies a record type label for the activity alert. V
 
 - ThreatIntelligence
 
+- ThreatIntelligenceAtpContent
+
+- ThreatIntelligenceUrl
+
+- WorkplaceAnalytics
+
 - Yammer
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
 ```yaml
-Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
+Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
