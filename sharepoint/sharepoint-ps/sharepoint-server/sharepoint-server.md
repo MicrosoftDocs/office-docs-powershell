@@ -26,15 +26,14 @@ The following cmdlet references are for SharePoint Server.
 
 ## sharepoint-server Cmdlets
 
-[Get-SPAccessServiceApplication](Get-SPAccessServiceApplication.md)
+### [Get-SPAccessServiceApplication](Get-SPAccessServiceApplication.md)
+{{Manually Enter Add-PnPSiteCollectionAdmin Description Here}}
 
-{{Returns an Access Services application or a collection of Access Services applications.Available for sharePoint 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019}}
+### [New-SPAccessServiceApplication](New-SPAccessServiceApplication.md)
+{{Manually Enter Add-PnPSiteCollectionAdmin Description Here}}
 
-[New-SPAccessServiceApplication](New-SPAccessServiceApplication.md)
-{{Creates a new instance of an Access Services application in SharePoint Server. SharePoint 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019}}
-
-[Set-SPAccessServiceApplication](Set-SPAccessServiceApplication.md)
-{{Sets global properties of an existing Access Services application in SharePoint Server.SharePoint 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019}}
+### [Set-SPAccessServiceApplication](Set-SPAccessServiceApplication.md)
+{{Manually Enter Add-PnPSiteCollectionAdmin Description Here}}
 
 
 Cmdlet|Description|Platform
