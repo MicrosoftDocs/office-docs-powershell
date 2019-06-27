@@ -27,7 +27,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-IPAddresses <String[]>]
  [-ObjectIds <String[]>]
  [-Operations <String[]>]
- [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-RecordType <AuditRecordType>]
  [-ResultSize <Int32>]
  [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
  [-SessionId <String>]
@@ -41,7 +41,7 @@ The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated itera
 
 The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Office 365 Security & Compliance Center. For more information, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=708432).
 
-If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see Office 365 Management Activity API reference (https://go.microsoft.com/fwlink/p/?linkid=852309).
+If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see Office 365 Management Activity API reference (https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -216,6 +216,8 @@ Accept wildcard characters: False
 ### -RecordType
 The RecordType parameter filters the log entries by record type. Valid values are:
 
+- AeD
+
 - AzureActiveDirectory
 
 - AzureActiveDirectoryAccountLogon
@@ -260,6 +262,8 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePointFileOperation
 
+- SharePointListOperation
+
 - SharePointSharingOperation
 
 - SkypeForBusinessCmdlets
@@ -272,10 +276,16 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ThreatIntelligence
 
+- ThreatIntelligenceAtpContent
+
+- ThreatIntelligenceUrl
+
+- WorkplaceAnalytics
+
 - Yammer
 
 ```yaml
-Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
+Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
