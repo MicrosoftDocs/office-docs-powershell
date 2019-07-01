@@ -11,7 +11,7 @@ ms.reviewer:
 # Get-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns existing additional SIP domain names present in the topology.
 
 ## SYNTAX
 
@@ -26,21 +26,21 @@ Get-CsAdditionalInternalDomain [-Filter <String>] [-LocalStore] [<CommonParamete
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns existing additional SIP domain names present in the topology.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsAdditionalInternalDomain -LocalStore
 ```
 
-{{ Add example description here }}
+Gets additional SIP domain names from LocalStore
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to limit the returned data.
 
 ```yaml
 Type: String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the additional SIP domain to be returned.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Retrieves from the local replica of the Central Management store, rather than the Central Management store itself.
 
 ```yaml
 Type: SwitchParameter
