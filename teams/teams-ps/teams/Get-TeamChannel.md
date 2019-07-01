@@ -17,7 +17,7 @@ Get all the channels for a team.
 ## SYNTAX
 
 ```
-Get-TeamChannel -GroupId <String> [<CommonParameters>]
+Get-TeamChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +28,13 @@ Get-TeamChannel -GroupId <String> [<CommonParameters>]
 ```
 Get-TeamChannel -GroupId af55e84c-dc67-4e48-9005-86e0b07272f9
 ```
+Get channels of the group.
+
+### Example 2
+```
+Get-TeamChannel -GroupId af55e84c-dc67-4e48-9005-86e0b07272f9 -MembershipType Private
+```
+Get all private channels of the group.
 
 ## PARAMETERS
 
@@ -40,6 +47,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MembershipType
+Membership type of the channel to display, Standard or Private
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
