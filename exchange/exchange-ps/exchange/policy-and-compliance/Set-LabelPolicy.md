@@ -20,18 +20,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity
 ```
 Set-LabelPolicy [-Identity] <PolicyIdParameter>
- [-AddLabels <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddExchangeLocationException <MultiValuedProperty>]
+ [-AddLabels <MultiValuedProperty>]
+ [-AddModernGroupLocation <MultiValuedProperty>]
+ [-AddModernGroupLocationException <MultiValuedProperty>]
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <$true | $false>]
  [-NextLabelPolicy <PolicyIdParameter>]
- [-RemoveLabels <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
- [-Settings <PswsHashtable>]
+ [-RemoveLabels <MultiValuedProperty>]
+ [-RemoveModernGroupLocation <MultiValuedProperty>]
+ [-RemoveModernGroupLocationException <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -44,7 +47,6 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
  [-NextLabelPolicy <PolicyIdParameter>]
  [-PreviousLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
- [-Settings <PswsHashtable>]
  [<CommonParameters>]
 ```
 
@@ -55,10 +57,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-LabelPolicy -Identity "Global Policy" -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-Insert descriptive text for example 1.
+This example configures the specified advanced setting for the sensitivity label policy name Global Policy.
 
 ## PARAMETERS
 
@@ -94,29 +96,6 @@ Parameter Sets: RetryDistribution
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddLabels
-The AddLabels parameter specifies the sensitivity labels that you want to add to the policy. You can use any value that uniquely identifies the label. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -183,8 +162,85 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddLabels
+The AddLabels parameter specifies the sensitivity labels that you want to add to the policy. You can use any value that uniquely identifies the label. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddModernGroupLocation
+The AddModernGroupLocation parameter specifies the Office 365 groups to add to the list of included Office 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Office 365 Group. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddModernGroupLocationException
+The AddModernGroupLocationException parameter specifies the Office 365 groups to add to the list of excluded Office 365 Groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Office 365 Group. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AdvancedSettings
-{{Fill AdvancedSettings Description}}
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -267,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextLabelPolicy
-{{Fill NextLabelPolicy Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PolicyIdParameter
@@ -282,33 +338,10 @@ Accept wildcard characters: False
 ```
 
 ### -PreviousLabelPolicy
-{{Fill PreviousLabelPolicy Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveLabels
-The RemoveLabels parameter specifies the sensitivity labels that you want to remove from the policy. You can use any value that uniquely identifies the label. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -381,13 +414,75 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Settings
-{{Fill Settings Description}}
+### -RemoveLabels
+The RemoveLabels parameter specifies the sensitivity labels that you want to remove from the policy. You can use any value that uniquely identifies the label. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: PswsHashtable
+Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveModernGroupLocation
+The RemoveModernGroupLocation parameter specifies the Office 365 groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Office 365 Group. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveModernGroupLocationException
+The RemoveModernGroupLocationException parameter specifies the Office 365 groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Office 365 Group. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

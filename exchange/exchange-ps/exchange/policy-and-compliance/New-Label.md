@@ -22,10 +22,8 @@ New-Label [-Name] <String> -DisplayName <String>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-Identity <MasterIdParameter>]
  [-LocaleSettings <<MultiValuedProperty>]
  [-ParentId <ComplianceRuleIdParameter>]
- [-Settings <PswsHashtable>]
  [-Tooltip <String>]
  [<CommonParameters>]
 ```
@@ -37,10 +35,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+New-Label -DisplayName "My New label" -Name "New Label"
 ```
 
-Insert descriptive text for example 1.
+This example create a new label named "New Label" with a display name "My New Label".
 
 ## PARAMETERS
 
@@ -75,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-This parameter is reserved for internal Microsoft use.
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -123,27 +121,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MasterIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LocaleSettings
 The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
 
 - Label display names: {"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de",Value":"Deutscher Anzeigename"},{"Key":"es-es",Value":"Nombre para mostrar en español"}]}
 
-- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es",Value":"Tooltip español"}]}
+- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es",Value":"Tooltip Español"}]}
 
 ```yaml
 Type: MultiValuedProperty
@@ -158,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentId
-The ParentId parameter specifies the policy that contains the sensitivity label. You can use any value that uniquely identifies the policy. For example:
+The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
 
@@ -168,21 +151,6 @@ The ParentId parameter specifies the policy that contains the sensitivity label.
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Settings
-{{Fill Settings Description}}
-
-```yaml
-Type: PswsHashtable
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center

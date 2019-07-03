@@ -28,7 +28,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-LabelPolicy
+Get-LabelPolicy | Format-Table Name
 ```
 
 This example returns a summary list of all policies in the organization.

@@ -24,13 +24,11 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
  [-Disabled <$true | $false>]
  [-DisplayName <String>]
- [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <Int32>]
- [-Settings <PswsHashtable>]
  [-Tooltip <String>]
  [<CommonParameters>]
 ```
@@ -71,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-This parameter is reserved for internal Microsoft use.
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -158,7 +156,7 @@ The LocaleSettings parameter specifies one or more localized label name or label
 
 - Label display names: {"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de",Value":"Deutscher Anzeigename"},{"Key":"es-es",Value":"Nombre para mostrar en español"}]}
 
-- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es",Value":"Tooltip español"}]}
+- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es",Value":"Tooltip Español"}]}
 
 ```yaml
 Type: MultiValuedProperty
@@ -173,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextLabel
-{{Fill NextLabel Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -209,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviousLabel
-{{Fill PreviousLabel Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -238,21 +236,6 @@ If you modify the priority value of a sensitivity label, the position of the lab
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Settings
-{{Fill Settings Description}}
-
-```yaml
-Type: PswsHashtable
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
