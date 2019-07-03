@@ -303,7 +303,7 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ### -------------------------- Example 6 -------------------------- 
 ```
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15" 
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
@@ -2138,11 +2138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSessionEnabled
-The RefreshSessionEnabled parameter specifies whether to enable or disable the use of refresh tokens when using OpenID Connect for authentication. Valid values are:
-
-- $true: Refresh tokens are enabled.
-
-- $false: Refresh tokens are disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2255,11 +2251,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
