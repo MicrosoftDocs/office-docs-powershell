@@ -9,6 +9,12 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Permission Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+
+**We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+
+You can use this cmdlet to assign a specific custom policy to a user.
+
 ## SYNTAX
 
 ### Identity (Default)
@@ -24,16 +30,20 @@ Grant-CsTeamsAppPermissionPolicy [-PolicyName] <String> [-Tenant <System.Guid>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Permission Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+
+**We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+
+You can use this cmdlet to assign a specific custom policy to a user.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Grant-CsTeamsAppPermissionPolicy -Identity "Ken Myer" -PolicyName StudentAppPermissionPolicy
 ```
 
-{{ Add example description here }}
+In this example, a user with identity "Ken Myer" is being assigned the StudentAppPermissionPolicy
 
 ## PARAMETERS
 
@@ -53,8 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
-
+Do not use.
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
@@ -68,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-{{Fill Global Description}}
+Resets the values in the global policy to match those in the provided (PolicyName) policy.  Note that this means all users with no explicit policy assigned will have these new policy settings.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The user to whom the policy should be assigned.
 
 ```yaml
 Type: UserIdParameter
@@ -98,7 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{Fill PolicyName Description}}
+The name of the custom policy that is being assigned to the user.  To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
 
 ```yaml
 Type: String
@@ -128,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Do not use.
 
 ```yaml
 Type: System.Guid

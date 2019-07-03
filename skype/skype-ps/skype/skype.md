@@ -3192,3 +3192,13 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsChannelsPolicy](Grant-CsTeamsChannelsPolicy.md)
 
 ### [Remove-CsTeamsChannelsPolicy](Remove-CsTeamsChannelsPolicy.md)
+
+### [Get-CsTeamsAppPermissionPolicy](Get-CsTeamsAppPermissionPolicy.md)
+
+### [Set-CsTeamsAppPermissionPolicy](Set-CsTeamsAppPermissionPolicy.md)
+
+### [New-CsTeamsAppPermissionPolicy](New-CsTeamsAppPermissionPolicy.md)
+
+### [Grant-CsTeamsAppPermissionPolicy](Grant-CsTeamsAppPermissionPolicy.md)
+
+### [Remove-CsTeamsAppPermissionPolicy](Remove-CsTeamsAppPermissionPolicy.md)
