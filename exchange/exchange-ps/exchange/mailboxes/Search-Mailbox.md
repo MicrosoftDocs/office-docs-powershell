@@ -18,6 +18,9 @@ Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a spec
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
+> [!Note]
+> Search-Mailbox is being deprecated. Please use [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/new-compliancesearch) and related eDiscovery commands instead.
+
 ## SYNTAX
 
 ### EstimateResult
