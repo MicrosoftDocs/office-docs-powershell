@@ -5,7 +5,7 @@
         "referenceTocUrl": "/powershell/module/whiteboard-ps/toc.json",
         "packageRoot": "whiteboard-ps",
         "modules": {
-            "whiteboard": {}     
+            "whiteboard": {}
         }
     }
 }

@@ -12,7 +12,11 @@ ms.reviewer:
 
 
 ## SYNOPSIS
+
 Enables the modern communication site experience on an existing site.
+
+**At this time, based on early adopter feedback, we have decided to postpone rolling out this feature. We apologize for any inconvenience and will communicate a new schedule via Message Center, once it is available. We expect to have an update in the Q3 time frame**
+
 
 
 ## SYNTAX
@@ -22,7 +26,7 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ```
 
 ## DESCRIPTION
-Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability. If you have opted into the [Targeted release for entire organization program](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide), you can expect to be able to use this cmdlet after May 15th, 2019. Otherwise, this feature will be generally available in early June 2019. 
+Use this cmdlet to enable the modern communication site experience at the classic root site of a tenant. You must use the SharePoint admin powershell version 8715.1200 or greater. Use of this cmdlet is subject to rollout of capability.
 
 **Current limitations**
 
@@ -55,15 +59,14 @@ This example enables the communication site experience at this https://contoso.s
 
 ```
 $orgName="<tenantname>"
-$adminUPN = "<Current SharePoint Online Admin Login ID>"
 $rootSiteURL = "<Root site URL>"
-$userCredential = Get-Credential -UserName $adminUPN -Message "Type the password."
-Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
+Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
 **STEP BY STEP INSTRUCTIONS**
 
-1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version.
+
+1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version. Alternatively, if you have used Install-Module Microsoft.Online.SharePoint.PowerShell to install the SharePoint Online Management Shell, you can run Update-Module Microsoft.Online.SharePoint.PowerShell to update the PowerShell module to the latest available version.
 2. Make sure you have the SharePoint admin credentials for the tenant
 3. Make sure you have the correct root site URL. Typically its https://\<tenantname\>.sharepoint.com
 4. Copy the above PowerShell command(s) into a notepad and fill in the missing details denoted by <>

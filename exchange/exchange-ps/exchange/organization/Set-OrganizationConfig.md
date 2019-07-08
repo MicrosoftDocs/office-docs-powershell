@@ -303,7 +303,7 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ### -------------------------- Example 6 -------------------------- 
 ```
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15" 
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
@@ -1061,9 +1061,9 @@ This parameter is available only in the cloud-based service.
 
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled. This is the default value.
+- $true: The automatic creation of direct report Office 365 groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled.
+- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -1494,11 +1494,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAgendaMailEnabled
-The IsAgendaMailEnabled parameter specifies whether to enable or disable daily agenda messages. Valid values are:
-
-- $true: Users receive a daily agenda message in their Inbox from the Microsoft Outlook Calendar. This is the default value.
-
-- $false: The daily agenda message is disabled for all users.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2142,11 +2138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSessionEnabled
-The RefreshSessionEnabled parameter specifies whether to enable or disable the use of refresh tokens when using OpenID Connect for authentication. Valid values are:
-
-- $true: Refresh tokens are enabled.
-
-- $false: Refresh tokens are disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2259,11 +2251,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
