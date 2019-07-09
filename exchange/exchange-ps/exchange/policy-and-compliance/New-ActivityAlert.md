@@ -417,10 +417,6 @@ The RecordType parameter specifies a record type label for the activity alert. V
 
 - MicrosoftTeams
 
-- MicrosoftTeamsAddOns
-
-- MicrosoftTeamsSettingsOperation
-
 - OneDrive
 
 - PowerBIAudit
