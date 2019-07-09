@@ -29,6 +29,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <$true | $false>]
  [-AsyncSendEnabled <$true | $false>]
  [-AuditDisabled <$true | $false>]
+ [-AutoEnableArchiveMailbox <$true | $false>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <$true | $false>]
  [-BookingsPaymentsEnabled <$true | $false>]
