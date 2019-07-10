@@ -1,55 +1,55 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-DlpSensitiveInformationTypeRulePackage
+title: Remove-LabelPolicy
 schema: 2.0.0
-author: chrisda
-ms.author: chrisda
-ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# New-DlpSensitiveInformationTypeRulePackage
+# Remove-LabelPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-DlpSensitiveInformationTypeConfig cmdlet to import data loss prevention (DLP) sensitive information type rule packages in the Security & Compliance Center.
+Use the Remove-LabelPolicies cmdlet to remove sensitivity label policies from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-DlpSensitiveInformationTypeRulePackage [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-LabelPolicy [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Sensitive information type rule packages are used by DLP to detect sensitive content. The default sensitive information type rule package is named Microsoft Rule Package.
-
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-
-New-DlpSensitiveInformationTypeRulePackage -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Sensitive Info Type Rule Collection.xml" -Encoding Byte -ReadCount 0))
+Remove-LabelPolicy -Identity "Marketing Group"
 ```
 
-This example imports the sensitive information type rule package C:\\My Documents\\External Sensitive Info Type Rule Collection.xml.
+This example removes the policy named Marketing Group.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the sensitive information type rule package that you want to import.
+### -Identity
+The Identity parameter specifies the policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
-Type: Byte[]
+Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
@@ -77,21 +77,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
@@ -107,6 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/New-DlpSensitiveInformationTypeRulePackage)
-
-[Create custom sensitive information types with Exact Data Match based classification](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-labelpolicy)

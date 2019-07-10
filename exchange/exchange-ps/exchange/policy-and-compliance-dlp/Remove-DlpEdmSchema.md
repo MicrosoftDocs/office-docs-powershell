@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-DlpSensitiveInformationTypeRulePackage
+title: Remove-DlpEdmSchema
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -9,52 +9,51 @@ ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# New-DlpSensitiveInformationTypeRulePackage
+# Remove-DlpEdmSchema
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-DlpSensitiveInformationTypeConfig cmdlet to import data loss prevention (DLP) sensitive information type rule packages in the Security & Compliance Center.
+Use the Remove-DlpEdmSchema cmdlet to remove exact data match (EDM) data loss prevention (DLP) schemas from the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-DlpSensitiveInformationTypeRulePackage [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-DlpEdmSchema [-Identity] <EdmStorageIdParameter> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Sensitive information type rule packages are used by DLP to detect sensitive content. The default sensitive information type rule package is named Microsoft Rule Package.
-
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-
-New-DlpSensitiveInformationTypeRulePackage -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Sensitive Info Type Rule Collection.xml" -Encoding Byte -ReadCount 0))
+Remove-DlpEdmSchema -Identity "Schema for Patient Records"
 ```
 
-This example imports the sensitive information type rule package C:\\My Documents\\External Sensitive Info Type Rule Collection.xml.
+This example removes the DLP EDM schema named Schema for Patient Records.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the sensitive information type rule package that you want to import.
+### -Identity
+The Identity parameter specifies the DLP EDM schema that you want to remove. You can use any value that uniquely identifies the schema. For example:
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+- Name
+
+- Distinguished name (DN)
 
 ```yaml
-Type: Byte[]
+Type: EdmStorageIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -107,6 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/New-DlpSensitiveInformationTypeRulePackage)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/Remove-DlpEdmSchema)
 
 [Create custom sensitive information types with Exact Data Match based classification](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm)
