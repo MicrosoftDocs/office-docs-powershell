@@ -2251,11 +2251,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false

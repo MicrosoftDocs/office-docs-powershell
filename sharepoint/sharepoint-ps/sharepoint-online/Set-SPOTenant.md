@@ -47,6 +47,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+ [-EnableAzureADB2BIntegration <Boolean>] 
  [<CommonParameters>]
 ```
 
@@ -1339,6 +1340,25 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAzureADB2BIntegration  
+
+Enables the preview for OneDrive and SharePoint integration with Azure AD B2B. For more information see http://aka.ms/spo-b2b-integration
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
