@@ -531,6 +531,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoEnableArchiveMailbox
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
@@ -2383,22 +2400,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoEnableArchiveMailbox 
-This parameter is reserved for internal Microsoft use.
-
-This parameter is available only in the cloud-based service.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Default
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
