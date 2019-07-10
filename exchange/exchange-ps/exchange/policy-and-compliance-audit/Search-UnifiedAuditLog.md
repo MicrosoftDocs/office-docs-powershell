@@ -244,10 +244,6 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - MicrosoftTeams
 
-- MicrosoftTeamsAddOns
-
-- MicrosoftTeamsSettingsOperation
-
 - OneDrive
 
 - PowerBIAudit
