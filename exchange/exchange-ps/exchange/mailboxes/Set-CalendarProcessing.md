@@ -118,9 +118,7 @@ This example rejects meeting requests from any user who isn't a member of the Ex
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -155,7 +153,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddAdditionalResponse
-The AddAdditionalResponse parameter specifies whether additional information would be sent from the resource mailbox when responding to meeting requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AddAdditionalResponse parameter specifies whether additional information (the value of the AdditionalResponse parameter) is added to meeting request responses. Valid values are:
+
+- $true: Text from the AdditionalResponse parameter is added to meeting request responses.
+
+- $false: No additional text is added to meeting request responses (any text in the AddAdditionalResponse parameter isn't used). This is the default value.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
@@ -172,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalResponse
-The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests. This parameter is meaningful only when the AddAdditionalResponse parameter is set to $true.
+The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -187,9 +189,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddNewRequestsTentatively
-The AddNewRequestsTentatively parameter specifies whether to have the Calendar Attendant put new calendar items tentatively on the calendar. If the AddNewRequestsTentatively parameter is set to $false, only existing calendar items are updated by the Calendar Attendant
+The AddNewRequestsTentatively parameter specifies whether new meeting requests are added to the calendar as tentative. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: New calendar items are added to the calendar as tentative. This is the default value.
+
+- $false: Only existing calendar items are updated by the Calendar Attendant.
 
 ```yaml
 Type: $true | $false
@@ -204,7 +208,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddOrganizerToSubject
-The AddOrganizerToSubject parameter specifies whether the meeting organizer's name is used as the subject of the meeting request. Valid input for this parameter is $true or $false. The default value is $true.
+The AddOrganizerToSubject parameter specifies whether the meeting organizer's name is used as the subject of the meeting request. Valid values are:
+
+- $true: The meeting organizer's name replaces any existing Subject value for the meeting request. This is the default value.
+
+- $false: The original Subject value is preserved.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
@@ -221,7 +229,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllBookInPolicy
-The AllBookInPolicy parameter specifies whether to automatically approve in-policy requests from all users. Valid input for this parameter is $true or $false. The default value is $true.
+The AllBookInPolicy parameter specifies whether to automatically approve in-policy requests from all users to the resource mailbox. Valid values are:
+
+- $true: In-policy requests from all users are automatically approved. This is the default value.
+
+- $false: In-policy requests from all users aren't automatically approved (approval by a delegate is required).
 
 ```yaml
 Type: $true | $false
@@ -236,7 +248,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConflicts
-The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid values are:
+
+- $true: Conflicts are allowed.
+
+- $false: Conflicts aren't allowed. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -245,13 +261,17 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AllowRecurringMeetings
-The AllowRecurringMeetings parameter specifies whether to allow recurring meetings. Valid input for this parameter is $true or $false. The default value is $true.
+The AllowRecurringMeetings parameter specifies whether to allow recurring meetings in meeting requests. Valid values are:
+
+- $true: Recurring meetings are allowed. This is the default value.
+
+- $false: Recurring meetings aren't allowed.
 
 ```yaml
 Type: $true | $false
@@ -266,9 +286,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllRequestInPolicy
-The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests to the resource mailbox. Valid values are:
 
-These requests are subject to approval by a resource mailbox delegate unless the AllBookInPolicy parameter is set to $true.
+- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value is $true).
+
+- $false: All users can't submit in-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -283,9 +305,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllRequestOutOfPolicy
-The AllRequestOutOfPolicy parameter specifies whether to allow all users to submit out-of-policy requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllRequestOutOfPolicy parameter specifies whether to allow all users to submit out-of-policy requests to the resource mailbox. Valid values are:
 
-Out-of-policy requests are subject to approval by a resource mailbox delegate.
+- $true: All users are allowed to submit out-of-policy requests to the resource mailbox. Out-of-policy requests require approval by a resource mailbox delegate.
+
+- $false: All users can't submit out-of-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -309,7 +333,7 @@ The AutomateProcessing parameter enables or disables calendar processing on the 
 - AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline).
 
 In on-premises Exchange, resource mailboxes created in the Exchange admin center (EAC) have the default value AutoAccept, while resource mailboxes created in PowerShell have the default value AutoUpdate.
- 
+
 In Exchange Online, resource mailbox created in the EAC and resource mailboxes created in PowerShell after November 15, 2018 have the default value AutoAccept. Resource mailboxes created in PowerShell before November 15 have the default value AutoUpdate.
 
 The default value for user mailboxes is AutoUpdate, but you can't change the value on a user mailbox.
@@ -348,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -BookingWindowInDays
-The BookingWindowInDays parameter specifies the maximum number of days in advance that the resource can be reserved. Valid input is an integer from 0 through 1080. The default value is 180 days. The value 0 means today.
+The BookingWindowInDays parameter specifies the maximum number of days in advance that the resource can be reserved. A valid value is an integer from 0 through 1080. The default value is 180 days. The value 0 means today.
 
 ```yaml
 Type: Int32
@@ -411,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConflictPercentageAllowed
-The ConflictPercentageAllowed parameter specifies the maximum percentage of meeting conflicts for new recurring meeting requests. Valid input for this parameter is an integer from 0 through 100. The default value is 0.
+The ConflictPercentageAllowed parameter specifies the maximum percentage of meeting conflicts for new recurring meeting requests. A valid value is an integer from 0 through 100. The default value is 0.
 
 If a new recurring meeting request conflicts with existing reservations for the resource more than the percentage specified by this parameter, the recurring meeting request is automatically declined. When the value is 0, no conflicts are permitted for new recurring meeting requests.
 
@@ -428,7 +452,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteAttachments
-The DeleteAttachments parameter specifies whether to remove attachments from all incoming messages. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteAttachments parameter specifies whether to remove attachments from all incoming messages. Valid values are:
+
+- $true: Remove any attachments in incoming messages. This is the default value.
+
+- $false: Preserve any attachments in incoming messages.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
@@ -445,9 +473,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteComments
-The DeleteComments parameter specifies whether to remove or keep any text in the message body of incoming meeting requests.
+The DeleteComments parameter specifies whether to remove or keep any text in the message body of incoming meeting requests. Valid values are:
 
-Valid input for this parameter is $true or $false.
+- $true: Remove any text in the message body of incoming meeting requests. This is the default value.
+
+- $false: Preserve any text in the message body of incoming meeting requests.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
@@ -464,7 +494,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteNonCalendarItems
-The DeleteNonCalendarItems parameter specifies whether to remove or keep all non-calendar items received by the resource mailbox. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteNonCalendarItems parameter specifies whether to remove or keep all non-calendar-related messages that are received by the resource mailbox. Valid values are:
+
+- $true: Non-calendar messages are deleted. This is the default value.
+
+- $false: Non-calendar messages are preserved.
 
 ```yaml
 Type: $true | $false
@@ -479,7 +513,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteSubject
-The DeleteSubject parameter specifies whether to remove or keep the subject of incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteSubject parameter specifies whether to remove or keep the subject of incoming meeting requests. Valid values are:
+
+- $true: Remove the Subject value of incoming meeting requests. This is the default value.
+
+- $false: Preserve The Subject value of incoming meeting requests.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
@@ -513,9 +551,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableResponseDetails
-The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid input for this parameter is $true or $false. The default value is $true.
+The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid values are:
 
-By default, the reasons for accepting or declining a meeting in the response email message are included.
+- $true: The reasons for accepting or declining a meeting are included in the response message. This is the default value.
+
+- $false: The reasons for accepting or declining a meeting aren't included in the response message.
 
 ```yaml
 Type: $true | $false
@@ -530,15 +570,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceSchedulingHorizon
-The EnforceSchedulingHorizon parameter controls the behavior of recurring meetings that extend beyond the date specified by the BookingWindowInDays parameter.
+The EnforceSchedulingHorizon parameter controls the behavior of recurring meetings that extend beyond the date specified by the BookingWindowInDays parameter. Valid values are:
 
-Valid values for this parameter are:
-
-- $true: A recurring meeting request is automatically declined if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date.
+- $true: A recurring meeting request is automatically declined if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date. This is the default value.
 
 - $false: A recurring meeting request is automatically accepted if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date. However, the number of meetings is automatically reduced so meetings won't occur after the specified date.
-
-The default value is $true.
 
 ```yaml
 Type: $true | $false
@@ -553,9 +589,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardRequestsToDelegates
-The ForwardRequestsToDelegates parameter specifies whether to forward incoming meeting requests to the delegates defined for the resource mailbox.
+The ForwardRequestsToDelegates parameter specifies whether to forward incoming meeting requests to the delegates that are configured for the resource mailbox. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Forward incoming meeting requests to the delegates. This is the default value.
+
+- $false: Don't forward incoming meeting requests to the delegates.
 
 ```yaml
 Type: $true | $false
@@ -591,7 +629,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConflictInstances
-The MaximumConflictInstances parameter specifies the maximum number of conflicts for new recurring meeting requests when the AllowRecurringMeetings parameter is set to $true. Valid input for this parameter is an integer from 0 through INT32 (2147483647). The default value is 0.
+The MaximumConflictInstances parameter specifies the maximum number of conflicts for new recurring meeting requests when the AllowRecurringMeetings parameter is set to $true. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0.
 
 If a new recurring meeting request conflicts with existing reservations for the resource more than the number of times specified by the MaximumConflictInstances parameter value, the recurring meeting request is automatically declined. When the value is 0, no conflicts are permitted for new recurring meeting requests.
 
@@ -608,7 +646,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumDurationInMinutes
-The MaximumDurationInMinutes parameter specifies the maximum duration in minutes for meeting requests. Valid input for this parameter is an integer from 0 through INT32 (2147483647). The default value is 1440 (24 hours).
+The MaximumDurationInMinutes parameter specifies the maximum duration in minutes for meeting requests. A valid value is an integer from 0 through INT32 (2147483647). The default value is 1440 (24 hours).
 
 When the value is set to 0, the maximum duration of a meeting is unlimited. For recurring meetings, the value of this parameter applies to the length of an individual meeting instance.
 
@@ -625,11 +663,11 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizerInfo
-The OrganizerInfo parameter specifies whether to have mailboxes send organizer information when a meeting request is declined because of conflicts.
+The OrganizerInfo parameter specifies whether the resource mailbox sends organizer information when a meeting request is declined because of conflicts. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Organizer information is sent when a meeting request is declined because of conflicts. This is the default value.
 
-By default, resource mailboxes send organizer information when a meeting request is declined because of conflicts.
+- $false: Organizer information isn't sent when a meeting request is declined because of conflicts.
 
 ```yaml
 Type: $true | $false
@@ -644,9 +682,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessExternalMeetingMessages
-The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid input for this parameter is $true or $false. The default value is $false.
+The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid values are:
 
-By default, meeting requests that originate outside of the organization are rejected.
+- $true: Meeting requests from external senders are processed.
+
+- $false: Meeting requests from external senders are rejected. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -661,9 +701,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveForwardedMeetingNotifications
-The RemoveForwardedMeetingNotifications parameter specifies whether forwarded meeting notifications are moved to the Deleted Items folder after they're processed by the Calendar Attendant.
+The RemoveForwardedMeetingNotifications parameter specifies whether forwarded meeting notifications are moved to the Deleted Items folder after they're processed by the Calendar Attendant. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Processed forwarded meeting notifications are deleted (moved to the Deleted Items folder).
+
+- $false: Processed forwarded meeting notifications aren't deleted. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -678,9 +720,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOldMeetingMessages
-The RemoveOldMeetingMessages parameter specifies whether the Calendar Attendant removes old and redundant updates and responses.
+The RemoveOldMeetingMessages parameter specifies whether the Calendar Attendant removes old and redundant updates and responses. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Outdated and redundant meeting messages are deleted. This is the default value.
+
+- $false: Outdated and redundant meeting messages aren't deleted.
 
 ```yaml
 Type: $true | $false
@@ -695,9 +739,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePrivateProperty
-The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
+The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meetings that were sent by the organizer in the original requests. Valid values are:
 
-By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set this parameter to $false.
+- $true: The private flag for incoming meeting requests is cleared (the meeting is no longer private). This is the default value.
+
+- $false: The private flag for incoming meeting requests is preserved (private meetings stay private).
 
 ```yaml
 Type: $true | $false
@@ -712,7 +758,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestInPolicy
-The RequestInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
+The RequestInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that require approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -741,7 +787,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestOutOfPolicy
-The RequestOutOfPolicy parameter specifies users who are allowed to submit out-of-policy requests that are subject to approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
+The RequestOutOfPolicy parameter specifies users who are allowed to submit out-of-policy requests that require approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -799,11 +845,11 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleOnlyDuringWorkHours
-The ScheduleOnlyDuringWorkHours parameter specifies whether to allow meetings to be scheduled outside of the working hours that are defined for the resource mailbox.
+The ScheduleOnlyDuringWorkHours parameter specifies whether to allow meetings to be scheduled outside of the working hours that are defined for the resource mailbox. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Meeting requests that are outside of working hours are automatically rejected.
 
-If set to $true, meeting requests for times outside the working hours of the resource mailbox will be rejected.
+- $false: Meeting requests that are outside of working hours aren't automatically rejected. This is the default value.
 
 You configure the working hours of the resource mailbox by using the WorkDays, WorkingHoursStartTime, WorkingHoursEndTime and WorkingHoursTimeZone parameters on the Set-MailboxCalendarConfiguration cmdlet.
 
@@ -820,9 +866,11 @@ Accept wildcard characters: False
 ```
 
 ### -TentativePendingApproval
-The TentativePendingApproval parameter specifies whether to mark pending requests as tentative on the calendar. Valid input for this parameter is $true or $false. The default value is $true.
+The TentativePendingApproval parameter specifies whether to mark pending requests as tentative on the calendar. Valid values are:
 
-If set to $false, pending requests are marked as free.
+- $true: Meeting requests that are awaiting approval from a delegate appear in the calendar as tentative. This is the default value.
+
+- $false: Meeting requests that are awaiting approval appear in the calendar as free.
 
 ```yaml
 Type: $true | $false

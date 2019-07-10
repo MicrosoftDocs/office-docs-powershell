@@ -113,13 +113,16 @@ Accept wildcard characters: False
 ### -ArchiveTargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The ArchiveTargetDatabase parameter specifies the Exchange target database to which you're moving the personal archive. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+The ArchiveTargetDatabase parameter specifies the target mailbox database for the personal archive. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values to specify the target database:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+
 
 ```yaml
 Type: DatabaseIdParameter
@@ -408,9 +411,7 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -445,9 +446,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteCredential
-The RemoteCredential parameter specifies an administrator who has permission to perform the mailbox move, for example, Administrator@ humongousinsurance.com.
+The RemoteCredential parameter specifies the username and password an administrator who has permission to perform the mailbox move.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -574,13 +575,15 @@ Accept wildcard characters: False
 ### -TargetDatabase
 This parameter is available only in on-premises Exchange.
 
-The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
+The TargetDatabase parameter specifies the target mailbox database for the mailbox. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
 
-- GUID of the database
+- Distinguished name (DN)
 
-- Database name
+- GUID
+
+You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
 
 ```yaml
 Type: DatabaseIdParameter

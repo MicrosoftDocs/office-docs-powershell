@@ -188,9 +188,7 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Outlook on the web virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -1640,7 +1638,6 @@ The LogonFormat parameter specifies the type of logon format that's required for
 - UserName: Requires only the username, but you also need to specify a value for the DefaultDomain parameter.
 
 - PrincipalName: Requires the user principal name (UPN) (for example, user@contoso.com). This sign-in method works only for users whose UPN name is the same as their email address.
-
 
 ```yaml
 Type: FullDomain | PrincipalName | UserName

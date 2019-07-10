@@ -55,9 +55,7 @@ This example uses the Get-Mailbox command to retrieve all the mailboxes that res
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox to be processed. In cross-premises deployments, you can also specify a mail user who has a mailbox in the cloud. You can use any value that uniquely identifies the mailbox or mail user.
-
-For example:
+The Identity parameter specifies the mailbox to be processed. In cross-premises deployments, you can also specify a mail user who has a mailbox in the cloud. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
 

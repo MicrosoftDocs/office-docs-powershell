@@ -75,10 +75,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1--------------------- 
 ```
-Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
+Get-SPSite 'https://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
-This example gets the collection of subweb titles in site collection at http://\<site name\>.
+This example gets the collection of subweb titles in site collection at https://\<site name\>.
 
 ### ------------------EXAMPLE 2--------------------- 
 ```
@@ -91,7 +91,7 @@ This example gets a subset of data from all sites in the content database b399a3
 ```
 Start-SPAssignment -Global
 
-$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
+$s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
 
 $s.Url
 
@@ -117,14 +117,14 @@ This example uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 5--------------------- 
 ```
-Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
+Get-SPWebApplication https://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
 ### ------------------EXAMPLE 6--------------------- 
 ```
-Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
+Get-SPSite -Identity "https://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -133,10 +133,10 @@ The Quotes on the Identity parameter are required when the Regex parameter is us
 
 ### ------------------EXAMPLE 7--------------------- 
 ```
-Get-SPSite http://<site name>/sites/teams/* -Limit 100
+Get-SPSite https://<site name>/sites/teams/* -Limit 100
 ```
 
-This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
+This example gets up to 100 of the sites under the URL https://sitename/sites/teams.
 
 ### ------------------EXAMPLE 8--------------------- 
 ```
@@ -157,7 +157,7 @@ This example returns all SharePoint Server mode site collections.
 ### -Identity
 Specifies the URL or GUID of the site collection to get.
 
-The type must be a valid URL, in the form, http://server_name or http://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPSitePipeBind
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Specifies the site subscription from which to get site collections.
 
-The type must be a valid URL, in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL, GUID, or name of the web application from which to list sites.
 
-The type must be a valid URL, in the form, http://server_name, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the name of the web application (for example, WebApplication1212).
+The type must be a valid URL, in the form, https://server_name, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the name of the web application (for example, WebApplication1212).
 
 ```yaml
 Type: SPWebApplicationPipeBind

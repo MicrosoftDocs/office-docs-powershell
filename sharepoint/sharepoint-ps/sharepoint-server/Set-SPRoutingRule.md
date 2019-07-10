@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$wa = Get-SPWebApplication http://webAppUrl
+$wa = Get-SPWebApplication https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
 Get-SPRoutingRule -RequestManagementSettings $rm
 $machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm

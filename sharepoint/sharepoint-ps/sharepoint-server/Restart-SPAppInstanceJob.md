@@ -29,11 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-$instance = Get-SPAppInstance -Web http://site_url | ?{$_.Title -eq 'Contoso App'}
+$instance = Get-SPAppInstance -Web https://site_url | ?{$_.Title -eq 'Contoso App'}
 Restart-SPAppInstanceJob -AppInstance $instance
 ```
 
-Restarts the App Instance for the App named 'Contoso App' on http://site_url.
+Restarts the App Instance for the App named 'Contoso App' on https://site_url.
 
 ## PARAMETERS
 

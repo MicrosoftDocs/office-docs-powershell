@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------------ 
 ```
-$spapp = Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://site_url -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
-Install-SPApp -Web http://site_url -Identity $spapp
+$spapp = Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site https://site_url -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+Install-SPApp -Web https://site_url -Identity $spapp
 ```
 
 This example installs an app by first importing the app package, and then installing it.

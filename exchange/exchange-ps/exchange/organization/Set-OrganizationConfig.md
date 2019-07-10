@@ -303,13 +303,12 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ### -------------------------- Example 6 -------------------------- 
 ```
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15" 
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
 ## PARAMETERS
-
 
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
@@ -1062,9 +1061,9 @@ This parameter is available only in the cloud-based service.
 
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled. This is the default value.
+- $true: The automatic creation of direct report Office 365 groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled.
+- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -1249,7 +1248,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowMacOutlook
-The EwsAllowMacOutlook parameter specifies whether to enable or disable Microsoft Outlook for Mac 2011 to access EWS for the entire organization.
+The EwsAllowMacOutlook parameter enables or disables access to mailboxes by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later).
 
 ```yaml
 Type: $true | $false
@@ -1264,7 +1263,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowOutlook
-The EwsAllowOutlook parameter enables or disables Microsoft Office Outlook 2007 to access EWS for the entire organization. Outlook 2007 uses EWS for free and busy information, out-of-office settings, and calendar sharing.
+The EwsAllowOutlook parameter enables or disables access to mailboxes by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing.
 
 ```yaml
 Type: $true | $false
@@ -1418,9 +1417,7 @@ Accept wildcard characters: False
 ```
 
 ### -HierarchicalAddressBookRoot
-The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient.
-
-For example:
+The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -1497,11 +1494,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAgendaMailEnabled
-The IsAgendaMailEnabled parameter specifies whether to enable or disable daily agenda messages. Valid values are:
-
-- $true: Users receive a daily agenda message in their Inbox from the Microsoft Outlook Calendar. This is the default value.
-
-- $false: The daily agenda message is disabled for all users.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -1565,7 +1558,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
@@ -1805,9 +1797,7 @@ Accept wildcard characters: False
 ### -MicrosoftExchangeRecipientReplyRecipient
 This parameter is available only in on-premises Exchange.
 
-The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient:
-
-For example:
+The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient: For example:
 
 - Name
 
@@ -2148,11 +2138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSessionEnabled
-The RefreshSessionEnabled parameter specifies whether to enable or disable the use of refresh tokens when using OpenID Connect for authentication. Valid values are:
-
-- $true: Refresh tokens are enabled.
-
-- $false: Refresh tokens are disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2265,11 +2251,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false

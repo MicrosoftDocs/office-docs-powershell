@@ -51,14 +51,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "http://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
+Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "https://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
 
 This example makes the following changes to the existing preservation policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site http://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
 
 - Removes public folders.
 

@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------
 ```
-Update-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename -ToSolution contoso_solution_v2.wsp
+Update-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename -ToSolution contoso_solution_v2.wsp
 ```
 
-This example upgrades the sandboxed solution contoso_solution.wsp in the site http://sitename to the sandboxed solution contoso_solution_v2.wsp.
+This example upgrades the sandboxed solution contoso_solution.wsp in the site https://sitename to the sandboxed solution contoso_solution_v2.wsp.
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ### -Site
 Upgrade the sandboxed solution for the specified site collection.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

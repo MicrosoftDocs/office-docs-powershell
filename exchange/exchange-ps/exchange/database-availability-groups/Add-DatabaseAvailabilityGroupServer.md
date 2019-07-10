@@ -64,7 +64,15 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-The MailboxServer parameter specifies the name of the Mailbox server being added to the DAG.
+The MailboxServer parameter specifies the Mailbox server to add to the DAG. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter

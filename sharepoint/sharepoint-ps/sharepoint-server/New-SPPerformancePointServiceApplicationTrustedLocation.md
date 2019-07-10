@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------
 ```
-New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
+New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "https://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
 ```
 
 This example creates a new TrustedLocation for the PPSApp_01 service application.
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Url
 Specifies the URL of the trusted location site, site collection, site, document library, or list.
-The type must be a valid URL, in the form http://server_name, or http://server_name/sitecollection/site/list.
+The type must be a valid URL, in the form https://server_name, or https://server_name/sitecollection/site/list.
 
 ```yaml
 Type: String

@@ -106,9 +106,7 @@ This example sets the display name and disables Outlook Anywhere access for the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -351,7 +349,7 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
-- If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+- Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -884,7 +882,6 @@ The OutlookMobileEnabled parameter enables or disables access to the mailbox by 
 
 - $false: Access to the mailbox using Outlook for iOS and Android is disabled.
 
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -1109,7 +1106,7 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 This parameter is available only in on-premises Exchange.
 
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 ```yaml
 Type: SmtpAddress
@@ -1124,8 +1121,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderClientAccess
-This parameter is available only in the cloud-based service.
-
 The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
 
 - $true: The user can access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the value $true (the default value is $false).
@@ -1136,7 +1131,7 @@ The PublicFolderClientAccess parameter enables or disables access to public fold
 Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: $false

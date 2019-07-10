@@ -56,9 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the user that you want to remove from the eDiscovery case. You can use any value that uniquely identifies the user.
-
-For example:
+The Member parameter specifies the user that you want to remove from the eDiscovery case. You can use any value that uniquely identifies the user. For example:
 
 - Name
 

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Exchange.Management-Help.xml
 applicable: Exchange Online
 title: Set-FocusedInbox
 schema: 2.0.0
@@ -41,9 +41,7 @@ This example disables Focused Inbox for the mailbox of laura@contoso.com.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-AuthRedirect -AuthScheme Bearer -TargetURL http://mbx01.contoso.com
+New-AuthRedirect -AuthScheme Bearer -TargetURL https://mbx01.contoso.com
 ```
 
 This example creates an OAuth redirection object with the following settings:
 
 - AuthScheme: Bearer
 
-- TargetURL: http://mbx01.contoso.com
+- TargetURL: https://mbx01.contoso.com
 
 ## PARAMETERS
 

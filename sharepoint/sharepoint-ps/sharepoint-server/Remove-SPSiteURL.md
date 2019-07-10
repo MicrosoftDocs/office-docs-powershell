@@ -24,8 +24,8 @@ Remove-SPSiteURL [-Url] <String> [-AssignmentCollection <SPAssignmentCollection>
 ## DESCRIPTION
 The `Remove-SPSiteUrl` cmdlet removes an URL mapping from the site.
 
-The `Remove-SPSiteUrl` cmdlet only applies to the root site collection for a host name, that is, http://www.contoso.com.
-This cmdlet cannot be directly run against a managed path site collection underneath the root, that is, http://www.contoso.com/sites/test.
+The `Remove-SPSiteUrl` cmdlet only applies to the root site collection for a host name, that is, https://www.contoso.com.
+This cmdlet cannot be directly run against a managed path site collection underneath the root, that is, https://www.contoso.com/sites/test.
 
 You cannot remove the primary URL for a given site collection, which is typically defined as the first URL in the default zone.
 
@@ -36,10 +36,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-Remove-SPSiteURL -Url http://contoso.sharepoint.com
+Remove-SPSiteURL -Url https://contoso.sharepoint.com
 ```
 
-This example removes the URL from the site collection, http://contoso.sharepoint.com.
+This example removes the URL from the site collection, https://contoso.sharepoint.com.
 
 
 ## PARAMETERS

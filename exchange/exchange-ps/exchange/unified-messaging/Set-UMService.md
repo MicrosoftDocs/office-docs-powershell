@@ -55,7 +55,7 @@ This example removes the Mailbox server MyUMServer from all UM dial plans.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com -UMStartupMode TLS
+Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com:5061 -UMStartupMode TLS
 ```
 
 This example performs the following actions:
@@ -64,16 +64,14 @@ This example performs the following actions:
 
 - Sets the maximum number of incoming calls to 50.
 
-- Sets northamerica.lyncpoolna.contoso.com as the FQDN for the SIP access service that is used by Microsoft Lync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
+- Sets northamerica.lyncpoolna.contoso.com:5061 as the FQDN and port for the SIP access service that is used by Microsoft Lync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
 
 - Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up in TLS mode.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Exchange server that hosts the Unified Messaging service that you want to modify. For example:
-
-You can use any value that uniquely identifies the Exchange server. For example:
+The Identity parameter specifies the Mailbox server that hosts the Unified Messaging service configuration you want to modify. You can use any value that uniquely identifies the server. For example:
 
 - Name
 
@@ -154,6 +152,32 @@ Accept wildcard characters: False
 
 ### -GrammarGenerationSchedule
 The GrammarGenerationSchedule parameter specifies the scheduled times to start speech grammar generation. This parameter allows only one start time per day. The default scheduled time for grammar generation is 02:00-02:30 local time each day.
+
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
+
+- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
 Type: ScheduleInterval[]
@@ -336,9 +360,11 @@ Accept wildcard characters: False
 ```
 
 ### -SIPAccessService
-The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server pool or Skype for Business Server pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network. When this parameter isn't set, the Microsoft Exchange Unified Messaging service may select a Lync Server pool or Skype for Business Server pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
+The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server Front End pool or Skype for Business Server Front End pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network.
 
-This parameter is optional when you're configuring Unified Messaging with single Lync Server pool or Skype for Business Server pool deployments. However, for Lync Server or Skype for Business Server deployments that span multiple geographic regions, it's recommended that you specify this parameter. This parameter is set on a per-Unified Messaging service basis and must point to the Lync Server pool or Skype for Business Server pool that is located the closest geographically to the Exchange server.
+We recommend that you always use this parameter in Lync Server or Skype for Business Server deployments that span multiple geographic regions; otherwise, the Microsoft Exchange Unified Messaging service might select a pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
+
+You configure this parameter for each instance of the Unified Messaging service (each Exchange server) so the value identifies the closest Lync Server Front End pool or Skype for Business Server Front End pool to the Exchange server.
 
 ```yaml
 Type: ProtocolConnectionSettings

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Exchange.Management-Help.xml
 applicable: Exchange Online
 title: Set-Clutter
 schema: 2.0.0
@@ -39,9 +39,7 @@ This example disables Clutter for the user Alexander Martinez.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 

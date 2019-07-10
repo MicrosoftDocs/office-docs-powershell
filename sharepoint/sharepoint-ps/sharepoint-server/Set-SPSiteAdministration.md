@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPSiteAdministration http://sitename -OwnerAlias "DOMAIN\NewOwner"
+Set-SPSiteAdministration https://sitename -OwnerAlias "DOMAIN\NewOwner"
 ```
 
 This example allows farm administrators to change the ownership of a site collection to which they do not have access.
@@ -58,7 +58,7 @@ This example allows farm administrators to change the ownership of a site collec
 ### -Identity
 Specifies the URL (full or partial) or GUID of the site collection.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-456-987fg.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-456-987fg.
 
 ```yaml
 Type: SPSiteAdministrationPipeBind

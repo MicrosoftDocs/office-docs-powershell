@@ -43,12 +43,18 @@ Get-TextMessagingAccount -Identity tony@contoso.com
 
 This example returns the text messaging settings for Tony's mailbox.
 
+### -------------------------- Example 2 --------------------------
+```
+$mbx = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited
+$mbx | foreach {Get-TextMessagingAccount -Identity $_.Alias | where {($_.NotificationPhoneNumberVerified -eq $true)} | Format-Table Identity,NotificationPhoneNumber}
+```
+
+This example finds all user mailboxes where text messaging notifications are enabled.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -83,7 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
