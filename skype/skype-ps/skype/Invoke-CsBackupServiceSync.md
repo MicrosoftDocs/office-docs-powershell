@@ -76,6 +76,10 @@ ConfServices.DataConf
 
 CentralMgmt.CMSMaster
 
+ApplicationServer.RGSDataStore
+
+ApplicationServer.RGSFileStore 
+
 
 
 ```yaml
