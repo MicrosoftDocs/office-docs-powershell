@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to [apply information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-3-apply-information-barrier-policies) 
+Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to [view status of information barrier policy application](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application) 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
