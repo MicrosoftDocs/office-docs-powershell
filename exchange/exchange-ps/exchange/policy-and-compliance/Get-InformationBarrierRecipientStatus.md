@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierRecipientStatus cmdlet to  
+Use the Get-InformationBarrierRecipientStatus cmdlet to see whether specific user accounts are included in a segment and assigned an information barrier policy. Segments are defined by using certain attributes in [Azure Active Directory](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -73,6 +73,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-informationbarrierrecipientstatus)
+
+[Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes)
 
 [Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
 
