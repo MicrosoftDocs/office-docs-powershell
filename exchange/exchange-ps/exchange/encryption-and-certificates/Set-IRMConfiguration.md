@@ -31,6 +31,7 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-DecryptAttachmentForEncryptOnly <$true | $false>]
  [-DomainController <Fqdn>]
  [-EDiscoverySuperUserEnabled <$true | $false>]
+ [-EnablePdfEncryption <$true | $false>]
  [-ExternalLicensingEnabled <$true | $false>]
  [-Force]
  [-InternalLicensingEnabled <$true | $false>]
@@ -227,6 +228,27 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePdfEncryption
+This parameter is available only in the cloud-based service.
+
+The EnablePdfEncryption parameter specifies whether to enable the encryption of PDF attachments using Office 365 Message Encryption (OME). Valid values are:
+
+- $true: Messages that contain PDF attachments can be encrypted.
+
+- $false: Messages that contain PDF attachments can't be encrypted.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
