@@ -135,4 +135,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-organizationsegment)
 
+[Attributes for information barrier policies](https://docs.microsoft.com/Office365/SecurityCompliance/information-barriers-attributes)
+
 [Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
