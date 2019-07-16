@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Exchange.TransportMailControl-Help.xml
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-OrganizationSegment
+title: New-DlpEdmSchema
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -9,63 +9,52 @@ ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# New-OrganizationSegment
+# New-DlpEdmSchema
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-OrganizationSegment cmdlet with the UserGroupFilter parameter that corresponds to the [attribute](https://docs.microsoft.com/Office365/SecurityCompliance/information-barriers-attributes) you want to use to define segments of users in the Office 365 Security & Compliance Center.
+Use the New-DlpEdmSchema cmdlet to create exact data match (EDM) data loss prevention (DLP) schemas in the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
- [-Confirm]
- [-WhatIf] [<CommonParameters>]
+New-DlpEdmSchema [-FileData] <Byte[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+For an explanation and example of the EDM schema, see Define the schema for your database of sensitive information
+ (https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm#define-the-schema-for-your-database-of-sensitive-information).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"
+$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0; New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
 
-In this example, a segment called HR is defined using HR, a value in the Department attribute.
-
-### -------------------------- Example 2 --------------------------
-```
-New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"
-```
-
-In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
-
-### -------------------------- Example 3 --------------------------
-```
-New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"
-```
-
-In this example, we defined a segment called LocalFTE that includes people who are locally located and whose positions are not listed as Temporary.
+This example creates a new DLP EDM schema. The first command reads the schema in the XML file to a variable, and the second command uses that information to create the DLP EDM schema.
 
 ## PARAMETERS
 
-### -Name
-The Name parameter specifies the unique name for the organization segment. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+### -FileData
+The FileData parameter specifies the DLP EDM schema that you want to import.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
 
 ```yaml
-Type: String
+Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -82,21 +71,6 @@ Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserGroupFilter
-{{ Fill UserGroupFilter Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,8 +107,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-organizationsegment)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/New-DlpEdmSchema)
 
-[Attributes for information barrier policies](https://docs.microsoft.com/Office365/SecurityCompliance/information-barriers-attributes)
-
-[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+[Create custom sensitive information types with Exact Data Match based classification](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm)

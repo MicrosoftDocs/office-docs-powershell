@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-InformationBarrierPolicy cmdlet to create information barrier policies in the Office 365 Security & Compliance Center. 
+Use the New-InformationBarrierPolicy cmdlet to create [information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-2-define-information-barrier-policies) in the Office 365 Security & Compliance Center. 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -60,6 +60,13 @@ New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufact
 ```
 
 In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
+
+### Example 3
+```
+New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing" -State Inactive
+```
+
+In this example, we defined a policy that allows the *Research* segment to communicate with only *HR* and *Manufacturing*.
 
 ## PARAMETERS
 
@@ -219,3 +226,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)

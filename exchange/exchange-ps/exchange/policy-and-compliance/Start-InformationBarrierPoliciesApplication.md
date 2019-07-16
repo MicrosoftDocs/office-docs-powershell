@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Start-InformationBarrierPoliciesApplication cmdlet to  
+Use the Start-InformationBarrierPoliciesApplication cmdlet to [apply active information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-3-apply-information-barrier-policies). 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -33,7 +33,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Start-InformationBarrierPoliciesApplication
 ```
 
-{{ Add example description here }}
+This applies active information barrier policies.
 
 ## PARAMETERS
 
@@ -102,3 +102,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/stop-informationbarrierpoliciesapplication)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+
+[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
