@@ -22,9 +22,10 @@ Get-TeamChannelUser -GroupId <String> -DisplayName <String> [-Role <String>] [<C
 
 ### Example 1
 ```
-Get-TeamChannelUser -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Engineering Design" -Role Owner
+Get-TeamChannelUser -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Engineering" -Role Owner
 ```
-Get owners of channel with display name as "Engineering Design"
+
+Get owners of channel with display name as "Engineering"
 
 ## PARAMETERS
 
@@ -69,7 +70,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
