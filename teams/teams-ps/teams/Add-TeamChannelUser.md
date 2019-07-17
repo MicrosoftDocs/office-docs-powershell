@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-TeamChannelUser (available in private preview)
 
 ## SYNOPSIS
-Adds an owner or a member to the private channel.
+Adds an owner or member to the private channel.
 
 Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
 
@@ -27,17 +27,17 @@ Add-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-Rol
 
 ### Example 1
 ```
-Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering Design" -User dmx@example.com
+Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering" -User dmx@example.com
 ```
 
-Add user dmx@example.com to private channel with name "Engineering Design" under the given group.
+Add user dmx@example.com to private channel with name "Engineering" under the given group.
 
 ### Example 2
 ```
-Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering Design" -User dmx@example.com -Role Owner
+Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering" -User dmx@example.com -Role Owner
 ```
 
-Promote user dmx@example.com to an owner of private channel with name "Engineering Design" under the given group.
+Promote user dmx@example.com to an owner of private channel with name "Engineering" under the given group.
 
 ## PARAMETERS
 
@@ -106,6 +106,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
 ### GroupId, DisplayName, User, Role
 ## OUTPUTS
 
