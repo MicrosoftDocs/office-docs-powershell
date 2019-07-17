@@ -8,8 +8,6 @@ schema: 2.0.0
 # Remove-TeamChannelUser (available in private preview)
 
 ## SYNOPSIS
-Removes an owner or a member from the private channel.
-
 Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
 
 To turn an existing Owner into an Member, specify role parameter as Owner.
@@ -29,15 +27,8 @@ Remove-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-
 
 ### Example 1
 ```
-Remove-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering Design" -User dmx@example.com
+Remove-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering" -User dmx@example.com
 ```
-Removes user dmx@example.com from the private channel with name "Engineering Design" under the given group.
-
-### Example 2
-```
-Remove-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering Design" -User dmx@example.com -Role Owner
-```
-Demotes user dmx@example.com to a member of private channel with name "Engineering Design" under the given group.
 
 ## PARAMETERS
 
@@ -88,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Use this to demote a user from owner to member of the channel
+Use this to demote a user from owner to member of the team
 
 ```yaml
 Type: String
