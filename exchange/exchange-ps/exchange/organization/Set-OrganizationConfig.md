@@ -29,6 +29,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <$true | $false>]
  [-AsyncSendEnabled <$true | $false>]
  [-AuditDisabled <$true | $false>]
+ [-AutoEnableArchiveMailbox <$true | $false>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <$true | $false>]
  [-BookingsPaymentsEnabled <$true | $false>]
@@ -517,6 +518,23 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 - $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoEnableArchiveMailbox
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2251,11 +2269,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2385,6 +2399,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
