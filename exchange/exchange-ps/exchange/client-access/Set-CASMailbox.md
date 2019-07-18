@@ -1121,8 +1121,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderClientAccess
-This parameter is available only in the cloud-based service.
-
 The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
 
 - $true: The user can access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the value $true (the default value is $false).
@@ -1133,7 +1131,7 @@ The PublicFolderClientAccess parameter enables or disables access to public fold
 Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: $false

@@ -19,7 +19,7 @@ description: "Learn how to use remote PowerShell to connect to Exchange Online."
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!IMPORTANT]
-> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). If you're an Exchange Online Protection (EOP) standalone customer, and you're using the service to protect on-premises mailboxes, use the connection instructions in the topic [Connect to Exchange Online Protection PowerShell](../../exchange-eop/connect-to-exchange-online-protection-powershell.md). If your EOP subscription is Exchange Enterprise CAL with Services (includes data loss prevention (DLP) and reporting using web services), the connection instructions in this topic will work for you. 
+> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). <br/><br/> If you're an Exchange Online Protection (EOP) standalone customer, and you're using the service to protect on-premises mailboxes, use the connection instructions in the topic [Connect to Exchange Online Protection PowerShell](../../exchange-eop/connect-to-exchange-online-protection-powershell.md). If your EOP subscription is Exchange Enterprise CAL with Services (includes data loss prevention (DLP) and reporting using web services), the connection instructions in this topic will work for you.
 
 ## What do you need to know before you begin?
 
@@ -54,7 +54,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
   You need to configure this setting only once on your computer, not every time you connect.
 
 > [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351). 
+> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
 ## Connect to Exchange Online PowerShell
 
@@ -77,13 +77,13 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
    - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
-    
+
    - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
 
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
-      
+
      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
-      
+
      For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command.
