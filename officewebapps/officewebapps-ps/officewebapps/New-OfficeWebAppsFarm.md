@@ -47,7 +47,7 @@ You run this cmdlet on the first server in the Office Online Server farm and the
 New-OfficeWebAppsFarm -ExternalUrl "https://office.contoso.com" -CertificateName "Office Server Cert" -EditingEnabled:$true
 ```
 
-This example creates an Office Online Server farm on the local server that has editing enabled for Office Online. With this example, only a single URL is used for both internal and external users. The Certificate Name value is the Friendly Name of the certificate as it appears in the Computer's certificate store.
+This example creates an Office Online Server farm on the local server that has editing enabled for Office in a browser. With this example, only a single URL is used for both internal and external users. The Certificate Name value is the Friendly Name of the certificate as it appears in the Computer's certificate store.
 
 ## PARAMETERS
 
@@ -794,9 +794,9 @@ Accept wildcard characters: False
 ```
 
 ### -PicturePasteDisabled
-Turns off the ability for users to paste images from a web page into Office Online.
+Turns off the ability for users to paste images from a web page into Office in a browser.
 The default is False.
-If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office Online.
+If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office in a browser.
 
 ```yaml
 Type: SwitchParameter
@@ -958,7 +958,7 @@ Accept wildcard characters: False
 
 ### -TranslationServiceAppId
 Specifies the application ID for the translation service.
-The default is the public application ID for Office Online.
+The default is the public application ID for Office in a browser.
 Typically you will not use this parameter unless you have negotiated with Microsoft Translator for additional services and they have provided you with a private application ID.
 
 ```yaml
