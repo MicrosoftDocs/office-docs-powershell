@@ -22,11 +22,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-AutodiscoverVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>] [-Confirm] [-DigestAuthentication <$true | $false>]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-WhatIf] [-WindowsAuthentication <$true | $false>]
- [-WSSecurityAuthentication <$true | $false>] [-OAuthAuthentication <$true | $false>] [<CommonParameters>]
+ [-BasicAuthentication <$true | $false>]
+ [-Confirm]
+ [-DigestAuthentication <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-OAuthAuthentication <$true | $false>]
+ [-WhatIf]
+ [-WindowsAuthentication <$true | $false>]
+ [-WSSecurityAuthentication <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +52,7 @@ This example sets the authentication method to Digest authentication for the Aut
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'http://www.contoso.com'
+Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'https://www.contoso.com'
 ```
 
 In Exchange Server 2010, this example sets the external URL for the Autodiscover virtual directory.
@@ -58,9 +67,7 @@ This example sets Integrated Windows authentication for the Autodiscover virtual
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Autodiscover virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the Autodiscover virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -257,6 +264,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OAuthAuthentication
+The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
+
+- $true: OAuth authentication is enabled. This is the default value.
+
+- $false: OAuth authentication is disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -303,25 +329,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OAuthAuthentication
-The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
-
-- $true: OAuth authentication is enabled. This is the default value.
-
-- $false: OAuth authentication is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -14,7 +14,7 @@ description: "Learn about the filterable properties for the Filter parameter in 
 
 # Filterable properties for the Filter parameter
 
-You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016. The _Filter_ parameter is available on these recipient cmdlets:
+You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016 or Exchange Server 2019. The _Filter_ parameter is available on these recipient cmdlets:
 
 - [Get-CASMailbox](../../../exchange-ps/exchange/client-access/get-casmailbox.md)
 
@@ -66,7 +66,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `Property -like '*abc'`).
 
-- To look for blank or non-blank property values, use the value `$null` (for example, `{Property -eq $null}` or `{Property -ne $null`}).
+- To look for blank or non-blank property values, use the value `$null` (for example, `{Property -eq $null}` or `{Property -ne $null}`).
 
 - For more information about creating filters in recipient commands, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 

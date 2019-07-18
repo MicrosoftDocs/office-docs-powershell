@@ -45,7 +45,7 @@ This example removes a crawl mapping from a search application.
 ### -Identity
 The crawl mapping to delete.
 
-A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid CrawlMapping object.
+A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid CrawlMapping object.
 
 ```yaml
 Type: CrawlMappingPipeBind

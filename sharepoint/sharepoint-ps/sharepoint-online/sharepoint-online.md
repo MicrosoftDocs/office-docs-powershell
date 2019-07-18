@@ -3,6 +3,9 @@ Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
 Locale: en-US
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # SharePoint Online PowerShell
@@ -18,6 +21,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOHubSiteAssociation](Add-SPOHubSiteAssociation.md)
 {{Manually Enter Add-SPOHubSiteAssociation Description Here}}
+
+### [Add-SPOOrgAssetsLibrary](Add-SPOOrgAssetsLibrary.md)
+{{Manually Enter Add-SPOOrgAssetsLibrary Description Here}}
 
 ### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
 {{Manually Enter Add-SPOSiteDesign Description Here}}
@@ -54,6 +60,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 {{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
+
+### [Enable-SPOCommSite](Enable-SPOCommSite.md)
+{{Manually Enter Enable-SPOCommSite Description Here}}
 
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 {{Manually Enter Export-SPOUserInfo Description Here}}
@@ -105,6 +114,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOMigrationJobStatus](Get-SPOMigrationJobStatus.md)
 {{Manually Enter Get-SPOMigrationJobStatus Description Here}}
+
+### [Get-SPOOrgAssetsLibrary](Get-SPOOrgAssetsLibrary.md)
+{{Manually Enter Get-SPOOrgAssetsLibrary Description Here}}
 
 ### [Get-SPOPublicCdnOrigins](Get-SPOPublicCdnOrigins.md)
 {{Manually Enter Get-SPOPublicCdnOrigins Description Here}}
@@ -244,6 +256,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 {{Manually Enter Remove-SPOMigrationJob Description Here}}
 
+### [Remove-SPOOrgAssetsLibrary](Remove-SPOOrgAssetsLibrary.md)
+{{Manually Enter Remove-SPOOrgAssetsLibrary Description Here}}
+
 ### [Remove-SPOPublicCdnOrigin](Remove-SPOPublicCdnOrigin.md)
 {{Manually Enter Remove-SPOPublicCdnOrigin Description Here}}
 
@@ -324,6 +339,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Set-SPOMigrationPackageAzureSource](Set-SPOMigrationPackageAzureSource.md)
 {{Manually Enter Set-SPOMigrationPackageAzureSource Description Here}}
+
+### [Set-SPOOrgAssetsLibrary](Set-SPOOrgAssetsLibrary.md)
+{{Manually Enter Set-SPOOrgAssetsLibrary Description Here}}
 
 ### [Set-SPOSite](Set-SPOSite.md)
 {{Manually Enter Set-SPOSite Description Here}}

@@ -106,6 +106,8 @@ The Database parameter specifies the database on which to test the connectivity 
 
 If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
 
+You can't use the Identity, Database, or Server parameters in the same command.
+
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: Database
@@ -144,6 +146,8 @@ The Identity parameter specifies a mailbox to test. You can use any value that u
 This cmdlet accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If you pipe the identify from the Get-Mailbox or Get-Recipient cmdlets, you don't need to use this parameter.
 
 If you don't use this parameter, the cmdlet tests the SystemMailbox on the database that you specify.
+
+You can't use the Identity, Database, or Server parameters in the same command.
 
 ```yaml
 Type: MailboxIdParameter
@@ -228,7 +232,17 @@ Accept wildcard characters: False
 ### -CopyOnServer
 This parameter is available only in on-premises Exchange.
 
-The CopyOnServer parameter is used to test MAPI connectivity to a specific database copy on the servers specified with the Server parameter.
+The CopyOnServer parameter specifies the Mailbox server that holds the specific database copy to test. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can only use this parameter with the Server parameter, not the Identify or Database parameters.
 
 ```yaml
 Type: ServerIdParameter
@@ -313,9 +327,19 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available only in on-premises Exchange.
 
-The Server parameter specifies the server on which you will test the MAPI connectivity. The command tests the MAPI connectivity to each system mailbox hosted on active databases on the specified server.
+The Server parameter specifies the server on which you will test the MAPI connectivity. The command tests the MAPI connectivity to each system mailbox hosted on active databases on the specified server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 If you don't specify this parameter, the command tests the mailbox on the local server.
+
+You can't use the Identity, Database, or Server parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter

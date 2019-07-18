@@ -68,7 +68,7 @@ This example tests Exchange ActiveSync client connectivity for the server named 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "http://contoso.com/mail" -MailboxCredential (Get-Credential pauls@contoso.com)
+Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "https://contoso.com/mail" -MailboxCredential (Get-Credential pauls@contoso.com)
 ```
 
 This example tests the Exchange ActiveSync connectivity for the mailbox PaulS using the Autodiscover URL.

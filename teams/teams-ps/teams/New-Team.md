@@ -28,7 +28,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>] [-AllowAddRemoveApps <Boolean>]
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
- [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [<CommonParameters>]
+ [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -39,7 +39,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +60,7 @@ New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
+$group = New-Team -MailNickname "TestTeam" -displayname "Test Teams" -Visibility "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -444,9 +444,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ShowInTeamsSearchAndSuggestions
+Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team.  Set to $false to make those teams not discoverable from Teams clients.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -24,7 +24,6 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
  [-Image <Byte[]>] 
- [-Identity <String>]
  [-IntroductionText <String>]
  [-OTPEnabled <$true | $false>]
  [-PortalText <String>]
@@ -40,10 +39,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```
-New-OMEConfiguration -Identity "Expire in 7 days" ExternalMailExpiryInDays 7
+New-OMEConfiguration -Identity "Contoso Marketing" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
 ```
 
-This example configures encrypted email messages that are sent to external recipients to expire after 7 days.
+This example creates a new OME configuration named "Contoso Marketing" with the specified values specified. Unused parameters get the default values.
 
 ## PARAMETERS
 
@@ -86,9 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisclaimerText
-The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters.
-
-To remove existing text and use the default value, use the value $null for this parameter.
+The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -103,9 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailText
-The EmailText parameter specifies the default text that accompanies encrypted email messages. The default text appears above the instructions for viewing encrypted messages. The maximum length is 1024 characters.
-
-To remove existing text and use the default value, use the value $null for this parameter.
+The EmailText parameter specifies the default text that accompanies encrypted email messages. The default text appears above the instructions for viewing encrypted messages. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -119,12 +114,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalMailExpiryInDays
-The ExternalMailExpiryInDays parameter specifies when access to the mail through the Office 365 web portal will expire.  The range of the parameter is between 1 and 730.
+### -ExternalMailExpiryInDays 
+This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
+
+The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
 
 ```yaml
-Type: Int32
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Int32
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -145,8 +142,6 @@ You need to read the file to a byte-encoded object using the Get-Content cmdlet,
 
 - Optimal dimensions of logo image: 170x70 pixels
 
-To remove an existing image and use the default image, use the value $null for this parameter.
-
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
@@ -160,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntroductionText
-The IntroductionText parameter specifies the default text that accompanies encrypted email messages. The default text appears below the recipient email address for viewing encrypted message.
+The IntroductionText parameter specifies the default text that accompanies encrypted email messages. The default text appears below the recipient email address for viewing the encrypted message. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -194,9 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortalText
-The PortalText parameter specifies the text that appears at the top of the encrypted mail viewing portal. The maximum length is 128 characters.
-
-To remove existing text and use the default value, use the value $null for this parameter.
+The PortalText parameter specifies the text that appears at the top of the encrypted email viewing portal. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -211,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadButtonText
-The ReadButtonText parameter specifies the default text on the Read email button that accompanies encrypted email messages.
+The ReadButtonText parameter specifies the text that appears on the "Read Message" button. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -226,7 +219,11 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Office 365 portal using their own social network id (Google, Yahoo, etc).
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Office 365 portal using their own social network id (Google, Yahoo, etc). Valid values are:
+
+- $true: Social network ID sign in is allowed. This is the default value.
+
+- $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Office 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
 Type: $true | $false

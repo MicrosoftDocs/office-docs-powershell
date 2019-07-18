@@ -44,7 +44,7 @@ This example returns the crawl mappings for the search application 'Search Servi
 ### -Identity
 Specifies the crawl mapping to get.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://crawlmap1; or an instance of a valid CrawlMapping object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://crawlmap1; or an instance of a valid CrawlMapping object.
 
 ```yaml
 Type: CrawlMappingPipeBind

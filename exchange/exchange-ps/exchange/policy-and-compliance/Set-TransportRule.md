@@ -4911,7 +4911,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

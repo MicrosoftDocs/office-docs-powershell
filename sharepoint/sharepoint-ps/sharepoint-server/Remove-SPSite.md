@@ -31,14 +31,14 @@ This operation cannot be undone.
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Remove-SPSite -Identity 'http://sitename' -GradualDelete -Confirm:$False
+Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
 ```
 
 This example removes the given site collection and all included sites by using GradualDelete which places the site in the site recycle bin; confirmation has been suppressed.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-Remove-SPSite -Identity 'http://sitename'
+Remove-SPSite -Identity 'https://sitename'
 ```
 
 This example immediately deletes the site and it's contents from the farm.
@@ -47,7 +47,7 @@ This example immediately deletes the site and it's contents from the farm.
 
 ### -Identity
 Specifies the identity of the site to delete.
-The identity can be either a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
+The identity can be either a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
 
 ```yaml
 Type: SPSitePipeBind

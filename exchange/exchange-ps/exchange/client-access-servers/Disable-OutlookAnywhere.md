@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Disable-OutlookAnywhere cmdlet to disable Outlook Anywhere on a computer running Exchange Server 2010 that has the Client Access server role installed.
+Use the Disable-OutlookAnywhere cmdlet to disable Outlook Anywhere on Exchange Server 2010 Client Access servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,19 +23,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity
 ```
 Disable-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
- [-Confirm] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Server
 ```
 Disable-OutlookAnywhere [-Server <ServerIdParameter>]
- [-Confirm] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Disable-OutlookAnywhere cmdlet disables Outlook Anywhere on the Exchange 2010 Client Access server. This prevents the server from accepting requests from Microsoft Office Outlook 2007 and Outlook 2003 clients from the Internet by using Outlook Anywhere.
+Enabling Outlook Anywhere on the Client Access server prevents the server from accepting external connections by Outlook 2003 or later clients by using Outlook Anywhere.
 
 When you run this cmdlet, it can take as long as an hour for the settings to become effective, depending on how long it takes for Active Directory to replicate.
 
@@ -47,22 +49,32 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Disable-OutlookAnywhere -Server:CAS01
+Disable-OutlookAnywhere -Server CAS01
 ```
 
-This example disables Outlook Anywhere on the Client Access server CAS01.
+This example disables Outlook Anywhere on the Client Access server named CAS01.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Disable-OutlookAnywhere -Identity: "exch01\rpc (Default Web Site)" -Confirm:$false
+Disable-OutlookAnywhere -Identity: "exch01\rpc (Default Web Site)"
 ```
 
-This example disables Outlook Anywhere on the Client Access server exch01 by specifying the Identity and Confirm parameters.
+This example disables Outlook Anywhere on the specified virtual directory on the Client Access server named exch01.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the virtual directory that you want to disable.
+The Identity parameter specifies the Outlook Anywhere virtual directory that you want to disable. You can use any value that uniquely identifies the virtual directory. For example:
+
+- Name or \<Server\>\\Name
+
+- Distinguished name (DN)
+
+- GUID
+
+The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+
+You can't use the Identity and Server parameters in the same command.
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -111,7 +123,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the name of the Client Access server to be disabled for Outlook Anywhere.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
