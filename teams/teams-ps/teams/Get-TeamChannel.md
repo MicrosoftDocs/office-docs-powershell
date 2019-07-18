@@ -51,8 +51,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MembershipType (available in private preview)
-Membership type of the channel to display, Standard or Private
+### -MembershipType
+Membership type of the channel to display, Standard or Private (available in private preview)
 
 ```yaml
 Type: String
