@@ -663,7 +663,7 @@ The TreatSoftPassAsAuthenticated parameter specifies whether or not to respect t
 
 - $false: Only use this value when you want to enable more restrictive antispoofing filtering, because this value might cause false positives.
 
-Note: This parameter corresponds to the Strict filtering value in the Office 365 admin center.
+Note: This parameter corresponds to the Strict filtering value in the Microsoft 365 admin center.
 
 ```yaml
 Type: $true | $false
