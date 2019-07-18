@@ -127,7 +127,38 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+
+```
+RunspaceId          : GUID
+Type                : OrganizationSegment
+UserGroupFilter     : Department -eq 'HR'
+ExoSegmentId        : SegmentIdGUID
+ObjectVersion       : GUID
+CreatedBy           : Lee Gu
+LastModifiedBy      : Lee Gu
+Comment             :
+ModificationTimeUtc : 5/15/2019 4:41:27 PM
+CreationTimeUtc     : 5/15/2019 4:41:27 PM
+Identity            : FFO.serverurl/Microsoft Exchange Hosted Organizations/tenantname.onmicrosoft.com/Configuration/HR
+Id                  : FFO.serverurl/Microsoft Exchange Hosted Organizations/tenantname.onmicrosoft.com/Configuration/HR
+ExchangeVersion     : 0.20 (15.0.0.0)
+Name                : HR
+DistinguishedName   : CN=HR,CN=Configuration,CN=tenantname.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=FFO,DC=extest,DC=microsoft,DC=com
+ObjectCategory      :
+ObjectClass         : {msExchUnifiedPolicy}
+WhenChanged         : 5/15/2019 9:41:27 AM
+WhenCreated         : 5/15/2019 9:41:27 AM
+WhenChangedUTC      : 5/15/2019 4:41:27 PM
+WhenCreatedUTC      : 5/15/2019 4:41:27 PM
+ExchangeObjectId    : GUID
+OrganizationId      : FFO.serverurl/Microsoft Exchange Hosted Organizations/tenantname.onmicrosoft.com - FFO.serverurl/Microsoft Exchange Hosted Organizations/tenantname.onmicrosoft.com/Configuration
+Guid                : GUID
+OriginatingServer   :
+IsValid             : True
+ObjectState         : New
+
+```
 
 ## NOTES
 
