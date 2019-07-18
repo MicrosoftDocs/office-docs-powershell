@@ -43,7 +43,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Skype for Business Online
+Applicable: Skype for Business Online
 ```
 
 ### -Tenant
@@ -55,7 +55,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Skype for Business Online
+Applicable: Skype for Business Online
 ```
 
 ### CommonParameters
