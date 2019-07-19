@@ -53,7 +53,7 @@ This example enables insertion of clip art from Office.com.
 Set-OfficeWebAppsFarm -EditingEnabled:$true
 ```
 
-This example enables edit functionality for Office Online.
+This example enables edit functionality for Office in a browser.
 
 ### ------------------EXAMPLE 3---------------------
 ```
@@ -816,9 +816,9 @@ Accept wildcard characters: False
 ```
 
 ### -PicturePasteDisabled
-Turns off the ability for users to paste images from a web page into Office Online.
+Turns off the ability for users to paste images from a web page into Office in a browser.
 The default is False.
-If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office Online.
+If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office in a browser.
 
 ```yaml
 Type: SwitchParameter
@@ -986,7 +986,7 @@ Accept wildcard characters: False
 
 ### -TranslationServiceAppId
 Specifies the application ID for the translation service.
-The default is the public application ID for Office Online.
+The default is the public application ID for Office in a browser.
 Typically you will not use this parameter unless you have negotiated with Microsoft Translator for additional services and they have provided you with a private application ID.
 
 ```yaml
