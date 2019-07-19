@@ -1628,7 +1628,7 @@ The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. Yo
 
 - GUID
 
-A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center.
+A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
 
 You can see the available mailbox plans by using the Get-MailboxPlan cmdlet.
 
