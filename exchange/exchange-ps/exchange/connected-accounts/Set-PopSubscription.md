@@ -176,7 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingPassword
-The IncomingPassword parameter specifies the password used to sign in to the POP mailbox. You must specify the value for this parameter in a secure format, for example, (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
+The IncomingPassword parameter specifies the password used to sign in to the POP mailbox.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
@@ -236,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingUserName
-The IncomingUserName parameter specifies the user name used to sign in to the POP mailbox.
+The IncomingUserName parameter specifies the username used to sign in to the POP mailbox.
 
 ```yaml
 Type: String
@@ -266,13 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that contains the POP subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that contains the POP subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

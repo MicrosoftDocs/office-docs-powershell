@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppAutoProvisionConnection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppAutoProvisionConnection
@@ -57,17 +60,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
-This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on http://SPremotewebhost.
+This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on https://SPremotewebhost.
 
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
+C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
 
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
-This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on http://SPremotewebhost.
+This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.
 
 
 ### --------------------EXAMPLE 3---------------------

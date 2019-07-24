@@ -24,22 +24,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
  [-ConditionalCompany <MultiValuedProperty>]
- [-ConditionalCustomAttribute1 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute10 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute11 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute12 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute13 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute14 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute15 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute2 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute3 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute4 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute5 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute6 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute7 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute8 <MultiValuedProperty>] 
- [-ConditionalCustomAttribute9 <MultiValuedProperty>] 
- [-ConditionalDepartment <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
+ [-ConditionalDepartment <MultiValuedProperty>]
  [-ConditionalStateOrProvince <MultiValuedProperty>]
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
@@ -69,7 +69,7 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-SendModerationNotifications <Never | Internal | Always>]
- [-WhatIf]  [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -210,13 +210,9 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available only in on-premises Exchange.
 
-The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
-
-For example:
+The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -644,13 +640,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
-
-For example:
+The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -712,9 +704,11 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 
 - GUID
 
-If you don't use this parameter, the default value is typically the Users container in the domain of the Exchange server that you're connected to (also known as the recipient scope). You can change the recipient scope for the current PowerShell session by using the Set-AdServerSettings cmdlet.
+If you don't use this parameter, the default value is typically the Users container in the domain of the Exchange server that you're connected to (also known as the recipient scope). In on-premises Exchange, you can change the recipient scope for the current PowerShell session by using the Set-AdServerSettings cmdlet.
 
 If you don't use the RecipientContainer parameter, the location of the dynamic distribution group is used for the RecipientContainer property (the default location, or the value you specify for the OrganizationalUnit parameter).
+
+**Note**: Although this parameter is available in Exchange Online, there's only one usable OU in an Exchange Online organization, so using this parameter has no effect.
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -729,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress
@@ -757,6 +751,8 @@ The RecipientContainer parameter specifies a filter that's based on the recipien
 If you don't use this parameter, the default value is the OU where the object was created.
 
 Note that the RecipientContainer property can't be blank. The group is always limited to looking for recipients in a specific location (the value you specify for this parameter, or the location where the group was created).
+
+**Note**: Although this parameter is available in Exchange Online, there's only one usable OU in an Exchange Online organization, so using this parameter has no effect.
 
 ```yaml
 Type: OrganizationalUnitIdParameter

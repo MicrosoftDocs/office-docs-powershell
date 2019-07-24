@@ -130,7 +130,7 @@ This example creates the Send connector Secure Email to Contoso.com with the fol
 
 - It uses a specific authentication credential.
 
-To assign a specific authentication credential for the Send connector, you must first run the Get-Credential command and store the user input in a temporary variable. When you run the Get-Credential command, the command asks for the user name and password of the account used during authentication with the Contoso.com email server. The temporary variable can then be used in the New-SendConnector cmdlet to create the new connector.
+To assign a specific authentication credential for the Send connector, you must first run the Get-Credential command and store the user input in a temporary variable. When you run the Get-Credential command, the command asks for the username and password of the account used during authentication with the Contoso.com email server. The temporary variable can then be used in the New-SendConnector cmdlet to create the new connector.
 
 ## PARAMETERS
 
@@ -191,9 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationCredential
-The AuthenticationCredential parameter specifies a credential object.
+The AuthenticationCredential parameter specifies the username and password that's required to use the connector.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

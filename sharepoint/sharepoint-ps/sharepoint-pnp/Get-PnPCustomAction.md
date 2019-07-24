@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Get-PnPCustomAction
 
@@ -48,6 +45,13 @@ Get-PnPCustomAction -Scope web
 ```
 
 Returns all custom actions for the current web object.
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Includes 'Id','Title','ClientSideComponentProperties'
+```
+
+Returns the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' as well as specific properties, such as ClientSiteComponentProperties
 
 ## PARAMETERS
 
@@ -129,4 +133,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

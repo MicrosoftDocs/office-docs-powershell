@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -261,7 +261,7 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.Xds.DisplayExtern
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.14).aspx)
+[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.14).aspx)
 
 [New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
@@ -269,8 +269,8 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.Xds.DisplayExtern
 
 [Set-CsTrustedApplicationPool](Set-CsTrustedApplicationPool.md)
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.15).aspx)
+[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.15).aspx)
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.16).aspx)
+[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.16).aspx)
 
 

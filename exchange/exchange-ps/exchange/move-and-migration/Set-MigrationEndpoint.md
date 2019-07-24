@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations and remote moves.
+Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations, G Suite migrations, and remote moves.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,12 +23,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>]  [-ExchangeServer <String>] 
- [-MailboxPermission <Admin | FullAccess>]  [-MaxConcurrentIncrementalSyncs <Unlimited>] 
- [-MaxConcurrentMigrations <Unlimited>] [-NspiServer <String>]
- [-Port <Int32>] [-RemoteServer <Fqdn>] [-RpcProxyServer <Fqdn>] [-Security <None | Ssl | Tls>]
- [-SkipVerification] [-SourceMailboxLegacyDN <String>] [-TestMailbox <MailboxIdParameter>] [-WhatIf]
- [-Partition <MailboxIdParameter>] [-PublicFolderDatabaseServerLegacyDN <String>] [<CommonParameters>]
+ [-Confirm]
+ [-Credentials <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ExchangeServer <String>]
+ [-MailboxPermission <Admin | FullAccess>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-NspiServer <String>]
+ [-Partition <MailboxIdParameter>]
+ [-Port <Int32>]
+ [-PublicFolderDatabaseServerLegacyDN <String>]
+ [-RemoteServer <Fqdn>]
+ [-RpcProxyServer <Fqdn>]
+ [-Security <None | Ssl | Tls>]
+ [-ServiceAccountKeyFileData <Byte[]>]
+ [-SkipVerification]
+ [-SourceMailboxLegacyDN <String>]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +56,8 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. Staged Exchange migration requires the use of an Exchange endpoint.
 
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
+
+- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
 
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
@@ -126,9 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-The Credentials parameter specifies the credentials to use for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
+The Credentials parameter specifies the username and password for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -246,6 +261,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Port
 This parameter is available only in the cloud-based service.
 
@@ -253,6 +285,23 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderDatabaseServerLegacyDN
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -309,6 +358,25 @@ Type: None | Ssl | Tls
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceAccountKeyFileData
+This parameter is available only in the cloud-based service.
+
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -373,36 +441,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderDatabaseServerLegacyDN
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

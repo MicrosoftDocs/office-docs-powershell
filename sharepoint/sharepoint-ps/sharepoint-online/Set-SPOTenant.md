@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -46,6 +46,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
  [-CustomizedExternalSharingServiceUrl <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+ [-EnableAzureADB2BIntegration <Boolean>] 
  [<CommonParameters>]
 ```
 
@@ -61,9 +63,9 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### -----------------------EXAMPLE 1-----------------------------
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
+Set-SPOTenant -NoAccessRedirectUrl 'https://www.contoso.com'
 ```
-This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
+This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to https://www.contoso.com. 
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -109,6 +111,33 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 ```
 
 This example stops publishing content types to OneDrive for Business sites. 
+
+
+### -----------------------EXAMPLE 8-------------------------------
+
+```powershell
+Set-SPOTenant -SearchResolveExactEmailOrUPN $true
+```
+
+This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
+
+
+### -----------------------EXAMPLE 9-------------------------------
+
+```powershell
+Set-SPOTenant -UseFindPeopleInPeoplePicker $true
+```
+
+This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
+
+
+### -----------------------EXAMPLE 10-------------------------------
+
+```powershell
+Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
+```
+
+This example enable the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
 
@@ -357,7 +386,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
-True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
 
 ```yaml
@@ -381,7 +410,7 @@ ExternalUserAndGuestSharing (default) - External user sharing (share by email) a
 Disabled - External user sharing (share by email) and guest link sharing are both disabled.  
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 
 ```yaml
@@ -476,7 +505,7 @@ Specifies the home realm discovery value to be sent to Azure Active Directory (A
 When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
-Acceleration will not occur on site collections that are shared externally.
+Acceleration will not occur on site collections that are shared externally. 
 
 This value should be configured with the login domain that is used by your company (that is, example@contoso.com).
 
@@ -1277,8 +1306,88 @@ Once you have enabled Content Type publishing to OneDrive for Business sites, yo
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
+### -ConditionalAccessPolicy
+
+Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+
+PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+
+```yaml
+Type: SPOConditionalAccessPolicyType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEditing  
+
+Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAzureADB2BIntegration  
+
+Enables the preview for OneDrive and SharePoint integration with Azure AD B2B. For more information see http://aka.ms/spo-b2b-integration
+
+PARAMVALUE: $true | $false 
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LimitedAccessFileType 
+
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
+-OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+-LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+-LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+
+```yaml
+Type: SPOLimitedAccessFileType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1288,7 +1397,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 

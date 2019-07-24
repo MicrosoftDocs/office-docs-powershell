@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOHubSite
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -SiteDesignId
 
-A description of the hub site.
+Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
 
 ```yaml
 Type: String
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -RequiresJoinApproval
 
-A description of the hub site.
+Determines if joining a Hub site requires approval.
 
 ```yaml
 Type: Boolean

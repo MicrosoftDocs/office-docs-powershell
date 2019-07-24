@@ -58,22 +58,20 @@ In turn, that means that the user will not be able to use Call via Work, regardl
 
 To use Call via Work, users must be managed by a voice policy that allows simultaneous ringing.
 
-
-
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
-```
+### -------------------------- EXAMPLE 1 --------------------------
+
+```powershell
 New-CsMobilityPolicy -Identity site:Redmond -EnableOutsideVoice $False
 ```
 
 The command shown in Example 1 creates a new mobility policy for the Redmond site, and disables the use of Call via Work for any users affected by the policy.
 This is done by setting the EnableOutsideVoice parameter to False.
 
+### -------------------------- EXAMPLE 2 --------------------------
 
-
-### -------------------------- EXAMPLE 2 -------------------------- 
-```
+```powershell
 $x = New-CsMobilityPolicy -Identity site:Redmond -InMemory
 
 $x.EnableOutsideVoice = $False
@@ -89,10 +87,10 @@ In command 2, the EnableOutsideVoice property for the virtual policy is set to F
 After that, command 3 uses the Set-CsMobilityPolicy cmdlet and the Instance parameter to write the changes to Lync Server and create a mobility policy for the Redmond site.
 If you do not call the Set-CsMobilityPolicy cmdlet, the policy will not be created, and, in fact, will disappear as soon as you end your Windows PowerShell command-line interface session or delete the variable $x.
 
-
 ## PARAMETERS
 
 ### -Identity
+
 Unique Identity to be assigned to the policy.
 New mobility policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as your Identity.
@@ -111,7 +109,7 @@ If you need to make changes to an existing policy, use the Set-CsMobilityPolicy 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
@@ -122,6 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -142,14 +141,10 @@ Accept wildcard characters: False
 Enables administrators to provide explanatory text to accompany the policy.
 For example, the Description might include information about the users that the policy should be assigned to.
 
-
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -166,12 +161,10 @@ The default value is True, meaning that VoIP calls are allowed.
 
 This parameter was introduced in Lync Server 2013.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -185,12 +178,10 @@ Accept wildcard characters: False
 
 When set to True, users are allowed to use Skype for Business Mobile.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -207,12 +198,10 @@ When set to False, users cannot use Call via Work.
 
 The default value is True.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -226,12 +215,10 @@ Accept wildcard characters: False
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -246,12 +233,10 @@ Accept wildcard characters: False
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of a command called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -269,12 +254,10 @@ If this property is set to False (the default value) then the user can make or r
 
 This parameter was introduced in Lync Server 2013.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -287,7 +270,6 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Describes what would happen if you executed the command without actually executing the command.
-
 
 ```yaml
 Type: SwitchParameter
@@ -303,12 +285,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutomaticPstnFallback
+
 {{Fill AllowAutomaticPstnFallback Description}}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -322,12 +305,10 @@ Accept wildcard characters: False
 
 When set to True (the default value) mobile users will be allowed to participate in the Microsoft Customer Experience Improvement Program.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -338,12 +319,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDeviceContactsSync
-When set to True (the default value) users will be allowed to sync device contacts on ther mobile apps.
+
+When set to True (the default value) users will be allowed to sync device contacts on the mobile apps.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -357,12 +339,10 @@ Accept wildcard characters: False
 
 When set to True (the default value) users will be allowed to connect to Exchange by using their mobile device.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -378,12 +358,10 @@ When set to True (the default value) users will be allowed to save a call log of
 
 Note that this setting does not apply to Android devices.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -398,12 +376,10 @@ Accept wildcard characters: False
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -417,12 +393,10 @@ Accept wildcard characters: False
 
 When set to True (the default value) users will be allowed to save transcripts of IM and conferencing sessions on their mobile devices.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -433,12 +407,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePushNotifications
+
 When set to True (the default value) users will be allowed to receive push notifications on their mobile devices.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -449,12 +424,13 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptAppData
+
 When set to True users will be allowed to encrypt data on their mobile apps.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -465,12 +441,13 @@ Accept wildcard characters: False
 ```
 
 ### -RequireIntune
+
 {{Fill RequireIntune Description}}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -488,12 +465,10 @@ When set to False (the default value) mobile users can participate in applicatio
 If this value is set to True, then users then users will not be able to change their sharing configuration settings.
 If this value is set to False users can use the Options page to modify their sharing configuration settings.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -514,12 +489,10 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -530,7 +503,8 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSettings
-Controls how audio is connected by a mobile device joining a meeting or a peer-to-peer call. When the Skype for Business client is first run, and the user is enabled for Phone System with a Calling Plan, they are prompted to configure a call back phone number. This number is stored in settings under the **Calls and Meetings** section and will be used based on the value chosen for this parameter. Acceptable values are: 
+
+Controls how audio is connected by a mobile device joining a meeting or a peer-to-peer call. When the Skype for Business client is first run, and the user is enabled for Phone System with a Calling Plan, they are prompted to configure a call back phone number. This number is stored in settings under the **Calls and Meetings** section and will be used based on the value chosen for this parameter. Acceptable values are:
 
 **VoIPAlways:** WiFi will be used when available, otherwise a call back will be performed.
 
@@ -541,7 +515,7 @@ Controls how audio is connected by a mobile device joining a meeting or a peer-t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -552,16 +526,17 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
+
 Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -572,18 +547,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
 
-###  
-None.
+### None
+
 The New-CsMobilityPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Microsoft.Rtc.Management.WriteableConfig.Policy.Mobility.Mobility
+
 Creates new instances of the Microsoft.Rtc.Management.WriteableConfig.Policy.Mobility.Mobility object.
 
 ### System.Object
@@ -591,5 +568,4 @@ Creates new instances of the Microsoft.Rtc.Management.WriteableConfig.Policy.Mob
 ## NOTES
 
 ## RELATED LINKS
-
 

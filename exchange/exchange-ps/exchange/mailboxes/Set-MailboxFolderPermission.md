@@ -98,7 +98,7 @@ The following individual permissions are available:
 
 - FolderContact: The user is the contact for the specified public folder.
 
-- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
+- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
 
 - FolderVisible: The user can view the specified folder, but can't read or edit items within the specified public folder.
 
@@ -143,13 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -184,13 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group.
-
-For example:
+The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

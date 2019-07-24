@@ -56,13 +56,6 @@ This example deploys the installed SharePoint solution contoso_solution.wsp in t
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -AddtoLatestVersion $true
-```
-
-This example deploys the installed SharePoint solution contoso_solution.wsp in the farm within the latest version directories and specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
-
-### ------------------EXAMPLE 3------------------ 
-```
 Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
 ```
 

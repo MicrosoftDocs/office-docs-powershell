@@ -59,13 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -90,13 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter specifies a user who owns the group. You can use any value that uniquely identifies the user.
-
-For example:
+The ManagedBy parameter specifies a user who owns the group. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

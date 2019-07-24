@@ -41,7 +41,7 @@ This example returns a summary list of all sensitive information type rule packa
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-DlpSensitiveInformationTypeRulePackage - Identity "Microsoft Rule Package" | Format-List
+Get-DlpSensitiveInformationTypeRulePackage -Identity "Microsoft Rule Package" | Format-List
 ```
 
 This example returns detailed information for the sensitive information type rule package named Microsoft Rule Package.

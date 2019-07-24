@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
-ms.reviewer:
-manager: paulac@microsoft.com
+author: Maralesfahanpoor
+ms.author: maesfaha
+ms.reviewer: 
+manager: paulac
 online version:
 schema: 2.0.0
 ---

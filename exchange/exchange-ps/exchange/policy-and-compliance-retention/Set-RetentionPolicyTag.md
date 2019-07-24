@@ -103,7 +103,27 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies a mailbox for assigning opt-in tags.
+The Mailbox parameter specifies a mailbox for assigning opt-in tags. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You must use this parameter with the OptionalInMailbox parameter.
 
@@ -120,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -218,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -235,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -365,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptionalInMailbox
-The OptionalInMailbox parameter is used with the Mailbox parameter to specify opt-in retention tags available to the mailbox.
+The OptionalInMailbox parameter is used with the Mailbox parameter to assign personal tags to the mailbox. You can use this parameter to make available to a user a personal tag that isn't assigned to the retention policy applied to the specified mailbox. You can specify multiple personal tags separated by commas.
 
 ```yaml
 Type: RetentionPolicyTagIdParameter[]

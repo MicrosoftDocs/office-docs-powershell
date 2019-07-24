@@ -229,8 +229,6 @@ In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdP
 
 - Name
 
-- Display name
-
 - Alias
 
 - Distinguished name (DN)
@@ -813,7 +811,7 @@ This parameter is available only in on-premises Exchange.
 
 The RemoteCredential parameter specifies the credentials of an administrator who has permission to perform the mailbox import request.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

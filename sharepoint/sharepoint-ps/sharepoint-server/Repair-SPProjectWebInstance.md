@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Repair-SPProjectWebInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Repair-SPProjectWebInstance
@@ -29,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
+Repair-SPProjectWebInstance -Identity https://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
-This example enqueues any missing triggers for the Project Web App instance at http://contoso-appsrv/PWA.
+This example enqueues any missing triggers for the Project Web App instance at https://contoso-appsrv/PWA.
 
 
 ## PARAMETERS

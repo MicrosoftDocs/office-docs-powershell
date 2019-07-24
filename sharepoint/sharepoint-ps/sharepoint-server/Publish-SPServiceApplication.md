@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Publish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -Description "Connect to this TestServiceApplcation of you want to use FeatureA in your farm" -InfoLink http://testurl
+Publish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -Description "Connect to this TestServiceApplcation of you want to use FeatureA in your farm" -InfoLink https://testurl
 ```
 
 This example publishes a service application to another farm.
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Specifies the link to more information about the service application to share outside the farm.
 If no link is specified, no link is made available.
 
-The type must be a valid URL, in the form  http://server_name/Site_Name/page_name.
+The type must be a valid URL, in the form  https://server_name/Site_Name/page_name.
 
 ```yaml
 Type: Uri

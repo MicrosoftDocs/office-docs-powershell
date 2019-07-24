@@ -26,7 +26,9 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <$true | $false>]
+ [-GroupMailbox]
  [-HasAttachments <$true | $false>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -40,7 +42,9 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <$true | $false>]
+ [-GroupMailbox]
  [-HasAttachments <$true | $false>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -78,6 +82,41 @@ This example retrieves mailbox audit log entries for Ken Kwok's mailbox for acti
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies a single mailbox to retrieve mailbox audit log entries from. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -113,13 +152,34 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalAccess
-The ExternalAccess parameter returns only mailbox audit log entries for mailbox access by users outside of your organization. In Exchange Online, use this parameter to return audit log entries for mailbox access by Microsoft datacenter administrators.
+The ExternalAccess parameter specifies whether to return only audit log entries for mailbox access by users that are outside of your organization. In Exchange Online, this parameter returns audit log entries for mailbox access by Microsoft datacenter administrators. Valid values are:
+
+$true: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are returned.
+
+$false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This is the default value.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to include Office 365 groups in the search. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -146,23 +206,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the mailbox for which to retrieve mailbox audit log entries. You can use this parameter to search a single mailbox.
+### -IncludeInactiveMailbox
+This parameter is available only in the cloud-based service.
+
+The IncludeInactiveMailbox switch is required to include inactive mailboxes in the search. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
 ```yaml
-Type: MailboxIdParameter
-Parameter Sets: Identity
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -LogonTypes
-The LogonTypes parameter specifies the type of logons. Valid values include:
+The LogonTypes parameter specifies the type of logons. Valid values are:
 
 - Admin: Audit log entries for mailbox access by administrator logons are returned.
 
@@ -185,7 +249,11 @@ Accept wildcard characters: False
 ```
 
 ### -Mailboxes
-The Mailboxes parameter specifies the mailboxes for which to retrieve mailbox audit log entries. You can use this parameter to search audit logs for multiple mailboxes. You can't use the ShowDetails switch with the Mailboxes parameter.
+The Mailboxes parameter specifies the mailboxes to retrieve mailbox audit log entries from. You can use this parameter to search audit logs for multiple mailboxes.
+
+You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+You can't use this parameter with the ShowDetails switch.
 
 ```yaml
 Type: MultiValuedProperty
@@ -200,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operations
-The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values for this parameter are:
+The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values are:
 
 - Copy
 
@@ -262,9 +330,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowDetails
-The ShowDetails switch specifies that details of each log entry be retrieved. By default, all fields for each returned log entry are displayed in a list view.
+The ShowDetails switch retrieves the details of each log entry from the mailbox. You don't need to specify a value with this switch.
 
-You can't use the Mailboxes parameter with the ShowDetails switch.
+By default, all fields for each returned log entry are displayed in a list view.
+
+You can't use this switch with the Mailboxes parameter.
 
 ```yaml
 Type: SwitchParameter

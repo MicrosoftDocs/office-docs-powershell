@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
-ms.reviewer:
-manager: paulac@microsoft.com
+author: Maralesfahanpoor
+ms.author: maesfaha
+ms.reviewer: 
+manager: paulac
 online version:
 schema: 2.0.0
 ---
@@ -20,13 +20,13 @@ Designates a library to be used as a central location for organization assets ac
 ## SYNTAX
 
 ```powershell
-Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>]
- [<CommonParameters>]
+Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>] 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant. The name publicly displayed for the library will be the name of the library on the SharePoint site.
+The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the name of the library on the SharePoint site.
 
 ## EXAMPLES
 

@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSiteScript
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -Content
 
-The JSON value that describes the script. For more information, see the [JSON reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema).
+The JSON value that describes the script. For more information, see the [JSON reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 ```yaml
 Type: String

@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password used to sign in to the mailbox.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
@@ -173,13 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the cloud-based mailbox that contains the subscription. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the cloud-based mailbox that contains the subscription. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

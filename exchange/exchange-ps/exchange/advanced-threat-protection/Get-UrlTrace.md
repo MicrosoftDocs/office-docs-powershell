@@ -14,7 +14,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-UrlTrace cmdlet to view the results of Safe Links actions in your cloud-based organization.
+Use the Get-UrlTrace cmdlet to view the results of Safe Links actions in your cloud-based organization. Currently, the date range can't be more than seven days.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -27,7 +27,7 @@ Get-UrlTrace [-ClickId <Guid>] [-EndDate <DateTime>] [-Expression <Expression>] 
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site. For more information about Advanced Threat Protection Safe Links, see [Office 365 ATP Safe Links](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
