@@ -68,7 +68,7 @@ Allowed values are:
 * UserData
 * RGS
 
-If this parameter is not specified then both backup types will be checked.
+If this parameter is not specified then all three backup types will be checked.
 
 ```yaml
 Type: BackupCategory
