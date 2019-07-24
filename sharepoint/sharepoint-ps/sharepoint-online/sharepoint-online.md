@@ -211,6 +211,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Invoke-SPOSiteDesign](Invoke-SPOSiteDesign.md)
 {{Manually Enter Invoke-SPOSiteDesign Description Here}}
 
+### [Invoke-SPOSiteSwap](Invoke-SPOSiteSwap.md)
+{{Manually Enter Invoke-SPOSiteSwap Description Here}}
+
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 {{Manually Enter New-SPODataConnectionSetting Description Here}}
 
