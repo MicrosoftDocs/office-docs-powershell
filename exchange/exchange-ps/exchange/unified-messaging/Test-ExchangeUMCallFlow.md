@@ -1,9 +1,12 @@
----
+﻿---
 external help file: Microsoft.Exchange.UM.TroubleshootingTool.dll-Help.xml
 Module Name: Microsoft.Exchange.UM.TroubleshootingTool.dll
 online version: https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
@@ -183,9 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the credentials that will be used to run the cmdlet.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122). 
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

@@ -3,12 +3,15 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Register-SPOHubSite
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Register-SPOHubSite
 
 ## SYNOPSIS
-Enables the hub site feature on a site to make it a hub site.
+Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](https://docs.microsoft.com/sharepoint/dev/features/hub-site/hub-site-overview).
 
 
 ## SYNTAX
@@ -25,6 +28,9 @@ Use this cmdlet to register an existing site collection as a hub site.
 
 > [!IMPORTANT]
 > A maximum of 100 hub sites may be created per tenant, with 'unlimited' number of site collections associated to a hub site.
+
+> [!NOTE]
+> It can take up to 2-4 hours for the changes to appear.
 
 ## EXAMPLES
 

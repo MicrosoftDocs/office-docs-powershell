@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppStoreConfiguration
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
+Set-SPAppStoreConfiguration -Url https://office.microsoft.com -Enable $true
 ```
 
 This example sets the URL to the Office.com server.

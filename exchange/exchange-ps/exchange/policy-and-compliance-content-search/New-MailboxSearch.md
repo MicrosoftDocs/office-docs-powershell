@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -15,7 +18,7 @@ On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to
 
 Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as Litigation Hold.
 
-By default, mailbox searches are performed across all Exchange 2016 and Exchange 2013 Mailbox servers in an Exchange organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
+By default, mailbox searches are performed across all Exchange 2013 or later Mailbox servers in an Exchange organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
 
 For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx) and In-Place Hold and Litigation Hold (https://technet.microsoft.com/library/ff637980.aspx).
 
@@ -43,7 +46,6 @@ New-MailboxSearch [-Name] <String>
  [-Language <CultureInfo>]
  [-LogLevel <Suppress | Basic | Full>]
  [-MessageTypes <KindKeyword[]>]
- [-PublicFolderSources <PublicFolderIdParameter[]>]
  [-Recipients <String[]>]
  [-SearchDumpster]
  [-SearchQuery <String>]
@@ -69,17 +71,17 @@ New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Execut
 
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
 
-SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
+- SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
 
-Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
+- Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
 
-SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
+- SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
 
-StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
+- StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
 
-TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
+- TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
-StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
+- StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -461,22 +463,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicFolderSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PublicFolderIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 ### -Recipients
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.
 
@@ -497,7 +483,9 @@ Accept wildcard characters: False
 ### -SearchDumpster
 This parameter is available or functional only in Exchange Server 2010.
 
-The SearchDumpster parameter enables searching the dumpster, which is a storage location where items deleted from the Deleted Items folder are located until they are purged from the mailbox database.
+The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
+
+By default, items in the dumpster are searched. Set the value to $false to disable searching the dumpster.
 
 ```yaml
 Type: SwitchParameter
@@ -506,7 +494,7 @@ Aliases:
 Applicable: Exchange Server 2010
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -558,13 +546,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMailboxes
-The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -576,7 +560,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -618,13 +602,9 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
-The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient.
-
-For example:
+The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -636,7 +616,7 @@ For example:
 
 - GUID
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -651,13 +631,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox.
-
-For example:
+The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

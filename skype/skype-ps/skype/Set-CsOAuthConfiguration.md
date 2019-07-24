@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Collection of domains that autodiscover requests can be redirected to.
 For example:
 
-`-ExchangeAutodiscoverAllowedDomains "*.contoso.com","*.fabrikam.com"`
+`-ExchangeAutodiscoverAllowedDomains "*.contoso.com;*.fabrikam.com"`
 
 
 ```yaml
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-{{Fill ClientAdalAuthOverride Description}}
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
 
 ```yaml
 Type: ClientAdalAuthOverride
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

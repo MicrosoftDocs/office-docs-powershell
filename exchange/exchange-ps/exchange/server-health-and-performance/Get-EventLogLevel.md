@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-EventLogLevel
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -51,8 +54,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Distinguished name (DN)
 
 - Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter with the Identity parameter.
 

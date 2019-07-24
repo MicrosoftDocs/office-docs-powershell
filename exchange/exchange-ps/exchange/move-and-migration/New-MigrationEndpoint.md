@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationEndpoint
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MigrationEndpoint cmdlet to configure the connection settings for cross-forests moves, remote move migrations, cutover or staged Exchange migrations and IMAP migrations.
+Use the New-MigrationEndpoint cmdlet to configure the connection settings for cross-forests moves, remote move migrations, cutover or staged Exchange migrations, IMAP migrations, and G Suite migrations.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -98,6 +101,18 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>
  [-WhatIf] [<CommonParameters>]
 ```
 
+### Gmail
+```
+New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>] 
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
+```
+
 ### PublicFolder
 ```
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
@@ -163,18 +178,6 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDa
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Other
-```
-New-MigrationEndpoint -Name <String> [-EmailAddress <SmtpAddress>]
- [-Confirm]
- [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>]
- [-Partition <MailboxIdParameter>]
- [-SkipVerification]
- [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The New-MigrationEndpoint cmdlet configures the connection settings for different types of migrations:
 
@@ -187,6 +190,8 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
+
+- G Suite migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data.  G Suite migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 
@@ -213,7 +218,7 @@ This example creates an endpoint for remote moves by specifying the settings man
 $Credentials = Get-Credential; New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH-AutoDiscover -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
-This example creates an Outlook Anywhere migration endpoint by using the Autodiscover parameter to detect the connection settings to the on-premises organization. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The Get-Credential cmdlet is used to obtain the credentials for an on-premises account that has the necessary administrative privileges in the domain and that can access the mailboxes that will be migrated. When prompted for the user name, you can use either the email address or the domain\\user name format for the administrator account. This account can be the same one that is specified by the EmailAddress parameter.
+This example creates an Outlook Anywhere migration endpoint by using the Autodiscover parameter to detect the connection settings to the on-premises organization. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The Get-Credential cmdlet is used to obtain the credentials for an on-premises account that has the necessary administrative privileges in the domain and that can access the mailboxes that will be migrated. When prompted for the user name, you can use either the email address or the domain\\username format for the administrator account. This account can be the same one that is specified by the EmailAddress parameter.
 
 ### -------------------------- Example 4 --------------------------
 ```
@@ -288,7 +293,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the credentials to connect to the source or target endpoint for all Exchange migration types.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -331,7 +336,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExchangeOutlookAnywhere, Other
+Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -366,6 +371,23 @@ Type: SwitchParameter
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Gmail
+This parameter is available only in the cloud-based service.
+
+The Gmail switch specifies the type of endpoint for G Suite migrations. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Gmail
+Aliases:
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -446,7 +468,7 @@ The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public
 Type: SwitchParameter
 Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -504,10 +526,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ServiceAccountKeyFileData
+This parameter is available only in the cloud-based service.
+
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: Gmail
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SourceMailboxLegacyDN
 This parameter is available only in the cloud-based service.
 
-The SourceMailboxLegacyDN parameter specifies the LegacyExchangeDNvalue of an on-premises mailbox that's used to test the ability of the migration service to create a connection using this endpoint. The cmdlet tries to access this mailbox using the credentials for the administrator account specified in the command.
+The SourceMailboxLegacyDN parameter specifies the LegacyExchangeDN value of an on-premises mailbox that's used to test the ability of the migration service to create a connection using this endpoint. The cmdlet tries to access this mailbox using the credentials for the administrator account specified in the command.
 
 ```yaml
 Type: String
@@ -576,7 +617,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, ExchangeRemoteMove, PSTImport, IMAP, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, ExchangeRemoteMove, PSTImport, IMAP, Gmail, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -748,13 +789,35 @@ Accept wildcard characters: False
 ### -TestMailbox
 This parameter is available only in the cloud-based service.
 
-The TestMailbox parameter specifies an Exchange Online mailbox used as the target by the migration service to verify the connection using this endpoint. If this parameter isn't specified, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.
+The TestMailbox parameter specifies an Exchange Online mailbox used as the target by the migration service to verify the connection using this endpoint. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.
 
 This parameter is only used to create Outlook Anywhere migration endpoints.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup, Other
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
 Required: False

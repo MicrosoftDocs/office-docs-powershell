@@ -73,7 +73,6 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: Enabled | Disabled
 Parameter Sets: (All)
 Aliases:
-Accepted values: Enabled, Disabled
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -88,12 +87,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

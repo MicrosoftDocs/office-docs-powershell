@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Online, SharePoint 2016
+applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
 ---
 # Measure-PnPList
@@ -41,7 +41,7 @@ Displays items and folders with broken permissions inside Documents library
 ### -BrokenPermissions
 Show items with broken permissions
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -55,7 +55,7 @@ Accept pipeline input: False
 ### -Identity
 
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: ListPipeBind
@@ -69,7 +69,7 @@ Accept pipeline input: True
 ### -Includes
 Specify properties to include when retrieving objects from the server.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: String[]
@@ -83,7 +83,7 @@ Accept pipeline input: False
 ### -ItemLevel
 Show item level statistics
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +97,7 @@ Accept pipeline input: False
 ### -Web
 The web to apply the command to. Omit this parameter to use the current web.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: WebPipeBind
@@ -111,7 +111,7 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2016, SharePoint Server 2019
 
 ```yaml
 Type: SPOnlineConnection
@@ -124,4 +124,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

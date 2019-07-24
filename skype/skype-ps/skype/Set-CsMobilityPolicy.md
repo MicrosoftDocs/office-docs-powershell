@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPAudio
-When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a WiFi network.
+When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a Wi-Fi network.
 That means that the user will only be allowed to make audio calls using Wi-Fi, and will not be able to use the standard cellular phone network.
 The default value is False.
 
@@ -280,9 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPVideo
-When set to True, the user can use IP video only in calls made when mobile device is connected to a Wi-Fi network.
-If mobile device goes outside of Wi-Fi range, then video calls will be received as audio calls only.
-If this property is set to False (the default value) then the user can make or receive IP video calls in using either a Wi-Fi or a cellular data connection.
+When set to True, the user can use IP video only in calls made when their mobile device is connected to a Wi-Fi network.
+If the mobile device goes outside of Wi-Fi range, then video calls will be received as audio calls only.
+If this property is set to False (the default value) then the user can make or receive IP video calls using either a Wi-Fi or a cellular data connection.
 
 This parameter was introduced in Lync Server 2013.
 
@@ -489,11 +489,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWiFiForSharing
-When set to True, mobile users must use a WiFi connection in order to participate in an application sharing session.
-When set to False (the default value) mobile users can participate in application sharing by using either a WiFi connection or a cellular (3G/4G) connection.
+When set to True, mobile users must use a Wi-Fi connection in order to participate in an application sharing session.
+When set to False (the default value) mobile users can participate in application sharing by using either a Wi-Fi connection or a cellular (3G/4G) connection.
 
-If this value is set to True, then users then users will not be able to change their sharing configuration settings.
-If this value is set to False users can use the Options page to modify their sharing configuration settings.
+If this value is set to True, users will not be able to change their sharing configuration settings.
+If this value is set to False, users can use the Options page to modify their sharing configuration settings.
 
 
 ```yaml
@@ -536,9 +536,9 @@ Accept wildcard characters: False
 ### -VoiceSettings
 Controls how audio is connected by a mobile device joining a meeting or a peer-to-peer call. When the Skype for Business client is first run, and the user is enabled for Phone System with a Calling Plan, they are prompted to configure a call back phone number. This number is stored in settings under the **Calls and Meetings** section and will be used based on the value chosen for this parameter. Acceptable values are: 
 
-**VoIPAlways:** WiFi will be used when available, otherwise a call back will be performed.
+**VoIPAlways:** Wi-Fi will be used when available, otherwise a call back will be performed.
 
-**VoIPOverWiFi:** If WiFi is not available, a call back to the pre-defined phone number will be performed.
+**VoIPOverWiFi:** If Wi-Fi is not available, a call back to the pre-defined phone number will be performed.
 
 **Cellular:** Always perform a call back to the pre-defined phone number.
 
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

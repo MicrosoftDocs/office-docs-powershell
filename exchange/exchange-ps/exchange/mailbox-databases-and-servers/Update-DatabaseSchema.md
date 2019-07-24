@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-DatabaseSchema
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -37,13 +40,13 @@ This example updates the database schema for database DB1.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox database for which you want to set one or more attributes. You can use the following values:
+The Identity parameter specifies the mailbox database for which you want to set one or more attributes. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Name of the mailbox database
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

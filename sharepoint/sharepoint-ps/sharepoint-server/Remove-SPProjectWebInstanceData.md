@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2016, Project Server 2019
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPProjectWebInstanceData
@@ -25,10 +28,10 @@ This cmdlet disassociates the Project Server instance from the specified Site Co
 
 ### ----------------------EXAMPLE-----------------------
 ```
-Remove-SPProjectWebInstanceData -SiteCollection http://contoso/sites/pwa
+Remove-SPProjectWebInstanceData -SiteCollection https://contoso/sites/pwa
 ```
 
-This example disassociates http://contoso/sites/pwa from the Project Server instance.
+This example disassociates https://contoso/sites/pwa from the Project Server instance.
 
 
 ## PARAMETERS

@@ -11,6 +11,7 @@ ms.reviewer:
 # Remove-CsTenantNetworkSubnet
 
 ## SYNOPSIS
+Use the `Remove-CsTenantNetworkSubnet` cmdlet to remove a tenant network subnet.
 
 ## SYNTAX
 
@@ -20,16 +21,18 @@ Remove-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Identity] <XdsGlobalRelat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Remove-CsTenantNetworkSubnet` cmdlet removes an existing tenant network subnet.
+
+IP subnets at the location where Teams endpoints can connect to the network must be defined and associated to a defined network in order to enforce toll bypass. Multiple subnets may be associated with the same network site, but multiple sites may not be associated with a same subnet. This association of subnets enables Location-Based routing to locate the endpoints geographically to determine if a given PSTN call should be allowed.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTenantNetworkSubnet -Identity "192.168.0.1"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 removes '192.168.0.1'.
 
 ## PARAMETERS
 
@@ -49,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the network subnet to be removed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -79,7 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network subnets are being removed. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid
@@ -111,7 +120,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

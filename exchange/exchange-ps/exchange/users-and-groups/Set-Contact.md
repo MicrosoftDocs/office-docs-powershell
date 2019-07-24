@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-Contact
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -51,13 +54,9 @@ Change the Company parameter value to Contoso.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -728,11 +727,11 @@ Accept wildcard characters: False
 ```
 
 ### -GeoCoordinates
-The GeoCoordinates parameter specifies the contact's physical location in latitude, longitude and altitude coordinates. Use this parameter to specify the global position of the contact's location. You have to specify one of the following sets of coordinates; use semicolons to separate the values:
+The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
 - Latitude and longitude: For example, "47.644125;-122.122411"
 
-- Latitude, longitude and altitude: For example, "47.644125;-122.122411;161.432"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
 ```yaml
 Type: GeoCoordinates

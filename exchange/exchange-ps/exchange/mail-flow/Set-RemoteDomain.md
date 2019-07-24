@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -105,7 +108,7 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
-- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain. 
+- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
 - None: No automatic replies are sent to recipients in the remote domain.
 
@@ -275,9 +278,9 @@ Note: You should only modify this parameter under the direction of Microsoft Cus
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Sender names are displayed in messages sent to reicpients in the remote domain. This is the default value.
+- $true: Sender names are displayed in messages sent to recipients in the remote domain. This is the default value.
 
-- $false. Sender names aren't displayed in messages sent to reicpients in the remote domain. 
+- $false. Sender names aren't displayed in messages sent to recipients in the remote domain. 
 
 ```yaml
 Type: $true | $false
@@ -336,7 +339,7 @@ The IsInternal parameter specifies whether the recipients in the remote domain a
 
 - $true: All transport components (for example, transport rules or antispam agents) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 
-- $false: Recipients in the remote domain are treated as external recipients. This is the default value. 
+- $false: Recipients in the remote domain are treated as external recipients. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -545,7 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### -TNEFEnabled
-The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values are-:
+The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values are:
 
 - $true: TNEF encoding is used on all messages sent to the remote domain.
 
@@ -568,7 +571,7 @@ Accept wildcard characters: False
 ### -TrustedMailInboundEnabled
 The TrustedMailInboundEnabled parameter specifies whether messages from senders in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Inbound messages from senders in the romte domain are considered safe and will bypass content filtering and recipient filtering.
+- $true: Inbound messages from senders in the remote domain are considered safe and will bypass content filtering and recipient filtering.
 
 - $false: Inbound messages from senders in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
@@ -585,9 +588,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedMailOutboundEnabled
-The TrustedMailInboundEnabled parameter specifies whether messages sent to recipients in the remote domain are treated as trusted messages. Valid values are:
+The TrustedMailOutboundEnabled parameter specifies whether messages sent to recipients in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Outbound messages to recipients in the romte domain are considered safe and will bypass content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
+- $true: Outbound messages to recipients in the remote domain are considered safe and will bypass content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
 
 - $false: Outbound messages to recipients in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 

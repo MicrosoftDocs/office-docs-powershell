@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Invoke-MonitoringProbe
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -20,10 +23,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Invoke-MonitoringProbe [-Identity] <String> -Server <ServerIdParameter> [-Account <String>]
- [-Endpoint <String>] [-ItemTargetExtension <String>] [-Password <String>] [-PropertyOverride <String>]
- [-SecondaryAccount <String>] [-SecondaryEndpoint <String>] [-SecondaryPassword <String>]
- [-TimeOutSeconds <String>] [<CommonParameters>]
+Invoke-MonitoringProbe [-Identity] <String> -Server <ServerIdParameter>
+ [-Account <String>]
+ [-Endpoint <String>]
+ [-ItemTargetExtension <String>]
+ [-Password <String>]
+ [-PropertyOverride <String>]
+ [-SecondaryAccount <String>]
+ [-SecondaryEndpoint <String>]
+ [-SecondaryPassword <String>]
+ [-TimeOutSeconds <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,8 +75,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Distinguished name (DN)
 
 - Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter to configure other Edge Transport servers remotely.
 

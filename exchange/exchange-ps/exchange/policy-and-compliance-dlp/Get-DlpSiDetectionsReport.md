@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-DlpSiDetectionsReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
@@ -22,23 +25,37 @@ Get-DlpSiDetectionsReport [-EndDate <DateTime>] [-SensitiveType <MultiValuedProp
 ```
 
 ## DESCRIPTION
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Organization
+
+- Date
+
+- SensitiveType: The GUID value of the DLP sensitive information type. To match the GUID value to the name of the sensitive information type, replace \<GUID\> with the GUID value and run this command: Get-DlpSensitiveInformationType -Identity \<GUID\>.
+
+- DocumentCount: The number of documents that contain the detected sensitive information type.
+
+- ProtectionStatus: Values are Unprotected (the sensitive information type is not defined in any DLP policy) or Protected (the sensitive information type is defined in a DLP policy).
+
+- DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace \<GUID\> with the GUID value and run this command: Get-DlpComplianceRule -Identity \<GUID\>.
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Get-DLPSiDetectionsReport
 ```
 
-Insert descriptive text for example 1.
+This example returns all DLP sensitive information type detections.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Insert example commands for example 2.
+Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -StartDate 4/1/2019 -EndDate 4/8/2019
 ```
 
-Insert descriptive text for example 2.
+This example returns detections for the sensitive information type 0e9b3178-9678-47dd-a509-37222ca96b42 (EU Debit Card Number) during the specified date range.
 
 ## PARAMETERS
 
@@ -60,7 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -SensitiveType
-The SensitiveType parameter filters the results by the detected sensitive information type.
+The SensitiveType parameter filters the results by the specified sensitive information type. A valid value is the GUID of the sensitive information type (for example, 0e9b3178-9678-47dd-a509-37222ca96b42). To find the GUID value of a sensitive information type, run this command: Get-DlpSensitiveInformationType.
+
+You can enter multiple values separated by commas: "\<Value1\>","\<Value2\>"..."\<ValueN\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -80,12 +99,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

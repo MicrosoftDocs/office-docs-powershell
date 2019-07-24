@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Clear-MobileDevice
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -152,6 +155,8 @@ Accept wildcard characters: False
 
 ### -AccountOnly
 The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch.
+
+You don't need to use this switch for the DeviceType value Outlook, because an account-only remote devices wipe is the only type of wipe that's used on Outlook devices.
 
 ```yaml
 Type: SwitchParameter

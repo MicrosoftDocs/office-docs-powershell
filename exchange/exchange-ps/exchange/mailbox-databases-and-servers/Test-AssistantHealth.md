@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-AssistantHealth
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -138,9 +141,17 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The ServerName parameter specifies the identity of the Mailbox server on which the mailbox assistant that's being tested resides.
+The ServerName parameter specifies the Mailbox server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
-If this parameter isn't specified, the command runs on the local server. If the local server isn't a Mailbox server, the command fails.
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

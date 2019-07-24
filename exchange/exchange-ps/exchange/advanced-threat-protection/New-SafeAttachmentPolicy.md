@@ -144,13 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enable parameter specifies whether policy is enabled. Valid values are:
 
 - $true: The rule or policy is enabled.
 
-- $false: The rule or policy is disabled.
-
-The default value is $false.
+- $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -219,12 +217,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

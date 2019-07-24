@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Remove-UnifiedGroupLinks
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -19,8 +22,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Remove-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter> -Links <RecipientIdParameter[]>
- -LinkType <Members | Owners | Subscribers | Aggregators | EventSubscribers> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+ -LinkType <LinkType>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,13 +44,9 @@ This example removes members laura@contoso.com and julia@contoso.com from the Of
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -73,13 +73,9 @@ Accept wildcard characters: False
 ### -Links
 The Links parameter specifies the recipients to remove from the Office 365 Group. You specify whether these recipients are members, owners, or subscribers by using the LinkType parameter.
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -108,16 +104,18 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Office 365 Group property that you want to modify. Valid values are:
 
-- EventSubscribers
-
 - Members
 
 - Owners
 
 - Subscribers
 
+- Aggregators
+
+- EventSubscribers
+
 ```yaml
-Type: Members | Owners | Subscribers | Aggregators | EventSubscribers
+Type: LinkType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -168,12 +166,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServicesApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAccessServicesApplication
@@ -195,7 +198,8 @@ Accept wildcard characters: False
 ```
 
 ### -Hosted
-{{Fill Hosted Description}}
+
+Not used.
 
 ```yaml
 Type: Boolean
@@ -263,7 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPointObjective
-{{Fill RecoveryPointObjective Description}}
+
+Not used.
 
 ```yaml
 Type: Int32
@@ -333,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustServerCertificate
-{{Fill TrustServerCertificate Description}}
+Sets a value that indicates whether the channel will be encrypted while bypassing walking the certificate chain to validate trust.
 
 ```yaml
 Type: Boolean

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,14 +21,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MailTrafficReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>] [<CommonParameters>]
+Get-MailTrafficReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes all possible event types for messages.
+You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes the event types for messages.
 
 Mail traffic summary
 
@@ -34,6 +47,10 @@ Mail traffic summary
 - Malware: Messages that were marked as malware.
 
 - TransportRuleHits: Messages that matched a rule. If a message matched multiple rules, this event type would show each of the rule matches.
+
+- EncryptionManual: Messages manually encrypted by users.
+
+- EncryptionPolicy: Messages that matched a rule for encrypting email messages using the latest Office 365 Message Encryption (OME) capabilities.
 
 Spam detections
 

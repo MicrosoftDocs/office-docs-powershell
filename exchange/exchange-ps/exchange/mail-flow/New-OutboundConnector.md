@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: New-OutboundConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,13 +21,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-OutboundConnector [-Name] <String> [-AllAcceptedDomains <$true | $false>]
- [-CloudServicesMailEnabled <$true | $false>] [-Comment <String>] [-Confirm]
- [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>] [-ConnectorType <OnPremises | Partner>]
- [-Enabled <$true | $false>] [-IsTransportRuleScoped <$true | $false>] [-LinkForModifiedConnector <Guid>]
- [-RecipientDomains <MultiValuedProperty>] [-RouteAllMessagesViaOnPremises <$true | $false>]
- [-SmartHosts <MultiValuedProperty>] [-TestMode <$true | $false>] [-TlsDomain <SmtpDomainWithSubdomains>]
- [-TlsSettings <EncryptionOnly | CertificateValidation | DomainValidation>] [-UseMXRecord <$true | $false>]
+New-OutboundConnector [-Name] <String>
+ [-AllAcceptedDomains <$true | $false>]
+ [-CloudServicesMailEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>]
+ [-ConnectorType <OnPremises | Partner>]
+ [-Enabled <$true | $false>]
+ [-IsTransportRuleScoped <$true | $false>]
+ [-LinkForModifiedConnector <Guid>]
+ [-RecipientDomains <MultiValuedProperty>]
+ [-RouteAllMessagesViaOnPremises <$true | $false>]
+ [-SmartHosts <MultiValuedProperty>]
+ [-TestMode <$true | $false>]
+ [-TlsDomain <SmtpDomainWithSubdomains>]
+ [-TlsSettings <EncryptionOnly | CertificateValidation | DomainValidation>]
+ [-UseMXRecord <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 

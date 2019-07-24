@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MigrationConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MigrationConfig [-Confirm] [-DomainController <Fqdn>]
- [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>] [-MaxConcurrentMigrations <Unlimited>]
- [-MaxNumberOfBatches <Int32>] [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Set-MigrationConfig
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-MaxNumberOfBatches <Int32>]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,6 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml

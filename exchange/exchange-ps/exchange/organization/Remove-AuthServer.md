@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-AuthServer
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -32,12 +35,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AuthServer AMC
 ```
 
-This example removes the authorization server AMC.
+This example removes the authorization server named AMC.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the authorization server.
+The Identity parameter specifies the authorization server object that you want to remove. You can use any value that uniquely identifies the authorization server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: AuthServerIdParameter

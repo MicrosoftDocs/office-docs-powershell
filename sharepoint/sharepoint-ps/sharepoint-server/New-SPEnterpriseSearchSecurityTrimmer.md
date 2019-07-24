@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchSecurityTrimmer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchSecurityTrimmer
@@ -100,7 +103,7 @@ Accept wildcard characters: False
 Specifies the strong named assembly name of a security trimmer type.
 The strong name must refer to a type whose assembly is deployed to the global assembly cache on a query server and that type must implement the ISecurityTrimmerPre, ISecurityTrimmerPost or ISecurityTrimmer2 interface.
 Security trimming can be done in two places: before query execution (ISecurityTrimmerPre) or after the results set has returned (ISecurityTrimmerPost or ISecurityTrimmer2).
-For how to reference a strong name assembly, see http://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx (http://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx)
+For how to reference a strong name assembly, see https://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx (https://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx)
 
 ```yaml
 Type: String

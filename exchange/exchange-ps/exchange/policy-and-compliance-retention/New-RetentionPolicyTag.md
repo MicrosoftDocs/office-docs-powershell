@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-RetentionPolicyTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -107,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -220,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -237,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or funcational only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -321,7 +324,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -MessageFormatForJournaling
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -384,7 +386,7 @@ Accept wildcard characters: False
 ### -RetentionEnabled
 The RetentionEnabled parameter specifies whether the tag is enabled. When set to $false, the tag is disabled, and no retention action is taken on messages that have the tag applied.
 
-Messages with a disabled tag are still considered tagged, so any default policy tags in the user's retention policy aren't applied to such messages.
+Messages with a disabled tag are still considered tagged, so any tags of the same type as the disabled tag in the user's retention policy aren't applied to such messages.
 
 When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
 

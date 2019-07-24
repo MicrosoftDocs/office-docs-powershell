@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Remove-SyncMailPublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -39,9 +42,7 @@ This cmdlet is only used by the Sync-MailPublicFolders.ps1 script. Don't run thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365.
-
-For example:
+The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365. For example:
 
 - Name
 
@@ -120,12 +121,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

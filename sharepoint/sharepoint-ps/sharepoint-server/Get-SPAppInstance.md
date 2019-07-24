@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppInstance
@@ -44,10 +47,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------- 
 ```
-Get-SPAppInstance -Web http://localhost
+Get-SPAppInstance -Web https://localhost
 ```
 
-This example returns a collection if more than one app is installed on http://localhost.
+This example returns a collection if more than one app is installed on https://localhost.
 If only one app is installed, a single object is returned.
 
 ### -----------EXAMPLE 2----------- 

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSiteSubscriptionConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSiteSubscriptionConfig
@@ -29,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPSiteSubscription http://contoso.com -FeatureSet 12345678-90ab-cdef-1234-567890abcdef
+Set-SPSiteSubscription https://contoso.com -FeatureSet 12345678-90ab-cdef-1234-567890abcdef
 ```
 
-This example sets the Feature set of the entire site subscription that contains http://contoso.com with a Feature set GUID.
+This example sets the Feature set of the entire site subscription that contains https://contoso.com with a Feature set GUID.
 
 
 ## PARAMETERS

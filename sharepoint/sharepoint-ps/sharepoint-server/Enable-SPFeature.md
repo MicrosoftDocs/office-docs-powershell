@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPFeature
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPFeature
@@ -42,18 +45,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-Enable-SPFeature -identity "MyCustom" -URL http://somesite
+Enable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
-This example enables the "MyCustom" site scoped SharePoint Feature at http://somesite.
+This example enables the "MyCustom" site scoped SharePoint Feature at https://somesite.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
+C:\PS>$w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
 Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 
-This example enables all SharePoint Features in the subsite at http://somesite/myweb.
+This example enables all SharePoint Features in the subsite at https://somesite/myweb.
 
 ## PARAMETERS
 
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 ### -Url
 Specifies the URL of the Web application, site collection, or Web site for which the Feature is being activated.
 
-The type must be a valid URL; for example, http://server_name.
+The type must be a valid URL; for example, https://server_name.
 
 ```yaml
 Type: String

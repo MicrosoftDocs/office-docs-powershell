@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-AddressList
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -40,8 +43,6 @@ This example updates the recipients of the address list named building4 that's u
 The Identity parameter specifies the address list that you want to update. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

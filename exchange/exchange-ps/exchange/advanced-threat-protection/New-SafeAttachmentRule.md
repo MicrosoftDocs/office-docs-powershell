@@ -22,10 +22,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-SafeAttachmentRule [-Name] <String> -SafeAttachmentPolicy <SafeAttachmentPolicyIdParameter>
- [-Comments <String>] [-Confirm] [-Enabled <$true | $false>] [-ExceptIfRecipientDomainIs <Word[]>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-Priority <Int32>] [-RecipientDomainIs <Word[]>] [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+ [-Comments <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -129,11 +136,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The rule is enabled. Ths is the default value
 
-- $false: The rule or policy is disabled.
+- $false: The rule is disabled.
 
 The default value is $true.
 
@@ -171,9 +178,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -198,9 +207,11 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -267,9 +278,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -290,13 +303,15 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -339,12 +354,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

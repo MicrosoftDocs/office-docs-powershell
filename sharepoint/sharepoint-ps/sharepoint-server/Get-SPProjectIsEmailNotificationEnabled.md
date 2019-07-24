@@ -3,6 +3,9 @@ external help file: microsoft.office.project.server.stsadmcommandhandler.dll-hel
 applicable: Project Server 2016, Project Server 2019
 title: Get-SPProjectIsEmailNotificationEnabled
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPProjectIsEmailNotificationEnabled
@@ -24,10 +27,10 @@ Returns the Project Web App site level setting for email notifications. True if 
 
 ### Example 1 
 ```
-Get-SPProjectIsEmailNotificationEnabled -Url http://contoso/sites/pwa
+Get-SPProjectIsEmailNotificationEnabled -Url https://contoso/sites/pwa
 ```
 
-Returns the status of email notifications for the PWA site http://contoso/sites/pwa.
+Returns the status of email notifications for the PWA site https://contoso/sites/pwa.
 
 ## PARAMETERS
 

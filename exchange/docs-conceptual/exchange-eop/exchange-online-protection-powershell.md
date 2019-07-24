@@ -18,7 +18,7 @@ Exchange Online Protection PowerShell is the administrative interface that enabl
   
 - To create a remote PowerShell session to your Exchange Online Protection organization, see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
   
-- For a sample script that lets admins who manage multiple tenants (companies) apply configuration settings to their tenants, see [Sample script for applying EOP settings to multiple tenants](http://technet.microsoft.com/library/e87e84e1-7be0-44bf-a414-d91d60ed8817.aspx).
+- For a sample script that lets admins who manage multiple tenants (companies) apply configuration settings to their tenants, see [Sample script for applying EOP settings to multiple tenants](https://technet.microsoft.com/library/e87e84e1-7be0-44bf-a414-d91d60ed8817.aspx).
   
 - The following introductory video shows you how to connect to and use Exchange Online Protection PowerShell.
   

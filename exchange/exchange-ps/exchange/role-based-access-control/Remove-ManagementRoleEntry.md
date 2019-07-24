@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Remove-ManagementRoleEntry
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -40,12 +43,12 @@ This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
+Get-ManagementRoleEntry "Tier 1 Help Desk\*" | Where-Object {$_.Name -like 'New-*'} | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
+This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Where-Object cmdlet which specifies the verb filter and then, these results are being piped to Remove-ManagementRoleEntry cmdlet.
 
-After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
+This example forces you to acknowledge the command before proceeding.
 
 ## PARAMETERS
 

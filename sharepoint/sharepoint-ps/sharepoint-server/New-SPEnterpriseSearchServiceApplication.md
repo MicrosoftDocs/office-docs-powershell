@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchServiceApplication
@@ -66,7 +69,7 @@ Accept wildcard characters: False
 ### -ApplicationPool
 Specifies the IIS application pool to use for the new search application.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL of a search application, in the form http://server_name; or an instance of a valid SPIisWebServiceApplicationPool object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL of a search application, in the form https://server_name; or an instance of a valid SPIisWebServiceApplicationPool object.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind

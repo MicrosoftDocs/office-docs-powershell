@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteAdministration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteAdministration
@@ -64,7 +67,7 @@ This command uses the calculated property Storage to display the maximum storage
 ### ------------------EXAMPLE 2------------------ 
 ```
 Start-SPAssignment -Global
-$s = Get-SPSiteAdministration -Identity http://MyApp/Sites/Site1
+$s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
 $s.Url
 Stop-SPAssignment -Global
 ```
@@ -86,21 +89,21 @@ This command uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 4------------------ 
 ```
-Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
+Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
 ```
 
 This command returns the sum of the disk space usage for all sites in the specified Web application.
 
 ### ------------------EXAMPLE 5------------------ 
 ```
-Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
+Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
 ```
 
 This example gets the URLs for all site collections in a Web application.
 
 ### ------------------EXAMPLE 6------------------ 
 ```
-Get-SPSiteAdministration -identity "http://localserver/(my|personal)/sites" -Regex
+Get-SPSiteAdministration -identity "https://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -108,17 +111,17 @@ The quotation marks around the value specified for the Identity parameter are re
 
 ### ------------------EXAMPLE 7------------------ 
 ```
-Get-SPSite "http://sitename/sites/teams/*" -Limit 100
+Get-SPSite "https://sitename/sites/teams/*" -Limit 100
 ```
 
-This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
+This example gets up to 100 of the sites under the URL https://sitename/sites/teams.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the URL (full or partial) or GUID of the site collection to retrieve.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-456-987fg.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-456-987fg.
 
 ```yaml
 Type: SPSiteAdministrationPipeBind
@@ -136,7 +139,7 @@ Accept wildcard characters: False
 ### -ContentDatabase
 Specifies the URL (full or partial) or GUID of the site collection to retrieve.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form, 1234-456-987fg.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form, 1234-456-987fg.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -265,7 +268,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL, GUID, or name of the Web application from which to list sites.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the Web application name (for example, WebApplication1212).
+The type must be a valid URL, in the form https://server_name; a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the Web application name (for example, WebApplication1212).
 
 ```yaml
 Type: SPWebApplicationPipeBind

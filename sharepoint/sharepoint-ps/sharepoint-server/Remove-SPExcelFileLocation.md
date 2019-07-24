@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelFileLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelFileLocation
@@ -44,7 +47,7 @@ This example removes all nondefault trusted file locations from every Excel Serv
 ### -Identity
 Specifies the FileLocation object to remove.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string that identifies the file location, in the form http://myPortal/myTeam; a valid string that identifies the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string that identifies the file location, in the form https://myPortal/myTeam; a valid string that identifies the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
 
 ```yaml
 Type: SPExcelFileLocationPipeBind

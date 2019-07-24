@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-GlobalAddressList
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -22,30 +25,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-GlobalAddressList [-Identity] <GlobalAddressListIdParameter>
  [-ConditionalCompany <MultiValuedProperty>]
- [-ConditionalCustomAttribute1 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
  [-ConditionalCustomAttribute10 <MultiValuedProperty>]
- [-ConditionalCustomAttribute11 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
  [-ConditionalCustomAttribute12 <MultiValuedProperty>]
- [-ConditionalCustomAttribute13 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
  [-ConditionalCustomAttribute14 <MultiValuedProperty>]
- [-ConditionalCustomAttribute15 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
  [-ConditionalCustomAttribute2 <MultiValuedProperty>]
- [-ConditionalCustomAttribute3 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
  [-ConditionalCustomAttribute4 <MultiValuedProperty>]
- [-ConditionalCustomAttribute5 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
  [-ConditionalCustomAttribute6 <MultiValuedProperty>]
- [-ConditionalCustomAttribute7 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
  [-ConditionalCustomAttribute8 <MultiValuedProperty>]
- [-ConditionalCustomAttribute9 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
  [-ConditionalDepartment <MultiValuedProperty>]
- [-ConditionalStateOrProvince <MultiValuedProperty>] 
- [-Confirm] 
- [-DomainController <Fqdn>] 
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-ForceUpgrade]
  [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
- [-Name <String>] 
- [-RecipientContainer <OrganizationalUnitIdParameter>] 
- [-RecipientFilter <String>] 
+ [-Name <String>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-RecipientFilter <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 

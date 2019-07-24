@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPUserSolution
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPUserSolution
@@ -30,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```
-Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site http://sitename
+Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site https://sitename
 ```
 
-This example adds the sandboxed solution c:\contoso_solution.wsp to the site http://sitename.
+This example adds the sandboxed solution c:\contoso_solution.wsp to the site https://sitename.
 
 ## PARAMETERS
 
@@ -61,7 +64,7 @@ Accept wildcard characters: False
 ### -Site
 Specifies the site collection where the sandboxed solution is to be added.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSiteobject.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSiteobject.
 
 ```yaml
 Type: SPSitePipeBind
