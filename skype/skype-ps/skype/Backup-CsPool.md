@@ -80,6 +80,7 @@ Allowed values are:
 
 * CMS
 * UserData
+* RGS
 
 ```yaml
 Type: BackupCategory
