@@ -78,6 +78,8 @@ CentralMgmt.CMSMaster
 
 ApplicationServer.RGSDataStore
 
+ApplicationServer.RGSFileStore 
+
 ApplicationServer.RGSFileStore
 
 ```yaml
