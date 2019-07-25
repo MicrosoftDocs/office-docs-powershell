@@ -2,6 +2,10 @@
 external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsTeamsAppSetupPolicy
+ms.reviewer: 
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 schema: 2.0.0
 ---
 
