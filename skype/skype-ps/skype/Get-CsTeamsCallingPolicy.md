@@ -4,9 +4,11 @@ Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
 title: Get-CsTeamsCallingPolicy
+ms.reviewer: 
+manager: bulenteg
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 

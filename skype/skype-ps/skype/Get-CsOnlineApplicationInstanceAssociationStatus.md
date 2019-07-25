@@ -2,9 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineApplicationInstanceAssociationStatus
+ms.reviewer: 
+manager: bulenteg
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 

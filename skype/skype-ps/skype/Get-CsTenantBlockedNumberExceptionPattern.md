@@ -2,10 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online 
 title: Get-CsTenantBlockedNumberExceptionPattern 
-author: danny-levin
-ms.author: dannyle
+ms.reviewer: 
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
-manager: roykuntz
+manager: bulenteg
 schema: 2.0.0
 ---
 
