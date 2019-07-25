@@ -4,9 +4,11 @@ Module Name: SkypeForBusiness
 online version:
 applicable: Skype for Business Server 2019
 title: Remove-CsTeamsUpgradePolicy
+ms.reviewer: 
+manager: rogupta
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
