@@ -3,6 +3,10 @@ external help file: Get-CsCallQueue.xml
 applicable: Skype for Business Online
 title: Get-CsCallQueue
 schema: 2.0.0
+ms.reviewer:
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 ---
 
 # Get-CsCallQueue
