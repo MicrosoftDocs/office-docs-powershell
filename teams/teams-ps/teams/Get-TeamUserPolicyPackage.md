@@ -2,46 +2,46 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Get-TeamUserPolicyPackageRecommendation
-author: etgottli
-ms.author: etgottli
-ms.reviewer: icchan
+title: Get-TeamUserPolicyPackage
+author: icchan
+ms.author: icchan
+ms.reviewer: etgottli
 manager: amitar
 online version:
 schema: 2.0.0
 ---
 
-# Get-TeamUserPolicyPackageRecommendation
+# Get-TeamUserPolicyPackage
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user.
+This cmdlet supports retrieving the policy package that's assigned to a user.
 
 ## SYNTAX
 
 ```
-Get-TeamUserPolicyPackageRecommendation [-Identity] <String> [<CommonParameters>]
+Get-TeamUserPolicyPackage [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user. This recommendation is based on tenant and user information such as license types.
+This cmdlet supports retrieving the policy package that's assigned to a user. Provide the identity of a user to retrieve the definition of their assigned policy package.
 For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-TeamUserPolicyPackageRecommendation -Identity johndoe@example.com
+PS C:\> Get-TeamUserPolicyPackage -Identity johndoe@example.com
 ```
 
-Returns recommendations for which policy packages are best suited for johndoe@example.com. The recommendation value per package can either be none, weak, or strong based on how confident the existing signals (e.g. license type) imply a user role.
+Returns the policy package that's assigned to johndoe@example.com.
 
 ## PARAMETERS
 
 ### -Identity
 
-The user that will receive policy package recommendations.
+The user that will get their assigned policy package.
 
 ```yaml
 Type: String
@@ -68,6 +68,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
 
-[Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+[Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
 
 [Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
