@@ -2,6 +2,9 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online 
 title: Set-CsOnlineVoiceApplicationInstance
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 author:
 ms.author:Danny Levin
 ms.reviewer: 

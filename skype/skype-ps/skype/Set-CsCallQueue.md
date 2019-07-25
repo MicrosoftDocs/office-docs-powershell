@@ -2,6 +2,10 @@
 external help file: Set-CsCallQueue.xml
 applicable: Skype for Business Online
 title: Set-CsCallQueue
+ms.reviewer: 
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 schema: 2.0.0
 ---
 
