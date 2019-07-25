@@ -2,9 +2,11 @@
 external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsDatabaseFailover
+ms.reviewer: 
+manager: rogupta
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
