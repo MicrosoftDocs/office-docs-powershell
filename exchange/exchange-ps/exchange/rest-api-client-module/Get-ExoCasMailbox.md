@@ -1,0 +1,365 @@
+---
+external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
+Module Name: ExchangeOnlineManagement
+title: Get-ExoCasMailbox
+schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchonline-ps"
+---
+
+# Get-ExoCasMailbox
+
+## SYNOPSIS
+This cmdlet is available only in the REST API Client module for Exchange Online. For more information, see <link to topic>.
+
+Use the Get-ExoCasMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
+## SYNTAX
+
+### Identity (Default)
+```
+Get-ExoCasMailbox
+ [-ExternalDirectoryObjectId <Guid>]
+ [-Filter <String>]
+ [[-Identity] <String>]
+ [-OrganizationalUnit <String>]
+ [-Properties <String[]>]
+ [-PropertySets <PropertySet[]>]
+ [-ProtocolSettings]
+ [-ResultSize <Unlimited>]
+ [-UserPrincipalName <String>]
+ [<CommonParameters>]
+```
+
+### Anr
+```
+Get-ExoCasMailbox
+ [-Anr <String>]
+ [-Filter <String>]
+ [-OrganizationalUnit <String>]
+ [-Properties <String[]>]
+ [-PropertySets <PropertySet[]>]
+ [-ProtocolSettings]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+{{ Fill in the Description }}
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+{{ Add example code here }}
+```
+
+{{ Add example description here }}
+
+## PARAMETERS
+
+### -Anr
+The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
+
+- CommonName (CN)
+
+- DisplayName
+
+- FirstName
+
+- LastName
+
+- Alias
+
+```yaml
+Type: String
+Parameter Sets: Anr
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalDirectoryObjectId
+{{ Fill ExternalDirectoryObjectId Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Filter
+The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+
+- \<Property\> is a filterable property.
+
+- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+
+You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+
+You can filter by the following properties:
+
+- ActiveSyncAllowedDeviceIDs
+
+- ActiveSyncBlockedDeviceIDs
+
+- ActiveSyncDebugLogging
+
+- ActiveSyncEnabled
+
+- ActiveSyncMailboxPolicy
+
+- ActiveSyncSuppressReadReceipt
+
+- DisplayName
+
+- DistinguishedName
+
+- ECPEnabled
+
+- EmailAddresses
+
+- EwsApplicationAccessPolicy
+
+- EwsEnabled
+
+- ExchangeVersion
+
+- Guid
+
+- HasActiveSyncDevicePartnership
+
+- Id
+
+- ImapEnabled
+
+- LegacyExchangeDN
+
+- MAPIEnabled
+
+- Name
+
+- ObjectCategory
+
+- ObjectClass
+
+- OWAEnabled
+
+- OWAforDevicesEnabled
+
+- OwaMailboxPolicy
+
+- PopEnabled
+
+- PrimarySmtpAddress
+
+- SamAccountName
+
+- ServerLegacyDN
+
+- ServerName
+
+- WhenChanged
+
+- WhenChangedUTC
+
+- WhenCreated
+
+- WhenCreatedUTC
+
+For more information, see Filterable properties for the -Filter parameter (https://technet.microsoft.com/library/bb738155.aspx).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Anr parameter.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -OrganizationalUnit
+The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+
+- Name
+
+- Canonical name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Properties
+{{ Fill Properties Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PropertySets
+{{ Fill PropertySets Description }}
+
+```yaml
+Type: PropertySet[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: Minimum, All, ProtocolSettings, Pop, Imap, ActiveSync, Mapi, Ews
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProtocolSettings
+The ProtocolSettings switch returns the server names, TCP ports and encryption methods for the following settings:
+
+- ExternalImapSettings
+
+- InternalImapSettings
+
+- ExternalPopSettings
+
+- InternalPopSettings
+
+- ExternalSmtpSettings
+
+- InternalSmtpSettings
+
+To see these values, you need to use a formatting cmdlet. For example, Get-CasMailbox laura@contoso.com -ProtocolSettings | Format-List.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResultSize
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserPrincipalName
+{{ Fill UserPrincipalName Description }}
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+## CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+###  
+
+## OUTPUTS
+
+###  
+
+## NOTES
+
+## RELATED LINKS
+
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/exo-module/get-exocasmailbox)
