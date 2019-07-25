@@ -2,9 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
+ms.reviewer: rogupta
+manager: bulenteg
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 
