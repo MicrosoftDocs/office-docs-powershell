@@ -87,6 +87,8 @@ Accept wildcard characters: False
 ### -Force
 If the Force parameter is specified, the server is failed over without verifying the pool's capacity to absorb the failed over server's workload.
 
+**Note:** If you run this parameter toghether with -WhatIf parameter, it will be ignored and a server failover will be started.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -187,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipFabricHealthCheck
-{{Fill SkipFabricHealthCheck Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
