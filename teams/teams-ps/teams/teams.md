@@ -52,6 +52,9 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
 
+### [Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+{{Manually Enter Get-TeamUserPolicyPackage Description Here}}
+
 ### [Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
 {{Manually Enter Get-TeamUserPolicyPackageRecommendation Description Here}}
 
