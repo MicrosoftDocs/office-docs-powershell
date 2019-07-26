@@ -10,6 +10,9 @@ Locale: en-US
 The following cmdlet references are for Microsoft Teams.
 
 ## Microsoft Teams Cmdlets
+### [Add-TeamChannelUser](Add-TeamChannelUser.md)
+{{Manually Enter Add-TeamChannelUser Description Here}}
+
 ### [Add-TeamUser](Add-TeamUser.md)
 {{Manually Enter Add-TeamUser Description Here}}
 
@@ -24,6 +27,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Get-TeamChannel](Get-TeamChannel.md)
 {{Manually Enter Get-TeamChannel Description Here}}
+
+### [Get-TeamChannelUser](Get-TeamChannelUser.md)
+{{Manually Enter Get-TeamChannelUser Description Here}}
 
 ### [Get-TeamFunSettings](Get-TeamFunSettings.md)
 {{Manually Enter Get-TeamFunSettings Description Here}}
@@ -63,6 +69,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Remove-TeamChannel](Remove-TeamChannel.md)
 {{Manually Enter Remove-TeamChannel Description Here}}
+
+### [Remove-TeamChannelUser](Remove-TeamChannelUser.md)
+{{Manually Enter Remove-TeamChannelUser Description Here}}
 
 ### [Remove-TeamUser](Remove-TeamUser.md)
 {{Manually Enter Remove-TeamUser Description Here}}
