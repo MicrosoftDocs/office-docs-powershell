@@ -80,8 +80,6 @@ ApplicationServer.RGSDataStore
 
 ApplicationServer.RGSFileStore 
 
-ApplicationServer.RGSFileStore
-
 ```yaml
 Type: String
 Parameter Sets: (All)
