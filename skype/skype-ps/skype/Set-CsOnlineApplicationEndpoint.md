@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsOnlineApplicationEndpoint
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 
