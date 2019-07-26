@@ -851,7 +851,7 @@ This parameter is available only in the cloud-based service.
 
 The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabled or disabled for the organization. Valid values are:
 
-- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Office 365 admin center for you to approve or reject.
+- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Microsoft 365 admin center for you to approve or reject.
 
 - $false: Customer Lockbox are disabled.
 

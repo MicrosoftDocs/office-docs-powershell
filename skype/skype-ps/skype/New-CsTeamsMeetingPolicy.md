@@ -34,7 +34,7 @@ The New-CsTeamsMeetingPolicy cmdlet allows administrators to define new meeting 
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $false
+New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
 The command shown in Example 1 uses the New-CsTeamsMeetingPolicy cmdlet to create a new meeting policy with the Identity SalesMeetingPolicy.
