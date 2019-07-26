@@ -29,6 +29,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <$true | $false>]
  [-AsyncSendEnabled <$true | $false>]
  [-AuditDisabled <$true | $false>]
+ [-AutoEnableArchiveMailbox <$true | $false>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <$true | $false>]
  [-BookingsPaymentsEnabled <$true | $false>]
@@ -530,6 +531,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoEnableArchiveMailbox
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
@@ -833,7 +851,7 @@ This parameter is available only in the cloud-based service.
 
 The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabled or disabled for the organization. Valid values are:
 
-- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Office 365 admin center for you to approve or reject.
+- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Microsoft 365 admin center for you to approve or reject.
 
 - $false: Customer Lockbox are disabled.
 
@@ -2381,6 +2399,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.

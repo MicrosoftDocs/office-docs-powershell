@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ActionForUnknownFileAndMIMETypes <Allow | ForceSave | Block>]
  [-ActiveSyncIntegrationEnabled <$true | $false>]
+ [-AdditionalStorageProvidersAvailable <$true | $false>]
  [-AllAddressListsEnabled <$true | $false>]
  [-AllowCopyContactsToDeviceAddressBook <$true | $false>]
  [-AllowedFileTypes <MultiValuedProperty>]
@@ -209,6 +210,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AdditionalStorageProvidersAvailable
+This parameter is available only in the cloud-based service.
+
+The AdditionalStorageProvidersAvailable parameter specifies whether to allow additional storage providers (for example, Box, Dropbox, Facebook, Google Drive, Egnyte, personal OneDrive) attachments in Outlook on the web. Valid values are:
+
+- $true: Additional storage providers are enabled in Outlook on the web. Users can connect their additional storage providers and share files over email. This is the default value.
+
+- $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -ActiveSyncIntegrationEnabled
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
@@ -1228,11 +1249,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled
-The OneDriveAttachmentsEnabled parameter specifies whether to allow OneDrive attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: OneDrive attachments are enabled. This is the default value.
-
-- $false: OneDrive attachments are disabled.
+To enable or disable personal OneDrive in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1824,7 +1843,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter has been deprecated and is no longer used.
 
-To enable or disable third party attachments in Outlook on the web, use the ThirdPartyFileProvidersEnabled parameter.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1841,11 +1860,9 @@ Accept wildcard characters: False
 ### -ThirdPartyFileProvidersEnabled
 This parameter is available only in the cloud-based service.
 
-The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over email.
-
-- $false: Third-party attachments are disabled in Outlook on the web. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
