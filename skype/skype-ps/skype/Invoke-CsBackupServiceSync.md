@@ -76,7 +76,11 @@ ConfServices.DataConf
 
 CentralMgmt.CMSMaster
 
+ApplicationServer.RGSDataStore
 
+ApplicationServer.RGSFileStore 
+
+ApplicationServer.RGSFileStore
 
 ```yaml
 Type: String
