@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
+author: Maralesfahanpoor
+ms.author: maesfaha
 ms.reviewer: 
-manager: paulac@microsoft.com
+manager: paulac
 online version:
 schema: 2.0.0
 ---
@@ -20,8 +20,8 @@ Designates a library to be used as a central location for organization assets ac
 ## SYNTAX
 
 ```powershell
-Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-CdnType <SPOTenantCdnType>]
- [<CommonParameters>]
+Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>] 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +67,23 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrgAssetType
+
+Indicates the type of content in this library. Currently supported value is ImageDocumentLibrary, which is set by default.
+
+```yaml
+Type: OrgAssetType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Accepted values: ImageDocumentLibrary
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
