@@ -32,7 +32,7 @@ Uses the Microsoft Authentication Library (Preview) to connect to Azure AD and t
 Connect-PnPMicrosoftGraph -Scopes $arrayOfScopes
 ```
 
-Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
+Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
 
 ### ------------------EXAMPLE 2------------------
 ```powershell

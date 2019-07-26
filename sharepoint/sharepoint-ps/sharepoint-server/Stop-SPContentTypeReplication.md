@@ -11,7 +11,7 @@ ms.reviewer:
 # Stop-SPContentTypeReplication
 
 ## SYNOPSIS
-Stops Content Type replication job to SharePoint Online.
+Stops Content Type replication job from SharePoint Online.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Stop-SPContentTypeReplication [-AssignmentCollection <SPAssignmentCollection>] [
 ```
 
 ## DESCRIPTION
-Stops Content Type replication job to SharePoint Online and deletes the replication timer job.
+Stops Content Type replication job from SharePoint Online and deletes the replication timer job.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ Stops Content Type replication job to SharePoint Online and deletes the replicat
 ```
 Stop-SPContentTypeReplication
 ```
-Stops Content Type replication job to SharePoint Online.
+Stops Content Type replication job from SharePoint Online.
 
 ## PARAMETERS
 
