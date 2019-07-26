@@ -13,6 +13,7 @@ Returns registered alerts for a user.
 ```powershell
 Get-PnPAlert [-List <ListPipeBind>]
              [-User <UserPipeBind>]
+             [-Title <String>]
              [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
@@ -40,6 +41,13 @@ Get-PnPAlert -List "Demo List" -User "i:0#.f|membership|Alice@contoso.onmicrosof
 
 Returns all alerts registered on the given list for the specified user.
 
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPAlert -Title "Demo Alert"
+```
+
+Returns all alerts with the given title for the current user. Title comparison is case sensitive.
+
 ## PARAMETERS
 
 ### -List
@@ -54,6 +62,20 @@ Parameter Sets: (All)
 Required: False
 Position: 0
 Accept pipeline input: True
+```
+
+### -Title
+Retrieve alerts with this title. Title comparison is case sensitive.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -User

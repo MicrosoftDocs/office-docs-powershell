@@ -94,7 +94,7 @@ This will create a new Communications Site collection with the title 'Contoso' a
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1044
+New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1040
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the default language to Italian.
@@ -123,7 +123,7 @@ This will create a new Modern Team Site collection with the title 'Team Contoso'
 ## PARAMETERS
 
 ### -Alias
-Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal
+Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal, this parameter only applies to Modern Team Sites
 
 ```yaml
 Type: String
@@ -267,7 +267,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-Specifies the full url of the new site collection
+Specifies the full url of the new site collection, this parameter only applies to Communications Sites
 
 ```yaml
 Type: String
