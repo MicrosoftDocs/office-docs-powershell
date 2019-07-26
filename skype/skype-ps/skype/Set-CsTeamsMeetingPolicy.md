@@ -54,7 +54,7 @@ The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing mee
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $false
+Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
 The command shown in Example 1 uses the Set-CsTeamsMeetingPolicy cmdlet to update an existing meeting policy with the Identity SalesMeetingPolicy.
