@@ -5,8 +5,9 @@ online version:
 applicable: Skype for Business Server 2019
 title: New-CsTeamsUpgradePolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 

@@ -1,30 +1,17 @@
----
-title: 
-author: 
-ms.author: 
-manager: 
-audience: ITPro 
-ms.topic: article 
-localization_priority: Priority
-description: 
-ms.custom: 
-ms.collection: 
----
-
 # PnP PowerShell overview
 
 SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
-_**Applies to:** SharePoint Online | SharePoint 2019 | SharePoint 2016 | SharePoint 2013_
+_**Applies to:** SharePoint Online | Sharepoint 2019 | SharePoint 2016 | SharePoint 2013_
 
 ## Installation #
 
 There are 3 ways to install the cmdlets. We recommend, where possible, to install them from the [PowerShell Gallery](https://www.powershellgallery.com). Alternatively you can download the setup files or run a PowerShell script to download the PowerShellGet module and install the cmdlets subsequently.
 
 ### PowerShell Gallery ###
-If your main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
+If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
 
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
@@ -102,17 +89,18 @@ See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-us
 ### Apps 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Add&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPApp.md)** |Returns the available apps from the app catalog|SharePoint Server 2019, SharePoint Online
-**[Install&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Install-PnPApp.md)** |Installs an available app from the app catalog|SharePoint Server 2019, SharePoint Online
-**[Publish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Publish-PnPApp.md)** |Publishes/Deploys/Trusts an available app in the app catalog|SharePoint Server 2019, SharePoint Online
-**[Remove&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPApp.md)** |Removes an app from the app catalog|SharePoint Server 2019, SharePoint Online
+**[Add&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Online, SharePoint 2019
+**[Get&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPApp.md)** |Returns the available apps from the app catalog|SharePoint Online, SharePoint 2019
+**[Install&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Install-PnPApp.md)** |Installs an available app from the app catalog|SharePoint Online, SharePoint 2019
+**[Publish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Publish-PnPApp.md)** |Publishes/Deploys/Trusts an available app in the app catalog|SharePoint Online, SharePoint 2019
+**[Remove&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPApp.md)** |Removes an app from the app catalog|SharePoint Online, SharePoint 2019
 **[Uninstall&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPApp.md)** |Uninstalls an available add-in from the site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Unpublish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Unpublish-PnPApp.md)** |Unpublishes/retracts an available add-in from the app catalog|SharePoint Server 2019, SharePoint Online
-**[Update&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPApp.md)** |Updates an available app from the app catalog|SharePoint Server 2019, SharePoint Online
+**[Unpublish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Unpublish-PnPApp.md)** |Unpublishes/retracts an available add-in from the app catalog|SharePoint Online, SharePoint 2019
+**[Update&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPApp.md)** |Updates an available app from the app catalog|SharePoint Online, SharePoint 2019
 **[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Sync&#8209;PnPAppToTeams](../../sharepoint-ps/sharepoint-pnp/Sync-PnPAppToTeams.md)** |Synchronize an app from the tenant app catalog to the Microsoft Teams app catalog|SharePoint Online
 **[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitly grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
 
 
@@ -128,11 +116,12 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Get-PnPContext.md)** |Returns the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Set-PnPContext.md)** |Set the ClientContext|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPException](../../sharepoint-ps/sharepoint-pnp/Get-PnPException.md)** |Returns the last exception that occurred|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPHealthScore](../../sharepoint-ps/sharepoint-pnp/Get-PnPHealthScore.md)** |Retrieves the healthscore|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPHealthScore](../../sharepoint-ps/sharepoint-pnp/Get-PnPHealthScore.md)** |Retrieves the healthscore value.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Connect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Connect-PnPOnline.md)** |Connect to a SharePoint site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Disconnect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Disconnect-PnPOnline.md)** |Disconnects the context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPProperty.md)** |Returns a previously not loaded property of a ClientObject|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Invoke&#8209;PnPQuery](../../sharepoint-ps/sharepoint-pnp/Invoke-PnPQuery.md)** |Executes the currently queued actions|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Invoke&#8209;PnPSPRestMethod](../../sharepoint-ps/sharepoint-pnp/Invoke-PnPSPRestMethod.md)** |Invokes a REST request towards a SharePoint site|SharePoint Online
 **[Add&#8209;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Add-PnPStoredCredential.md)** |Adds a credential to the Windows Credential Manager|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Get-PnPStoredCredential.md)** |Get a credential|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStoredCredential.md)** |Removes a credential|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -174,6 +163,8 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Get-PnPClientSidePage.md)** |Gets a Client-Side Page|SharePoint Online, SharePoint 2019
 **[Remove&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Remove-PnPClientSidePage.md)** |Removes a Client-Side Page|SharePoint Online, SharePoint 2019
 **[Set&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Set-PnPClientSidePage.md)** |Sets parameters of a Client-Side Page|SharePoint Online, SharePoint 2019
+**[Save&#8209;PnPClientSidePageConversionLog](../../sharepoint-ps/sharepoint-pnp/Save-PnPClientSidePageConversionLog.md)** |Persists the current client side page conversion log data to the loggers linked to the last used page transformation run. Needs to be used in conjunction with the -LogSkipFlush flag on the ConvertTo-PnPClientSidePage cmdlet|SharePoint Online
+**[Export&#8209;PnPClientSidePageMapping](../../sharepoint-ps/sharepoint-pnp/Export-PnPClientSidePageMapping.md)** |Get's the built-in maping files or a custom mapping file for your publishing portal page layouts. These mapping files are used to tailor the page transformation experience.|SharePoint Online
 **[Add&#8209;PnPClientSidePageSection](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSidePageSection.md)** |Adds a new section to a Client-Side page|SharePoint Online, SharePoint 2019
 **[Add&#8209;PnPClientSideText](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideText.md)** |Adds a text element to a client-side page.|SharePoint Online, SharePoint 2019
 **[Add&#8209;PnPClientSideWebPart](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideWebPart.md)** |Adds a Client-Side Web Part to a client-side page|SharePoint Online
@@ -244,7 +235,7 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Add-PnPFile.md)** |Uploads a file to Web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Copy&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Copy-PnPFile.md)** |Copies a file or folder to a different location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Copy&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Copy-PnPFile.md)** |Copies a file or folder to a different location, currently there is a 200MB file size limit for the file to be copied.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Find&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Find-PnPFile.md)** |Finds a file in the virtual file system of the web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Get-PnPFile.md)** |Downloads a file.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Move&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Move-PnPFile.md)** |Moves a file to a different location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -287,14 +278,13 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/New-PnPList.md)** |Creates a new list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Remove-PnPList.md)** |Deletes a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Set-PnPList.md)** |Updates list settings|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Add&#8209;PnPListItem](../../sharepoint-ps/sharepoint-pnp/Add-PnPListItem.md)** |Adds an item to a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Add&#8209;PnPListItem](../../sharepoint-ps/sharepoint-pnp/Add-PnPListItem.md)** |Adds an item to the list and sets the creation time to the current date and time. The author is set to the current authenticated user executing the cmdlet. In order to set the author to a different user, please refer to Set-PnPListItem.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPListItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPListItem.md)** |Retrieves list items|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPListItem](../../sharepoint-ps/sharepoint-pnp/Remove-PnPListItem.md)** |Deletes an item from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPListItem](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItem.md)** |Updates a list item|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPListItemPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItemPermission.md)** |Sets list item permissions|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Move&#8209;PnPListItemToRecycleBin](../../sharepoint-ps/sharepoint-pnp/Move-PnPListItemToRecycleBin.md)** |Moves an item from a list to the Recycle Bin|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPListPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPListPermission.md)** |Sets list permissions|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPProvisioningTemplateFromGallery](../../sharepoint-ps/sharepoint-pnp/Get-PnPProvisioningTemplateFromGallery.md)** |Retrieves or searches provisioning templates from the PnP Template Gallery|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Request&#8209;PnPReIndexList](../../sharepoint-ps/sharepoint-pnp/Request-PnPReIndexList.md)** |Marks the list for full indexing during the next incremental crawl|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Add-PnPView.md)** |Adds a view to a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Get-PnPView.md)** |Returns one or all views from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -333,7 +323,7 @@ Cmdlet|Description|Platform
 **[Convert&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Convert-PnPProvisioningTemplate.md)** |Converts a provisioning template to an other schema version|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Get-PnPProvisioningTemplate.md)** |Generates a provisioning site template from a web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[New&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/New-PnPProvisioningTemplate.md)** |Creates a new provisioning template object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Read&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Read-PnPProvisioningTemplate.md)** |Loads/Reads a PnP file from the file system|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Read&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Read-PnPProvisioningTemplate.md)** |Loads/Reads a PnP file from the file system or a string|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Save&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Save-PnPProvisioningTemplate.md)** |Saves a PnP site template to the file system|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[New&#8209;PnPProvisioningTemplateFromFolder](../../sharepoint-ps/sharepoint-pnp/New-PnPProvisioningTemplateFromFolder.md)** |Generates a provisioning template from a given folder, including only files that are present in that folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPProvisioningTemplateMetadata](../../sharepoint-ps/sharepoint-pnp/Set-PnPProvisioningTemplateMetadata.md)** |Sets metadata of a provisioning template|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -347,7 +337,7 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPTenantSequenceTeamNoGroupSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSite.md)** |Creates a new team site without an Office 365 group in-memory object|SharePoint Online
 **[New&#8209;PnPTenantSequenceTeamNoGroupSubSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSubSite.md)** |Creates a team site subsite with no Office 365 group object|SharePoint Online
 **[New&#8209;PnPTenantSequenceTeamSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamSite.md)** |Creates a team site object|SharePoint Online
-**[Apply&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Apply-PnPTenantTemplate.md)** |Applies a tenant template to the current tenant.|SharePoint Online
+**[Apply&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Apply-PnPTenantTemplate.md)** |Applies a tenant template to the current tenant. You must be a SharePoint Online global administrator to run the cmdlet.|SharePoint Online
 **[New&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantTemplate.md)** |Creates a new tenant template object|SharePoint Online
 **[Read&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Read-PnPTenantTemplate.md)** |Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.|SharePoint Online
 **[Save&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Save-PnPTenantTemplate.md)** |Saves a PnP provisioning hierarchy to the file system|SharePoint Online
@@ -380,7 +370,7 @@ Cmdlet|Description|Platform
 **[Disable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Disable-PnPInPlaceRecordsManagementForSite.md)** |Disables in place records management for a site.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Enable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Enable-PnPInPlaceRecordsManagementForSite.md)** |Enables in place records management for a site.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Clear&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Clear-PnPListItemAsRecord.md)** |Undeclares a list item as a record|SharePoint Online
-**[Set&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItemAsRecord.md)** |Declares a list item as a record|SharePoint Online
+**[Set&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItemAsRecord.md)** |Declares a list item as a record, for more information, see https://docs.microsoft.com/sharepoint/governance/records-management-in-sharepoint-server|SharePoint Online
 **[Test&#8209;PnPListItemIsRecord](../../sharepoint-ps/sharepoint-pnp/Test-PnPListItemIsRecord.md)** |Checks if a list item is a record|SharePoint Online
 **[Get&#8209;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Get-PnPListRecordDeclaration.md)** |Returns the manual record declaration settings for a list|SharePoint Online
 **[Set&#8209;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Set-PnPListRecordDeclaration.md)** |The RecordDeclaration parameter supports 4 values:  AlwaysAllowManualDeclaration NeverAllowManualDeclaration UseSiteCollectionDefaults |SharePoint Online
@@ -461,8 +451,12 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Enable&#8209;PnPCommSite](../../sharepoint-ps/sharepoint-pnp/Enable-PnPCommSite.md)** |Enable communication site on the root site of a tenant|SharePoint Online
 **[Get&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Get-PnPHideDefaultThemes.md)** |Returns if the default / OOTB themes should be visible to users or not.|SharePoint Online
 **[Set&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Set-PnPHideDefaultThemes.md)** |Defines if the default / OOTB themes should be visible to users or not.|SharePoint Online
+**[Get&#8209;PnPHomeSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPHomeSite.md)** |Returns the home site url for your tenant|SharePoint Online
+**[Remove&#8209;PnPHomeSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPHomeSite.md)** |Removes the currently set site as the home site|SharePoint Online
+**[Set&#8209;PnPHomeSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPHomeSite.md)** |Sets the home site for your tenant|SharePoint Online
 **[Get&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPHubSite.md)** |Retrieve all or a specific hubsite.|SharePoint Online
 **[Register&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Register-PnPHubSite.md)** |Registers a site as a hubsite|SharePoint Online
 **[Set&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPHubSite.md)** |Sets hubsite properties|SharePoint Online
