@@ -1,5 +1,5 @@
 ---
-external help file: Set-CsCallQueue.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Online
 title: Set-CsCallQueue
 schema: 2.0.0

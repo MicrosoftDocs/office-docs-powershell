@@ -1,5 +1,5 @@
 ---
-external help file: tmp_rf3olqzj.wbj-help.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_rf3olqzj.wbj
 online version:
 schema: 2.0.0
