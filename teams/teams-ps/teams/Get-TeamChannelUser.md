@@ -5,15 +5,15 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamChannel
+# Get-TeamChannelUser (available in private preview)
 
 ## SYNOPSIS
-Get all the channels for a team.
+Returns users of a channel.
 
 ## SYNTAX
 
 ```
-Get-TeamChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>]
+Get-TeamChannelUser -GroupId <String> -DisplayName <String> [-Role <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,17 +22,10 @@ Get-TeamChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>
 
 ### Example 1
 ```
-Get-TeamChannel -GroupId af55e84c-dc67-4e48-9005-86e0b07272f9
+Get-TeamChannelUser -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Engineering" -Role Owner
 ```
 
-Get channels of the group.
-
-### Example 2
-```
-Get-TeamChannel -GroupId af55e84c-dc67-4e48-9005-86e0b07272f9 -MembershipType Private
-```
-
-Get all private channels of the group.
+Get owners of channel with display name as "Engineering"
 
 ## PARAMETERS
 
@@ -51,8 +44,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MembershipType
-Membership type of the channel to display, Standard or Private (available in private preview)
+### -DisplayName
+Display name of the channel
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Role
+Filter the results to only users with the given role: Owner or Member.
 
 ```yaml
 Type: String
