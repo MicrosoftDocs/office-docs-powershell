@@ -106,7 +106,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The URL of the new web relative to the site collection
+The URL of the new web
 
 ```yaml
 Type: String

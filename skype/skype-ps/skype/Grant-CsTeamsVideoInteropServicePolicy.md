@@ -4,8 +4,9 @@ applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Grant-CsTeamsVideoInteropServicePolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 
