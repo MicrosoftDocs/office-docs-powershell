@@ -27,13 +27,13 @@ Get-SPOOrgAssetsLibrary [<CommonParameters>]
 
 The Get-SPOOrgAssetsLibrary cmdlet displays information about all libraries designated as locations for organization assets.
 
-Once this cmdlet is run, it will display the name and URL of the site where assets are originally stored, as well as the display name, server relative library URL, list ID, and thumbnail URL for any associated libraries.
+Once this cmdlet is run, it will display the name and URL of the site where assets are originally stored, as well as the display name, server relative library URL, list ID, OrgAssetType and thumbnail URL for any associated libraries.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example displays the name and URL of the site where assets are originally stored. It also provides a list of any associated libraries and shows the respective display name, server relative library URL, list ID, and thumbnail URL.
+This example displays the name and URL of the site where assets are originally stored. It also provides a list of any associated libraries and shows the respective display name, server relative library URL, list ID, OrgAssetType and thumbnail URL.
 
 ```powershell
 Get-SPOOrgAssetsLibrary

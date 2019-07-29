@@ -72,3 +72,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
+
+[Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+
+[Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)

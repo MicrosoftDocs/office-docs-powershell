@@ -12,6 +12,7 @@ Marks the value of the propertybag key specified to be indexed by search.
 
 ```powershell
 Add-PnPIndexedProperty -Key <String>
+                       [-List <ListPipeBind>]
                        [-Web <WebPipeBind>]
                        [-Connection <SPOnlineConnection>]
 ```
@@ -28,6 +29,18 @@ Parameter Sets: (All)
 Required: True
 Position: 0
 Accept pipeline input: False
+```
+
+### -List
+The list object or name where to set the indexed property
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: True
 ```
 
 ### -Connection
