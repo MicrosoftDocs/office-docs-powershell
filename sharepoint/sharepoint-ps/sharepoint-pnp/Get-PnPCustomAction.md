@@ -46,13 +46,6 @@ Get-PnPCustomAction -Scope web
 
 Returns all custom actions for the current web object.
 
-### ------------------EXAMPLE 4------------------
-```powershell
-Get-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Includes 'Id','Title','ClientSideComponentProperties'
-```
-
-Returns the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' as well as specific properties, such as ClientSiteComponentProperties
-
 ## PARAMETERS
 
 ### -Identity

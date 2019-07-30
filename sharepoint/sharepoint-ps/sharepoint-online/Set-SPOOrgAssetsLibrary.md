@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
+author: Maralesfahanpoor
+ms.author: maesfaha
 ms.reviewer: 
-manager: paulac@microsoft.com
+manager: paulac
 online version:
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ The Set-SPOOrgAssetsLibrary cmdlet updates information for a library that is des
 This example updates the thumbnail publicly displayed for the library to contosologo2.jpg.
 
 ```powershell
-Set-SPOOrgAssetsLibrary -LibraryURL Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo2.jpg
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo2.jpg
 ```
 
 ## PARAMETERS
