@@ -12,8 +12,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Deletes a team.
+This cmdlet deletes a specified Team from Microsoft Teams. 
 
+NOTE: The associated Office 365 Unified Group will also be removed.
+ 
 ## SYNTAX
 
 ```
@@ -21,6 +23,8 @@ Remove-Team -GroupId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+Removes a specified team via GroupID and all its associated components, like O365 Unified Group...  
 
 ## EXAMPLES
 
