@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010
 title: Test-CsClientAuth
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
