@@ -22,7 +22,7 @@ Add-PnPNavigationNode -Location <NavigationType>
 ```
 
 ## DESCRIPTION
-Adds a menu item to either the quicklaunch or top navigation
+Adds a menu item to either the quicklaunch or top navigation.  When updating a hub site menu (TopNavigationBar) it will take 30-45 minutes for the changes to appear on the menu.
 
 ## EXAMPLES
 
