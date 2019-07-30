@@ -6,7 +6,7 @@ schema: 2.0.0
 # Apply-PnPTenantTemplate
 
 ## SYNOPSIS
-Applies a tenant template to the current tenant.
+Applies a tenant template to the current tenant. You must be a SharePoint Online global administrator to run the cmdlet.
 
 ## SYNTAX 
 

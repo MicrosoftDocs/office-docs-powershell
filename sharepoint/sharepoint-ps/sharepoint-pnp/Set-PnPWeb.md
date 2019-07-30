@@ -17,6 +17,8 @@ Set-PnPWeb [-SiteLogoUrl <String>]
            [-Description <String>]
            [-MasterUrl <String>]
            [-CustomMasterUrl <String>]
+           [-HeaderLayout <HeaderLayoutType>]
+           [-HeaderEmphasis <SPVariantThemeType>]
            [-Web <WebPipeBind>]
            [-Connection <SPOnlineConnection>]
 ```
@@ -55,6 +57,34 @@ Accept pipeline input: False
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderEmphasis
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SPVariantThemeType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderLayout
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: HeaderLayoutType
 Parameter Sets: (All)
 
 Required: False

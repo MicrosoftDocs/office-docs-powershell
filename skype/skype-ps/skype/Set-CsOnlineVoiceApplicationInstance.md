@@ -6,6 +6,9 @@ author:
 ms.author:Danny Levin
 ms.reviewer: 
 schema: 2.0.0
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 ---
 
 # Set-CsOnlineVoiceApplicationInstance
