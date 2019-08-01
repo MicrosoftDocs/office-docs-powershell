@@ -27,7 +27,7 @@ The Export-SPPerformancePointContent exports a PPS dashboard and its dependencie
 
 ### Example 1 
 ```
-Export-SPPerformancePointContent -ItemUrls http://contoso/sites/marketing/default.aspx -ExportFileURL "http://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
+Export-SPPerformancePointContent -ItemUrls https://contoso/sites/marketing/default.aspx -ExportFileURL "https://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
 ```
 
 This example exports a dashboard at the location specified with the ItemUrls parameter.

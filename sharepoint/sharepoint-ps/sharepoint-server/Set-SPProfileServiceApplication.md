@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ### -MySiteHostLocation
 Specifies the site collection where the My Site will be provisioned.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
 
 ```yaml
 Type: SPSitePipeBind
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ### -MySiteManagedPath
 Specifies the managed path location of personal sites.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: SPPrefixPipeBind
@@ -280,13 +280,13 @@ Specifies the format to use to name personal sites.
 Use one of the following integer values:
 
 1--Personal site collections are to be based on user names without any conflict resolution.
-For example, http://portal_site/location/username/
+For example, https://portal_site/location/username/
 
 2-- Personal site collections are to be based on user names with conflict resolution by using domain names.
 For example, .../username/ or .../domain_username/
 
 3   Personal site collections are to be named by using domain and user name always, to avoid any conflicts.
-For example, http://portal_site/location/domain_username/
+For example, https://portal_site/location/domain_username/
 
 The default value is 1 (do not resolve conflicts).
 

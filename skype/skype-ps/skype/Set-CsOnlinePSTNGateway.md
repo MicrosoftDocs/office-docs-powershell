@@ -4,8 +4,9 @@ online version:
 applicable: Skype for Business Online
 title: Set-CsOnlinePSTNGateway
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -20,7 +21,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 ```
 Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardPai
-Indicates whether the P-Asserted-Identity (PAI) header will be forwarded along with the call. The PAI header provides a way to verify the identity of the caller. The default value is False ($False).
+Indicates whether the P-Asserted-Identity (PAI) header will be forwarded along with the call. The PAI header provides a way to verify the identity of the caller. The default value is False ($False). Setting this parameter to $true will render the from header anonymous, in accordance of RFC5379 and RFC3325.
 
 ```yaml
 Type: Boolean
@@ -194,6 +195,20 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MediaRelayRoutingLocationOverride
+Allows selecting path for media manually. Direct Routing assigns a datacenter for media path based on the public IP of the SBC. We always select closest to the SBC datacenter. However, in some cases a public IP from for example a US range can be assigned to an SBC located in Europe. In this case we will be using not optimal media path. This parameter allows manually set the preferred region for media traffic. We only recommend setting this parameter if the call logs clearly indicate that automatic assignment of the datacenter for media path does not assign the closest to the SBC datacenter
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false

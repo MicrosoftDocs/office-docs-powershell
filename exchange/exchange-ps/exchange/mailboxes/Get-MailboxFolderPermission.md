@@ -44,6 +44,13 @@ Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User 
 
 This example returns the permissions for the same folder in John's mailbox, but only for the user Ayla.
 
+### -------------------------- Example 3 --------------------------
+```
+Get-MailboxFolderPermission -Identity john@contoso.com:\Calendar -User Ayla@contoso.com
+```
+
+This example returns the permissions for the Calendar folder in John's mailbox, but only for the user Ayla.
+
 ## PARAMETERS
 
 ### -Identity

@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUserAcp
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsUserAcp
@@ -228,7 +229,7 @@ Accept wildcard characters: False
 ### -Url
 Web URL for the audio conferencing provider; for example:
 
-`-Url "http://acp.fabrikam.com"`
+`-Url "https://acp.fabrikam.com"`
 
 The web URL enables audio conferencing providers to point users to a webpage containing additional dial-in phone numbers, as well as information about the services offered by the audio conferencing provider.
 

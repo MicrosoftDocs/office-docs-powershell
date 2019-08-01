@@ -21,11 +21,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-SafeLinksRule [-Name] <String> -SafeLinksPolicy <SafeLinksPolicyIdParameter> [-Comments <String>]
- [-Confirm] [-Enabled <$true | $false>] [-ExceptIfRecipientDomainIs <Word[]>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-Priority <Int32>] [-RecipientDomainIs <Word[]>] [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+New-SafeLinksRule [-Name] <String> -SafeLinksPolicy <SafeLinksPolicyIdParameter>
+ [-Comments <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-SafeLinksRule -Name "Research Department URL Rule" -SafeAttachmentPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
+New-SafeLinksRule -Name "Research Department URL Rule" -SafeLinksPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
 
 This example creates a new Safe Links rule named Research Department URL Rule with the following conditions:
@@ -292,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 

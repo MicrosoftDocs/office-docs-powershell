@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSiteGroup
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -31,10 +31,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Set-SPOSiteGroup -Site http://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
+Set-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
 ```
 
-Example 1 changes permission level of the ProjectViewers group inside site collection http://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
+Example 1 changes permission level of the ProjectViewers group inside site collection https://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```

@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOSiteRename
 schema: 2.0.0
-author: joseOrtega
-ms.author: j0rt3g4
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 

@@ -59,10 +59,10 @@ Will remove the home navigation node from the top navigation bar without prompti
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Remove-PnPNavigationNode -Location QuickLaunch -All
+Get-PnPNavigationNode -Location QuickLaunch | Remove-PnPNavigationNode -Force
 ```
 
-Will remove all the navigation nodes from the quick launch bar in the current web.
+Will remove all the navigation nodes from the quick launch bar without prompting for a confirmation in the current web.
 
 ## PARAMETERS
 

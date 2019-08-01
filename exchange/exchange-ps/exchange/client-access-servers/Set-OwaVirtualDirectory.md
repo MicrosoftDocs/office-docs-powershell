@@ -188,9 +188,7 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Outlook on the web virtual directory that you want to modify.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 
@@ -2706,7 +2704,7 @@ The WindowsAuthentication parameter enables or disables Integrated Windows authe
 
 - $true: Integrated Windows authentication is enabled on the Outlook on the web virtual directory.
 
-- $true: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This is the default value.
+- $false: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This is the default value.
 
 ```yaml
 Type: $true | $false

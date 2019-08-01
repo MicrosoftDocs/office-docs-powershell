@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSiteGroup
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -31,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOSiteGroup -Site http://contoso.sharepoint.com/sites/siteA
+Get-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA
 ```
-This example returns all the groups on the specified site collection http://contoso.sharepoint.com/sites/siteA.
+This example returns all the groups on the specified site collection https://contoso.sharepoint.com/sites/siteA.
 
 
 ## PARAMETERS

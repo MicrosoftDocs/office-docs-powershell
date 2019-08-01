@@ -19,17 +19,17 @@ This cmdlet supports retrieving teams with particular properties/information, in
 ### Identity
 ```
 Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
- [-DisplayName <String>] [-Alias <String>] [<CommonParameters>]
+ [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>]
 ```
 
 ### Filters
 ```
 Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-DisplayName <String>]
- [-Alias <String>] [<CommonParameters>]
+ [-MailNickName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet supports retrieving teams with particular properties/information, inclding all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
+This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
 Note: depending on the number of teams and O365 Groups in your organization and which filters you are using, this cmdlet can take upwards of ten minutes to run.  Some of the input parameters are guaranteed unique (e.g. GroupId), and others serve as filters (e.g. -Archived).
 
@@ -47,6 +47,12 @@ Returns all teams that a user (dmx1@example.com) belongs to
 PS> Get-Team -Archived $true -Visibility Private
 ```
 Returns all teams that are private and have been archived.
+
+### Example 3
+```
+PS> Get-Team -MailNickName "BusinessDevelopment"
+```
+Returns the team that matches the specified MailNickName
 
 ## PARAMETERS
 
@@ -147,8 +153,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Alias
-Specify the alias (also known as mailnickname) of the team that is being returned.  This is a unique identifier and returns exact match.
+### -MailNickName
+Specify the mailnickname of the team that is being returned.  This is a unique identifier and returns exact match.
 
 ```yaml
 Type: String
@@ -203,7 +209,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

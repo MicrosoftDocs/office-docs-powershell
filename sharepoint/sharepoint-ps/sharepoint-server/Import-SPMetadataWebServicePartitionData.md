@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE---------------------- 
 ```
-$subscription = Get-SPSIteSubscription -Identity http://site_url
+$subscription = Get-SPSIteSubscription -Identity https://site_url
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
 Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
 ```

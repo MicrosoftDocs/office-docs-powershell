@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsClientPolicy
@@ -1306,7 +1307,7 @@ Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions of Lync 2010 it was possible to add a Send Feedback option to the user interface.
 That was done by using code similar to this:
 
-`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
+`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
 
 For more details and examples, see the New-CsClientPolicyEntry cmdlet help topic.
 

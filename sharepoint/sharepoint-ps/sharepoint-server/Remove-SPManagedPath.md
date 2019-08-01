@@ -68,7 +68,7 @@ This command does not prompt for confirmation.
 
 ### -Identity
 Specifies the name of the managed path to delete.
-For example, in the URL http://sitename/sites/site1, "sites" is the name of the managed path.
+For example, in the URL https://sitename/sites/site1, "sites" is the name of the managed path.
 
 ```yaml
 Type: SPPrefixPipeBind

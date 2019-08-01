@@ -29,7 +29,7 @@ Enables Site Classifications for your tenant and provides three classification v
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-Enable-PnPSiteClassification -Classifications "HBI","LBI","Top Secret" -UsageGuidelinesUrl http://aka.ms/sppnp
+Enable-PnPSiteClassification -Classifications "HBI","LBI","Top Secret" -UsageGuidelinesUrl https://aka.ms/sppnp
 ```
 
 Enables Site Classifications for your tenant and provides three classification values. The usage guideliness will be set to the specified URL.
