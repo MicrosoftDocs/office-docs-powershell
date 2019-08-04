@@ -2,9 +2,10 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online 
 title: Remove-CsTeamsEmergencyCallRoutingPolicy
-author:
-ms.author:Danny Levin
-ms.reviewer: 
+author:danny-levin
+ms.author:dannyle
+manager: roykuntz
+ms.reviewer: chenc, pthota
 schema: 2.0.0
 ---
 
