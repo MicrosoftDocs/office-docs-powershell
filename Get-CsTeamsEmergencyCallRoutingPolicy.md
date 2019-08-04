@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Get-CsTeamsEmergencyCallRoutingPolicy
 author:danny-levin
 ms.author:dannyle
-manager: toykuntz
+manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
 ---
