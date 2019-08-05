@@ -2704,7 +2704,7 @@ The WindowsAuthentication parameter enables or disables Integrated Windows authe
 
 - $true: Integrated Windows authentication is enabled on the Outlook on the web virtual directory.
 
-- $true: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This is the default value.
+- $false: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This is the default value.
 
 ```yaml
 Type: $true | $false
