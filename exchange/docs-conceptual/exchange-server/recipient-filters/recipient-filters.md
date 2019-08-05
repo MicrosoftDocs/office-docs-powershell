@@ -1,5 +1,5 @@
 ---
-title: "Recipient filters in Exchange Management Shell commands"
+title: "Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands"
 ms.author: chrisda
 author: chrisda
 manager: serdars
@@ -9,11 +9,11 @@ ms.topic: reference
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
-description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell."
+description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell and Exchange Online PowerShell."
 ---
 
-# Recipient filters in Exchange Management Shell commands
-You can use several Exchange Management Shell commands to filter a set of recipients. You can create the following types of filters in an Exchange command:
+# Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands
+You can use several Exchange Management Shell and Exchange Online PowerShell commands to filter a set of recipients. You can create the following types of filters in an Exchange command:
 
 - Precanned filters
 
@@ -26,7 +26,7 @@ You can use several Exchange Management Shell commands to filter a set of recipi
 Older versions of Exchange used LDAP filtering syntax to create custom address lists, global address lists (GALs), email address policies, and distribution groups. In Exchange Server 2007 and later versions, OPATH filtering syntax replaced LDAP filtering syntax. 
 
 ## Precanned filters
-A precanned filter is a commonly used Exchange filter that you can use to meet a variety of recipient-filtering criteria for creating dynamic distribution groups, email address policies, address lists, or GALs. With precanned filters, you can use either the Exchange Management Shell or the Exchange admin center (EAC). Using precanned filters, you can do the following:
+A precanned filter is a commonly used Exchange filter that you can use to meet a variety of recipient-filtering criteria for creating dynamic distribution groups, email address policies, address lists, or GALs. With precanned filters, you can use either the Exchange PowerShell or the Exchange admin center (EAC). Using precanned filters, you can do the following:
 
 - Determine the scope of recipients.
 
@@ -66,7 +66,7 @@ Precanned filters are available for the following cmdlets:
 
 ### Example
 
-This example describes using precanned filters in the Exchange Management Shell to create a dynamic distribution group. The syntax in this example is similar but not identical to the syntax you would use to create an email address policy, address list, or GAL. When creating a precanned filter, you should ask the following questions: 
+This example describes using precanned filters to create a dynamic distribution group. The syntax in this example is similar but not identical to the syntax you would use to create an email address policy, address list, or GAL. When creating a precanned filter, you should ask the following questions: 
 
 - From which organizational unit (OU) do you want to include recipients? (This question corresponds to the _RecipientContainer_ parameter.)
 
@@ -125,7 +125,7 @@ New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.c
 ## Custom filters using the Filter parameter
 You can use the _Filter_ parameter to filter the results of a command to specify which objects to retrieve. For example, instead of retrieving all users or groups, you can specify a set of users or groups by using a filter string. This type of filter doesn't modify any configuration or attributes of objects. It only modifies the set of objects that the command returns.
 
-Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. The Exchange Management Shell also supports client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://technet.microsoft.com/library/8320e1a5-d3f5-4615-878d-b23e2aaa6b1e.aspx).
+Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. We also support client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://technet.microsoft.com/library/8320e1a5-d3f5-4615-878d-b23e2aaa6b1e.aspx).
 
 To find the filterable properties for cmdlets that have the _Filter_ parameter, you can run the **Get** command against an object and format the output by pipelining the **Format-List** parameter. Most of the returned values will be available for use in the _Filter_ parameter. The following example returns a detailed list for the mailbox Ayla.
 
