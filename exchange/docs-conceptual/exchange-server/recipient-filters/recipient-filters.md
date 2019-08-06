@@ -66,7 +66,7 @@ Precanned filters are available for the following cmdlets:
 
 ### Example
 
-This example describes using precanned filters to create a dynamic distribution group. The syntax in this example is similar but not identical to the syntax you would use to create an email address policy, address list, or GAL. When creating a precanned filter, you should ask the following questions: 
+This example describes using precanned filters in the Exchange Management Shell to create a dynamic distribution group. The syntax in this example is similar but not identical to the syntax you would use to create an email address policy, address list, or GAL. When creating a precanned filter, you should ask the following questions: 
 
 - From which organizational unit (OU) do you want to include recipients? (This question corresponds to the _RecipientContainer_ parameter.)
 
