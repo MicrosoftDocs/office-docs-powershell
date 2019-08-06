@@ -163,6 +163,8 @@ The _Filter_ parameter is available for the following recipient cmdlets:
 
 - [Get-User](../../../exchange-ps/exchange/users-and-groups/get-user.md)
 
+- [Get-UnifiedGroup](../../../exchange-ps/exchange/users-and-groups/get-unifiedgroup.md)
+
 For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filter-properties.md).
 
 ### Example
