@@ -226,7 +226,7 @@ Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
-Default value: False
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
