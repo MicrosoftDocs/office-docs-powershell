@@ -474,6 +474,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
+[Remove-Team]()
+
 [Get-Team]()
 
 [Set-Team]()

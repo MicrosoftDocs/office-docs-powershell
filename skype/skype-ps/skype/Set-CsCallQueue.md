@@ -1,8 +1,12 @@
 ---
-external help file: Set-CsCallQueue.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Online
 title: Set-CsCallQueue
 schema: 2.0.0
+ms.reviewer:
+manager: bulenteg
+ms.author: tomkau
+author: tomtau
 ---
 
 # Set-CsCallQueue
@@ -59,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentAlertTime
-The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive.
+The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 15 and 180 seconds (3 minutes), inclusive.
 
 ```yaml
 Type: Int16

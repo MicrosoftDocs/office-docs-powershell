@@ -32,7 +32,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
 ```
 ### ParamSet2
 ```powershell
@@ -741,6 +741,48 @@ Edit - Sets the default link permission for the site to “edit” permissions
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideTenantAnonymousLinkExpirationPolicy
+
+Choose whether to override the anonymous or anyone link expiration policy on this site
+
+PARAMVALUE: None | False | True
+
+None - Respect the organization-level policy for anonymous or anyone link expiration
+False - Respect the organization-level policy for anonymous or anyone link expiration
+True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnonymousLinkExpirationInDays
+
+Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true. 
+
+To remove the expiration requirement, set the value to zero (0). 
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 

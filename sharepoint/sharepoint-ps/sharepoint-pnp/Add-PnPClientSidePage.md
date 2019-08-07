@@ -37,6 +37,13 @@ Add-PnPClientSidePage -Name "NewPage" -ContentType "MyPageContentType"
 
 Creates a new Client-Side page named 'NewPage' and sets the content type to the content type specified
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Add-PnPClientSidePage -Name "NewPageTemplate" -PromoteAs Template
+```
+
+Creates a new Client-Side page named 'NewPage' and saves as a template to the site.
+
 ## PARAMETERS
 
 ### -CommentsEnabled
@@ -56,7 +63,7 @@ Accept pipeline input: False
 ### -ContentType
 Specify either the name, ID or an actual content type.
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: ContentTypePipeBind
