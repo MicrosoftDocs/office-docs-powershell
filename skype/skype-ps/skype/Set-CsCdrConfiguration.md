@@ -23,15 +23,15 @@ This cmdlet was introduced in Lync Server 2010.
 ### Identity
 ```
 Set-CsCdrConfiguration [[-Identity] <XdsIdentity>] [-EnableCDR <Boolean>] [-EnablePurging <Boolean>]
- [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] 
+ [-EnableUdcLite <Boolean>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsCdrConfiguration [-Instance <PSObject>] [-EnableCDR <Boolean>] [-EnablePurging <Boolean>]
- [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>]
+ [-EnableUdcLite <Boolean>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -214,6 +214,21 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableUdcLite
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
