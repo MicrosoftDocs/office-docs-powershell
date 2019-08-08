@@ -842,8 +842,14 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsUserAcp](Get-CsUserAcp.md)
 {{Manually Enter Get-CsUserAcp Description Here}}
 
+### [Get-CsUserCallForwardingSettings](Get-CsUserCallForwardingSettings.md)
+{{Manually Enter Get-CsUserCallForwardingSettings Description Here}}
+
 ### [Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 {{Manually Enter Get-CsUserDatabaseState Description Here}}
+
+### [Get-CsUserDelegates.md](Get-CsUserDelegates.md)
+{{Manually Enter Get-CsUserDelegates.md Description Here}}
 
 ### [Get-CsUserLocationStatus](Get-CsUserLocationStatus.md)
 {{Manually Enter Get-CsUserLocationStatus Description Here}}
@@ -865,6 +871,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsUserSession](Get-CsUserSession.md)
 {{Manually Enter Get-CsUserSession Description Here}}
+
+### [Get-CsUserTeamMembers](Get-CsUserTeamMembers.md)
+{{Manually Enter Get-CsUserTeamMembers Description Here}}
 
 ### [Get-CsVideoInteropServerConfiguration](Get-CsVideoInteropServerConfiguration.md)
 {{Manually Enter Get-CsVideoInteropServerConfiguration Description Here}}
@@ -1081,6 +1090,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Invoke-CsQoEDatabasePurge](Invoke-CsQoEDatabasePurge.md)
 {{Manually Enter Invoke-CsQoEDatabasePurge Description Here}}
+
+### [Invoke-CsRgsStoreReplicateData](Invoke-CsRgsStoreReplicateData.md)
+{{Manually Enter Invoke-CsRgsStoreReplicateData Description Here}}
 
 ### [Invoke-CsStorageServiceFlush](Invoke-CsStorageServiceFlush.md)
 {{Manually Enter Invoke-CsStorageServiceFlush Description Here}}
@@ -2756,8 +2768,14 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsUserAcp](Set-CsUserAcp.md)
 {{Manually Enter Set-CsUserAcp Description Here}}
 
+### [Set-CsUserCallForwardingSettings](Set-CsUserCallForwardingSettings.md)
+{{Manually Enter Set-CsUserCallForwardingSettings Description Here}}
+
 ### [Set-CsUserDatabaseState](Set-CsUserDatabaseState.md)
 {{Manually Enter Set-CsUserDatabaseState Description Here}}
+
+### [Set-CsUserDelegates](Set-CsUserDelegates.md)
+{{Manually Enter Set-CsUserDelegates Description Here}}
 
 ### [Set-CsUserPstnSettings](Set-CsUserPstnSettings.md)
 {{Manually Enter Set-CsUserPstnSettings Description Here}}
@@ -2773,6 +2791,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Set-CsUserServicesPolicy](Set-CsUserServicesPolicy.md)
 {{Manually Enter Set-CsUserServicesPolicy Description Here}}
+
+### [Set-CsUserTeamMembers](Set-CsUserTeamMembers.md)
+{{Manually Enter Set-CsUserTeamMembers Description Here}}
 
 ### [Set-CsVideoGateway](Set-CsVideoGateway.md)
 {{Manually Enter Set-CsVideoGateway Description Here}}
