@@ -9,10 +9,10 @@ ms.author: hirshah
 ms.reviewer:
 ---
 
-# Invoke-CsRgsStoreReplicateData
+# Invoke-CsRGSStoreReplicateData
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Replicate existing RGS data present on the specified pool to the backup tables so that data can be picked up by RGSBackupService. 
 
 ## SYNTAX
 
@@ -21,26 +21,29 @@ Invoke-CsRgsStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Invoke-CsRGSStoreReplicateData cmdlet enables administrators to replicate existing RGS data(RGS entities created before CU1 installation) present on the specified pool to the backup tables so that data can be picked by backupservice. Backup service will sync RGS data to the paired pool if RGSBackupSerice in enabled.
+Skype for Business Server Control Panel: The functions carried out by the Invoke- CsRGSStoreReplicateData cmdlet are not available in the Skype for Business Server Control Panel.
+
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Invoke-CsRGSStoreReplicateData -PoolFqdn "atl-cs-001.litwareinc.com"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 replicates the RGS data for the pool atl-cs-001.litwareinc.com to the back up table.
 
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -50,30 +53,32 @@ Accept wildcard characters: False
 ```
 
 ### -PoolFqdn
-{{ Fill PoolFqdn Description }}
+Fully qualified domain name of the pool whose data will be replicated. 
+For example:
+`-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
 ```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+### 
+None. The Invoke-CsRGSStoreReplicateData cmdlet does not accept pipelined data.
 
-### None
 
 ## OUTPUTS
-
-### System.Object
-## NOTES
+###  
+None.
 
 ## RELATED LINKS
