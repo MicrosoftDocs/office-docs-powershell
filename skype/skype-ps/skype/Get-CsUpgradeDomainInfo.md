@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015
-title: Get-CsPoolUpgradeReadinessState
+applicable: Skype for Business Server 2019
+title: Get-CsUpgradeDomainInfo
 schema: 2.0.0
 manager: rogupta
 author: hirenshah1
@@ -9,42 +9,35 @@ ms.author: hirshah
 ms.reviewer:
 ---
 
-# Get-CsPoolUpgradeReadinessState
+# Get-CsUpgradeDomainInfo
 
 ## SYNOPSIS
 Returns information indicating whether or not your Skype for Business Server Registrar pools are ready to be upgraded.
 The upgrade readiness state for a pool is based on the upgrade domains that have been configured for that pool.
-This cmdlet was introduced in Lync Server 2013.
-
 
 ## SYNTAX
 
 ```
-Get-CsPoolUpgradeReadinessState [-Confirm] [-Force] [-WhatIf] [-SkipIdleSecondaryVerification]
- [<CommonParameters>]
+Get-CsUpgradeDomainInfo [-Force] [-QueryTimeout <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsPoolUpgradeReadinessState cmdlet returns information about the upgrade readiness for a Skype for Business Server pool.
+The Get-CsUpgradeDomainInfo cmdlet returns information about the upgrade readiness for a Skype for Business Server pool.
 The returned information includes the number of Front End servers assigned to the pool; the number of currently active Front End servers; the name of the upgrade domain; and a True/False value that indicates whether the current state of the pool allows it to be upgraded.
 Note that this cmdlet must be run locally on a Front End server in the pool being checked.
-There are no options enabling you to run the Get-CsPoolUpgradeReadinessState cmdlet remotely.
+There are no options enabling you to run the Get-CsUpgradeDomainInfo cmdlet remotely.
 
-The functions carried out by the Get-CsPoolUpgradeReadinessState cmdlet are not available in the Skype for Business Server Control Panel.
-
-In Skype for Business Server 2019, Get-CsPoolUpgradeReadinessState cmdlet was replaced by [Get-CsUpgradeDomainInfo](Get-CsUpgradeDomainInfo.md) cmdlet.
-
+The functions carried out by the Get-CsUpgradeDomainInfo cmdlet are not available in the Skype for Business Server Control Panel.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsPoolUpgradeReadinessState
+Get-CsUpgradeDomainInfo
 ```
 
 The command shown in Example 1 returns the upgrade readiness state for the local Registrar pool.
 Note that this command must be executed on a Front End server located within the pool.
-
 
 ## PARAMETERS
 
@@ -55,7 +48,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -71,7 +64,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -87,7 +80,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -96,15 +89,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipIdleSecondaryVerification
-When included in the command, Get-CsPoolUpgradeReadinessState returns even if replicas are still being built.
-By default, Get-CsPoolUpgradeReadinessState waits until the replicas have been built before completing.
+### -QueryTimeout
+Query timeout period in minutes to retrieve the state of fabric services.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2019
 
 Required: False
 Position: Named
