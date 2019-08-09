@@ -18,8 +18,7 @@ The upgrade readiness state for a pool is based on the upgrade domains that have
 ## SYNTAX
 
 ```
-Get-CsUpgradeDomainInfo [-Confirm] [-Force] [-WhatIf] [-SkipIdleSecondaryVerification]
- [<CommonParameters>]
+Get-CsUpgradeDomainInfo [-Force] [-QueryTimeout <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +89,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipIdleSecondaryVerification
-When included in the command, Get-CsUpgradeDomainInfo returns even if replicas are still being built.
-By default, Get-CsUpgradeDomainInfo waits until the replicas have been built before completing.
+### -QueryTimeout
+Query timeout period in minutes to retrieve the state of fabric services.
 
 ```yaml
 Type: SwitchParameter
