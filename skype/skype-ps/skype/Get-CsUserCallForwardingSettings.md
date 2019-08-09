@@ -12,7 +12,8 @@ ms.reviewer:
 # Get-CsUserCallForwardingSettings
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet returns the specified user’s call forwarding settings as an object, and displays the same on the screen
+
 
 ## SYNTAX
 
@@ -21,41 +22,42 @@ Get-CsUserCallForwardingSettings [-User] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. 
+
+The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
+
+•	CsAdministrator – Get and Set for all cmdlets
+•	CsVoiceAdministrator - Get and Set for all cmdlets
+•	CsServerAdministrator - Get and Set for all cmdlets
+•	CsHelpDesk - Get for all cmdlets
+Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets.
+
+
+
+
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+###-------------------------- Example -------------------------- 
 ```
-
-{{ Add example description here }}
+Get-CsUserCallForwardingSettings -User jphillips@contoso.com
+```
+This example returns the call forwarding setings for the specified user
 
 ## PARAMETERS
 
-### -Force
-{{ Fill Force Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -User
-{{ Fill User Description }}
+Specifies the identity of the target user.
+Acceptable values include:
+
+Example: jphillips@contoso.com
+Example: sip:jphillips@contoso.com
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: DisplayName, SipAddress, Identity
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: 0
@@ -69,11 +71,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+###
+None
 
 ## OUTPUTS
 
-### System.Object
+###
+Call Forwarding settings
+
 ## NOTES
 
 ## RELATED LINKS
