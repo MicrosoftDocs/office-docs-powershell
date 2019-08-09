@@ -848,8 +848,8 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 {{Manually Enter Get-CsUserDatabaseState Description Here}}
 
-### [Get-CsUserDelegates.md](Get-CsUserDelegates.md)
-{{Manually Enter Get-CsUserDelegates.md Description Here}}
+### [Get-CsUserDelegates](Get-CsUserDelegates.md)
+{{Manually Enter Get-CsUserDelegates Description Here}}
 
 ### [Get-CsUserLocationStatus](Get-CsUserLocationStatus.md)
 {{Manually Enter Get-CsUserLocationStatus Description Here}}
