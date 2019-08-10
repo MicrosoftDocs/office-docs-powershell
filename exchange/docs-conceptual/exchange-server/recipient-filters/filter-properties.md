@@ -16,35 +16,37 @@ description: "Learn about the filterable properties for the Filter parameter in 
 
 You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016, Exchange Server 2019 or Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
 
-- [Get-CASMailbox](../../../exchange-ps/exchange/client-access/get-casmailbox.md)
+- [Get-CASMailbox](../../../exchange-ps/exchange/client-access/Get-CASMailbox.md)
 
-- [Get-Contact](../../../exchange-ps/exchange/users-and-groups/get-contact.md)
+- [Get-Contact](../../../exchange-ps/exchange/users-and-groups/Get-Contact.md)
 
-- [Get-DistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-distributiongroup.md)
+- [Get-DistributionGroup](../../../exchange-ps/exchange/users-and-groups/Get-DistributionGroup.md)
 
-- [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-dynamicdistributiongroup.md)
+- [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/Get-DynamicDistributionGroup.md)
 
-- [Get-Group](../../../exchange-ps/exchange/users-and-groups/get-group.md)
+- [Get-Group](../../../exchange-ps/exchange/users-and-groups/Get-Group.md)
 
-- [Get-LinkedUser](../../../exchange-ps/exchange/users-and-groups/get-linkeduser.md)
+- [Get-LinkedUser](../../../exchange-ps/exchange/users-and-groups/Get-LinkedUser.md)
 
-- [Get-Mailbox](../../../exchange-ps/exchange/mailboxes/get-mailbox.md)
+- [Get-Mailbox](../../../exchange-ps/exchange/mailboxes/Get-Mailbox.md)
 
-- [Get-MailContact](../../../exchange-ps/exchange/users-and-groups/get-mailcontact.md)
+- [Get-MailContact](../../../exchange-ps/exchange/users-and-groups/Get-MailContact.md)
 
-- [Get-MailPublicFolder](../../../exchange-ps/exchange/sharing-and-collaboration/get-mailpublicfolder.md)
+- [Get-MailPublicFolder](../../../exchange-ps/exchange/sharing-and-collaboration/Get-MailPublicFolder.md)
 
-- [Get-MailUser](../../../exchange-ps/exchange/users-and-groups/get-mailuser.md)
+- [Get-MailUser](../../../exchange-ps/exchange/users-and-groups/Get-MailUser.md)
 
-- [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md)
+- [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/Get-Recipient.md)
 
-- [Get-RemoteMailbox](../../../exchange-ps/exchange/federation-and-hybrid/get-remotemailbox.md)
+- [Get-RemoteMailbox](../../../exchange-ps/exchange/federation-and-hybrid/Get-RemoteMailbox.md)
 
-- [Get-SecurityPrincipal](../../../exchange-ps/exchange/users-and-groups/get-securityprincipal.md)
+- [Get-SecurityPrincipal](../../../exchange-ps/exchange/users-and-groups/Get-SecurityPrincipal.md)
 
-- [Get-UMMailbox](../../../exchange-ps/exchange/unified-messaging/get-ummailbox.md)
+- [Get-UMMailbox](../../../exchange-ps/exchange/unified-messaging/Get-UMMailbox.md)
 
-- [Get-User](../../../exchange-ps/exchange/users-and-groups/get-user.md)
+- [Get-User](../../../exchange-ps/exchange/users-and-groups/Get-User.md)
+
+- [Get-User](../../../exchange-ps/exchange/users-and-groups/Get-UnifiedGroup.md)
 
 For more information, see [Recipient filters in Exchange Management Shell commands](recipient-filters.md).
 
