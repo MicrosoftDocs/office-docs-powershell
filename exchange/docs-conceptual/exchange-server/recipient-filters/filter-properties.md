@@ -46,7 +46,7 @@ You use the _Filter_ parameter to create OPATH filters based on the properties o
 
 - [Get-User](../../../exchange-ps/exchange/users-and-groups/Get-User.md)
 
-- [Get-User](../../../exchange-ps/exchange/users-and-groups/Get-UnifiedGroup.md)
+- [Get-UnifiedGroup](../../../exchange-ps/exchange/users-and-groups/Get-UnifiedGroup.md)
 
 For more information, see [Recipient filters in Exchange Management Shell commands](recipient-filters.md).
 
