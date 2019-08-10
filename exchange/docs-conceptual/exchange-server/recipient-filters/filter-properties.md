@@ -14,7 +14,7 @@ description: "Learn about the filterable properties for the Filter parameter in 
 
 # Filterable properties for the Filter parameter
 
-You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016, Exchange Server 2019 or Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
+You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016 or later, and Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
 
 - [Get-CASMailbox](../../../exchange-ps/exchange/client-access/Get-CASMailbox.md)
 
