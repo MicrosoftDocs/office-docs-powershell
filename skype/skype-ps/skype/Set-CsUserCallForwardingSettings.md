@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-CsUserCallForwardingSettings
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet modifies the specified user’s call forwarding settings. This cmdlet returns the specified user’s call forwarding settings as an object, and displays the same on the screen, in case of success. In case of failure, the appropriate error message is shown.
 
 ## SYNTAX
 
@@ -40,7 +40,13 @@ Set-CsUserCallForwardingSettings -EnableSimulRing <String> [-SettingsActiveWorkH
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. 
+The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
+•	CsAdministrator – Get and Set for all cmdlets
+•	CsVoiceAdministrator - Get and Set for all cmdlets
+•	CsServerAdministrator - Get and Set for all cmdlets
+•	CsHelpDesk - Get for all cmdlets
+Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets.
 
 ## EXAMPLES
 
@@ -60,6 +66,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -69,12 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateRingWaitTime
-{{ Fill DelegateRingWaitTime Description }}
+Specifies the time, in seconds, to wait before ringing delegates. 
+Acceptable inputs: 0, 5, 10
+
 
 ```yaml
 Type: Int32
 Parameter Sets: EnableForwarding
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -84,12 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Delegates
-{{ Fill Delegates Description }}
+Specifies list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters. 
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
 Parameter Sets: EnableForwarding, EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -99,12 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableForwarding
-{{ Fill DisableForwarding Description }}
+This is a switch parameter that disables forwarding. Cannot be used with the EnableSimulRing and EnableForwarding parameters.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DisableForwarding
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: Named
@@ -114,12 +126,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForwarding
-{{ Fill EnableForwarding Description }}
+Enables forwarding to the specified destination. Cannot be used with the EnableSimulRing and DisableForwarding parameters.
 
 ```yaml
 Type: String
 Parameter Sets: EnableForwarding
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: Named
@@ -129,12 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimulRing
-{{ Fill EnableSimulRing Description }}
+This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters.
+oSimulRingDestination can be a phone number, delegates, or team call group. 
+	Acceptable input formats: “<phone number>”, Team, Delegates
+
 
 ```yaml
 Type: String
 Parameter Sets: EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: Named
@@ -143,28 +160,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-{{ Fill Force Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SettingsActiveWorkHours
-{{ Fill SettingsActiveWorkHours Description }}
+Switch parameter that specifies that settings should apply during work hours defined in Outlook. When this is not specified, settings apply all the time by default.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -174,12 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -Team
-{{ Fill Team Description }}
+Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. 
+o	Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
+
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
 Parameter Sets: EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -195,6 +201,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -210,6 +217,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: DisableForwarding, EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -225,6 +233,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: DisableForwarding, EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -240,6 +249,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: DisableForwarding, EnableSimulRing
 Aliases:
+Applicable: Skype for Business Server 2019CU1
 
 Required: False
 Position: Named
@@ -255,27 +265,12 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: DisplayName, SipAddress, Identity
+Applicable: Skype for Business Server 2019CU1
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
