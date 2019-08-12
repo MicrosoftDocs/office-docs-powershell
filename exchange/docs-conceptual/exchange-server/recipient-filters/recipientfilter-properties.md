@@ -14,9 +14,9 @@ description: "Learn about the recipient properties that you can use with the Rec
 
 # Filterable properties for the -RecipientFilter parameter
 
-Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange 2016 cmdlets.
+Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange Server 2016 or later, and Exchange Online cmdlets.
   
-You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016. The _RecipientFilter_ parameter is available in the following cmdlets:
+You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016 or later, and Exchange Online. The _RecipientFilter_ parameter is available in the following cmdlets:
   
 - [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md) and [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
     
