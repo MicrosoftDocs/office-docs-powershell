@@ -1,5 +1,5 @@
 ---
-title: "Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands"
+title: "Recipient filters in Exchange PowerShell commands"
 ms.author: chrisda
 author: chrisda
 manager: serdars
@@ -12,7 +12,7 @@ ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
 description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell and Exchange Online PowerShell."
 ---
 
-# Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands
+# Recipient filters in Exchange PowerShell commands
 You can use several Exchange Management Shell and Exchange Online PowerShell commands to filter a set of recipients. You can create the following types of filters in an Exchange command:
 
 - Precanned filters
