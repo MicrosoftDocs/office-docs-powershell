@@ -45,7 +45,7 @@ This example creates a new Safe Links policy named Marketing Block URL with the 
 
 - The policy is enabled.
 
-- Users aren't allowed to click through to the original URL. This is the default value of the AllowClickThrough parameter, so you don't need to specify it.
+- Users aren't allowed to click through to the original URL. This is the default value of the DoNotAllowClickThrough parameter, so you don't need to specify it.
 
 - User clicks on URLs are tracked in URL trace.
 
