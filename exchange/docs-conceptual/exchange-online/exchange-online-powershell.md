@@ -29,4 +29,4 @@ Exchange Online PowerShell is the administrative interface that enables you to m
   
 - To find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet, see [Find the permissions required to run any Exchange cmdlet](../exchange-server/find-exchange-cmdlet-permissions.md).
 
-- To learn about recipient filters in the Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](../exchange-server/recipient-filters/recipient-filters.md).
+- To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](../exchange-server/recipient-filters/recipient-filters.md).
