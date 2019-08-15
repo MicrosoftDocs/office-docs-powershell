@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Microsoft Teams
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
