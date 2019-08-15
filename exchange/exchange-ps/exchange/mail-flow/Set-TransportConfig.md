@@ -556,8 +556,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
@@ -774,11 +772,13 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be received by recipients in the organization.
+A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
+
+The value unlimited indicates the maximum size is imposed elsewhere (for example, server, connector, or individual recipient limits).
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -874,11 +874,13 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be sent by senders in the organization.
+A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
+
+The value unlimited indicates the maximum size is imposed elsewhere (for example, server, connector, or individual sender limits).
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -1266,8 +1268,6 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 

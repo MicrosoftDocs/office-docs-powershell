@@ -132,11 +132,7 @@ Accept wildcard characters: False
 ### -AgendaMailEnabled
 This parameter is available only in the cloud-based service.
 
-The AgendaMailEnabled parameter specifies whether to enable or disable the daily agenda email message. Valid values are:
-
-- $true: Agenda mail is enabled.
-
-- $false: Agenda mail is disabled. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -153,11 +149,7 @@ Accept wildcard characters: False
 ### -AgendaPaneEnabled
 This parameter is available only in the cloud-based service.
 
-The AgendaPaneEnabled parameter specifies whether to enable the agenda pane in Outlook on the web. Valid values are:
-
-- $true: The Agenda pane enabled.
-
-- $false: The Agenda pane is disabled. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -282,13 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -DailyAgendaMailSchedule
-The DailyAgendaMailSchedule parameter specifies whether to receive a daily or nightly edition of the daily agenda message. Valid values are:
-
-- Default: The agenda email message is delivered at 03:00 (3:00 AM). This is the default value.
-
-- AM
-
-- PM
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Default | AM | PM
@@ -698,11 +684,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipAgendaMailOnFreeDays
-The SkipAgendaMailOnFreeDays parameter specifies whether to skip sending the daily agenda email message on days with no events or tasks. Valid values are:
-
-- $true: Don't send the daily agenda email message on free days. This is the default value.
-
-- $false: Send the daily agenda email message every day.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false

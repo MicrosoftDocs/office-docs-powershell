@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-Get-SPCustomLayoutsPage -Identity '_layouts/accessdenied.aspx' -WebApplication 'http://webAppUrl'
+Get-SPCustomLayoutsPage -Identity '_layouts/accessdenied.aspx' -WebApplication 'https://webAppUrl'
 ```
 
 This example returns the mapping of the AccessDenied layout page in the Web application.
@@ -44,7 +44,7 @@ This example returns the mapping of the AccessDenied layout page in the Web appl
 ### -WebApplication
 Specifies the SharePoint Web application that contains the custom layout page.
 
-The type must be a valid URL, in the form http://webAppUrl; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+The type must be a valid URL, in the form https://webAppUrl; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
 
 ```yaml
 Type: SPWebApplicationPipeBind

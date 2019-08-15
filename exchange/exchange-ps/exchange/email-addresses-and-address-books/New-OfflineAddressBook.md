@@ -305,9 +305,31 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available or functional only in Exchange Server 2010.
 
-The Schedule parameter specifies the interval scheduled for generating the new OAB.
+The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The Schedule parameter takes the following format and must include a range: Weekday.Hour:Minute[AM/PM]-Weekday.Hour:Minute[AM/PM].
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+
+You can use the following values for days:
+
+- Full name of the day.
+
+- Abbreviated name of the day.
+
+- Integer from 0 through 6, where 0 = Sunday.
+
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
+
+You can mix and match date/time formats.
+
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
+
+- "Sun.11:30 PM-Mon.1:30 AM"
+
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
+
+- "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule
@@ -324,7 +346,17 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies which server the new OAB is created on.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

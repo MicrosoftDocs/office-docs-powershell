@@ -449,27 +449,27 @@ This parameter is available or functional only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
-The format is StartDay.Hour:Minute [AM/PM]-EndDay.Hour:Minute [AM/PM]. You can use the following values for the start and end days:
+The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
 
-- Full name of the day
+You can use the following values for days:
 
-- Abbreviated name of the day
+- Full name of the day.
 
-- Integer from 0 through 6, where 0 = Sunday
+- Abbreviated name of the day.
 
-If you prefer to use a 24-hour clock, omit AM/PM. If you use AM/PM, you must include a space between the time and AM or PM.
+- Integer from 0 through 6, where 0 = Sunday.
 
-Formats can be mixed.
+You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
 
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
+You can mix and match date/time formats.
 
-The following are examples:
+The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45.
+
+Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
 
-- 6.22:00-6.22:15 (Maintenance will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Maintenance will run on Monday and Wednesday mornings from 4:30 until 5:30.)
+- "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 
 - "Sun.1:15 AM-Monday.23:00"
 
@@ -505,7 +505,17 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010
 
-The Server parameter specifies the server on which to perform the selected operations.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

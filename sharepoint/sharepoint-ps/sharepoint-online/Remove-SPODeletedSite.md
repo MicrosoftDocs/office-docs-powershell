@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPODeletedSite
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -23,7 +23,7 @@ Remove-SPODeletedSite [-Confirm] -Identity <SpoSitePipeBind> [-NoWait] [-WhatIf]
 ## DESCRIPTION
 The `Remove-SPODeletedSite` cmdlet permanently removes a SharePoint Online deleted site collection from the Recycle Bin.
 
-You have to be a SharePoint Online global administrator and site collection administrator permissions to run the cmdlet.
+You have to be a SharePoint Online global administrator and have site collection administrator permissions to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
 

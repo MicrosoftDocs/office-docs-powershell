@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineVoicemailUserSettings
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomtau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -21,9 +22,6 @@ Get-CsOnlineVoicemailUserSettings -Identity <String> [-Tenant <Guid>] [<CommonPa
 
 ## DESCRIPTION
 The Get-CsOnlineVoicemailUserSettings cmdlet returns information about online voicemail user settings of a specific user in your organization.
-
-**NOTE** 
-- **This cmdlet is currently available to PREVIEW customers only.** 
 
 ## EXAMPLES
 

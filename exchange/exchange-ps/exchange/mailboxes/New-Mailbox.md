@@ -1071,7 +1071,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the mailbox (the user account that's associated with the mailbox). This parameter isn't required if you're creating a linked mailbox, resource mailbox, or shared mailbox, because the associated user accounts are disabled for these types of mailboxes.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString
@@ -1599,7 +1599,7 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter. This parameter is optional, even if you're enabling a linked mailbox.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -1628,7 +1628,7 @@ The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. Yo
 
 - GUID
 
-A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center.
+A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
 
 You can see the available mailbox plans by using the Get-MailboxPlan cmdlet.
 
@@ -1958,7 +1958,7 @@ To use this parameter, you need to be a member of one of the following role grou
 
 - On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
 
 ```yaml
 Type: SecureString

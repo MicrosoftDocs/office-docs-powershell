@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE--------
 ```
-C:\PS>$site= Get-SPSite http://test
+C:\PS>$site= Get-SPSite https://test
 
 Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```

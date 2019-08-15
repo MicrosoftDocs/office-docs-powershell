@@ -55,7 +55,7 @@ This example returns siteupgradeinfo for every SPContentDatabase returned from G
 
 ### -----------EXAMPLE 2---------- 
 ```
-C:\PS>$site=Get-SPSite -Identity http://localhost
+C:\PS>$site=Get-SPSite -Identity https://localhost
 
 Get-SPSiteUpgradeSessionInfo -Site $site
 ```

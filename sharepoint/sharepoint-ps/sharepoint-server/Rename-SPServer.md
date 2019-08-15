@@ -43,7 +43,7 @@ This example changes the name of the SharePoint server wfb1 to WFE1.
 ### -Identity
 Specifies the original name of the server.
 
-The type must be a URL, in the form http://server_name, or a GUID, in the form 1234-4567-987gb.
+The type must be a URL, in the form https://server_name, or a GUID, in the form 1234-4567-987gb.
 
 ```yaml
 Type: SPServerPipeBind

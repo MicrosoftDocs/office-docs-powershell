@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE-------------------- 
 ```
-Get- SPServiceApplicationEndpoint -ServiceApplication "ServiceSubApp1"
+Get-SPServiceApplicationEndpoint -ServiceApplication "ServiceSubApp1"
 ```
 
 This example returns the SPServiceEndpoint object based on the specified service application.
@@ -54,7 +54,7 @@ This example returns the SPServiceEndpoint object based on the specified service
 ### -Identity
 Specifies the service endpoint to get.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URI of an endpoint address, in the form http://sitename:8003/servicemodelsamples/service; or an instance of a valid SPServiceEndpoint object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URI of an endpoint address, in the form https://sitename:8003/servicemodelsamples/service; or an instance of a valid SPServiceEndpoint object.
 
 ```yaml
 Type: SPServiceEndpointPipeBind

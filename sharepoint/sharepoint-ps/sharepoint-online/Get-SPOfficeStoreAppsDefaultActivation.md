@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -43,10 +43,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
+Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
-This examples returns the setting for the web application http://sphvm-8044.
+This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```

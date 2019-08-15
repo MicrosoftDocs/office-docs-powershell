@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Request-SPOPersonalSite
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -71,6 +71,8 @@ Accept wildcard characters: False
 
 ### -UserEmails
 Specifies one or more user logins to be enqueued for the creation of a Personal Site. The Personal site is created by a Timer Job later. You can specify between 1 and 200 users.
+> [!NOTE] 
+> If you are Pre-Provisioning OneDrive for Many Users, it might take up to 24 hours for the OneDrive locations to be created. If a user's OneDrive isn't ready after 24 hours, please contact Support.
 
 
 ```yaml

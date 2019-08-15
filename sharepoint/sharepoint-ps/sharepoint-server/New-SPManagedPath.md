@@ -46,10 +46,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-New-SPManagedPath "Teams" -WebApplication "http://somesite"
+New-SPManagedPath "Teams" -WebApplication "https://somesite"
 ```
 
-This example creates a Teams managed path for a given Web application (http://somesite).
+This example creates a Teams managed path for a given Web application (https://somesite).
 
 
 ## PARAMETERS
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the Web application group to add this path.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form  1234-5678-0987645a.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form  1234-5678-0987645a.
 
 ```yaml
 Type: SPWebApplicationPipeBind

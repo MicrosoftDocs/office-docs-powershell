@@ -52,7 +52,7 @@ This example removes an existing mapping between the managed property UserName a
 ### -Identity
 Specifies the metadata mapping to delete.
 
-The type must be a valid URL, in the form http://server_name, or an instance of a valid Mapping object.
+The type must be a valid URL, in the form https://server_name, or an instance of a valid Mapping object.
 
 ```yaml
 Type: MappingPipeBind
