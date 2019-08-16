@@ -138,6 +138,16 @@ Change the IncludedRecipients query filter to MailboxUsers.
 
 Add the value Internal to the ConditionalCustomAttribute1 attribute.
 
+### -------------------------- Example 2 --------------------------
+```
+$extAtrValue="Contoso"
+Set-DynamicDistributionGroup -Identity Developers -RecipientFilter "ExtensionCustomAttribute1 -eq '$extAtrValue'"
+```
+
+This example applies the following changes to the existing dynamic distribution group named Developers:
+
+Sets the RecipientFilter custom OPath filter using a variable based value of a specific recipient property.
+
 ## PARAMETERS
 
 ### -Identity
@@ -1683,6 +1693,8 @@ Accept wildcard characters: False
 The RecipientFilter parameter specifies a custom OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
 
 - Use braces { } around the whole OPath syntax string.
+
+- Use double quotation marks " " around the whole OPath sintax if using variables, see example 2 in this article. 
 
 - Include a hyphen before all operators.
 

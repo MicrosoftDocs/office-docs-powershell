@@ -1,3 +1,7 @@
+---
+title: SharePoint PowerShell Overview
+---
+
 # Overview
 
 Microsoft PowerShell is a command-line shell and scripting language that provides an administrator full access to applicable application programming interfaces (APIs). Administrators can interact directly with SharePoint Server to manipulate web applications, site collections, sites, lists and much more. In addition, an administrator can script cmdlets (pronounced "command-lets").
@@ -19,7 +23,7 @@ Verify that you have the following administrative permissions:
 * You must be assigned SharePoint administrator role.
   For more information, see [Default administrative roles and user groups](https://support.office.com/en-us/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US) and [About the SharePoint admin role in Microsoft 365](https://docs.microsoft.com/sharepoint/sharepoint-admin-role).
 
-**IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/en-us/library/fp161362(v=office.16).aspx).
+**IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/library/fp161362(v=office.16).aspx).
 
 ## Learning PowerShell
 
