@@ -96,8 +96,7 @@ This example updates the signing certificate of the SharePoint security token se
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
-
+$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
@@ -247,7 +246,7 @@ Accept wildcard characters: False
 
 ### -MaxLogonTokenCacheItems
 Specifies the maximum number of entries for the in-memory logon token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
@@ -266,7 +265,7 @@ Accept wildcard characters: False
 
 ### -MaxServiceTokenCacheItems
 Specifies the maximum number of entries for the in-memory service token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
