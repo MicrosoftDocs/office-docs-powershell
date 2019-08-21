@@ -141,11 +141,12 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Permanent
+Permanent, takes everything back from Back End Servers and recreates the whole Routing Group.
 
-Transient
+Transient, resets the Windows Fabric service and fix any issues. Then syncs up any missing data from the RTCLocal Database.
 
-Recreate
+Recreate, deletes existing data from Windows Fabric service about the Routing Group and reloads them from RTCLocal Database.
+
 ```yaml
 Type: RgResetType
 Parameter Sets: (All)

@@ -2,7 +2,7 @@
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 applicable: SharePoint Online
-title: Add-SPOOrgAssetsLibrary
+title: Get-SPOOrgAssetsLibrary
 author: Maralesfahanpoor
 ms.author: maesfaha
 ms.reviewer: 
