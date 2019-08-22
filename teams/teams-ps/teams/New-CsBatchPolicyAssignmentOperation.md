@@ -13,8 +13,6 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is used to assign a policy to a batch of users.  A batch may contain up to 20,000 users.
 
-Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected. 
-
 ## SYNTAX
 
 ```
