@@ -276,7 +276,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are
+
+NoOverride, use global OAuth configuration
+
+Allowed, Enables OAuth for the tenant
+
+Disallowed, Disables OAuth for the tenant
+
+For more information, see [Hybrid Modern Authentication overview and prerequisites for using it with on-premises Skype for Business and Exchange servers](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 ```yaml
 Type: ClientAdalAuthOverride
