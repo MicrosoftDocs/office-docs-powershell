@@ -37,10 +37,12 @@ If the target is the root site at https://tenant-name.sharepoint.com, then the f
 1. Any Featured links defined in SharePoint Start Page at https://tenant-name.sharepoint.com/_layouts/15/sharepoint.aspx will not be displayed after performing the swap. If required, the Featured links should be documented so they can be manually recreated after the swap. 
 2. Functionality such as external sharing and application interfaces are dependent on the policies and permissions defined at the root site. Review the source site to ensure that it has the required policies and permissions as per the existing root site. This includes external sharing settings as well as site permissions.
 
-The source or target sites cannot be "associated" with an Office 365 Group or a Hub Site.
-- If the site is "associated" to a Hub Site, then the association can be removed, the swap performed, and the Hub Site re-associated after performing the swap.
+The source and target sites cannot be connected to an Office 365 Group, be a Hub Site, or be "associated" with a Hub Site.
 
-    
+- If the site is a Hub Site, then site can be demoted from being a Hub Site using the *Unregister as hub site* action in the SharePoint Admin Center, the swap performed, and the Hub Site reinstated after performing the swap.
+- If the site is "associated" with a Hub Site, then the association can be removed, the swap performed, and the Hub Site re-associated after performing the swap.
+
+In other words, this cmdlet will generally be used to swap two Communication Sites.
 
 ## EXAMPLES
 
