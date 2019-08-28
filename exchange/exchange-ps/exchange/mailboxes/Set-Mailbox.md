@@ -1563,6 +1563,8 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 
 - $false: Mailbox audit logging is disabled. This is the default value.
 
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
