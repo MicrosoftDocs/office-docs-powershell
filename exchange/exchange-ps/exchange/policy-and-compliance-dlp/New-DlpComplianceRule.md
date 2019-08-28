@@ -22,35 +22,67 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
- [-AccessScope <InOrganization | NotInOrganization | None>]
+ [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
+ [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-BlockAccess <$true | $false>]
- [-BlockAccessScope <$true | $false>]
+ [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <$true | $false>]
+ [-DocumentIsPasswordProtected <$true | $false>
  [-DocumentIsUnsupported <$true | $false>]
- [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
+ [-DocumentNameMatchesPatterns <MultiValuedProperty>]
+ [-DocumentNameMatchesWords <MultiValuedProperty>]
+ [-EncryptRMSTemplate <RmsTemplateIdParameter>]
+ [-ExceptIfAccessScope <AccessScope>]
+ [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentIsPasswordProtected <$true | $false>]
  [-ExceptIfDocumentIsUnsupported <$true | $false>]
+ [-ExceptIfDocumentNameMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
+ [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfSenderIPRanges <MultiValuedProperty>]
+ [-ExceptIfSentTo <MultiValuedProperty>]
+ [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
+ [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
  [-ExpiryDate <DateTime>]
  [-From <SmtpAddress[]>]
+ [-FromAddressContainsWords <MultiValuedProperty>]
+ [-FromAddressMatchesPatterns <MultiValuedProperty>]
  [-FromMemberOf <SmtpAddress[]>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
+ [-ImmutableId <Guid>]
  [-IncidentReportContent <ReportContentOption[]>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomText <String>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
+ [-Priority <Int32>]
  [-ProcessingLimitExceeded <$true | $false>]
- [-ReportSeverityLevel <Low | Medium | High | None>]
- [-RuleErrorAction <Ignore | RetryThenBlock>]
+ [-RecipientDomainIs <MultiValuedProperty>]
+ [-RemoveHeader <MultiValuedProperty>]
+ [-ReportSeverityLevel <RuleSeverity>]
+ [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-SenderIPRanges <MultiValuedProperty>]
+ [-SentTo <MultiValuedProperty>]
+ [-SetHeader <PswsHashtable>]
+ [-StopPolicyProcessing <$true | $false>]
+ [-SubjectContainsWords <MultiValuedProperty>]
+ [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -118,7 +150,7 @@ The AccessScope parameter specifies a condition for the DLP rule that's based on
 - None: The condition isn't used.
 
 ```yaml
-Type: InOrganization | NotInOrganization | None
+Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -134,6 +166,36 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfRecipientAddressContainsWords
+{{ Fill AnyOfRecipientAddressContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfRecipientAddressMatchesPatterns
+{{ Fill AnyOfRecipientAddressMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -169,9 +231,9 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - All: Block access to everyone except the owner and the last modifier.
 
 - PerUser: Block access to external users.
- 
+
 ```yaml
-Type: $true | $false
+Type: BlockAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -235,6 +297,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentExtensionMatchesWords
+{{ Fill ContentExtensionMatchesWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
@@ -271,6 +348,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentIsPasswordProtected
+{{ Fill DocumentIsPasswordProtected Description }}
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentIsUnsupported
 This parameter is reserved for internal Microsoft use.
 
@@ -286,11 +378,86 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentNameMatchesPatterns
+{{ Fill DocumentNameMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentNameMatchesWords
+{{ Fill DocumentNameMatchesWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptRMSTemplate
+{{ Fill EncryptRMSTemplate Description }}
+
+```yaml
+Type: RmsTemplateIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfAccessScope
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: InOrganization | NotInOrganization | None
+Type: AccessScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAnyOfRecipientAddressContainsWords
+{{ Fill ExceptIfAnyOfRecipientAddressContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAnyOfRecipientAddressMatchesPatterns
+{{ Fill ExceptIfAnyOfRecipientAddressMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -316,11 +483,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentExtensionMatchesWords
+{{ Fill ExceptIfContentExtensionMatchesWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentPropertyContainsWords
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentIsPasswordProtected
+{{ Fill ExceptIfDocumentIsPasswordProtected Description }}
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -346,11 +543,146 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfDocumentNameMatchesPatterns
+{{ Fill ExceptIfDocumentNameMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentNameMatchesWords
+{{ Fill ExceptIfDocumentNameMatchesWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFromAddressContainsWords
+{{ Fill ExceptIfFromAddressContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFromAddressMatchesPatterns
+{{ Fill ExceptIfFromAddressMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfProcessingLimitExceeded
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRecipientDomainIs
+{{ Fill ExceptIfRecipientDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderIPRanges
+{{ Fill ExceptIfSenderIPRanges Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSentTo
+{{ Fill ExceptIfSentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectContainsWords
+{{ Fill ExceptIfSubjectContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectMatchesPatterns
+{{ Fill ExceptIfSubjectMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -381,6 +713,36 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FromAddressContainsWords
+{{ Fill FromAddressContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FromAddressMatchesPatterns
+{{ Fill FromAddressMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -440,6 +802,21 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImmutableId
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -602,11 +979,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Priority
+{{ Fill Priority Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProcessingLimitExceeded
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientDomainIs
+{{ Fill RecipientDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveHeader
+{{ Fill RemoveHeader Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -629,7 +1051,7 @@ The ReportSeverityLevel parameter specifies the severity level of the incident r
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -650,7 +1072,97 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 - Blank (the value $null): This is the default value.
 
 ```yaml
-Type: Ignore | RetryThenBlock
+Type: PolicyRuleErrorAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderIPRanges
+{{ Fill SenderIPRanges Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+{{ Fill SentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SetHeader
+{{ Fill SetHeader Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopPolicyProcessing
+{{ Fill StopPolicyProcessing Description }}
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectContainsWords
+{{ Fill SubjectContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectMatchesPatterns
+{{ Fill SubjectMatchesPatterns Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
