@@ -80,7 +80,8 @@ After the user is mail-enabled, directory synchronization synchronizes the mail-
 
 ### -------------------------- Example 2 --------------------------
 ```
-Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com" -Archive
+Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com"
+Enable-RemoteMailbox "Kim Akers" -Archive
 ```
 
 This example does the following:

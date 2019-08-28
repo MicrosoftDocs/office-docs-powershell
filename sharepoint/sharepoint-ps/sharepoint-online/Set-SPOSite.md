@@ -272,7 +272,7 @@ When the lock state of a site is ReadOnly, a message will appear on the site sta
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
-
+It isn't possible to set the lock state on the root site collection.
 
 ```yaml
 Type: String
