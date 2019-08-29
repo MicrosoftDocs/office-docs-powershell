@@ -32,7 +32,8 @@ New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-Cod
 New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
- [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
