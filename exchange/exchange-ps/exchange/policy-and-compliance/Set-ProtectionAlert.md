@@ -18,6 +18,7 @@ Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Co
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
+
 > [!NOTE]
 > You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
 
@@ -43,17 +44,18 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
-Insert descriptive text for example 1.
+This example modifies the Severity of the detection to High
 
 ### -------------------------- Example 2 --------------------------
 ```
-Insert example commands for example 2.
+Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:$true -AggregationType SimpleAggregation -Threshold 10 -TimeWindow 120
 ```
 
-Insert descriptive text for example 2.
+This example modifies an alert so that even though it is configured for aggregated activity, a notification is triggered during a match for the activity, a threshold of 10 detections and a TimeWindow of two hours are also configured in the same command
+
 
 ## PARAMETERS
 
