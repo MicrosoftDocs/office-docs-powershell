@@ -119,7 +119,7 @@ The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online org
 
 - $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
 
-- $false: The Exchange Online organization can't connect directly to Azure Rights Management. Do not configure this value unless you're directed to do so by Microsoft Customer Service and Support.
+- $false: The Exchange Online organization can't connect directly to Azure Rights Management.
 
 ```yaml
 Type: $true | $false

@@ -2,9 +2,9 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online 
 title: Remove-CsTeamsEmergencyCallingPolicy
-author:danny-levin
-ms.author:dannyle
-manager:roykuntz
+author: danny-levin
+ms.author: dannyle
+manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
 ---
@@ -21,16 +21,16 @@ Remove-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-Identity] <XdsIde
 ```
 
 ## DESCRIPTION
-{{ This cmdlet removes an existing Teams Emergency Calling policy. }}
+ This cmdlet removes an existing Teams Emergency Calling policy. 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> {{ Remove-CsTeamsEmergencyCallingPolicy -Identity testECP }}
+PS C:>  Remove-CsTeamsEmergencyCallingPolicy -Identity testECP 
 ```
 
-{{ This example removes an existing Teams Emergency Calling policy with identity testECRP }}
+ This example removes an existing Teams Emergency Calling policy with identity testECRP 
 
 ## PARAMETERS
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.}}
+ The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ The Identity parameter is the unique identifier of the Teams Emergency Calling policy to remove. }}
+ The Identity parameter is the unique identifier of the Teams Emergency Calling policy to remove. 
 
 ```yaml
 Type: XdsIdentity
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Specifies the tenant id. }}
+ Specifies the tenant id. 
 
 ```yaml
 Type: System.Guid
