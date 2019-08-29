@@ -106,6 +106,7 @@ Accept wildcard characters: False
 
 ### -First
 When present, the cmdlet returns the first X number of users from the list of all the users enabled for dial-in conferencing.
+If this parameter is not specified, the default behavior is to return the first 100 number of users.
 
 ```yaml
 Type: Int32
