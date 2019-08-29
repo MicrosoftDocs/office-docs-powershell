@@ -22,8 +22,9 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Identity] <XdsGlobalRelativeIdentity> 
- [-BypassMode <String>] [-InMemory] [-Force]  [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] 
+ [-Identity] <XdsGlobalRelativeIdentity> [-BypassMode <String>] [-InMemory] [-Force]  [-WhatIf] [-Confirm] 
+ [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
