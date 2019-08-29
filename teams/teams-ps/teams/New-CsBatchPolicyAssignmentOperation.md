@@ -22,18 +22,20 @@ New-CsBatchPolicyAssignmentOperation -PolicyType <String> -PolicyName <String> -
 ## DESCRIPTION
 When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation id which can be used to track the progress and status of the assignments.
 
+Users can be specified by their object id (guid) or by their UPN/SIP/email (user@contoso.com).
+
 ## EXAMPLES
 
 ### Example 1
-In this example, the batch of users is specified as an array of user object ids.
+In this example, the batch of users is specified as an array of user email addresses.
 
 ```
-$users_ids = @("5d2c995d-282d-45ba-940b-a2d4052019a0","41e36f51-5075-453e-89e3-4896b02cfefb","00a0f297-45bb-420a-bd6c-66070e6e9e35")
+$users_ids = @("psmith@contoso.com","tsanchez@contoso.com","bharvest@contoso.com")
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Example 1 batch"
 ```
 
 ### Example 2
-In this example, the batch of users is read from a text file containing user object ids.
+In this example, the batch of users is read from a text file containing user object ids (guids).
 
 ```
 $user_ids = Get-Content .\users_ids.txt
@@ -41,18 +43,18 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 ```
 
 ### Example 3
-In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users
+In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing their user principal names.
 
 ```
 Connect-AzureAD
 $users = Get-AzureADUser
-New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.ObjectId -OperationName "Example 1 batch"
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.UserPrincipalName -OperationName "Example 1 batch"
 ```
 
 ## PARAMETERS
 
 ### -Identity
-An array of users, specified either as object ids or as UPN/SIP addresses.  There is a maximum of 20,000 users per batch.
+An array of users, specified either as object ids (guid) or as UPN/SIP/email.  There is a maximum of 20,000 users per batch.
 
 ```yaml
 Type: String
