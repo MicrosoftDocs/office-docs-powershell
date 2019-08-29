@@ -20,19 +20,18 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 ### Identity (Default)
 ```
 Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
-[-ForwardCallHistory <Boolean>]
- [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>]  [-BypassMode <String>]
- [-Force] [-WhatIf]  [-Confirm] [<CommonParameters>]
+[-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
+[-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
+[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>] 
+[-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
- [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
+[-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] 
- [-BypassMode <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
