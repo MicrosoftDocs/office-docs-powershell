@@ -52,14 +52,14 @@ Get-CsBatchPolicyAssignmentOperation -OperationId 001141c3-1daa-4da1-88e9-66cc01
 
 Id                                   Result                         State
 --                                   ------                         -----
-aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64 Success                        Completed
-fc4ccb5f-8046-4812-803f-6c344a5d1560 Success                        Completed
-224cd5ea-eb68-4fbf-8dc4-f5188add0385 Success                        Completed
-e9c81b8f-34ec-4894-98a3-3e62d381d487 Success                        Completed
-3b90faad-9056-49ff-8357-0b53b1d45d39 Error: User not found.         Completed
-f0d9c148-27c1-46f5-9685-544d20170ea1 Success                        Completed
-cc05e18d-5fc0-4096-8461-ded64d7356e0 Success                        Completed
-bcff5b7e-8d3c-4721-b34a-63552a6a53f9 Success                        Completed
+user01@fabrikam.com                  Success                        Completed
+user02@fabrikam.com                  Success                        Completed
+user03@fabrikam.com                  Success                        Completed
+user04@fabrikam.com                  Success                        Completed
+user05@fabkam.com                    Error: User not found.         Completed
+user06@fabrikam.com                  Success                        Completed
+user07@fabrikam.com                  Success                        Completed
+user08@fabrikam.com                  Success                        Completed
 ```
 
 ## PARAMETERS
@@ -117,7 +117,7 @@ The overall status of the operations: NotStarted, InProgress, Complete
 Contains the status for each user in the batch.
 
 #### Id
-The id of the user.
+The id of the user as specified when the batch was submitted.  Either the user object id (guid) or UPN/SIP/email.
 
 #### result
 The result of the assignment operation: Success or an error.
