@@ -129,4 +129,4 @@ The status for the user: NotStarted, InProgress, Completed
 
 ## RELATED LINKS
 
-[Get-CsBatchPolicyAssignmentOperation]()
+[New-CsBatchPolicyAssignmentOperation]()
