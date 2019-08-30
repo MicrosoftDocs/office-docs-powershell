@@ -20,9 +20,9 @@ New-CsBatchPolicyAssignmentOperation -PolicyType <String> -PolicyName <String> -
 ```
 
 ## DESCRIPTION
-When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation id which can be used to track the progress and status of the assignments.
+When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
 
-Users can be specified by their object id (guid) or by their UPN/SIP/email (user@contoso.com).
+Users can be specified by their object ID (guid) or by their UPN/SIP/email (user@contoso.com).
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 ```
 
 ### Example 2
-In this example, the batch of users is read from a text file containing user object ids (guids).
+In this example, the batch of users is read from a text file containing user object IDs (guids).
 
 ```
 $user_ids = Get-Content .\users_ids.txt
@@ -54,7 +54,7 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 ## PARAMETERS
 
 ### -Identity
-An array of users, specified either as object ids (guid) or as UPN/SIP/email.  There is a maximum of 20,000 users per batch.
+An array of users, specified either as object IDs (guid) or as UPN/SIP/email.  There is a maximum of 20,000 users per batch.
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### OperationId
-The id of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
+The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
 
 ## NOTES
 
