@@ -22,7 +22,7 @@ Get-CsBatchPolicyAssignmentOperation [-OperationId <UniqueIdentifier>]
 ```
 
 ## DESCRIPTION
-This cmdlets returns the status of all batch policy assignment operations for the last 30 days.  If an operation id is specified, the detailed status for that operation is returned including the status for each user in the batch.
+This cmdlets returns the status of all batch policy assignment operations for the last 30 days.  If an operation ID is specified, the detailed status for that operation is returned including the status for each user in the batch.
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ user08@fabrikam.com                  Success                        Completed
 ## PARAMETERS
 
 ### -OperationId
-The id of a batch policy assignment operation.
+The ID of a batch policy assignment operation.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### OperationId
-The id of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
+The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
 
 ### CompletedCount
 The number of users in the batch for which the assignment has been completed (possibly with an error).
@@ -105,7 +105,7 @@ The number of users in the batch for which the assignment is in progress.
 The number of users in the batch for which the assignment has not yet been performed.
 
 ### OperationId
-The id of the operation.
+The ID of the operation.
 
 ### OperationName
 The name of the operation, if one was specific when the operation was created.
@@ -117,7 +117,7 @@ The overall status of the operations: NotStarted, InProgress, Complete
 Contains the status for each user in the batch.
 
 #### Id
-The id of the user as specified when the batch was submitted.  Either the user object id (guid) or UPN/SIP/email.
+The ID of the user as specified when the batch was submitted.  Either the user object ID (guid) or UPN/SIP/email.
 
 #### result
 The result of the assignment operation: Success or an error.
