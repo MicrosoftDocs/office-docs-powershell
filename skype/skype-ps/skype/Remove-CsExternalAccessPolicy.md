@@ -4,7 +4,7 @@ applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 title: Remove-CsExternalAccessPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 ---
