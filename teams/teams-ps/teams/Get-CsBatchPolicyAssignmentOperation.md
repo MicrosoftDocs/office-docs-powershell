@@ -119,14 +119,11 @@ The overall status of the operations: NotStarted, InProgress, Complete
 ### UserState
 Contains the status for each user in the batch.
 
-#### Id
-The ID of the user as specified when the batch was submitted.  Either the user object ID (guid) or UPN/SIP/email.
+**Id:** The ID of the user as specified when the batch was submitted.  Either the user object ID (guid) or UPN/SIP/email.
 
-#### result
-The result of the assignment operation: Success or an error.
+**result:** The result of the assignment operation for the user: Success or an error.
 
-#### state
-The status for the user: NotStarted, InProgress, Completed
+**state:** The status for the user: NotStarted, InProgress, Completed
 
 ## NOTES
 
