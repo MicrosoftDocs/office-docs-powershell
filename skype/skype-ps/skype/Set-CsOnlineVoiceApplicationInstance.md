@@ -8,7 +8,7 @@ ms.reviewer:
 schema: 2.0.0
 manager: bulenteg
 ms.author: tomkau
-author: tomtau
+author: tomkau
 ---
 
 # Set-CsOnlineVoiceApplicationInstance
