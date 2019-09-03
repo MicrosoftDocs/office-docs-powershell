@@ -26,15 +26,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>] [-AlertBy <MultiValuedProperty>]
+ [-AggregationType <None | SimpleAggregation | AnomalousAggregation>]
+ [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>]
  [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Comment <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-Filter <String>]
- [-Name <String>] [-NotificationCulture <CultureInfo>] [-NotifyUser <MultiValuedProperty>]
- [-NotifyUserOnFilterMatch <$true | $false>] [-NotifyUserSuppressionExpiryDate <DateTime>]
- [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
- [<CommonParameters>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <$true | $false>]
+ [-Filter <String>]
+ [-Name <String>]
+ [-NotificationCulture <CultureInfo>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserOnFilterMatch <$true | $false>]
+ [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-NotifyUserThrottleThreshold <Int32>]
+ [-NotifyUserThrottleWindow <Int32>]
+ [-Operation <MultiValuedProperty>]
+ [-Severity <Low | Medium | High | None>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,14 +59,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
-This example modifies the Severity of the detection to High
+This example sets the Severity of the detection to High.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:$true -AggregationType SimpleAggregation -Threshold 10 -TimeWindow 120
 ```
 
-This example modifies an alert so that even though it is configured for aggregated activity, a notification is triggered during a match for the activity, a threshold of 10 detections and a TimeWindow of two hours are also configured in the same command
+This example modifies an alert so that even though it's configured for aggregated activity, a notification is triggered during a match for the activity. A threshold of 10 detections and a TimeWindow of two hours are also configured in the same command.
 
 
 ## PARAMETERS
