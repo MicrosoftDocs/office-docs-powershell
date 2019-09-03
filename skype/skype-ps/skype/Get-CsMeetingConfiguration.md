@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsMeetingConfiguration
 schema: 2.0.0
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 manager: bulenteg

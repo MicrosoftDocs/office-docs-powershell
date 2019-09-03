@@ -39,6 +39,8 @@ Import-CsUserData -FileName <String> -PoolFqdn <Fqdn> [-ConfDirectoryFilter <Str
 The Import-CsUserData cmdlet is used to import previously-saved user data and/or conference directory data to Skype for Business Server.
 Note that this data must have been exported by using the Export-CsUserData cmdlet.
 
+To make sure changes happen after this cmdlet, FE services need to be stopped in all FE servers in the pool firstly then be restarted at the same time after executing Import-CsUserdata cmdlet. 
+
 Skype for Business Server Control Panel: The functions carried out by the Import-CsUserData cmdlet are not available in the Skype for Business Server Control Panel.
 
 
