@@ -4,7 +4,7 @@ applicable: Skype for Business Online, Skype for Business Server 2019, Skype for
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 ---
@@ -93,7 +93,7 @@ Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
-This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+This will create a CSV  file on the Desktop of the current user with the name "TeamsUpgrade.csv"
 
 ### Example 6 Get a report on existing TeamsUpgradePolicy users (HTML Report)
 ```

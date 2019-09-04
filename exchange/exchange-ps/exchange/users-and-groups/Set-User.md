@@ -25,6 +25,7 @@ Set-User [-Identity] <UserIdParameter>
  [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
  [-Arbitration]
  [-AssistantName <String>]
+ [-AuthenticationPolicy <String>] 
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
  [-Company <String>]
@@ -173,6 +174,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationPolicy
+The AuthenticationPolicy parameter specifies the authentication policy to apply to the user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1054,7 +1070,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn’t work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter
