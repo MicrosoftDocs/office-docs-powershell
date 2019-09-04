@@ -25,15 +25,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>] [-AlertBy <MultiValuedProperty>]
+ [-AggregationType <None | SimpleAggregation | AnomalousAggregation>]
+ [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>]
  [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Comment <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-Filter <String>]
- [-Name <String>] [-NotificationCulture <CultureInfo>] [-NotifyUser <MultiValuedProperty>]
- [-NotifyUserOnFilterMatch <$true | $false>] [-NotifyUserSuppressionExpiryDate <DateTime>]
- [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
- [<CommonParameters>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <$true | $false>]
+ [-Filter <String>]
+ [-Name <String>]
+ [-NotificationCulture <CultureInfo>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserOnFilterMatch <$true | $false>]
+ [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>]
+ [-Operation <MultiValuedProperty>]
+ [-Severity <Low | Medium | High | None>] [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
