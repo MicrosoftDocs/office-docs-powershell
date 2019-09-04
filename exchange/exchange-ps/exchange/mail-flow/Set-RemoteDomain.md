@@ -108,7 +108,7 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
-- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain. 
+- InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 
 - None: No automatic replies are sent to recipients in the remote domain.
 
@@ -339,7 +339,7 @@ The IsInternal parameter specifies whether the recipients in the remote domain a
 
 - $true: All transport components (for example, transport rules or antispam agents) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 
-- $false: Recipients in the remote domain are treated as external recipients. This is the default value. 
+- $false: Recipients in the remote domain are treated as external recipients. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### -TNEFEnabled
-The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values are-:
+The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values are:
 
 - $true: TNEF encoding is used on all messages sent to the remote domain.
 

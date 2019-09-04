@@ -166,13 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user account to test. You can use any value that uniquely identifies the user.
-
-For example:
+The User parameter specifies the user account to test. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

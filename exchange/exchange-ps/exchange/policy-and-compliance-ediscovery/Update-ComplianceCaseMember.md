@@ -66,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the users that will replace the current eDiscovery case members. You can use any value that uniquely identifies the user.
-
-For example:
+The Members parameter specifies the users that will replace the current eDiscovery case members. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

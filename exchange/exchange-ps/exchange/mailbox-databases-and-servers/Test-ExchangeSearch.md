@@ -125,7 +125,27 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to test Exchange Search against.
+The Identity parameter specifies the mailbox that you want to test Exchange Search against. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the MailboxDatabase or Server parameters.
 
@@ -159,7 +179,13 @@ Accept wildcard characters: False
 ### -MailboxDatabase
 This parameter is available or functional only in Exchange Server 2010 and 2013.
 
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against.
+The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity or Server parameters.
 
@@ -191,7 +217,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
+The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 You can't use this parameter with the MailboxDatabase or Identity parameters.
 

@@ -539,8 +539,6 @@ The Container parameter specifies where to create the address list. Valid input 
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID

@@ -32,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Get-SPWeb http://sitename/subweb | Set-SPWeb -Title "My Site Title"
+Get-SPWeb https://sitename/subweb | Set-SPWeb -Description "My Site Description"
 ```
 
-This example sets the title of an existing subsite.
+This example sets the description of an existing subsite.
 
 
 ## PARAMETERS
@@ -43,7 +43,7 @@ This example sets the title of an existing subsite.
 ### -Identity
 The URL of the Web or SPWeb object that represents the Web.
 
-The type must be a  valid URL, in the form http://server_name, or an SPWeb object.
+The type must be a  valid URL, in the form https://server_name, or an SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind

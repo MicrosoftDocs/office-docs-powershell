@@ -86,6 +86,14 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
  [-WhatIf] [<CommonParameters>]
 ```
 
+### Gmail
+```
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+ [-Confirm]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
 ### Compliance
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance] [-RemoteServer <Fqdn>]
@@ -112,13 +120,6 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
 ### MrsProxyPublicFolder
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Other
-```
-Test-MigrationServerAvailability [-EmailAddress <SmtpAddress>] [-TestMailbox <MailboxIdParameter>]
- [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -211,9 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-The Credentials parameter specifies the logon credentials for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
+The Credentials parameter specifies the username and password for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -256,7 +257,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExchangeOutlookAnywhere, Other
+Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -347,6 +348,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Gmail
+This parameter is available only in the cloud-based service.
+
+The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a G Suite tenant to Exchange Online mailboxes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Gmail
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Port
 This parameter is available only in the cloud-based service.
 
@@ -373,7 +391,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: PSTImport
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -467,6 +485,25 @@ The RPCProxyServer parameter specifies the FQDN of the RPC proxy server for the 
 ```yaml
 Type: Fqdn
 Parameter Sets: ExchangeOutlookAnywhere, PublicFolder, LegacyPublicFolderToUnifiedGroup
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceAccountKeyFileData
+This parameter is available only in the cloud-based service.
+
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -607,7 +644,7 @@ The TestMailbox parameter specifies a mailbox on the target server. Use the prim
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup, Other
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
 Required: False

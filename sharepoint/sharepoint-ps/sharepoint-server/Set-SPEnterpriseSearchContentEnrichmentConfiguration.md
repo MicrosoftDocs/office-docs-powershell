@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1 ------------------
 ```
 $config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-$config.Endpoint = "http://server/service"
+$config.Endpoint = "https://server/service"
 $config.InputProperties = "Title", "Url"
 $config.OutputProperties = "Title", "Url"
 $ssa = Get-SPEnterpriseSearchServiceApplication
@@ -52,7 +52,7 @@ The SearchServiceApplication object is retrieved and used for storing the newly 
 ### ------------------EXAMPLE 2 ------------------
 ```
 C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-$config.Endpoint = "http://server/service"
+$config.Endpoint = "https://server/service"
 $config.InputProperties = "Title"
 $config.OutputProperties = "Title"
 $config.Trigger = 'Contains(Title, "Example")'

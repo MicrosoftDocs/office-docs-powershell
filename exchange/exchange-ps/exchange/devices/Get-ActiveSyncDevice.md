@@ -66,13 +66,9 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that has the associated ActiveSync device that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that has the associated ActiveSync device that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

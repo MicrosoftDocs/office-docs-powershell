@@ -15,7 +15,6 @@ New-PnPTenantSite -Title <String>
                   -Url <String>
                   -Owner <String>
                   -TimeZone <Int>
-                  [-Description <String>]
                   [-Lcid <UInt32>]
                   [-Template <String>]
                   [-ResourceQuota <Double>]
@@ -49,18 +48,6 @@ New-PnPTenantSite -Title Contoso -Url /sites/contososite -Owner user@example.org
 This will add a site collection with the title 'Contoso', the url 'https://tenant.sharepoint.com/sites/contososite' of which the base part will be picked up from your current connection, the timezone 'UTC+01:00', the owner 'user@example.org' and the template used will be STS#0, a TeamSite
 
 ## PARAMETERS
-
-### -Description
-Specifies the description of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Force
 Do not ask for confirmation.

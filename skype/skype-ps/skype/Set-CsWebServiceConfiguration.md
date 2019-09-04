@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsWebServiceConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -117,18 +118,18 @@ This is done by including the ShowDownloadCommunicatorAttendeeLink parameter and
 ### -------------------------- Example 5 --------------------------
 
 ```powershell
-$x = New-CsWebOrigin -Url "http://fabrikam.com"
+$x = New-CsWebOrigin -Url "https://fabrikam.com"
 
 Set-CsWebServiceConfiguration -Identity "site:Redmond" - CrossDomainAuthorizationList @{Add=$x}
 ```
 
-The commands shown in Example 5 add the domain http://fabrikam.com to an existing collection of Web service configuration settings.
+The commands shown in Example 5 add the domain https://fabrikam.com to an existing collection of Web service configuration settings.
 To carry out this task, the first command in the example uses the `New-CsWebOrigin` cmdlet to create a domain object for fabrikam.com.
 The resulting domain object is stored in a variable named $x.
 
-The second command in the example uses the `Set-CsWebServiceConfiguration` cmdlet to add http://fabrikam.com to the Web service configuration settings applied to the Redmond site.
+The second command in the example uses the `Set-CsWebServiceConfiguration` cmdlet to add https://fabrikam.com to the Web service configuration settings applied to the Redmond site.
 The syntax @{Add=$x} adds the domain to any domains already in the collection of domains authorized for cross-domain scripting.
-To replace the existing collection with just http://fabrikam.com use the syntax @{Replace=$x}.
+To replace the existing collection with just https://fabrikam.com use the syntax @{Replace=$x}.
 
 ### -------------------------- Example 6 --------------------------
 
@@ -894,7 +895,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

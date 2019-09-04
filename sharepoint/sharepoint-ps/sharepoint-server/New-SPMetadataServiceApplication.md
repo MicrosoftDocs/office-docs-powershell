@@ -57,7 +57,7 @@ This example creates a new managed metadata service application.
 
 ### -------------------EXAMPLE 2-------------
 ```
-New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
+New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "https://sitename" -SyndicationErrorReportEnabled
 ```
 
 This example creates a new managed metadata service application and specifies a content type hub to be used for syndication.

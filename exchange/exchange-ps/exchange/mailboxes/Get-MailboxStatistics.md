@@ -138,13 +138,13 @@ This example returns the detailed move history and a verbose detailed move repor
 ### -Database
 This parameter is available only in on-premises Exchange.
 
-The Database parameter specifies the name of the mailbox database. When you specify a value for the Database parameter, the Exchange Management Shell returns statistics for all the mailboxes on the database specified.
+The Database parameter returns statistics for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-You can use the following values:
+- Name
+
+- Distinguished name (DN)
 
 - GUID
-
-- Database
 
 This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
 
@@ -161,13 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -242,7 +238,20 @@ Accept wildcard characters: False
 ### -CopyOnServer
 This parameter is available only in on-premises Exchange.
 
-The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the server specified with the Server parameter.
+The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the specified server.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
+
 
 ```yaml
 Type: ServerIdParameter

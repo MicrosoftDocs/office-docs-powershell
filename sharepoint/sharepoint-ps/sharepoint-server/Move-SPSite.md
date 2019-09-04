@@ -44,10 +44,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1----------------------- 
 ```
-Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
+Move-SPSite https://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
-This example moves the site collection http://servername/sites/sitename to the content database ContentDb2.
+This example moves the site collection https://servername/sites/sitename to the content database ContentDb2.
 
 ### ---------------------EXAMPLE 2----------------------- 
 ```
@@ -77,7 +77,7 @@ This example moves an RBS-enabled site collection from one RBS-enabled content d
 
 ### -Identity
 Specifies the identity of the site collection to be moved.
-For example, http://servername/sites/sitename.
+For example, https://servername/sites/sitename.
 
 ```yaml
 Type: SPSitePipeBind

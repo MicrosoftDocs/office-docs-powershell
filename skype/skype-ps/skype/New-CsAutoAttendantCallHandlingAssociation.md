@@ -3,15 +3,16 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsAutoAttendantCallHandlingAssociation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # New-CsAutoAttendantCallHandlingAssociation
 
 ## SYNOPSIS
-Use the New-CsAutoAttendantCallHandlingAssociation cmdlet to create a new call handling association.
+Use the `New-CsAutoAttendantCallHandlingAssociation` cmdlet to create a new call handling association.
 
 ## SYNTAX
 
@@ -20,14 +21,14 @@ New-CsAutoAttendantCallHandlingAssociation -CallFlowId <String> -ScheduleId <Str
 ```
 
 ## DESCRIPTION
-The New-CsAutoAttendantCallHandlingAssociation cmdlet creates a new call handling association to be used with the Auto Attendant (AA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
+The `New-CsAutoAttendantCallHandlingAssociation` cmdlet creates a new call handling association to be used with the Auto Attendant (AA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
 $tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
-$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr)
+$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
 $scheduleId = $schedule.Id
 
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
@@ -38,7 +39,7 @@ $callFlowId = $callFlow.Id
 $callHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new after-hours schedule
 - a new after-hours call flow
@@ -47,7 +48,7 @@ This example creates the following
 ### -------------------------- Example 2 --------------------------
 ```powershell
 $tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
-$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr)
+$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
 $scheduleId = $schedule.Id
 
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
@@ -58,7 +59,7 @@ $callFlowId = $callFlow.Id
 $disabledCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId -Disable
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new after-hours schedule
 - a new after-hours call flow
@@ -79,7 +80,7 @@ $callFlowId = $callFlow.Id
 $callHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $scheduleId -CallFlowId $callFlowId
 ```
 
-This example creates the following
+This example creates the following:
 
 - a new holiday schedule
 - a new holiday call flow
@@ -94,7 +95,7 @@ You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](New-CsAu
 
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
@@ -162,9 +163,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
@@ -177,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

@@ -65,7 +65,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-DeviceConditionalAccessRule -Identity "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}" -AllowJailbroken $false
+Set-DeviceConditionalAccessRule -Identity "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}" -AllowJailbroken $false -TargetGroups 95386852-1c11-4302-8733-b9e1058333e3
 ```
 
 This example modifies the specified mobile device conditional access rule to block jailbroken devices.

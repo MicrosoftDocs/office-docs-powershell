@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Start-SPOSiteContentMove
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -44,7 +44,7 @@ This command starts the information and the status of a move request of a user b
 
 ### EXAMPLE 1
 ```powershell
-Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
+Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
 Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 

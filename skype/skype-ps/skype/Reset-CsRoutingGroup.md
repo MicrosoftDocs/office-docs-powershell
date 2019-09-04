@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsRoutingGroup
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -140,11 +141,11 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Invalid
+Permanent, takes everything back from Back End Servers and recreates the whole Routing Group.
 
-Permanent
+Transient, resets the Windows Fabric service and fix any issues. Then syncs up any missing data from the RTCLocal Database.
 
-Transient
+Recreate, deletes existing data from Windows Fabric service about the Routing Group and reloads them from RTCLocal Database.
 
 ```yaml
 Type: RgResetType
@@ -192,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -44,7 +44,7 @@ Returns all navigation nodes in the quicklaunch navigation
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPNavigationNode -TopNavigationBar
+Get-PnPNavigationNode -Location TopNavigationBar
 ```
 
 Returns all navigation nodes in the top navigation bar
