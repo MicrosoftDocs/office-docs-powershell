@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUserInfo
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -105,6 +106,7 @@ Accept wildcard characters: False
 
 ### -First
 When present, the cmdlet returns the first X number of users from the list of all the users enabled for dial-in conferencing.
+If this parameter is not specified, the default behavior is to return the first 100 number of users.
 
 ```yaml
 Type: Int32

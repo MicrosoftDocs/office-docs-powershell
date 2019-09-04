@@ -1,4 +1,8 @@
-#SharePoint Online Cmdlets
+---
+title: SharePoint Online Cmdlets
+---
+
+# SharePoint Online Cmdlets
 
 For a listing of the SharePoint Online cmdlets, see [SharePoint Online cmdlets](../../sharepoint-ps/sharepoint-online/sharepoint-online.md).
 

@@ -1,0 +1,9 @@
+  { 
+  "redirections": [ 
+    {
+       "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/new-dlpedmsschema.md",
+       "redirect_url": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/new-dlpedmschema.md",
+       "redirect_document_id": true
+    }
+  ] 
+  }

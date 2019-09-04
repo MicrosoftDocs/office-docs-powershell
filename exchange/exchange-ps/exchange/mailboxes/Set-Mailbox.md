@@ -1563,6 +1563,8 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 
 - $false: Mailbox audit logging is disabled. This is the default value.
 
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -3037,7 +3039,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3418,7 +3420,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Office 365, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
 
@@ -3472,7 +3474,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Office 365, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
 
@@ -3815,7 +3817,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
-- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Office 365 admin center, see Reset a user's password (https://go.microsoft.com/fwlink/p/?LinkId=614837).
+- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Microsoft 365 admin center, see Reset a user's password (https://go.microsoft.com/fwlink/p/?LinkId=614837).
 
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
@@ -3871,7 +3873,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3906,7 +3908,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 

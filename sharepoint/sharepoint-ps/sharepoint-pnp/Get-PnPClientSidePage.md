@@ -32,6 +32,13 @@ Get-PnPClientSidePage "MyPage"
 
 Gets the Modern Page (Client-Side) named 'MyPage.aspx' in the current SharePoint site
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Get-PnPClientSidePage "Templates/MyPageTemplate"
+```
+
+Gets the Modern Page (Client-Side) named 'MyPageTemplate.aspx' from the templates folder of the Page Library in the current SharePoint site
+
 ## PARAMETERS
 
 ### -Identity
