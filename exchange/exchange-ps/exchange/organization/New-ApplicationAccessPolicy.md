@@ -59,7 +59,7 @@ This example creates a new application access policy with the following settings
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of distribution group EvenUsers." 
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers." 
 ```
 
 This example creates a new application access policy with the following settings:
@@ -70,13 +70,13 @@ This example creates a new application access policy with the following settings
 
 - PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
 
-- Description: Restrict this app to members of distribution group EvenUsers.
+- Description: Restrict this app to members of security group EvenUsers.
 
 
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of distribution group OddUsers." 
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers." 
 ```
 
 This example creates a new application access policy with the following settings:
@@ -87,7 +87,7 @@ This example creates a new application access policy with the following settings
 
 - PolicyScopeGroupId: OddUsers@AppPolicyTest2.com
 
-- Description: Deny this app access to members of distribution group OddUsers.
+- Description: Deny this app access to members of security group OddUsers.
 
 ## PARAMETERS
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group or a distribution group or a dynamic distribution group to restrict/deny access to a large number of user mailboxes. 
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to a large number of user mailboxes. 
 For example:
 
 - Name
