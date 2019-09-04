@@ -278,23 +278,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Properties
-This parameter is available only in the cloud-based service.
-
-{{Fill Properties Description}}
-
-```yaml
-Type: String[]
-Parameter Sets: AsyncParameterSet
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
