@@ -18,6 +18,7 @@ Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Co
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
+
 > [!NOTE]
 > You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
 
@@ -25,15 +26,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>] [-AlertBy <MultiValuedProperty>]
+ [-AggregationType <None | SimpleAggregation | AnomalousAggregation>]
+ [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>]
  [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Comment <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-Filter <String>]
- [-Name <String>] [-NotificationCulture <CultureInfo>] [-NotifyUser <MultiValuedProperty>]
- [-NotifyUserOnFilterMatch <$true | $false>] [-NotifyUserSuppressionExpiryDate <DateTime>]
- [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
- [<CommonParameters>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <$true | $false>]
+ [-Filter <String>]
+ [-Name <String>]
+ [-NotificationCulture <CultureInfo>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserOnFilterMatch <$true | $false>]
+ [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-NotifyUserThrottleThreshold <Int32>]
+ [-NotifyUserThrottleWindow <Int32>]
+ [-Operation <MultiValuedProperty>]
+ [-Severity <Low | Medium | High | None>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,17 +56,18 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
-Insert descriptive text for example 1.
+This example sets the Severity of the detection to High.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Insert example commands for example 2.
+Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:$true -AggregationType SimpleAggregation -Threshold 10 -TimeWindow 120
 ```
 
-Insert descriptive text for example 2.
+This example modifies an alert so that even though it's configured for aggregated activity, a notification is triggered during a match for the activity. A threshold of 10 detections and a TimeWindow of two hours are also configured in the same command.
+
 
 ## PARAMETERS
 
