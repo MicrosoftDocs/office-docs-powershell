@@ -29,6 +29,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <$true | $false>]
  [-AsyncSendEnabled <$true | $false>]
  [-AuditDisabled <$true | $false>]
+ [-AutoEnableArchiveMailbox <$true | $false>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <$true | $false>]
  [-BookingsPaymentsEnabled <$true | $false>]
@@ -303,7 +304,7 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ### -------------------------- Example 6 -------------------------- 
 ```
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15" 
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
@@ -517,6 +518,23 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 - $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoEnableArchiveMailbox
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -833,7 +851,7 @@ This parameter is available only in the cloud-based service.
 
 The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabled or disabled for the organization. Valid values are:
 
-- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Office 365 admin center for you to approve or reject.
+- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Microsoft 365 admin center for you to approve or reject.
 
 - $false: Customer Lockbox are disabled.
 
@@ -2138,11 +2156,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSessionEnabled
-The RefreshSessionEnabled parameter specifies whether to enable or disable the use of refresh tokens when using OpenID Connect for authentication. Valid values are:
-
-- $true: Refresh tokens are enabled.
-
-- $false: Refresh tokens are disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2255,11 +2269,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnblockUnsafeSenderPromptEnabled
-The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or disable the prompt to unblock unsafe senders in Outlook on the web. Valid values are:
-
-- $true: The prompt to unblock unsafe senders is enabled. This is the default value.
-
-- $false: The prompt to unblock unsafe senders is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -2389,6 +2399,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.

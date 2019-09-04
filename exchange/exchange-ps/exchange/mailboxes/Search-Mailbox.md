@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
 
+**Note**: In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/new-compliancesearch) and related eDiscovery cmdlets.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -76,8 +78,6 @@ You can use the Search-Mailbox cmdlet to search messages in a specified mailbox 
 - Perform single item recovery to recover items from a user's Recoverable Items folder.
 
 - Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
-
-In Exchange Online, we recommend that you don't use the `Search-Mailbox -DeleteContent` command to delete messages in mailboxes that have auto-expanding archiving enabled. Unexpected data loss may occur.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -238,8 +238,6 @@ Accept wildcard characters: False
 
 ### -DeleteContent
 The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. When used with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
-
-As previously stated, we recommend that you don't use the DeleteContent switch to delete messages in Exchange Online mailboxes that have auto-expanding archiving enabled because unexpected data loss may occur.
 
 You need to be assigned the Mailbox Import Export management role to use this switch. By default, this role isn't assigned to any role group. Typically, you assign a role to a built-in or custom role group. Or you can assign a role to a user, or a universal security group.
 

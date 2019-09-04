@@ -6,7 +6,7 @@ schema: 2.0.0
 # Copy-PnPFile
 
 ## SYNOPSIS
-Copies a file or folder to a different location
+Copies a file or folder to a different location, currently there is a 200MB file size limit for the file to be copied.
 
 ## SYNTAX 
 

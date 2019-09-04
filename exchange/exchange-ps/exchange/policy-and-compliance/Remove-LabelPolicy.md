@@ -1,60 +1,60 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-DlpEdmSchema
+title: Remove-LabelPolicy
 schema: 2.0.0
-author: chrisda
-ms.author: chrisda
-ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# New-DlpEdmSchema
+# Remove-LabelPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-DlpEdmSchema cmdlet to create exact data match (EDM)-based classification schemas in the Security & Compliance Center. Such schemas can be used with data loss prevention (DLP) policies.
+Use the Remove-LabelPolicies cmdlet to remove sensitivity label policies from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-DlpEdmSchema [-FileData] <Byte[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-LabelPolicy [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For an explanation and example of the EDM schema, see Define the schema for your database of sensitive information
- (https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm#define-the-schema-for-your-database-of-sensitive-information).
-
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0; New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+Remove-LabelPolicy -Identity "Marketing Group"
 ```
 
-This example creates a new DLP EDM schema. The first command reads the schema in the XML file to a variable, and the second command uses that information to create the DLP EDM schema.
+This example removes the policy named Marketing Group.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the DLP EDM schema that you want to import.
+### -Identity
+The Identity parameter specifies the policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
-Type: Byte[]
+Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: 0
+Position: 1
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -69,21 +69,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -107,6 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Create custom sensitive information types with Exact Data Match based classification](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm)
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/New-DlpEdmSchema)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-labelpolicy)

@@ -3,18 +3,18 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsOnlineApplicationEndpoint
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Set-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The `Set-CsOnlineApplicationEndpoint` is used to update a Trusted Application Endpoint for a tenant.
 
 ## SYNTAX
-
 ```
 Set-CsOnlineApplicationEndpoint [-CallbackUri <String>] [-Name <String>] [-Uri] <String> [-Audience <String>]
  [-Ring <String>] [-PhoneNumber <String>] [-IsInternalRun <Boolean>] [-Tenant <Guid>]
@@ -23,23 +23,21 @@ Set-CsOnlineApplicationEndpoint [-CallbackUri <String>] [-Name <String>] [-Uri] 
 ```
 
 ## DESCRIPTION
-
-The following parameters are not applicable to Skype for Business Online: AsJob, Audience, CallbackUri, DomainController, Force, IsInternalRun, PipelineVariable, Ring, and RunFullProvisioningFlow
+This cmdlet is used to update a Trusted Application Endpoint for a tenant.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsOnlineApplicationEndpoint -Uri "sip:sample@domain.com" -PhoneNumber "19841110909"
 ```
 
-Insert descriptive text for example 1.
-
+This example assigns the service number "19841110909" to the trusted application with the sip uri "sample@domain.com".
 
 ## PARAMETERS
 
 ### -Uri
-PARAMVALUE: String
+Sip Uri that identifies the tenant specific endpoint for the application. This must be a unique URI that does not conflict with an existing user in the tenant. Requests sent to this endpoint will trigger the Trusted Application API sending an event to the application, indicating that someone has sent a request. For example: helpdesk@contoso.com.
 
 ```yaml
 Type: String
@@ -55,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Audience
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -71,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackUri
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -87,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -119,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-PARAMVALUE: String
+A friendly name of your application within Skype for Business Online.
 
 ```yaml
 Type: String
@@ -151,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-PARAMVALUE: String
+The service number assigned to the trusted application endpoint.
 
 ```yaml
 Type: String
@@ -167,7 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
 Type: Guid
@@ -183,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsInternalRun
-{{Fill IsInternalRun Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -215,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ring
-{{Fill Ring Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -231,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunFullProvisioningFlow
-{{Fill RunFullProvisioningFlow Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -257,3 +263,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/get-csonlineapplicationendpoint)
+
+[New-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint)
+
+[Remove-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint)
+
+[Set up a Trusted Application Endpoint](https://docs.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint)

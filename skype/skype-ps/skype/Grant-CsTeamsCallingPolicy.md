@@ -5,8 +5,9 @@ online version:
 applicable: Skype for Business Online
 title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 

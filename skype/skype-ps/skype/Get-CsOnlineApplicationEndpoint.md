@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineApplicationEndpoint
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -113,3 +114,11 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/set-csonlineapplicationendpoint)
+
+[New-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint)
+
+[Remove-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint)
+
+[Set up a Trusted Application Endpoint](https://docs.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint)

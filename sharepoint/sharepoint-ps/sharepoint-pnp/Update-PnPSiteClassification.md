@@ -43,7 +43,7 @@ Sets the default classification value to "LBI". This value needs to be present i
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-Update-PnPSiteClassification -UsageGuidelinesUrl http://aka.ms/sppnp
+Update-PnPSiteClassification -UsageGuidelinesUrl https://aka.ms/sppnp
 ```
 
 sets the usage guideliness URL to the specified URL.
