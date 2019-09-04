@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClientPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsClientPolicy
@@ -116,7 +117,7 @@ You can even create a custom policy that gets assigned to a single user.
 Client policies can be configured at the global, site and per-user scopes.
 The `Set-CsClientPolicy` cmdlet enables you to modify any (or all) of the client policies that have been configured for use in your organization.
 
-Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values.
+Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values. When setting is null/none just means that server in band provisioning does not override default client value. Basically, default values are set by client for these cases.
 
 The following parameters are not applicable to Skype for Business Online: AddressBookAvailability, AsJob, AttendantSafeTransfer, AutoDiscoveryRetryInterval, BlockConversationFromFederatedContacts, CalendarStatePublicationInterval, ConferenceIMIdleTimeout, CustomizedHelpUrl, CustomLinkInErrorMessages, CustomStateUrl, Description, DGRefreshInterval, DisableContactCardOrganizationTab, DisableFederatedPromptDisplayName, DisableFeedsTab, DisableMeetingSubjectAndLocation, DisableOneNote12Integration, DisableOnlineContextualSearch, DisablePhonePresence, DisablePICPromptDisplayName, EnableEventLogging, EnableExchangeContactsFolder, EnableExchangeDelegateSync, EnableFullScreenVideo, EnableHighPerformanceConferencingAppSharing, EnableHighPerformanceP2PAppSharing, EnableMediaRedirection, EnableMeetingEngagement, EnableNotificationForNewSubscribers, EnableOnlineFeedback, EnableOnlineFeedbackScreenshots, EnableSQMData, EnableTracing, EnableViewBasedSubscriptionMode, EnableVOIPCallDefault, Force, HelpEnvironment, Identity, IMLatencyErrorThreshold, IMLatencySpinnerDelay, Instance, MAPIPollInterval, MaximumDGsAllowedInContactList, MaximumNumberOfContacts, MaxPhotoSizeKB, P2PAppSharingEncryption, PipelineVariable, PolicyEntry, PublicationBatchDelay, RateMyCallAllowCustomUserFeedback, RequireContentPin, SearchPrefixFlags, SPSearchCenterExternalURL, SPSearchCenterInternalURL, SPSearchExternalURL, SPSearchInternalURL, SupportModernFilePicker, TabURL, TelemetryTier, Tenant, and WebServicePollInterval
 
@@ -1323,7 +1324,7 @@ Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions Microsoft Lync Server 2010 it was possible to add a Send Feedback option to Microsoft Lync 2010.
 That was done by using code similar to this:
 
-`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"`
+`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"`
 
 `Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
 
@@ -2092,7 +2093,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

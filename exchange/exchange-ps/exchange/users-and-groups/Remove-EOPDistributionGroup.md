@@ -59,13 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to remove.
-
-For example:
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to remove. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

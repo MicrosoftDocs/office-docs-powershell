@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # New-PnPAzureCertificate
 
@@ -28,7 +25,8 @@ New-PnPAzureCertificate [-CommonName <String>]
                         [-Locality <String>]
                         [-Organization <String>]
                         [-OrganizationUnit <String>]
-                        [-Out <String>]
+                        [-OutPfx <String>]
+                        [-OutCert <String>]
                         [-ValidYears <Int>]
                         [-CertificatePassword <SecureString>]
 ```
@@ -37,10 +35,10 @@ New-PnPAzureCertificate [-CommonName <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-New-PnPAzureCertificate
+New-PnPAzureCertificate -OutPfx pnp.pfx -OutCert pnp.cer
 ```
 
-This will generate a default self-signed certificate named "pnp.contoso.com" valid for 10 years.
+This will generate a default self-signed certificate named "pnp.contoso.com" valid for 10 years and output a pfx and cer file.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
@@ -123,7 +121,19 @@ Position: 5
 Accept pipeline input: False
 ```
 
-### -Out
+### -OutCert
+Filename to write to, optionally including full path (.cer)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: 6
+Accept pipeline input: False
+```
+
+### -OutPfx
 Filename to write to, optionally including full path (.pfx)
 
 ```yaml
@@ -161,4 +171,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

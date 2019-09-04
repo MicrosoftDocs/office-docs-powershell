@@ -79,23 +79,27 @@ This example creates an email message in the Drafts folder with the subject and 
 ### -Mailbox
 This parameter is available or functional only in Exchange Server 2010.
 
-The Mailbox parameter specifies a unique identifier for the destination mailbox where the  message is being created. You can use any of the following values for this parameter:
+The Mailbox parameter specifies the target mailbox where the message is created. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
 
 - Alias
 
-- Display name
-
-- Domain\\Account
-
-- SMTP address
-
 - Distinguished name (DN)
 
-- Object GUID
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

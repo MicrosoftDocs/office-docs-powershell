@@ -1,64 +1,46 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online
-title: Remove-CsCallerIdPolicy
+applicable: Skype for Business Online 
+title: Remove-CsTeamsEmergencyCallingPolicy
+author: danny-levin
+ms.author: dannyle
+manager: roykuntz
+ms.reviewer: chenc, pthota
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
 ---
 
-# Remove-CsCallerIdPolicy
+# Remove-CsTeamsEmergencyCallingPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
 
 ## SYNTAX
 
 ```
-Remove-CsCallerIdPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+ This cmdlet removes an existing Teams Emergency Calling policy. 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Insert example commands for example 1.
+### Example 1
+```powershell
+PS C:>  Remove-CsTeamsEmergencyCallingPolicy -Identity testECP 
 ```
 
-Insert descriptive text for example 1.
-
+ This example removes an existing Teams Emergency Calling policy with identity testECRP 
 
 ## PARAMETERS
 
-### -Identity
-PARAMVALUE: XdsIdentity
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -68,13 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+ The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -83,14 +64,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-PARAMVALUE: Guid
+### -Identity
+ The Identity parameter is the unique identifier of the Teams Emergency Calling policy to remove. 
 
 ```yaml
-Type: Guid
+Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tenant
+ Specifies the tenant id. 
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -100,13 +95,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -120,9 +115,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Rtc.Management.Xds.XdsIdentity
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS
-

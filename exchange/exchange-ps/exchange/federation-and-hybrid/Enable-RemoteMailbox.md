@@ -80,7 +80,8 @@ After the user is mail-enabled, directory synchronization synchronizes the mail-
 
 ### -------------------------- Example 2 --------------------------
 ```
-Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com" -Archive
+Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com"
+Enable-RemoteMailbox "Kim Akers" -Archive
 ```
 
 This example does the following:
@@ -284,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress

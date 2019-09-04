@@ -2,9 +2,6 @@
 external help file:
 applicable: SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # New-PnPSite
 
@@ -23,6 +20,7 @@ New-PnPSite -Title <String>
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-SiteDesign <CommunicationSiteDesign>]
             [-Lcid <UInt32>]
+            [-HubSiteId <GuidPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -35,6 +33,8 @@ New-PnPSite -Title <String>
             [-Description <String>]
             [-Classification <String>]
             [-IsPublic <String>]
+            [-Owners <String[]>]
+            [-HubSiteId <GuidPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -48,6 +48,7 @@ New-PnPSite -Title <String>
             [-Classification <String>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-Lcid <UInt32>]
+            [-HubSiteId <GuidPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -93,7 +94,7 @@ This will create a new Communications Site collection with the title 'Contoso' a
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1044
+New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1040
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the default language to Italian.
@@ -122,7 +123,7 @@ This will create a new Modern Team Site collection with the title 'Team Contoso'
 ## PARAMETERS
 
 ### -Alias
-Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal
+Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal, this parameter only applies to Modern Team Sites
 
 ```yaml
 Type: String
@@ -169,6 +170,18 @@ Position: 0
 Accept pipeline input: False
 ```
 
+### -HubSiteId
+If specified the site will be associated to the hubsite as identified by this id
+
+```yaml
+Type: GuidPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -IsPublic
 Specifies if new site collection is public. Defaults to false.
 
@@ -187,6 +200,18 @@ Specifies the language of the new site collection. Defaults to the current langu
 ```yaml
 Type: UInt32
 Parameter Sets: Communication Site with Built-In Site Design
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -Owners
+Specifies the owners of the site. Specify the value as a string array: "user@domain.com","anotheruser@domain.com"
+
+```yaml
+Type: String[]
+Parameter Sets: Team Site
 
 Required: False
 Position: 0
@@ -230,7 +255,7 @@ Accept pipeline input: False
 ```
 
 ### -Type
-@Specifies with type of site to create.
+Specifies with type of site to create.
 
 ```yaml
 Type: SiteType
@@ -242,7 +267,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-Specifies the full url of the new site collection
+Specifies the full url of the new site collection, this parameter only applies to Communications Sites
 
 ```yaml
 Type: String
@@ -273,4 +298,4 @@ Returns the url of the newly created site collection
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

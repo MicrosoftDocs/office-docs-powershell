@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Rename-SPServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Rename-SPServer
@@ -40,7 +43,7 @@ This example changes the name of the SharePoint server wfb1 to WFE1.
 ### -Identity
 Specifies the original name of the server.
 
-The type must be a URL, in the form http://server_name, or a GUID, in the form 1234-4567-987gb.
+The type must be a URL, in the form https://server_name, or a GUID, in the form 1234-4567-987gb.
 
 ```yaml
 Type: SPServerPipeBind

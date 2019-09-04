@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteSubscriptionProfileConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSiteSubscriptionProfileConfig
@@ -36,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE-----------------
 ```
-$sub = Get-SPSiteSubscription http://contoso/my
+$sub = Get-SPSiteSubscription https://contoso/my
 $pr = Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
 Remove-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr
 ```

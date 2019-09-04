@@ -67,11 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the database on which you want to run this command. You can use the following values:
+The Database parameter specifies the public folder database that you want to repair. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

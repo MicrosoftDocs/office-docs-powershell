@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-$subscription = Get-SPSiteSubscription http://site_url
+$subscription = Get-SPSiteSubscription https://site_url
 Import-SPSiteSubscriptionSettings -Identity $subscription -Path "C:\backups\contoso_settings_file.bak" -Force
 ```
 
@@ -42,7 +42,7 @@ This example restores the subscription settings store of contoso.com.
 ### -Identity
 Specifies the ID of the subscription to restore .
 
-The type must be a valid URL, in the form http://site_url, or a GUID, in the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+The type must be a valid URL, in the form https://site_url, or a GUID, in the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

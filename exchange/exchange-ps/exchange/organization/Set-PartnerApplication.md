@@ -171,6 +171,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppOnlyPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuthMetadataUrl
 This parameter is available only in on-premises Exchange.
 

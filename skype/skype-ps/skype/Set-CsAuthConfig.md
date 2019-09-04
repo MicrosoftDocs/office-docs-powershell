@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -120,7 +121,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,6 +135,6 @@ For more information, see [about_CommonParameters](http://go.microsoft.com/fwlin
 
 ## NOTES
 
-After changing CsAuthConfig, you must run [Enable-CsComputer](https://docs.microsoft.com/en-us/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
+After changing CsAuthConfig, you must run [Enable-CsComputer](https://docs.microsoft.com/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
 
 ## RELATED LINKS

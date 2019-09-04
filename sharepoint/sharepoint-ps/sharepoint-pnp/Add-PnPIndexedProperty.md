@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Add-PnPIndexedProperty
 
@@ -15,6 +12,7 @@ Marks the value of the propertybag key specified to be indexed by search.
 
 ```powershell
 Add-PnPIndexedProperty -Key <String>
+                       [-List <ListPipeBind>]
                        [-Web <WebPipeBind>]
                        [-Connection <SPOnlineConnection>]
 ```
@@ -31,6 +29,18 @@ Parameter Sets: (All)
 Required: True
 Position: 0
 Accept pipeline input: False
+```
+
+### -List
+The list object or name where to set the indexed property
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: True
 ```
 
 ### -Connection
@@ -59,4 +69,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

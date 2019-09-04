@@ -1,9 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Set-TeamChannel
-online version: 
+online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -13,7 +11,6 @@ ms.reviewer:
 # Set-TeamChannel
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
 Update Team channels settings.
 
@@ -21,16 +18,16 @@ Update Team channels settings.
 
 ```
 Set-TeamChannel -GroupId <String> -CurrentDisplayName <String> [-NewDisplayName <String>]
- [-Description <String>]
+ [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
-Set-TeamChannel -GroupId c58566a6-4bb4-4221-98d4-47677dbdbef6 -CurrentDisplayName TechReads -NewDisplayName "Technical Reads" 
+Set-TeamChannel -GroupId c58566a6-4bb4-4221-98d4-47677dbdbef6 -CurrentDisplayName TechReads -NewDisplayName "Technical Reads"
 ```
 
 ## PARAMETERS
@@ -42,7 +39,6 @@ GroupId of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -58,7 +54,6 @@ Current channel name
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -76,7 +71,6 @@ Names must be 50 characters or less, and can't contain the characters # % & * { 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -93,7 +87,6 @@ Channel Description Characters Limit - 1024.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -102,6 +95,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -109,4 +106,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

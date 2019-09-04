@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPWeb
 
@@ -20,6 +17,8 @@ Set-PnPWeb [-SiteLogoUrl <String>]
            [-Description <String>]
            [-MasterUrl <String>]
            [-CustomMasterUrl <String>]
+           [-HeaderLayout <HeaderLayoutType>]
+           [-HeaderEmphasis <SPVariantThemeType>]
            [-Web <WebPipeBind>]
            [-Connection <SPOnlineConnection>]
 ```
@@ -58,6 +57,34 @@ Accept pipeline input: False
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderEmphasis
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SPVariantThemeType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderLayout
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: HeaderLayoutType
 Parameter Sets: (All)
 
 Required: False
@@ -127,4 +154,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

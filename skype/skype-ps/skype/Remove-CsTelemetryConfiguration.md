@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsTelemetryConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -21,7 +22,7 @@ Remove-CsTelemetryConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-
 ```
 
 ## DESCRIPTION
-For privacy information, see the Skype for Business Privacy Statement (http://go.microsoft.com/fwlink/?LinkID=517480&clcid=0x409).
+For privacy information, see the Skype for Business Privacy Statement (https://go.microsoft.com/fwlink/?LinkID=517480&clcid=0x409).
 
 ## EXAMPLES
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

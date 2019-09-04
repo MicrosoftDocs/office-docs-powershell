@@ -144,13 +144,9 @@ Accept wildcard characters: False
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

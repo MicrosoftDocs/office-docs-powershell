@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsOAuthConfiguration
@@ -80,7 +81,7 @@ Accept wildcard characters: False
 Collection of domains that autodiscover requests can be redirected to.
 For example:
 
-`-ExchangeAutodiscoverAllowedDomains "*.contoso.com","*.fabrikam.com"`
+`-ExchangeAutodiscoverAllowedDomains "*.contoso.com;*.fabrikam.com"`
 
 
 ```yaml
@@ -275,7 +276,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are NoOverride, Allowed and Disallowed.
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are
+
+NoOverride, use global OAuth configuration
+
+Allowed, Enables OAuth for the tenant
+
+Disallowed, Disables OAuth for the tenant
+
+For more information, see [Hybrid Modern Authentication overview and prerequisites for using it with on-premises Skype for Business and Exchange servers](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 ```yaml
 Type: ClientAdalAuthOverride
@@ -309,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

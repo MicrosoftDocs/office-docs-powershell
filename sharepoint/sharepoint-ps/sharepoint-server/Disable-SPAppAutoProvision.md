@@ -41,7 +41,7 @@ This setting overrides site subscription level setting.
 
 ### ---------------EXAMPLE 2-------------- 
 ```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
+C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
 
 Disable-SPAppAutoProvision -SiteSubscription $subscription
 ```

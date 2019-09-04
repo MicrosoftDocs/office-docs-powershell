@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Get-PnPNavigationNode
 
@@ -40,14 +37,14 @@ Returns all navigation nodes in the quicklaunch navigation
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPNavigationNode -QuickLaunch
+Get-PnPNavigationNode -Location QuickLaunch
 ```
 
 Returns all navigation nodes in the quicklaunch navigation
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPNavigationNode -TopNavigationBar
+Get-PnPNavigationNode -Location TopNavigationBar
 ```
 
 Returns all navigation nodes in the top navigation bar
@@ -124,4 +121,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

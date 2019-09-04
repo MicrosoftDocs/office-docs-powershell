@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAlternateURL
@@ -64,7 +67,7 @@ This example changes the zone of the alternate URL for the specified Web applica
 ### -Identity
 Specifies the URL or GUID of the alternate URL to change.
 
-The type must be a valid URL, in the form http://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPAlternateUrlPipeBind

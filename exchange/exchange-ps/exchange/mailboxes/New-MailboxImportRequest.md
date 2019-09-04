@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive that's hosted in on-premises Exchange. Importing .pst files is not possible in Exchange Online.
+Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
@@ -228,8 +228,6 @@ In Exchange 2016 CU7 or later and Exchange Online, this parameter is the type Ma
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -813,7 +811,7 @@ This parameter is available only in on-premises Exchange.
 
 The RemoteCredential parameter specifies the credentials of an administrator who has permission to perform the mailbox import request.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

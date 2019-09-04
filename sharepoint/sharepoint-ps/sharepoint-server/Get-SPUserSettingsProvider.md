@@ -36,11 +36,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$provider = Get-SPUserSettingsProvider
 
-C:\PS>$site = Get-SPSite -Identity http://someserver
+C:\PS>$site = Get-SPSite -Identity https://someserver
 
 C:\PS>$user = $site.RootWeb.CurrentUser
 
-ctx = $provider.GetProviderContext($user)
+C:\PS>$ctx = $provider.GetProviderContext($user)
 
 C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
 ```

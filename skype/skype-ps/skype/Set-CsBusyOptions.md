@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsBusyOptions
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer: 
 ---
 
 # Set-CsBusyOptions
@@ -35,7 +36,7 @@ After configuration, the Busy Options setting is in effect for all the user's Sk
 
 Users will see missed-call notifications on their Skype for Business clients and devices, and they will be notified by email as well. Callers whose call was rejected due to Busy on Busy will see a notification in their Skype for Business client stating that the user they attempted to reach is busy on another call.
 
-For more information about how to enable Busy Options in your organization, see (https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-enterprise-voice/install-and-configure-busy-options).
+For more information about how to enable Busy Options in your organization, see (https://docs.microsoft.com/skypeforbusiness/deploy/deploy-enterprise-voice/install-and-configure-busy-options).
 
 ## EXAMPLES
 
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,6 +162,6 @@ Microsoft.Rtc.Management.AD.UserIdParameter object.
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/get-csbusyoptions?view=skype-ps)
+[Get-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/get-csbusyoptions?view=skype-ps)
 
-[Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
+[Remove-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/remove-csbusyoptions?view=skype-ps)

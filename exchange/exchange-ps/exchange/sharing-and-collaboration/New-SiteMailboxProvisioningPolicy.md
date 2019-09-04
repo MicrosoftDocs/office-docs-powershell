@@ -221,8 +221,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited. The default value is 36 MB.

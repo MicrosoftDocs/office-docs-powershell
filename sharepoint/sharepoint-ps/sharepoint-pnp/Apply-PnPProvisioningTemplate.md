@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Apply-PnPProvisioningTemplate
 
@@ -16,24 +13,6 @@ Applies a site template to a web
 ### Instance
 ```powershell
 Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
-                              [-ResourceFolder <String>]
-                              [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
-                              [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
-                              [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
-                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
-                              [-ClearNavigation [<SwitchParameter>]]
-                              [-Parameters <Hashtable>]
-                              [-Handlers <Handlers>]
-                              [-ExcludeHandlers <Handlers>]
-                              [-ExtensibilityHandlers <ExtensibilityHandler[]>]
-                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
-                              [-Web <WebPipeBind>]
-                              [-Connection <SPOnlineConnection>]
-```
-
-### Gallery
-```powershell
-Apply-PnPProvisioningTemplate [-GalleryTemplateId <Guid>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -78,19 +57,12 @@ Applies a site template in XML format to the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Apply-PnPSPnPProvisioningTemplateiteTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
+Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
 ```
 
 Applies a site template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
 
 ### ------------------EXAMPLE 3------------------
-```powershell
-Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
-```
-
-Applies a provisioning template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
-
-### ------------------EXAMPLE 4------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
 ```
@@ -99,38 +71,38 @@ Applies a site template in XML format to the current web. It will populate the p
 
 For instance with the example above, specifying {parameter:ListTitle} in your template will translate to 'Projects' when applying the template. These tokens can be used in most string values in a template.
 
-### ------------------EXAMPLE 5------------------
+### ------------------EXAMPLE 4------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -Handlers Lists, SiteSecurity
 ```
 
 Applies a site template in XML format to the current web. It will only apply the lists and site security part of the template.
 
-### ------------------EXAMPLE 6------------------
+### ------------------EXAMPLE 5------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.pnp
 ```
 
 Applies a site template from a pnp package to the current web.
 
-### ------------------EXAMPLE 7------------------
+### ------------------EXAMPLE 6------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path https://tenant.sharepoint.com/sites/templatestorage/Documents/template.pnp
 ```
 
 Applies a site template from a pnp package stored in a library to the current web.
 
-### ------------------EXAMPLE 8------------------
+### ------------------EXAMPLE 7------------------
 ```powershell
 
 $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler2
 Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
 This will create two new ExtensibilityHandler objects that are run while provisioning the template
 
-### ------------------EXAMPLE 9------------------
+### ------------------EXAMPLE 8------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
@@ -175,20 +147,8 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -GalleryTemplateId
-
-
-```yaml
-Type: Guid
-Parameter Sets: Gallery
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Handlers
-Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying.
+Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying. Visit https://docs.microsoft.com/dotnet/api/officedevpnp.core.framework.provisioning.model.handlers for possible values.
 
 ```yaml
 Type: Handlers
@@ -333,4 +293,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

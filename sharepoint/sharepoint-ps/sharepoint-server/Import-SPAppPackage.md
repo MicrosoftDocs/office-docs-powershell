@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------- 
 ```
-Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site https://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
 ```
 
 This example imports an app package.

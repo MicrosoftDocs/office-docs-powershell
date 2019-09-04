@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Restore-PnPRecycleBinItem
 
@@ -38,7 +35,7 @@ Restores the recycle bin item with Id 72e4d749-d750-4989-b727-523d6726e442 to it
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPRecycleBinItem | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
+Get-PnPRecycleBinItem | ? -Property LeafName -like "*.docx" | Restore-PnpRecycleBinItem
 ```
 
 Restores all the items in the first and second stage recycle bins to their original location of which the filename ends with the .docx extension
@@ -95,4 +92,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

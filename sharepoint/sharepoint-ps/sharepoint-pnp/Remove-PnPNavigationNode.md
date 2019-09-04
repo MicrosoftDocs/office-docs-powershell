@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Remove-PnPNavigationNode
 
@@ -40,7 +37,7 @@ Removes the navigation node with the specified id
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$nodes = Get-PnPNavigationNode -Location QuickLaunch
+$nodes = Get-PnPNavigationNode -QuickLaunch
 PS:>$nodes | Select-Object -First 1 | Remove-PnPNavigationNode -Force
 ```
 
@@ -62,10 +59,10 @@ Will remove the home navigation node from the top navigation bar without prompti
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Remove-PnPNavigationNode -Location QuickLaunch -All
+Get-PnPNavigationNode -Location QuickLaunch | Remove-PnPNavigationNode -Force
 ```
 
-Will remove all the navigation nodes from the quick launch bar in the current web.
+Will remove all the navigation nodes from the quick launch bar without prompting for a confirmation in the current web.
 
 ## PARAMETERS
 
@@ -131,4 +128,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

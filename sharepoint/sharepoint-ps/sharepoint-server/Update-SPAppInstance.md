@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPAppInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPAppInstance
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE---------
 ```
-$spapp = Import-SPAppPackage -Path .\feature-upgrade-v2.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+$spapp = Import-SPAppPackage -Path .\feature-upgrade-v2.spapp -Site https://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
 C:\S>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
 Update-SPAppInstance -Identity $instance -App $spapp
 ```

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchQueryScopeRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchQueryScopeRule
@@ -41,10 +44,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSite | Set-SPEnterpriseSearchQueryScopeRule -Url http://criticalSite -UrlScopeRuleType Url
+Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Set-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite -UrlScopeRuleType Url
 ```
 
-This example gets a reference to a scope rule for the URL http://criticalSite and sets its rule type to Url.
+This example gets a reference to a scope rule for the URL https://criticalSite and sets its rule type to Url.
 
 
 ## PARAMETERS
@@ -70,7 +73,7 @@ Accept wildcard characters: False
 ### -Url
 Specifies the results URL that is associated with the query scope rule.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: Uri

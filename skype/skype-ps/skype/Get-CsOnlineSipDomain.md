@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Get-CsOnlineSipDomain
@@ -75,7 +76,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -90,4 +91,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md) 
-[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/cloud-consolidation)
+[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

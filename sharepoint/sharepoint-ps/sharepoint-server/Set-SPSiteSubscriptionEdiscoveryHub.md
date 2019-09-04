@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSiteSubscriptionEdiscoveryHub
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSiteSubscriptionEdiscoveryHub
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE--------------------
 ```
-Set-SPSiteSubscriptionEdiscoverySearchScope -Site http://contoso.com/sites/sitecollection1 -SearchScope 1
+Set-SPSiteSubscriptionEdiscoverySearchScope -Site https://contoso.com/sites/sitecollection1 -SearchScope 1
 ```
 
 This example enables the search scope for the entire site subscription.

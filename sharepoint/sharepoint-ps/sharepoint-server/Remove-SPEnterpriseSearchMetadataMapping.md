@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchMetadataMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchMetadataMapping
@@ -49,7 +52,7 @@ This example removes an existing mapping between the managed property UserName a
 ### -Identity
 Specifies the metadata mapping to delete.
 
-The type must be a valid URL, in the form http://server_name, or an instance of a valid Mapping object.
+The type must be a valid URL, in the form https://server_name, or an instance of a valid Mapping object.
 
 ```yaml
 Type: MappingPipeBind

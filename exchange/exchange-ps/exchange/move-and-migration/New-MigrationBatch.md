@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users. You use this cmdlet to:
+Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -187,32 +187,6 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### XO1
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <System.DateTime>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [<CommonParameters>]
-```
-
 ### PublicFolderToUnifiedGroup
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
@@ -234,28 +208,6 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Abch
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <Timespan>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <DateTime>]
- [-TargetDatabases <MultiValuedProperty>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -304,6 +256,8 @@ Onboarding and offboarding in Exchange Online
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
 
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
+
+- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -407,7 +361,7 @@ Use the following format for the value of this parameter: ([System.IO.File]::Rea
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
+Parameter Sets: Local, LocalPublicFolder, Offboarding, PublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -432,7 +386,7 @@ Accept wildcard characters: False
 ### -Local
 This parameter is available only in on-premises Exchange.
 
-The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directoryforest). You don't need to specify a value with this switch.
+The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -449,7 +403,13 @@ Accept wildcard characters: False
 ### -SourcePublicFolderDatabase
 This parameter is available only in on-premises Exchange.
 
-The SourcePublicFolderDatabase parameter specifies the name of the source public folder database that's used in a public folder migration.
+The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
@@ -624,7 +584,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, XO1, PublicFolderToUnifiedGroup
+Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -635,8 +595,6 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the could-based service.
-
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -655,7 +613,7 @@ This parameter should only be used in the cloud-based service.
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -920,7 +878,7 @@ The SkipMerging parameter specifies the stages of the migration that you want to
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: LocalPublicFolder, Onboarding, Offboarding, XO1
+Parameter Sets: LocalPublicFolder, Onboarding, Offboarding
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -1007,8 +965,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -1025,7 +981,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1067,7 +1023,7 @@ You can only use this parameter for local moves and remote move migrations.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Local, Onboarding, Offboarding, XO1, Abch
+Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -1164,7 +1120,7 @@ Don't use this parameter unless you're directed to do so by Microsoft Customer S
 
 ```yaml
 Type: MigrationWorkflowControlFlags
-Parameter Sets: Local, Onboarding, XO1
+Parameter Sets: Local, Onboarding
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchMetadataMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchMetadataMapping
@@ -52,7 +55,7 @@ The crawled property is replaced with a new crawled property named MyNewCrawlPro
 ### -Identity
 Specifies the metadata mapping to update.
 
-The type must be a valid URL, in the form http://server_name, or an instance of a valid Mapping object.
+The type must be a valid URL, in the form https://server_name, or an instance of a valid Mapping object.
 
 ```yaml
 Type: MappingPipeBind
@@ -127,7 +130,7 @@ Accept wildcard characters: False
 ### -CrawledProperty
 Specifies the crawled property to map.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form http://server_name, or an instance of a valid CrawledProperty object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid URL in the form https://server_name, or an instance of a valid CrawledProperty object.
 
 Note: Null indicates that the value is unchanged.
 

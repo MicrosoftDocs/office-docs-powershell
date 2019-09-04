@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsImConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -105,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -120,8 +121,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-csimconfiguration?view=skype-ps)
+[New-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps)
 
-[Set-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-csimconfiguration?view=skype-ps)
+[Set-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/set-csimconfiguration?view=skype-ps)
 
-[Remove-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csimconfiguration?view=skype-ps)
+[Remove-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/remove-csimconfiguration?view=skype-ps)

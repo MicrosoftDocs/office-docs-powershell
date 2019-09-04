@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTeamsUpgradeConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -178,4 +179,4 @@ These settings are only honored by newer versions of Skype for Business clients.
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

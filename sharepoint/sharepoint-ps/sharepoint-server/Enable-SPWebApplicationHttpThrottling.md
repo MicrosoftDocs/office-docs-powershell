@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-Enable-SPWebApplicationHttpThrottling http://sitename
+Enable-SPWebApplicationHttpThrottling https://sitename
 ```
 
-This example enables network throttling on the http://sitename Web application.
+This example enables network throttling on the https://sitename Web application.
 
 ## PARAMETERS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPManagedPath
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPManagedPath
@@ -65,7 +68,7 @@ This command does not prompt for confirmation.
 
 ### -Identity
 Specifies the name of the managed path to delete.
-For example, in the URL http://sitename/sites/site1, "sites" is the name of the managed path.
+For example, in the URL https://sitename/sites/site1, "sites" is the name of the managed path.
 
 ```yaml
 Type: SPPrefixPipeBind

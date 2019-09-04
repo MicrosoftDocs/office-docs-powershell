@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  Identity (Default)
+### Identity (Default)
 ```
 Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>]
  [-Filter <String>]
@@ -119,13 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

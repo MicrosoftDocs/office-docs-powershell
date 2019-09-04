@@ -1,10 +1,7 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
-author: vesajuvonen
-ms.author: vesaj
-ms.reviewer:
 ---
 # Set-PnPView
 
@@ -15,14 +12,15 @@ Change view properties
 
 ```powershell
 Set-PnPView -Identity <ViewPipeBind>
-            -Values <Hashtable>
             [-List <ListPipeBind>]
+            [-Values <Hashtable>]
+            [-Fields <String[]>]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-Sets one or more properties of an existing view.
+Sets one or more properties of an existing view, see here https://docs.microsoft.com/previous-versions/office/sharepoint-server/ee543328(v=office.15) for the list of view properties.
 
 ## EXAMPLES
 
@@ -40,7 +38,26 @@ Get-PnPList -Identity "Tasks" | Get-PnPView | Set-PnPView -Values @{JSLink="hier
 
 Updates all views on list "Tasks" to use hierarchytaskslist.js and customrendering.js for the JSLink
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created"
+```
+
+Updates the Corporate Documents view on the Documents library to have two fields
+
 ## PARAMETERS
+
+### -Fields
+An array of fields to use in the view. Notice that specifying this value will remove the existing fields
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Identity
 The Id, Title or instance of the view
@@ -73,7 +90,7 @@ Hashtable of properties to update on the view. Use the syntax @{property1="value
 Type: Hashtable
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -108,4 +125,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

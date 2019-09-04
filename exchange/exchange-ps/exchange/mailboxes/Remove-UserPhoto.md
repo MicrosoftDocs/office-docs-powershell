@@ -55,13 +55,9 @@ This example deletes the photo associated with Ann Beebe's user account.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

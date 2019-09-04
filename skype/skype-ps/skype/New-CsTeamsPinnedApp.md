@@ -1,8 +1,12 @@
 ---
-external help file: tmp_1cmcv0jw.3l2-help.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_1cmcv0jw.3l2
 online version:
 schema: 2.0.0
+ms.reviewer: 
+manager: bulenteg
+ms.author: tomkau
+author: tomkau
 ---
 
 # New-CsTeamsPinnedApp
@@ -10,7 +14,7 @@ schema: 2.0.0
 ## SYNOPSIS
 
 As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
-Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies
+Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/MicrosoftTeams/teams-app-setup-policies
 
 The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
 
@@ -32,7 +36,7 @@ New-CsTeamsPinnedApp [-Tenant <System.Guid>] -Parent <String> -Id <String> -Orde
 ## DESCRIPTION
 
 As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
-Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies
+Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/MicrosoftTeams/teams-app-setup-policies
 
 The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
 
@@ -196,7 +200,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

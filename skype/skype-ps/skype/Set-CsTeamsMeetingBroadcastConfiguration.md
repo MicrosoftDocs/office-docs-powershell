@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingBroadcastConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -37,14 +38,14 @@ Set-CsTeamsMeetingBroadcastConfiguration [-Tenant <Guid>] [-SupportURL <String>]
 ```
 
 ## DESCRIPTION
-Tenant level configuration for broadcast events in Teams
+Tenant level configuration for broadcast events in Teams
 
 ## EXAMPLES
 
 ## PARAMETERS
 
 ### -AllowSdnProviderForBroadcastMeeting
-If set to $true,  Teams meeting broadcast streams are enabled to take advantage of the network and bandwidth management capabilities of your Software Defined Network (SDN) provider. 
+If set to $true,  Teams meeting broadcast streams are enabled to take advantage of the network and bandwidth management capabilities of your Software Defined Network (SDN) provider. 
 
 ```yaml
 Type: Boolean
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -SdnApiTemplateUrl
-Specifies the Software Defined Network (SDN) provider's HTTP API endpoint. This information is provided to you by the SDN provider. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
+Specifies the Software Defined Network (SDN) provider's HTTP API endpoint. This information is provided to you by the SDN provider. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
 Type: String
@@ -134,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -SdnApiToken
-Specifies the Software Defined Network (SDN) provider's authentication token which is required to use their SDN license. This is required by some SDN providers who will give you the required token. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
+Specifies the Software Defined Network (SDN) provider's authentication token which is required to use their SDN license. This is required by some SDN providers who will give you the required token. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
 Type: String
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -SdnLicenseId
-Specifies the Software Defined Network (SDN) license identifier. This is required and provided by some SDN providers. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
+Specifies the Software Defined Network (SDN) license identifier. This is required and provided by some SDN providers. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
 Type: String
@@ -164,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -SdnProviderName
-Specifies the Software Defined Network (SDN) provider's name. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
+Specifies the Software Defined Network (SDN) provider's name. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
 Type: String
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportURL
-Specifies a URL where broadcast event attendees can find support information or FAQs specific to that event. The URL will be displayed to the attendees during the broadcast. 
+Specifies a URL where broadcast event attendees can find support information or FAQs specific to that event. The URL will be displayed to the attendees during the broadcast. 
 
 ```yaml
 Type: String
@@ -226,7 +227,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
