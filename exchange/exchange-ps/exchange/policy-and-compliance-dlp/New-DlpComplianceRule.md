@@ -471,8 +471,6 @@ The IncidentReportContent parameter specifies the content to include in the repo
 
 - Severity
 
-- Service
-
 - Title
 
 You can specify multiple values separated by commas. You can only use the value All by itself. If you use the value Default, the report includes the following content:
