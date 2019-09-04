@@ -3,9 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsUser
@@ -59,6 +60,13 @@ In Example 2, all the users in the Finance department have their accounts enable
 In this command, the `Get-CsUser` cmdlet and the LdapFilter parameter are first used to return a collection of all the users who work in the Finance department.
 That information is then piped to the `Set-CsUser` cmdlet, which enables Enterprise Voice for each account in the collection.
 
+### -------------------------- Example 3 --------------------------
+```
+Set-CsUser -Identity "Pilar Ackerman" –LineUri "tel:+123456789"
+```
+
+In Example 3, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.
+In this case, the account is modified to set the phone number assigned to the user settings its LineUri property.
 
 ## PARAMETERS
 

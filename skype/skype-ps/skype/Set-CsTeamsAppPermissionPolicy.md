@@ -3,11 +3,19 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTeamsAppPermissionPolicy
 schema: 2.0.0
+ms.reviewer:
+manager: bulenteg
+ms.author: tomkau
+author: tomkau
 ---
 
 # Set-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
+
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+
+The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
 
 ## SYNTAX
 
@@ -28,16 +36,15 @@ Set-CsTeamsAppPermissionPolicy [-Tenant <System.Guid>] [-DefaultCatalogApps <>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+
+The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+Intentionally omitted.
 
 ## PARAMETERS
 
@@ -57,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogApps
-{{Fill DefaultCatalogApps Description}}
+Do not use.
 
 ```yaml
 Type:
@@ -72,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogAppsType
-{{Fill DefaultCatalogAppsType Description}}
+Do not use.
 
 ```yaml
 Type: String
@@ -87,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+Do not use.
 
 ```yaml
 Type: String
@@ -102,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogApps
-{{Fill GlobalCatalogApps Description}}
+Do not use.
 
 ```yaml
 Type:
@@ -132,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogAppsType
-{{Fill GlobalCatalogAppsType Description}}
+Do not use.
 
 ```yaml
 Type: String
@@ -147,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Do not use.
 
 ```yaml
 Type: XdsIdentity
@@ -162,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+Do not use.
 
 ```yaml
 Type: PSObject
@@ -177,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCatalogApps
-{{Fill PrivateCatalogApps Description}}
+Do not use.
 
 ```yaml
 Type:
@@ -192,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCatalogAppsType
-{{Fill PrivateCatalogAppsType Description}}
+Do not use.
 
 ```yaml
 Type: String
@@ -207,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Do not use.
 
 ```yaml
 Type: System.Guid
