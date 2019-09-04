@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsConferencingPolicy
@@ -424,8 +428,7 @@ Users are allowed to share a single application.
 None.
 Users are not allowed to share applications or their desktop.
 
-This setting is enforced at the per-user level.
-That means that some users in a conference might be allowed to share their desktop or applications while other users in the same conference might not be allowed to do so.
+
 
 The default value is Desktop.
 
@@ -462,6 +465,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialInConferencing
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are able to join the meeting by dialing in with a public switched telephone network (PSTN) telephone.
 The default value is True.
 
@@ -472,7 +477,7 @@ However, the user can take part in other conferences where dial-in conferencing 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -569,7 +574,7 @@ After the maximum number of participants has been reached anyone else who tries 
 The number of participants specified in this value can be any 32-bit whole number (any value between 1 and 4,294,967,295), but the recommended size is between 2 and 250, inclusive; the default value is 250.
 
 250 is the maximum for shared pool deployments, based on Microsoft testing.
-For information about supporting meeting with more than 250 participants, see "Microsoft Lync Server 2010 Support for Large Meetings" at http://go.microsoft.com/fwlink/p/?linkId=242073 (http://go.microsoft.com/fwlink/p/?linkId=242073).
+For information about supporting meeting with more than 250 participants, see "Microsoft Lync Server 2010 Support for Large Meetings" at https://go.microsoft.com/fwlink/p/?linkId=242073 (https://go.microsoft.com/fwlink/p/?linkId=242073).
 
 This setting applies to the user who organizes the conference: no conference created by a user affected by this policy will allow more than the specified number of participants.
 However, the user can take part in other conferences where additional participants are allowed.
@@ -1004,7 +1009,7 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1038,7 +1043,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-ActivityAlert
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -20,12 +23,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Condition <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>]
- [-DomainController <Fqdn>] [-EmailCulture <CultureInfo>] [-Multiplier <Double>] [-Name <String>]
- [-NotifyUser <MultiValuedProperty>] [-Operation <MultiValuedProperty>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ScopeLevel <SingleUser | AllUsers>] [-Severity <Low | Medium | High | None>] [-Threshold <Int32>]
- [-TimeWindow <Int32>] [-UserId <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-Condition <String>] [-Confirm]
+ [-Description <String>]
+ [-Disabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-EmailCulture <CultureInfo>]
+ [-Multiplier <Double>]
+ [-Name <String>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-Operation <MultiValuedProperty>]
+ [-RecordType <AuditRecordType>]
+ [-ScopeLevel <SingleUser | AllUsers>]
+ [-Severity <Low | Medium | High | None>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-UserId <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -251,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activitiesthat trigger activity alerts.
+The Operation parameter specifies the activities that trigger activity alerts.
 
 A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
@@ -272,9 +285,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert.
+The RecordType parameter specifies a record type label for the activity alert. Valid values are:
 
-Valid values are:
+- AeD
 
 - AzureActiveDirectory
 
@@ -302,19 +315,21 @@ Valid values are:
 
 - MicrosoftTeams
 
-- MicrosoftTeamsAddOns
-
-- MicrosoftTeamsSettingsOperation
-
 - OneDrive
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
 - SharePointFileOperation
+
+- SharePointListOperation
 
 - SharePointSharingOperation
 
@@ -328,12 +343,18 @@ Valid values are:
 
 - ThreatIntelligence
 
+- ThreatIntelligenceAtpContent
+
+- ThreatIntelligenceUrl
+
+- WorkplaceAnalytics
+
 - Yammer
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -466,12 +487,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Enable-OutlookAnywhere
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -44,7 +47,7 @@ Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba
 ```
 
 ## DESCRIPTION
-The Enable-OutlookAnywhere cmdlet enables the Exchange 2010 Client Access server for Outlook Anywhere. This lets the server accept requests from Outlook 2007 and Outlook 2003 clients from the Internet by using Outlook Anywhere.
+Enabling Outlook Anywhere on the Client Access server allows the server to accept external connections by Outlook 2003 or later clients by using Outlook Anywhere.
 
 This cmdlet can be successfully run only if the RPC over HTTP proxy Windows networking component is already installed.
 
@@ -70,7 +73,7 @@ This example enables Outlook Anywhere on the server that has the Client Access r
 
 ### -------------------------- Example 3 --------------------------
 ```
-Enable-Outlookanywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
+Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
 ```
 
 This example enables the Exchange Client Access server for Outlook Anywhere. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is set to mail.contoso.com, the IISAuthenticationMethods parameter is set to NTLM, and the ClientAuthenticationMethod parameter is set to Basic.
@@ -282,7 +285,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the name of the Client Access server to be enabled for Outlook Anywhere.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

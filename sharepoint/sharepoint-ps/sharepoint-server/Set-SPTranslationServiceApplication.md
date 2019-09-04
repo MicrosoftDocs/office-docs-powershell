@@ -3,6 +3,9 @@ external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTranslationServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPTranslationServiceApplication
@@ -48,7 +51,7 @@ This example sets the job expiration to 14 days and the number of worker process
 ### -Identity
 Specifies the URL or GUID of the instance of the Machine Translation service to set.
 
-The type must be a valid URL in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: TranslationServiceApplicationPipeBind

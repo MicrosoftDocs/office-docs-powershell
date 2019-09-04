@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsMeetingMigrationStatus
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsMeetingMigrationStatus
@@ -32,10 +36,10 @@ This example is used to get a summary status of all MMS migrations.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsMeetingMigrationStatus -UserId "ashaw@contoso.com"
+Get-CsMeetingMigrationStatus -Identity "ashaw@contoso.com"
 ```
 
-This example get the meeting migration status for user ashaw@contoso.com.
+This example gets the meeting migration status for user ashaw@contoso.com.
 
 
 ## PARAMETERS
@@ -165,7 +169,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -201,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -210,8 +214,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
+[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingTenantSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
+[Get-CsOnlineDialInConferencingTenantSettings](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
 
-[Start-CsExMeetingMigration](https://docs.microsoft.com/en-us/powershell/module/skype/start-csexmeetingmigration?view=skype-ps)
+[Start-CsExMeetingMigration](https://docs.microsoft.com/powershell/module/skype/start-csexmeetingmigration?view=skype-ps)

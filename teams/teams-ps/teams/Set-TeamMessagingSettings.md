@@ -5,12 +5,15 @@ applicable: Microsoft Teams
 title: Set-TeamMessagingSettings
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-TeamMessagingSettings
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
+Note: This cmdlet is deprecated as of our 1.0 PowerShell release, and is not supported in our 1.0 release.  To set a Team's settings, run Set-Team.
 
 Updates team messaging settings.
 

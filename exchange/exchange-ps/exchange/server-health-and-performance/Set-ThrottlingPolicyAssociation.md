@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ThrottlingPolicyAssociation
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -39,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
 ```
 
-This example associates a user with a user name of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
+This example associates a user with a username of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
 
 ### -------------------------- Example 2 --------------------------
 ```

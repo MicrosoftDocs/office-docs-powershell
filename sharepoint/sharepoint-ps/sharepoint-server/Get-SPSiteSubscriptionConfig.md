@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteSubscriptionConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPSiteSubscriptionConfig
@@ -29,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------- 
 ```
-Get-SPSiteSubscriptionConfig http://contoso.com | Select FeatureSet
+Get-SPSiteSubscriptionConfig https://contoso.com | Select FeatureSet
 ```
 
-This example gets the feature set ID for the site subscription that contains the Web site http://contoso.com.
+This example gets the feature set ID for the site subscription that contains the Web site https://contoso.com.
 
 ## PARAMETERS
 

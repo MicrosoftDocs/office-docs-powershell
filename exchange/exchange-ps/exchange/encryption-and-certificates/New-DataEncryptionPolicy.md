@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: New-DataEncryptionPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -43,7 +46,7 @@ This example creates a data encryption policy named US Mailboxes with the specif
 ### -AzureKeyIDs
 The AzureKeyIDs parameter specifies the URI values of the Azure Key Vault keys to associate with the data encryption policy. You need to specify at least two Azure Key Vault keys separated by commas. For example, "https://contosoWestUSvault01.vault.azure.net/keys/USA\_Key\_01","https://contosoEastUSvault01.vault.azure.net/keys/USA\_Key\_02"
 
-To find the URI value for an Azure Key Vault, replace \<ValutName\> with the name of the vault, and run this command in Azure Rights Management PowerShell: Get-AzureKeyVaultKey -VaultName \<VaultName\>).id. For more information, see Get started with Azure Key Vault (https://go.microsoft.com/fwlink/p/?linkid=521402).
+To find the URI value for an Azure Key Vault, replace \<VaultName\> with the name of the vault, and run this command in Azure Rights Management PowerShell: Get-AzureKeyVaultKey -VaultName \<VaultName\>).id. For more information, see Get started with Azure Key Vault (https://go.microsoft.com/fwlink/p/?linkid=521402).
 
 ```yaml
 Type: MultiValuedProperty
@@ -161,12 +164,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

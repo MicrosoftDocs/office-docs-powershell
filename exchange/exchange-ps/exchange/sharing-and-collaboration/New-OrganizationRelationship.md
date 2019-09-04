@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OrganizationRelationship
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,14 +22,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
- [-ArchiveAccessEnabled <$true | $false>] [-Confirm] [-DeliveryReportEnabled <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-FreeBusyAccessEnabled <$true | $false>]
- [-FreeBusyAccessLevel <None | AvailabilityOnly | LimitedDetails>] [-FreeBusyAccessScope <GroupIdParameter>]
- [-MailboxMoveEnabled <$true | $false>] [-MailTipsAccessEnabled <$true | $false>]
- [-MailTipsAccessLevel <None | Limited | All>] [-MailTipsAccessScope <GroupIdParameter>]
- [-OrganizationContact <SmtpAddress>] [-TargetApplicationUri <Uri>]
- [-TargetAutodiscoverEpr <Uri>] [-TargetOwaURL <Uri>] [-TargetSharingEpr <Uri>] [-WhatIf]
- [-PhotosEnabled <$true | $false>] [-MailboxMoveDirection <None | Inbound | Outbound>] [<CommonParameters>]
+ [-ArchiveAccessEnabled <$true | $false>]
+ [-Confirm]
+ [-DeliveryReportEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-FreeBusyAccessEnabled <$true | $false>]
+ [-FreeBusyAccessLevel <None | AvailabilityOnly | LimitedDetails>]
+ [-FreeBusyAccessScope <GroupIdParameter>]
+ [-MailboxMoveEnabled <$true | $false>]
+ [-MailTipsAccessEnabled <$true | $false>]
+ [-MailTipsAccessLevel <None | Limited | All>]
+ [-MailTipsAccessScope <GroupIdParameter>]
+ [-OrganizationContact <SmtpAddress>]
+ [-PhotosEnabled <$true | $false>]
+ [-TargetApplicationUri <Uri>]
+ [-TargetAutodiscoverEpr <Uri>]
+ [-TargetOwaURL <Uri>]
+ [-TargetSharingEpr <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,15 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNames
-This parameter is available only in on-premises Exchange.
-
-The DomainNames parameter specifies the SMTP domains of the external organization. You can specify multiple domains separated by commas (for example, "contoso.com","northamerica.contoso.com").
+The DomainNames parameter specifies the SMTP domains of the external organization. You can specify multiple domains separated by commas (for example, "contoso.com","northamerica.contoso.com"), limited to 238 domains in one request.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -240,13 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreeBusyAccessScope
-The FreeBusyAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group.
-
-For example:
+The FreeBusyAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -332,13 +340,9 @@ Accept wildcard characters: False
 ```
 
 ### -MailTipsAccessScope
-The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group.
-
-For example:
+The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -380,6 +384,25 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhotosEnabled
+The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
+
+- $true: Photos for users in this organization are returned over the organization relationship.
+
+- $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -457,40 +480,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhotosEnabled
-The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
-
-- $true: Photos for users in this organization are returned over the organization relationship.
-
-- $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxMoveDirection
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | Inbound | Outbound
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

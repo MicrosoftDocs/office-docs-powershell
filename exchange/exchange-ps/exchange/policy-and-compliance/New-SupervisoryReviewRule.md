@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-SupervisoryReviewRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -29,7 +32,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-SupervisoryReviewRule -Name "EU Brokers Rule" -Policy "EU Brokers Policy" -SamplingRate 100 -Conditions "((NOT(Reviewee:US Compliance)) -AND (Reviewee:EU Brokers) -AND ((trade) -OR (insider trading)) -AND (NOT(approved by the Contoso financial team)))"
+New-SupervisoryReviewRule -Name "EU Brokers Rule" -Policy "EU Brokers Policy" -SamplingRate 100 -Condition "((NOT(Reviewee:US Compliance)) -AND (Reviewee:EU Brokers) -AND ((trade) -OR (insider trading)) -AND (NOT(approved by the Contoso financial team)))"
 ```
 
 This example creates a new supervisory review rule named EU Brokers Rule with the following settings:
@@ -168,12 +171,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

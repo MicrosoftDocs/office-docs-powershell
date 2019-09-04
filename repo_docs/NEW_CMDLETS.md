@@ -14,7 +14,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 - You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
-- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](http://aka.ms/wmf5download) and installed on these versions of Windows:
+- Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](https://aka.ms/wmf5download) and installed on these versions of Windows:
   
   - Windows Server 2012 R2
 
@@ -225,16 +225,20 @@ We highly encourage you to plagiarize existing content and formatting from other
 Less obvious but still important information that's often manually required in every topic is **cmdlet metadata** at the top of the topic and **parameter metadata** in every parameter section.
 
 ##### Cmdlet metadata
-Here's an example of the cmdlet metadata that's required at the top of every topic:
 
-    ```
-    external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-    Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-    online version:
-    applicable: Microsoft StaffHub
-    title: Get-StaffHubUsersForTenant
-    schema: 2.0.0
-    ```
+Every cmdlet reference topic needs at least the following in the metadata field at the top of the reference article:
+
+```
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+applicable: Skype for Business Server 2015
+title: Add-CsSlaDelegates
+author:
+ms.author:
+ms.reviewer:
+manager:
+schema: 2.0.0
+```
 
 - **external help file**: Defines which MAML/XML file the cmdlet help topic goes in for `Get-Help` at the command line. This value very product-specific, and the location is specified somewhere in product code. Some products (Skype) use only one XML file that's well-known and the same for all cmdlets; others (Exchange, SharePoint) use multiple XML files. See other topics for available values. Don't guess; a wrong value here will affect the availability of the help topic at the command line.
 
@@ -247,6 +251,14 @@ Here's an example of the cmdlet metadata that's required at the top of every top
 - **title**: You need to add this attribute and value yourself. This is simply the name of the cmdlet.
 
 - **schema**: This value is always 2.0.0 in all products.
+
+- **author**: The GitHub alias of the person that owns this topic. Usually the PM or sometimes a dev that owns the cmdlet.
+
+- **ms.author**: The Microsoft alias of the same author.
+
+- **ms.reviewer**: The Microsoft alias of someone that can approve any technical changes (if different than the author).
+
+- **manager**: The Microsoft alias of a manager for the team that owns the cmdlet. This is useful if the person that owns the cmdlet leaves the company. The manager will be reached to in order to find the new author.
 
 ##### Parameter metadata
 Here's an example of the parameter metadata that's present in every parameter section:
@@ -270,7 +282,7 @@ Most of the attributes and values are generated automatically by platyPS. The on
 - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
 ### Step 8: Add the new cmdlet topic files to the repository
-When you're done editing the topics, upload them to GitHub.
+When you're done editing the topics, upload them to GitHub. Note that you need to fork, upload your files to your fork, then submit a Pull Request.
 
 1. Go to the correct location in the appropriate GitHub repository:
 
@@ -333,13 +345,13 @@ After you're done editing the TOC file:
 
 ### Reference
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-6
 
-- https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-6
 
 - https://github.com/PowerShell/platyPS
 
-- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+- https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
 
 
 ### Install platyPS on older versions of Windows

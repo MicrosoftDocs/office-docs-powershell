@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-MRSHealth
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 ### -MRSProxyCredentials
 The MRSProxyCredentials parameter specifies the credentials that are required for the MRSProxyPingCheck test on the server that's specified by the MRSProxyServer parameter.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential

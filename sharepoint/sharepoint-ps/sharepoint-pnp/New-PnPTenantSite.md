@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # New-PnPTenantSite
@@ -15,7 +15,6 @@ New-PnPTenantSite -Title <String>
                   -Url <String>
                   -Owner <String>
                   -TimeZone <Int>
-                  [-Description <String>]
                   [-Lcid <UInt32>]
                   [-Template <String>]
                   [-ResourceQuota <Double>]
@@ -49,18 +48,6 @@ New-PnPTenantSite -Title Contoso -Url /sites/contososite -Owner user@example.org
 This will add a site collection with the title 'Contoso', the url 'https://tenant.sharepoint.com/sites/contososite' of which the base part will be picked up from your current connection, the timezone 'UTC+01:00', the owner 'user@example.org' and the template used will be STS#0, a TeamSite
 
 ## PARAMETERS
-
-### -Description
-Specifies the description of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Force
 Do not ask for confirmation.
@@ -234,4 +221,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)[Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](http://msdn.microsoft.com/en-us/library/gg615462.aspx.)[Creating on-premises site collections using CSOM](http://blogs.msdn.com/b/vesku/archive/2014/06/09/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)[Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](http://msdn.microsoft.com/en-us/library/gg615462.aspx.)[Creating on-premises site collections using CSOM](http://blogs.msdn.com/b/vesku/archive/2014/06/09/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom.aspx)

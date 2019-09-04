@@ -1,8 +1,11 @@
- ---
+---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOHubSiteAssociation
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Add-SPOHubSiteAssociation

@@ -4,6 +4,10 @@ online version:
 applicable: Skype for Business Online
 title: New-CsOnlinePSTNGateway
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # New-CsOnlinePSTNGateway
@@ -18,8 +22,9 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] 
+ [-Identity] <XdsGlobalRelativeIdentity> [-BypassMode <String>] [-InMemory] [-Force]  [-WhatIf] [-Confirm] 
+ [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
@@ -27,8 +32,9 @@ New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-Cod
 New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
- [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-InMemory] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-InMemory] 
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -245,7 +252,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReinviteResponseCode
+### -FailoverResponseCodes
 If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone System Direct Routing" documentation.
 
 ```yaml
@@ -320,6 +327,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BypassMode
+Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always" mode you indicate that your network is fully routable. If a user usually in site "Seattle", travels to site "Tallinn" and tries to use SBC located in Seattle we will try to deliver the traffic to Seattle assuming that there is connection between Tallinn and Seattle offices. With "OnlyForLocaUsers" you indicate that there is no direct connection between sites. In example above, the traffic will not be send directly from Tallinn to Seattle.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 
 ```yaml
@@ -352,7 +374,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

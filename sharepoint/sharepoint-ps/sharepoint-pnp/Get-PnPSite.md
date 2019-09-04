@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPSite
@@ -24,6 +24,13 @@ Get-PnPSite
 ```
 
 Gets the current site
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Get-PnPSite -Includes RootWeb,ServerRelativeUrl
+```
+
+Gets the current site specifying to include RootWeb and ServerRelativeUrl properties. For the full list of properties see https://docs.microsoft.com/previous-versions/office/sharepoint-server/ee538579(v%3doffice.15)
 
 ## PARAMETERS
 
@@ -57,4 +64,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

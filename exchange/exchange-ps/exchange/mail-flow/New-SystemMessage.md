@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SystemMessage
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -61,7 +64,7 @@ The DsnCode parameter specifies the enhanced status code for the custom system m
 
 Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. You can specify a default code that's included with Exchange, or you can specify a custom code.
 
-To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html \> "C:\\My Documents\\Default DSNs.html".
+To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\Default DSNs.html".
 
 You need to use this parameter with the Language and Internal parameters.
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-User
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
@@ -22,6 +25,7 @@ Set-User [-Identity] <UserIdParameter>
  [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
  [-Arbitration]
  [-AssistantName <String>]
+ [-AuthenticationPolicy <String>] 
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
  [-Company <String>]
@@ -104,19 +108,17 @@ Performing this procedure on a linked mailbox removes all permissions on the mai
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
 - Canonical DN
 
 - GUID
+
+- UserPrincipalName
 
 ```yaml
 Type: UserIdParameter
@@ -148,7 +150,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to modify arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -170,6 +174,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationPolicy
+The AuthenticationPolicy parameter specifies the authentication policy to apply to the user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -372,11 +391,11 @@ Accept wildcard characters: False
 ```
 
 ### -GeoCoordinates
-The GeoCoordinates parameter specifies the user's physical location in latitude, longitude and altitude coordinates. Use this parameter to specify the global position of physical resources, such as conference rooms. You have to specify one of the following sets of coordinates; use semicolons to separate the values.
+The GeoCoordinates parameter specifies the user's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
-- Latitude and longitude; for example, "47.644125;-122.122411"
+- Latitude and longitude: For example, "47.644125;-122.122411"
 
-- Latitude, longitude and altitude; for example, "47.644125;-122.122411;161.432"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
 ```yaml
 Type: GeoCoordinates
@@ -461,11 +480,11 @@ Accept wildcard characters: False
 ### -LinkedCredential
 This parameter is available only in on-premises Exchange.
 
-The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter.
+The LinkedCredential parameter specifies the username and password that's used to access the domain controller specified by the LinkedDomainController parameter.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 You can only use the LinkedCredential parameter with a linked user.
-
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -748,9 +767,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the user is a public folder mailbox. This switch is required to only when you change the settings of public folder mailboxes. You don't need to specify a value with this switch.
+The PublicFolder switch is required to modify public folder mailboxes. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -1004,7 +1023,7 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1051,7 +1070,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn’t work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter

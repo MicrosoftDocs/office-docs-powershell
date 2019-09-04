@@ -3,6 +3,9 @@ external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelDataConnectionLibrary
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 $sa = Get-SPExcelServiceApplication
-New-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
+New-SPExcelDataConnectionLibrary -Address "https://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
 ```
 
 This example adds a new data connection library (DCL) and then sets its description to the list of trusted data connection libraries that is in the Excel Services Application Web service application named MyExcelService.
@@ -48,7 +51,7 @@ Workbooks can use connection files stored in that library to refresh data on the
 Specifies the address of the data connection library.
 The address must be unique in the list of trusted data connection libraries.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String

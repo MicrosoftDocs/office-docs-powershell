@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPTimerJob
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPTimerJob
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 ### ---------------------EXAMPLE 01--------------------- 
 ```
-Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
+Get-SPTimerJob -WebApplication "https://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.

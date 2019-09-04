@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -20,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity
 ```
 Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
@@ -28,7 +30,6 @@ Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParam
 ### ManagedBy
 ```
 Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
@@ -65,13 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter filters the results by the manager of the distribution group (the ManagedBy property). You can use any value that uniquely identifies the distribution group manager.
-
-For example:
+The ManagedBy parameter filters the results by the manager of the distribution group (the ManagedBy property). You can use any value that uniquely identifies the distribution group manager. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -88,21 +85,6 @@ You can't use this parameter with the Identity parameter.
 ```yaml
 Type: GeneralRecipientIdParameter
 Parameter Sets: ManagedBy
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -156,12 +138,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

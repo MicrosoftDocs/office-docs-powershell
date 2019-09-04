@@ -18,6 +18,7 @@ New-PnPUnifiedGroup -DisplayName <String>
                     [-Members <String[]>]
                     [-IsPrivate [<SwitchParameter>]]
                     [-GroupLogoPath <String>]
+                    [-CreateTeam [<SwitchParameter>]]
                     [-Force [<SwitchParameter>]]
 ```
 
@@ -52,6 +53,18 @@ New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNic
 Creates a private Office 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
 ## PARAMETERS
+
+### -CreateTeam
+Creates a MS Teams team associated with created group.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Description
 The Description of the Office 365 Group.
@@ -151,4 +164,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -3,6 +3,13 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsMeetingConfiguration
 schema: 2.0.0
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
+manager: bulenteg
+audience: ITPro
+ms.topic: reference 
+localization_priority: Normal 
 ---
 
 # Get-CsMeetingConfiguration
@@ -197,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

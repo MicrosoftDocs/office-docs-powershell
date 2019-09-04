@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-TransportServer
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -62,7 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the server you want to view. When you use this parameter on a Mailbox server, the parameter returns the transport configuration of the Transport service on specified server. You can't use this parameter on an Edge Transport server.
+The Identity parameter specifies the Transport server that you want to view. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- GUID
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: TransportServerIdParameter

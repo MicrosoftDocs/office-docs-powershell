@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-PowerShellConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -68,7 +71,7 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 
 You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
 
-Test-PowerShellConnectivity -ClientAccessServer MBX01 | ConvertTo-Html \> "C:\\My Documents\\PowerShell Test.html"
+Test-PowerShellConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\PowerShell Test.html"
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -86,7 +89,7 @@ This example tests the PowerShell (Default Web Site) virtual directory on the MB
 $UserCredentials = Get-Credential; Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
 ```
 
-This example tests the remote PowerShell virtual directory that's available at https://contoso.com/powershell. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directoryis configured to use Basic authentication.
+This example tests the remote PowerShell virtual directory that's available at https://contoso.com/powershell. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directory is configured to use Basic authentication.
 
 The credentials that are used to connect to the virtual directory are stored in the $UserCredentials variable. The test is then run as previously described.
 
@@ -112,7 +115,7 @@ Accept wildcard characters: False
 ### -TestCredential
 The TestCredential parameter specifies the credentials to use for the test.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 You can only use this parameter with the ConnectionUri parameter.
 

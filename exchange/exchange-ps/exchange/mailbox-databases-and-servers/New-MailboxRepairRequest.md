@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxRepairRequest
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -119,13 +122,17 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the database on which you run this command. If you use this parameter, all mailboxes on the database are searched for corruptions. To avoid performance issues, you're limited to one active database repair request at a time. You can use the following values:
+The Database parameter starts new mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-You can't use this parameter in conjunction with the Mailbox parameter.
+- GUID
+
+You can't use this parameter with the Mailbox parameter.
+
+To avoid performance issues, you're limited to one active database repair request at a time.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -140,23 +147,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox on which you run this command. You can use the following values:
+The Mailbox parameter starts a new mailbox repair request on the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SMTP address
+- Name
 
 - Alias
 
-You can't use this parameter in conjunction with the Database parameter.
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: MailboxIdParameter
@@ -173,7 +186,7 @@ Accept wildcard characters: False
 ### -Archive
 The Archive parameter specifies whether to detect corruptions or repair the archive mailbox associated with the specified mailbox. If you don't specify this parameter, only the primary mailbox is repaired.
 
-You can't use this parameter in conjunction with the Database parameter.
+You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: SwitchParameter

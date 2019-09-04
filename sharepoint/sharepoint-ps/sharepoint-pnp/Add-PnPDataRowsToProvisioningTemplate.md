@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Add-PnPDataRowsToProvisioningTemplate
@@ -13,7 +13,7 @@ Adds datarows to a list inside a PnP Provisioning Template
 ```powershell
 Add-PnPDataRowsToProvisioningTemplate -Path <String>
                                       -List <ListPipeBind>
-                                      -Query <String>
+                                      [-Query <String>]
                                       [-Fields <String[]>]
                                       [-TokenizeUrls [<SwitchParameter>]]
                                       [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
@@ -89,13 +89,13 @@ Accept pipeline input: False
 ```
 
 ### -Query
-The CAML query to execute against the list
+The CAML query to execute against the list. Defaults to all items.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -150,4 +150,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

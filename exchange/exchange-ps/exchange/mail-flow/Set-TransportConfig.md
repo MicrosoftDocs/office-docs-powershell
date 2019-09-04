@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TransportConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -452,7 +455,7 @@ DSN codes are entered as x.y.z and are separated by commas. By default, the foll
 
 - 5.1.4
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -553,8 +556,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
@@ -606,7 +607,7 @@ This parameter is available only in on-premises Exchange.
 
 The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -771,11 +772,13 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be received by recipients in the organization.
+A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
+
+The value unlimited indicates the maximum size is imposed elsewhere (for example, server, connector, or individual recipient limits).
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -871,11 +874,13 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be sent by senders in the organization.
+A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
+
+The value unlimited indicates the maximum size is imposed elsewhere (for example, server, connector, or individual sender limits).
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -1202,7 +1207,7 @@ The TLSReceiveDomainSecureList parameter specifies the domains from which you wa
 
 - Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1231,7 +1236,7 @@ The TLSSendDomainSecureList parameter specifies the domains from which you want 
 
 - Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified in the TLSReceiveDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1263,8 +1268,6 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 
 - GB (gigabytes)
-
-- TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 

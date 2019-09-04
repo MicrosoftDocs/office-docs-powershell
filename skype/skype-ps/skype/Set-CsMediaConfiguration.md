@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMediaConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsMediaConfiguration
@@ -20,7 +24,7 @@ Set-CsMediaConfiguration [[-Identity] <XdsIdentity>] [-EnableQoS <Boolean>] [-En
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
 ```
 
 ### Instance
@@ -29,7 +33,7 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,9 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-QoS monitors the quality of voice signals over a network.
-The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
-
+QoS monitors the quality of voice signals over a network. When set to True, enables call Quality of Service (QoS) settings.
 
 ```yaml
 Type: Boolean
@@ -241,7 +243,7 @@ Accept wildcard characters: False
 
 ### -EnableAdaptiveBandWidthEstimation
 When set to True (the default value) Microsoft Lync Server will select the bandwidth rate at which to play a video stream.
-This selection will be based on such factors as the network congestion and the client's quality of the client's current network connection.
+This selection will be based on such factors as the network congestion and the client's quality of the client's current network connection. This parameter was removed starting Lync Server Cumulative Update 3.
 
 ```yaml
 Type: Boolean
@@ -291,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInCallQoS
-PARAMVALUE: $true | $false
+Enables or disables the ability of Skype for Business clients to send the raw data that's required to generate InCallQuality messages.
 
 ```yaml
 Type: Boolean
@@ -323,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -InCallQoSIntervalSeconds
-PARAMVALUE: UInt16
+Specifies the interval between call QoS actions.
 
 ```yaml
 Type: UInt16
@@ -354,8 +356,72 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableDtls
+Enables the use of Datagram Transport Layer Security (DTLS) for ICE
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSilkForAudioVideoConferences
+Enables the use of SILK codec for A/V conferences
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableServerFecForVideoInterop
+Enables the use of server Forward Error Correction for video interoperability
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WaitIceCompletedToAddDialOutUser
+Waits until ICE negotiation is complete to dial out other people
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: New-RoutingGroupConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -41,7 +44,7 @@ This example creates the routing group connector Interop RGC with the following 
 
 - The Exchange 2010 server is Hub2010.contoso.com.
 
-- The Exchange 2003 bridgehead server is Bridghead2003.contoso.com.
+- The Exchange 2003 bridgehead server is Bridgehead2003.contoso.com.
 
 - The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
 
@@ -194,12 +197,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

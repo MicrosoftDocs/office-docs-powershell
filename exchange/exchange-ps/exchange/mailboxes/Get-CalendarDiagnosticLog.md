@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -19,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### MeetingId
 ```
-Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -MeetingID <String> [-EndDate <ExDateTime>] [-Latest] [-StartDate <ExDateTime>] [-Subject <String>] [-EntryId <String>] [-ExactMatch <$true | $false>] [-ItemClass <String[]>] [-ItemIds <String[]>]
+Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -MeetingID <String>
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-LogLocation <String>]
@@ -36,6 +39,25 @@ Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -Subject <String>
  [-LogLocation <String>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### ExportToMsg
+```
+Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -LogLocation <String>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-EndDate <ExDateTime>]
+ [-EntryId <String>]
+ [-ExactMatch <Boolean>]
+ [-ItemClass <String[]>]
+ [-ItemIds <String[]>]
+ [-Latest]
+ [-MeetingID <String>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-StartDate <ExDateTime>]
+ [-Subject <String>]
  [<CommonParameters>]
 ```
 
@@ -95,13 +117,9 @@ Notes:
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that contains the calendar items. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that contains the calendar items. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -129,14 +147,47 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LogLocation
+The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+
+In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
+
+In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+
+Note: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (| Set-Content -Path "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
+
+```yaml
+Type: String
+Parameter Sets: ExportToMsg
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: MeetingId, MeetingSubject
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -MeetingID
-The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGloablObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
+The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGlobalObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
 
-To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGloablObjectId value for the MeetingID parameter in future commands.
+To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGlobalObjectId value for the MeetingID parameter in future commands.
 
 Don't use this parameter with the Subject parameter, because the value of the MeetingID parameter takes precedence.
 
@@ -148,7 +199,19 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: ExportToMsg
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -156,18 +219,6 @@ Accept wildcard characters: False
 The Subject parameter identifies the calendar items by the specified text in the Subject field. The text values that you specify aren't case sensitive. If the value contains spaces, enclose the value in quotation marks ("). You can control whether to use exact matching by using the ExactMatch parameter.
 
 Don't use this parameter with the MeetingID parameter, because the value of the MeetingID parameter takes precedence.
-
-```yaml
-Type: String
-Parameter Sets: MeetingId
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ```yaml
 Type: String
@@ -181,12 +232,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: String
+Parameter Sets: ExportToMsg
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -224,7 +287,7 @@ Use the short date format that's defined in the Regional Options settings on the
 
 ```yaml
 Type: ExDateTime
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -239,7 +302,7 @@ The EntryId parameter filters the results by entry ID. You can specify multiple 
 
 ```yaml
 Type: String
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -264,7 +327,7 @@ The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -281,7 +344,7 @@ You can only use this parameter with the MeetingID parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -296,7 +359,7 @@ The ItemIds parameter filters the results by item ID. You can specify multiple v
 
 ```yaml
 Type: String[]
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -311,30 +374,9 @@ The Latest switch specifies whether to return calendar log data for only the mos
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogLocation
-The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
-
-In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
-
-In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
-
-Note: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (\> "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -383,7 +425,7 @@ Use the short date format that's defined in the Regional Options settings on the
 
 ```yaml
 Type: ExDateTime
-Parameter Sets: MeetingId
+Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

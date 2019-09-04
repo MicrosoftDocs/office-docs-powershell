@@ -18,6 +18,7 @@ Set-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>
                     [-Members <String[]>]
                     [-IsPrivate [<SwitchParameter>]]
                     [-GroupLogoPath <String>]
+                    [-CreateTeam [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -55,9 +56,21 @@ Sets a group to be Public if previously Private.
 Set-PnPUnifiedGroup -Identity $group -Owners demo@contoso.com
 ```
 
-Adds demo@contoso.com as an additional owner to the group.
+Sets demo@contoso.com as owner of the group.
 
 ## PARAMETERS
+
+### -CreateTeam
+Creates a MS Teams team associated with created group.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Description
 The Description of the group to set.
@@ -145,4 +158,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

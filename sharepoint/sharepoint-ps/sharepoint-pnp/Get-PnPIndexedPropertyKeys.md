@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPIndexedPropertyKeys
@@ -11,11 +11,24 @@ Returns the keys of the property bag values that have been marked for indexing b
 ## SYNTAX 
 
 ```powershell
-Get-PnPIndexedPropertyKeys [-Web <WebPipeBind>]
+Get-PnPIndexedPropertyKeys [-List <ListPipeBind>]
+                           [-Web <WebPipeBind>]
                            [-Connection <SPOnlineConnection>]
 ```
 
 ## PARAMETERS
+
+### -List
+The list object or name from where to get the indexed properties
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: True
+```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -43,4 +56,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

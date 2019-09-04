@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SystemMessage
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -60,7 +63,7 @@ The identity value of a system message uses one of these formats:
 
 \<Language\>: For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
 
-\<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html \> "C:\\My Documents\\Default DSNs.html".
+\<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\Default DSNs.html".
 
 \<QuotaMessageType\>: Valid value are:
 

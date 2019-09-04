@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-TeamsRetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -358,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocation
-The RemoveTeamChatLocation parameter specifies the Microsft Teams chats (mailboxes) to remove from the list of included chats when you aren't using the value All for the TeamsChannelLocation parameter.
+The RemoveTeamChatLocation parameter specifies the Microsoft Teams chats (mailboxes) to remove from the list of included chats when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 
@@ -431,13 +434,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+###  
 
 ## OUTPUTS
 
-### 
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+###  
 
 ## NOTES
 

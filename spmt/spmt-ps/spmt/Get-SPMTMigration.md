@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Get-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-SPMTMigration
@@ -31,7 +34,7 @@ Return object of current session. It includes current tasks status and current s
 ### Example 1
 ```
 #Define SharePoint 2013 data source#
-$Global:SourceSiteUrl = "http://YourOnPremSite/"
+$Global:SourceSiteUrl = "https://YourOnPremSite/"
 $Global:OnPremUserName = "Yourcomputer\administrator"
 $Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force 
 $Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword

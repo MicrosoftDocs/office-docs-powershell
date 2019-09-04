@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-SiteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-FullSync]
+Update-SiteMailbox [-Identity] <RecipientIdParameter>
+ [-BypassOwnerCheck]
+ [-Confirm]
+ [-FullSync]
+ [-Organization <OrganizationIdParameter>]
  [-Server <String>]
- [-Target <All | Document | Membership | Maintenance>] [-WhatIf] [<CommonParameters>]
+ [-Target <All | Document | Membership | Maintenance>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,13 +55,17 @@ This example updates the site mailbox WinterHoliday@tailspintoys.com and perform
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. This parameter accepts the following values:
-
-- DisplayName
-
-- SMTP address
+The Identity parameter specifies the site mailbox that you want to update. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
 
 - GUID
 
@@ -111,6 +123,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

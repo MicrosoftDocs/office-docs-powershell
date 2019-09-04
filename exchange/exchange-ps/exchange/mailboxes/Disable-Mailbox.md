@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-Mailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -84,13 +87,9 @@ This example disables the remote archive for the on-premises user named John Woo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to mailbox-disable. You can use any value that uniquely identifies the mailbox. For example:
-
-For example:
+The Identity parameter specifies the mailbox that you want to mailbox-disable. You can use any value that uniquely identifies the mailbox. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -125,7 +124,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to mailbox-disable arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -141,6 +142,8 @@ Accept wildcard characters: False
 
 ### -Archive
 The Archive switch specifies whether to disconnect the archive mailbox from the associated user. You don't need to specify a value with this switch.
+
+You can't use this switch with the RemoteArchive switch.
 
 ```yaml
 Type: SwitchParameter
@@ -286,7 +289,7 @@ Accept wildcard characters: False
 ### -PublicFolder
 This parameter is available only in on-premises Exchange.
 
-The PublicFolderswitch specifies that the mailbox to mailbox-disable is a public folder mailbox. You need to use this switch to mailbox-disable a public folder mailbox. You don't need to specify a value with this switch.
+The PublicFolder switch is required to mailbox-disable public folder mailboxes. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
@@ -305,7 +308,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchiveswitch specifies whether to disconnect the remote archive for this mailbox. A remote archive exists in the cloud-based service. When you use this switch, the RemoteRecipientType property for the mailbox is reset to specify that this mailbox doesn't have a remote archive. You don't need to specify a value with this switch.
+The RemoteArchive switch specifies whether to disconnect the remote archive for this mailbox. Remote archives exist in the cloud-based service. When you use this switch, the RemoteRecipientType property for the mailbox is reset to specify that this mailbox doesn't have a remote archive. You don't need to specify a value with this switch.
 
 You can't use this switch with the Archive switch.
 

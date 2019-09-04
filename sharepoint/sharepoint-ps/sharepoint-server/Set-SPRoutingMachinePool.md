@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRoutingMachinePool
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRoutingMachinePool
@@ -28,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-$wa = Get-SPWebApplication -Identity http://webAppUrl
+$wa = Get-SPWebApplication -Identity https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
 $pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
 $newMachine = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01

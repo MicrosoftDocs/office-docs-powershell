@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsDialPlan
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Grant-CsDialPlan
@@ -29,7 +33,8 @@ Dial plans provide information required to enable Enterprise Voice users to make
 Users who do not have a valid dial plan will not be enabled to make calls by using Enterprise Voice.
 A dial plan determines such things as how normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object DialPlan.`
+You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "<user name>" | Select-Object DialPlan`
+
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object DialPlan`
@@ -172,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

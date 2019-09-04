@@ -4,6 +4,10 @@ Module Name: Skype for Business Online
 title: Get-CsTeamsGuestCallingConfiguration
 online version:
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: 
 ---
 
 # Get-CsTeamsGuestCallingConfiguration
@@ -33,7 +37,7 @@ Returns information about the GuestCallingConfiguration, which specifies what op
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsGuestCallingConfiguration
+Get-CsTeamsGuestCallingConfiguration
 ```
 
 Returns the results 
@@ -102,7 +106,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

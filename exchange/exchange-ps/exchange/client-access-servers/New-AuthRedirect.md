@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-AuthRedirect
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -31,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-AuthRedirect -AuthScheme Bearer -TargetURL http://mbx01.contoso.com
+New-AuthRedirect -AuthScheme Bearer -TargetURL https://mbx01.contoso.com
 ```
 
 This example creates an OAuth redirection object with the following settings:
 
 - AuthScheme: Bearer
 
-- TargetURL: http://mbx01.contoso.com
+- TargetURL: https://mbx01.contoso.com
 
 ## PARAMETERS
 

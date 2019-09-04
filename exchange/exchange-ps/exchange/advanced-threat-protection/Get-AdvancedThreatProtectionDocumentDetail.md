@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AdvancedThreatProtectionDocumentDetail
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -49,7 +52,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-AdvancedThreatProtectionTrafficDetail -Organization contoso.com -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
+Get-AdvancedThreatProtectionDocumentDetail -Organization contoso.com -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
 ```
 
 This example returns the detailed report of ATP detections during the specified date range.
@@ -207,12 +210,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

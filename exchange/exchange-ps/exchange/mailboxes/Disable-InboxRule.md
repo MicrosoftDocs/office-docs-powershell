@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-InboxRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -34,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
 ```
 
-This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso.com.
+This example disables the Inbox rule MoveAnnouncements in the mailbox Joe@Contoso.com.
 
 ## PARAMETERS
 
@@ -122,13 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

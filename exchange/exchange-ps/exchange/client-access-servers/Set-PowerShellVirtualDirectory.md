@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-PowerShellVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,9 +22,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-PowerShellVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>] [-CertificateAuthentication <$true | $false>] [-Confirm]
- [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>]
- [-RequireSSL <$true | $false>] [-WhatIf] [-WindowsAuthentication <$true | $false>] [<CommonParameters>]
+ [-BasicAuthentication <$true | $false>]
+ [-CertificateAuthentication <$true | $false>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-RequireSSL <$true | $false>]
+ [-WhatIf]
+ [-WindowsAuthentication <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
+Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "https://www.contoso.com/powershell"
 ```
 
 This example modifies the external URL of the Contoso Windows PowerShell virtual directory.
@@ -41,7 +51,15 @@ This example modifies the external URL of the Contoso Windows PowerShell virtual
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Windows PowerShell virtual directory that you want to modify.
+The Identity parameter specifies the PowerShell virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
+
+- Name or \<Server\>\\Name
+
+- Distinguished name (DN)
+
+- GUID
+
+The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
 ```yaml
 Type: VirtualDirectoryIdParameter

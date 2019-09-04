@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-ActiveSyncVirtualDirectory
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,9 +58,7 @@ This example removes a custom Exchange ActiveSync virtual directory from the ser
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Exchange ActiveSync virtual directory that you want to remove.
-
-You can use any value that uniquely identifies the virtual directory. For example:
+The Identity parameter specifies the Exchange ActiveSync virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
 

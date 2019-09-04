@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OwaMailboxPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -21,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ActionForUnknownFileAndMIMETypes <Allow | ForceSave | Block>]
  [-ActiveSyncIntegrationEnabled <$true | $false>]
+ [-AdditionalStorageProvidersAvailable <$true | $false>]
  [-AllAddressListsEnabled <$true | $false>]
  [-AllowCopyContactsToDeviceAddressBook <$true | $false>]
  [-AllowedFileTypes <MultiValuedProperty>]
@@ -43,6 +47,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisplayPhotosEnabled <$true | $false>]
  [-DomainController <Fqdn>]
  [-ExplicitLogonEnabled <$true | $false>]
+ [-ExternalImageProxyEnabled <$true | $false>]
  [-ExternalSPMySiteHostURL <String>]
  [-ForceSaveAttachmentFilteringEnabled <$true | $false>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
@@ -120,7 +125,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -204,6 +210,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AdditionalStorageProvidersAvailable
+This parameter is available only in the cloud-based service.
+
+The AdditionalStorageProvidersAvailable parameter specifies whether to allow additional storage providers (for example, Box, Dropbox, Facebook, Google Drive, Egnyte, personal OneDrive) attachments in Outlook on the web. Valid values are:
+
+- $true: Additional storage providers are enabled in Outlook on the web. Users can connect their additional storage providers and share files over email. This is the default value.
+
+- $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -ActiveSyncIntegrationEnabled
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
@@ -247,7 +273,7 @@ The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can c
 
 - $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This is the default value.
 
-- $false: Contacts cann't be copied to the device's address book in Outlook on the web for devices.
+- $false: Contacts can't be copied to the device's address book in Outlook on the web for devices.
 
 ```yaml
 Type: $true | $false
@@ -266,15 +292,15 @@ The AllowedFileTypes parameter specifies the attachment file types (file extensi
 
 .avi, .bmp, .doc, .docm, .docx, .gif, .jpg, .mp3, .one, .pdf, .png, .ppsm, .ppsx, .ppt, .pptm, .pptx, .pub, .rpmsg, .rtf, .tif, .tiff, .txt, .vsd, .wav, .wma, .wmv, .xls, .xlsb, .xlsm, .xlsx, .zip
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 If the same file types are specified in multiple lists:
 
-- The Allow list overrides the Block list and the Force Save list.
+- The Block list overrides the Allow list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Force Save list overrides the Allow list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -289,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedMimeTypes
-The AllowedMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
+The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
 - image/bmp
 
@@ -299,7 +325,7 @@ The AllowedMimeTypes parameter specifies the MIME extentions of attachments that
 
 - image/png
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -330,7 +356,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value. 
 
-When offline mode is available, uers can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
 ```yaml
 Type: PrivateComputersOnly | NoComputers | AllComputers
@@ -347,9 +373,9 @@ Accept wildcard characters: False
 ### -BlockedFileTypes
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
-.ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .chm, .cmd, .com, .cpl, .csh, .exe, .fxp, .gadget, .hlp, .hta, .htc, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
+.ade, .adp, .app, .appcontent-ms, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pst, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -372,7 +398,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedMimeTypes
-The BlockedMimeTypes parameter specifies MIME extentions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
+The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
 - application/hta
 
@@ -390,7 +416,7 @@ The BlockedMimeTypes parameter specifies MIME extentions in attachments that pre
 
 - x-internet-signup
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -432,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -474,7 +500,7 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additioanlly configure a Conditional Access policy in the Azure Active Directory Portal.
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additionally configure a Conditional Access policy in the Azure Active Directory Portal.
 
 Valid values are:
 
@@ -636,7 +662,7 @@ The DisableFacebook switch specifies whether users can synchronize their Faceboo
 
 - To disable Facebook integration, use this switch without a value.
 
-- To enable Facebook ingetration after it's been disabled, use this exact syntax: -DisableFacebook:$false.
+- To enable Facebook integration after it's been disabled, use this exact syntax: -DisableFacebook:$false.
 
 Note that the value of this parameter is stored in the FacebookEnabled property in the output of the Get-OwaMailboxPolicy cmdlet.
 
@@ -707,6 +733,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalImageProxyEnabled
+This parameter is available only in the cloud-based service.
+
+The ExternalImageProxyEnabled parameter specifies whether to load all external images through the Outlook external image proxy. Valid values are:
+
+- $true: All external images are loaded through the Outlook external image proxy. This is the default value.
+
+- $false: All external images are loaded through the web browser. This is potentially unsafe, as the images could have mixed content or malformed images that ask for user credentials.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExternalSPMySiteHostURL
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, https://sp01.contoso.com).
 
@@ -748,7 +795,7 @@ The ForceSaveFileTypes parameter specifies the attachment file types (file exten
 
 .ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dcr, .dir, .exe, .fxp, .gadget, .hlp, .hta, .htm, .html, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msh, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .spl, .swf, .tmp, .url, .vb, .vbe, .vbs, .vsmacro, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -771,7 +818,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSaveMimeTypes
-The ForceSaveMimeTypes parameter specifies the MIME extentions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
+The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
 - Application/futuresplash
 
@@ -783,7 +830,7 @@ The ForceSaveMimeTypes parameter specifies the MIME extentions in attachments th
 
 - text/html
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -959,7 +1006,7 @@ The InstantMessagingEnabled parameter specifies whether instant messaging is ava
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 
-- $false: Instnant messaging isn't available in Outlook on the web.
+- $false: Instant messaging isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -991,6 +1038,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -InterestingCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
@@ -1030,7 +1078,7 @@ Accept wildcard characters: False
 ```
 
 ### -IRMEnabled
-The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are avaiable in Outlook on the web. Valid values are:
+The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
 - $true: IRM is available in Outlook on the web. This is the default value.
 
@@ -1087,7 +1135,7 @@ Accept wildcard characters: False
 ### -JunkEmailEnabled
 This parameter is available only in on-premises Exchange.
 
-The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
+The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
 - $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 
@@ -1201,11 +1249,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled
-The OneDriveAttachmentsEnabled parameter specifies whether to allow OneDrive attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: OneDrive attachments are enabled. This is the default value.
-
-- $false: OneDrive attachments are disabled.
+To enable or disable personal OneDrive in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1220,8 +1266,6 @@ Accept wildcard characters: False
 ```
 
 ### -OnSendAddinsEnabled
-This parameter is available or functional only in the cloud-based service.
-
 The OnSendAddinsEnabled parameter specifies whether to enable or disable on send add-ins in Outlook on the web (add-ins that support events when a user clicks Send). Valid values are:
 
 - $true: On send add-ins are enabled.
@@ -1232,7 +1276,7 @@ The OnSendAddinsEnabled parameter specifies whether to enable or disable on send
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1500,7 +1544,7 @@ The ReportJunkEmailEnabled parameter specifies whether users can report messages
 
 - $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
 
-- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available.
+- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available. Users can stil mark messages as junk, phishing, or not junk, but they won't be able to report messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
@@ -1612,7 +1656,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetPhotoURL
-The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
+The SetPhotoURL parameter controls where users go to select their photo. Note that you can't specify a URL that contains one or more picture files, as there is no mechanism to copy a URL photo to the properties of the users' Exchange Online mailboxes.
 
 ```yaml
 Type: String
@@ -1669,7 +1713,7 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom Sharepoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
 
 - $true: The custom SharePoint page is skipped when a user creates an Office 365 group in Outlook on the web. This is the default value.
 
@@ -1799,7 +1843,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter has been deprecated and is no longer used.
 
-To enable or disable third party attachments in Outlook on the web, use the ThirdPartyFileProvidersEnabled parameter.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1816,11 +1860,9 @@ Accept wildcard characters: False
 ### -ThirdPartyFileProvidersEnabled
 This parameter is available only in the cloud-based service.
 
-The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over emailp.
-
-- $false: Third-party attachments are disabled in Outlook on the web. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -2073,7 +2115,7 @@ Accept wildcard characters: False
 ### -WebPartsFrameOptionsType
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
-- None: Tthere are no restrictions on displaying Outlook on the web content in a frame.
+- None: There are no restrictions on displaying Outlook on the web content in a frame.
 
 - SameOrigin: This is the default value and the recommended value. Display Outlook on the web content only in a frame that has the same origin as the content.
 
@@ -2117,9 +2159,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble in private computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available in private computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble in private computer sessions.
+- $false: WebReady Document Viewing isn't available in private computer sessions.
 
 By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
 
@@ -2140,9 +2182,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble for public computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available for public computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble for public computer sessions.
+- $false: WebReady Document Viewing isn't available for public computer sessions.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
@@ -2219,7 +2261,7 @@ The WebReadyFileTypes parameter specifies the attachment file types (file extens
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -2240,7 +2282,7 @@ Accept wildcard characters: False
 ### -WebReadyMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
+The WebReadyMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
 
 - application/msword
 
@@ -2262,7 +2304,7 @@ The WebReadyMimeTypes parameter specifies the MIME extentions of attachments tha
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

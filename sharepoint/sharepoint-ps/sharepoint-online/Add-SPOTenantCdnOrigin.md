@@ -3,6 +3,9 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOTenantCdnOrigin
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Add-SPOTenantCdnOrigin
@@ -76,7 +79,7 @@ Accept wildcard characters: False
 
 Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask. 
 
-Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder with a document library. 
+Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder within a document library. 
 
 
 ```yaml
@@ -112,7 +115,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

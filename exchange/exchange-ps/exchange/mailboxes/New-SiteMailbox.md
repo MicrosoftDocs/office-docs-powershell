@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SiteMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -94,7 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the identity of the mailbox database on which the mailbox data for the site mailbox resides.
+The Database parameter specifies the mailbox database that holds the mailbox data for the site mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter

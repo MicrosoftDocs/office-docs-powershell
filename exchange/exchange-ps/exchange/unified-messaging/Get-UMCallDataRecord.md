@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-UMCallDataRecord
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -67,13 +70,9 @@ This example displays the UM call data records for the UM-enabled user Tony.
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed for. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed for. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 

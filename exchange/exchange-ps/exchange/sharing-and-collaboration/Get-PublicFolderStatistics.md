@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderStatistics
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -18,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-PublicFolderStatistics [[-Identity] <PublicFolderIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-PublicFolderStatistics [[-Identity] <PublicFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,6 +77,41 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Mailbox
+The Mailbox parameter specifies the identity of the hierarchy public folder mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -89,7 +130,15 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies which server to check. If a server isn't specified, the command uses the local server.
+The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter
@@ -100,21 +149,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Mailbox
-The Mailbox parameter specifies the identity of the hierarchy public folder mailbox.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

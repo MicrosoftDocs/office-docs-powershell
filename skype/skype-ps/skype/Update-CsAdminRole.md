@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Update-CsAdminRole
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Update-CsAdminRole
@@ -70,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

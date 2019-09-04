@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTeamsCallParkPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Grant-CsTeamsCallParkPolicy
@@ -11,7 +15,7 @@ schema: 2.0.0
 
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different Teams phone.  The Grant-CsTeamsCallParkPolicy cmdlet lets you assign a custom policy to a specific user.
 
-NOTE: the call park feature currently only available in desktop and web clients.  Call Park functionality is currently completely disabled in mobile clients.  Supported with TeamsOnly mode
+NOTE: the call park feature currently only available in desktop, web clients and mobile clients.  Call Park functionality is currently on the roadmap for Teams IP Phones.  Supported with TeamsOnly mode for users with the Phone Sytem license
 
 ## SYNTAX
 
@@ -167,7 +171,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

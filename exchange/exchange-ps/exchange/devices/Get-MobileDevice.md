@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MobileDevice
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -56,18 +59,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MobileDevice -Identity "TonySmith"
+Get-MobileDevice -Mailbox "TonySmith"
 ```
 
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
+Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
-
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -79,13 +81,9 @@ This example returns detailed information about the specified device on Lila's m
 ## PARAMETERS
 
 ### -Mailbox
-The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -234,7 +232,9 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring parameter specifies whether mobile devices that are created by monitoring accounts are exposed by the Get-MobileDevice cmdlet. The default value is $false.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
 ```yaml
 Type: SwitchParameter

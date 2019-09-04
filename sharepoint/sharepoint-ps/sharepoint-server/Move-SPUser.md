@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Move-SPUser
@@ -30,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
+$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web https://webUrl
 Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
@@ -38,7 +41,7 @@ This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
+$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web https://webUrl
 Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
@@ -46,8 +49,8 @@ This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
-Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
+$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web https://webUrl
+Move-SPUser -Identity $user -NewAlias "i:0#.w|Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith when using Windows Claims. `-IgnoreSid` must always be used with `Move-SPUser` when using a Claims Identity, such as Windows Claims.

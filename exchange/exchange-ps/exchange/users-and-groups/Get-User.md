@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-User
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
@@ -120,15 +123,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch filters the results by arbitration mailboxes. You don't need to specify a value with this switch.
+The Arbitration switch is required to return arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
-Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find arbitration mailboxes.
-
-- To return arbitration mailboxes that are used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To return arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -145,13 +144,11 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
+The AuditLog switch is required to return audit log mailboxes in the results. You don't need to specify a value with this switch.
 
-Notes: 
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -168,13 +165,11 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to return auxillary audit log mailboxes in the results. You don't need to specify a value with this switch.
 
-Notes: 
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -191,9 +186,9 @@ Accept wildcard characters: False
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -242,13 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter the user that you want to view. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter the user that you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -315,9 +306,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the user object for which you're executing the command is a public folder mailbox.  You don't need to specify a value with this switch.
+The PublicFolder switch is required to return public folder mailboxes in the results. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders. This switch is required to retrieve information for a public folder mailbox.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter

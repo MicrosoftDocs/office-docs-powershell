@@ -1,8 +1,12 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsIPPhonePolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsIPPhonePolicy
@@ -56,12 +60,14 @@ This example modifies the global IP phone policy UserDialTimeoutMS parameter to 
 Set-CsIPPhonePolicy -EnablePowerSaveMode $False -EnableOneTouchVoicemail $False -EnableDeviceUpdate $False
 ```
 
-This example sets the EnablePowerSaveModeproperty, EnableOneTouchVoicemailvalues, and EnableDeviceUpdate parameters to $false.
+This example sets the EnablePowerSaveMode, EnableOneTouchVoicemail and EnableDeviceUpdate parameters to $false.
 
 ## PARAMETERS
 
 ### -BetterTogetherOverEthernetPairingMode
-Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code. Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
+Valid values are:
+Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
+Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
 Type: String
@@ -141,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeCalendaring
-Specifies whether an IP device is enabled to connect to the Exchange Online calendaring service. If $true, users are able to connect to their Exchange calendars. If $false, users will not be enabled to connect to their calendars. The default is $true.
+Specifies whether an IP device is enabled to connect to the Exchange Online calendaring service. If $true, users are able to connect to their Exchange calendars. If $false, users will not be able to connect to their calendars. The default is $true.
 
 ```yaml
 Type: Boolean
@@ -173,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePowerSaveMode
-If enabled, phone goes to power savings mode (display turns off) based on values of the PowerSaveDuringOfficeHoursTimeoutMS and PowerSavePostOfficeHoursTimeoutMS parameters.
+If enabled, phone goes to power saving mode (display turns off) based on values of the PowerSaveDuringOfficeHoursTimeoutMS and PowerSavePostOfficeHoursTimeoutMS parameters.
 
 ```yaml
 Type: Boolean
@@ -381,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDialTimeoutMS
-Specifies the time in milliseconds to wait in On-Hook mode before dialing out automatically. If a user enters a phone number and does not click dial, the system will dial the number after the number of milliseconds specified. The default is 5000. 
+Specifies the time in milliseconds to wait in On-Hook mode before dialing out automatically. If a user enters a phone number and does not click Dial, the system will dial the number after the number of milliseconds specified. The default is 5000. 
 
 ```yaml
 Type: UInt64
@@ -415,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -427,7 +433,7 @@ Microsoft.Rtc.Management.ADConnect.Schema.ADUser
 ## OUTPUTS
 
 ### System.Object
-By default, the Grant-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
+The `Set-CsIPPhonePolicy` cmdlet does not return a value or object. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 

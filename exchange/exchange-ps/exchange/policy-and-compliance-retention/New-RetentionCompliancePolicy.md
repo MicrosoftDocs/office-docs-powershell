@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-RetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -64,7 +67,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "http://contoso.sharepoint.com/sites/teams/finance"
+New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
 ```
 
 This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
@@ -134,7 +137,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Enabled
 The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
@@ -445,7 +447,17 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocation
-{{Fill TeamsChannelLocation Description}}
+The TeamsChannelLocation parameter is used to target specific Teams to include in the policy.
+
+You can use any value that uniquely identifies the Team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type:
@@ -460,7 +472,16 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocationException
-{{Fill TeamsChannelLocationException Description}}
+The TeamsChannelLocationException parameter specifies the Teams to exclude when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 
 ```yaml
 Type:
@@ -475,7 +496,19 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocation
-{{Fill TeamsChatLocation Description}}
+The TeamsChatLocation parameter is used to target specific Teams users to include in the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type:
@@ -490,7 +523,17 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocationException
-{{Fill TeamsChatLocationException Description}}
+The TeamsChatLocationException parameter specifies the Teams users to exclude when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type:
@@ -503,7 +546,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WhatIf
 The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
@@ -526,12 +568,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

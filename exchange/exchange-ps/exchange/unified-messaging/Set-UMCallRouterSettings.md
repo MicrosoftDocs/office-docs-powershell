@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-UMCallRouterSettings
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-UMCallRouterSettings [[-Server] <ServerIdParameter>] [-Confirm] [-DialPlans <MultiValuedProperty>]
- [-DomainController <Fqdn>] [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
- [-IPAddressFamilyConfigurable <$true | $false>] [-MaxCallsAllowed <Int32>] [-SipTcpListeningPort <Int32>]
- [-SipTlsListeningPort <Int32>] [-UMStartupMode <TCP | TLS | Dual>] [-WhatIf] [<CommonParameters>]
+Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
+ [-Confirm]
+ [-DialPlans <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
+ [-IPAddressFamilyConfigurable <$true | $false>]
+ [-MaxCallsAllowed <Int32>]
+ [-SipTcpListeningPort <Int32>]
+ [-SipTlsListeningPort <Int32>]
+ [-UMStartupMode <TCP | TLS | Dual>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +63,32 @@ This example removes the Exchange server named UMCallRouter001 from all UM SIP d
 
 ## PARAMETERS
 
+### -Server
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -75,7 +111,7 @@ Accept wildcard characters: False
 ### -DialPlans
 The DialPlans parameter specifies the dial plan used by the Microsoft Exchange Unified Messaging Call Router service. The Exchange server only needs to be associated with a UM dial plan if Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015 is used in your organization. To remove an Exchange server from a dial plan, use $null. The default is no dial plans assigned.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -148,31 +184,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

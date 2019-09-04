@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Import-RecipientDataProperty
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -74,13 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 

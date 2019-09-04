@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPoolUpgradeReadinessState
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsPoolUpgradeReadinessState
@@ -28,6 +32,7 @@ There are no options enabling you to run the Get-CsPoolUpgradeReadinessState cmd
 
 The functions carried out by the Get-CsPoolUpgradeReadinessState cmdlet are not available in the Skype for Business Server Control Panel.
 
+In Skype for Business Server 2019, Get-CsPoolUpgradeReadinessState cmdlet was replaced by [Get-CsUpgradeDomainInfo](Get-CsUpgradeDomainInfo.md) cmdlet.
 
 
 ## EXAMPLES
@@ -109,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

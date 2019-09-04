@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-App
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -101,23 +104,29 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the mailbox or mail user. You can use the following values:
+The Mailbox parameter specifies the identity of the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
+- Name
 
 - Alias
 
-You can't use this parameter in conjunction with the Identity parameter.
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxIdParameter

@@ -28,7 +28,6 @@ Set-PnPSite [-Classification <String>]
             [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
             [-DisableSharingForNonOwners [<SwitchParameter>]]
             [-LocaleId <UInt32>]
-            [-NewUrl <String>]
             [-RestrictedToGeo <RestrictedToRegion>]
             [-SocialBarOnSitePagesDisabled [<SwitchParameter>]]
             [-Identity <String>]
@@ -64,18 +63,18 @@ Unsets the current site classification
 Set-PnPSite -DisableFlows
 ```
 
-Disables Flows for this site
+Disables Microsoft Flow for this site, and also hides the Flow button from the ribbon
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 Set-PnPSite -DisableFlows:$false
 ```
 
-Enables Flows for this site
+Enables Microsoft Flow for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Set-PnPSite -LogoFilePath c:\images\mylogo.png
+Set-PnPSite -SiteLogoPath c:\images\mylogo.png
 ```
 
 Sets the logo if the site is a modern team site
@@ -167,7 +166,7 @@ Accept pipeline input: False
 ```
 
 ### -DisableFlows
-Disables flows for this site
+Disables Microsoft Flow for this site
 
 ```yaml
 Type: SwitchParameter
@@ -239,18 +238,6 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -NewUrl
-Specifies the language of this site collection.
-
-```yaml
-Type: String
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -NoScriptSite
 Specifies if a site allows custom script or not. See https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f for more information.
 
@@ -265,7 +252,7 @@ Accept pipeline input: False
 ```
 
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
 Type: String
@@ -289,7 +276,7 @@ Accept pipeline input: False
 ```
 
 ### -Sharing
-Specifies what the sharing capablilites are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
 
 ```yaml
 Type: SharingCapabilities
@@ -362,4 +349,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

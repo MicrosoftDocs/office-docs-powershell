@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-OnPremisesOrganization
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -25,7 +28,7 @@ Set-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter> [-Com
 ```
 
 ## DESCRIPTION
-The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with an Office 365 tenant organization. It's used in conjunction with the Hybrid Configuration wizard and is typically only modified and updated by the wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Office 365 tenant.
+The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with an Office 365 tenant organization. Typically, this object is only modified and updated by the Hybrid Configuration wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Office 365 tenant.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

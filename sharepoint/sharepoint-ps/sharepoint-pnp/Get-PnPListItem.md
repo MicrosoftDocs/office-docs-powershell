@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Get-PnPListItem
@@ -62,14 +62,14 @@ Retrieves all list items from the Tasks list
 Get-PnPListItem -List Tasks -Id 1
 ```
 
-Retrieves the list item with ID 1 from from the Tasks list
+Retrieves the list item with ID 1 from the Tasks list
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Get-PnPListItem -List Tasks -UniqueId bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3
 ```
 
-Retrieves the list item with unique id bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3 from from the tasks lists
+Retrieves the list item with unique id bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3 from the tasks lists
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
@@ -215,4 +215,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

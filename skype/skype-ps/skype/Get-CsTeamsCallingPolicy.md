@@ -5,6 +5,10 @@ online version:
 applicable: Skype for Business Online
 title: Get-CsTeamsCallingPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsTeamsCallingPolicy
@@ -35,7 +39,7 @@ Teams calling policies help determine which users are able to use calling functi
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
+Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
 ```
 
 Retrieves the calling policy with name "SalesCallingPolicy"
@@ -105,7 +109,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

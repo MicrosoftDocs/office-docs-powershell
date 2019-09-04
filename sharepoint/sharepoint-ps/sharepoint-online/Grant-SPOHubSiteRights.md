@@ -3,12 +3,15 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Grant-SPOHubSiteRights
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Grant-SPOHubSiteRights
 
 ## SYNOPSIS
-Grants rights to users or mail-enabled security groups to access the hub site.
+Grants rights to users or mail-enabled security groups to associate their site with a hub site.
 
 ## SYNTAX
 

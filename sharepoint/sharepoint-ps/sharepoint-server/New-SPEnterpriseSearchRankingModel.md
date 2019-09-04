@@ -3,6 +3,9 @@ external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchRankingModel
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchRankingModel
@@ -31,12 +34,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
-$owner = Get-SPEnterpriseSearchOwner -Level SPWeb -SPWeb http://sharepoint/team
+$owner = Get-SPEnterpriseSearchOwner -Level SPWeb -SPWeb https://sharepoint/team
 [String]$rankmodel = Get-Content .\rankModel.xml
 New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $rankmodel
 ```
 
-This example creates a ranking model for the site http://sharepoint/team for the search service application Search Service Application from the file rankModel.xml which is stored in the current directory.
+This example creates a ranking model for the site https://sharepoint/team for the search service application Search Service Application from the file rankModel.xml which is stored in the current directory.
 
 
 ## PARAMETERS

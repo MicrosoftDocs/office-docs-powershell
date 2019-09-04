@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-IntraOrganizationConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -34,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
+New-IntraOrganizationConnector -DiscoveryEndpoint https://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
 ```
 
 This example creates an Intra-Organization connector named "MainCloudConnector" between an on-premises Exchange organization and an Exchange Online organization containing two domains, Cloud1.contoso.com and Cloud2.contoso.com.

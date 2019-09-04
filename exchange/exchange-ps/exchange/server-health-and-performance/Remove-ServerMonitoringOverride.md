@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-ServerMonitoringOverride
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -19,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
- -PropertyName <String> -Server <ServerIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+ -PropertyName <String> -Server <ServerIdParameter>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter is used to specify the server from which the override is being removed.
+The Server parameter specifies the Exchange server that contains the override that you want to remove. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
 
 ```yaml
 Type: ServerIdParameter

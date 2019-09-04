@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Remove-CsOnlineVoiceRoutingPolicy
@@ -19,7 +23,7 @@ Remove-CsOnlineVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
@@ -94,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the tenant account whose online voice routing policy is being removed. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
@@ -134,7 +138,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -148,10 +152,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
+[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
+[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)

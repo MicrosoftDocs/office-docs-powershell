@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-PublicFolder
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -20,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-PublicFolder [-Identity] <PublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Recurse]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-PublicFolder [-Identity] <PublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Recurse]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,7 +121,17 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
-The Server parameter specifies the identity of the server from which to remove the public folder.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

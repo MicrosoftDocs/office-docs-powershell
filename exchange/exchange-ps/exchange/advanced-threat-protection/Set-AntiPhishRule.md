@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AntiPhishRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -18,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AntiPhishRule [-Identity] <RuleIdParameter> [-AntiPhishPolicy <AntiPhishPolicyIdParameter>]
- [-Comments <String>] [-Confirm] [-ExceptIfRecipientDomainIs <Word[]>]
- [-ExceptIfSentTo <RecipientIdParameter[]>] [-ExceptIfSentToMemberOf <RecipientIdParameter[]>] [-Name <String>]
- [-Priority <Int32>] [-RecipientDomainIs <Word[]>] [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+Set-AntiPhishRule [-Identity] <RuleIdParameter>
+ [-AntiPhishPolicy <AntiPhishPolicyIdParameter>]
+ [-Comments <String>]
+ [-Confirm]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -137,9 +148,11 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -164,9 +177,11 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -246,9 +261,11 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 
 - Name
 
+- Alias
+
 - Distinguished name (DN)
 
-- Display name
+- Canonical DN
 
 - Email address
 
@@ -269,6 +286,24 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.  
+
 ```yaml
 Type:
 Parameter Sets: (All)
@@ -302,12 +337,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

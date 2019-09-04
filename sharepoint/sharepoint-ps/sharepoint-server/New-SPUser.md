@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPUser
@@ -34,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------
 ```
-New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web http://contoso.com
+New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web https://contoso.com
 ```
 
 This example adds a new user named Jane Dow to the Contoso domain.
@@ -42,10 +45,10 @@ This example adds a new user named Jane Dow to the Contoso domain.
 
 ### ------------------EXAMPLE 2----------------------
 ```
-Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
+Get-SPWeb https://sitename | New-SPUser -UserAlias Contoso\Jdow
 ```
 
-This example adds Contoso\Jdow to all webs in the http://sitename site collection.
+This example adds Contoso\Jdow to all webs in the https://sitename site collection.
 Because this site collection uses inherited permissions, only the top-level web site needs to be touched.
 
 
@@ -70,7 +73,7 @@ Accept wildcard characters: False
 ### -Web
 Specifies the URL or GUID of the web on which to create this user.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-5678-9876-0987.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-5678-9876-0987.
 
 ```yaml
 Type: SPWebPipeBind

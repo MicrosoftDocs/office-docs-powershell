@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppHostingQuotaConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppHostingQuotaConfiguration
@@ -97,7 +100,7 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Specifies the site subscription from which to get site collections.
 
-The type must be a valid URL, in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

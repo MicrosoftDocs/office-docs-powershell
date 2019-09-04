@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Enable-CsOnlineDialInConferencingUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Enable-CsOnlineDialInConferencingUser
@@ -30,6 +34,9 @@ If the bridge information (BridgeID or BridgeName) isn't provided and the tenant
 If the bridge information isn't provided and the tenant uses multiple audio conferencing bridges, the user is then assigned to the default bridge.
 
 The audio conferencing provider name and domain information is automatically set for the user when they are enabled for audio conferencing.
+
+> [!NOTE]
+> If your conferencing provider is Microsoft, your users' conference IDs are set to Dynamic Only. This cannot be changed. Conference IDs are automatically set only for Skype for Business users enabled for Audio Conferencing. 
 
 ## EXAMPLES
 
@@ -86,8 +93,6 @@ Specifies the ConferenceId that will be used by the user for dial-in meetings. T
 The ConferenceId is already being used in the bridge where the user is assigned, or to which the user would be assigned.
 
 The ConferenceId doesn't meet the ConferenceId format requirements.
-
-ConferenceId and ResetConferenceId are mutually exclusive. When ConferenceId is specified the new ConferenceId will be assigned to the user. When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
 
 ```yaml
 Type: Int32
@@ -172,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
+This property has been deprecated.
 
 ```yaml
 Type: String
@@ -188,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
+This property has been deprecated.
 
 ```yaml
 Type: String
@@ -316,7 +321,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -332,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -341,8 +346,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

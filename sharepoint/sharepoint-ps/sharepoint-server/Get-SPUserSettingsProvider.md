@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserSettingsProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPUserSettingsProvider
@@ -33,11 +36,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$provider = Get-SPUserSettingsProvider
 
-C:\PS>$site = Get-SPSite -Identity http://someserver
+C:\PS>$site = Get-SPSite -Identity https://someserver
 
 C:\PS>$user = $site.RootWeb.CurrentUser
 
-ctx = $provider.GetProviderContext($user)
+C:\PS>$ctx = $provider.GetProviderContext($user)
 
 C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
 ```

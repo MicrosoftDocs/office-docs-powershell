@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Redirect-Message
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
@@ -18,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Redirect-Message -Server <ServerIdParameter> -Target <MultiValuedProperty> [-Confirm] [-WhatIf]
+Redirect-Message -Server <ServerIdParameter> -Target <MultiValuedProperty>
+ [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -45,7 +49,7 @@ This example drains the active messages from the delivery queues on the Mailbox 
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+The Server parameter specifies the source Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
 
@@ -54,8 +58,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Distinguished name (DN)
 
 - Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

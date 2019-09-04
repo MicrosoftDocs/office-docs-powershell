@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-SweepRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
@@ -44,6 +47,12 @@ New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -
 ```
 
 This example creates a new Sweep rule named "From Lila" in Felipe Apodaca's mailbox that moves messages from lila@fabrikam.com in the Inbox folder that are older than 10 days to the Deleted Items folder.
+### -------------------------- Example 3 --------------------------
+```
+New-SweepRule -Name "From Jeff" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender jeffm@fabrikam.com -SourceFolder "Felipe:\Sent Items" -KeepForDays 10
+```
+
+This example creates a new Sweep rule named "From Jeff" in Felipe Apodaca's mailbox that moves messages from jeffm@fabrikam.com in the Sent Items folder that are older than 10 days to the Deleted Items folder.
 
 ## PARAMETERS
 
@@ -250,13 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to create the Sweep rule. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox where you want to create the Sweep rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -289,13 +294,9 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
-The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender.
-
-For example:
+The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -422,12 +423,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

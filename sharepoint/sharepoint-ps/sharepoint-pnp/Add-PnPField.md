@@ -1,6 +1,6 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
 # Add-PnPField
@@ -236,7 +236,7 @@ Accept pipeline input: False
 ```
 
 ### -Type
-The type of the field like Choice, Note, MultiChoice
+The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype
 
 ```yaml
 Type: FieldType
@@ -277,4 +277,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

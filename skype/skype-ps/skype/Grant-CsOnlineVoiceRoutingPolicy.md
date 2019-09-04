@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Grant-CsOnlineVoiceRoutingPolicy
@@ -25,7 +29,7 @@ Grant-CsOnlineVoiceRoutingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-Domai
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
@@ -50,7 +54,7 @@ In Example 2, any per-user online voice routing policy previously assigned to th
 PS C:\> Get-CsOnlineUser | Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy"
 ```
 
-Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all users accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsOnlineVoiceRoutingPolicy` cmdlet, which assigns each user the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
+Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsOnlineVoiceRoutingPolicy` cmdlet, which assigns each user the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
 
 ## PARAMETERS
 
@@ -147,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the tenant account whose online voice routing policy is being assigned. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
@@ -187,7 +191,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -201,10 +205,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
+[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)
+[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)

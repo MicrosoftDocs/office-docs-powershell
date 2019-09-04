@@ -3,6 +3,9 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPShellAdmin
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPShellAdmin
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -database
-Specifies the GUID of the database or the Databse Object that includes the SharePoint_Shell_Access role from which the user is to be removed.
+Specifies the GUID of the database or the Database Object that includes the SharePoint_Shell_Access role from which the user is to be removed.
 If the database parameter is not specified, the configuration database is used.
 
 ```yaml
