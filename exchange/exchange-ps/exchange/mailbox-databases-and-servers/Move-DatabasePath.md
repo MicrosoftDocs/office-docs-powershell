@@ -33,7 +33,7 @@ When you use the Move-DatabasePath cmdlet, consider the following:
 
 - If the specified database is mounted when this cmdlet is run, the database is automatically dismounted and then remounted, and is unavailable to users while it's dismounted.
 
-- This cmdlet normally can be run on the affected Mailbox server only. An exception is that this cmdlet can be run on an administrator's workstation when using the ConfigurationOnly parameter with a value of $true.
+- In Exchange 2013 or earlier, you can only run this cmdlet on the affected Mailbox server. If you include the ConfigurationOnly parameter with the value $true, you can run the cmdlet on an administrator's workstation. This does not apply to Exchange 2016 or later (you can run the cmdlet anywhere).
 
 - This cmdlet can't be run against replicated mailbox databases. To move the path of a replicated database, you must first remove all replicated copies, and then you can perform the move operation. After the move operation is complete, you can add copies of the mailbox database.
 
