@@ -73,6 +73,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
+ [-DisableThrottling <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>]
@@ -2208,6 +2209,27 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableThrottling
+This parameter is available only in on-premises Exchange.
+
+The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
+
+- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
+
+- $false: Messages will be throttled after the threshold is exceeded. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
