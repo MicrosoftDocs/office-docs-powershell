@@ -1,3 +1,7 @@
+---
+title: Getting started with SharePoint Online Management Shell
+---
+
 # Getting started with SharePoint Online Management Shell #
 
 Before you get started using PowerShell to manage SharePoint Online, make sure that the SharePoint Online Management Shell is installed and you have connected to SharePoint Online.
