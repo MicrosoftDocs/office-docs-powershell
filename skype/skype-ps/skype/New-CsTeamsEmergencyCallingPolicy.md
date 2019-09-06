@@ -33,7 +33,7 @@ New-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECRP -Description "Test ECRP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode $true 
 ```
 
- This example creates a Teams Emergency Calling policy that has a identity of testECRP 
+ This example creates a Teams Emergency Calling policy that has a identity of testECRP, where a notification group and number is being defined and also the type of notification.
 
 ## PARAMETERS
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode 
+ Enable ExternalLocationLookupMode. This parameter is currently not supported.
 
 ```yaml
 Type: ExternalLocationLookupMode
