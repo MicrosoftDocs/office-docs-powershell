@@ -2,8 +2,28 @@
   "redirections": [ 
     {
        "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/new-dlpedmsschema.md",
-       "redirect_url": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/new-dlpedmschema.md",
+       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpedmschema",
        "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/get-dlpcompliancerulev2.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpcompliancerule",
+      "redirect_document_id": true
+   },
+   {
+    "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/new-dlpcompliancerulev2.md",
+    "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpcompliancerule",
+    "redirect_document_id": true
+   },
+   {
+    "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/remove-dlpcompliancerulev2.md",
+    "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpcompliancerule",
+    "redirect_document_id": true
+   },
+   {
+    "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/set-dlpcompliancerulev2.md",
+    "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancerule",
+    "redirect_document_id": true
+   }
   ] 
   }
