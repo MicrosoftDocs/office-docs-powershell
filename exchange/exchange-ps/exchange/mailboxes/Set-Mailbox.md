@@ -101,6 +101,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GMGen <$true | $false>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-IgnoreDefaultScope]
  [-ImListMigrationCompleted <$true | $false>]
@@ -381,6 +382,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-ImListMigrationCompleted <$true | $false>]
  [-ImmutableId <String>]
@@ -2882,6 +2884,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+
+You can use any value that uniquely identifies the Group Mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity, RemoveDelayHoldApplied
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HiddenFromAddressListsEnabled
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
@@ -4266,6 +4307,8 @@ This parameter is available only in the cloud-based service.
 The RemoveDelayHoldApplied switch specifies whether to remove delay holds from the mailbox. You don't need to specify a value with this switch.
 
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName HoldTracking.
+
+You can use this switch with the GroupMailbox switch to remove delay holds from group mailboxes.
 
 ```yaml
 Type: SwitchParameter
