@@ -21,7 +21,8 @@ Get-SPOTenantTaxonomyReplicationParameters [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Before you use this cmdlet, please use "Connect-SPOService" to connect to SharePoint Online first
+Before using this cmdlet, make sure you connect to Sharepoint Online using [Connect-SPOService](Connect-SPOService.md) and the desirable satellite location URL as the -Url parameter.
+
 This Cmdlet gets the replication parameters and it works to get the replication taxonomy in a Multi-Geo tenant.
 It works with the [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md) to set the parameters.
 
@@ -50,7 +51,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
-[Get-SPOTenantTaxonomyReplicationParameters](Get-SPOTenantTaxonomyReplicationParameters.md)
+[Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md)
 
 [Get-SPOTenantContentTypeReplicationParameters](Get-SPOTenantContentTypeReplicationParameters.md)
 
