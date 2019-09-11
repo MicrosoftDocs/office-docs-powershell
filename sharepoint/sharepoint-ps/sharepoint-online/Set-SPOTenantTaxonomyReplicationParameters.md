@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-SPOTenantTaxonomyReplicationParameters
 
 ## SYNOPSIS
-Select groups for replication
+Select terms groups for replication.
 
 
 ## SYNTAX
@@ -27,7 +27,8 @@ Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups <String[]> [<Common
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use �Connect-SPOService� to connect to SharePoint Online first.
+Before using this cmdlet, please use [Connect-SPOService](Connect-SPOService) to connect to SharePoint Online first using the desired satellite location URL for which you want to do the replication.
+
 By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
 satellite. 
 
