@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagBitlockerEnabled
-This parameter is reserved for internal Microsoft use.
+The AutoDagBitlockerEnabled is used to ensure that Disk Reclaimer handles spare disks correctly and encrypts them with BitLocker. If Bitlocker is used to encrypt database disks, set this to $true on all mailbox servers in the DAG (once all mailbox servers in the DAG have been upgraded to either Exchange 2013 CU13 (or later) or Exchange 2016 CU2 (or later))
 
 ```yaml
 Type: $true | $false
