@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Get-TeamUserPolicyPackageRecommendation
+title: Get-CsUserPolicyPackageRecommendations
 author: etgottli
 ms.author: etgottli
 ms.reviewer: icchan
@@ -11,7 +11,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamUserPolicyPackageRecommendation
+# Get-CsUserPolicyPackageRecommendations
 
 ## SYNOPSIS
 
@@ -20,7 +20,7 @@ This cmdlet supports retrieving recommendations for which policy packages are be
 ## SYNTAX
 
 ```
-Get-TeamUserPolicyPackageRecommendation [-Identity] <String> [<CommonParameters>]
+Get-CsUserPolicyPackageRecommendations [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ For more information on policy packages, please review https://docs.microsoft.co
 
 ### Example 1
 ```powershell
-PS C:\> Get-TeamUserPolicyPackageRecommendation -Identity johndoe@example.com
+PS C:\> Get-CsUserPolicyPackageRecommendations -Identity johndoe@example.com
 ```
 
 Returns recommendations for which policy packages are best suited for johndoe@example.com. The recommendation value per package can either be none, weak, or strong based on how confident the existing signals (e.g. license type) imply a user role.
@@ -66,8 +66,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
+[Get-CsPolicyPackages](Get-CsPolicyPackages.md)
 
-[Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
 
-[Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
+[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)
