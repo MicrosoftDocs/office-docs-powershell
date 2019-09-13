@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Get-CsUserPolicyPackageRecommendations
+title: Get-CsPolicyPackage
 author: etgottli
 ms.author: etgottli
 ms.reviewer: icchan
@@ -11,44 +11,51 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-CsUserPolicyPackageRecommendations
+# Get-CsPolicyPackage
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user.
+This cmdlet supports retrieving all the policy packages available on a tenant.
 
 ## SYNTAX
 
 ```
-Get-CsUserPolicyPackageRecommendations [-Identity] <String> [<CommonParameters>]
+Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user. This recommendation is based on tenant and user information such as license types.
+This cmdlet supports retrieving all the policy packages available on a tenant. Provide the identity of a specific policy package to retrieve its definition, including details on the policies applied with the package.
 For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsUserPolicyPackageRecommendations -Identity johndoe@example.com
+PS C:\> Get-CsPolicyPackage
 ```
 
-Returns recommendations for which policy packages are best suited for johndoe@example.com. The recommendation value per package can either be none, weak, or strong based on how confident the existing signals (e.g. license type) imply a user role.
+Returns all policy packages available on the tenant.
+
+### Example 2
+```powershell
+PS C:\> Get-CsPolicyPackage -Identity Education_PrimaryStudent
+```
+
+Returns the definition of the Education_PrimaryStudent policy package, including the policies applied with the package.
 
 ## PARAMETERS
 
 ### -Identity
 
-The user that will receive policy package recommendations.
+The name of a specific policy package. All possible policy package names can be found by running Get-CsPolicyPackage.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
@@ -66,7 +73,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackages](Get-CsPolicyPackages.md)
+[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
 
 [Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
 

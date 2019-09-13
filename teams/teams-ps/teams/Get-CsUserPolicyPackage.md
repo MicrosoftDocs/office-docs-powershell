@@ -66,8 +66,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackages](Get-CsPolicyPackages.md)
+[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[Get-CsUserPolicyPackageRecommendations](Get-CsUserPolicyPackageRecommendations.md)
+[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
 
 [Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)
