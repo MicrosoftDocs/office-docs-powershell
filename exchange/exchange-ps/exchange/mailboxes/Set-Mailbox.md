@@ -73,6 +73,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
+ [-DisableThrottling <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>]
@@ -100,6 +101,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GMGen <$true | $false>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-IgnoreDefaultScope]
  [-ImListMigrationCompleted <$true | $false>]
@@ -380,6 +382,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-ImListMigrationCompleted <$true | $false>]
  [-ImmutableId <String>]
@@ -1563,6 +1566,8 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 
 - $false: Mailbox audit logging is disabled. This is the default value.
 
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -2210,6 +2215,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableThrottling
+This parameter is available only in on-premises Exchange.
+
+The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
+
+- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
+
+- $false: Messages will be throttled after the threshold is exceeded. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the mailbox. The display name is visible in the Exchange admin center, in address lists, and in Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -2851,6 +2877,45 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+
+You can use any value that uniquely identifies the Group Mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity, RemoveDelayHoldApplied
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -4242,6 +4307,8 @@ This parameter is available only in the cloud-based service.
 The RemoveDelayHoldApplied switch specifies whether to remove delay holds from the mailbox. You don't need to specify a value with this switch.
 
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName HoldTracking.
+
+You can use this switch with the GroupMailbox switch to remove delay holds from group mailboxes.
 
 ```yaml
 Type: SwitchParameter
