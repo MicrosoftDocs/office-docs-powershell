@@ -6,7 +6,7 @@ schema: 2.0.0
 # Add-PnPListItem
 
 ## SYNOPSIS
-Adds an item to a list
+Adds an item to the list and sets the creation time to the current date and time. The author is set to the current authenticated user executing the cmdlet. In order to set the author to a different user, please refer to Set-PnPListItem.
 
 ## SYNTAX 
 

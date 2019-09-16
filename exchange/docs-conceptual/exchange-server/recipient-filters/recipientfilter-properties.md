@@ -14,9 +14,9 @@ description: "Learn about the recipient properties that you can use with the Rec
 
 # Filterable properties for the -RecipientFilter parameter
 
-Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange 2016 cmdlets.
+Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange Server 2016 or later, and Exchange Online cmdlets.
   
-You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016. The _RecipientFilter_ parameter is available in the following cmdlets:
+You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016 or later, and Exchange Online. The _RecipientFilter_ parameter is available in the following cmdlets:
   
 - [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md) and [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
     
@@ -314,6 +314,6 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
    
 ## For more information
 
-Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://go.microsoft.com/fwlink/p/?LinkId=88854).
+Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Need-help-converting-your-LDAP-filters-to-OPATH/ba-p/595108).
   
 For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](../exchange-cmdlet-syntax.md).

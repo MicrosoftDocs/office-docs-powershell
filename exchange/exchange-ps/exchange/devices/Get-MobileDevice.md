@@ -59,7 +59,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MobileDevice -Identity "TonySmith"
+Get-MobileDevice -Mailbox "TonySmith"
 ```
 
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.

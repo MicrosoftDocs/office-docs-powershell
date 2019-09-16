@@ -3,6 +3,10 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTeamsAppSetupPolicy
 schema: 2.0.0
+ms.reviewer:
+manager: bulenteg
+ms.author: tomkau
+author: tomkau
 ---
 
 # Grant-CsTeamsAppSetupPolicy

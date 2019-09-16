@@ -2,9 +2,10 @@
 external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsConferencingPolicy
@@ -1009,7 +1010,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudRecordingServiceSupport
-{{Fill CloudRecordingServiceSupport Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: CloudRecordingServiceSupport
@@ -1049,7 +1050,7 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
