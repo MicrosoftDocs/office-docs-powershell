@@ -40,6 +40,8 @@ The Backup-SPFarm cmdlet creates a backup for the entire farm or individual comp
 It can also be used to back up just the configuration settings of a farm to be used as a farm template for other SharePoint farms.
 If you want to back up a single site collection, use the Backup-SPSite cmdlet.
 
+To see the available objects to backup, use the `-ShowTree` parameter set.
+
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
@@ -64,6 +66,13 @@ Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.
+
+### --------------------EXAMPLE 4--------------------- 
+```
+Backup-SPFarm -ShowTree
+```
+
+This example shows you the available objects to backup with `Backup-SPFarm`.
 
 ## PARAMETERS
 
