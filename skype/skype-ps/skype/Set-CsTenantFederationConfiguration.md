@@ -57,7 +57,7 @@ The command shown in Example 1 disables communication with public providers for 
 
 ### -------------------------- Example 2 --------------------------
 ```
-$x = New-CsEdgeDomainPattern "fabrikam.com"
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
 Set-CsTenantFederationConfiguration -BlockedDomains @{Replace=$x}
 ```
@@ -72,7 +72,7 @@ Using the Replace method ensures that the existing blocked domains list will be 
 
 ### -------------------------- Example 3 --------------------------
 ```
-$x = New-CsEdgeDomainPattern "fabrikam.com"
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
 Set-CsTenantFederationConfiguration -BlockedDomains @{Remove=$x}
 ```
@@ -86,7 +86,7 @@ The second command in the example then uses the `Set-CsTenantFederationConfigura
 
 ### -------------------------- Example 4 --------------------------
 ```
-$x = New-CsEdgeDomainPattern "fabrikam.com"
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
 Set-CsTenantFederationConfiguration -BlockedDomains @{Add=$x}
 ```
