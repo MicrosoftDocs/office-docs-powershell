@@ -32,7 +32,7 @@ Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 ```
 
 ## DESCRIPTION
- This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience. 
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode 
+ Enable ExternalLocationLookupMode. This parameter is currently not supported.
 
 ```yaml
 Type: ExternalLocationLookupMode

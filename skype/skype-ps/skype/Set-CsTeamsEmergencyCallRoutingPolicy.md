@@ -35,7 +35,7 @@ Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 
 ### Example 1
 ```powershell
-PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices 0 -Description "test"
+PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
  This example modifies an existing Teams Emergency Call Routing Policy. 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
- Group of emergency numbers  
+ One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber?view=skype-ps) cmdlet
 
 ```yaml
 Type:
