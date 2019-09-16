@@ -42,7 +42,11 @@ This example creates a hybrid application endpoint named NewBot1 in Skype for Bu
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId for the application endpoint that is being created.
+The ApplicationId or Client Id for which the endpoint is being created.
+
+There are predefined values if you are creating an on-premises resource account for Skype for Business hybrid deployments:
+* Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
+* Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
 ```yaml
 Type: Guid
