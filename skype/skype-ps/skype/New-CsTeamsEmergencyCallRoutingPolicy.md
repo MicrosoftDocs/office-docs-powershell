@@ -22,17 +22,18 @@ New-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 ```
 
 ## DESCRIPTION
- This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration
+ This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  $ne1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
-New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$ne1} -AllowEnhancedEmergencyServices 1 -Description "test"
+PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
+New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
 ```
 
- This example creates a new Teams emergency number and create a Teams Emergency Call Routing policy with this emergency number.
+ This example first creates a new Teams emergency number object and then creates a Teams Emergency Call Routing policy with this emergency number object.
+ Note that the OnlinePSTNUsage specified in the first command must previously exist. Note that the resulting object from the New-CsTeamsEmergencyNumber only exists in memory, so you must apply it to a policy to be used.
 
 ## PARAMETERS
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
- Group of emergency numbers 
+ One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber?view=skype-ps) cmdlet
 
 ```yaml
 Type:
