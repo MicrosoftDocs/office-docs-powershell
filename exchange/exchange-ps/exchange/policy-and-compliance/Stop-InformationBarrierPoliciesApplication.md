@@ -33,12 +33,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1
 ```
 
-In this example, we are stopping information barrier policies from being applied per the policy application that has GUID *46237888-12ca-42e3-a541-3fcb7b5231d1*.
+In this example, we are stopping information barrier policies from being applied per the policy application with the specified Identity value.
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies the information barrier policy application that you want to stop. This value is a GUID that's assigned when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, 46237888-12ca-42e3-a541-3fcb7b5231d1). Another way to see this Identity value is to run the command Get-InformationBarrierPoliciesApplicationStatus -All.
 
 ```yaml
 Type: PolicyIdParameter

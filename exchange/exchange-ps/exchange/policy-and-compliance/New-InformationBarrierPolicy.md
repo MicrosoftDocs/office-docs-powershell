@@ -28,7 +28,7 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
 
 ### OrganizationSegmentsAllowed
 ```
-New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>>
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -71,7 +71,7 @@ In this example, we defined a policy that allows the *Research* segment to commu
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+The Name parameter specifies a unique name for the information barrier policy that you want to create. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedSegment
-{{ Fill AssignedSegment Description }}
+The AssignedSegment parameter specifies the Name value of segment that you want to include in the information barrier policy. You can find existing segments by running the following command: `Get-OrganizationSegment | Format-List Name,UserGroupFilter`.
 
 ```yaml
 Type: String
@@ -100,23 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SegmentsAllowed
-{{ Fill SegmentsAllowed Description }}
-
-```yaml
-Type: MultiValuedProperty>
-Parameter Sets: OrganizationSegmentsAllowed
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SegmentAllowedFilter
-{{ Fill SegmentAllowedFilter Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -130,8 +115,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SegmentsAllowed
+The SegmentsAllowed parameter specifies the segments that are allowed to communicate with the segment in this policy (users defined by the AssignedSegment parameter). Only these specified segments can communicate with the segment in this policy.
+
+You identify the segment by its Name value. If the value contains spaces, enclose the value in quotation marks ("). You can specify multiple segments separated by commas ("Segment1","Segment2",..."SegmentN").
+
+You can't use this parameter with the SegmentsBlocked parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: OrganizationSegmentsAllowed
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SegmentsBlocked
-{{ Fill SegmentsBlocked Description }}
+The SegmentsBlocked parameter specifies the segments that aren't allowed to communicate with the segment in this policy (users defined by the AssignedSegment parameter). You can specify multiple segments separated by commas ("Segment1","Segment2",..."SegmentN").
+
+You identify the segment by its Name value. If the value contains spaces, enclose the value in quotation marks ("). You can specify multiple segments separated by commas ("Segment1","Segment2",..."SegmentN").
+
+You can't use this parameter with the SegmentsAllowed parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -180,7 +188,11 @@ Accept wildcard characters: False
 ```
 
 ### -State
-{{Fill State Description}}
+The State parameter specifies whether the information barrier policy is active or inactive. Valid values are:
+
+- Active
+
+- Inactive (This is the default value.)
 
 ```yaml
 Type: EopInformationBarrierPolicyState

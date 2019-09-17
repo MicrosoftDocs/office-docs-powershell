@@ -19,12 +19,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Default (Default)
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All <$true | $false>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All <$true | $false>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ This will display information about whether all policy applications completed, f
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-InformationBarrierPoliciesApplicationStatus -All $true
+Get-InformationBarrierPoliciesApplicationStatus -All
 ```
 
 This will display information about whether policy application completed, failed, or is in progress.
@@ -49,7 +49,7 @@ This will display information about whether policy application completed, failed
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's assigned when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). Another way to see this Identity value is to run the command Get-InformationBarrierPoliciesApplicationStatus -All.
 
 ```yaml
 Type: PolicyIdParameter
@@ -64,10 +64,10 @@ Accept wildcard characters: False
 ```
 
 ### -All
-{{Fill All Description}}
+The All switch specifies whether to include ???. You don't need to specify a value with this switch.
 
 ```yaml
-Type: $true | $false
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

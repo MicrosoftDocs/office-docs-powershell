@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [[-Identity2] <RecipientIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,13 +37,26 @@ In this example, we refer to two user accounts in Office 365: *meganb* for *Mega
 ```
 Get-InformationBarrierRecipientStatus -Identity meganb
 ```
+
 In this example, we refer to one user account in Office 365: *meganb*.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies the recipient that you want to view information barrier policy information for. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
 
 ```yaml
 Type: RecipientIdParameter
@@ -52,6 +65,33 @@ Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Identity2
+The Identity2 parameter specifies an optional second recipient that you want to view information barrier policy information for. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+```yaml
+Type: RecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False

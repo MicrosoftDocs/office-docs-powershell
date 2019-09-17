@@ -34,15 +34,28 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-InformationBarrierPolicy
+Get-InformationBarrierPolicy | Format-Table Name,State,AssignedSegment,Segments* -Auto
 ```
 
-This example displays a list of information barrier policies that were defined, and their status.
+This example displays a summary list of all information barrier policies.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-InformationBarrierPolicy -Identity HR-Sales
+```
+
+This example displays detailed information for the information barrier policy named HR-Sales.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy that you want to view.
+The Identity parameter specifies the information barrier policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -57,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExoPolicyId
-{{Fill ExoPolicyId Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

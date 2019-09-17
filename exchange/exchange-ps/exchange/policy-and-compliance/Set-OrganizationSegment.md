@@ -60,7 +60,17 @@ Accept wildcard characters: False
 ```
 
 ### -UserGroupFilter
-{{ Fill UserGroupFilter Description }}
+The UserGroupFilter parameter specifies the members of the organization segment based on user attributes in an OPATH filter. The OPATH filter uses the syntax "\<Property\> -\<Comparison operator\> '\<Value\>'".
+
+- \<Property\> is a filterable attribute. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
+
+- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- \<Value\> is the attribute value.
+
+For example, "MemberOf -eq 'Engineering Department'" or "ExtensionAttribute1 -eq 'DayTrader'".
+
+Use the same attribute for all of your segments, and verify that your segments don't overlap (a user must be assigned to only one segment).
 
 ```yaml
 Type: String

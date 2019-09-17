@@ -31,15 +31,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Remove-InformationBarrierPolicy -Identity HR-Sales
 ```
 
-{{ Add example description here }}
+This example removes te information barrier policy named HR-Sales.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy that you want to remove.
+The Identity parameter specifies the information barrier policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
