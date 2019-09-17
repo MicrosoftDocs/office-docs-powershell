@@ -1831,7 +1831,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMeetingEngagement
-{{Fill EnableMeetingEngagement Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1918,7 +1918,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableViewBasedSubscriptionMode
-{{Fill EnableViewBasedSubscriptionMode Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1968,7 +1968,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicationBatchDelay
-{{Fill PublicationBatchDelay Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: UInt32
@@ -2021,7 +2021,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireContentPin
-{{Fill RequireContentPin Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -2037,7 +2037,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportModernFilePicker
-{{Fill SupportModernFilePicker Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -2053,7 +2053,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelemetryTier
-{{Fill TelemetryTier Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
