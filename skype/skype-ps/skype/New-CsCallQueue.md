@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Online
 title: New-CsCallQueue
-author: tomtau
+author: tomkau
 ms.author: tomkau
 manager: bulenteg
 ms.reviewer:

@@ -113,10 +113,6 @@ The LinkType parameter specifies the Office 365 Group property that you want to 
 
 - Subscribers
 
-- Aggregators
-
-- EventSubscribers
-
 ```yaml
 Type: LinkType
 Parameter Sets: (All)

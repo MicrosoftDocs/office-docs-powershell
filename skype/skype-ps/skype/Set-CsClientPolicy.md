@@ -4,7 +4,7 @@ applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 title: Set-CsClientPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 ---
@@ -117,7 +117,7 @@ You can even create a custom policy that gets assigned to a single user.
 Client policies can be configured at the global, site and per-user scopes.
 The `Set-CsClientPolicy` cmdlet enables you to modify any (or all) of the client policies that have been configured for use in your organization.
 
-Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values.
+Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values. When setting is null/none just means that server in band provisioning does not override default client value. Basically, default values are set by client for these cases.
 
 The following parameters are not applicable to Skype for Business Online: AddressBookAvailability, AsJob, AttendantSafeTransfer, AutoDiscoveryRetryInterval, BlockConversationFromFederatedContacts, CalendarStatePublicationInterval, ConferenceIMIdleTimeout, CustomizedHelpUrl, CustomLinkInErrorMessages, CustomStateUrl, Description, DGRefreshInterval, DisableContactCardOrganizationTab, DisableFederatedPromptDisplayName, DisableFeedsTab, DisableMeetingSubjectAndLocation, DisableOneNote12Integration, DisableOnlineContextualSearch, DisablePhonePresence, DisablePICPromptDisplayName, EnableEventLogging, EnableExchangeContactsFolder, EnableExchangeDelegateSync, EnableFullScreenVideo, EnableHighPerformanceConferencingAppSharing, EnableHighPerformanceP2PAppSharing, EnableMediaRedirection, EnableMeetingEngagement, EnableNotificationForNewSubscribers, EnableOnlineFeedback, EnableOnlineFeedbackScreenshots, EnableSQMData, EnableTracing, EnableViewBasedSubscriptionMode, EnableVOIPCallDefault, Force, HelpEnvironment, Identity, IMLatencyErrorThreshold, IMLatencySpinnerDelay, Instance, MAPIPollInterval, MaximumDGsAllowedInContactList, MaximumNumberOfContacts, MaxPhotoSizeKB, P2PAppSharingEncryption, PipelineVariable, PolicyEntry, PublicationBatchDelay, RateMyCallAllowCustomUserFeedback, RequireContentPin, SearchPrefixFlags, SPSearchCenterExternalURL, SPSearchCenterInternalURL, SPSearchExternalURL, SPSearchInternalURL, SupportModernFilePicker, TabURL, TelemetryTier, Tenant, and WebServicePollInterval
 
@@ -1831,7 +1831,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMeetingEngagement
-{{Fill EnableMeetingEngagement Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1918,7 +1918,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableViewBasedSubscriptionMode
-{{Fill EnableViewBasedSubscriptionMode Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1968,7 +1968,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicationBatchDelay
-{{Fill PublicationBatchDelay Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: UInt32
@@ -2021,7 +2021,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireContentPin
-{{Fill RequireContentPin Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -2037,7 +2037,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportModernFilePicker
-{{Fill SupportModernFilePicker Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -2053,7 +2053,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelemetryTier
-{{Fill TelemetryTier Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

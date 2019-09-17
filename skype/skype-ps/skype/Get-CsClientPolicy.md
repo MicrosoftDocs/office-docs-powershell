@@ -4,7 +4,7 @@ applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 title: Get-CsClientPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 ---
@@ -120,8 +120,8 @@ Accept wildcard characters: False
 
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-For example, to return all the policies configured at the site scope use this syntax: -Filter "site:*".
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
+For example, to return all the policies configured at the site scope use this syntax: -Filter "site:\*".
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*".
 
 ```yaml
 Type: String

@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -55,7 +55,10 @@ All other policy properties will use the default values.
 ## PARAMETERS
 
 ### -AllowAnonymousUsersToDialOut
-Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out
+Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
+
+> [!NOTE]
+> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean

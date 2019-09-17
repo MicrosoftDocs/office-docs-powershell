@@ -32,6 +32,7 @@ There are no options enabling you to run the Get-CsPoolUpgradeReadinessState cmd
 
 The functions carried out by the Get-CsPoolUpgradeReadinessState cmdlet are not available in the Skype for Business Server Control Panel.
 
+In Skype for Business Server 2019, Get-CsPoolUpgradeReadinessState cmdlet was replaced by [Get-CsUpgradeDomainInfo](Get-CsUpgradeDomainInfo.md) cmdlet.
 
 
 ## EXAMPLES
