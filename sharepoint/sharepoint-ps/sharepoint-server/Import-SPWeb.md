@@ -135,15 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forcefully overwrites the export package if it already exists.
-
-The type must be either of the following values
-
--True
-
--False
-
-The default value is False.
+This parameter has no function in this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -316,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveDeletedUserMetadataReferences
-{{Fill PreserveDeletedUserMetadataReferences Description}}
+Attempts to opulates the 'Author' ('Created By') field for items even if the SPUser object was marked as deleted on the destination site.
 
 ```yaml
 Type: SwitchParameter
