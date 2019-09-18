@@ -136,11 +136,11 @@ Accept wildcard characters: False
 ### -ClientAccessServerEnabled
 This parameter is available only in on-premises Exchange.
 
-The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outlook on the web (formerly known as Outlook Web App) and Exchange ActiveSync. Valid values are:
+The ClientAccessServerEnabled parameter specifies whether Exchange Client Access servers are allowed to authenticate clients that do not have direct access to AD RMS (for example, Outlook on the web, Exchange ActiveSync or remote Outlook Anywhere clients). Valid values are:
 
-- $true: IRM is enabled for Outlook on the web and Exchange ActiveSync. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App (https://technet.microsoft.com/library/dd876891.aspx).
+- $true: Client Access servers are allowed to authenticate clients. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App (https://technet.microsoft.com/library/dd876891.aspx).
 
-- $false: IRM is disabled for Outlook on the web and Exchange ActiveSync.
+- $false: Client Access servers aren't allowed to authenticate clients.
 
 ```yaml
 Type: $true | $false
