@@ -57,6 +57,8 @@ The Identity parameter specifies the information barrier policy that you want to
 
 - GUID
 
+You can't use this parameter with the ExOPolicyId parameter.
+
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: Identity
@@ -70,7 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExoPolicyId
-This parameter is reserved for internal Microsoft use.
+The ExOPolicyId parameter specifies the information barrier policy that you want to view, but using an alternative GUID value:
+
+- The identity of the information barrier policy from the audit logs in Exchange Online.
+
+- The GUID part of the ExoPolicyId property value in the Get-InformationBarrierRecipientStatus cmdlet results.
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
