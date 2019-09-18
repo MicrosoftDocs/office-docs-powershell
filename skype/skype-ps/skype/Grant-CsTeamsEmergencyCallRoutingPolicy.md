@@ -2,8 +2,8 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online 
 title: Grant-CsTeamsEmergencyCallRoutingPolicy
-author:danny-levin
-ms.author:dannyle
+author: danny-levin
+ms.author: dannyle
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -21,16 +21,16 @@ Grant-CsTeamsEmergencyCallRoutingPolicy [-PolicyName] <String> [-Tenant <System.
 ```
 
 ## DESCRIPTION
-{{ This cmdlet assigns a Teams Emergency Call Routing policy with one user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration. }}
+This cmdlet assigns a Teams Emergency Call Routing policy with one user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> {{ Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName TestECRP }}
+PS C:> Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName TestECRP
 ```
 
-{{ This example assigns a Teams Emergency Call Routing policy(TestECRP) to a user(user1) }}
+This example assigns a Teams Emergency Call Routing policy(TestECRP) to a user(user1)
 
 ## PARAMETERS
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{ Allows you to specify a domain controller. If no domain controller is specified, the first available will be used. }}
+Allows you to specify a domain controller. If no domain controller is specified, the first available will be used. 
 
 ```yaml
 Type: Fqdn
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Indicates the Identity of the user account the policy should be assigned to. }}
+Indicates the Identity of the user account the policy should be assigned to.
 
 ```yaml
 Type: UserIdParameter
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run. }}
+Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{ The Identity of the Teams Emergency Call Routing policy to apply to the user. }}
+The Identity of the Teams Emergency Call Routing policy to apply to the user.
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Microsoft internal usage only. }}
+Microsoft internal usage only.
 
 ```yaml
 Type: System.Guid
