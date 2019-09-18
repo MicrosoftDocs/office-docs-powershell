@@ -34,7 +34,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Remove-InformationBarrierPolicy -Identity HR-Sales
 ```
 
-This example removes te information barrier policy named HR-Sales.
+This example removes the information barrier policy named HR-Sales.
 
 ## PARAMETERS
 

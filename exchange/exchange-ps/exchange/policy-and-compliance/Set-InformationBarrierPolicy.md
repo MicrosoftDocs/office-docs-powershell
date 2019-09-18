@@ -51,7 +51,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active
 ```
 
-This example activates the information barrier policy that has the GUID value *43c37853-ea10-4b90-a23d-ab8c93772471*.
+This example activates the specified inactive information barrier policy.
 
 ## PARAMETERS
 

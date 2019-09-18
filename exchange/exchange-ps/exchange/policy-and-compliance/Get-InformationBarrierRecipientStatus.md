@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierRecipientStatus cmdlet to see whether specific user accounts are included in a segment and assigned an information barrier policy. Segments are defined by using certain attributes in [Azure Active Directory](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
+Use the Get-InformationBarrierRecipientStatus cmdlet to see whether specific user accounts are subject to information barrier policies and segments. You create segments by using the New-OrganizationSegment cmdlet.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -28,23 +28,24 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw
-```
-
-In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
-
-### -------------------------- Example 2 --------------------------
-```
 Get-InformationBarrierRecipientStatus -Identity meganb
 ```
 
-In this example, we refer to one user account in Office 365: *meganb*.
+This example returns the segment and policy assignment information for the user meganb.
 
+### -------------------------- Example 2 --------------------------
+```
+Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw
+```
+
+This example returns the information barrier policy information
+
+In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the recipient that you want to view information barrier policy information for. You can use any value that uniquely identifies the recipient. For example:
+The Identity parameter specifies the recipient that you want to view the segment and policy assignment information for. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity2
-The Identity2 parameter specifies an optional second recipient that you want to view information barrier policy information for. You can use any value that uniquely identifies the recipient. For example:
+The Identity2 parameter specifies an optional second recipient that you want to view in relation to the first recipient specified by the Identity parameter. You can use any value that uniquely identifies the second recipient. For example:
 
 - Name
 

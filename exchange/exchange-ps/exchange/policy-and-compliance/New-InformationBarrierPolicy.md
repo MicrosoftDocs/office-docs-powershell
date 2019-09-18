@@ -52,14 +52,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive
 ```
 
-In this example, we defined a policy called *Sales-Research* for a segment called *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in a segment called *Research*.
+This example creates an inactive policy named *Sales-Research* for a segment named *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in the segment named *Research*.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive
 ```
 
-In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
+This example creates an inactive policy named *Manufacturing-HR* for a segment named *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in the segment named *HR*. (In this example, Manufacturing can't communicate with users who aren't in HR.)
 
 ### -------------------------- Example 3 --------------------------
 ```

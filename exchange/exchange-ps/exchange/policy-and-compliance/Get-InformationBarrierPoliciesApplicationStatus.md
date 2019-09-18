@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to [view status of information barrier policy application](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application) 
+Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to view the application status of information barrier policies. For details see [view status of information barrier policy application](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -37,19 +37,19 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Get-InformationBarrierPoliciesApplicationStatus
 ```
 
-This will display information about whether all policy applications completed, failed, or is in progress.
+This example returns the most recent application of information barrier policies by the Start-InformationBarrierPoliciesApplication cmdlet.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-InformationBarrierPoliciesApplicationStatus -All
 ```
 
-This will display information about whether policy application completed, failed, or is in progress.
+This example returns all applications of information barrier policies by the Start-InformationBarrierPoliciesApplication cmdlet.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's assigned when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). Another way to see this Identity value is to run the command Get-InformationBarrierPoliciesApplicationStatus -All.
+The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's assigned when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). You can also find the Identity value by running the command Get-InformationBarrierPoliciesApplicationStatus -All.
 
 ```yaml
 Type: PolicyIdParameter
@@ -64,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -All
-The All switch specifies whether to include ???. You don't need to specify a value with this switch.
+The All switch specifies whether to include all applications of information barrier policies in the results. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command only returns the most recent policy application.
 
 ```yaml
 Type: SwitchParameter

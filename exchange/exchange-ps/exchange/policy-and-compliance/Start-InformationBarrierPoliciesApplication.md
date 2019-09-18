@@ -33,7 +33,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Start-InformationBarrierPoliciesApplication
 ```
 
-This applies active information barrier policies.
+This applies all active information barrier policies.
 
 ## PARAMETERS
 
