@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Stop-InformationBarrierPoliciesApplication
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Stop-InformationBarrierPoliciesApplication cmdlet to [stop the process of applying active information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-edit-segments-policies.md#stop-a-policy-application). 
+Use the Stop-InformationBarrierPoliciesApplication cmdlet to stop the process of applying information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -33,7 +36,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1
 ```
 
-This example stops information barrier policies from being applied per the policy application with the specified Identity value.
+This example stops the application of information barrier policies per the policy application with the specified Identity value.
 
 ## PARAMETERS
 
