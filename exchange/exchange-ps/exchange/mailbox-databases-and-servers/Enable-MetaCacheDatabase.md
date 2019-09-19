@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```
-Disable-MetaCacheDatabase -Server Mailbox01
+Enable-MetaCacheDatabase -Server Mailbox01
 ```
 
 This example enables the metacache database on the Exchange server named Mailbox01.
