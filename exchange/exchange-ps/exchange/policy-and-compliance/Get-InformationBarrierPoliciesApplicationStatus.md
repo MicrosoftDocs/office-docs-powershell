@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-InformationBarrierPoliciesApplicationStatus
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to view the application status of information barrier policies. For details see [view status of information barrier policy application](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application).
+Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to view the application status of information barrier policies.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -28,6 +31,8 @@ Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
+ For more information, see [View status of information barrier policy application](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
@@ -49,7 +54,7 @@ This example returns all applications of information barrier policies by the Sta
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's assigned when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). You can also find the Identity value by running the command Get-InformationBarrierPoliciesApplicationStatus -All.
+The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's displayed when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). You can also find the Identity value by running the command Get-InformationBarrierPoliciesApplicationStatus -All.
 
 ```yaml
 Type: PolicyIdParameter

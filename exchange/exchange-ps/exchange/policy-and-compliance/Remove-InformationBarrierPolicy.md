@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Remove-InformationBarrierPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -11,10 +14,9 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-InformationBarrierPolicy cmdlet to remove [information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-2-define-information-barrier-policies) from the Office 365 Security & Compliance Center. 
+Use the Remove-InformationBarrierPolicy cmdlet to remove information barrier policies from the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 
 ## SYNTAX
 
@@ -25,6 +27,8 @@ Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
+For more information, see [Information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES

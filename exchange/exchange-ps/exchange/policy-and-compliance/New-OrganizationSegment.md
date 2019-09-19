@@ -14,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-OrganizationSegment cmdlet with the UserGroupFilter parameter that corresponds to the [attribute](https://docs.microsoft.com/Office365/SecurityCompliance/information-barriers-attributes) you want to use to define segments of users in the Office 365 Security & Compliance Center.
+Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -27,6 +27,8 @@ New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
 ```
 
 ## DESCRIPTION
+For more information about the filterable attributes that you can use to define segments, see [Attributes for information barrier policies](https://docs.microsoft.com/Office365/SecurityCompliance/information-barriers-attributes).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES

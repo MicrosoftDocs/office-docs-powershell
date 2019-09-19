@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-InformationBarrierPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPolicy cmdlet to view a list of [information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-2-define-information-barrier-policies) that are defined in the Office 365 Security & Compliance Center.
+Use the Get-InformationBarrierPolicy cmdlet to view information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -28,6 +31,8 @@ Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>] [-ExoPolicyId <Gu
 ```
 
 ## DESCRIPTION
+For more information, see [Information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
@@ -72,11 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExoPolicyId
-The ExOPolicyId parameter specifies the information barrier policy that you want to view, but using an alternative GUID value:
-
-- The identity of the information barrier policy from the audit logs in Exchange Online.
-
-- The GUID part of the ExoPolicyId property value in the Get-InformationBarrierRecipientStatus cmdlet results.
+The ExOPolicyId parameter specifies the information barrier policy that you want to view, but using the GUID part of the ExoPolicyId property value from the output of the Get-InformationBarrierRecipientStatus cmdlet.
 
 You can't use this parameter with the Identity parameter.
 

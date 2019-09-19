@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-InformationBarrierPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-InformationBarrierPolicy cmdlet to create [information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies#part-2-define-information-barrier-policies) in the Office 365 Security & Compliance Center. 
+Use the New-InformationBarrierPolicy cmdlet to create information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -43,6 +46,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 ```
 
 ## DESCRIPTION
+For more information, see [Information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
@@ -66,7 +71,7 @@ This example creates an inactive policy named *Manufacturing-HR* for a segment n
 New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing" -State Inactive
 ```
 
-In this example, we defined a policy that allows the *Research* segment to communicate with only *HR* and *Manufacturing*.
+This example creates a policy that allows the *Research* segment to communicate with only *HR* and *Manufacturing*.
 
 ## PARAMETERS
 
