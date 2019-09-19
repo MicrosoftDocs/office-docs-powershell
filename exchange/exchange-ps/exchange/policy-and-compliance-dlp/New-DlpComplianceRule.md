@@ -457,6 +457,8 @@ The IncidentReportContent parameter specifies the content to include in the repo
 
 - Default
 
+- DetectionDetails
+
 - Detections
 
 - DocumentAuthor
@@ -465,13 +467,13 @@ The IncidentReportContent parameter specifies the content to include in the repo
 
 - MatchedItem
 
+- OriginalContent
+
 - RulesMatched
 
 - Service
 
 - Severity
-
-- Service
 
 - Title
 

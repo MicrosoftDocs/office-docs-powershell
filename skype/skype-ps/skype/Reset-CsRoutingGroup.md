@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsRoutingGroup
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -140,11 +141,12 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Permanent
+Permanent, takes everything back from Back End Servers and recreates the whole Routing Group.
 
-Transient
+Transient, resets the Windows Fabric service and fix any issues. Then syncs up any missing data from the RTCLocal Database.
 
-Recreate
+Recreate, deletes existing data from Windows Fabric service about the Routing Group and reloads them from RTCLocal Database.
+
 ```yaml
 Type: RgResetType
 Parameter Sets: (All)

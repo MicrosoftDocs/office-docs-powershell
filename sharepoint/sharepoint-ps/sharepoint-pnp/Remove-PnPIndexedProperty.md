@@ -12,6 +12,7 @@ Removes a key from propertybag to be indexed by search. The key and it's value r
 
 ```powershell
 Remove-PnPIndexedProperty -Key <String>
+                          [-List <ListPipeBind>]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
 ```
@@ -37,6 +38,18 @@ Parameter Sets: (All)
 Required: True
 Position: 0
 Accept pipeline input: False
+```
+
+### -List
+The list object or name from where to remove the indexed properties
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: True
 ```
 
 ### -Connection
