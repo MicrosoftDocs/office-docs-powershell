@@ -119,7 +119,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 5. **(Optional)**: If you want to connect to an Exchange Online PowerShell module session in the same window, you need to run
 
    ```PowerShell
-   $EXOSession=New-ExoPSSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
+   $EXOSession=New-ExoPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
    and then import the Exchange Online session into the current one using an specific prefix
