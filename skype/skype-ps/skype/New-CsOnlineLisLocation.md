@@ -3,8 +3,8 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOnlineLisLocation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
@@ -20,7 +20,8 @@ Typically the civic address designates the building, and locations are specific 
 ### ExistingCivicAddress (Default)
 ```
 New-CsOnlineLisLocation -CivicAddressId <Guid> -Location <String> [-CompanyName <String>]
- [-CompanyTaxId <String>] [-HouseNumberSuffix <String>] [-CityAlias <String>] [-Tenant <Guid>]
+ [-CompanyTaxId <String>] [-HouseNumberSuffix <String>] [-CityAlias <String>] [-Latitude <String>]
+ [-Longitude <String>] [-Confidence <String>] [-Elin <String>] [-Tenant <Guid>]
  [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,7 +31,8 @@ New-CsOnlineLisLocation [-Location <String>] [-CompanyName <String>] [-CompanyTa
  [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>] [-StreetSuffix <String>]
  [-PostDirectional <String>] [-PreDirectional <String>] [-City <String>] [-CityAlias <String>]
  [-StateOrProvince <String>] -CountryOrRegion <String> [-PostalCode <String>] [-Description <String>]
- [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Latitude <String>] [-Longitude <String>] [-Confidence <String>] [-Elin <String>] [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +47,14 @@ New-CsOnlineLisLocation -CivicAddressId b39ff77d-db51-4ce5-8d50-9e9c778e1617 -Lo
 This example creates a new location called "Office 101, 1st Floor" in the civic address specified by its identity.
 
 
+### -------------------------- Example 2 --------------------------
+```
+New-CsOnlineLisLocation -Location "Office 202, 2nd Floor" -CompanyName "Contoso" -HouseNumber 3910 -StreetName 163rd -StreetSuffix St -City Bellevue -StateOrProvince WA -CountryOrRegion US -PostalCode 98004 -Description "New civic address location" -Elin TEST_ELIN
+```
+
+This example creates a new civic address and a location assigned to the address. Location is called "Office 202, 2st Floor" with Elin string "TEST_ELIN"
+
+
 ## PARAMETERS
 
 ### -CivicAddressId
@@ -54,11 +64,11 @@ Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddr
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: ExistingCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -70,11 +80,11 @@ Specifies the country or region of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: Country
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -87,7 +97,20 @@ For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ExistingCivicAddress
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -103,7 +126,7 @@ Specifies the city of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -173,7 +196,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -183,7 +206,7 @@ Specifies an administrator defined description of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -223,7 +246,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -233,7 +256,7 @@ Specifies the numeric portion of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -266,7 +289,7 @@ Specifies the postal code of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -283,7 +306,7 @@ For example, "425 Smith Avenue NE".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -300,7 +323,7 @@ For example, "425 NE Smith Avenue ".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -316,7 +339,7 @@ Specifies the state or province of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: State
 Applicable: Skype for Business Online
 
@@ -332,7 +355,7 @@ Specifies the street name of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -349,7 +372,7 @@ The street suffix will typically be something like street, avenue, way, or boule
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CreateCivicAddress
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -384,6 +407,70 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confidence
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Elin
+Specifies the Emergency Location Identification Number.
+This is used in Direct Routing EGW scenarios.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Latitude
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Longitude
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
@@ -394,7 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

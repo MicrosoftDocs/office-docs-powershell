@@ -3,8 +3,8 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineLisLocation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
@@ -87,11 +87,11 @@ Specifies the identification number of the civic address that is associated with
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: UseCivicAddressId
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -104,11 +104,11 @@ For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: UseLocation
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -187,7 +187,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -209,7 +208,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -219,7 +218,7 @@ Specifies the unique identifier of the target location.
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: UseLocationId
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -236,7 +235,7 @@ If there are a large number of locations, you can limit the number of returns by
 If you limited the first cmdlet execution to 25 results, and want to look at the next 25 locations, then you leave ResultSize at 25 and set NumberOfResultsToSkip to 25 to omit the first 25 you've reviewed.
 For example the command below will return locations 26-50 for Seattle.
 
-`Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
+\`Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25\`
 
 ```yaml
 Type: Int32
@@ -262,7 +261,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -316,22 +315,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PopulateNumberOfTelephoneNumbers
 {{Fill PopulateNumberOfTelephoneNumbers Description}}
 
@@ -343,14 +326,13 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
