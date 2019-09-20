@@ -43,7 +43,7 @@
         href: exchange-server/recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
         href: exchange-server/recipient-filters/recipientfilter-properties.md
-  - name: Connect to Exchange Online PowerShell V2
+  - name: Exchange Online PowerShell V2
     href: exchange-online/connect-to-exchange-online-powershell-v2.md
   - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
