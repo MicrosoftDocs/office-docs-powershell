@@ -32,8 +32,6 @@
       items:
       - name: Connect to Exchange Online PowerShell using multi-factor authentication
         href: exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md
-    - name: Connect to Exchange Online PowerShell V2
-      href: exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell-v2.md
     - name: Find the permissions required to run any Exchange cmdlet
       href: exchange-server/find-exchange-cmdlet-permissions.md
     - name: Enable or disable access to Exchange Online PowerShell
@@ -44,7 +42,9 @@
       - name: Filterable properties for the Filter parameter
         href: exchange-server/recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: exchange-server/recipient-filters/recipientfilter-properties.md 
+        href: exchange-server/recipient-filters/recipientfilter-properties.md
+  - name: Connect to Exchange Online PowerShell V2
+    href: exchange-online/connect-to-exchange-online-powershell-v2.md
   - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
     items:

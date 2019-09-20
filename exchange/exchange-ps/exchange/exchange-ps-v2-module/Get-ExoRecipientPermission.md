@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+applicable: Exchange Online
 title: Get-ExoRecipientPermission
 schema: 2.0.0
 author: chrisda
@@ -12,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoRecipientPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the REST API Client module for Exchange Online. For more information, see <link to topic>.
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Get-ExoRecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
@@ -217,4 +218,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exo-module/get-exorecipientpermission)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission)
+

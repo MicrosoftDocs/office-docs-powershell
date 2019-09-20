@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+applicable: Exchange Online
 title: Get-ExoMailbox
 schema: 2.0.0
 author: chrisda
@@ -12,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the REST API Client module for Exchange Online. For more information, see <link to topic>.
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Get-ExoMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
@@ -401,4 +402,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exo-module/get-exomailbox)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox)

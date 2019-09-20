@@ -1,8 +1,8 @@
 ---
-title: "Use the REST API Client module for Exchange Online PowerShell"
+title: Connect to Exchange Online PowerShell V2"
 ms.author: chrisda
 author: chrisda
-manager: serdars
+manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
@@ -12,30 +12,30 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to download and use the Exchange Online V2 module to connect to Exchange Online PowerShell."
+description: "Learn how to download and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell."
 ---
-# Exchange Online PowerShell V2 Module
+# Use the Exchange Online PowerShell V2 module
 
-The Exchange Online PowerShell client module V2 enables admins to connect to their Exchange Online environments in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
+The Exchange Online PowerShell V2 module enables admins to connect to their Exchange Online environments in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
 ## What's new in the V2 module?
 
-The Exchange Online PowerShell V2 module contains a set of \~10 new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands of objects). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the new module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment.
+The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands of objects). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment.
 
 The new cmdlets in the Exchange Online PowerShell V2 module are:
 
-|**New cmdlets in Exchange Online PowerShell V2***|**Older version in remote PowerShell**|
+|**New cmdlets in the V2 module**|**Older related cmdlets**|
 |:-----|:-----|
-|Connect-ExchangeOnline|Connect-EXOPSSession <br/> or <br/> New-PSSession|
-|[Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/rest-api-client-module/get-exocasmailbox)|[Get-CASMailbox]()https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox|
-|[Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/rest-api-client-module/get-exomailbox)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
-|Get-EXORecipient|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
-|[Get-EXORecipientPermission](https://docs.microsoft.com/powershell/module/exchange/rest-api-client-module/get-exorecipientpermission)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
-|Get-EXOMailboxFolderPermission|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
+|[Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda)|[Connect-EXOPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
+|[Get-EXOCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExORestModule-chrisda)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
+|[Get-EXOMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExORestModule-chrisda)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
+|[Get-EXOMailboxFolderPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailboxfolderpermission?branch=ExORestModule-chrisda)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
+|[Get-EXORecipient](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient?branch=ExORestModule-chrisda)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
+|[Get-EXORecipientPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission?branch=ExORestModule-chrisda)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
 
 ## Install the Exchange Online PowerShell V2 module
 
-The V2 module can be downloaded from PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
+You can download the V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 ### What do you need to know before you begin?
 
@@ -59,19 +59,19 @@ The V2 module can be downloaded from PowerShell gallery [here](https://www.power
 
   <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-### New module installation
+### New V2 module installations
 
-To install the module for the first time, run the following commands:
+To install the V2 module for the first time, run the following commands:
 
 1. On your local computer, run the following command from an elevated Windows PowerShell session (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-   ```
+   ```PowerShell
    Install-Module PowershellGet -Force
    ```
 
 2. Windows PowerShell needs to be configured to run scripts, and by default, it isn't. To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window:
 
-   ```
+   ```PowerShell
    Set-ExecutionPolicy RemoteSigned
    ```
 
@@ -85,25 +85,25 @@ To install the module for the first time, run the following commands:
 
 3. From an elevated Windows PowerShell session and run the following command:
 
-   ```
+   ```PowerShell
    Install-Module -Name ExchangeOnlineManagement
    ```
 
    Enter **Y** to accept the license agreement.
 
-### Update the module
+### Update the V2 module
 
-If the module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it if necessary:
+If the V2 module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it if necessary.
 
-1. To see the version that's currently installed, run the following commands:
+1. To see the version of the V2 module that's currently installed, run the following commands:
 
-   ```
+   ```PowerShell
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-2. Run the following command to update the module to latest version that's available on PowerShell Gallery:
+2. Run the following command to update the V2 module to latest version that's available in the PowerShell Gallery:
 
-   ```
+   ```PowerShell
    Update-Module -Name ExchangeOnlineManagement
    ```
 
@@ -111,50 +111,52 @@ If the module is already installed on your computer, you can run the following c
 
 3. To confirm that the update was successful, run the following commands:
 
-   ```
+   ```PowerShell
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-### Uninstall the module
+### Uninstall the V2 module
 
 To uninstall the module, run the following command:
 
-```
+```PowerShell
 Remove-Module ExchangeOnlineManagement
 ```
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
-## Connect to Exchange Online using the Exchange Online PowerShell V2 module
+## Connect to Exchange Online using the V2 module
 
-Open the Exchange Online PowerShell V2 module and run the following commands:
+1. On your local computer, open the Exchange Online PowerShell V2 module and run the following command:
 
-```
-$UserCredential = Get-Credential
-```
+   ```PowerShell
+   $UserCredential = Get-Credential
+   ```
 
-Enter your username and password.
+   In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
 
-```
-Connect-ExchangeOnline -Credential $UserCredential
-```
+2. Run the following command:
 
-For detailed syntax and parameter information, see Connect-ExchangeOnline
+   ```PowerShell
+   Connect-ExchangeOnline -Credential $UserCredential
+   ```
 
-## Use the Exchange Online PowerShell V2 module
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda).
+
+## Components of the V2 module
 
 ### Property and PropertySets
 
-Traditional Exchange Online cmdlet output returns all possible object properties. Many of these properties were either blank or not even required in many scenarios. This behavior caused degraded performance and didn't make much sense.
+Traditional Exchange Online cmdlets return all possible object properties in their output. Many properties are often blank or not even required in many scenarios. This cmdlet output behavior caused degraded performance and didn't make much sense.
 
-The new **\*-ExO\*** cmdlets in the V2 module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into *PropertySets*. These PropertySets are simply a bucket of two or more properties and relate to the following parameters on the **\*-ExO\*** cmdlets:
+The new V2 module cmdlets have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into *PropertySets*. These PropertySets are simply buckets of two or more properties and are controlled by the following parameters on the V2 module cmdlets:
 
 - *PropertySets*: This parameter accepts one or more property set names (with or without wildcards) separated by commas.
 
   This example returns the properties that are available in the Archive and Custom property sets:
 
-  ```
+  ```PowerShell
   Get-EXOMailbox -PropertySets Archive,Custom*
   ```
 
@@ -162,43 +164,26 @@ The new **\*-ExO\*** cmdlets in the V2 module have categorized output properties
 
   This example returns the specified properties:
 
-  ```
+  ```PowerShell
   Get-EXOMailbox -Properties LitigationHoldEnabled,AuditEnabled
   ```
 
 - You can specify *PropertySets* and *Properties* in the same command. For example:
 
-  ```
+  ```PowerShell
   *Get-EXOMailbox -Properties IsMailboxEnabled, SamAccountName -PropertySets Delivery
   ```
 
-  ```
+  ```PowerShell
   Get-EXOCASMailbox -Properties EwsEnabled, MAPIBlockOutlookNonCachedMode -PropertySets ActiveSync
   ```
 
-- We've also included a Minimum (or *minset*) property set that includes a bare minimum set of properties:
+- We've also included a Minimum property set (or *minset*) that includes a bare minimum set of properties:
 
   - If you don't specify the *PropertySets* parameter, you automatically get the properties that are included in the Minimum property set.
 
   - If you specify a *PropertySets* or *Property* parameter value, you only get those specified properties.
 
-The **Get-Mailbox** cmdlet, which returns 60+ properties in commands. If you run the **Get-EXOMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
+  For example, the **Get-Mailbox** cmdlet returns at least 60 properties. If you run the **Get-EXOMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
 
-Refer to the individual **\*-ExO\*** cmdlet reference topics for more information on the *Property* and *PropertySets* parameters on each cmdlet.
-
-### Connect to Exchange Online PowerShell v2
-Though the Exchange Online PowerShell v2 module contains a set of new ~10 REST API backed CMDLETs and all the older Remote PowerShell cmdlets, a single Connect commandlet will allow to establish an RPS Session and authenticate for the new EXO Cmdlets.
-Example - 
-
-$UserCredential = Get-Credential
-Connect-ExchangeOnline -Credential $UserCredential 
-
-The first command gets the user credentials, and then stores them in the $Credential variable.
-
-The second command connects the current PowerShell session using the credentials in the $Credential. Please note that after the second command is completed, password key in $Credential variable becomes empty.
-
-After Connect-ExchangeOnline is successful, you can now run all the new V2 cmdlets as well as older Remote PowerShell cmdlets.
-
-Please see the cmdlet reference for detailed instructions on Connect-ExchangeOnline cmdlet.
-
-
+  Refer to the individual V2 module cmdlet reference topics for more information on the *Property* and *PropertySets* parameters on each cmdlet.
