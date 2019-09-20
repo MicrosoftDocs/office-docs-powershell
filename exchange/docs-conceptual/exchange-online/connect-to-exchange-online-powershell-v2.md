@@ -14,6 +14,7 @@ ms.assetid:
 search.appverid: MET150
 description: "Learn how to download and use the Exchange Online V2 module to connect to Exchange Online PowerShell."
 ---
+# Exchange Online PowerShell V2 Module
 
 The Exchange Online PowerShell client module V2 enables admins to connect to their Exchange Online environments in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
@@ -184,3 +185,20 @@ The new **\*-ExO\*** cmdlets in the V2 module have categorized output properties
 The **Get-Mailbox** cmdlet, which returns 60+ properties in commands. If you run the **Get-EXOMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
 
 Refer to the individual **\*-ExO\*** cmdlet reference topics for more information on the *Property* and *PropertySets* parameters on each cmdlet.
+
+### Connect to Exchange Online PowerShell v2
+Though the Exchange Online PowerShell v2 module contains a set of new ~10 REST API backed CMDLETs and all the older Remote PowerShell cmdlets, a single Connect commandlet will allow to establish an RPS Session and authenticate for the new EXO Cmdlets.
+Example - 
+
+$UserCredential = Get-Credential
+Connect-ExchangeOnline -Credential $UserCredential 
+
+The first command gets the user credentials, and then stores them in the $Credential variable.
+
+The second command connects the current PowerShell session using the credentials in the $Credential. Please note that after the second command is completed, password key in $Credential variable becomes empty.
+
+After Connect-ExchangeOnline is successful, you can now run all the new V2 cmdlets as well as older Remote PowerShell cmdlets.
+
+Please see the cmdlet reference for detailed instructions on Connect-ExchangeOnline cmdlet.
+
+
