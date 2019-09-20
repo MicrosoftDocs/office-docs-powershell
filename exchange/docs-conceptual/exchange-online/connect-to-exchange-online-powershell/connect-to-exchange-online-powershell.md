@@ -59,7 +59,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
-## Connect to Exchange Online PowerShell
+## Connect to Exchange Online
 
 1. On your local computer, open Windows PowerShell and run the following command.
 
@@ -115,6 +115,8 @@ If you receive errors, check the following requirements:
 - The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](../disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
+
+- If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Office 365 to connect to Exchange Online PowerShell.
 
 ## See also
 
