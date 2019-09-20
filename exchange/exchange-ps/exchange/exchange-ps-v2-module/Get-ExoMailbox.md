@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Get-ExoMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
@@ -64,7 +64,7 @@ Get-ExoMailbox
 
 ## EXAMPLES
 
-### E-------------------------- Example 1 --------------------------
+### -------------------------- Example 1 --------------------------
 ```
 {{ Add example code here }}
 ```
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

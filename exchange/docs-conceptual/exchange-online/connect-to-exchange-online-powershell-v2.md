@@ -1,5 +1,5 @@
 ---
-title: Connect to Exchange Online PowerShell V2"
+title: Exchange Online PowerShell V2"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -26,12 +26,12 @@ The new cmdlets in the Exchange Online PowerShell V2 module are:
 
 |**New cmdlets in the V2 module**|**Older related cmdlets**|
 |:-----|:-----|
-|[Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda)|[Connect-EXOPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
-|[Get-EXOCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExORestModule-chrisda)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
-|[Get-EXOMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExORestModule-chrisda)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
-|[Get-EXOMailboxFolderPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailboxfolderpermission?branch=ExORestModule-chrisda)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
-|[Get-EXORecipient](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient?branch=ExORestModule-chrisda)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
-|[Get-EXORecipientPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission?branch=ExORestModule-chrisda)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
+|[Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda)|[Connect-ExoPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
+|[Get-ExoCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExORestModule-chrisda)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
+|[Get-ExoMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExORestModule-chrisda)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
+|[Get-ExoMailboxFolderPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailboxfolderpermission?branch=ExORestModule-chrisda)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
+|[Get-ExoRecipient](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient?branch=ExORestModule-chrisda)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
+|[Get-ExoRecipientPermission](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission?branch=ExORestModule-chrisda)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
 
 ## Install the Exchange Online PowerShell V2 module
 
@@ -157,7 +157,7 @@ The new V2 module cmdlets have categorized output properties. Instead of giving 
   This example returns the properties that are available in the Archive and Custom property sets:
 
   ```PowerShell
-  Get-EXOMailbox -PropertySets Archive,Custom*
+  Get-ExoMailbox -PropertySets Archive,Custom*
   ```
 
 - *Property*: This parameter accepts one or more property names (with or without wildcards) separated by commas.
@@ -165,17 +165,17 @@ The new V2 module cmdlets have categorized output properties. Instead of giving 
   This example returns the specified properties:
 
   ```PowerShell
-  Get-EXOMailbox -Properties LitigationHoldEnabled,AuditEnabled
+  Get-ExoMailbox -Properties LitigationHoldEnabled,AuditEnabled
   ```
 
 - You can specify *PropertySets* and *Properties* in the same command. For example:
 
   ```PowerShell
-  *Get-EXOMailbox -Properties IsMailboxEnabled, SamAccountName -PropertySets Delivery
+  *Get-ExoMailbox -Properties IsMailboxEnabled, SamAccountName -PropertySets Delivery
   ```
 
   ```PowerShell
-  Get-EXOCASMailbox -Properties EwsEnabled, MAPIBlockOutlookNonCachedMode -PropertySets ActiveSync
+  Get-ExoCASMailbox -Properties EwsEnabled, MAPIBlockOutlookNonCachedMode -PropertySets ActiveSync
   ```
 
 - We've also included a Minimum property set (or *minset*) that includes a bare minimum set of properties:
@@ -184,6 +184,6 @@ The new V2 module cmdlets have categorized output properties. Instead of giving 
 
   - If you specify a *PropertySets* or *Property* parameter value, you only get those specified properties.
 
-  For example, the **Get-Mailbox** cmdlet returns at least 60 properties. If you run the **Get-EXOMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
+  For example, the **Get-Mailbox** cmdlet returns at least 60 properties. If you run the **Get-ExoMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
 
   Refer to the individual V2 module cmdlet reference topics for more information on the *Property* and *PropertySets* parameters on each cmdlet.

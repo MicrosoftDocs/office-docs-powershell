@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoCasMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Get-ExoCasMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

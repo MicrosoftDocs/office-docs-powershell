@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoRecipientPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Get-ExoRecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
@@ -64,7 +64,7 @@ Type: MultiValuedProperty]
 Parameter Sets: (All)
 Aliases:
 Accepted values: SendAs
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -73,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +120,7 @@ You can use any value that uniquely identifies the recipient. For example:
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: 0
 Default value: None
@@ -135,7 +135,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +180,7 @@ You can use any value that uniquely identifies the user or group. For example:
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Connect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://rdocs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
 
 Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to an Exchange Online organization.
 
@@ -42,7 +42,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ Connect-ExchangeOnline
 ## PARAMETERS
 
 ### -AzureADAuthorizationEndpointUri
-Azure AD Authorization endpoint Uri that can issue the OAuth2 access tokens
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue the OAuth2 access tokens.
 
 ```yaml
 Type: String
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassMailboxAnchoring
-Switch to bypass use of mailbox anchoring hint.
+The BypassMailboxAnchoring switch bypassing the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-Connection Uri for the Remote PowerShell endpoint
+The ConnectionUri parameter specifies the connection endpoint for the Remote PowerShell endpoint.
 
 ```yaml
 Type: String
@@ -101,7 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
@@ -211,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$Options = New-PSSessionOption <Settings>`), and you use the variable name as the value for this parameter (for example, $Options).
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$Options = New-PSSessionOption <Settings>`), and you use the variable name as the value for this parameter (for example, $Options).
 
 ```yaml
 Type: PSSessionOption
