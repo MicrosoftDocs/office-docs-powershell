@@ -35,7 +35,7 @@ The new cmdlets in the Exchange Online PowerShell V2 module are:
 
 ## Install the Exchange Online PowerShell V2 module
 
-The V2 module can be downloaded from PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3235.0-alpha).
+The V2 module can be downloaded from PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 ### What do you need to know before you begin?
 
