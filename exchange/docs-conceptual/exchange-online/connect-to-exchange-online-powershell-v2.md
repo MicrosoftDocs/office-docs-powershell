@@ -139,7 +139,7 @@ Enter your username and password.
 Connect-ExchangeOnline -Credential $UserCredential
 ```
 
-For detailed syntax and parameter information, see CXonnect-ExchangeOnline
+For detailed syntax and parameter information, see Connect-ExchangeOnline
 
 ## Use the Exchange Online PowerShell V2 module
 
