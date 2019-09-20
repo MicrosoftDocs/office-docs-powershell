@@ -2,7 +2,7 @@
 title: "Filterable properties for the Filter parameter"
 ms.author: chrisda
 author: chrisda
-manager: serdars
+manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
