@@ -428,7 +428,7 @@ Accept wildcard characters: False
 
 ### -EncryptAppData
 
-When set to True users will be allowed to encrypt data on their mobile apps.
+When set to True (the default value) users will be allowed to encrypt data on their mobile apps.
 
 ```yaml
 Type: Boolean
