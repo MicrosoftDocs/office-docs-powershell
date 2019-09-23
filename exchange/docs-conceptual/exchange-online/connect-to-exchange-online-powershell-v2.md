@@ -16,13 +16,15 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 ---
 # Use the Exchange Online PowerShell V2 module
 
-The Exchange Online PowerShell V2 module enables admins to connect to their Exchange Online environments in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
+The Exchange Online PowerShell V2 module enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
 ## What's new in the V2 module?
 
-The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands of objects). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment.
+The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: multiple thousands of objects). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the V2 module.
 
-The new cmdlets in the Exchange Online PowerShell V2 module are:
+The new cmdlets in the V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the V2 module for backward support. 
+
+The new cmdlets in the V2 module are listed in the following table:
 
 |**New cmdlets in the V2 module**|**Older related cmdlets**|
 |:-----|:-----|
@@ -59,7 +61,7 @@ You can download the V2 module from the PowerShell gallery [here](https://www.po
 
   <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-### New V2 module installations
+### Install EXO V2 Module 
 
 To install the V2 module for the first time, run the following commands:
 
@@ -91,7 +93,7 @@ To install the V2 module for the first time, run the following commands:
 
    Enter **Y** to accept the license agreement.
 
-### Update the V2 module
+### Update EXO V2 module
 
 If the V2 module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it if necessary.
 
@@ -115,7 +117,7 @@ If the V2 module is already installed on your computer, you can run the followin
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-### Uninstall the V2 module
+### Uninstall EXO V2 module
 
 To uninstall the module, run the following command:
 
@@ -128,13 +130,15 @@ Remove-Module ExchangeOnlineManagement
 
 ## Connect to Exchange Online using the V2 module
 
-1. On your local computer, open the Exchange Online PowerShell V2 module and run the following command:
+1. On your local computer, open a PowerShell terminal and run the following command:
 
    ```PowerShell
    $UserCredential = Get-Credential
    ```
 
    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
+   **Notes** 
+   Get-Credential doesn't work for MFA enabled accounts. For using MFA enabled-accounts, remove the Credential parameter from below command instruction.
 
 2. Run the following command:
 
@@ -144,13 +148,13 @@ Remove-Module ExchangeOnlineManagement
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda).
 
-## Components of the V2 module
+## What's new in EXO V2 Module ? 
 
 ### Property and PropertySets
 
-Traditional Exchange Online cmdlets return all possible object properties in their output. Many properties are often blank or not even required in many scenarios. This cmdlet output behavior caused degraded performance and didn't make much sense.
+Traditionally, Exchange Online RPS cmdlets return all possible object properties in their output. Many properties are often blank or not even required in many scenarios. This cmdlet output behavior caused degraded performance as it required more computation on server and added network load. In most of the scenarios, all the output properties are not required. 
 
-The new V2 module cmdlets have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into *PropertySets*. These PropertySets are simply buckets of two or more properties and are controlled by the following parameters on the V2 module cmdlets:
+The EXO V2 module cmdlets have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into *PropertySets*. Simply put, these PropertySets are buckets of two or more properties and are controlled by the following parameters on the V2 module cmdlets:
 
 - *PropertySets*: This parameter accepts one or more property set names (with or without wildcards) separated by commas.
 
