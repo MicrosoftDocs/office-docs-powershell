@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocation
-The TeamsChannelLocation parameter specifies the Team (group) mailbox for the team whose channel messages you want to include in the policy. You identify the channels by the parent team's (group) mailbox, or you can use the value All to include all Teams in the tenant. 
+The TeamsChannelLocation parameter specifies the Team (group) mailbox for the team whose channel messages you want to include in the policy. You identify the channels by the parent team's (group) mailbox, or you can use the value All to include all Teams in the tenant.
 
 You can use any value that uniquely identifies the group (team) mailbox. For example:
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocationException
-The TeamsChannelLocationException parameter specifies the Team (group) mailbox for the team whose channel messages you want to exclude in the policy when you use the value All in the TeamsChannelLocation parameter. You can use any value that uniquely identifies the group (team) mailbox. 
+The TeamsChannelLocationException parameter specifies the Team (group) mailbox for the team whose channel messages you want to exclude in the policy when you use the value All in the TeamsChannelLocation parameter. You can use any value that uniquely identifies the group (team) mailbox.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
