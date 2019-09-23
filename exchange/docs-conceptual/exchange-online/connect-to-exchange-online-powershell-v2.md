@@ -160,7 +160,7 @@ The new V2 module cmdlets have categorized output properties. Instead of giving 
   Get-ExoMailbox -PropertySets Archive,Custom*
   ```
 
-- *Property*: This parameter accepts one or more property names (with or without wildcards) separated by commas.
+- *Properties*: This parameter accepts one or more property names (with or without wildcards) separated by commas.
 
   This example returns the specified properties:
 
