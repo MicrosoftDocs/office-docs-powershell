@@ -64,7 +64,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ The ReportType parameter aggregates the data in the report by the value you spec
 ```yaml
 Type: Daily | Weekly | Monthly | Yearly
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

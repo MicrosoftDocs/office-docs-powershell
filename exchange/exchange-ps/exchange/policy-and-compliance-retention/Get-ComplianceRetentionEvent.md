@@ -57,7 +57,7 @@ The Identity parameter specifies the compliance retention event that you want to
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: 1

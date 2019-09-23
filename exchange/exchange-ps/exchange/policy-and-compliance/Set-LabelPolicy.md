@@ -79,7 +79,7 @@ The Identity parameter specifies the policy that you want to view. You can use a
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
@@ -96,7 +96,7 @@ Locations whose initial distributions succeeded aren't included in the retry. Po
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RetryDistribution
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -263,7 +263,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 ```yaml
 Type: String
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -301,7 +301,7 @@ The Enabled parameter enables or disable the policy. Valid values are:
 ```yaml
 Type: $true | $false
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -316,7 +316,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -408,7 +408,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

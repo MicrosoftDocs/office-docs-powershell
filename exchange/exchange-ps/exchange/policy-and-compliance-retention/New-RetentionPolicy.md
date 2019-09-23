@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-RetentionPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-RetentionId <Guid>] [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>] 
- [-WhatIf] [-IsDefault] [-IsDefaultArbitrationMailbox] [<CommonParameters>]
+New-RetentionPolicy [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IsDefault]
+ [-IsDefaultArbitrationMailbox]
+ [-RetentionId <Guid>]
+ [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,6 +107,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsDefault
+This parameter is reserved for internal Microsoft use.
+
+To set the default retention policy for new mailboxes, use the RetentionPolicy parameter on the Set-MailboxPlan cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefaultArbitrationMailbox
+This parameter is available only in the cloud-based service.
+
+The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetentionId
 The RetentionId parameter specifies the identity of the retention policy to ensure mailboxes moved from an on-premises Exchange deployment to the cloud continue to have the same retention policy applied to them. The RetentionId parameter is used in cross-premises deployments. You don't need to specify this parameter in on-premises-only deployments.
 
@@ -140,40 +179,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-This parameter is reserved for internal Microsoft use.
-
-To set the default retention policy for new mailboxes, use the RetentionPolicy parameter on the Set-MailboxPlan cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefaultArbitrationMailbox
-This parameter is available only in the cloud-based service.
-
-The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

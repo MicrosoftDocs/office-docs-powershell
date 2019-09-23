@@ -52,7 +52,7 @@ The Identity parameter specifies the sensitivity label that you want to remove. 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1

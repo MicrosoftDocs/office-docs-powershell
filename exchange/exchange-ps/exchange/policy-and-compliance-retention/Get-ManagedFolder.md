@@ -110,7 +110,7 @@ The Mailbox parameter specifies the mailbox that you want to view. You can use a
 - SamAccountName
 
 - User ID or user principal name (UPN)
- 
+
 This cmdlet retrieves all the folders that apply to the specified mailbox.
 
 ```yaml

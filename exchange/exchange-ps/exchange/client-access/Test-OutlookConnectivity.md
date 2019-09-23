@@ -522,7 +522,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. Valid values are:
 
-- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, httpS://CAS01). 
+- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, httpS://CAS01).
 
 - External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
 

@@ -35,7 +35,7 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
  [-IsOutOfService <$true | $false>]
- [-RemoveAlternateServiceAccountCredentials] 
+ [-RemoveAlternateServiceAccountCredentials]
  [-WhatIf] [<CommonParameters>]
 ```
 
