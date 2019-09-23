@@ -184,11 +184,11 @@ The new V2 module cmdlets have categorized output properties. Instead of giving 
 
   - If you specify a *PropertySets* or *Property* parameter value, you only get those specified properties.
 
+  This command returns the MinSet of properties for this cmdlet as documented here [TODO: Add Hyperlink]
+
   ```PowerShell
   Get-ExoMailbox -ResultSize 10
   ```
-  Above cmdlet will return the MinSet of properties for this cmdlet as documented here [TODO: Add Hyperlink]
-
   For example, the **Get-Mailbox** cmdlet returns at least 60 properties. If you run the **Get-ExoMailbox** cmdlet with specific *Property* or *PropertySets* parameter values, the output object will contain only those specific properties, and the time it takes to return those results will be much faster.
 
   Refer to the individual V2 module cmdlet reference topics for more information on the *Property* and *PropertySets* parameters on each cmdlet.
