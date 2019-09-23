@@ -20,7 +20,7 @@ The Exchange Online PowerShell V2 module enables admins to connect to their Exch
 
 ## What's new in the V2 module?
 
-The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: multiple thousands of objects ). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdletsin the V2 Module use modern auth for authentication. You can't use Basic Auth to use the V2 module.
+The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: multiple thousands of objects). It also contains the 700+ older remote PowerShell cmdlets baked into the same module. Note that after you install the V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the V2 module.
 
 The new cmdlets in the Exchange Online PowerShell V2 module are meant to replace their older RPS Cmdlets. However, the older, less-performant, RPS counterpart is still available in the V2 module for backward support. 
 
