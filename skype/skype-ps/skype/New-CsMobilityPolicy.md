@@ -287,7 +287,7 @@ Accept wildcard characters: False
 
 ### -AllowAutomaticPstnFallback
 
-{{Fill AllowAutomaticPstnFallback Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -322,6 +322,8 @@ Accept wildcard characters: False
 ### -AllowDeviceContactsSync
 
 When set to True (the default value) users will be allowed to sync device contacts on the mobile apps.
+
+More information: [How to disable CallKit integration for Skype for Business iOS](https://docs.microsoft.com/SkypeForBusiness/troubleshoot/server-phone-system/disable-callkit-integration).
 
 ```yaml
 Type: Boolean
@@ -426,7 +428,7 @@ Accept wildcard characters: False
 
 ### -EncryptAppData
 
-When set to True users will be allowed to encrypt data on their mobile apps.
+When set to True (the default value) users will be allowed to encrypt data on their mobile apps.
 
 ```yaml
 Type: Boolean
@@ -443,7 +445,7 @@ Accept wildcard characters: False
 
 ### -RequireIntune
 
-{{Fill RequireIntune Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
