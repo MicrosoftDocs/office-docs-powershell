@@ -61,7 +61,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 Unable to create MailboxSession object to access the mailbox \[user@consoto.com\]. Detailed error information: \[Microsoft.Exchange.Data.Storage.WrongServerException\]: The user and the mailbox are in different Active Directory sites. Inner error \[Microsoft.Mapi.MapiExceptionMailboxInTransit\]: MapiExceptionMailboxInTransit: Detected site violation \(hr=0x0, ec=1292\)
 
-When you receive this error, run the command again on the server that's hosting the active mailbox database copy to verify that IMAP works for the mailbox. 
+When you receive this error, run the command again on the server that's hosting the active mailbox database copy to verify that IMAP works for the mailbox.
 
 ## EXAMPLES
 

@@ -62,7 +62,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ The UserName parameter filters the results by user. You identify the user by the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

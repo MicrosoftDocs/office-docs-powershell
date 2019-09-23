@@ -57,7 +57,7 @@ The Identity parameter specifies the sensitivity label that you want to view. Yo
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: 1

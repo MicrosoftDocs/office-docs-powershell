@@ -3,7 +3,7 @@ title: "Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exc
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: exchange-server-itpro
