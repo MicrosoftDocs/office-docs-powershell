@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

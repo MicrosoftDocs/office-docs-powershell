@@ -3,7 +3,7 @@ title: "Exchange cmdlet syntax"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 
+ms.date:
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online

@@ -169,7 +169,7 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - All: Block access to everyone except the owner and the last modifier.
 
 - PerUser: Block access to external users.
- 
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
