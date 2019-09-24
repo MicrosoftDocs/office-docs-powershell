@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
- [-Confirm] [-DomainController <Fqdn>] [-DomainType <Authoritative | ExternalRelay | InternalRelay>]  
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DomainType <Authoritative | ExternalRelay | InternalRelay>]
  [-WhatIf] [<CommonParameters>]
 ```
 

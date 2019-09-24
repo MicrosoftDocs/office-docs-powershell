@@ -3,7 +3,7 @@ title: "Connect to Office 365 Security & Compliance Center PowerShell using mult
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 
+ms.date:
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-security-and-compliance

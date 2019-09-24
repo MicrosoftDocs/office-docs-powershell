@@ -3,7 +3,7 @@ title: "Control remote PowerShell access to Exchange servers"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: exchange-server-itpro

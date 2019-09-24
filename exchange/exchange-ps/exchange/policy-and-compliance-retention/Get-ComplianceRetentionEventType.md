@@ -57,7 +57,7 @@ The Identity parameter specifies the retention event type that you want to view.
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: 1
@@ -74,7 +74,7 @@ If you don't use this switch, the ComplianceTag property will always appear empt
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

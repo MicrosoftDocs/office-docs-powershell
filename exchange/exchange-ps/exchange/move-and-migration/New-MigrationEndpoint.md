@@ -103,7 +103,7 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>
 
 ### Gmail
 ```
-New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>] 
+New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -118,7 +118,7 @@ New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
  [-Confirm]
- [-DomainController <Fqdn>] 
+ [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
