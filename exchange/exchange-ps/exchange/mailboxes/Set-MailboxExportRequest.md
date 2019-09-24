@@ -27,7 +27,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-RehomeRequest]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-RequestExpiryInterval <Unlimited>] 
+ [-RequestExpiryInterval <Unlimited>]
  [-WhatIf] [<CommonParameters>]
 ```
 

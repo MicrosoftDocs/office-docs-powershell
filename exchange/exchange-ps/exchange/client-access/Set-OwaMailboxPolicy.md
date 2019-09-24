@@ -217,7 +217,7 @@ The AdditionalStorageProvidersAvailable parameter specifies whether to allow add
 
 - $true: Additional storage providers are enabled in Outlook on the web. Users can connect their additional storage providers and share files over email. This is the default value.
 
-- $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email. 
+- $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email.
 
 ```yaml
 Type: $true | $false
@@ -300,7 +300,7 @@ If the same file types are specified in multiple lists:
 
 - The Block list overrides the Allow list and the Force Save list.
 
-- The Force Save list overrides the Allow list. 
+- The Force Save list overrides the Allow list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -333,7 +333,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -354,7 +354,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - NoComputers: Offline mode is disabled.
 
-- AllComputers: Offline mode is available for public and private computer sessions. This is the default value. 
+- AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
 When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
@@ -383,7 +383,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -424,7 +424,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -803,7 +803,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -838,7 +838,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty

@@ -170,7 +170,7 @@ This parameter only applies to calendar folders.
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

@@ -4,8 +4,8 @@ applicable: Skype for Business Online
 title: Test-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
@@ -13,7 +13,7 @@ ms.reviewer:
 
 
 ## SYNOPSIS
-Use the `Test-CsOnlineLisCivicAddress` cmdlet to verify that a civic address exists in the master street address guide (MSAG), and is suitable for emergency dispatch.
+Use the \`Test-CsOnlineLisCivicAddress\` cmdlet to verify that a civic address exists in the master street address guide (MSAG), and is suitable for emergency dispatch.
 
 
 ## SYNTAX
@@ -35,14 +35,14 @@ Test-CsOnlineLisCivicAddress -CompanyName <String> [-CompanyTaxId <String>] [-Ho
 
 
 ## DESCRIPTION
-The `Test-CsOnlineLisCivicAddress` cmdlet operates in two modes.
+The \`Test-CsOnlineLisCivicAddress\` cmdlet operates in two modes.
 
 Validate and report: When called along with a list of address parameters, the cmdlet will test the address and report the result.
-Neither the address, nor the validation status is saved in the Location Information Service (LIS.) Use this mode to verify the address before creating it using the `New-CsOnlineLisCivicAddress` cmdlet.
+Neither the address, nor the validation status is saved in the Location Information Service (LIS.) Use this mode to verify the address before creating it using the \`New-CsOnlineLisCivicAddress\` cmdlet.
 
 Validate and save: When called with only the CivicAddressId parameter specified, the cmdlet will test the address and, if validated, save the validation status in the Location Information Service (LIS.)
 
-The `Test-CsOnlineLisCivicAddress` produces three results:
+The \`Test-CsOnlineLisCivicAddress\` produces three results:
 
 Accepted as is: The address entered (validate and report mode), or specified (validate and save mode) is valid.
 
@@ -51,7 +51,6 @@ The changes required are specified in the output.
 
 Rejected: The address entered or specified cannot be found, and no suggested changes can be defined.
 The output will contain the reason the validation failed.
-
 
 ## EXAMPLES
 
@@ -76,15 +75,15 @@ This examples tests the emergency dispatch suitability for the civic address spe
 ### -CivicAddressId
 Specifies the identification number of the civic address to test.
 If specified, no other address definition parameters are allowed.
-Civic address identities can be discovered by using the `Get-CsOnlineLisCivicAddress` cmdlet.
+Civic address identities can be discovered by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: TestWithExistingAddr
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -96,11 +95,11 @@ Specifies the name of your organization.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -112,11 +111,11 @@ Specifies the country or region of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -128,7 +127,7 @@ Specifies the city of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -144,7 +143,7 @@ PARAMVALUE: String
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -160,7 +159,7 @@ Specifies an administrator defined description of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -178,7 +177,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -200,7 +198,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -210,7 +208,7 @@ Specifies the numeric portion of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -227,7 +225,7 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -243,7 +241,7 @@ Specifies the postal code of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -260,7 +258,7 @@ For example, "425 Smith Avenue NE".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -277,7 +275,7 @@ For example, "425 NE Smith Avenue ".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -293,7 +291,7 @@ Specifies the state or province of the new civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -309,7 +307,7 @@ Specifies the street name of the civic address.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -326,7 +324,7 @@ The street suffix will typically be something like street, avenue, way, or boule
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: TestWithNewAddr
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -354,12 +352,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-The address accepts pipelined input from the `Get-CsOnlineLisCivicAddress` cmdlet.
+The address accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
 ## OUTPUTS
 

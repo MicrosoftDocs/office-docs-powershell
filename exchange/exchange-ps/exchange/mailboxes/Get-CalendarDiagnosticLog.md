@@ -321,7 +321,7 @@ The ExactMatch parameter specifies whether to use an exact match or a partial ma
 
 A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
 
-You only use this parameter with the Subject parameter. 
+You only use this parameter with the Subject parameter.
 
 The value of this parameter is ignored when you use the MeetingId parameter.
 

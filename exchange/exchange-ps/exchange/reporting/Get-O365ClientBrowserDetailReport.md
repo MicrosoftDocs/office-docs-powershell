@@ -85,7 +85,7 @@ The Browser parameter filters the report by browser. If you don't use this param
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ The BrowserVersion parameter filters the report by browser version. If you don't
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Use the short date format that's defined in the Regional Options settings on the
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The WindowsLiveID parameter filters the report by user ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
