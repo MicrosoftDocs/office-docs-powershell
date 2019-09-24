@@ -4,8 +4,8 @@ applicable: Skype for Business Online
 title: Get-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
@@ -136,7 +136,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -158,7 +157,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -185,7 +184,7 @@ If there are a large number of civic addresses, you can limit the number of retu
 If you limited the first cmdlet execution to 25 results, and want to look at the next 25 locations, then you leave ResultSize at 25 and set NumberOfResultsToSkip to 25 to omit the first 25 you've reviewed.
 For example the command below will return civic addresses 26-50 for Seattle.
 
-`Get-CsOnlineLisCivicAddress -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
+\`Get-CsOnlineLisCivicAddress -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25\`
 
 ```yaml
 Type: Int32
@@ -211,7 +210,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -265,22 +264,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PopulateNumberOfTelephoneNumbers
 {{Fill PopulateNumberOfTelephoneNumbers Description}}
 
@@ -292,14 +275,13 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

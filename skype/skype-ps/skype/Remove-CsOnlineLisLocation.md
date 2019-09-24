@@ -4,15 +4,15 @@ applicable: Skype for Business Online
 title: Remove-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
 # Remove-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the `Remove-CsOnlineLisLocation` cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
+Use the \`Remove-CsOnlineLisLocation\` cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
 
 ## SYNTAX
 ```
@@ -37,7 +37,7 @@ This example removes the location specified by its identity.
 
 ### -LocationId
 Specifies the unique identifier of the location to be deleted.
-Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
+Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` cmdlet.
 
 ```yaml
 Type: Guid
@@ -45,7 +45,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -63,7 +63,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -97,7 +97,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -130,18 +130,18 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-This cmdlet supports pipelined input from the `Get-CsOnlineLisLocation` cmdlet.
+This cmdlet supports pipelined input from the \`Get-CsOnlineLisLocation\` cmdlet.
 
 ## OUTPUTS
 

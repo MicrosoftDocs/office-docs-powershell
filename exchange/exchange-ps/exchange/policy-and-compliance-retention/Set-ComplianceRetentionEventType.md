@@ -50,7 +50,7 @@ The Identity parameter specifies the retention event type that you want to modif
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
@@ -65,7 +65,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

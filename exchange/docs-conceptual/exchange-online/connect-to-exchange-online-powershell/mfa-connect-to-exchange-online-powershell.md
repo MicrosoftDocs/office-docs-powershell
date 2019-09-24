@@ -2,7 +2,8 @@
 title: "Connect to Exchange Online PowerShell using multi-factor authentication"
 ms.author: chrisda
 author: chrisda
-ms.date: 10/24/2017
+manager: dansimp
+ms.date:
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
@@ -13,10 +14,11 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 ---
 
 # Connect to Exchange Online PowerShell using multi-factor authentication
+
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
-> • Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Exchange Online PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/>• The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> • Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Exchange Online PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
@@ -27,6 +29,8 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
   - Windows 10
 
   - Windows 8.1
+
+  - Windows Server 2019
 
   - Windows Server 2016
 
@@ -54,13 +58,13 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 - Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
 
-  ```
+  ```PowerShell
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
 
-  ```
+  ```PowerShell
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
@@ -79,7 +83,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 2. The command that you need to run uses the following syntax:
 
-   ```
+   ```PowerShell
    Connect-EXOPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
@@ -96,13 +100,13 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
      This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
 
-     ```
+     ```PowerShell
      Connect-EXOPSSession -UserPrincipalName chris@contoso.com
      ```
 
      This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
 
-     ```
+     ```PowerShell
      Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
      ```
 
@@ -119,7 +123,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Exchange Online Remote PowerShell Module window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect all currently open PowerShell sessions in the current window, run the following command:
 
-```
+```PowerShell
 Get-PSSession | Remove-PSSession
 ```
 

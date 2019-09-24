@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-Clutter -Identity <MailboxIdParameter> [<CommonParameters>]```
+Get-Clutter -Identity <MailboxIdParameter> [<CommonParameters>]
+```
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
@@ -54,9 +55,9 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 
 - GUID
 
-- LegacyExchangeDN 
+- LegacyExchangeDN
 
-- SamAccountName 
+- SamAccountName
 
 - User ID or user principal name (UPN)
 

@@ -4,15 +4,15 @@ applicable: Skype for Business Online
 title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: junya
+ms.author: junya
 ms.reviewer:
 ---
 
 # Set-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated.
+Use the \`Set-CsOnlineLisCivicAddress\` cmdlet to modify an existing civic address which has not been validated.
 Validated civic addresses cannot be modified.
 
 ## SYNTAX
@@ -22,7 +22,8 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
  [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>] [-StreetSuffix <String>]
  [-PreDirectional <String>] [-PostDirectional <String>] [-City <String>] [-CityAlias <String>]
  [-StateOrProvince <String>] [-CountryOrRegion <String>] [-PostalCode <String>] [-Description <String>]
- [-ValidationStatus <String>] [-Tenant <System.Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [-ValidationStatus <String>] [-Latitude <String>] [-Longitude <String>] [-Confidence <String>]
+ [-Elin <String>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -40,6 +41,14 @@ Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024
 This example modifies the description and company name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
 
 
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Longitude 12 -Latitude 34 -ELIN MICROSOFT_ELIN
+```
+
+This example modifies the latitude, longitude and ELIN name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
+
+
 ## PARAMETERS
 
 ### -CivicAddressId
@@ -51,7 +60,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,7 +142,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -199,7 +208,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -380,13 +389,74 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confidence
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Elin
+Specifies the Emergency Location Identification Number.
+This is used in Direct Routing EGW scenarios.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Latitude
+Specifies the angular distance of a place north or south of the earth's equator.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Longitude
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

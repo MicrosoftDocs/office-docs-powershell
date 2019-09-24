@@ -280,7 +280,7 @@ The DisplaySenderName parameter specifies whether to show the sender's Display N
 
 - $true: Sender names are displayed in messages sent to recipients in the remote domain. This is the default value.
 
-- $false. Sender names aren't displayed in messages sent to recipients in the remote domain. 
+- $false. Sender names aren't displayed in messages sent to recipients in the remote domain.
 
 ```yaml
 Type: $true | $false
@@ -429,7 +429,7 @@ The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information 
 - $true: The diagnostic information of an NDR includes details that help administrators troubleshoot delivery problems. This detailed information includes internal server names. This is the default value.
 
 - $false: The diagnostic information section in the NDR body as well as internal server headers from the attached original message headers are removed from the NDR.
- 
+
 This parameter is meaningful only when the value of the NDREnabled parameter is $true.
 
 ```yaml
@@ -494,7 +494,7 @@ The PreferredInternetCodePageForShiftJis parameter specifies the specific code p
 - 50221: Use ESC-2022-JP codepage.
 
 - 50222: Use SIO-2022-JP codepage.
-- 
+
 - Undefined: No codepage is defined. This is the default value.
 
 ```yaml

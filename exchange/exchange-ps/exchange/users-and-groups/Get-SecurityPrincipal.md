@@ -21,10 +21,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-SecurityPrincipal [[-Identity] <ExtendedSecurityPrincipalIdParameter>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IncludeDomainLocalFrom <SmtpDomain>] 
- [-OrganizationalUnit <ExtendedOrganizationalUnitIdParameter>] [-ResultSize <Unlimited>] [-RoleGroupAssignable]
- [-Types <MultiValuedProperty>] [<CommonParameters>]
+Get-SecurityPrincipal [[-Identity] <ExtendedSecurityPrincipalIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IncludeDomainLocalFrom <SmtpDomain>]
+ [-OrganizationalUnit <ExtendedOrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-RoleGroupAssignable]
+ [-Types <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
