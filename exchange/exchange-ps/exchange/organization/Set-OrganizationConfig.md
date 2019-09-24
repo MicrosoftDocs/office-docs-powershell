@@ -302,9 +302,9 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
-### -------------------------- Example 6 -------------------------- 
+### -------------------------- Example 6 --------------------------
 ```
-Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15" 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15"
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
@@ -2363,7 +2363,7 @@ This parameter is available only in the cloud-based service.
 
 The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
 
-- $true: Web Push Notifications are disabled. 
+- $true: Web Push Notifications are disabled.
 
 - $false: Web Push Notifications are enabled. This is the default value.
 
@@ -2384,7 +2384,7 @@ This parameter is available only in the cloud-based service.
 
 The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
-- $true: Suggested Replies are disabled. 
+- $true: Suggested Replies are disabled.
 
 - $false: Suggested Replies are enabled. This is the default value.
 

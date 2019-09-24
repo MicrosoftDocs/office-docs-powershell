@@ -68,7 +68,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] 
+ [-ModerationEnabled <$true | $false>]
  [-Notes <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -1122,10 +1122,10 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group. 
+The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group.
 
 - To change the value to $true, use this switch without a value.
-- 
+
 - To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
 
 ```yaml

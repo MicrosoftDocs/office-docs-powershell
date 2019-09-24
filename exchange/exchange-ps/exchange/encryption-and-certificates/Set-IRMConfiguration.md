@@ -98,7 +98,7 @@ The AutomaticServiceUpdateEnabled parameter specifies whether to allow the autom
 
 - $true: New Azure Information Protection features announced through Office 365 message center will be enabled automatically in your cloud-based organization. This is the default value.
 
-- $false: Prevents new Azure Information Protection features from automatically being introduced into your tenant organization. 
+- $false: Prevents new Azure Information Protection features from automatically being introduced into your tenant organization.
 
 ```yaml
 Type: $true | $false

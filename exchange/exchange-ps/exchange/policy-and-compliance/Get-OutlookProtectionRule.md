@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

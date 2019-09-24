@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -23,7 +26,7 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-DisclaimerText <String>]
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
- [-Image <Byte[]>] 
+ [-Image <Byte[]>]
  [-IntroductionText <String>]
  [-OTPEnabled <$true | $false>]
  [-PortalText <String>]
@@ -70,7 +73,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 
 - $null \(blank\). This is the default value.
 
-For the list of available hex and text values, see Background colors for Office 365 Message Encryption (https://support.office.com/article/1508cb35-c5ff-4523-b579-947b21d5515f). 
+For the list of available hex and text values, see Background colors for Office 365 Message Encryption (https://support.office.com/article/1508cb35-c5ff-4523-b579-947b21d5515f).
 
 ```yaml
 Type: String
@@ -114,7 +117,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalMailExpiryInDays 
+### -ExternalMailExpiryInDays
 This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
 
 The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
