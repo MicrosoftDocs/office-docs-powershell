@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOnlineLisLocation
 schema: 2.0.0
@@ -66,7 +66,7 @@ Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddr
 ```yaml
 Type: Guid
 Parameter Sets: ExistingCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -99,7 +99,7 @@ For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 ```yaml
 Type: String
 Parameter Sets: ExistingCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -128,7 +128,7 @@ Specifies the city of the civic address.
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -144,7 +144,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -176,7 +176,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -208,7 +208,7 @@ Specifies an administrator defined description of the civic address.
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -242,7 +242,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -258,7 +258,7 @@ Specifies the numeric portion of the civic address.
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -275,7 +275,7 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -291,7 +291,7 @@ Specifies the postal code of the civic address.
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -308,7 +308,7 @@ For example, "425 Smith Avenue NE".
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -325,7 +325,7 @@ For example, "425 NE Smith Avenue ".
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -357,7 +357,7 @@ Specifies the street name of the civic address.
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -374,7 +374,7 @@ The street suffix will typically be something like street, avenue, way, or boule
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -390,7 +390,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -422,7 +422,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -439,7 +439,7 @@ This is used in Direct Routing EGW scenarios.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -455,7 +455,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -471,7 +471,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
