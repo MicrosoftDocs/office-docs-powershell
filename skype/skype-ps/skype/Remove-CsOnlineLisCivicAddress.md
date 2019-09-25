@@ -150,13 +150,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-This cmdlet accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+### This cmdlet accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
 ## OUTPUTS
 
-###
-None
+### None
 
 ## NOTES
 
