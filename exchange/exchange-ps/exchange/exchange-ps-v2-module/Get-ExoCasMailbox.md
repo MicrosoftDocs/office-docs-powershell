@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoCasMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-ExoCasMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
@@ -80,7 +80,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 Type: String
 Parameter Sets: Anr
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +95,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +190,7 @@ For more information, see Filterable properties for the -Filter parameter (https
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +227,7 @@ You can't use this parameter with the Anr parameter.
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: 0
 Default value: None
@@ -250,7 +250,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -259,13 +259,15 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+The PropertySets parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+
+For more information about the available properties, see [Property sets in Exchange Online PowerShell V2 cmdlets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/cmdlet-property-sets).
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -274,14 +276,32 @@ Accept wildcard characters: False
 ```
 
 ### -PropertySets
-{{ Fill PropertySets Description }}
+The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
+
+- Minimum (this is the default value)
+
+- ActiveSync
+
+- Ews
+
+- Imap
+
+- Mapi
+
+- Pop
+
+- ProtocolSettings
+
+You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+
+For more information about the properties that are included in each property set, see [Property sets in Exchange Online PowerShell V2 cmdlets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/cmdlet-property-sets).
 
 ```yaml
 Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: Minimum, All, ProtocolSettings, Pop, Imap, ActiveSync, Mapi, Ews
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -310,7 +330,7 @@ To see these values, you need to use a formatting cmdlet. For example, Get-CasMa
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -325,7 +345,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +360,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

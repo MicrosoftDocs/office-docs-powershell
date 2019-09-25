@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-ExoMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-ExoMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
@@ -23,11 +23,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity (Default)
 ```
-Get-ExoMailbox
+Get-ExoMailbox [[-Identity] <String>]
  [-Archive]
  [-ExternalDirectoryObjectId <Guid>]
  [-Filter <String>]
- [[-Identity] <String>]
  [-InactiveMailboxOnly]
  [-IncludeInactiveMailbox]
  [-MailboxPlan <String>]
@@ -43,8 +42,7 @@ Get-ExoMailbox
 
 ### Anr
 ```
-Get-ExoMailbox
- [-Anr <String>]
+Get-ExoMailbox [-Anr <String>]
  [-Archive]
  [-Filter <String>]
  [-InactiveMailboxOnly]
@@ -90,7 +88,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 Type: String
 Parameter Sets: Anr
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +103,7 @@ The Archive switch is required to return archive mailboxes in the results. You d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +118,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +135,7 @@ For more information about the filterable properties, see Filterable properties 
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +172,7 @@ You can't use this parameter with the Anr parameter.
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: 0
 Default value: None
@@ -193,7 +191,7 @@ To include active and inactive mailboxes in the results, don't use this switch. 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +210,7 @@ To return only inactive mailboxes in the results, don't use this switch. Instead
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +237,7 @@ A mailbox plan specifies the permissions and features available to a mailbox use
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -262,7 +260,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -271,13 +269,15 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+The PropertySets parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+
+For more information about the available properties, see [Property sets in Exchange Online PowerShell V2 cmdlets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/cmdlet-property-sets).
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -286,14 +286,54 @@ Accept wildcard characters: False
 ```
 
 ### -PropertySets
-{{ Fill PropertySets Description }}
+The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
+
+- Minimum (this is the default value)
+
+- AddressList
+
+- Audit
+
+- Archive
+
+- Audit
+
+- Custom
+
+- Delivery
+
+- Hold
+
+- Moderation
+
+- Move
+
+- Policy
+
+- PublicFolder
+
+- Quota
+
+- Resource
+
+- Retention
+
+- SCL
+
+- SoftDelete
+
+- StatisticsSeed
+
+You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+
+For more information about the properties that are included in each property set, see [Property sets in Exchange Online PowerShell V2 cmdlets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/cmdlet-property-sets).
 
 ```yaml
 Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, Minimum, AddressList, Archive, Audit, Custom, Delivery, Hold, Moderation, Move, Policy, PublicFolder, Quota, Resource, Retention, SCL, SoftDelete, StatisticsSeed
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -332,7 +372,7 @@ You can specify multiple values separated by commas.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +387,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -364,7 +404,7 @@ Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -379,7 +419,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Identity
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
