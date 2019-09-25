@@ -385,7 +385,7 @@ The IncludeUserAppContent parameter specifies that you want to search the cloud-
 
 - $true: The cloud-based storage location for the users specified in any of the Exchange location parameters will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
 
-- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value. 
+- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
 Type: $true | $false

@@ -51,15 +51,15 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 
 - Canonical DN
 
--  \<domain name>\\\<account name>
+- \<domain name>\\\<account name>
 
 - Email address
 
 - GUID
 
-- LegacyExchangeDN 
+- LegacyExchangeDN
 
-- SamAccountName 
+- SamAccountName
 
 - User ID or user principal name (UPN)
 

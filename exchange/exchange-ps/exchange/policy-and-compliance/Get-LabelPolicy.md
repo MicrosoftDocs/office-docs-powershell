@@ -57,7 +57,7 @@ The Identity parameter specifies the sensitivity label policy that you want to v
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: 1
