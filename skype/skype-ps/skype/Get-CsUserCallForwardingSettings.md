@@ -39,7 +39,7 @@ This example returns the call forwarding settings for the specified user and dis
 
 ## PARAMETERS
 
-### -User
+### User
 Specifies the identity of the target user.
 Acceptable values include:
 Example: jphillips@contoso.com
