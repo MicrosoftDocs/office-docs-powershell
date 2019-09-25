@@ -440,7 +440,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Longitude
+### Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
 
 ```yaml
