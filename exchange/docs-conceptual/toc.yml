@@ -44,7 +44,7 @@
       - name: Filterable properties for the RecipientFilter parameter
         href: exchange-server/recipient-filters/recipientfilter-properties.md
   - name: Exchange Online PowerShell V2
-    href: exchange-online/exchange-online-powershell-v2.md
+    href: exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md
     items:
     - name: Property sets in cmdlets
       href: exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md
