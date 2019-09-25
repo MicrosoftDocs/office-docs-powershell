@@ -83,7 +83,7 @@ This example creates a new civic address described as "R&D office", with latitud
 
 ## PARAMETERS
 
-### -CompanyName
+### CompanyName
 Specifies the name of your organization.
 
 ```yaml
@@ -99,7 +99,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CountryOrRegion
+### CountryOrRegion
 Specifies the country or region of the new civic address.
 Needs to be a valid country code as contained in the ISO 3166-1 alpha-2 specification.
 
@@ -116,7 +116,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -City
+### City
 Specifies the city of the new civic address.
 
 ```yaml
@@ -132,7 +132,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CityAlias
+### CityAlias
 PARAMVALUE: String
 
 ```yaml
@@ -148,7 +148,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CompanyTaxId
+### CompanyTaxId
 PARAMVALUE: String
 
 ```yaml
@@ -164,7 +164,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### Confirm
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
@@ -180,7 +180,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
+### Description
 Specifies an administrator defined description of the new civic address.
 
 ```yaml
@@ -196,7 +196,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
+### DomainController
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -212,7 +212,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
+### Force
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -230,7 +230,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HouseNumber
+### HouseNumber
 Specifies the numeric portion of the new civic address.
 
 ```yaml
@@ -246,7 +246,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HouseNumberSuffix
+### HouseNumberSuffix
 Specifies the numeric suffix of the new civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
@@ -263,7 +263,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostalCode
+### PostalCode
 Specifies the postal code of the new civic address.
 
 ```yaml
@@ -279,7 +279,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostDirectional
+### PostDirectional
 Specifies the directional attribute of the new civic address which follows the street name.
 For example, "425 Smith Avenue NE".
 
@@ -296,7 +296,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PreDirectional
+### PreDirectional
 Specifies the directional attribute of the new civic address which precedes the street name.
 For example, "425 NE Smith Avenue ".
 
@@ -313,7 +313,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StateOrProvince
+### StateOrProvince
 Specifies the state or province of the new civic address.
 
 ```yaml
@@ -329,7 +329,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StreetName
+### StreetName
 Specifies the street name of the new civic address.
 
 ```yaml
@@ -345,7 +345,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StreetSuffix
+### StreetSuffix
 Specifies the street type of the new civic address.
 The street suffix will typically be something like street, avenue, way, or boulevard.
 
@@ -362,7 +362,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
+### Tenant
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -378,7 +378,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ValidationStatus
+### ValidationStatus
 PARAMVALUE: String
 
 ```yaml
@@ -394,7 +394,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### WhatIf
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -411,7 +411,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confidence
+### Confidence
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -426,7 +426,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Elin
+### Elin
 Specifies the Emergency Location Identification Number.
 This is used in Direct Routing EGW scenarios.
 
@@ -442,7 +442,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Latitude
+### Latitude
 Specifies the angular distance of a place north or south of the earth's equator.
 
 ```yaml
@@ -457,7 +457,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Longitude
+### Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
 
 ```yaml
