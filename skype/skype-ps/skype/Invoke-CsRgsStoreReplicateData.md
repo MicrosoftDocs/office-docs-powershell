@@ -52,7 +52,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PoolFqdn
+### PoolFqdn
 Fully qualified domain name of the pool whose data will be replicated.
 For example:
 `-PoolFqdn "atl-cs-001.litwareinc.com"`
