@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
-ms.custom: 
+ms.custom:
 ms.assetid: 0b5987c3-8836-456d-99f7-abc2ffb57300
 description: "Use Windows PowerShell on a local computer to connect to an Exchange Server."
 ---

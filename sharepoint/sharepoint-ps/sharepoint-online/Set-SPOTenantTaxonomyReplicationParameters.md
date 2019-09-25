@@ -27,7 +27,8 @@ Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups <String[]> [<Common
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use �Connect-SPOService� to connect to SharePoint Online first.
+Before using this cmdlet, make sure you connect to Sharepoint Online using [Connect-SPOService](Connect-SPOService.md) and the desirable satellite location URL as the -Url parameter.
+
 By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
 satellite. 
 

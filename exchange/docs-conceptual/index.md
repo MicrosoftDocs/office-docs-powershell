@@ -1,5 +1,5 @@
 ---
-title: Exchange PowerShell 
+title: Exchange PowerShell
 description: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Office 365.
 services: exchange-online
 author: chrisda

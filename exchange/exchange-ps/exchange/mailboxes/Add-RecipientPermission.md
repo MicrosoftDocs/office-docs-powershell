@@ -148,7 +148,7 @@ The SkipDomainValidationForMailContact switch skips the check that confirms the 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ The SkipDomainValidationForMailUser switch skips the check that confirms the pro
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ The SkipDomainValidationForSharedMailbox switch skips the check that confirms th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

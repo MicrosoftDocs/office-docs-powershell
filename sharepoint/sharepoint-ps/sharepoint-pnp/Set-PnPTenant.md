@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets organization-level site collection properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPTenant [-MinCompatibilityLevel <Int>]
@@ -793,7 +793,7 @@ The valid values are:
 ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled. Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 ```yaml
 Type: SharingCapabilities
