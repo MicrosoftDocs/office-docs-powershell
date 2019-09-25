@@ -64,12 +64,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-None
+### None
 
 ## OUTPUTS
 
-###
-an object of team members list
+### an object of team members list
 
 ## RELATED LINKS
