@@ -356,13 +356,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-The address accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+### The address accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
 ## OUTPUTS
 
-###
-None
+### None
 
 ## NOTES
 

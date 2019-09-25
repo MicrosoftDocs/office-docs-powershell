@@ -140,13 +140,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-This cmdlet supports pipelined input from the \`Get-CsOnlineLisLocation\` cmdlet.
+### This cmdlet supports pipelined input from the \`Get-CsOnlineLisLocation\` cmdlet.
 
 ## OUTPUTS
 
-###
-None
+### None
 
 ## NOTES
 
