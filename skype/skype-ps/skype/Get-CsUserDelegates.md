@@ -40,7 +40,7 @@ This example returns the list of delegates for the specified user
 
 ## PARAMETERS
 
-### -User
+### User
 Specifies the identity of the target user.
 Acceptable values include:
 Example: jphillips@contoso.com
