@@ -63,12 +63,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-None
+### None
 
 ## OUTPUTS
 
-###
-Call forwarding settings for specified user
+### Call forwarding settings for specified user
 
 ## RELATED LINKS
