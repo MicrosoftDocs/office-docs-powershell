@@ -21,7 +21,7 @@ This topic describes the property sets that are available in the new cmdlets in 
 
 ## Get-ExoCasMailbox property sets
 
-The available property sets for this cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-ExoCasMailbox** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -44,15 +44,15 @@ The available property sets for this cmdlet and the properties they contain are 
 
 - *SortBy*
 
-### See also
+For more information, see:
 
-- [Get-ExoCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExORestModule-chrisda)
+- [Get-ExoCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExoRestModule-chrisda)
 
 - [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)
 
-## Get-ExOMailbox property sets
+## Get-ExoMailbox property sets
 
-The available property sets for this cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-ExoMailbox** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -87,8 +87,76 @@ The available property sets for this cmdlet and the properties they contain are 
 
 - *SortBy*
 
-### See also
+For more information, see:
 
-- [Get-ExoMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExORestModule-chrisda)
+- [Get-ExoMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExoRestModule-chrisda)
 
 - [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)
+
+## Get-ExoRecipient property sets
+
+The available property sets for the **Get-ExoRecipient** cmdlet and the properties they contain are described in the following table:
+
+|||
+|:-----|:-----|
+|**PropertySet**|**Properties**|
+|Minimum|ExchangeVersion <br/> ExternalDirectoryObjectID <br/> Name <br/> OrganizationId <br/> RecipientType <br/> RecipientTypeDetails|
+|Archive|ArchiveDatabase <br/> ArchiveGuid <br/> ArchiveRelease <br/> ArchiveState <br/> ArchiveStatus|
+|Custom|CustomAttribute1 <br/> CustomAttribute2 <br/> CustomAttribute3 <br/> CustomAttribute4 <br/> CustomAttribute5 <br/> CustomAttribute6 <br/> CustomAttribute7 <br/> CustomAttribute8 <br/> CustomAttribute9 <br/> CustomAttribute10 <br/> CustomAttribute11 <br/> CustomAttribute12 <br/> CustomAttribute13 <br/> CustomAttribute14 <br/> CustomAttribute15 <br/> ExtensionCustomAttribute1 <br/> ExtensionCustomAttribute2 <br/> ExtensionCustomAttribute3 <br/> ExtensionCustomAttribute4 <br/> ExtensionCustomAttribute5|
+|MailboxMove|MailboxMoveBatchName <br/> MailboxMoveFlags <br/> MailboxMoveRemoteHostName <br/> MailboxMoveSourceMDB <br/> MailboxMoveStatus <br/> MailboxMoveTargetMDB|
+|Policy|ActiveSyncMailboxPolicy <br/> ActiveSyncMailboxPolicyIsDefaulted <br/> AddressBookPolicy <br/> EmailAddressPolicyEnabled <br/> ManagedFolderMailboxPolicy <br/> OwaMailboxPolicy <br/> PoliciesExcluded <br/> PoliciesIncluded <br/> RetentionPolicy <br/> SharingPolicy <br/> ShouldUseDefaultRetentionPolicy <br/> UMMailboxPolicy|
+
+**Note**: The following **Get-Recipient** parameters aren't available on **Get-ExoRecipient**:
+
+- *SortBy*
+
+For more information, see:
+
+- [Get-ExoRecipient](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient?branch=ExoRestModule-chrisda)
+
+- [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)
+
+### Get-ExoMailboxStatistics property sets
+
+The available property sets for the **Get-ExoMailboxStatistics** cmdlet and the properties they contain are described in the following table:
+
+|||
+|:-----|:-----|
+|**PropertySet**|**Properties**|
+|Minimum|Database <br/> DatabaseName <br/> DisplayName <br/> ExternalDirectoryOrganizationId <br/> Identity <br/> IsArchiveMailbox <br/> LegacyDN <br/> MailboxGuid <br/> MailboxType <br/> MailboxTypeDetail <br/> MapiIdentity <br/> OwnerADGuid|
+|AccessHistory|DisconnectDate <br/> LastCalendarTime <br/> LastContactsTime <br/> LastEmailTime <br/> LastFileTime <br/> LastInteractionTime <br/> LastLoggedOnUserAccount <br/> LastLogoffTime <br/> LastLogonTime <br/> LastProfileTime <br/> LastTasksTime <br/> LastUserAccessTime <br/> LastUserActionTime <br/> LastUserActionUpdateTime|
+|All|CurrentSchemaVersion <br/> DataEncryptionPolicyId <br/> DisconnectReason <br/> FastIsEnabled <br/> IsAbandonedMoveDestination <br/> IsClutterEnabled <br/> IsDatabaseCopyActive <br/> IsEncrypted <br/> IsMoveDestination <br/> IsQuarantined <br/> IsValid <br/> KeyVersionIDs <br/> NeedsToMove <br/> ObjectClass <br/> ObjectState <br/> QuarantineEnd <br/> ResourceUsageRollingAvgDatabaseReads <br/> ResourceUsageRollingAvgRop <br/> ResourceUsageRollingClientTypes <br/> StorageLimitStatus <br/> SystemMessageCount <br/> SystemMessageSize|
+|BigFunnel|BigFunnelCorruptedCount <br/> BigFunnelCorruptedSize <br/> BigFunnelFilterTableAvailableSize <br/> BigFunnelFilterTableTotalSize <br/> BigFunnelIndexedCount <br/> BigFunnelIndexedSize <br/> BigFunnelIsEnabled <br/> BigFunnelLargePOITableAvailableSize <br/> BigFunnelLargePOITableTotalSize <br/> BigFunnelMailboxCreationVersion <br/> BigFunnelMaintainRefiners <br/> BigFunnelMessageCount <br/> BigFunnelNotIndexedCount <br/> BigFunnelNotIndexedSize <br/> BigFunnelPartiallyIndexedCount <br/> BigFunnelPartiallyIndexedSize <br/> BigFunnelPostingListTableAvailableSize <br/> BigFunnelPostingListTableTotalSize <br/> BigFunnelShouldNotBeIndexedCount <br/> BigFunnelShouldNotBeIndexedSize <br/> BigFunnelStaleCount <br/> BigFunnelStaleSize <br/> BigFunnelTotalPOISize <br/> BigFunnelUpgradeInProgress|
+|Item|AssociatedItemCount <br/> DeletedItemCount <br/> ItemCount <br/> TotalDeletedItemSize <br/> TotalItemSize|
+|MCDB|MCDBBigFunnelFilterTableAvailableSize <br/> MCDBBigFunnelFilterTablePercentReplicated <br/> MCDBBigFunnelFilterTableTotalSize <br/> MCDBBigFunnelLargePOITableAvailableSize <br/> MCDBBigFunnelLargePOITablePercentReplicated <br/> MCDBBigFunnelLargePOITableTotalSize <br/> MCDBBigFunnelPostingListTableAvailableSize <br/> MCDBBigFunnelPostingListTablePercentReplicated <br/> MCDBBigFunnelPostingListTableTotalSize <br/> MCDBMessageTableAvailableSize <br/> MCDBMessageTablePercentReplicated <br/> MCDBMessageTableTotalSize <br/> MCDBOtherTablesAvailableSize <br/> MCDBOtherTablesTotalSize|
+|MoveHistory|MoveHistory|
+|MoveReport|MoveHistory|
+|Quota|DatabaseIssueWarningQuota <br/> DatabaseProhibitSendQuota <br/> DatabaseProhibitSendReceiveQuota <br/> DumpsterMessagesPerFolderCountReceiveQuota <br/> DumpsterMessagesPerFolderCountWarningQuota <br/> FolderHierarchyChildrenCountReceiveQuota <br/> FolderHierarchyChildrenCountWarningQuota <br/> FolderHierarchyDepthReceiveQuota <br/> FolderHierarchyDepthWarningQuota <br/> FoldersCountReceiveQuota <br/> FoldersCountWarningQuota <br/> MailboxMessagesPerFolderCountReceiveQuota <br/> MailboxMessagesPerFolderCountWarningQuota <br/> NamedPropertiesCountQuota <br/> SystemMessageSizeWarningQuota <br/> SystemMessageSizeShutoffQuota|
+|Table|AttachmentTableAvailableSize <br/> AttachmentTableTotalSize <br/> MailboxTableIdentifier <br/> MessageTableAvailableSize <br/> MessageTableTotalSize <br/> OtherTablesAvailableSize <br/> OtherTablesTotalSize|
+
+For more information, see:
+
+- Get-ExoMailboxStatistics
+
+- [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
+
+### Get-ExoMobileDeviceStatistics property sets
+
+The available property sets for the **ExoMobileDeviceStatistics** cmdlet and the properties they contain are described in the following table:
+
+|||
+|:-----|:-----|
+|**PropertySet**|**Properties**|
+|Minimum|DeviceId <br/> Identity <br/> LastSuccessSync <br/> LastSyncAttemptTime|
+|Access|DeviceAccessState <br/> DeviceAccessStateReason <br/> DeviceAccessControlRule|
+|Device|ClientType <br/> DeviceEnableOutboundSMS <br/> DeviceFriendlyName <br/> DeviceID <br/> DeviceImei <br/> DeviceMobileOperator <br/> DeviceModel <br/> DeviceOS <br/> DeviceOSLanguage <br/> DevicePhoneNumber <br/> DeviceType <br/> DeviceUserAgent <br/> Status <br/> StatusNote|
+|Others|Guid <br/> Identity <br/> MailboxLogReport <br/> RecoveryPassword|
+|Policy|DevicePolicyApplicationStatus <br/> DevicePolicyApplied <br/> LastPolicyUpdateTime|
+|Sync|FirstSyncTime <br/> LastPingHeartbeat <br/> LastSuccessSync <br/> LastSyncAttemptTime <br/> NumberOfFoldersSynced <br/> SyncStateUpgradeTime|
+|Wipe|AccountOnlyDeviceWipeAckTime <br/> AccountOnlyDeviceWipeRequestTime <br/> AccountOnlyDeviceWipeSentTime <br/> DeviceWipeAckTime <br/> DeviceWipeRequestTime <br/> DeviceWipeSentTime <br/> IsRemoteWipeSupported <br/> LastAccountOnlyDeviceWipeRequestor <br/> LastDeviceWipeRequestor|
+
+For more information, see:
+
+- Get-ExoMobileDeviceStatistics
+
+- [Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)

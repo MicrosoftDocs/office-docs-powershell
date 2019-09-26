@@ -32,7 +32,7 @@ Get-ExoRecipientPermission [-Trustee <String>]
 ### Identity
 ```
 Get-ExoRecipientPermission [-Trustee <String>]
- [-AccessRights <MultiValuedProperty]>]
+ [-AccessRights <MultiValuedProperty>]
  [[-Identity] <String>]
  [-ExternalDirectoryObjectId <Guid>]
  [-UserPrincipalName <String>]
@@ -57,10 +57,10 @@ Get-ExoRecipientPermission [-Trustee <String>]
 ### -AccessRights
 The AccessRights parameter filters the results by permission.
 
-Valid input for this parameter is SendAs.
+The value value for this parameter is SendAs.
 
 ```yaml
-Type: MultiValuedProperty]
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Accepted values: SendAs
@@ -219,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission)
-
