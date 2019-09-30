@@ -46,7 +46,7 @@ This example gets the Identity of a dial plan that is associated with the identi
 Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity adelev@contoso.onmicrosoft.com
 ```
 
-This example tests the given dialed number against an specific identity.
+This example tests the given dialed number against a specific identity.
 
 
 ## PARAMETERS
