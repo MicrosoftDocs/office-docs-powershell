@@ -32,6 +32,15 @@ Remove-CsOnlineLisSubnet -Subnet 10.10.10.10
 
 Example 1 removes the Location Information Service subnet "10.10.10.10".
 
+
+### -------------------------- Example 2 --------------------------
+```
+Remove-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e
+```
+
+Example 1 removes the Location Information Service subnet "2001:4898:e8:6c:90d2:28d4:76a4:ec5e".
+
+
 ## PARAMETERS
 
 ### -Confirm
