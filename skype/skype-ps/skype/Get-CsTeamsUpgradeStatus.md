@@ -136,11 +136,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business] (https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Skype for Business Online retirement on July 31, 2021] (https://support.microsoft.com/en-us/help/4511540/retirement-of-skype-for-business-online)
+[Skype for Business Online retirement on July 31, 2021](https://support.microsoft.com/en-us/help/4511540/retirement-of-skype-for-business-online)
 
-[Upgrade Basic guidance] (https://docs.microsoft.com/en-us/MicrosoftTeams/upgrade-basic)
+[Upgrade Basic guidance](https://docs.microsoft.com/en-us/MicrosoftTeams/upgrade-basic)
 
-[Transitioning from Skype for Business to Microsoft Teams via FastTrack] (https://www.microsoft.com/en-us/fasttrack/skype-for-business-transition-to-teams?rtc=1
-)
+[Transitioning from Skype for Business to Microsoft Teams via FastTrack](https://www.microsoft.com/en-us/fasttrack/skype-for-business-transition-to-teams?rtc=1)
