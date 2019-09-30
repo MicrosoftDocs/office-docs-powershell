@@ -102,7 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
 Type: Guid
