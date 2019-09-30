@@ -64,7 +64,7 @@ For more information on the various upgrade “States” please reference the ta
 *   OptInEligible – Tenant will be invited to a Microsoft driven upgrade at some point in the future.  
 *   ScheduledForUpgrade – Tenant is scheduled to be upgraded via automated upgrade on the date returned. This refers to the date that the tenant was first scheduled. Admins who click the Postpone button in the Teams Admin Portal will see the UpgradeDate move out 30 days but will not see a change in the Upgrade ScheduledDate field nor the OptInEligibleDate field.
 *   Upgraded – Date that Tenant will be or has been upgraded.
-*   Exempt – Tenant is exempt from Microsoft drive upgrade currently.
+*   Exempt – Tenant is exempt from Microsoft driven upgrade currently.
 
 
 ## PARAMETERS
