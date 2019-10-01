@@ -192,9 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The PropertySets parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the available properties, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/en-us/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
+For more information about the available properties, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
 
 ```yaml
 Type: String[]
@@ -221,7 +221,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - Policy
 
-For more information about the properties that are included in each property set, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/en-us/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
+For more information about the properties that are included in each property set, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
 
 ```yaml
 Type: PropertySet[]

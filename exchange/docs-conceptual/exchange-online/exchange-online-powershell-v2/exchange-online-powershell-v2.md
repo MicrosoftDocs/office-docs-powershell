@@ -154,7 +154,7 @@ Remove-Module ExchangeOnlineManagement
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda).
 
-## What's new in EXO V2 Module? 
+## What's new in the EXO V2 module?
 
 ### Properties and property sets
 
