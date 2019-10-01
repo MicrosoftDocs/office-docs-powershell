@@ -77,7 +77,13 @@ This example retrieves the statistics for the mobile phone configured to synchro
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user's device ID. If the Mailbox parameter is specified, the Identity parameter is disabled.
+The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
+
+- GUID
+
+- DeviceID
+
+You can't use this parameter with the Mailbox parameter.
 
 ```yaml
 Type: MobileDeviceIdParameter
@@ -92,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the user mailbox for which you want to retrieve the mobile phone statistics. You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -114,6 +120,8 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 
 - User ID or user principal name (UPN)
 
+You can't use this parameter with the Identity parameter.
+
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: Mailbox
@@ -127,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSync
-The ActiveSync switch specifies whether to return statistics for Microsoft Exchange ActiveSync or other mobile device synchronization.
+The ActiveSync switch filters the results by Exchange ActiveSync devices. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -189,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAforDevices
-The OWAforDevices parameter specifies whether Outlook on the web for devices is enabled for the mobile device.
+The OWAforDevices switch filters the results by devices where Outlook on the web for devices is enabled. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
