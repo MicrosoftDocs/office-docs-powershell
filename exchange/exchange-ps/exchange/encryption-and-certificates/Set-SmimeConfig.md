@@ -503,7 +503,7 @@ The OWASigningAlgorithms parameter specifies the list of symmetric encryption si
 - 800C: CALG\_SHA\_256 or 256-bit SHA
 
 - 8004: SHA1 or 160-bit SHA-1 (This is the default value)
- 
+
 If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value 8804,\<CustomOID\>.
 
 This parameter uses the syntax \<AlgorithmID\> or \<AlgorithmID\>:\<KeyLength\> or \<AlgorithmID\>,\<CustomOID\>. You can specify multiple values separated by semicolons (;).

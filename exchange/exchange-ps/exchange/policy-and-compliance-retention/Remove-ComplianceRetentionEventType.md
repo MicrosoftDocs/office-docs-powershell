@@ -50,7 +50,7 @@ The Identity parameter specifies the retention event type that you want to remov
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ The ForceDeletion switch forces the removal of the retention event type. You don
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named

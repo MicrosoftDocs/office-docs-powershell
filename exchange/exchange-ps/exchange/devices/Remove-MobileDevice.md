@@ -49,7 +49,11 @@ This example removes the mobile device partnership for the device named iPhone\_
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter uniquely identifies the specific device partnership to be removed.
+The Identity parameter specifies the mobile device partnership that you want to remove. You can use any value that uniquely identifies the mobile device. For example:
+
+- GUID
+
+- DeviceID
 
 ```yaml
 Type: MobileDeviceIdParameter

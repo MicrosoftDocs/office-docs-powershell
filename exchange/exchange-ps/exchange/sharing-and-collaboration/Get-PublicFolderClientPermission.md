@@ -148,7 +148,7 @@ The Mailbox parameter specifies the public folder mailbox that you want to view 
 - SamAccountName
 
 - User ID or user principal name (UPN)
- 
+
 By default, the permissions are returned from the primary public folder mailbox. Using this parameter allows you to specify a different public folder mailbox.
 
 ```yaml

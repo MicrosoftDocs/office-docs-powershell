@@ -320,7 +320,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -353,7 +353,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -374,7 +374,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - NoComputers: Offline mode is disabled.
 
-- AllComputers: Offline mode is available for public and private computer sessions. This is the default value. 
+- AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
 When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
@@ -484,7 +484,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1151,7 +1151,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1186,7 +1186,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty

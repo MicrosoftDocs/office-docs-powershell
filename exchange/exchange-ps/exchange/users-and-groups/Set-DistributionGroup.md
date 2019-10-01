@@ -720,6 +720,8 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
+
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
 To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>",...}.
@@ -1281,6 +1283,10 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
+
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
@@ -1544,9 +1550,9 @@ Accept wildcard characters: False
 ### -SendOofMessageToOriginatorEnabled
 The SendOofMessageToOriginatorEnabled parameter specifies how to handle out of office (OOF) messages for members of the group. Valid values are:
 
-- $true: When messages are sent to the group, OOF messages for any of the group members are sent to the message sender. This is the default value.
+- $true: When messages are sent to the group, OOF messages for any of the group members are sent to the message sender.
 
-- $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender.
+- $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender. This is the default value.
 
 ```yaml
 Type: $true | $false
