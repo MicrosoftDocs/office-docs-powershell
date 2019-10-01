@@ -14,7 +14,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Suspend-PublicFolderMigrationRequest cmdlet to suspend a migration request any time after the request was created, but before it reaches the status of CompletionInProgress. You can resume the migration request by using the Resume-PublicFolderMigrationRequest cmdlet.
+Use the Suspend-PublicFolderMigrationRequest cmdlet to suspend serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet). You can suspend active requests before they reach the status CompletionInProgress. You resume suspended requests by using the Resume-PublicFolderMigrationRequest cmdlet.
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

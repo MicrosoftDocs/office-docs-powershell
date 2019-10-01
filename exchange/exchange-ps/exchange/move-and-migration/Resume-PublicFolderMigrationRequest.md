@@ -14,7 +14,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Resume-PublicFolderMigrationRequest cmdlet to resume a migration request that failed or has been suspended or auto-suspended.
+Use the Resume-PublicFolderMigrationRequest cmdlet to resume serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet) that have failed or have been suspended (manually or automatically).
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

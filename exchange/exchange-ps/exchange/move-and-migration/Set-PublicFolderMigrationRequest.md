@@ -14,7 +14,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-PublicFolderMigrationRequest cmdlet to change migration request options after the request has been created. You can use the Set-PublicFolderMigrationRequest cmdlet to recover from failed migration requests.
+Use the Set-PublicFolderMigrationRequest cmdlet to modify serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet). You can use this cmdlet to recover from failed migration requests.
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -52,7 +54,7 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
 ```
 
 ## DESCRIPTION
-You can pipeline the Set-PublicFolderMigrationRequest cmdlet from the Get-PublicFolderMigrationRequestStatistics, Get-PublicFolderMigrationRequst, or the Get-PublicFolder cmdlets.
+You can pipe output of Get-PublicFolderMigrationRequestStatistics, Get-PublicFolderMigrationRequest, or Get-PublicFolder to this cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

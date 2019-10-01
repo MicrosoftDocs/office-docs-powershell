@@ -14,7 +14,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the New-PublicFolderMigrationRequest cmdlet to begin the process of migrating public folders from Exchange Server 2010.
+Use the New-PublicFolderMigrationRequest cmdlet to start a serial public folder migration from Exchange Server 2010.
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
