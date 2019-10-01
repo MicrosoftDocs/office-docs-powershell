@@ -69,6 +69,7 @@ The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOpe
 
 [Get-CsGroupPolicyAssignment]()
 
-[Set-CsBatchPolicyAssignment]()
+[Set-CsGroupPolicyAssignment]()
 
-[Remove-CsBatchPolicyAssignment]()
+[Remove-CsGroupPolicyAssignment]()
+
