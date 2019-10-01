@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-MailboxStatistics cmdlet to obtain information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed. In addition, you can get the move history or a move report of a completed move request.
+Use the Get-MailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed. In addition, you can get the move history or a move report of a completed move request.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -135,31 +135,6 @@ This example returns the detailed move history and a verbose detailed move repor
 
 ## PARAMETERS
 
-### -Database
-This parameter is available only in on-premises Exchange.
-
-The Database parameter returns statistics for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -195,33 +170,8 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Server
-This parameter is available only in on-premises Exchange.
-
-The Server parameter specifies the server from which you want to obtain mailbox statistics. You can use one of the following values:
-
-- Fully qualified domain name (FQDN)
-
-- NetBIOS name
-
-When you specify a value for the Server parameter, the command returns statistics for all the mailboxes on all the databases, including recovery databases, on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Server
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Archive
-The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox.
-
-You don't have to specify a value with this parameter.
+The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -265,6 +215,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Database
+This parameter is available only in on-premises Exchange.
+
+The Database parameter returns statistics for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -300,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeMoveHistory
-The IncludeMoveHistory switch specifies whether to return additional information about the mailbox that includes the history of a completed move request, such as status, flags, target database, bad items, start times, end times, duration that the move request was in various stages, and failure codes.
+The IncludeMoveHistory switch specifies whether to return additional information about the mailbox that includes the history of a completed move request, such as status, flags, target database, bad items, start times, end times, duration that the move request was in various stages, and failure codes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -315,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeMoveReport
-The IncludeMoveReport switch specifies whether to return a verbose detailed move report for a completed move request, such as server connections and move stages.
+The IncludeMoveReport switch specifies whether to return a verbose detailed move report for a completed move request, such as server connections and move stages. You don't need to specify a value with this switch.
 
 Because the output of this command is verbose, you should send the output to a .CSV file for easier analysis.
 
@@ -398,6 +373,29 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Server
+This parameter is available only in on-premises Exchange.
+
+The Server parameter specifies the server from which you want to obtain mailbox statistics. You can use one of the following values:
+
+- Fully qualified domain name (FQDN)
+
+- NetBIOS name
+
+When you specify a value for the Server parameter, the command returns statistics for all the mailboxes on all the databases, including recovery databases, on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Server
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

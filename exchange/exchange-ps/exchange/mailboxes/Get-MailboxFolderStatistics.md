@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
 
-The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-MailboxStatistics cmdlet. For more information, see Get-MailboxStatistics.
+The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-MailboxStatistics cmdlet.
 
 ## EXAMPLES
 
