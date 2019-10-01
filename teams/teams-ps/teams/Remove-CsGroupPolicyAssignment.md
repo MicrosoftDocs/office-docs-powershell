@@ -16,7 +16,7 @@ This cmdlet is used to remove a group policy assignment.
 ## SYNTAX
 
 ```
-Remove-CsGroupPolicyAssignment -GroupId -PolicyType
+Remove-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String>
 ```
 
 ## DESCRIPTION
