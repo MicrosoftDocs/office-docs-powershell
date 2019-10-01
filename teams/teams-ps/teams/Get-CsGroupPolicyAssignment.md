@@ -16,7 +16,7 @@ This cmdlet is used to return group policy assignments.
 ## SYNTAX
 
 ```
-Get-CsGroupPolicyAssignment [-GroupId] [-PolicyType]
+Get-CsGroupPolicyAssignment [-GroupId <String>] [-PolicyType <String>]
 ```
 
 ## DESCRIPTION
