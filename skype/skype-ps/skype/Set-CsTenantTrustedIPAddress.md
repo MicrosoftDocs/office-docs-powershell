@@ -33,6 +33,8 @@ External trusted IPs are the Internet external IPs of the enterprise network and
 
 Both IPv4 and IPv6 trusted IP addresses are supported.
 
+When the client is sending the trusted IP address, please make sure we have already whitelisted the IP address by running this command-let, otherwise the request will be rejected. If you are only adding the IPv4 address by running this command-let, but your client are only sending and IPv6 address, it will be rejected.
+
 ## EXAMPLES
 
 ###-------------------------- Example 1 --------------------------
