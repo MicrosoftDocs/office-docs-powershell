@@ -11,38 +11,88 @@ ms.reviewer:
 # Set-CsGroupPolicyAssignment
 
 ## SYNOPSIS
-This cmdlet is used to update a group policy assignment.
+This cmdlet is update a group policy assignment.
 
 ## SYNTAX
 
 ```
-Set-CsGroupPolicyAssignment -GroupId -PolicyType -PolicyName -Priority
+Set-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> [-PolicyName <String>] [-Priority <Int>]
 ```
 
 ## DESCRIPTION
-sss
+This cmdlet will update the policy assignment for a group for a given policy type. The policy instance and/or policy priority can be updated.  Refer to [New-CsGroupPolicyAssignment]() for more details about priority.
 
 ## EXAMPLES
 
 ### Example 1
-In this example, the status of all batch assignment operations is returned.
+In this example, a new policy of the same type is set without changing the priority.
 
 ```
+Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
+GroupId                              PolicyName PolicyType         Priority
+-------                              ---------- ----------         --------
+d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 Host:AllOn TeamsMeetingPolicy 1
+566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Host:Kiosk TeamsMeetingPolicy 2
+
+Set-CsGroupPolicyAssignment -GroupId d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 -PolicyType TeamsMeetingPolicy -PolicyName AllOff
+
+Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
+
+GroupId                              PolicyName  PolicyType         Priority
+-------                              ----------  ----------         --------
+d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 Host:AllOff TeamsMeetingPolicy 1
+566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Host:Kiosk  TeamsMeetingPolicy 2
 ```
 
 ### Example 2
-In this example, the status of a single batch is returned, including the assignment status for each user.  In this example, one of the users was not found.
+In this example, the priority of the policy assignment is updated.
 
 ```
+Set-CsGroupPolicyAssignment -GroupId d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 -PolicyType TeamsMeetingPolicy -Priority 2
 
-user08@fabrikam.com                  Success                        Completed
+Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
+
+GroupId                              PolicyName  PolicyType         Priority
+-------                              ----------  ----------         --------
+566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Host:Kiosk  TeamsMeetingPolicy 1
+d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 Host:AllOff TeamsMeetingPolicy 2
 ```
 
 ## PARAMETERS
 
-### -OperationId
+### -GroupId
 The ID of a batch policy assignment operation.
+
+```yaml
+Type: String
+Parameter Sets:
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyType
+The type of the policy assigned.
+
+```yaml
+Type: String
+Parameter Sets:
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyName
+The of the new policy to be assigned.
 
 ```yaml
 Type: String
@@ -55,6 +105,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Priority
+The new priority of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: String
+Parameter Sets:
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -66,13 +132,13 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ### OperationId
 The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
 
-
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-CsGroupPolicyAssignment]()
 
-[New-CsGroupPolicyAssignment]()
+[Set-CsGroupPolicyAssignment]()
 
 [Remove-CsGroupPolicyAssignment]()
+
