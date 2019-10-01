@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <CultureInfo> -SenderDescription <String>
  [-Confirm]
- [-DomainController <Fqdn>] 
+ [-DomainController <Fqdn>]
  [-RecipientDescription <String>]
  [-WhatIf] [<CommonParameters>]
 ```

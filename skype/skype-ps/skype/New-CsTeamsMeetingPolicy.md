@@ -3,8 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -34,7 +35,7 @@ The New-CsTeamsMeetingPolicy cmdlet allows administrators to define new meeting 
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $false
+New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
 The command shown in Example 1 uses the New-CsTeamsMeetingPolicy cmdlet to create a new meeting policy with the Identity SalesMeetingPolicy.
@@ -54,7 +55,10 @@ All other policy properties will use the default values.
 ## PARAMETERS
 
 ### -AllowAnonymousUsersToDialOut
-Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out
+Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
+
+> [!NOTE]
+> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean

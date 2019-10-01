@@ -27,12 +27,11 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
- [-DisabledWebpartIds <Guid>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
 ```
 ### ParamSet2
 ```powershell
@@ -228,25 +227,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisabledWebpartIds
-This parameter is used for enabling disabled web parts that use third-party service (Amazon Kindle, YouTube, Twitter).  The GUIDs that can be used are 46698648-fcd5-41fc-9526-c7f7b2ace919 (Amazon Kindle), 544dd15b-cf3c-441b-96da-004d5a8cea1d (YouTube), f6fdf4f8-4a24-437b-a127-32e66a5dd9b4 (Twitter).
-
-The Set-SPOTenant cmdlet is used for disabling these web parts with third-party services. 
-
-```yaml
-Type: Guid[]
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 ### -LocaleId
 Specifies the language of this site collection.
 For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
@@ -272,7 +252,7 @@ When the lock state of a site is ReadOnly, a message will appear on the site sta
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
-
+It isn't possible to set the lock state on the root site collection.
 
 ```yaml
 Type: String
@@ -751,11 +731,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverrideTenantAnonymousLinkExpirationPolicy
+
+Choose whether to override the anonymous or anyone link expiration policy on this site
+
+PARAMVALUE: None | False | True
+
+None - Respect the organization-level policy for anonymous or anyone link expiration
+False - Respect the organization-level policy for anonymous or anyone link expiration
+True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnonymousLinkExpirationInDays
+
+Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true. 
+
+To remove the expiration requirement, set the value to zero (0). 
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConditionalAccessPolicy
 
 Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
-PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
 ```yaml
 Type: SPOConditionalAccessPolicyType

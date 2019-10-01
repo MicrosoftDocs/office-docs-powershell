@@ -25,6 +25,7 @@ Set-User [-Identity] <UserIdParameter>
  [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
  [-Arbitration]
  [-AssistantName <String>]
+ [-AuthenticationPolicy <String>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
  [-Company <String>]
@@ -173,6 +174,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationPolicy
+The AuthenticationPolicy parameter specifies the authentication policy to apply to the user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -929,7 +945,7 @@ This parameter is available only in the cloud-based service.
 
 The StsRefreshTokensValidFrom specifies the date-time that the user's STS refresh tokens are valid from.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM". 
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -1054,7 +1070,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn’t work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter

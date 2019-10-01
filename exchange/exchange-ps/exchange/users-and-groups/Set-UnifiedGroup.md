@@ -68,7 +68,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] 
+ [-ModerationEnabled <$true | $false>]
  [-Notes <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -808,7 +808,7 @@ Accept wildcard characters: False
 ### -HiddenFromAddressListsEnabled
 The HiddenFromAddressListsEnabled parameter specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
-- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web.
+- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is enabled.
 
 - $false: The Office 365 Group is visible in the GAL and other address lists. This is the default value.
 
@@ -1122,10 +1122,10 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group. 
+The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group.
 
 - To change the value to $true, use this switch without a value.
-- 
+
 - To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
 
 ```yaml

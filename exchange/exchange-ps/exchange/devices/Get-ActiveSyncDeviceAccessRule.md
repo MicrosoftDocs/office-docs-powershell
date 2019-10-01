@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-ActiveSyncDeviceAccessRule [[-Identity] <ActiveSyncDeviceAccessRuleIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-ActiveSyncDeviceAccessRule [[-Identity] <ActiveSyncDeviceAccessRuleIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

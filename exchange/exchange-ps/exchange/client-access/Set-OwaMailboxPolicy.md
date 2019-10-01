@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ActionForUnknownFileAndMIMETypes <Allow | ForceSave | Block>]
  [-ActiveSyncIntegrationEnabled <$true | $false>]
+ [-AdditionalStorageProvidersAvailable <$true | $false>]
  [-AllAddressListsEnabled <$true | $false>]
  [-AllowCopyContactsToDeviceAddressBook <$true | $false>]
  [-AllowedFileTypes <MultiValuedProperty>]
@@ -209,6 +210,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AdditionalStorageProvidersAvailable
+This parameter is available only in the cloud-based service.
+
+The AdditionalStorageProvidersAvailable parameter specifies whether to allow additional storage providers (for example, Box, Dropbox, Facebook, Google Drive, Egnyte, personal OneDrive) attachments in Outlook on the web. Valid values are:
+
+- $true: Additional storage providers are enabled in Outlook on the web. Users can connect their additional storage providers and share files over email. This is the default value.
+
+- $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -ActiveSyncIntegrationEnabled
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
@@ -279,7 +300,7 @@ If the same file types are specified in multiple lists:
 
 - The Block list overrides the Allow list and the Force Save list.
 
-- The Force Save list overrides the Allow list. 
+- The Force Save list overrides the Allow list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -312,7 +333,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -333,7 +354,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - NoComputers: Offline mode is disabled.
 
-- AllComputers: Offline mode is available for public and private computer sessions. This is the default value. 
+- AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
 When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
@@ -352,7 +373,7 @@ Accept wildcard characters: False
 ### -BlockedFileTypes
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
-.ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .chm, .cmd, .com, .cpl, .csh, .exe, .fxp, .gadget, .hlp, .hta, .htc, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
+.ade, .adp, .app, .appcontent-ms, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pst, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -362,7 +383,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -403,7 +424,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -782,7 +803,7 @@ If the same file types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -817,7 +838,7 @@ If the same MIME types are specified in multiple lists:
 
 - The Allow list overrides the Block list and the Force Save list.
 
-- The Block list overrides the Force Save list. 
+- The Block list overrides the Force Save list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1228,11 +1249,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled
-The OneDriveAttachmentsEnabled parameter specifies whether to allow OneDrive attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: OneDrive attachments are enabled. This is the default value.
-
-- $false: OneDrive attachments are disabled.
+To enable or disable personal OneDrive in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1824,7 +1843,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter has been deprecated and is no longer used.
 
-To enable or disable third party attachments in Outlook on the web, use the ThirdPartyFileProvidersEnabled parameter.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false
@@ -1841,11 +1860,9 @@ Accept wildcard characters: False
 ### -ThirdPartyFileProvidersEnabled
 This parameter is available only in the cloud-based service.
 
-The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over email.
-
-- $false: Third-party attachments are disabled in Outlook on the web. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
+To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
 Type: $true | $false

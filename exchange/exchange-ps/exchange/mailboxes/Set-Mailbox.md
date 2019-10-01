@@ -73,6 +73,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
+ [-DisableThrottling <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>]
@@ -100,6 +101,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GMGen <$true | $false>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-IgnoreDefaultScope]
  [-ImListMigrationCompleted <$true | $false>]
@@ -243,7 +245,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DefaultAuditSet <MultiValuedProperty>] 
+ [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
  [-DisplayName <String>]
@@ -362,7 +364,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DefaultAuditSet <MultiValuedProperty>] 
+ [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
  [-DisplayName <String>]
@@ -380,6 +382,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-ImListMigrationCompleted <$true | $false>]
  [-ImmutableId <String>]
@@ -1563,6 +1566,8 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 
 - $false: Mailbox audit logging is disabled. This is the default value.
 
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -2141,7 +2146,7 @@ This parameter is available only in the cloud-based service.
 The DefaultAuditSet parameter specifies whether to revert the mailbox operations that are logged in the mailbox audit log back to the set of default operations for the specified logon type. Valid values are:
 
 - Admin: Reverts the mailbox operations to log for administrators back to the default list of operations.
- 
+
 - Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
 
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
@@ -2206,6 +2211,27 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableThrottling
+This parameter is available only in on-premises Exchange.
+
+The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
+
+- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
+
+- $false: Messages will be throttled after the threshold is exceeded. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2344,6 +2370,8 @@ To specify the primary SMTP email address, you can use any of the following meth
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -2858,6 +2886,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+
+You can use any value that uniquely identifies the Group Mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity, RemoveDelayHoldApplied
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HiddenFromAddressListsEnabled
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
@@ -3037,7 +3104,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3418,7 +3485,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Office 365, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
 
@@ -3472,7 +3539,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Office 365, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
 
@@ -3553,7 +3620,7 @@ Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: FalseNamed
-Position: 
+Position:
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -3686,7 +3753,7 @@ This parameter is available only in on-premises Exchange.
 
 The NewPassword parameter is used with the OldPassword parameter when a user changes their own password in Outlook on the web. By default, the NewPassword and OldPassword parameters are also available to members of the Help Desk and Organization Management role groups via the User Options role. However, administrators use the Password parameter to reset a user's password, because that parameter doesn't require the user's current password.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3764,7 +3831,7 @@ This parameter is available only in on-premises Exchange.
 
 The OldPassword parameter is used with the NewPassword parameter when a user changes their own password in Outlook on the web. By default, the NewPassword and OldPassword parameters are also available to members of the Help Desk and Organization Management role groups via the User Options role. However, administrators typically use the Password parameter to reset a user's password, because that parameter doesn't require the user's current password.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3815,11 +3882,11 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
-- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Office 365 admin center, see Reset a user's password (https://go.microsoft.com/fwlink/p/?LinkId=614837).
+- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Microsoft 365 admin center, see Reset a user's password (https://go.microsoft.com/fwlink/p/?LinkId=614837).
 
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3839,6 +3906,8 @@ This parameter is available only in on-premises Exchange.
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
 ```yaml
 Type: SmtpAddress
@@ -3871,7 +3940,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3906,7 +3975,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -4243,6 +4312,8 @@ The RemoveDelayHoldApplied switch specifies whether to remove delay holds from t
 
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName HoldTracking.
 
+You can use this switch with the GroupMailbox switch to remove delay holds from group mailboxes.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveDelayHoldApplied
@@ -4275,7 +4346,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. 
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox.
 
 You don't need to specify a value with this switch.
 
@@ -4596,7 +4667,7 @@ Accept wildcard characters: False
 ### -RoomMailboxPassword
 Use the RoomMailboxPassword parameter to change the password for a room mailbox that has an enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString

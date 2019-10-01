@@ -14,44 +14,50 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Export-AutoDiscoverConfig cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest on an Exchange Server 2016 server.
+Use the Export-AutoDiscoverConfig cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
-
 ```
-Export-AutoDiscoverConfig -TargetForestDomainController <String> [-Confirm] [-DeleteConfig <$true | $false>]
- [-DomainController <Fqdn>] [-MultipleExchangeDeployments <$true | $false>] [-PreferredSourceFqdn <Fqdn>]
- [-SourceForestCredential <PSCredential>] [-TargetForestCredential <PSCredential>] [-WhatIf]
- [<CommonParameters>]
+Export-AutoDiscoverConfig -TargetForestDomainController <String>
+ [-Confirm]
+ [-DeleteConfig <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-MultipleExchangeDeployments <$true | $false>]
+ [-PreferredSourceFqdn <Fqdn>]
+ [-SourceForestCredential <PSCredential>]
+ [-TargetForestCredential <PSCredential>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Autodiscover Service Connection Point pointer resides Active Directory in the user account forest and includes the LDAP URL of the resource forest that the client will use to locate the Autodiscover service in the resource forest.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName
+Export-AutoDiscoverConfig -TargetForestDomainController contoso.com
 ```
 
-This example creates a service connection point object to connect to another Active Directory forest so that Outlook 2010 clients can automatically connect to their mailbox without having to set up a profile.
+This example creates a service connection point object to connect to contoso.com Active Directory forest so that Outlook clients can automatically connect to their mailbox without having to set up a profile.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName -MultipleExchangeDeployments $true
+Export-AutoDiscoverConfig -TargetForestDomainController dc.contoso.com -MultipleExchangeDeployments $true
 ```
 
-This example specifies that Exchange 2016 is deployed in more than one Active Directory forest while establishing an Autodiscover service connection point to the target domain controller in another Active Directory forest.
+This example specifies that Exchange is deployed in more than one Active Directory forest while establishing an Autodiscover service connection point to the dc.contoso.com domain controller in contoso.com Active Directory forest.
 
 ## PARAMETERS
 
 ### -TargetForestDomainController
-The TargetForestDomainController parameter specifies the domain controller that you want to export the Autodiscover configuration to.
+The TargetForestDomainController parameter specifies the forest or domain controller that you want to export the Autodiscover configuration to.
+
+If the target domain controller requires signing, you'll get the error: "A more secure authentication method is required for this server". Domain controllers that require signing aren't supported.
 
 ```yaml
 Type: String

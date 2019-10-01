@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: New-ApplicationAccessPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -11,7 +14,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application. 
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -28,16 +31,20 @@ New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <S
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application. 
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
 Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
-1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy. 
-2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy). 
-3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access. 
+1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
+
+2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy).
+
+3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access.
+
 4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
+
 5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
 
 ## EXAMPLES
@@ -59,7 +66,7 @@ This example creates a new application access policy with the following settings
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of distribution group EvenUsers." 
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -70,13 +77,13 @@ This example creates a new application access policy with the following settings
 
 - PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
 
-- Description: Restrict this app to members of distribution group EvenUsers.
+- Description: Restrict this app to members of security group EvenUsers.
 
 
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of distribution group OddUsers." 
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -87,7 +94,7 @@ This example creates a new application access policy with the following settings
 
 - PolicyScopeGroupId: OddUsers@AppPolicyTest2.com
 
-- Description: Deny this app access to members of distribution group OddUsers.
+- Description: Deny this app access to members of security group OddUsers.
 
 ## PARAMETERS
 
@@ -128,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group or a distribution group or a dynamic distribution group to restrict/deny access to a large number of user mailboxes. 
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to a large number of user mailboxes.
 For example:
 
 - Name
