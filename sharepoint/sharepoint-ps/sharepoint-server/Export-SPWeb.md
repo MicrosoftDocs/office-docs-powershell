@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------. 
 ```
-Export-SPWeb https://site -Path "site export.cmp"
+Export-SPWeb https://site -Path "export.cmp"
 ```
 
 This example exports the site at https://site/ to a file called site export.cmp in the current directory.
