@@ -23,6 +23,8 @@ Get-CsOnlineLisSubnet [[-TenantId] <Guid>] [[-Subnet] <String>] [-IsDebug <Boole
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the subnet through which calls are routed.
 
+The location ID which is associating with the subnet is not required to be the existing location.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -39,6 +41,14 @@ Get-CsOnlineLisSubnet -Subnet 10.106.89.12
 ```
 
 Example 2 retrieves the Location Information Server (LIS) subnet for Subnet ID "10.106.89.12".
+
+
+### -------------------------- Example 3 --------------------------
+```
+Get-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e
+```
+
+Example 2 retrieves the Location Information Server (LIS) subnet for Subnet ID "2001:4898:e8:6c:90d2:28d4:76a4:ec5e".
 
 
 ## PARAMETERS

@@ -11,7 +11,7 @@ ms.reviewer:
 # Set-CsOnlineLisSubnet
 
 ## SYNOPSIS
-Creates a Location Information Server (LIS) subnet, creates an association between a subnet and a location (creating a new location if that location doesn't exist), or modifies an existing subnet and its associated location. The association between a subnet and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+Creates a Location Information Server (LIS) subnet, creates an association between a subnet and a location, or modifies an existing subnet and its associated location. The association between a subnet and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
 ## SYNTAX
 
@@ -24,6 +24,8 @@ Set-CsOnlineLisSubnet [[-TenantId] <Guid>] [-Subnet] <String> -LocationId <Guid>
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet allows the administrator to map physical locations to the subnet through which the client is connected.
 
+The location ID which is associating with the subnet is not required to be the existing location.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -32,6 +34,14 @@ Set-CsOnlineLisSubnet -Subnet 10.10.10.10 -LocationId f037a9ad-4334-455a-a1c5-38
 ```
 
 Example 1 creates the Location Information Service subnet "10.10.10.10" associated to Location ID "f037a9ad-4334-455a-a1c5-3838ec0f5d02".
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e -LocationId f037a9ad-4334-455a-a1c5-3838ec0f5d02 -Description "Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e"
+```
+
+Example 2 creates the Location Information Service subnet in IPv6 format "2001:4898:e8:6c:90d2:28d4:76a4:ec5e" associated to Location ID "f037a9ad-4334-455a-a1c5-3838ec0f5d02".
+
 
 ## PARAMETERS
 
