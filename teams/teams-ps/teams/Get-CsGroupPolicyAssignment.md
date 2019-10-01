@@ -108,5 +108,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## RELATED LINKS
 
 [New-CsGroupPolicyAssignment]()
+
 [Set-CsBatchPolicyAssignment]()
+
 [Remove-CsBatchPolicyAssignment]()
