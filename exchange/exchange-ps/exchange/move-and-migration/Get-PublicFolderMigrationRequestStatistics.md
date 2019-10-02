@@ -1,40 +1,34 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderMigrationRequestStatistics
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-PublicFolderMigrationRequestStatistics
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
-Use the Get-PublicFolderMigrationRequestStatistics cmdlet to view detailed information about migration requests.
+Use the Get-PublicFolderMigrationRequestStatistics cmdlet to view detailed information about serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet).
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### IdentityOnPremises
+### Identity
 ```
 Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
- [-IncludeReport]
- [-ReportOnly] [<CommonParameters>]
-```
-
-### IdentityCloud
-```
-Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
- [-DiagnosticInfo <String>]
  [-IncludeReport]
  [-ReportOnly]
  [<CommonParameters>]
@@ -42,13 +36,12 @@ Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationReq
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter>
+Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
  [-ReportOnly]
- [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
@@ -74,19 +67,19 @@ This example returns additional information about the migration request and expo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the public folder migration request. You can use one of the following values:
-
-- GUID
+The Identity parameter specifies the migration request that you want to view. You can use the following values:
 
 - Name
+
+- RequestGUID
 
 You can't use this parameter with the RequestQueue or RequestGuid parameter.
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
-Parameter Sets: IdentityOnPremises, IdentityCloud
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -95,11 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-This parameter is available only in on-premises Exchange.
-
 This parameter is for debugging purposes only.
 
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
+The RequestQueue parameter filters the results by the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
 
@@ -122,13 +113,11 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-This parameter is available only in on-premises Exchange.
-
 The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: IdentityOnPremises, MigrationRequestQueue
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -139,13 +128,11 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticArgument
-This parameter is available only in on-premises Exchange.
-
 The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String
-Parameter Sets: IdentityOnPremises, MigrationRequestQueue
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -155,31 +142,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DiagnosticInfo
-This parameter is available only in the cloud-based service.
-
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: String
-Parameter Sets: IdentityCloud
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: IdentityOnPremises, MigrationRequestQueue
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -196,7 +164,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +179,7 @@ The ReportOnly switch returns the results as an array of report entries (encoded
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -220,8 +188,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-This parameter is available only in on-premises Exchange.
-
 The RequestGuid parameter specifies the GUID of a migration request.
 
 You can't use this parameter with the Identity parameter.
