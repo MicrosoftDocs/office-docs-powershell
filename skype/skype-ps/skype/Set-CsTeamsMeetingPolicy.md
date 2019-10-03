@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTranscription
-Determines whether real-time and/or post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
