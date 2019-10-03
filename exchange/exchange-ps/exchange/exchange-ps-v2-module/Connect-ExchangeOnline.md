@@ -42,23 +42,21 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-{{ Though the Exchange Online PowerShell V2 module contains a set of ~10 new REST API backed CMDLETs and all the older Remote PowerShell cmdlets, a single Connect commandlet will allow to establish an RPS Session and authenticate for the new EXO Cmdlets. }}
+Though the Exchange Online PowerShell V2 module contains a set of ~10 new REST API backed CMDLETs and all the older remote PowerShell cmdlets, this single Connect cmdlet allows you to establish a remote PowerShell session and authenticate for the new ExO V2 module cmdlets.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ UserCredential = Get-Credential
-Connect-ExchangeOnline -Credential $UserCredential 
- }}
+UserCredential = Get-Credential
+Connect-ExchangeOnline -Credential $UserCredential
 ```
 
-{{ The first command gets the user credentials, and then stores them in the $Credential variable.
+The first command gets the user credentials and stores them in the $Credential variable.
 
-The second command connects the current PowerShell session using the credentials in the $Credential. Please note that after the second command is completed, password key in $Credential variable becomes empty.
+The second command connects the current PowerShell session using the credentials in the $Credential. Note that after the second command is complete, the password key in the $Credential variable becomes empty.
 
-After Connect-ExchangeOnline is successful, you can now run all the new EXO cmdlets as well as older Remote PowerShell cmdlets.
- }}
+After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
 ## PARAMETERS
 
