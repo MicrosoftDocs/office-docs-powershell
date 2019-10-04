@@ -858,7 +858,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkloadType
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport

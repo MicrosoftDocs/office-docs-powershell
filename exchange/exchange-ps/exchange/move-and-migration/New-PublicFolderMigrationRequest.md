@@ -420,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkloadType
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RequestWorkloadType

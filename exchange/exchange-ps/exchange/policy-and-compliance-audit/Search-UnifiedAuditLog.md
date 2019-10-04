@@ -29,7 +29,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-Operations <String[]>]
  [-RecordType <AuditRecordType>]
  [-ResultSize <Int32>]
- [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
+ [-SessionCommand <UnifiedAuditSessionCommand>]
  [-SessionId <String>]
  [-SiteIds <String[]>]
  [-UserIds <String[]>]
@@ -314,13 +314,10 @@ The SessionCommand parameter specifies how much information is returned and how 
 
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results.
 
-- Initialize: This value is for Microsoft Internal use only.
-
-> [!NOTE]
-> Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
+**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
 
 ```yaml
-Type: Initialize | ReturnLargeSet | ReturnNextPreviewPage
+Type: UnifiedAuditSessionCommand
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
