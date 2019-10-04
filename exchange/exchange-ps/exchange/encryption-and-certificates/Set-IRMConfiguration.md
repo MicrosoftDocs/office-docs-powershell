@@ -271,6 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -InternalLicensingEnabled
+**Note**: In Exchange Online, this parameter affects both internal and external messages. In on-premises Exchange, this parameter only affects internal messages.
+
 The InternalLicensingEnabled parameter specifies whether to enable IRM features for messages that are sent to internal recipients. Valid values are:
 
 - $true: IRM features are enabled for internal messages. This is the default value in Exchange Online.
