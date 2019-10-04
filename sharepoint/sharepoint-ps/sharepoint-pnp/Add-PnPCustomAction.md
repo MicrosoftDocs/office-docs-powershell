@@ -67,7 +67,7 @@ Adds a new application customizer to the site. This requires that an SPFX soluti
 ## PARAMETERS
 
 ### -ClientSideComponentId
-The Client Side Component Id of the custom action
+The Client Side Component Id of the custom action as defined in the manfiest.json file for your action
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
