@@ -10,10 +10,10 @@ ms.reviewer:
 
 # Get-CsUserPolicyAssignment
 
+**Note:** This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+
 ## SYNOPSIS
 This cmdlet is used to return the policy assignments for a user, both directly assigned and inherited from a group.
-
-It does not currently support returning policies for multiple users.
 
 ## SYNTAX
 
@@ -24,74 +24,32 @@ Get-CsUserPolicyAssignment [-Identity <String>]
 ## DESCRIPTION
 This cmdlets returns the effective policies for a user, based on either direct policy assignment or inheritance from a group policy assignment.  For a given policy type, if an effective policy is not returned, this indicates that the effective policy for the user  
 
+This cmdlet does not currently support returning policies for multiple users.
 
 ## EXAMPLES
 
 ### Example 1
-In this example, all group policy assignments are returned.
+This examples returns the policies for a user and indicates whether the policy is directly assigned to the user or was inherited from a group.
 
 ```
-Get-CsGroupPolicyAssignment 
+Get-CsUserPolicyAssignment -Identity 1471bd98-0a32-4426-930d-d790de8a0a70
 
-GroupId                              PolicyName            PolicyType           Priority
--------                              ----------            ----------           --------
-d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 Host:AllOn            TeamsMeetingPolicy   1
-e050ce51-54bc-45b7-b3e6-c00343d31274 Tenant:SalesMessaging TeamsMessagingPolicy 2
-e050ce51-54bc-45b7-b3e6-c00343d31274 Host:AllOff           TeamsMeetingPolicy   2
-566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Host:Kiosk            TeamsMeetingPolicy   3
-```
-
-### Example 2
-In this example, only the policies assigned to a specific group are returned.
-
-```
-Get-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274
-
-GroupId                              PolicyName            PolicyType           Priority
--------                              ----------            ----------           --------
-e050ce51-54bc-45b7-b3e6-c00343d31274 Tenant:SalesMessaging TeamsMessagingPolicy 2
-e050ce51-54bc-45b7-b3e6-c00343d31274 Host:AllOff           TeamsMeetingPolicy   2
-```
-
-### Example 3
-In this example, only the policies of a specific type are returned.
-
-Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
-
-```
-GroupId                              PolicyName  PolicyType         Priority
--------                              ----------  ----------         --------
-d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 Host:AllOn  TeamsMeetingPolicy 1
-e050ce51-54bc-45b7-b3e6-c00343d31274 Host:AllOff TeamsMeetingPolicy 2
-566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Host:Kiosk  TeamsMeetingPolicy 3
-```
+PolicyType            PolicyName             PolicySource
+-------               ----------             ----------  
+TeamsMeetingPolicy    Host:AllOn             Group
+TeamsMessagingPolicy  Tenant:SalesMessaging  Direct
 
 ## PARAMETERS
 
-### -GroupId
-The ID of a group whose policy assignments will be returned.
+### -Identity
+The identify of the user whose policy assignments will be returned.
 
 ```yaml
 Type: String
 Parameter Sets:
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyType
-The policy type for which group policy assignments will be returned.
-
-```yaml
-Type: String
-Parameter Sets:
-Aliases:
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
