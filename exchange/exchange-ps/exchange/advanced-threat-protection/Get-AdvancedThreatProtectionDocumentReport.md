@@ -21,8 +21,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionDocumentReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>] [-Organization <OrganizationIdParameter>]  [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-AdvancedThreatProtectionDocumentReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Organization <OrganizationIdParameter>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
