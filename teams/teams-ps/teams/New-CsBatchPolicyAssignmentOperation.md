@@ -11,7 +11,9 @@ ms.reviewer:
 # New-CsBatchPolicyAssignmentOperation
 
 ## SYNOPSIS
-This cmdlet is used to assign a policy to a batch of users.  A batch may contain up to 20,000 users.
+NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+
+This cmdlet is used to assign a policy to a batch of users.
 
 ## SYNTAX
 
@@ -23,6 +25,8 @@ New-CsBatchPolicyAssignmentOperation -PolicyType <String> -PolicyName <String> -
 When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
 
 Users can be specified by their object ID (guid) or by their UPN/SIP/email (user@contoso.com).
+
+A batch may contain up to 20,000 users.
 
 ## EXAMPLES
 

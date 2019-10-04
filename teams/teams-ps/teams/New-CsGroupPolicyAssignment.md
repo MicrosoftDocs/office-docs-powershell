@@ -11,6 +11,8 @@ ms.reviewer:
 # New-CsGroupPolicyAssignment
 
 ## SYNOPSIS
+NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+
 This cmdlet is used to assign a policy to a group.
 
 ## SYNTAX
