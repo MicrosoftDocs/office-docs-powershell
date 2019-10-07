@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
