@@ -50,32 +50,32 @@ Get-ExoCasMailbox
 ```
 
 ## DESCRIPTION
-{{ This cmdlet returns a variety of client access settings for one or more mailboxes. These settings include options for Outlook on the web, Exchange ActiveSync, POP3, and IMAP4.
+This cmdlet returns a variety of client access settings for one or more mailboxes. These settings include options for Outlook on the web, Exchange ActiveSync, POP3, and IMAP4.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx). }}
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Get-EXOCASMailbox -Identity "JeffHay@contoso.com" }}
+Get-EXOCASMailbox -Identity "JeffHay@contoso.com"
 ```
 
-{{ This example returns the values of the following client access settings for the user with Identity Jeffhay@contoso.com
+This example returns the values of the following client access settings for the user with Identity Jeffhay@contoso.com:
 
-ActiveSyncEnabled
+- ActiveSyncEnabled
 
-EwsEnabled
+- EwsEnabled
 
-OWAEnabled
+- OWAEnabled
 
-PopEnabled
+- PopEnabled
 
-ImapEnabled
+- ImapEnabled
 
-MAPIEnabled 
+- MAPIEnabled 
 
-ECPEnabled }}
+- ECPEnabled
 
 ## PARAMETERS
 
@@ -217,9 +217,6 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-> [!NOTE]
-> Identity parameter in V2 Cmdlets doesn't support name or alias; 
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -235,6 +232,8 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 - SamAccountName
 
 - User ID or user principal name (UPN)
+
+**Note**: This parameter doesn't support Name or Alias values.
 
 You can't use this parameter with the Anr parameter.
 
@@ -389,27 +388,34 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
-Following Input parameters are not supported in Get-EXOCasMailbox Cmdlet 
-### ActiveSyncDebugLogging
-### IgnoreDefaultScope
-### ReadIsOptimizedForAccessibility
-### SortBy
-### GetImapProtocolLog
-### GetPopProtocolLog
-### SendLogsTo
-
 
 ###  
+The following Input parameters are not supported in Get-EXOCasMailbox:
+
+- IgnoreDefaultScope
+
+- ReadIsOptimizedForAccessibility
+
+- SortBy
+
+- GetImapProtocolLog
+
+- GetPopProtocolLog
+
+- SendLogsTo
 
 ## OUTPUTS
-Following Output parameters are removed by design from Get-EXOCasMailbox Cmdlet output
-### RunspaceId
-### Servername
-### OriginatingServer
-### IsValid
-
 
 ###  
+The following properties are removed by design from Get-EXOCasMailbox output:
+
+- RunspaceId
+
+- Servername
+
+- OriginatingServer
+
+- IsValid
 
 ## NOTES
 
