@@ -24,9 +24,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity (Default)
 ```
 Get-ExoCasMailbox
- [-ExternalDirectoryObjectId <Guid>]
- [-Filter <String>]
  [[-Identity] <String>]
+ [-Filter <String>]
+ [-ExternalDirectoryObjectId <Guid>]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
@@ -50,16 +50,32 @@ Get-ExoCasMailbox
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet returns a variety of client access settings for one or more mailboxes. These settings include options for Outlook on the web, Exchange ActiveSync, POP3, and IMAP4.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-EXOCASMailbox -Identity "JeffHay@contoso.com"
 ```
 
-{{ Add example description here }}
+This example returns the values of the following client access settings for the user with Identity Jeffhay@contoso.com:
+
+- ActiveSyncEnabled
+
+- EwsEnabled
+
+- OWAEnabled
+
+- PopEnabled
+
+- ImapEnabled
+
+- MAPIEnabled 
+
+- ECPEnabled
 
 ## PARAMETERS
 
@@ -201,10 +217,6 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- Name
-
-- Alias
-
 - Distinguished name (DN)
 
 - Canonical DN
@@ -220,6 +232,8 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 - SamAccountName
 
 - User ID or user principal name (UPN)
+
+**Note**: This parameter doesn't support Name or Alias values.
 
 You can't use this parameter with the Anr parameter.
 
@@ -291,6 +305,8 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 - Pop
 
 - ProtocolSettings
+
+- All 
 
 You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
@@ -374,10 +390,32 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
+The following Input parameters are not supported in Get-EXOCasMailbox:
+
+- IgnoreDefaultScope
+
+- ReadIsOptimizedForAccessibility
+
+- SortBy
+
+- GetImapProtocolLog
+
+- GetPopProtocolLog
+
+- SendLogsTo
 
 ## OUTPUTS
 
 ###  
+The following properties are removed by design from Get-EXOCasMailbox output:
+
+- RunspaceId
+
+- Servername
+
+- OriginatingServer
+
+- IsValid
 
 ## NOTES
 
