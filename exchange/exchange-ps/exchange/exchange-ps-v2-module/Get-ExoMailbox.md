@@ -58,16 +58,43 @@ Get-ExoMailbox [-Anr <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+{{ This commandlet returns you a summary list of all the mailboxes in your organization. It returns a minimum set of properties by default. }}
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+{{ Get-Mailbox -ResultSize unlimited }}
 ```
 
-{{ Add example description here }}
+{{ This example returns a summary list of all the mailboxes in your organization. It returns a minimum set of output properties by default. To get additional objects, please provide Properties and/or PropertySets parameter.}}
+
+### -------------------------- Example 2 --------------------------
+```
+{{ Get-Mailbox -PropertySets Archive }}
+```
+
+{{ This example returns the list of Properties defined in PropertySet "Archive". 
+To view the list of properties in PropertySet "Archive", see [Get-ExoMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets
+
+To get additional objects, please provide Properties and/or PropertySets parameter.}}
+
+
+### -------------------------- Example 3 --------------------------
+```
+{{ Get-Mailbox -Properties Name,DistinguishedName,Guid   -PropertySets Archive,Audit }}
+```
+
+{{ This example returns a summary list of all the mailboxes in your organization. It returns the properties specified in PropertySet Archive, PropertySet Audit as well as properties passed as input parameter (i.e. Name, DistinguishedName & Guid in this case). }}
+
+### -------------------------- Example 4 --------------------------
+```
+{{ Get-Mailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias }}
+```
+
+{{ This example returns the specified properties (DisplayName, EmailAddresses & Alias) for the mailbox with Identity John@contoso.com}}
+
+
 
 ## PARAMETERS
 
@@ -146,9 +173,8 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- Name
-
-- Alias
+> [!NOTE]
+> Identity parameter in V2 Cmdlets doesn't support name or alias; 
 
 - Distinguished name (DN)
 
@@ -430,11 +456,30 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
+### Non-supported parameters
+Below is the list of parameters supported in Get-Mailbox but not in the V2 Cmdlet (Get-EXOMailbox)
+ - PublicFolder
+ - GroupMailbox
+ - Migration
+ - SortBy
+ - Async
+
+
 ## INPUTS
 
 ###  
 
 ## OUTPUTS
+Below is the list of attributes which are not returned in output of Get-ExoMailbox.
+- RunspaceId
+- Servername
+- AdminDisplayVersion
+- DelayReleaseHoldApplied
+- EnforcedTimestamps
+- Description
+- OriginatingServer
+- IsValid
+- ObjectState
 
 ###  
 
