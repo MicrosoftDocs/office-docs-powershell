@@ -223,9 +223,6 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
-
-Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Both Legacy mode and TeamsInteropPolicy have been retired.
 
 ## RELATED LINKS
 
