@@ -1327,7 +1327,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
-PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
 ```yaml
 Type: SPOConditionalAccessPolicyType
