@@ -692,9 +692,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDumpsters
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service. It is used just for the public folder migrations from Exchange 2013/2016/2019 to Exchange Online.
 
-The ExcludeDumpsters switch specifies whether to migrate mailboxes without including the contents of the Recoverable Items folder (formerly known as the dumpster). You don't need to specify a value with this switch.
+The ExcludeDumpsters switch specifies whether to migrate public folder mailboxes without including the contents of the Recoverable Items folder (formerly known as the dumpster). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
