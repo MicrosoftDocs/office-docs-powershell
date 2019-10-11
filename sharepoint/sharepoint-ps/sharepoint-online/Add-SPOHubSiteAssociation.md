@@ -27,7 +27,8 @@ Use this cmdlet to associate a site with a hub site.
 ### Example 1
 
 ```
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing 
+Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research 
+-HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
 This example associates the research site with the marketing hub site.
