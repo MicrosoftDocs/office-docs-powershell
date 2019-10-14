@@ -1,9 +1,9 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
 title: Get-CsTeamsEmergencyCallRoutingPolicy
-author:danny-levin
-ms.author:dannyle
+author: danny-levin
+ms.author: dannyle
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -28,28 +28,28 @@ Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-Filter <String>]
 ```
 
 ## DESCRIPTION
-{{ This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration }}
+ This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> {{ Get-CsTeamsEmergencyCallRoutingPolicy }}
+PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy
 ```
 
-{{  Retrieve all emergency call routing policy that are available in your scope }}
+  Retrieves all emergency call routing policies that are available in your scope
 
 ### Example 2
 ```powershell
-PS C:> {{ Get-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP}}
+PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
 ```
 
-{{  Retrieve one emergency call routing policy with specific identity }}
+  Retrieves one emergency call routing policy specifying the identity
 
 ## PARAMETERS
 
 ### -Filter
-{{ The Filter parameter allows you to limit the number of results based on filters you specify. }}
+ The Filter parameter allows you to limit the number of results based on filters you specify.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Specify the policy that you would like to retrieve. }}
+ Specify the policy that you would like to retrieve.
 
 ```yaml
 Type: XdsIdentity
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{ Microsoft internal use. }}
+ Microsoft internal use.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Microsoft internal use. }}
+ Microsoft internal use.
 
 ```yaml
 Type: System.Guid
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

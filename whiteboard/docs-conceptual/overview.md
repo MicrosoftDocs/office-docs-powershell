@@ -1,3 +1,7 @@
+---
+title: Whiteboard Overview
+---
+
 # Overview
 
 ## Installing

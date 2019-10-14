@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Set-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an existing external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
 
@@ -40,10 +40,11 @@ The following parameters are not applicable to Skype for Business Online: AllowP
 
 ### -------------------------- Example 1 ------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
 
-{{ Add example description here }}
+This example modifies an existing policy to block external file transfer.
+
 
 ## PARAMETERS
 
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PFileTransfer
-{{Fill EnableP2PFileTransfer Description}}
+Indicates whether file transfers to Federated partners are allowed. The default value is True.
 
 ```yaml
 Type: Boolean
@@ -176,7 +177,16 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being modified. For example:
+
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+You can return your tenant ID by running this command:
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+
 
 ```yaml
 Type: Guid

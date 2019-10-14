@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Test-CsEffectiveTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -35,12 +35,18 @@ The `Test-CsEffectiveTenantDialPlan` cmdlet normalizes the dialed number by appl
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsEffectiveTenantDialPlan -Identity vt1_user1 | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
-
-Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity 5d3ff00a-8d23-42d0-ac9e-32a2c518bc1c_Global_Vt1TenantDialPlan2
+Get-CsEffectiveTenantDialPlan -Identity adelev | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
 ```
 
-This example gets the Identity of a dial plan that is associated with a dialed number, and applies the retrieved tenant dial plan to normalize the dialed number.
+This example gets the Identity of a dial plan that is associated with the identity of an user, and applies the retrieved tenant dial plan to normalize the dialed number.
+
+
+### -------------------------- Example 2 --------------------------
+```
+Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity adelev@contoso.onmicrosoft.com
+```
+
+This example tests the given dialed number against a specific identity.
 
 
 ## PARAMETERS
@@ -62,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is the effective tenant dial plan name in the form of TenantId_GlobalVoiceDialPlan_TenantDialPlan.
+Indicates the identity of the user account to be tested against. The user's SIP address, the user's user principal name (UPN) or the user's display name can be specified.
 
 ```yaml
 Type: UserIdParameter
@@ -129,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -EffectiveTenantDialPlanName
-{{Fill EffectiveTenantDialPlanName Description}}
+The EffectiveTenantDialPlanName parameter is the effective tenant dial plan name in the form of TenantId_TenantDialPlan_GlobalVoiceDialPlan.
 
 ```yaml
 Type: String

@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter

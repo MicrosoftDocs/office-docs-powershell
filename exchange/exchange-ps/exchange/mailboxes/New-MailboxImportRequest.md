@@ -14,7 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive that's hosted in on-premises Exchange. Importing .pst files is not possible in Exchange Online.
+Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
@@ -956,7 +956,7 @@ Accept wildcard characters: False
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport

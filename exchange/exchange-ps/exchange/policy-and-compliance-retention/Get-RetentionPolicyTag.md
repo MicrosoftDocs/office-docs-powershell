@@ -151,7 +151,7 @@ The Mailbox parameter returns the retention tags that are assigned to the retent
 
 - User ID or user principal name (UPN)
 
-This parameter only returns default policy tags (DPTs) and personal tags; it doesn't return retention policy tags. 
+This parameter only returns default policy tags (DPTs) and personal tags; it doesn't return retention policy tags.
 
 ```yaml
 Type: MailboxIdParameter

@@ -4,7 +4,7 @@ applicable: Skype for Business Online, Skype for Business Server 2019, Skype for
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
 ---
@@ -223,9 +223,6 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
-
-Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Both Legacy mode and TeamsInteropPolicy have been retired.
 
 ## RELATED LINKS
 

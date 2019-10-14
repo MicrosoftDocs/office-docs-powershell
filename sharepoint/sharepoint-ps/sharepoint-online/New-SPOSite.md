@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceQuota
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company’s aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (https://msdn.microsoft.com/en-us/library/gg615462.aspx).
+Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company’s aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (https://msdn.microsoft.com/en-us/library/gg615462.aspx). Note that this parameter is now obsolete and has been deprecated.
 
 
 ```yaml

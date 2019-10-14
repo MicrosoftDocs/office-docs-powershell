@@ -472,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocationException
-This parameter specifies the Teams to exclude when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+The TeamsChannelLocationException parameter specifies the Teams to exclude when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
 
 - Name
 
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocationException
-This parameter specifies the Teams users to exclude when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+The TeamsChatLocationException parameter specifies the Teams users to exclude when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -546,7 +546,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WhatIf
 The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.

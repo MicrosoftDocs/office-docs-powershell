@@ -96,8 +96,7 @@ This example updates the signing certificate of the SharePoint security token se
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
-
+$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
@@ -107,7 +106,7 @@ This example imports the signing certificate for the SharePoint STS identity pro
 ## PARAMETERS
 
 ### -QueueSigningCertificateThumbprint
-{{ Fill QueueSigningCertificateThumbprint Description }}
+Sets the certificate with the provided thumbprint as the queued signing certificate.
 
 ```yaml
 Type: String
@@ -136,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateThumbprint
-{{ Fill RevokeSigningCertificateThumbprint Description }}
+Revoke the signing certificate with the provided thumbprint.
 
 ```yaml
 Type: String
@@ -247,7 +246,7 @@ Accept wildcard characters: False
 
 ### -MaxLogonTokenCacheItems
 Specifies the maximum number of entries for the in-memory logon token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
@@ -266,7 +265,7 @@ Accept wildcard characters: False
 
 ### -MaxServiceTokenCacheItems
 Specifies the maximum number of entries for the in-memory service token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
@@ -284,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificate
-{{ Fill QueueSigningCertificate Description }}
+Sets the provided certificate as the queued signing certificate.
 
 ```yaml
 Type: X509Certificate2
@@ -300,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificateStoreName
-{{ Fill QueueSigningCertificateStoreName Description }}
+The store to search in when looking up a certificate to be set as the queued signing certificate by its thumbprint. Required if QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String
@@ -316,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificate
-{{ Fill RevokeSigningCertificate Description }}
+Revokes the signing certificate that matches the provided certificate.
 
 ```yaml
 Type: X509Certificate2
@@ -332,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateStoreName
-{{ Fill RevokeSigningCertificateStoreName Description }}
+The store to search when looking up a certificate to be revoked by its thumbprint. Required if the QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String

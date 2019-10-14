@@ -20,9 +20,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
+### Default
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-HoldCleanup] [-InactiveMailbox] [-AggMailboxCleanup] [<CommonParameters>]
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+ [-AggMailboxCleanup]
+ [-DomainController <Fqdn>]
+ [-Confirm]
+ [-HoldCleanup]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### HoldCleanup
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCleanup
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### StopHoldCleanup
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,6 +114,50 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -HoldCleanup
+The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
+
+Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: HoldCleanup
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AggMailboxCleanup
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -115,7 +184,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -125,20 +194,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HoldCleanup
-The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
+### -FullCrawl
+This parameter is available only in the cloud-based service.
 
-Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+The FullCrawl switch recalculates the application of tags across the whole mailbox. You don't need to specify a value with this switch.
 
 ```yaml
-Type:
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: HoldCleanup, StopHoldCleanup
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InactiveMailbox
+This parameter is available only in the cloud-based service.
+
+The InactiveMailbox switch runs the command only inactive mailboxes. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+When you use this switch, items aren't moved from the inactive mailbox to the archive mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: HoldCleanup, StopHoldCleanup
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopHoldCleanup
+This parameter is available only in the cloud-based service.
+
+The StopHoldCleanup parameter stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+
+A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StopHoldCleanup
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -150,41 +259,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InactiveMailbox
-This parameter is available only in the cloud-based service.
-he InactiveMailbox specifies whether the command runs only on inactive mailboxes. You don't need to specify a value with this switch..
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed
-
-When you use this switch, items aren't moved from the inactive mailbox to the archive mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AggMailboxCleanup
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

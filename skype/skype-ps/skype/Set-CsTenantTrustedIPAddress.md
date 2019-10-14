@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Set-CsTenantTrustedIPAddress
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -32,6 +32,8 @@ Set-CsTenantTrustedIPAddress [-Tenant <System.Guid>] [-MaskBits <System.Int32>] 
 External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user’s endpoint is inside the corporate network before checking for a specific site match. If the user’s external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user’s endpoint is located. If the user’s external IP doesn’t match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
 
 Both IPv4 and IPv6 trusted IP addresses are supported.
+
+When the client is sending the trusted IP address, please make sure we have already whitelisted the IP address by running this command-let, otherwise the request will be rejected. If you are only adding the IPv4 address by running this command-let, but your client are only sending and IPv6 address, it will be rejected.
 
 ## EXAMPLES
 
