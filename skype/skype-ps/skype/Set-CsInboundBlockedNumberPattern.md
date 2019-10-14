@@ -31,7 +31,7 @@ Set-CsInboundBlockedNumberPattern [-Tenant <Guid>] [-Enabled <Boolean>] [-Descri
 ```
 
 ## DESCRIPTION
-This example modifies one or more parameters of a blocked number pattern in the tenant list.
+This cmdlet modifies one or more parameters of a blocked number pattern in the tenant list.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This example modifies one or more parameters of a blocked number pattern in the 
 PS C:> Set-CsInboundBlockedNumberPattern -Identity "BlockAutomatic" -Pattern "^\+11234567890"
 ```
 
-This cmdlet modifies a blocked number pattern to block inbound calls from +11234567890 number.
+This example modifies a blocked number pattern to block inbound calls from +11234567890 number.
 
 ## PARAMETERS
 
