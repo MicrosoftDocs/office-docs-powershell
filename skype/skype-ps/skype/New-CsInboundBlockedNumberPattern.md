@@ -37,7 +37,7 @@ Adds a blocked number pattern to the tenant list.
 
 ### Example 1
 ```powershell
-PS C:> New-CsInboundBlockedNumberPattern -Description "Avoid Unwanted Automatic Call" -Name "BlockAutomatic" -Pattern "^+11234567890"
+PS C:> New-CsInboundBlockedNumberPattern -Description "Avoid Unwanted Automatic Call" -Name "BlockAutomatic" -Pattern "^\+11234567890"
 ```
 
 This cmdlet adds a blocked number pattern to block inbound calls from +11234567890 number.
