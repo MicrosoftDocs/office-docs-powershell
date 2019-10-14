@@ -43,9 +43,7 @@ In the preceding example, the *Get-CsInboundBlockedNumberPattern* cmdlet is call
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on Skype for Business Online-specific attributes. For example, you can limit returned data to users who have been assigned a specific policy, or users who have not been assigned a specific policy.
-
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
+Enables you to limit the returned data by filtering on Skype for Business Online-specific attributes. The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
 
 ```yaml
 Type: String
