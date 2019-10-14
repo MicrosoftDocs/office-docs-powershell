@@ -607,6 +607,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DirectMembershipOnly
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the dynamic distribution group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -787,23 +804,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DirectMembershipOnly
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
