@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-ExoMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
+Use the Get-EXOMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -36,9 +36,9 @@ Get-EXOMailboxFolderStatistics
 ```
 
 ## DESCRIPTION
-A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-ExoMailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
+A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-EXOMailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
 
-The Get-ExoMailboxFolderStatistics cmdlet shouldn't be confused with the Get-ExoMailboxStatistics cmdlet.
+The Get-EXOMailboxFolderStatistics cmdlet shouldn't be confused with the Get-EXOMailboxStatistics cmdlet.
 
 ## EXAMPLES
 
@@ -267,4 +267,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailboxfolderstatistics)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderstatistics)

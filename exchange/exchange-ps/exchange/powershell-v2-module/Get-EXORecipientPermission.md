@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 applicable: Exchange Online
-title: Get-ExoRecipientPermission
+title: Get-EXORecipientPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,12 +10,12 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-ExoRecipientPermission
+# Get-EXORecipientPermission
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-ExoRecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
+Use the Get-EXORecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Default (Default)
 ```
-Get-ExoRecipientPermission [-Trustee <String>]
+Get-EXORecipientPermission [-Trustee <String>]
  [-AccessRights <MultiValuedProperty>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -31,7 +31,7 @@ Get-ExoRecipientPermission [-Trustee <String>]
 
 ### Identity
 ```
-Get-ExoRecipientPermission [-Trustee <String>]
+Get-EXORecipientPermission [-Trustee <String>]
  [-AccessRights <MultiValuedProperty>]
  [[-Identity] <String>]
  [-ExternalDirectoryObjectId <Guid>]
@@ -218,4 +218,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipientpermission)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipientpermission)

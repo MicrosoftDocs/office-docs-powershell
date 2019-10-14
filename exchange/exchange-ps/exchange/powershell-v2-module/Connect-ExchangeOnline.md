@@ -307,4 +307,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/connect-exchangeonline)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline)

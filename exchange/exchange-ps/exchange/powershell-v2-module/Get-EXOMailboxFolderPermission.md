@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 applicable: Exchange Online
-title: Get-ExoMailboxFolderPermission
+title: Get-EXOMailboxFolderPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,7 +10,7 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-ExoMailboxFolderPermission
+# Get-EXOMailboxFolderPermission
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-ExoMailboxFolderPermission
+Get-EXOMailboxFolderPermission
  [-User <String>]
  [-GroupMailbox]
  [[-Identity] <String>]
@@ -169,4 +169,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailboxfolderpermission)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission)

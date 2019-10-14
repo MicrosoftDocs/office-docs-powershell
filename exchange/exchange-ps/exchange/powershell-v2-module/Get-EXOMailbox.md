@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 applicable: Exchange Online
-title: Get-ExoMailbox
+title: Get-EXOMailbox
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,12 +10,12 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-ExoMailbox
+# Get-EXOMailbox
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-ExoMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
+Use the Get-EXOMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity (Default)
 ```
-Get-ExoMailbox [[-Identity] <String>]
+Get-EXOMailbox [[-Identity] <String>]
  [-Archive]
  [-ExternalDirectoryObjectId <Guid>]
  [-Filter <String>]
@@ -42,7 +42,7 @@ Get-ExoMailbox [[-Identity] <String>]
 
 ### Anr
 ```
-Get-ExoMailbox [-Anr <String>]
+Get-EXOMailbox [-Anr <String>]
  [-Archive]
  [-Filter <String>]
  [-InactiveMailboxOnly]
@@ -74,7 +74,7 @@ This example returns a summary list of all mailboxes in the organization, and in
 Get-Mailbox -PropertySets Archive
 ```
 
-This example returns the list of Properties defined in Archive property set. For a complete list of these properties, see [Get-ExoMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
+This example returns the list of Properties defined in Archive property set. For a complete list of these properties, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
 
 
 ### -------------------------- Example 3 --------------------------
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the available properties, see [Get-ExoMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
+For more information about the available properties, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
 
 ```yaml
 Type: String[]
@@ -350,7 +350,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the properties that are included in each property set, see [Get-ExoMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
 
 ```yaml
 Type: PropertySet[]
@@ -474,7 +474,7 @@ The following Get-Mailbox parameters aren't available in Get-EXOMailbox:
 ## OUTPUTS
 
 ###  
-The following properties aren't included in the output of Get-ExoMailbox:
+The following properties aren't included in the output of Get-EXOMailbox:
 
 - RunspaceId
 
@@ -498,4 +498,4 @@ The following properties aren't included in the output of Get-ExoMailbox:
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox)

@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 applicable: Exchange Online
-title: Get-ExoRecipient
+title: Get-EXORecipient
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,7 +10,7 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-ExoRecipient
+# Get-EXORecipient
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity (Default)
 ```
-Get-ExoRecipient
+Get-EXORecipient
  [-Filter <String>]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
@@ -40,7 +40,7 @@ Get-ExoRecipient
 
 ### Anr
 ```
-Get-ExoRecipient
+Get-EXORecipient
  [-Anr <String>]
  [-Filter <String>]
  [-OrganizationalUnit <String>]
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the available properties, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
+For more information about the available properties, see [Get-EXORecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
 
 ```yaml
 Type: String[]
@@ -221,7 +221,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - Policy
 
-For more information about the properties that are included in each property set, see [Get-ExoRecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXORecipient property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exorecipient-property-sets).
 
 ```yaml
 Type: PropertySet[]
@@ -387,4 +387,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient)

@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 applicable: Exchange Online
-title: Get-EXOMobileDeviceStatistics
+title: Get-EXOMailboxPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,28 +10,32 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-EXOMobileDeviceStatistics
+# Get-EXOMailboxPermission
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-ExoMobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
+Use the Get-EXOMailboxPermission cmdlet to retrieve permissions on a mailbox.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### Default (Default)
 ```
-Get-EXOMobileDeviceStatistics
- [-Mailbox <String>]
- [-ActiveSync]
- [-OWAforDevices]
- [-RestApi]
- [-UniversalOutlook]
- [-Identity <String>]
+Get-EXOMailboxPermission [-ResultSize <Unlimited>] [<CommonParameters>]
+```
+
+### Identity
+```
+Get-EXOMailboxPermission
  [-ExternalDirectoryObjectId <Guid>]
- [-UserPrincipalName <String>]
+ [-Identity <String>]
+ [-Owner]
  [-ResultSize <Unlimited>]
+ [-SoftDeletedMailbox]
+ [-User <String>]
+ [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
@@ -49,16 +53,12 @@ Get-EXOMobileDeviceStatistics
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
-
-- GUID
-
-- DeviceID
+### -ExternalDirectoryObjectId
+{{ Fill ExternalDirectoryObjectId Description }}
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: Guid
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -68,8 +68,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Mailbox
-The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
+### -Identity
+The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -93,37 +93,7 @@ The Mailbox parameter filters the results by the user mailbox that's associated 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActiveSync
-The ActiveSync switch filters the results by Exchange ActiveSync devices. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -133,27 +103,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OWAforDevices
-The OWAforDevices switch filters the results by devices where Outlook on the web for devices is enabled. You don't need to specify a value with this switch.
+### -Owner
+The Owner switch returns the owner information for the mailbox that's specified by the Identity parameter. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestApi
-The RestApi switch filters the results by REST API devices. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -178,12 +133,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UniversalOutlook
-The UniversalOutlook switch filters the results by Mail and Calendar devices. You don't need to specify a value with this switch.
+### -SoftDeletedMailbox
+{{ Fill SoftDeletedMailbox Description }}
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -User
+The User parameter returns information about the user who has permissions to the mailbox specified by the Identity parameter.
+
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- GUID
+
+```yaml
+Type: String
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -198,7 +178,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -223,4 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomobiledevicestatistics)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxpermission)

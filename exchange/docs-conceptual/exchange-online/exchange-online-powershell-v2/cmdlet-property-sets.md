@@ -19,9 +19,9 @@ description: "Learn about the available property sets in the Exchange Online Pow
 
 This topic describes the property sets that are available in the new cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets](exchange-online-powershell-v2.md#properties-and-property-sets).
 
-## Get-ExoCasMailbox property sets
+## Get-EXOCasMailbox property sets
 
-The available property sets for the **Get-ExoCasMailbox** cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-EXOCasMailbox** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -34,7 +34,7 @@ The available property sets for the **Get-ExoCasMailbox** cmdlet and the propert
 |**Pop**|ExternalDirectoryObjectId <br/> Guid <br/> Identity <br/> Name <br/> OrganizationId <br/> PopEnableExactRFC822Size <br/> PopEnabled <br/> PopMessagesRetrievalMimeFormat <br/> PopSuppressReadReceipt <br/> PopUseProtocolDefaults|
 |**ProtocolSettings**|ExternalDirectoryObjectId <br/> ExternalImapSettings <br/> ExternalPopSettings <br/> ExternalSmtpSettings <br/> Guid <br/> Identity <br/> InternalImapSettings <br/> InternalPopSettings <br/> InternalSmtpSettings <br/> Name <br/> OrganizationId|
 
-**Note**: The following **Get-CasMailbox** parameters aren't available on **Get-ExoCasMailbox**:
+**Note**: The following **Get-CasMailbox** parameters aren't available on **Get-EXOCasMailbox**:
 
 - *ActiveSyncDebugLogging*
 
@@ -46,13 +46,13 @@ The available property sets for the **Get-ExoCasMailbox** cmdlet and the propert
 
 For more information, see:
 
-- [Get-ExoCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exocasmailbox?branch=ExoRestModule-chrisda)
+- [Get-EXOCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox?branch=EXORestModule-chrisda)
 
 - [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)
 
-## Get-ExoMailbox property sets
+## Get-EXOMailbox property sets
 
-The available property sets for the **Get-ExoMailbox** cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-EXOMailbox** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -75,7 +75,7 @@ The available property sets for the **Get-ExoMailbox** cmdlet and the properties
 |**SoftDelete**|ExternalDirectoryObjectId <br/> IncludeInGarbageCollection <br/> IsInactiveMailbox <br/> IsSoftDeletedByDisable <br/> IsSoftDeletedByRemove <br/> WhenSoftDeleted|
 |**StatisticsSeed**|ArchiveDatabaseGuid <br/> DatabaseGuid <br/> ExchangeGuid <br/> ExternalDirectoryObjectId|
 
-**Note**: The following **Get-Mailbox** parameters aren't available on **Get-ExoMailbox**:
+**Note**: The following **Get-Mailbox** parameters aren't available on **Get-EXOMailbox**:
 
 - *Async*
 
@@ -89,13 +89,13 @@ The available property sets for the **Get-ExoMailbox** cmdlet and the properties
 
 For more information, see:
 
-- [Get-ExoMailbox](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exomailbox?branch=ExoRestModule-chrisda)
+- [Get-EXOMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox?branch=EXORestModule-chrisda)
 
 - [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)
 
-## Get-ExoRecipient property sets
+## Get-EXORecipient property sets
 
-The available property sets for the **Get-ExoRecipient** cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-EXORecipient** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -106,19 +106,19 @@ The available property sets for the **Get-ExoRecipient** cmdlet and the properti
 |MailboxMove|MailboxMoveBatchName <br/> MailboxMoveFlags <br/> MailboxMoveRemoteHostName <br/> MailboxMoveSourceMDB <br/> MailboxMoveStatus <br/> MailboxMoveTargetMDB|
 |Policy|ActiveSyncMailboxPolicy <br/> ActiveSyncMailboxPolicyIsDefaulted <br/> AddressBookPolicy <br/> EmailAddressPolicyEnabled <br/> ManagedFolderMailboxPolicy <br/> OwaMailboxPolicy <br/> PoliciesExcluded <br/> PoliciesIncluded <br/> RetentionPolicy <br/> SharingPolicy <br/> ShouldUseDefaultRetentionPolicy <br/> UMMailboxPolicy|
 
-**Note**: The following **Get-Recipient** parameters aren't available on **Get-ExoRecipient**:
+**Note**: The following **Get-Recipient** parameters aren't available on **Get-EXORecipient**:
 
 - *SortBy*
 
 For more information, see:
 
-- [Get-ExoRecipient](https://review.docs.microsoft.com/powershell/module/exchange/exchange-ps-v2-module/get-exorecipient?branch=ExoRestModule-chrisda)
+- [Get-EXORecipient](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient?branch=EXORestModule-chrisda)
 
 - [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)
 
-### Get-ExoMailboxStatistics property sets
+### Get-EXOMailboxStatistics property sets
 
-The available property sets for the **Get-ExoMailboxStatistics** cmdlet and the properties they contain are described in the following table:
+The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -136,13 +136,13 @@ The available property sets for the **Get-ExoMailboxStatistics** cmdlet and the 
 
 For more information, see:
 
-- Get-ExoMailboxStatistics
+- Get-EXOMailboxStatistics
 
 - [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
 
-### Get-ExoMobileDeviceStatistics property sets
+### Get-EXOMobileDeviceStatistics property sets
 
-The available property sets for the **ExoMobileDeviceStatistics** cmdlet and the properties they contain are described in the following table:
+The available property sets for the **EXOMobileDeviceStatistics** cmdlet and the properties they contain are described in the following table:
 
 |||
 |:-----|:-----|
@@ -157,6 +157,6 @@ The available property sets for the **ExoMobileDeviceStatistics** cmdlet and the
 
 For more information, see:
 
-- Get-ExoMobileDeviceStatistics
+- Get-EXOMobileDeviceStatistics
 
 - [Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)
