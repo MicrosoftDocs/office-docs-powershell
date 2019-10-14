@@ -3247,3 +3247,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
 
 ### [Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)
+
+### [Get-CsTeamsUpgradeStatus](Get-CsTeamsUpgradeStatus.md)
+{{Manually Enter Get-CsTeamsUpgradeStatus Description Here}}

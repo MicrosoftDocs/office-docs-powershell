@@ -58,7 +58,11 @@ This example cancels a previously sent Clear-MobileDevice command request for To
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the device that you want to reset.
+The Identity parameter specifies the mobile device that you want to reset. You can use any value that uniquely identifies the mobile device. For example:
+
+- GUID
+
+- DeviceID
 
 ```yaml
 Type: MobileDeviceIdParameter

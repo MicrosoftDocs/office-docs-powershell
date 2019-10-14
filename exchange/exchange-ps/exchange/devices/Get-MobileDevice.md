@@ -213,9 +213,7 @@ The Identity parameter specifies the mobile device that you want to view. You ca
 
 - GUID
 
-- DeviceIdentity
-
-- Multi-TenantID
+- DeviceID
 
 ```yaml
 Type: MobileDeviceIdParameter

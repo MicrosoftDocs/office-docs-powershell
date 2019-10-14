@@ -974,7 +974,7 @@ Accept wildcard characters: False
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
