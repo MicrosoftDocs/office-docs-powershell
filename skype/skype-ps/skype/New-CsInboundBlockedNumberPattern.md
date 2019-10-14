@@ -12,33 +12,35 @@ schema: 2.0.0
 # New-CsInboundBlockedNumberPattern
 
 ## SYNOPSIS
+Adds a blocked number pattern to the tenant list.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-New-CsInboundBlockedNumberPattern [-Tenant <System.Guid>] [-Enabled <Boolean>] [-Description <String>]
+New-CsInboundBlockedNumberPattern [-Tenant <Guid>] [-Enabled <Boolean>] [-Description <String>]
  -Pattern <String> [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [AsJob] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsInboundBlockedNumberPattern [-Tenant <System.Guid>] -Name <String> [-Enabled <Boolean>]
- [-Description <String>] -Pattern <String> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsInboundBlockedNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
+ [-Description <String>] -Pattern <String> [-InMemory] [-Force] [-WhatIf] [-Confirm] [AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Adds a blocked number pattern to the tenant list.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> {{ Add example code here }}
+PS C:> New-CsInboundBlockedNumberPattern -Description "Avoid Unwanted Automatic Call" -Name "BlockAutomatic" -Pattern "^+11234567890"
 ```
 
-{{ Add example description here }}
+This cmdlet adds a blocked number pattern to block inbound calls from +11234567890 number.
 
 ## PARAMETERS
 
@@ -58,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+A friendly description for the blocked number pattern to be created.
 
 ```yaml
 Type: String
@@ -73,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+If this parameter is set to True, the inbound calls matching the pattern will be blocked.
 
 ```yaml
 Type: Boolean
@@ -82,13 +84,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+The *Force* switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the *Force* switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+A unique identifier specifying the blocked number pattern to be created.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{ Fill InMemory Description }}
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet’s matching Set-.
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+A displayable name describing the blocked number pattern to be created.
 
 ```yaml
 Type: String
@@ -148,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pattern
-{{ Fill Pattern Description }}
+A regular expression that the calling number must match in order to be blocked.
 
 ```yaml
 Type: String
@@ -163,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Fill Tenant Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Guid
