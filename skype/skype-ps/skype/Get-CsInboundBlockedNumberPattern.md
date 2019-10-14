@@ -24,8 +24,8 @@ Get-CsInboundBlockedNumberPattern [-Tenant <Guid>] [[-Identity] <XdsGlobalRelati
 
 ### Filter
 ```
-Get-CsInboundBlockedNumberPattern [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [-AsJob]
-[<CommonParameters>]
+Get-CsInboundBlockedNumberPattern [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
+[-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
