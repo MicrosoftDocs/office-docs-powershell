@@ -12,7 +12,7 @@ schema: 2.0.0
 # Get-CsInboundBlockedNumberPattern
 
 ## SYNOPSIS
-Returns a list of all blocked number patterns added to the tenant list including Name, Description, Enabled (True/False), and Pattern for each.
+Returns a list of all blocked number patterns added to the tenant list.
 
 ## SYNTAX
 
