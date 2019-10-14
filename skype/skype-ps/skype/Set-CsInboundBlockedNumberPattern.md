@@ -31,7 +31,7 @@ Set-CsInboundBlockedNumberPattern [-Tenant <Guid>] [-Enabled <Boolean>] [-Descri
 ```
 
 ## DESCRIPTION
-This cmdlet modifies one or more parameters of a blocked number pattern in the tenant list.
+This example modifies one or more parameters of a blocked number pattern in the tenant list.
 
 ## EXAMPLES
 
