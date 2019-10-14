@@ -230,6 +230,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern.md)
 
-[Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern)
+[Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern.md)
 
-[Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern)
+[Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern.md)
