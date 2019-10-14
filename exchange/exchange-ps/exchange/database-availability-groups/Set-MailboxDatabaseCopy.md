@@ -21,7 +21,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]  [-DatabaseCopyAutoActivationPolicy <DatabaseCopyAutoActivationPolicyType>] [-DomainController <Fqdn>] [-ReplayLagMaxDelay <EnhancedTimeSpan>] [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-ActivationPreference <UInt32>]
+ [-Confirm]
+ [-DatabaseCopyAutoActivationPolicy <DatabaseCopyAutoActivationPolicyType>]
+ [-DomainController <Fqdn>]
+ [-ReplayLagMaxDelay <EnhancedTimeSpan>]
+ [-ReplayLagTime <EnhancedTimeSpan>]
+ [-TruncationLagTime <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
