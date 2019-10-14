@@ -212,3 +212,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsInboundBlockedNumberPattern](New-CsInboundBlockedNumberPattern.md)
+
+[Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern)
+
+[Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern)
