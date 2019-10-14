@@ -31,7 +31,7 @@ New-CsInboundBlockedNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boo
 ```
 
 ## DESCRIPTION
-Adds a blocked number pattern to the tenant list.
+This cmdlet adds a blocked number pattern to the tenant list.
 
 ## EXAMPLES
 
