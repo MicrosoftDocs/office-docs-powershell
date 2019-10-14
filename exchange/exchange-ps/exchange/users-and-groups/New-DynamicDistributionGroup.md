@@ -44,6 +44,7 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | Mailbo
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMemershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -61,6 +62,7 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMemershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -790,6 +792,8 @@ Accept wildcard characters: False
 ```
 
 ### -DirectMembershipOnly
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
