@@ -146,6 +146,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsInboundBlockedNumberPattern](New-CsInboundBlockedNumberPattern.md)
 
-[Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern)
+[Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern.md)
 
-[Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern)
+[Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern.md)
