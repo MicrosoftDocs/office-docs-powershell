@@ -44,6 +44,7 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | Mailbo
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMemershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -61,6 +62,7 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMemershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -601,6 +603,23 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DirectMembershipOnly
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
