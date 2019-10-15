@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
