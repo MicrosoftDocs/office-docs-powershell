@@ -12,7 +12,7 @@ ms.reviewer:
 # Invoke-CsRGSStoreReplicateData
 
 ## SYNOPSIS
-Replicate existing RGS data present on the specified pool to the backup tables so that data can be picked up by RGSBackupService. 
+Replicate existing RGS data present on the specified pool to the backup tables so that data can be picked up by RGSBackupService.
 
 ## SYNTAX
 
@@ -53,14 +53,14 @@ Accept wildcard characters: False
 ```
 
 ### -PoolFqdn
-Fully qualified domain name of the pool whose data will be replicated. 
+Fully qualified domain name of the pool whose data will be replicated.
 For example:
 `-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Server 2019CU1
 
 Required: True
@@ -70,15 +70,14 @@ Accept pipeline input: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-### 
-None. The Invoke-CsRGSStoreReplicateData cmdlet does not accept pipelined data.
 
+### None. The Invoke-CsRGSStoreReplicateData cmdlet does not accept pipelined data.
 
 ## OUTPUTS
-###  
-None.
+
+### None.
 
 ## RELATED LINKS

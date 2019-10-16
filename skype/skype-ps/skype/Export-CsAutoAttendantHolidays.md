@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Export-CsAutoAttendantHolidays
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---

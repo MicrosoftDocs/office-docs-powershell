@@ -20,7 +20,7 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 ### (Default)
 
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-MoveConferenceData] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-MoveConferenceData] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,10 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 - Contacts are moved in all cases, unless -force is specified.
 
 > [!NOTE]
-> The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.
+> <ul><li>The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.</li><li>If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.</li></ul>
+
+
+
 
 ## EXAMPLES
 
@@ -171,6 +174,22 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseOAuth
+
+If specified, authentication between on-premises and the host migration service is based on OAuth protocol. Otherwise, authentication is based on legacy LiveID authentication.  This parameter is only available with Skype for Business Server 2015 with CU8 or later. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Server 2015
 Required: False
 Position: Named
 Default value: None

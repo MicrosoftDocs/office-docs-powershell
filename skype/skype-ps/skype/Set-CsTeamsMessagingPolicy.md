@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Set-CsTeamsMessagingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -41,8 +41,8 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
 ## EXAMPLES
 
 ### Example 1
-```
-powershell
+
+```powershell
 PS C:\> Set-CsTeamsMessagingPolicy -Identity StudentMessagingPolicy -AllowGiphy $false -AllowMemes $false
 ```
 
@@ -50,9 +50,9 @@ In this example two different property values are configured: AllowGiphy is set 
 All other policy properties will be left as previously assigned.
 
 ### Example 2
-```
-powershell
-PS C:\> Get-CsTeamsMessagingPolicy | Set-CsTeamsMessagingPolicy -Identity StudentMessagingPolicy -AllowGiphy $false -AllowMemes $false
+
+```powershell
+PS C:\> Get-CsTeamsMessagingPolicy -Identity StudentMessagingPolicy | Set-CsTeamsMessagingPolicy -AllowGiphy $false -AllowMemes $false
 ```
 
 In this example two different property values are configured for all teams messaging policies in the organization: AllowGiphy is set to false and AllowMemes is set to False.

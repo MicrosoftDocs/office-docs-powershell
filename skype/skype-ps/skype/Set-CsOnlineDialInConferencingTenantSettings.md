@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingTenantSettings
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---

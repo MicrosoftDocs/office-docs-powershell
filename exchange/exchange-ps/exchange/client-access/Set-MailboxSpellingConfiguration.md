@@ -35,19 +35,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-MailboxSpellingConfiguration -Identity Peter -IgnoreUppercase $true
-```
-
-This example sets the spelling checker of user Peter to ignore words in all uppercase letters.
-
-### -------------------------- Example 2 --------------------------
-```
 Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
 ```
 
 This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
 
-### -------------------------- Example 3 --------------------------
+### -------------------------- Example 2 --------------------------
 ```
 Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
 ```

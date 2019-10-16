@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Set-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an existing external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
 
@@ -40,15 +40,16 @@ The following parameters are not applicable to Skype for Business Online: AllowP
 
 ### -------------------------- Example 1 ------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
 
-{{ Add example description here }}
+This example modifies an existing policy to block external file transfer.
+
 
 ## PARAMETERS
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PFileTransfer
-{{Fill EnableP2PFileTransfer Description}}
+Indicates whether file transfers to Federated partners are allowed. The default value is True.
 
 ```yaml
 Type: Boolean
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the external user communication policy to be modified.
 
 ```yaml
 Type: XdsIdentity
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PSObject
@@ -176,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
+
 
 ```yaml
 Type: Guid

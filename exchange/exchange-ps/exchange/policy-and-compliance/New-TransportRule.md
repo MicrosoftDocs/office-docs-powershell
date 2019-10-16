@@ -2794,9 +2794,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
+This exception is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -2810,7 +2812,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -4571,9 +4573,11 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
+This exception is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
@@ -4587,7 +4591,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

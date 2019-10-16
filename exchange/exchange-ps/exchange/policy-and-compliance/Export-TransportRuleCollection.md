@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Export-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-ExportLegacyRules] [-WhatIf] [<CommonParameters>]
+Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExportLegacyRules]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,10 +39,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
+$file = Export-TransportRuleCollection; Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
-This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
+This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\My Docs folder.
+
+**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -91,7 +96,7 @@ Accept wildcard characters: False
 ### -ExportLegacyRules
 This parameter is available or functional only in Exchange Server 2010.
 
-The ExportLegacyRules switch is used to export legacy transport rules.
+The ExportLegacyRules switch is required to export transport rules from Exchange 2007. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

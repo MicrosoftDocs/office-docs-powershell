@@ -5,7 +5,7 @@ applicable: Skype for Business Online
 title: Set-CsOnlinePSTNGateway
 schema: 2.0.0
 manager: bulenteg
-author: tomtau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
@@ -19,18 +19,19 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 
 ### Identity (Default)
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
- [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
+[-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
+[-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
+[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>] 
+[-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
- [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
+[-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] 
+ [-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -201,6 +203,7 @@ Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -MediaRelayRoutingLocationOverride
 Allows selecting path for media manually. Direct Routing assigns a datacenter for media path based on the public IP of the SBC. We always select closest to the SBC datacenter. However, in some cases a public IP from for example a US range can be assigned to an SBC located in Europe. In this case we will be using not optimal media path. This parameter allows manually set the preferred region for media traffic. We only recommend setting this parameter if the call logs clearly indicate that automatic assignment of the datacenter for media path does not assign the closest to the SBC datacenter
 
@@ -285,6 +288,21 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMode
+Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always" mode you indicate that your network is fully routable. If a user usually in site "Seattle", travels to site "Tallinn" and tries to use SBC located in Seattle we will try to deliver the traffic to Seattle assuming that there is connection between Tallinn and Seattle offices. With "OnlyForLocaUsers" you indicate that there is no direct connection between sites. In example above, the traffic will not be send directly from Tallinn to Seattle.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None

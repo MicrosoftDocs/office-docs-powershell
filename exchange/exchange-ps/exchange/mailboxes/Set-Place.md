@@ -29,11 +29,10 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-DisplayDeviceName <String>]
- [-FloorNumber <System.Int32>]
+ [-Floor <System.Int32>]
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <$true | $false>]
  [-Label <String>]
- [-Nickname <String>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -197,8 +196,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FloorNumber
-The FloorNumber parameter specifies the floor number that the room is on. If the value contains spaces, enclose the value in quotation marks (").
+### -Floor
+The Floor parameter specifies the floor number that the room is on.
 
 ```yaml
 Type: System.Int32
@@ -252,21 +251,6 @@ Accept wildcard characters: False
 
 ### -Label
 The Label parameter specifies a descriptive label for the room (for example, a number or name). If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Nickname
-The Nickname parameter specifies a nickname for the room (for example, conf room). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

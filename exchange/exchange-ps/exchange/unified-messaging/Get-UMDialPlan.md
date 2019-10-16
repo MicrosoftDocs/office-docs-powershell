@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-UMDialPlan [[-Identity] <UMDialPlanIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMDialPlan [[-Identity] <UMDialPlanIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

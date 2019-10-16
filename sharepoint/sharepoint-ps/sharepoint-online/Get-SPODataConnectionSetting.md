@@ -30,7 +30,7 @@ If the name of the connection is not specified by using the Name parameter, this
 This cmdlet applies to an on-premises environment only.
 You cannot use this command in the SharePoint Online Management Shell.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
