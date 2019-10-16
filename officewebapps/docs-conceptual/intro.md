@@ -1,3 +1,7 @@
+---
+title: Office Online Server cmdlet reference
+---
+
 # Office Online Server cmdlet reference
 Welcome to the Office Online Server PowerShell cmdlet help references. The Office Online Server cmdlets provide the command line interface for administration and management.
 

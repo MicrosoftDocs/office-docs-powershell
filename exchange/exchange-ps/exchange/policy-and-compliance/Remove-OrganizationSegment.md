@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Set-TeamsRetentionComplianceRule
+title: Remove-OrganizationSegment
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -9,20 +9,21 @@ ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# Set-TeamsRetentionComplianceRule
+# Remove-OrganizationSegment
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Set-TeamsRetentionComplianceRule cmdlet to modify retention rules for Microsoft Teams in your organization.
+Use the Remove-OrganizationSegment cmdlet to remove organization segments from the Office 365 Security & Compliance Center..
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Set-TeamsRetentionComplianceRule [-Identity] <ComplianceRuleIdParameter> [-Comment <Object>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>] [-Confirm]
- [-WhatIf]
+Remove-OrganizationSegment [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,17 +31,17 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-Set-TeamsRetentionComplianceRule -Identity "Teams - Internal Company Rule" -RetentionDuration 180
+Remove-OrganizationSegment -Identity "Engineering Group"
 ```
 
-This example changes the hold duration for the existing retention rule for Microsoft Teams named "Teams - Internal Company Rule".
+This example removes the organization segment named Engineering Group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the retention rule for Microsoft Teams that you want to modify. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the organization segment that you want to remove. You can use any value that uniquely identifies the segment. For example:
 
 - Name
 
@@ -49,29 +50,14 @@ The Identity parameter specifies the retention rule for Microsoft Teams that you
 - GUID
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -86,46 +72,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionComplianceAction
-The RetentionComplianceAction parameter specifies the retention action for the rule. Valid values are:
-
-- Delete
-
-- Keep
-
-- KeepAndDelete
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionDuration
-The RetentionDuration parameter specifies the hold duration for the retention rule. Valid values are:
-
-- An integer: The hold duration in days.
-
-- Unlimited: The content is held indefinitely.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -164,4 +110,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/Set-TeamsRetentionComplianceRule)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-organizationsegment)
+
+[Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+
+[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)

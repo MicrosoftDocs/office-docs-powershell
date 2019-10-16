@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Import-TransportRuleCollection [-FileData] <Byte[]> [[-Identity] <RuleIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
+Import-TransportRuleCollection [-FileData] <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [[-Identity] <RuleIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +45,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 [Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
 ```
 
-This example imports a transport rule collection from the XML file ExportedRules.xml.
+This example imports a transport rule collection from the XML file named ExportedRules.xml in the  C:\\TransportRules folder.
+
+**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
 
@@ -98,6 +104,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies that the command will override any errors or warnings encountered during the import operation. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
 
@@ -123,21 +144,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force parameter specifies that the command will override any errors or warnings encountered during the import operation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

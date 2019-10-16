@@ -32,10 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPSiteSubscription https://contoso.com -FeatureSet 12345678-90ab-cdef-1234-567890abcdef
+Set-SPSiteSubscriptionConfig https://contoso.com -FeaturePack 12345678-90ab-cdef-1234-567890abcdef
 ```
 
-This example sets the Feature set of the entire site subscription that contains https://contoso.com with a Feature set GUID.
+This example sets the Feature set of the entire site subscription that contains https://contoso.com with a Feature pack GUID.
 
 
 ## PARAMETERS

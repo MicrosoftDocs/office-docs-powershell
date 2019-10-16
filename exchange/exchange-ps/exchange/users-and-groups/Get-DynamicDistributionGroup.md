@@ -40,7 +40,7 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
- [-IgnoreDefaultScope] 
+ [-IgnoreDefaultScope]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -50,7 +50,7 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
 
 ### ManagedBySet
 ```
-Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>] 
+Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]

@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password of the TPD that you want to import. The password value must match the password in the XML file when you exported the TPD from the on-premises AD RMS server.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString

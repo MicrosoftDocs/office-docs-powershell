@@ -23,8 +23,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

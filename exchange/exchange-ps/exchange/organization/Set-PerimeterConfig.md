@@ -48,7 +48,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf 
+Aliases: cf
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ Use the GatewayIPAddresses parameter to create or modify a list of gateway serve
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

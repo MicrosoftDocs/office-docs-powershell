@@ -1003,7 +1003,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReliableConferenceDeletion
-PARAMVALUE: $true | $false
+When set to true, the conference state is removed from all replicas when the user deletes it, to provide instantaneous consistency of distributed conference state.
+If set to false, the deleted conference state is eventual and not instantaneous.
 
 ```yaml
 Type: Boolean

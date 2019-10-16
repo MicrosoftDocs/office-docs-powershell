@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-TeamsRetentionComplianceRule
+title: Start-InformationBarrierPoliciesApplication
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -9,20 +9,21 @@ ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# New-TeamsRetentionComplianceRule
+# Start-InformationBarrierPoliciesApplication
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-TeamsRetentionComplianceRule cmdlet to create retention rules for Microsoft Teams in your organization.
+Use the Start-InformationBarrierPoliciesApplication cmdlet to apply active information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-TeamsRetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> -RetentionComplianceAction <String> -RetentionDuration <Unlimited>
- [-Comment <String>] [-Confirm] [-WhatIf]
+Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,42 +33,25 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-TeamsRetentionComplianceRule -Name "Teams - SeptOneYear" -Policy "Teams - Internal Company Policy" -RetentionComplianceAction Keep -RetentionDuration Unlimited
+Start-InformationBarrierPoliciesApplication
 ```
 
-This example creates a new retention rule for Microsoft Teams named "Teams - SeptOneYear" and adds it to the existing retention policy for Microsoft Teams named "Teams - Internal Company Policy". Content will be held indefinitely.
+This applies all active information barrier policies.
 
 ## PARAMETERS
 
-### -Name
-The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
-
-You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
+### -Identity
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
-
-```yaml
-Type: String
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
-Position: Named
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -82,61 +66,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Policy
-The Policy parameter specifies the policy to contain the rule.
-
-```yaml
-Type: PolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionComplianceAction
-The RetentionComplianceAction parameter specifies the retention action for the rule. Valid values are:
-
-- Delete
-
-- Keep
-
-- KeepAndDelete
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionDuration
-The RetentionDuration parameter specifies the hold duration for the retention rule. Valid values are:
-
-- An integer: The hold duration in days.
-
-- Unlimited: The content is held indefinitely.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -175,4 +104,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/New-TeamsRetentionComplianceRule)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/stop-informationbarrierpoliciesapplication)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+
+[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)

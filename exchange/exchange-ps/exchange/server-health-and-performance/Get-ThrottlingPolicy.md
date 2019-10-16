@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-ThrottlingPolicy [[-Identity] <ThrottlingPolicyIdParameter>] [-DomainController <Fqdn>]
- [-Diagnostics] [-Explicit] [-ThrottlingPolicyScope <Regular | Organization | Global>] 
+Get-ThrottlingPolicy [[-Identity] <ThrottlingPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Diagnostics]
+ [-Explicit]
+ [-ThrottlingPolicyScope <Regular | Organization | Global>]
  [<CommonParameters>]
 ```
 
