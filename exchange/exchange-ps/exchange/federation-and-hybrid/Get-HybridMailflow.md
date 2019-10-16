@@ -14,6 +14,8 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet has been deprecated and is no longer used.
+
 Use the Get-HybridMailflow cmdlet to view the message transport settings for a hybrid deployment.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).

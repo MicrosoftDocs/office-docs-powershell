@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 > [!NOTE]
->This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet. 
+> This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet. 
 
 Starts a job to rename a site. You can change the title, the URL or both of a particular site on a SharePoint Online collection
 
