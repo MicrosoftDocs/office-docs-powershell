@@ -1,6 +1,6 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
 title: Set-CsTeamsEmergencyCallRoutingPolicy
 author: danny-levin
 ms.author: dannyle
@@ -38,12 +38,12 @@ Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
- This example modifies an existing Teams Emergency Call Routing Policy. 
+ This example modifies an existing Teams Emergency Call Routing Policy.
 
 ## PARAMETERS
 
 ### -AllowEnhancedEmergencyServices
- Flag to enable Enhanced Emergency Services 
+ Flag to enable Enhanced Emergency Services
 
 ```yaml
 Type: Boolean
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- Provide a description of the Teams Emergency Call Routing policy to identify purpose of setting it. 
+ Provide a description of the Teams Emergency Call Routing policy to identify purpose of setting it.
 
 ```yaml
 Type: String
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required. 
+ The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
- The Identity parameter is a unique identifier that designates the name of the policy. 
+ The Identity parameter is a unique identifier that designates the name of the policy.
 
 ```yaml
 Type: XdsIdentity
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
- The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallRoutingPolicy cmdlet. 
+ The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallRoutingPolicy cmdlet.
 
 ```yaml
 Type: PSObject
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
- Specify the tenant id 
+ Specify the tenant id
 
 ```yaml
 Type: System.Guid
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

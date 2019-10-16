@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity
 ```
-Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter> 
+Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
  [-AddressForJournaling <RecipientIdParameter>]
  [-AgeLimitForRetention <EnhancedTimeSpan>]
  [-Comment <String>]
@@ -32,7 +32,7 @@ Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
  [-DomainController <Fqdn>]
  [-Force]
  [-JournalingEnabled <Boolean>]
- [-LabelForJournaling <String>] 
+ [-LabelForJournaling <String>]
  [-LegacyManagedFolder <ELCFolderIdParameter>]
  [-LocalizedComment <MultiValuedProperty>]
  [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]

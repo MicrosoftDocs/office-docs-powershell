@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-UMIPGateway [[-Identity] <UMIPGatewayIdParameter>] [-DomainController <Fqdn>] 
-[-IncludeSimulator] [<CommonParameters>]
+Get-UMIPGateway [[-Identity] <UMIPGatewayIdParameter>] [-DomainController <Fqdn>] [-IncludeSimulator] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

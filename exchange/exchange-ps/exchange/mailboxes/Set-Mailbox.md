@@ -245,7 +245,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DefaultAuditSet <MultiValuedProperty>] 
+ [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
  [-DisplayName <String>]
@@ -364,7 +364,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DefaultAuditSet <MultiValuedProperty>] 
+ [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <$true | $false>]
  [-DisplayName <String>]
@@ -2146,7 +2146,7 @@ This parameter is available only in the cloud-based service.
 The DefaultAuditSet parameter specifies whether to revert the mailbox operations that are logged in the mailbox audit log back to the set of default operations for the specified logon type. Valid values are:
 
 - Admin: Reverts the mailbox operations to log for administrators back to the default list of operations.
- 
+
 - Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
 
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
@@ -2370,6 +2370,8 @@ To specify the primary SMTP email address, you can use any of the following meth
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -3558,7 +3560,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
-**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes. This parameter is not available for linked user mailboxes.
 
 The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
@@ -3581,7 +3583,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
-**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes. This parameter is not available for linked user mailboxes.
 
 The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
@@ -3618,7 +3620,7 @@ Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: FalseNamed
-Position: 
+Position:
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -3751,7 +3753,7 @@ This parameter is available only in on-premises Exchange.
 
 The NewPassword parameter is used with the OldPassword parameter when a user changes their own password in Outlook on the web. By default, the NewPassword and OldPassword parameters are also available to members of the Help Desk and Organization Management role groups via the User Options role. However, administrators use the Password parameter to reset a user's password, because that parameter doesn't require the user's current password.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3829,7 +3831,7 @@ This parameter is available only in on-premises Exchange.
 
 The OldPassword parameter is used with the NewPassword parameter when a user changes their own password in Outlook on the web. By default, the NewPassword and OldPassword parameters are also available to members of the Help Desk and Organization Management role groups via the User Options role. However, administrators typically use the Password parameter to reset a user's password, because that parameter doesn't require the user's current password.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3884,7 +3886,7 @@ The Password parameter resets the password of the user account that's associated
 
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
@@ -3904,6 +3906,8 @@ This parameter is available only in on-premises Exchange.
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
 ```yaml
 Type: SmtpAddress
@@ -4342,7 +4346,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. 
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox.
 
 You don't need to specify a value with this switch.
 
@@ -4663,7 +4667,7 @@ Accept wildcard characters: False
 ### -RoomMailboxPassword
 Use the RoomMailboxPassword parameter to change the password for a room mailbox that has an enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString

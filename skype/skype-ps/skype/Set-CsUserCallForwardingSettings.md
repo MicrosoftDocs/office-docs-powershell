@@ -40,7 +40,7 @@ Set-CsUserCallForwardingSettings -EnableSimulRing <String> [-SettingsActiveWorkH
 ```
 
 ## DESCRIPTION
-The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. 
+The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user.
 The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
 •	CsAdministrator – Get and Set for all cmdlets
 •	CsVoiceAdministrator - Get and Set for all cmdlets
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateRingWaitTime
-Specifies the time, in seconds, to wait before ringing delegates. 
+Specifies the time, in seconds, to wait before ringing delegates.
 Acceptable inputs: 0, 5, 10
 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegates
-Specifies list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters. 
+Specifies list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -EnableSimulRing
 This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters.
-oSimulRingDestination can be a phone number, delegates, or team call group. 
+oSimulRingDestination can be a phone number, delegates, or team call group.
 	Acceptable input formats: “<phone number>”, Team, Delegates
 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Team
-Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. 
+Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace.
 o	Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
 
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

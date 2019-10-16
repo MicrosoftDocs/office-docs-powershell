@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-UMMailboxPolicy [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] 
-[-DomainController <Fqdn>] [-SharedUMDialPlan] [-WhatIf] [<CommonParameters>]
+New-UMMailboxPolicy [-Name] <String> -UMDialPlan <UMDialPlanIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SharedUMDialPlan]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

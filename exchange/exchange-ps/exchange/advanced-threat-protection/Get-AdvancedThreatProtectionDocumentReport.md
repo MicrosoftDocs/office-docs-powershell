@@ -21,8 +21,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionDocumentReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>] [-Organization <OrganizationIdParameter>]  [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-AdvancedThreatProtectionDocumentReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Organization <OrganizationIdParameter>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-AdvancedThreatProtectionTrafficReport -Organization contoso.com -StartDate "4/26/2018" -EndDate "4/28/2018" | Format-Table 
+Get-AdvancedThreatProtectionTrafficReport -Organization contoso.com -StartDate "4/26/2018" -EndDate "4/28/2018" | Format-Table
 ```
 
 This example returns the aggregated report of ATP detections for the specified organization during the specified date range.

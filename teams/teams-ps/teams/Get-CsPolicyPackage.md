@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Get-TeamPolicyPackage
+title: Get-CsPolicyPackage
 author: etgottli
 ms.author: etgottli
 ms.reviewer: icchan
@@ -11,7 +11,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamPolicyPackage
+# Get-CsPolicyPackage
 
 ## SYNOPSIS
 
@@ -20,7 +20,7 @@ This cmdlet supports retrieving all the policy packages available on a tenant.
 ## SYNTAX
 
 ```
-Get-TeamPolicyPackage [[-Identity] <String>] [<CommonParameters>]
+Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,14 +32,14 @@ For more information on policy packages, please review https://docs.microsoft.co
 
 ### Example 1
 ```powershell
-PS C:\> Get-TeamPolicyPackage
+PS C:\> Get-CsPolicyPackage
 ```
 
 Returns all policy packages available on the tenant.
 
 ### Example 2
 ```powershell
-PS C:\> Get-TeamPolicyPackage -Identity Education_PrimaryStudent
+PS C:\> Get-CsPolicyPackage -Identity Education_PrimaryStudent
 ```
 
 Returns the definition of the Education_PrimaryStudent policy package, including the policies applied with the package.
@@ -48,7 +48,7 @@ Returns the definition of the Education_PrimaryStudent policy package, including
 
 ### -Identity
 
-The name of a specific policy package. All possible policy package names can be found by running Get-TeamPolicyPackage.
+The name of a specific policy package. All possible policy package names can be found by running Get-CsPolicyPackage.
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -73,8 +73,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
 
-[Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
 
-[Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
+[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)

@@ -27,7 +27,7 @@ Register-SPOHubSite
 Use this cmdlet to register an existing site collection as a hub site.
 
 > [!IMPORTANT]
-> A maximum of 100 hub sites may be created per tenant, with 'unlimited' number of site collections associated to a hub site.
+> A maximum of 2000 hub sites may be created per tenant, with 'unlimited' number of site collections associated to a hub site.
 
 > [!NOTE]
 > It can take up to 2-4 hours for the changes to appear.
