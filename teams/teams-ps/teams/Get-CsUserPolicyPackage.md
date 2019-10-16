@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Get-TeamUserPolicyPackage
+title: Get-CsUserPolicyPackage
 author: icchan
 ms.author: icchan
 ms.reviewer: etgottli
@@ -11,7 +11,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamUserPolicyPackage
+# Get-CsUserPolicyPackage
 
 ## SYNOPSIS
 
@@ -20,7 +20,7 @@ This cmdlet supports retrieving the policy package that's assigned to a user.
 ## SYNTAX
 
 ```
-Get-TeamUserPolicyPackage [-Identity] <String> [<CommonParameters>]
+Get-CsUserPolicyPackage [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ For more information on policy packages, please review https://docs.microsoft.co
 
 ### Example 1
 ```powershell
-PS C:\> Get-TeamUserPolicyPackage -Identity johndoe@example.com
+PS C:\> Get-CsUserPolicyPackage -Identity johndoe@example.com
 ```
 
 Returns the policy package that's assigned to johndoe@example.com.
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -66,8 +66,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
+[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
 
-[Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
+[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)

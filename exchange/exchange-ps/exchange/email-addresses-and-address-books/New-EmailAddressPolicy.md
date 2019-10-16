@@ -93,7 +93,7 @@ New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <Stri
 New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -RecipientFilter <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Priority <EmailAddressPolicyPriority>] 
+ [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```

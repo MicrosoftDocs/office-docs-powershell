@@ -22,38 +22,65 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Default
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-RemoteRoutingAddress <ProxyAddress>] [-ACLableSyncedObjectEnabled]
- [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-Confirm]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room] [-ACLableSyncedObjectEnabled] [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
- 
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment] [-ACLableSyncedObjectEnabled] [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Archive
 ```
 Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Archive] [-ArchiveName <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled] [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-PrimarySmtpAddress <SmtpAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared] [-ACLableSyncedObjectEnabled [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf]] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared]
+ [-ACLableSyncedObjectEnabled [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -254,6 +281,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name for the mailbox that's created in the service. The display name is visible in the Exchange admin center, address lists and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -306,25 +352,6 @@ The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in 
 Type: ProxyAddress
 Parameter Sets: Default, Room, Equipment, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named

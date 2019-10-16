@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-RMSTemplate [[-Identity] <RmsTemplateIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [-TrustedPublishingDomain <RmsTrustedPublishingDomainIdParameter>] 
+Get-RMSTemplate [[-Identity] <RmsTemplateIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-TrustedPublishingDomain <RmsTrustedPublishingDomainIdParameter>]
  [-Type <Archived | Distributed | All>]
  [<CommonParameters>]
 ```

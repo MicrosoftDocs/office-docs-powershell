@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ### -Name
 This parameter has been deprecated and is no longer used.
 
-Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Office 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\). 
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Office 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\).
 
 ```yaml
 Type: String

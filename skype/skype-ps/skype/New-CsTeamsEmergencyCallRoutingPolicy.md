@@ -1,6 +1,6 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
 title: New-CsTeamsEmergencyCallRoutingPolicy
 author: danny-levin
 ms.author: dannyle
@@ -22,17 +22,18 @@ New-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 ```
 
 ## DESCRIPTION
- This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration
+ This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  $ne1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
-New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$ne1} -AllowEnhancedEmergencyServices 1 -Description "test"
+PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
+New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
 ```
 
- This example creates a new Teams emergency number and create a Teams Emergency Call Routing policy with this emergency number.
+ This example first creates a new Teams emergency number object and then creates a Teams Emergency Call Routing policy with this emergency number object.
+ Note that the OnlinePSTNUsage specified in the first command must previously exist. Note that the resulting object from the New-CsTeamsEmergencyNumber only exists in memory, so you must apply it to a policy to be used.
 
 ## PARAMETERS
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
- Group of emergency numbers 
+ One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber?view=skype-ps) cmdlet
 
 ```yaml
 Type:
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required. 
+ The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
- The Identity parameter is a unique identifier that designates the name of the policy. 
+ The Identity parameter is a unique identifier that designates the name of the policy.
 
 ```yaml
 Type: XdsIdentity
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
- The InMemory parameter creates an object reference without actually committing the object as a permanent change. 
+ The InMemory parameter creates an object reference without actually committing the object as a permanent change.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
- Specify the tenant id 
+ Specify the tenant id
 
 ```yaml
 Type: System.Guid
@@ -173,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

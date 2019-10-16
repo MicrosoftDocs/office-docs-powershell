@@ -11,9 +11,9 @@ ms.reviewer:
 # Get-CsBatchPolicyAssignmentOperation
 
 ## SYNOPSIS
-This cmdlet is used to assign retrieve the status of batch policy assignment operations.
+NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
 
-Note: Status for batch policy assignment operations are retained for 30 days.
+This cmdlet is used to assign retrieve the status of batch policy assignment operations.
 
 ## SYNTAX
 

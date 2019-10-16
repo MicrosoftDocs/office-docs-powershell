@@ -36,7 +36,7 @@ If you want to remove both the cloud-based mailbox and the associated on-premise
 
 Directory synchronization must be configured correctly for a mailbox to be removed from the cloud. Removal of the cloud-based mailbox isn't immediate and depends on the directory synchronization schedule.
 
-Note: If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with Disable-RemoteMailbox \<user\> -Archive and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error. 
+Note: If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with Disable-RemoteMailbox \<user\> -Archive and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

@@ -413,13 +413,13 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedMessagesCopyOption
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
+The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. Valid values are:
 
-- DoNotCopy: The associated messages aren't copied. This is the default option.
+- DoNotCopy: The associated messages aren't copied.
 
-- MapByMessageClass: This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
+- MapByMessageClass: Find the associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
 
-- Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated.
+- Copy: Copy associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default value.
 
 Content filtering doesn't apply to associated messages.
 
@@ -974,7 +974,7 @@ Accept wildcard characters: False
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
