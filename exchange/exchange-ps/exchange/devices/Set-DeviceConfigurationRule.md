@@ -896,8 +896,6 @@ France
 
 - FRRating18minus
 
-- 
-
 United Kingdom
 
 - GBRatingU
@@ -1381,8 +1379,6 @@ France
 - FRRating16minus
 
 - FRRating18minus
-
-- 
 
 United Kingdom
 

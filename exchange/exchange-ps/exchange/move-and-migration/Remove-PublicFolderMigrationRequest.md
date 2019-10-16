@@ -1,20 +1,22 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-PublicFolderMigrationRequest
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-PublicFolderMigrationRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
-Use the Remove-PublicFolderMigrationRequest cmdlet to cancel or complete a migration request that was initiated using the New-PublicFolderMigrationRequest cmdlet. You use must this cmdlet to remove the public folder migration request before you can create another public folder migration request.
+Use the Remove-PublicFolderMigrationRequest cmdlet to cancel or complete serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet). You need to use this cmdlet to remove an existing serial public folder migration request before you can create another one.
+
+**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -63,7 +65,11 @@ The RequestGuid and RequestQueue parameters are for debugging purposes only.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the public folder migration request.
+The Identity parameter specifies the migration request that you want to remove. You can use the following values:
+
+- Name
+
+- RequestGUID
 
 You can't use this parameter with the RequestGuid or RequestQueue parameters.
 
@@ -71,7 +77,7 @@ You can't use this parameter with the RequestGuid or RequestQueue parameters.
 Type: PublicFolderMigrationRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -80,9 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-This parameter is available only in on-premises Exchange.
-
-The RequestGuid parameter specifies the GUID of the migration request. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
+The RequestGuid parameter identifies the migration request to remove by its RequestGUID value. This parameter also requires the RequestQueue parameter.
 
 You can't use this parameter with the Identity parameter.
 
@@ -99,15 +103,15 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-This parameter is available only in on-premises Exchange.
-
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
+The RequestQueue parameter identifies the migration request by the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
 
 - Distinguished name (DN)
 
 - GUID
+
+You need to use this parameter with the RequestGuid parameter.
 
 You can't use this parameter with the Identity parameter.
 
@@ -134,7 +138,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -143,8 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -166,7 +168,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +183,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

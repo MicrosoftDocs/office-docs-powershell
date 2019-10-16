@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The State parameter filters the results by the state of the rule. Valid values are Enabled and Disabled. 
+The State parameter filters the results by the state of the rule. Valid values are Enabled and Disabled.
 
 ```yaml
 Type: Enabled | Disabled

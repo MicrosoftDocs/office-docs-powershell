@@ -995,6 +995,12 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
 {{Manually Enter Grant-CsTeamsCallingPolicy Description Here}}
 
+### [Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+{{Manually Enter Grant-CsTeamsEmergencyCallingPolicy Description Here}}
+
+### [Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
+{{Manually Enter Grant-CsTeamsEmergencyCallRoutingPolicy Description Here}}
+
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 {{Manually Enter Grant-CsTeamsMeetingPolicy Description Here}}
 
@@ -3241,3 +3247,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
 
 ### [Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)
+
+### [Get-CsTeamsUpgradeStatus](Get-CsTeamsUpgradeStatus.md)
+{{Manually Enter Get-CsTeamsUpgradeStatus Description Here}}

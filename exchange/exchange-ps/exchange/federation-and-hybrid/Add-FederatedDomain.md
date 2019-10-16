@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter

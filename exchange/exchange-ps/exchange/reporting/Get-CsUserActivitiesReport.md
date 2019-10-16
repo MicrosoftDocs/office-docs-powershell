@@ -108,7 +108,7 @@ The EndDate parameter specifies the end date of the date range.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The StartDate parameter specifies the start date of the date range.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ The UserName parameter filters the results by user. You identify the user by the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named

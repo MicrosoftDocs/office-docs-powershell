@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTranscription
-Determines whether real-time and/or post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledType
-This parameter is reserved for internal Microsoft use.
+Determines whether real-time captions are available for the user in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
 
 ```yaml
 Type: String
@@ -499,7 +499,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: DisabledUserOveride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

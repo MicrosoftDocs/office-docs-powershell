@@ -21,10 +21,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-JournalRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-JournalEmailAddress <RecipientIdParameter>] 
- [-Name <String>] [-Recipient <SmtpAddress>] [-Scope <Internal | External | Global>] [-WhatIf]
- [<CommonParameters>]
+Set-JournalRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-JournalEmailAddress <RecipientIdParameter>]
+ [-Name <String>]
+ [-Recipient <SmtpAddress>]
+ [-Scope <Internal | External | Global>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

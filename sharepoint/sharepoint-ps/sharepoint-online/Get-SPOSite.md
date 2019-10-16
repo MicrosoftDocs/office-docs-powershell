@@ -132,7 +132,7 @@ Accept wildcard characters: False
 This parameter prevents non-owners from sharing.
 
 > [!NOTE] 
-> his parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.  
+> This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.  
 
 
 ```yaml

@@ -163,9 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter returns the owner information for the mailbox identified in the Identity parameter.
+The Owner switch returns the owner information for the mailbox that's specified by the Identity parameter. You don't need to specify a value with this switch.
 
-This parameter can't be used with the User parameter.
+You can't use this switch with the User parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of recipient objects returned.
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
 Type: Unlimited
@@ -216,9 +216,19 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the UPN, domain\\user, or the alias of the user.
+The User parameter returns information about the user who has permissions to the mailbox specified by the Identity parameter.
 
-This parameter can't be used with the Owner parameter.
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- GUID
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

@@ -2,8 +2,8 @@
 title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
-manager: serdars
-ms.date: 3/17/2017
+manager: dansimp
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: exchange-server-itpro
@@ -15,43 +15,43 @@ description: "Learn about the recipient properties that you can use with the Rec
 # Filterable properties for the -RecipientFilter parameter
 
 Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange Server 2016 or later, and Exchange Online cmdlets.
-  
+
 You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016 or later, and Exchange Online. The _RecipientFilter_ parameter is available in the following cmdlets:
-  
+
 - [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md) and [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
-    
+
 - [New-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/new-dynamicdistributiongroup.md) and [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/set-dynamicdistributiongroup.md)
-    
+
 - [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md) and [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
-    
+
 - [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md) and [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
-    
+
 ## Filterable recipient properties
 
 The recipient properties that have been  *confirmed*  to work with the _RecipientFilter_ parameter in *all* cmdlets are described in the following table.
-  
+
  **Notes**:
-  
+
 - The list might include:
-    
+
   - Properties that are only used in one type of environment: Microsoft Office 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or `None`) in one type of environment.
-    
+
   - Properties that are present, but correspond to features that are no longer used in Exchange 2016.
-    
+
 - You can't use properties from other Active Directory schema extensions with the _RecipientFilter_ parameter.
-    
+
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
-    
+
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
-    
+
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `Property -like '*abc'`).
-    
+
 - The Value column in the table describes the acceptable values for the  *filter*  , not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
-    
+
 - To look for blank or non-blank property values, use the value `$null` (for example, `Property -eq $null` or `Property -ne $null`).
-    
+
 - For more information about creating filters in recipient commands, see [Additional OPATH syntax information](https://technet.microsoft.com/library/b22affa2-ef51-4e4e-b59c-a58620baf8aa.aspx#OPATH).
-    
+
 ****
 
 |**Property name**|**LDAP display name**|**Value**|**Comments**|
@@ -311,9 +311,9 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br/> Others: Blank or non-blank.||
 |_WindowsEmailAddress_|_mail_|String (wildcards accepted).||
 |_WindowsLiveID_|_msExchWindowsLiveID_|String (wildcards accepted).||
-   
+
 ## For more information
 
-Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://go.microsoft.com/fwlink/p/?LinkId=88854).
-  
+Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Need-help-converting-your-LDAP-filters-to-OPATH/ba-p/595108).
+
 For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](../exchange-cmdlet-syntax.md).
