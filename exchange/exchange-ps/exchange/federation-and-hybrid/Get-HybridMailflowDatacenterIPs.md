@@ -14,6 +14,8 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet has been deprecated and is no longer used.
+
 Use the Get-HybridMailflowDatacenterIPs cmdlet to retrieve the IP addresses of the Microsoft Exchange Online Protection (EOP) service data centers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
