@@ -26,13 +26,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-RetentionPolicyTag [-Name] <String>
  [-AddressForJournaling <RecipientIdParameter>]
- [-AgeLimitForRetention <EnhancedTimeSpan>] 
+ [-AgeLimitForRetention <EnhancedTimeSpan>]
  [-Comment <String>]
  [-Confirm] [-DomainController <Fqdn>]
  [-IsDefaultAutoGroupPolicyTag]
  [-IsDefaultModeratedRecipientsPolicyTag]
  [-JournalingEnabled <Boolean>]
- [-LabelForJournaling <String>] 
+ [-LabelForJournaling <String>]
  [-LocalizedComment <MultiValuedProperty>]
  [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
  [-MessageClass <String>]

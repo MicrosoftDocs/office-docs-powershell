@@ -32,7 +32,7 @@ Office 365 groups are group objects that are available across Office 365 service
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-> [!NOTE] 
+> [!NOTE]
 > Only members can be owners of a group, so you must first add a user as member before adding it as an owner.
 
 ## EXAMPLES

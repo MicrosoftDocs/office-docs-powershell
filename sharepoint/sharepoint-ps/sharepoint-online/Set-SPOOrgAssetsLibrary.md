@@ -31,10 +31,18 @@ The Set-SPOOrgAssetsLibrary cmdlet updates information for a library that is des
 
 ### Example 1
 
-This example updates the thumbnail publicly displayed for the library to contosologo2.jpg.
+This example updates the thumbnail URL publicly displayed for the library to contosologo2.jpg.
 
 ```powershell
 Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo2.jpg
+```
+
+### Example 2
+
+This example removes the thumbnail URL that was previously set for the library.
+
+```powershell
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL ""
 ```
 
 ## PARAMETERS

@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### PrecannedFilter
 ```
-New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
  [-ConditionalCompany <MultiValuedProperty>]
  [-ConditionalCustomAttribute1 <MultiValuedProperty>]
  [-ConditionalCustomAttribute10 <MultiValuedProperty>]
@@ -41,9 +43,8 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | Mailbo
  [-ConditionalCustomAttribute9 <MultiValuedProperty>]
  [-ConditionalDepartment <MultiValuedProperty>]
  [-ConditionalStateOrProvince <MultiValuedProperty>]
- [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMembershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -51,7 +52,7 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <None | Mailbo
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -61,6 +62,7 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-DirectMembershipOnly <$true | $false>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -68,7 +70,7 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -140,7 +142,7 @@ You can specify multiple values separated by commas. When you use multiple value
 You need to use this parameter when you use any Conditional parameters as part of a precanned filter. You can't use this parameter in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
+Type: WellKnownRecipientType
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -605,6 +607,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DirectMembershipOnly
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the dynamic distribution group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -778,7 +797,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Get-DlpComplianceRuleV2
+title: Get-InformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -9,51 +9,52 @@ ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
-# Get-DlpComplianceRuleV2
+# Get-InformationBarrierPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-DlpComplianceRuleV2 to view Data Loss Prevention (DLP) rules in the Security & Compliance Center. DLP rules identify and protect sensitive information.
+Use the Get-InformationBarrierPolicy cmdlet to view information barrier policies in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### InformationBarrierDefault (Default)
 ```
-Get-DlpComplianceRuleV2 [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>] [<CommonParameters>]
+Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+```
+
+### Identity
+```
+Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>] [-ExoPolicyId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+For more information, see [Information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies).
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-DlpComplianceRuleV2
+Get-InformationBarrierPolicy | Format-Table Name,State,AssignedSegment,Segments* -Auto
 ```
 
-This example displays summary information for all DLP rules in the Security & Compliance Center.
+This example displays a summary list of all information barrier policies.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-DlpComplianceRuleV2 -Identity "PII SS# Custom" | Format-List
+Get-InformationBarrierPolicy -Identity HR-Sales
 ```
 
-This example displays detailed information for the DLP rule named "PII SS# Custom".
-
-### -------------------------- Example 3 --------------------------
-```
-Get-DlpComplianceRuleV2 -Policy "PII Limited"
-```
-
-This example lists all the rules included in the DLP compliance policy named "PII Limited".
+This example displays detailed information for the information barrier policy named HR-Sales.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the DLP rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the information barrier policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -61,33 +62,27 @@ The Identity parameter specifies the DLP rule that you want to view. You can use
 
 - GUID
 
-- Id
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Policy
-The Policy parameter specifies the DLP policy that contains the rules. Using this parameter returns all rules that are assigned to the specified policy. Valid input for this parameter is any value that uniquely identifies the policy. For example
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-- Id
+You can't use this parameter with the ExOPolicyId parameter.
 
 ```yaml
 Type: PolicyIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -ExoPolicyId
+The ExOPolicyId parameter specifies the information barrier policy that you want to view, but using the GUID part of the ExoPolicyId property value from the output of the Get-InformationBarrierRecipientStatus cmdlet.
+
+You can't use this parameter with the Identity parameter.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -113,4 +108,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4566b601-104e-4843-b1d0-110b33ba1311.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-informationbarrierpolicy)
+
+[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+
+[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)

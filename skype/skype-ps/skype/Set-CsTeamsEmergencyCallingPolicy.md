@@ -1,6 +1,6 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
 title: Set-CsTeamsEmergencyCallingPolicy
 author: danny-levin
 ms.author: dannyle
@@ -38,10 +38,10 @@ Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 
 ### Example 1
 ```powershell
-PS C:>  Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com" 
+PS C:>  Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com"
 ```
 
- This example modifies a existing cmdlet with identity testECP. 
+ This example modifies a existing cmdlet with identity testECP.
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- Provide a description of the Teams Emergency Calling policy to identify purpose of setting it. 
+ Provide a description of the Teams Emergency Calling policy to identify purpose of setting it.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode 
+ Enable ExternalLocationLookupMode. This parameter is currently not supported.
 
 ```yaml
 Type: ExternalLocationLookupMode
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.  
+ The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
- The Identity parameter is a unique identifier that designates the name of the policy  
+ The Identity parameter is a unique identifier that designates the name of the policy
 
 ```yaml
 Type: XdsIdentity
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
- The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallingPolicy cmdlet. 
+ The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallingPolicy cmdlet.
 
 ```yaml
 Type: PSObject
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
- This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values 
+ This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMode
- The type of conference experience for security desk notification 
+ The type of conference experience for security desk notification
 
 ```yaml
 Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
- Specify the tenant id 
+ Specify the tenant id
 
 ```yaml
 Type: System.Guid
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

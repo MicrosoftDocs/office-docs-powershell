@@ -22,87 +22,88 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
- [-AcceptMessagesOnlyFrom <MultiValuedProperty>] 
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
- [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] 
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] 
+ [-ArbitrationMailbox <MailboxIdParameter>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
- [-ConditionalCompany <MultiValuedProperty>] 
+ [-ConditionalCompany <MultiValuedProperty>]
  [-ConditionalCustomAttribute1 <MultiValuedProperty>]
- [-ConditionalCustomAttribute10 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
  [-ConditionalCustomAttribute11 <MultiValuedProperty>]
- [-ConditionalCustomAttribute12 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
  [-ConditionalCustomAttribute13 <MultiValuedProperty>]
- [-ConditionalCustomAttribute14 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
  [-ConditionalCustomAttribute15 <MultiValuedProperty>]
- [-ConditionalCustomAttribute2 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
  [-ConditionalCustomAttribute3 <MultiValuedProperty>]
- [-ConditionalCustomAttribute4 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
  [-ConditionalCustomAttribute5 <MultiValuedProperty>]
- [-ConditionalCustomAttribute6 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
  [-ConditionalCustomAttribute7 <MultiValuedProperty>]
- [-ConditionalCustomAttribute8 <MultiValuedProperty>] 
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
  [-ConditionalCustomAttribute9 <MultiValuedProperty>]
- [-ConditionalDepartment <MultiValuedProperty>] 
- [-ConditionalStateOrProvince <MultiValuedProperty>] 
+ [-ConditionalDepartment <MultiValuedProperty>]
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
  [-Confirm]
- [-CreateDTMFMap <$true | $false>] 
- [-CustomAttribute1 <String>] 
+ [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
- [-CustomAttribute11 <String>] 
- [-CustomAttribute12 <String>] 
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
  [-CustomAttribute13 <String>]
- [-CustomAttribute14 <String>] 
- [-CustomAttribute15 <String>] 
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
  [-CustomAttribute2 <String>]
- [-CustomAttribute3 <String>] 
- [-CustomAttribute4 <String>] 
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
  [-CustomAttribute5 <String>]
- [-CustomAttribute6 <String>] 
- [-CustomAttribute7 <String>] 
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>]
- [-CustomAttribute9 <String>] 
- [-DisplayName <String>] 
+ [-CustomAttribute9 <String>]
+ [-DirectMembershipOnly <$true | $false>]
+ [-DisplayName <String>]
  [-DomainController <Fqdn>]
- [-EmailAddresses <ProxyAddressCollection>] 
+ [-EmailAddresses <ProxyAddressCollection>]
  [-EmailAddressPolicyEnabled <$true | $false>]
- [-ExpansionServer <String>] 
+ [-ExpansionServer <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
- [-ExtensionCustomAttribute2 <MultiValuedProperty>] 
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
- [-ExtensionCustomAttribute4 <MultiValuedProperty>] 
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
  [-ExtensionCustomAttribute5 <MultiValuedProperty>]
- [-ForceUpgrade] 
- [-GrantSendOnBehalfTo <MultiValuedProperty>] 
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
  [-IgnoreDefaultScope]
- [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
- [-MailTip <String>] 
- [-MailTipTranslations <MultiValuedProperty>] 
+ [-IncludedRecipients <WellKnownRecipientType>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
  [-ManagedBy <GeneralRecipientIdParameter>]
- [-MaxReceiveSize <Unlimited>] 
- [-MaxSendSize <Unlimited>] 
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] 
- [-Name <String>] 
- [-Notes <String>] 
+ [-ModerationEnabled <$true | $false>]
+ [-Name <String>]
+ [-Notes <String>]
  [-PhoneticDisplayName <String>]
- [-PrimarySmtpAddress <SmtpAddress>] 
+ [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-RecipientFilter <String>] 
+ [-RecipientFilter <String>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
- [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>] 
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-ReportToManagerEnabled <$true | $false>]
- [-ReportToOriginatorEnabled <$true | $false>] 
+ [-ReportToOriginatorEnabled <$true | $false>]
  [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SendModerationNotifications <Never | Internal | Always>]
- [-SendOofMessageToOriginatorEnabled <$true | $false>] 
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SendOofMessageToOriginatorEnabled <$true | $false>]
  [-SimpleDisplayName <String>]
- [-UMDtmfMap <MultiValuedProperty>] 
- [-WhatIf] 
- [-WindowsEmailAddress <SmtpAddress>] 
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -1032,6 +1033,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DirectMembershipOnly
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the dynamic distribution group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -1086,6 +1104,8 @@ To specify the primary SMTP email address, you can use any of the following meth
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -1374,7 +1394,7 @@ The IncludedRecipients parameter specifies a precanned filter that's based on th
 You can specify multiple values separated by commas. When you use multiple values, the OR Boolean operator is applied.
 
 ```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
+Type: WellKnownRecipientType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1650,6 +1670,10 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+
+The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
+
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
@@ -1694,7 +1718,7 @@ The RecipientFilter parameter specifies a custom OPath filter that's based on th
 
 - Use braces { } around the whole OPath syntax string.
 
-- Use double quotation marks " " around the whole OPath sintax if using variables, see example 2 in this article. 
+- Use double quotation marks " " around the whole OPath sintax if using variables, see example 2 in this article.
 
 - Include a hyphen before all operators.
 
@@ -1902,7 +1926,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
