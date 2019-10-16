@@ -37,8 +37,8 @@ If the target is the root site at https://tenant-name.sharepoint.com, then the f
 1. Any Featured links defined in SharePoint Start Page at https://tenant-name.sharepoint.com/_layouts/15/sharepoint.aspx will not be displayed after performing the swap. If required, the Featured links should be documented so they can be manually recreated after the swap. 
 2. Functionality such as external sharing and application interfaces are dependent on the policies and permissions defined at the root site. Review the source site to ensure that it has the required policies and permissions as per the existing root site. This includes external sharing settings as well as site permissions.
 
-The source or target sites cannot be "associated" with an Office 365 Group or a Hub Site.
-- If the site is "associated" to a Hub Site, then the association can be removed, the swap performed, and the Hub Site re-associated after performing the swap.
+The source and target sites can't be connected to an Office 365 group. They also can't be hub sites or associated with a hub.
+If a site is a hub site, unregister it as a hub site, swap the root site, and then register the site as a hub site. If a site is associated with a hub, disassociate the site, swap the root site, and then reassociate the site.
 
     
 
@@ -123,4 +123,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Modernize your root site](https://docs.microsoft.com/en-us/sharepoint/modern-root-site)
 
