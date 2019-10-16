@@ -54,17 +54,17 @@ Precanned filters are available for the following cmdlets:
 
 - [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/new-addresslist.md)
 
-- [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/set-addresslist.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/set-globaladdresslist.md)
 
 ### Precanned filter example
 
@@ -101,17 +101,17 @@ The recipient filter parameter is available for the following cmdlets:
 
 - [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/new-addresslist.md)
 
-- [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/set-addresslist.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/set-globaladdresslist.md)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
