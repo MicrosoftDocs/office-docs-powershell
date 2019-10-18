@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTollFreeNumberInMeetingInvites
-PARAMVALUE: $true | $false
+This parameter is obsolete and no functional.
 
 ```yaml
 Type: Boolean
