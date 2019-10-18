@@ -482,7 +482,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
