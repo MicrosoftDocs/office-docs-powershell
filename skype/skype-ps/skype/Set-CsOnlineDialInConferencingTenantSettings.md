@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTollFreeNumberInMeetingInvites
-This parameter is obsolete and no functional.
+This parameter is obsolete and not functional.
 
 ```yaml
 Type: Boolean
