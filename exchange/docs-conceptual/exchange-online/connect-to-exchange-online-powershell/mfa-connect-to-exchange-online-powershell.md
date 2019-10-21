@@ -98,23 +98,23 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
      |Office 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
      |Office 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
 
-     This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
+   This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName chris@contoso.com
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com
+   ```
 
-     This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
+   This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
 
-     This example connects to Exchange Online to manage another tenant
+   This example connects to Exchange Online to manage another tenant
 
-     ```powershell
-     Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
+   ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
