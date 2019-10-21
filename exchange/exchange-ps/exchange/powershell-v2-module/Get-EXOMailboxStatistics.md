@@ -27,8 +27,6 @@ Get-EXOMailboxStatistics
  [-DatabaseGuid <Guid>]
  [-ExchangeGuid <Guid>]
  [-Identity <String>]
- [-IncludeMoveHistory]
- [-IncludeMoveReport]
  [-IncludeSoftDeletedRecipients]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
@@ -37,7 +35,7 @@ Get-EXOMailboxStatistics
 ```
 
 ## DESCRIPTION
-You can use the Get-MailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0.
+You can use the Get-EXOMailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0.
 
 You can only see move reports and move history for completed move requests.
 
@@ -100,25 +98,13 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
 
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
 - Email address
 
 - GUID
 
-- LegacyExchangeDN
+- User Principal Name (UPN)
 
-- SamAccountName
-
-- User ID or user principal name (UPN)
+- External Directory Object Id 
 
 ```yaml
 Type: String
@@ -129,38 +115,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IncludeMoveHistory
-The IncludeMoveHistory switch specifies whether to return additional information about the mailbox that includes the history of a completed move request, such as status, flags, target database, bad items, start times, end times, duration that the move request was in various stages, and failure codes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeMoveReport
-The IncludeMoveReport switch specifies whether to return a verbose detailed move report for a completed move request, such as server connections and move stages. You don't need to specify a value with this switch.
-
-Because the output of this command is verbose, you should send the output to a .CSV file for easier analysis.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -182,9 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
-For more information about the available properties, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
+For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: String[]
@@ -203,21 +157,11 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - Minimum (this is the default value)
 
-- Access
+- All
 
-- Device
+You can specify multiple values separated by commas.
 
-- Others
-
-- Policy
-
-- Sync
-
-- Wipe
-
-You can specify multiple values separated by commas. Wildcards ( * ) are supported.
-
-For more information about the properties that are included in each property set, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: PropertySet[]
