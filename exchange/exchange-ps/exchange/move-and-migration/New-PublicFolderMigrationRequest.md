@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-PublicFolderMigrationRequest cmdlet to start a serial public folder migration from Exchange Server 2010.
 
-**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
+**Note**: Support for serial migration of public folders ended in Exchange 2013 Cumulative Update 8 (CU8), and the cmdlets are no longer available in Exchange Online. Instead, use the corresponding **\*-MigrationBatch** and **\*-PublicFolderMailboxMigration\*** cmdlets.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
