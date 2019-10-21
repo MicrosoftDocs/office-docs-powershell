@@ -42,12 +42,19 @@ The Get-EXOMailboxFolderStatistics cmdlet shouldn't be confused with the Get-EXO
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-EXOMailboxFolderStatistics -Identity admin@contoso.com
 ```
 
-{{ Add example description here }}
+This example returns statistics for all mailbox folders. Default is FolderScope All.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeAnalysis -IncludeOldestAndNewestItems
+```
+
+This example returns statistics only for calendar folders. 
 
 ## PARAMETERS
 
@@ -143,25 +150,11 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
 - Email address
 
 - GUID
 
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
+- User Principal Name (UPN)
 
 ```yaml
 Type: String
@@ -212,21 +205,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-```yaml
-Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
