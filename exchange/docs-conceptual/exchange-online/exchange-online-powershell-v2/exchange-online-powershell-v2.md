@@ -168,15 +168,15 @@ The EXO V2 module cmdlets have categorized output properties. Instead of giving 
 
 Property sets are controlled by the following parameters on the EXO V2 module cmdlets:
 
-- *PropertySets*: This parameter accepts one or more available property set names (with or without wildcards) separated by commas.
+- *PropertySets*: This parameter accepts one or more available property set names separated by commas.
 
   This example returns the properties that are available in the Archive and Custom property sets:
 
   ```PowerShell
-  Get-EXOMailbox -PropertySets Archive,Custom*
+  Get-EXOMailbox -PropertySets Archive,Custom
   ```
 
-- *Properties*: This parameter accepts one or more property names (with or without wildcards) separated by commas.
+- *Properties*: This parameter accepts one or more property names separated by commas.
 
   This example returns the specified properties:
 
@@ -210,6 +210,6 @@ This example returns the properties in the Minimum property set for the first te
 Get-EXOMailbox -ResultSize 10
 ```
 
-In contrast, the same **Get-Mailbox** cmdlet would return at least 60 properties for the same ten mailboxes.
+In contrast, the same **Get-Mailbox** cmdlet would return at least 230 properties for the same ten mailboxes.
 
 For details about the property sets that are available in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md) or the individual EXO V2 module cmdlet reference topics.
