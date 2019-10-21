@@ -64,14 +64,14 @@ This commandlet returns you a summary list of all the mailboxes in your organiza
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-Mailbox -ResultSize unlimited
+Get-EXOMailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all mailboxes in the organization, and includes the default set of minimum output properties. To return additional properties, use the Properties and/or PropertySets parameters.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-Mailbox -PropertySets Archive
+Get-EXOMailbox -PropertySets Archive
 ```
 
 This example returns the list of Properties defined in Archive property set. For a complete list of these properties, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
@@ -79,7 +79,7 @@ This example returns the list of Properties defined in Archive property set. For
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-Mailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
+Get-EXOMailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
 ```
 
 This example returns a summary list of all mailboxes in the organization, and includes the following properties:
@@ -90,7 +90,7 @@ This example returns a summary list of all mailboxes in the organization, and in
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-Mailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias
+Get-EXOMailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias
 ```
 
 This example returns the specified properties for the mailbox John@contoso.com.
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
+The object ID for the Azure Active Directory account as the external directory object id of the mailbox.
 
 ```yaml
 Type: Guid
@@ -172,21 +172,13 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
 - Email address
 
 - GUID
 
-- LegacyExchangeDN
+- External Directory Object ID
 
-- SamAccountName
-
-- User ID or user principal name (UPN)
+- User Principal Name (UPN)
 
 **Note**: This parameter doesn't support Name or Alias values.
 
@@ -293,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
 For more information about the available properties, see [Get-EXOMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailbox-property-sets).
 
@@ -437,7 +429,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+It is the name of a user in email address format for e.g. jodn.doe@contoso.com
 
 ```yaml
 Type: String
