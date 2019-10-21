@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-PublicFolderMigrationRequest cmdlet to cancel or complete serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet). You need to use this cmdlet to remove an existing serial public folder migration request before you can create another one.
 
-**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
+**Note**: Support for serial migration of public folders ended in Exchange 2013 Cumulative Update 8 (CU8), and the cmdlets are no longer available in Exchange Online. Instead, use the corresponding **\*-MigrationBatch** and **\*-PublicFolderMailboxMigration\*** cmdlets.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
