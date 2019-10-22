@@ -56,15 +56,15 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
      ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
 
-  ```PowerShell
+  ```
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
 
-  ```PowerShell
+  ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
