@@ -15,7 +15,7 @@ ms.reviewer:
 
 Enables the modern communication site experience on an existing site.
 
-**At this time, based on early adopter feedback, we have decided to postpone rolling out this feature. We apologize for any inconvenience and will communicate a new schedule via Message Center, once it is available. We expect to have an update in the Q3 time frame**
+**At this time, based on early adopter feedback, we have decided to postpone rolling out this feature. We apologize for any inconvenience and will communicate a new schedule via Message Center, once it is available. You can also check [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) for latest updates to this feature.**
 
 
 
