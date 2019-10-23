@@ -60,7 +60,7 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 $gc = Start-SPAssignment
 $web = $gc | Get-SPWeb https://MyWeb
 $web | Set-SPWeb -title "Accounting"
-Stop-SPAssignment -Identity $gc
+Stop-SPAssignment -SemiGlobal $gc
 ```
 
 This example sets the title of the SPWeb object in multiple lines and controls the rate of disposal.
