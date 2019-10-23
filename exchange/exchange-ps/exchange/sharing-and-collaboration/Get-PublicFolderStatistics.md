@@ -113,6 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+This parameter is available only in on-premises Exchange.
+
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
