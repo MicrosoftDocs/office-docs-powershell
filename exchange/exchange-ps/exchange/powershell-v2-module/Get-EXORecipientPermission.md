@@ -41,7 +41,7 @@ Get-EXORecipientPermission [-Trustee <String>]
 ```
 
 ## DESCRIPTION
-This cmdlet is to view/manage information about SendAs permissions that are configured for users in a cloud-based organization. Send As permission allows delegates to use the mailbox to send messages. After this permission is assigned to a delegate, any message that the delegate sends from the mailbox will appear to have been sent by the mailbox owner. However, this permission doesn't allow a delegate to sign in to the user's mailbox. It only allows users to open the mailbox. If this permission is assigned to a group, a message sent by the delegate will appear to have been sent by the group.
+This cmdlet is used to view/manage information about SendAs permissions that are configured for users in a cloud-based organization. Send As permission allows delegates to use the mailbox to send messages. After this permission is assigned to a delegate, any message that the delegate sends from the mailbox will appear to have been sent by the mailbox owner. However, this permission doesn't allow a delegate to sign in to the user's mailbox. It only allows users to open the mailbox. If this permission is assigned to a group, a message sent by the delegate will appear to have been sent by the group.
 
 ## EXAMPLES
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity parameter.This parameter can only be specified with Identity, UserPrincipalName,ExternalDirectoryObjectId parameters.
+The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity, UserPrincipalName, or ExternalDirectoryObjectId parameters (and you can only use the Trustee parameter with those parameters).
 
 You can specify the following types of users or groups:
 
