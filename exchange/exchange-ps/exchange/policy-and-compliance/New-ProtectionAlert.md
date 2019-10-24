@@ -437,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?linkid=824986).
+The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
 You can specify multiple values separated by commas.
 

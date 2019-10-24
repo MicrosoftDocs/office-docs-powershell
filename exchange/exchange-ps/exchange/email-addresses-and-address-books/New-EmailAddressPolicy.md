@@ -769,7 +769,7 @@ This parameter is an OPath filter that's based on the value of any available rec
 
 - You can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
 
-For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
+For more information, see [Choose the domain to use when creating Office 365 Groups](https://go.microsoft.com/fwlink/p/?linkid=838413).
 
 For a list of the filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 

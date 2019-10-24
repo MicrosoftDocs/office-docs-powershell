@@ -72,7 +72,7 @@ New-ManagementScope [-Name] <String> -ServerRestrictionFilter <String>
 ```
 
 ## DESCRIPTION
-After you create a regular or exclusive scope, you need to associate the scope with a management role assignment. To associate a scope with a role assignment, use the New-ManagementRoleAssignment cmdlet. For more information about adding new management scopes, see Create a regular or exclusive scope (https://technet.microsoft.com/library/dd351083.aspx).
+After you create a regular or exclusive scope, you need to associate the scope with a management role assignment. To associate a scope with a role assignment, use the New-ManagementRoleAssignment cmdlet. For more information about adding new management scopes, see [Create a regular or exclusive scope](https://docs.microsoft.com/exchange/create-a-regular-or-exclusive-scope-exchange-2013-help).
 
 For more information about regular and exclusive scopes, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 

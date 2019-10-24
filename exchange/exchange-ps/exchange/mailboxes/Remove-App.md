@@ -39,8 +39,6 @@ Remove-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 
 This example removes the Finance Test app installed for user Tony.
 
-For more information, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
-
 ## PARAMETERS
 
 ### -Identity

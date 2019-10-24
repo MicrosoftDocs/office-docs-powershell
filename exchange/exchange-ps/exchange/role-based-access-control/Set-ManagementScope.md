@@ -51,7 +51,7 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-RecipientRestrict
 ```
 
 ## DESCRIPTION
-If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see Change a role scope (https://technet.microsoft.com/library/dd298145.aspx).
+If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see [Change a role scope](https://docs.microsoft.com/exchange/change-a-role-scope-exchange-2013-help).
 
 For more information about regular and exclusive scopes, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 

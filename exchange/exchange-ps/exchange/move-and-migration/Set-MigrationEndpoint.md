@@ -63,9 +63,9 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 
 For more information about the different move and migration scenarios, see:
 
-- Mailbox moves (https://technet.microsoft.com/library/jj150543.aspx)
+- [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves)
 
-- Manage on-premises mailbox moves (https://technet.microsoft.com/library/jj150487.aspx)
+- [Manage on-premises mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/architecture/mailbox-servers/manage-mailbox-moves)
 
 Changes made to an endpoint that affect the individual users within the batch are applied starting at the next time that the batch is processed. If you are running this cmdlet in the cloud-based service and wish to speed up the application of these settings, consider running the Set-MigrationBatch cmdlet with the -Update parameter.
 

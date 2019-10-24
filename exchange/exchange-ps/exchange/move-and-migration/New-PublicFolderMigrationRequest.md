@@ -48,7 +48,7 @@ New-PublicFolderMigrationRequest -SourceDatabase <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-Migrating public folders is a multi-step process. For more information before you attempt a public folder migration, see Use serial migration to migrate public folders to Exchange 2013 from previous versions (https://technet.microsoft.com/library/jj150486.aspx).
+Migrating public folders is a multi-step process. For more information before you attempt a public folder migration, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -59,7 +59,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-PublicFolderMigrationRequest -SourceDatabase PFDB01 -CSVData (Get-Content C:\PFMigration\CSVData.csv -Encoding Byte)
 ```
 
-This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see Use serial migration to migrate public folders to Exchange 2013 from previous versions (https://technet.microsoft.com/library/jj150486.aspx).
+This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
 ## PARAMETERS
 

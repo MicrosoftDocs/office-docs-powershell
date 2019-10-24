@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter specifies the users or USG who can modify the configuration of a role group or add or remove members to or from a role group. The list you specify with this parameter overwrites the existing ManagedBy list. To add or remove individual role group managers, and for more information about modifying multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+The ManagedBy parameter specifies the users or USG who can modify the configuration of a role group or add or remove members to or from a role group. The list you specify with this parameter overwrites the existing ManagedBy list. To add or remove individual role group managers, and for more information about modifying multivalued properties, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
 You can use the name, distinguished name (DN), or primary SMTP address of the user or USG you want to add. If the name of the user or USG contains spaces, enclose the name in quotation marks (").
 

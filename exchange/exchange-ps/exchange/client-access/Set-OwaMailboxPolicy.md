@@ -1768,7 +1768,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
-**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see {S/MIME for message signing and encryption](https://technet.microsoft.com/library/dn626158.aspx).
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
 ```yaml
 Type: $true | $false

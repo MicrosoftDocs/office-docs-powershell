@@ -38,7 +38,7 @@ New-MailboxAuditLogSearch -EndDate <ExDateTime> -StartDate <ExDateTime> -StatusM
 ## DESCRIPTION
 The New-MailboxAuditLogSearch cmdlet performs an asynchronous search of mailbox audit logs for the specified mailboxes and sends the search results by email to the specified recipients. The body of the email message contains search metadata such as search parameters and the time when the search request was submitted. The results are attached in an .xml file.
 
-To search mailbox audit logs for a single mailbox and have the results displayed in the Exchange Management Shell window, use the Search-MailboxAuditLog cmdlet instead. To learn more about mailbox audit logging, see Mailbox audit logging (https://technet.microsoft.com/library/ff459237.aspx).
+To search mailbox audit logs for a single mailbox and have the results displayed in the Exchange Management Shell window, use the Search-MailboxAuditLog cmdlet instead. To learn more about mailbox audit logging, see [Mailbox audit logging in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 

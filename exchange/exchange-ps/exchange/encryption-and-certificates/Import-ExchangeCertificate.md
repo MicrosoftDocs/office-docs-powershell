@@ -59,9 +59,9 @@ Import-ExchangeCertificate -FileName <String>
 ## DESCRIPTION
 You can use the Import-ExchangeCertificate cmdlet to import the following types of certificate files on an Exchange server:
 
-- APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see PKCS #7: Cryptographic Message Syntax Standard (https://go.microsoft.com/fwlink/p/?LinkID=510681).
+- APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see [PKCS #7: Cryptographic Message Syntax Standard](https://go.microsoft.com/fwlink/p/?LinkID=510681).
 
-- A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. The standard is specified by RSA Laboratories. For more information, see the PKCS #12: Personal Information Exchange Syntax Standard (https://go.microsoft.com/fwlink/p/?LinkID=90249) website.
+- A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. The standard is specified by RSA Laboratories. For more information, see the [PKCS #12: Personal Information Exchange Syntax Standard](https://go.microsoft.com/fwlink/p/?LinkID=90249) website.
 
 After you import a certificate on an Exchange server, you need to assign the certificate to one or more Exchange services by using the Enable-ExchangeCertificate cmdlet.
 
