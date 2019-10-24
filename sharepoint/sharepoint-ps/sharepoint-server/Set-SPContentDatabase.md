@@ -3,8 +3,8 @@ external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPContentDatabase
 schema: 2.0.0
-author: techwriter40
-ms.author: kirks
+author: kenwith
+ms.author: kenwith
 ms.reviewer:
 ---
 
@@ -127,9 +127,9 @@ Accept wildcard characters: False
 ### -Status
 Specifies the status of the SQL Server database.
 Set this parameter to Online to make the database available to host new sites.
-Set this parameter to Offline to make the database unavailable to host new sites.
+Set this parameter to Disabled to make the database unavailable to host new sites.
 
-The type must be either of the following: Online or Offline
+The type must be either of the following: Online or Disabled
 
 ```yaml
 Type: SPObjectStatus
