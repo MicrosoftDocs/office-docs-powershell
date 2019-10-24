@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MailboxDatabase cmdlet to configure a variety of properties for a mailbox database.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -61,7 +61,7 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -285,7 +285,7 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
-Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see Active Manager (https://technet.microsoft.com/library/dd776123.aspx).
+Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://docs.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
 
 ```yaml
 Type: DataMoveReplicationConstraintParameter
@@ -308,7 +308,7 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 14.00:00:00 (1
 
 This setting applies to all mailboxes in the database that don't have their own deleted item retention value configured.
 
-For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -918,7 +918,7 @@ The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in t
 
 - $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
 
-For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 This settings applies to all mailboxes in the database that don't have this value specifically configured.
 
@@ -969,17 +969,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

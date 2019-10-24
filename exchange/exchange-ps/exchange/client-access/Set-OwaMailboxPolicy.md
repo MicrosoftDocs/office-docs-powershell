@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OwaMailboxPolicy cmdlet to configure existing Outlook on the web mailbox policies.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -72,6 +72,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LogonAndErrorLanguage <Int32>]
  [-Name <String>]
  [-NotesEnabled <$true | $false>]
+ [-NpsMailboxPolicy <$true | $false>]
  [-OrganizationEnabled <$true | $false>]
  [-OneDriveAttachmentsEnabled <$true | $false>]
  [-OnSendAddinsEnabled <$true | $false>]
@@ -134,7 +135,7 @@ In on-premises Exchange, the default Outlook on the web mailbox policy is named 
 
 Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -348,7 +349,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
+This parameter is functional only in on-premises Exchange.
+
+The AllowOfflineOn parameter specifies when Outlook Web App in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
@@ -356,7 +359,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
-When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook Web App. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
 ```yaml
 Type: PrivateComputersOnly | NoComputers | AllComputers
@@ -439,17 +442,19 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: The Calendar is available in Outlook on the web. This is the default value.
+The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
-- $false: The Calendar isn't available in Outlook on the web.
+- $true: The Calendar is available in Outlook Web App. This is the default value.
+
+- $false: The Calendar isn't available in Outlook Web App.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -542,17 +547,19 @@ Accept wildcard characters: False
 ```
 
 ### -ContactsEnabled
-The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: Contacts are available in Outlook on the web. This is the default value.
+The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook Web App. Valid values are:
 
-- $false: Contacts aren't available in Outlook on the web.
+- $true: Contacts are available in Outlook Web App. This is the default value.
+
+- $false: Contacts aren't available in Outlook Web App.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1248,6 +1255,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NPSMailboxPolicy
+This parameter is avaialble only in the cloud-based service.
+
+The NPSMailboxPolicy parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvments in free text. Valid values are:
+
+- $true: The NPS survey is available in Outlook on the web. This is the default value.
+
+- $false: The NPS survey isn't available in Outlook on the web.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OneDriveAttachmentsEnabled
 This parameter has been deprecated and is no longer used.
 
@@ -1778,19 +1806,21 @@ Accept wildcard characters: False
 ```
 
 ### -TasksEnabled
-The TasksEnabled parameter specifies whether Tasks folder is available in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: The Tasks folder is available in Outlook on the web. This is the default value.
+The TasksEnabled parameter specifies whether Tasks folder is available in Outlook Web App. Valid values are:
 
-- $false: The Tasks folder isn't available in Outlook on the web.
+- $true: The Tasks folder is available in Outlook Web App. This is the default value.
 
-This parameter doesn't apply to the light version of Outlook on the web.
+- $false: The Tasks folder isn't available in Outlook Web App.
+
+This parameter doesn't apply to the light version of Outlook Web App.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2368,17 +2398,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

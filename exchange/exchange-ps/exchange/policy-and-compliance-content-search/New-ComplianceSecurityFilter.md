@@ -12,11 +12,11 @@ monikerRange: "o365scc-ps"
 # New-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-ComplianceSecurityFilter cmdlet to create compliance security filters in the Security & Compliance Center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Office 365 organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-ComplianceSecurityFilter -Action <Unknown | Preview | Export | Purge | Searc
 ## DESCRIPTION
 Compliance security filters work with compliance searches in the Security & Compliance Center (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ### -Filters
 The Filters parameter specifies the search criteria for the compliance security filter. The filters are applied to the users specified by the Users parameter. You can create three different types of filters:
 
-- Mailbox filter: Specifies mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+- Mailbox filter: Specifies mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 
 - Mailbox content filter: Specifies mailbox content that the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see Keyword queries for Compliance Search (https://technet.microsoft.com/library/ms.o365.cc.searchquerylearnmore.aspx).
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
