@@ -72,6 +72,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LogonAndErrorLanguage <Int32>]
  [-Name <String>]
  [-NotesEnabled <$true | $false>]
+ [-NpsMailboxPolicy <$true | $false>]
  [-OrganizationEnabled <$true | $false>]
  [-OneDriveAttachmentsEnabled <$true | $false>]
  [-OnSendAddinsEnabled <$true | $false>]
@@ -1247,6 +1248,27 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NPSMailboxPolicy
+This parameter is avaialble only in the cloud-based service.
+
+The NPSMailboxPolicy parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvments in free text. Valid values are:
+
+- $true: The NPS survey is available in Outlook on the web. This is the default value.
+
+- $false: The NPS survey isn't available in Outlook on the web.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
