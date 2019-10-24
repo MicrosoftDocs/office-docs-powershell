@@ -1250,11 +1250,13 @@ Accept wildcard characters: False
 ```
 
 ### -NPSMailboxPolicy
-The NPSMailboxPolicy parameter specifies whether to enable or disable the NPS (Net Promoter Score) survey in Outlook on the web.  In the NP survey, users may rate Outlook on the web on a 1-5 scale.  They may also provide free form text feedback about their experiences and suggested improvements.
+This parameter is avaialble only in the cloud-based service.
 
-$true: The NPS survey is available in Outlook on the web. This is the default value.
+The NPSMailboxPolicy parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvments in free text. Valid values are:
 
-$false: The NPS survey isn't available in Outlook on the web.
+- $true: The NPS survey is available in Outlook on the web. This is the default value.
+
+- $false: The NPS survey isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
