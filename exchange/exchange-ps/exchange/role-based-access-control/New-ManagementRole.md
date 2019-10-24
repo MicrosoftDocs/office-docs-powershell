@@ -45,7 +45,7 @@ You can either create a management role based on an existing role, or you can cr
 
 An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
 
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an unscoped role (https://technet.microsoft.com/library/dd876886.aspx).
+The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
 
@@ -118,7 +118,7 @@ By default, this parameter is only available in the UnScoped Role Management rol
 
 The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 You can't use this switch with the Parent parameter.
 

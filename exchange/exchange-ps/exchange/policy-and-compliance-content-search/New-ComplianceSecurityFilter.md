@@ -61,7 +61,7 @@ $DG = Get-DistributionGroup "Ottawa Users"; New-ComplianceSecurityFilter -Filter
 
 This example assigns allows members of the eDiscovery Manager role group to only search the mailboxes of members of the Ottawa Users distribution group.
 
-This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see Configure permissions filtering for Compliance Search (https://technet.microsoft.com/library/mt171557.aspx).
+This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -70,7 +70,7 @@ $DG = Get-DistributionGroup "Executive Team"; New-ComplianceSecurityFilter -Filt
 
 This example prevents any user from deleting content from the mailboxes of members of the Executive Team distribution group.
 
-This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see Configure permissions filtering for Compliance Search (https://technet.microsoft.com/library/mt171557.aspx).
+This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
 
 ### -------------------------- Example 6 --------------------------
 ```
@@ -204,9 +204,9 @@ The Filters parameter specifies the search criteria for the compliance security 
 
 - Mailbox filter: Specifies mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 
-- Mailbox content filter: Specifies mailbox content that the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see Keyword queries for Compliance Search (https://technet.microsoft.com/library/ms.o365.cc.searchquerylearnmore.aspx).
+- Mailbox content filter: Specifies mailbox content that the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see [Keyword queries for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
-- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create. Site\_\<SearchableSiteProperty\> specifies site-related properties. For example,"Site\_Path -eq 'https://contoso.sharepoint.com/sites/doctors'" allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection. SiteContent\_\<SearchableSiteProperty\> specifies content-related properties. For example, "SiteContent\_FileExtension -eq 'docx'" allows users to only search for Word documents. For a list of searchable site properties, see Overview of crawled and managed properties in SharePoint (https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
+- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create. Site\_\<SearchableSiteProperty\> specifies site-related properties. For example,"Site\_Path -eq 'https://contoso.sharepoint.com/sites/doctors'" allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection. SiteContent\_\<SearchableSiteProperty\> specifies content-related properties. For example, "SiteContent\_FileExtension -eq 'docx'" allows users to only search for Word documents. For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
 You can specify multiple filters of the same type. For example, "Mailbox\_CustomAttribute10 -eq 'FTE' -and Mailbox\_MemberOfGroup -eq '$($DG.DistinguishedName)'".
 

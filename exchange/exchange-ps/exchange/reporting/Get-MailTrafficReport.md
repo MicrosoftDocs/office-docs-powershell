@@ -68,7 +68,7 @@ Spam analysis - content-filtered spam
 
 - Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 
-- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
+- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see [What's the difference between junk email and bulk email?](https://docs.microsoft.com/microsoft-365/security/office-365-security/what-s-the-difference-between-junk-email-and-bulk-email).
 
 - Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
 
@@ -96,7 +96,7 @@ Spam analysis - non-spam messages
 
 Bulk mail
 
-- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see Use transport rules to configure bulk email filtering (https://technet.microsoft.com/library/dn720438.aspx).
+- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see [Use mail flow rules to configure bulk email filtering in Exchange Online Protection](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-transport-rules-to-configure-bulk-email-filtering).
 
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
 

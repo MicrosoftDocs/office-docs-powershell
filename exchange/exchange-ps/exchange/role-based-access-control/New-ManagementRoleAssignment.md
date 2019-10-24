@@ -441,7 +441,7 @@ By default, this parameter is only available in the UnScoped Role Management rol
 
 The UnScopedTopLevel switch specifies that the role provided with the Role parameter is an unscoped top-level management role. You don't need to specify a value with this switch.
 
-Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 ```yaml
 Type: SwitchParameter

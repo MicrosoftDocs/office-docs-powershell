@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see Azure Active Directory cmdlets for configuring group settings (https://go.microsoft.com/fwlink/p/?LinkId=827484).
+The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://go.microsoft.com/fwlink/p/?LinkId=827484).
 
 ```yaml
 Type: String
@@ -336,7 +336,7 @@ The ConnectorsEnabled specifies whether to enable the ability to use connectors 
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
-For more information about connectors for Office 365 Groups, see Connect apps to your groups (https://go.microsoft.com/fwlink/p/?LinkId=787545).
+For more information about connectors for Office 365 Groups, see [Connect apps to your groups in Outlook](https://go.microsoft.com/fwlink/p/?LinkId=787545).
 
 ```yaml
 Type: SwitchParameter

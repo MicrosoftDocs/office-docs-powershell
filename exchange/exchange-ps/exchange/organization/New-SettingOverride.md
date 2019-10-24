@@ -57,7 +57,7 @@ New-SettingOverride -Name "Change OAB Generation" -Server Mailbox01 -Component T
 
 This example creates a new setting override named Change OAB Generation. This override specifies a 2 hour OAB generation interval. Because the Server parameter is used, the override applies only to the specified server named Mailbox01.
 
-For more information, see the topic Change the offline address book generation schedule (https://technet.microsoft.com/library/bb124719.aspx).
+For more information, see the topic [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 
 ## PARAMETERS
 

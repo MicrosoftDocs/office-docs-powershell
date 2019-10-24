@@ -39,7 +39,7 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in Clear or Remove Move Requests (https://technet.microsoft.com/library/dd351276.aspx). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
+In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in [Clear or Remove Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd351276(v=exchg.141)). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
 
 In Exchange 2010, you need to use the Remove-MoveRequest cmdlet on completed move requests to clear the InTransit flag from the mailbox. This step isn't required for mailbox moves in newer versions of Exchange where the Remove-MoveRequest is only used to cancel existing move requests.
 

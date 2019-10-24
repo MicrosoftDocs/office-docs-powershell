@@ -366,7 +366,7 @@ New-ReceiveConnector [-Name] <String> -Usage <Custom | Internet | Internal | Cli
 ## DESCRIPTION
 On Mailbox servers, you can create Receive connectors in the Front End Transport service, and the Transport (Hub) service. On Edge Transport servers, you can create Receive connectors in the Transport service.
 
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors (https://technet.microsoft.com/library/aa996395.aspx).
+For more information about Receive connector usage types, permission groups, and authentication methods, see [Receive connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -1472,7 +1472,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see Receive connector permission groups (https://technet.microsoft.com/library/aa996395.aspx#PermissionGroups).
+For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
 
 ```yaml
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
@@ -1514,7 +1514,7 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see Protocol logging (https://technet.microsoft.com/library/aa997624.aspx).
+For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
 
 ```yaml
 Type: None | Verbose

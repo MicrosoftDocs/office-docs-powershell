@@ -498,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCodePage
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst filesare used in Outlook 97 to Outlook 2002. You can find the valid values in the Code Page Identifiers (https://go.microsoft.com/fwlink/p/?linkId=328514) topic.
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst filesare used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://go.microsoft.com/fwlink/p/?linkId=328514) topic.
 
 ```yaml
 Type: Int32

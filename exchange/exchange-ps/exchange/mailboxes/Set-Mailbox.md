@@ -2976,7 +2976,7 @@ Valid values are:
 
 - $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
 
-Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see Configuring Microsoft Lync Server 2013 to use the unified contact store (https://go.microsoft.com/fwlink/p/?LinkID=313550).
+Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://go.microsoft.com/fwlink/p/?LinkID=313550).
 
 If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
 
@@ -3882,7 +3882,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
-- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Microsoft 365 admin center, see Reset a user's password (https://go.microsoft.com/fwlink/p/?LinkId=614837).
+- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=614839). To change a another user's password in the Microsoft 365 admin center, see [Reset Office 365 business passwords](https://go.microsoft.com/fwlink/p/?LinkId=614837).
 
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
@@ -4820,7 +4820,7 @@ The SCLQuarantineEnabled parameter specifies whether messages that meet or excee
 
 - $null (blank): The value isn't configured. This is the default value.
 
-To configure the quarantine mailbox, see Configure a spam quarantine mailbox (https://technet.microsoft.com/library/bb123746.aspx).
+To configure the quarantine mailbox, see [Configure a spam quarantine mailbox](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-quarantine-mailboxes).
 
 ```yaml
 Type: $true | $false

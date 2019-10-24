@@ -41,7 +41,7 @@ If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 l
 
 Note: In Exchange Online, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
 
-For more information about the structure and properties of the audit log, [Administrator audit log structure](https://docs.microsoft.com/en-us/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
+For more information about the structure and properties of the audit log, [Administrator audit log structure](https://docs.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 

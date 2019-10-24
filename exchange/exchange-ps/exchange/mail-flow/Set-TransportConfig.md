@@ -102,7 +102,7 @@ Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
 
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see Transport and Mailbox rules in Exchange Online or in on-premises Exchange Server don't work as expected (https://go.microsoft.com/fwlink/p/?linkid=787472&clcid=0x409).
+To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://go.microsoft.com/fwlink/p/?linkid=787472).
 
 ## PARAMETERS
 

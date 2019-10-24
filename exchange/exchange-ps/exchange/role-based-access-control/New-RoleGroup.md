@@ -106,7 +106,7 @@ This example takes an existing role group and copies the roles from that role gr
 
 The first command stores the existing role group in a variable, and the second command creates the custom role group.
 
-This example uses variables to store information. For more information about variables, see User-defined variables (https://technet.microsoft.com/library/bb123690.aspx).
+This example uses variables to store information. For more information about variables, see [About Variables](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables).
 
 ### -------------------------- Example 6 --------------------------
 ```
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role group when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see Built-in management roles (https://technet.microsoft.com/library/dd638077.aspx).
+For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://docs.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
 
 ```yaml
 Type: RoleIdParameter[]
