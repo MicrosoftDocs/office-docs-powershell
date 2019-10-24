@@ -14,6 +14,8 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
+**Note**: By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
 
 **Note**: In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/new-compliancesearch) and related eDiscovery cmdlets.
@@ -21,6 +23,21 @@ Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a spec
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
+
+### Identity
+```
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-Confirm]
+ [-DeleteContent]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
+```
 
 ### EstimateResult
 ```
@@ -45,23 +62,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
  [-DoNotIncludeArchive]
  [-Force]
  [-IncludeUnsearchableItems]
- [-LogLevel <Suppress | Basic | Full>]
+ [-LogLevel <LoggingLevel>]
  [-LogOnly]
- [-SearchDumpster]
- [-SearchDumpsterOnly]
- [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Identity
-```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
- [-Confirm]
- [-DeleteContent]
- [-DomainController <Fqdn>]
- [-DoNotIncludeArchive]
- [-Force]
- [-IncludeUnsearchableItems]
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
@@ -78,10 +80,6 @@ You can use the Search-Mailbox cmdlet to search messages in a specified mailbox 
 - Perform single item recovery to recover items from a user's Recoverable Items folder.
 
 - Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-**Note**: By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see the "Add a role to a role group" section in [Manage role groups](https://technet.microsoft.com/library/jj657480.aspx).
 
 ## EXAMPLES
 
@@ -237,9 +235,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteContent
-The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. When used with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
+**Note**: You need to be assigned the Mailbox Import Export management role to use this switch. By default, this role isn't assigned to any role group (including Organization Management). Typically, you assign a role to a built-in or custom role group.
 
-You need to be assigned the Mailbox Import Export management role to use this switch. By default, this role isn't assigned to any role group. Typically, you assign a role to a built-in or custom role group. Or you can assign a role to a user, or a universal security group.
+The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. You don't need to specify a value with this switch.
+
+When you use this switch with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
 
 Before you use the DeleteContent switch to delete content, we recommend that you test search parameters by using the LogOnly parameter, as shown in Example 2.
 
@@ -331,7 +331,7 @@ The LogLevel parameter specifies the logging level for the search. It can have o
 The default log level is Basic.
 
 ```yaml
-Type: Suppress | Basic | Full
+Type: LoggingLevel
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
