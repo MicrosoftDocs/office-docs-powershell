@@ -30,7 +30,7 @@ Missing routing groups can be identified by using the `Get-CsPoolFabricState` cm
 
 ### -------------------------- Example 1 --------------------------
 ```
-Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -Type "Transient"
+Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -ResetType "Transient"
 ```
 
 The command shown in Example 1 performs a transient on the routing group with the identity bef5fa3b-3c97-4af0-abe7-611deee7616c.
