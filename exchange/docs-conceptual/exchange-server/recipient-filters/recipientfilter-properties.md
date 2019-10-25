@@ -12,7 +12,7 @@ ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176
 description: "Learn about the recipient properties that you can use with the RecipientFilter parameter in Exchange 2016 cmdlets."
 ---
 
-# Filterable properties for the -RecipientFilter parameter
+# Filterable properties for the RecipientFilter parameter
 
 Learn about the recipient properties that you can use with the _RecipientFilter_ parameter in Exchange Server 2016 or later, and Exchange Online cmdlets.
 
