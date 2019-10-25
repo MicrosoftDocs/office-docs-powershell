@@ -18,7 +18,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
-> • Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Exchange Online PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
@@ -56,15 +56,15 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
      ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
 
-  ```PowerShell
+  ```
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
 
-  ```PowerShell
+  ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
@@ -84,7 +84,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 2. The command that you need to run uses the following syntax:
 
    ```PowerShell
-   Connect-EXOPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
+   Connect-EXOPSSession [-UserPrincipalName -ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri> -DelegatedOrganization <String>]
    ```
 
    - _\<UPN\>_ is your Office 365 work or school account.
@@ -98,17 +98,23 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
      |Office 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
      |Office 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
 
-     This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
+   This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName chris@contoso.com
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com
+   ```
 
-     This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
+   This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+   This example connects to Exchange Online to manage another tenant
+
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
+   ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 

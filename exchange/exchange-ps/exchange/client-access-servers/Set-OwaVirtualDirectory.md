@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-OwaVirtualDirectory cmdlet to modify existing Outlook on the web virtual directories that are used in Internet Information Services (IIS) on Exchange servers.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -161,13 +161,13 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 
 - You can run the Set-OwaVirtualDirectory cmdlet on any server that has the Exchange Server administration tools installed.
 
-- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
 - Many of the Outlook on the web virtual directory settings require you to restart IIS (Stop-Service WAS -Force and Start-Service W3SVC) before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 
 - To switch from forms-based authentication to Basic authentication, you must first disable forms-based authentication, and then as a separate task, enable Basic authentication. You can't disable forms-based authentication and enable Basic authentication in a single task.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -2192,7 +2192,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
-**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see {S/MIME for message signing and encryption](https://technet.microsoft.com/library/dn626158.aspx).
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
 ```yaml
 Type: $true | $false
@@ -2749,17 +2749,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
