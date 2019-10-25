@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role assignment policy when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see Built-in management roles (https://technet.microsoft.com/library/dd638077.aspx).
+For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://docs.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
 
 ```yaml
 Type: RoleIdParameter[]

@@ -386,7 +386,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-For more information about configuring AD FS claims based authentication in Exchange, see Use AD FS claims-based authentication with Outlook on the web (https://technet.microsoft.com/library/dn635116.aspx).
+For more information about configuring AD FS claims based authentication in Exchange, see [Use AD FS claims-based authentication with Outlook on the web](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/ad-fs-claims-based-auth).
 
 ```yaml
 Type: MultiValuedProperty
@@ -458,7 +458,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-signing certificates that are used for AD FS claims-based authentication. This parameter uses certificate thumbprint values (GUIDs) to identify the certificates.
 
-To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see Get-ADFSCertificate (https://go.microsoft.com/fwlink/p/?linkid=392706).
+To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://go.microsoft.com/fwlink/p/?linkid=392706).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -706,7 +706,7 @@ The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or
 
 - $false: Action buttons in connector cards are disabled.
 
-For more information about actionable messages in connected apps, see Connect apps to your inbox in Outlook on the web (https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
 
 ```yaml
 Type: $true | $false
@@ -752,7 +752,7 @@ The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable
 
 To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
-For more information about connectors for Outlook on the web, see Connect apps to your inbox in Outlook on the web (https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
 
 ```yaml
 Type: $true | $false
@@ -855,7 +855,7 @@ The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabl
 
 - $false: Customer Lockbox are disabled.
 
-Customer Lockbox is included in the Office 365 E5 plan. For more information about Customer Lockbox, see Office 365 Customer Lockbox Requests (https://go.microsoft.com/fwlink/p/?LinkId=624318).
+Customer Lockbox is included in the Office 365 E5 plan. For more information about Customer Lockbox, see [Customer Lockbox in Office 365](https://go.microsoft.com/fwlink/p/?LinkId=624318).
 
 ```yaml
 Type: $true | $false

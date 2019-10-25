@@ -182,7 +182,7 @@ By default, this parameter is only available in the UnScoped Role Management rol
 
 The UnScopedTopLevel switch specifies the role entry that you want to modify is on an unscoped top-level role. You don't need to specify a value with this switch.
 
-Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 You must use this switch to modify role entries on unscoped top level roles.
 

@@ -161,7 +161,7 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 
 - You can run the Set-OwaVirtualDirectory cmdlet on any server that has the Exchange Server administration tools installed.
 
-- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
 - Many of the Outlook on the web virtual directory settings require you to restart IIS (Stop-Service WAS -Force and Start-Service W3SVC) before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 
@@ -2192,7 +2192,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
-**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see {S/MIME for message signing and encryption](https://technet.microsoft.com/library/dn626158.aspx).
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
 ```yaml
 Type: $true | $false

@@ -125,7 +125,7 @@ The DateFormat parameter specifies the date format based on the current or speci
 
 - dd-MMM-yy
 
-For more information about the date format strings, see Standard Date and Time Format Strings (https://go.microsoft.com/fwlink/p/?LinkId=784852).
+For more information about the date format strings, see [Standard Date and Time Format Strings](https://go.microsoft.com/fwlink/p/?LinkId=784852).
 
 ```yaml
 Type: String
@@ -199,7 +199,7 @@ The TimeFormat parameter specifies the time format based on the current or speci
 
 - HH:mm
 
-For more information about the time format strings, see Standard Date and Time Format Strings (https://go.microsoft.com/fwlink/p/?LinkId=784852).
+For more information about the time format strings, see [Standard Date and Time Format Strings](https://go.microsoft.com/fwlink/p/?LinkId=784852).
 
 ```yaml
 Type: String

@@ -1005,7 +1005,7 @@ The Locale parameter specifies the locale of the Mailbox server. A locale is a c
 
 - es-CL (Spanish - Chile)
 
-For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=68806).
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=68806).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
