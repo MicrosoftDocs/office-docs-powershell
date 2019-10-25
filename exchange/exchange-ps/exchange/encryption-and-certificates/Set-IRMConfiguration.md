@@ -139,7 +139,7 @@ This parameter is available only in on-premises Exchange.
 
 The ClientAccessServerEnabled parameter specifies whether Exchange Client Access servers are allowed to authenticate clients that do not have direct access to AD RMS (for example, Outlook on the web, Exchange ActiveSync or remote Outlook Anywhere clients). Valid values are:
 
-- $true: Client Access servers are allowed to authenticate clients. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App (https://technet.microsoft.com/library/dd876891.aspx).
+- $true: Client Access servers are allowed to authenticate clients. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see [Information Rights Management in Outlook Web App](https://docs.microsoft.com/exchange/information-rights-management-in-outlook-web-app-exchange-2013-help).
 
 - $false: Client Access servers aren't allowed to authenticate clients.
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ### -JournalReportDecryptionEnabled
 The JournalReportDecryptionEnabled parameter specifies whether to enable journal report decryption. Valid values are:
 
-- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see Journal report decryption (https://technet.microsoft.com/library/dd876936.aspx).
+- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see [Journal report decryption](https://docs.microsoft.com/exchange/journal-report-decryption-exchange-2013-help).
 
 - $false: Journal report decryption is disabled.
 
@@ -354,7 +354,7 @@ This parameter is available only in on-premises Exchange.
 
 The RefreshServerCertificates switch clears all Rights Account Certificates (RACs), Computer Licensor Certificates (CLCs), and cached AD RMS templates from all Exchange servers in the organization. You don't need to specify a value with this switch.
 
-Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see Understanding AD RMS Certificates (https://go.microsoft.com/fwlink/p/?linkId=197118).
+Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see [Understanding AD RMS Certificates](https://go.microsoft.com/fwlink/p/?linkId=197118).
 
 ```yaml
 Type: SwitchParameter

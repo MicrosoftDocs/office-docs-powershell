@@ -218,7 +218,7 @@ The CircularLoggingEnabled parameter specifies whether circular logging is enabl
 
 - $false: Circular logging is disabled. This is the default value.
 
-For more information about circular logging, see Exchange Native Data Protection (https://technet.microsoft.com/library/dd876874.aspx#ENDP).
+For more information about circular logging, see [Exchange Native Data Protection](https://docs.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
 
 ```yaml
 Type: $true | $false

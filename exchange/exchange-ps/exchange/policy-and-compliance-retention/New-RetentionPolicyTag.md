@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-RetentionPolicyTag cmdlet to create a retention tag.
 
-For more information about retention tags, see Retention tags and retention policies (https://technet.microsoft.com/library/dd297955.aspx).
+For more information about retention tags, see [Retention tags and retention policies in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
