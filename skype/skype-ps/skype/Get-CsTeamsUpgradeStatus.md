@@ -35,6 +35,10 @@ You can also find more guidance here: [Getting started with your Microsoft Teams
 ## EXAMPLES
 
 ### Example 1: The below example shows an example of TeamsUpgradeStatus with the tenant being scheduled for Microsoft-driven automated upgrade.
+
+> [!NOTE] 
+> The PowerShell results get populated at the same time upgrade notification is sent and may be null if the tenant is not yet notified. 
+
 ```
 PS C:\> Get-CsTeamsUpgradeStatus
 
