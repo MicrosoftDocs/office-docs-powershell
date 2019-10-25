@@ -140,12 +140,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForClients
-The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 ProPlus clients. Valid values are:
+### -EnableSafeLinksForO365Clients
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
-- $true: Safe Links are enabled for Office clients.
+- $true: Safe Links are enabled for Office 365 apps; this is the default value
 
-- $false: Safe Links are disabled for Office clients. This is the default value.
+- $false: Safe Links are disabled for Office 365 apps
 
 ```yaml
 Type: $true | $false
