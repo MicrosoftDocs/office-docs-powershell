@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MoveRequest cmdlet to cancel a mailbox move initiated using the New-MoveRequest cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,13 +39,13 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in Clear or Remove Move Requests (https://technet.microsoft.com/library/dd351276.aspx). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
+In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in [Clear or Remove Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd351276(v=exchg.141)). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
 
 In Exchange 2010, you need to use the Remove-MoveRequest cmdlet on completed move requests to clear the InTransit flag from the mailbox. This step isn't required for mailbox moves in newer versions of Exchange where the Remove-MoveRequest is only used to cancel existing move requests.
 
 The MoveRequestQueue and MailboxGuid parameters are for debugging purposes only.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -246,17 +246,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
