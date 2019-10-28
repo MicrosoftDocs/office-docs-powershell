@@ -122,7 +122,7 @@ The following example uses the _RecipientFilter_ parameter to create a dynamic d
 This example uses custom filters to create a dynamic distribution group for user mailboxes that have the **Company** attribute defined as Contoso and the **Office** attribute defined as North Building.
 
 ```PowerShell
-New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.com/Users -RecipientFilter { ((RecipientType -eq 'UserMailbox') -and (Company -eq 'Contoso') -and (Office -eq 'North Building')) }
+New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.com/Users -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (Company -eq 'Contoso') -and (Office -eq 'North Building'))"
 ```
 
 ## Custom filters using the Filter parameter
@@ -176,19 +176,19 @@ For more information about the filterable properties you can use with the _Filte
 This example uses the _Filter_ parameter to return information about users whose title contains the word "manager".
 
 ```PowerShell
-Get-User -Filter {Title -like 'Manager*'}
+Get-User -Filter "Title -like 'Manager*'"
 ```
 
 ## Custom filters using the ContentFilter parameter
 
 You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../../exchange-ps/exchange/mailboxes/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
-### ContentFilter paramter example
+### ContentFilter parameter example
 
 This example creates an export request that searches Ayla's mailbox for messages where the body contains the phrase "company prospectus". If that phrase is found, the command exports all messages with that phrase to a .pst file.
 
 ```PowerShell
-New-MailboxExportRequest -Mailbox Ayla -ContentFilter {Body -like "company prospectus*"}
+New-MailboxExportRequest -Mailbox Ayla -ContentFilter "Body -like "company prospectus*""
 ```
 
 For more information about the filterable properties you can use with the _ContentFilter_ parameter, see [Filterable Properties for the ContentFilter Parameter](https://technet.microsoft.com/library/cf504a59-1938-489c-bb48-b27b2ac3234e.aspx).
@@ -197,7 +197,9 @@ For more information about the filterable properties you can use with the _Conte
 
 When creating your own custom filters, be aware of the following:
 
-- Use braces { } around the entire OPATH filter string with the _Filter_ or _RecipientFilter_ parameters.
+- With the _Filter_ or _RecipientFilter_ parameters, enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values `$true`, `$false`, or `$null`. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
 
 - Include the hyphen before all operators. The most common operators include:
 
@@ -223,9 +225,9 @@ When creating your own custom filters, be aware of the following:
 
 - For more information about operators you can use, see:
 
-  - [About Logical Operators](https://technet.microsoft.com/library/hh847789.aspx)
+  - [about_Logical_Operators](https://technet.microsoft.com/library/hh847789.aspx)
 
-  - [About Comparison Operators](https://technet.microsoft.com/library/hh847759.aspx)
+  - [about_Comparison_Operators](https://technet.microsoft.com/library/hh847759.aspx)
 
 ## Recipient filter documentation
 
