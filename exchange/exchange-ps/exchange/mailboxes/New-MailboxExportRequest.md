@@ -147,7 +147,7 @@ This example exports the user Kweku's archive to a .pst file on the network shar
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2018")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
+New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like "*profit*") -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
 This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2018.
@@ -411,7 +411,17 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-The ContentFilter parameter specifies message content to search for. Only contents that match the ContentFilter parameter will be exported into the .pst file.
+The ContentFilter parameter uses OPath filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
 ```yaml
 Type: String

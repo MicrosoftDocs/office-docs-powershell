@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-ActiveSyncDeviceClass -Filter {DeviceType -eq "WP"}
+Get-ActiveSyncDeviceClass -Filter "DeviceType -eq 'WP'"
 ```
 
 This example returns a list of all Windows Phones.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-ActiveSyncDeviceClass | group-object -property DeviceType
+Get-ActiveSyncDeviceClass | group-object -Property DeviceType
 ```
 
 This example lists all device types within the organization along with a count of the number of devices of each type present.
@@ -66,15 +66,17 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-- \<Property\> is a filterable property.
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see [About Comparison Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- Property is a filterable property.
 
-- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
 You can filter by the following properties:
 

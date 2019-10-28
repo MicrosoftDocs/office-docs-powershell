@@ -65,7 +65,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
 ```PowerShell
-$DSA = Get-User -ResultSize unlimited -Filter {(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')}
+$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
 ```PowerShell
@@ -121,11 +121,11 @@ Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePower
 To display only those users who don't have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter {RemotePowerShellEnabled -eq $false}
+Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $false"
 ```
 
 To display only those users who have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter {RemotePowerShellEnabled -eq $true}
+Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $true"
 ```
