@@ -47,7 +47,7 @@ This example removes the user David from the role group Recipient Management.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-User -Filter { Department -Eq "Sales" -And -RecipientType -Eq "UserMailbox" } | Get-Mailbox | Remove-RoleGroupMember "Sales and Marketing Group" -WhatIf
+Get-User -Filter "Department -eq 'Sales' -and -RecipientType -eq 'UserMailbox'" | Get-Mailbox | Remove-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
 This example finds all the mailboxes that are part of the Sales department and removes them from the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be removed.

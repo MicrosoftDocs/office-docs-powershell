@@ -61,7 +61,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
+Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter "City -eq 'Seattle' -and RecipientType -eq 'UserMailbox'"
 ```
 
 This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
@@ -75,7 +75,7 @@ This example changes the recipient root for the Sales Recipients management scop
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
+Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter "ServerSite -eq 'NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}'"
 ```
 
 This example changes the Active Directory site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
@@ -85,7 +85,19 @@ This example changes the Active Directory site used in the server restriction fi
 ### -DatabaseRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. When the DatabaseRestrictionFilter parameter is specified, only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the ServerRestrictionFilter, RecipientRestrictionFilter or RecipientRoot parameters. For a list of filterable database properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+The DatabaseRestrictionFilter parameter uses OPath filter syntax to specify the databases that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For a list of filterable database properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+You can't use this parameter with the RecipientRestrictionFilter, ServerRestrictionFilter, RecipientRoot, DatabaseList, or ServerList parameters.
 
 ```yaml
 Type: String
@@ -117,7 +129,19 @@ Accept wildcard characters: False
 ### -ServerRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The ServerRestrictionFilter parameter specifies the filter to apply to server objects. When the ServerRestrictionFilter parameter is specified, only recipient objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter, RecipientRestrictionFilter, or RecipientRoot parameters. For a list of filterable server properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+The ServerRestrictionFilter parameter uses OPath filter syntax to specify the servers that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For a list of filterable server properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+You can't use this parameter wit the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerList parameters.
 
 ```yaml
 Type: String
@@ -198,7 +222,19 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRestrictionFilter
-The RecipientRestrictionFilter parameter specifies the filter to apply to recipient objects. When the RecipientRestrictionFilter parameter is specified, only server objects that match the filter are included in the scope. If you use the RecipientRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter or ServerRestrictionFilter parameters.
+The RecipientRestrictionFilter parameter uses OPath filter syntax to specify the recipients that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+You can't use this parameter with the DatabaseRestrictionFilter, DatabaseList, ServerList, or ServerRestrictionFilter parameters.
 
 ```yaml
 Type: String
@@ -213,7 +249,17 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRoot
-The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. If you use the RecipientRoot parameter, you can't use the ServerRestrictionFilter or DatabaseRestrictionFilter parameters.
+The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. Valid input for this parameter is an OU or domain that's visibor domain that's returned bylUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+
+- Name
+
+- Canonical name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the ServerRestrictionFilter or DatabaseRestrictionFilter parameters.
 
 ```yaml
 Type: OrganizationalUnitIdParameter

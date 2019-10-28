@@ -269,7 +269,17 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter indicates the OPath filter used to filter recipients.
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
 For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/filter-properties).
 
@@ -368,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
-The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -440,7 +450,17 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientPreviewFilter
-The RecipientPreviewFilter parameter specifies a recipient filter that would define the recipients returned by this command. You can create a custom recipient filter for a dynamic distribution group, an address list, or an email address policy. To verify that the recipient filter you specified will return the recipients you want, you can pass the OPATH filter specified in the RecipientFilter property for that dynamic distribution group, address list, or email address policy to the RecipientPreviewFilter parameter and preview the list of recipients.
+The RecipientPreviewFilter parameter tests a recipient filter that you would use in a dynamic distribution group, address list, or email address policy. This parameter uses the same Opath filter syntax as the RecipientFilter parameter for those object types (`"Property -ComparisonOperator 'Value'"`). When you use this parameter, remember the following OPath filter rules:
+
+- Use double quotation marks (" ") around the whole OPath string. Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Include a hyphen before all operators.
+
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
+
+- In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
+
+- You need to escape any variables with values that contain single quotation marks ('). For example, instead of `"CustomAttribute1 -eq '$x'"`, use `"CustomAttribute1 -eq '$($x -Replace "'","''")'"`.
 
 ```yaml
 Type: String
