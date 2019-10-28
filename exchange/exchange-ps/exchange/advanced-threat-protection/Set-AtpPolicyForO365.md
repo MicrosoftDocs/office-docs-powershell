@@ -143,9 +143,9 @@ Accept wildcard characters: False
 ### -EnableSafeLinksForO365Clients
 The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
-- $true: Safe Links are enabled for Office 365 apps; this is the default value
+- $true: Safe Links are enabled for Office 365 apps. This is the default value.
 
-- $false: Safe Links are disabled for Office 365 apps
+- $false: Safe Links are disabled for Office 365 apps.
 
 ```yaml
 Type: $true | $false
