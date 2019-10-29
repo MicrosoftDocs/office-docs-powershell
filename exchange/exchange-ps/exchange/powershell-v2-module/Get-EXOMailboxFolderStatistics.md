@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+The object ID for the Azure Active Directory account as the external directory object id of the mailbox.
 
 ```yaml
 Type: Guid
@@ -150,8 +150,6 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
-- Email address
-
 - GUID
 
 - User Principal Name (UPN)
@@ -201,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSoftDeletedRecipients
-{{ Fill IncludeSoftDeletedRecipients Description }}
+Use this parameter to include results for mailboxes which are in soft-deleted state. This is a switch and no value needs to be passed for this input parameter
 
 ```yaml
 Type: SwitchParameter
@@ -216,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+This is the name of the user in complete email address format i.e. John.doe@contoso.com
 
 ```yaml
 Type: String
