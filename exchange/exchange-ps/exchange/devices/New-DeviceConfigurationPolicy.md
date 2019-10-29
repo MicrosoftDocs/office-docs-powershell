@@ -50,7 +50,7 @@ This example creates a new mobile device configuration policy named Engineering 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the policy. If the value contains spaces, enclose the value in double-quotation marks.
+The Name parameter specifies a unique name for the policy. If the value contains spaces, enclose the value in double quotation marks.
 
 ```yaml
 Type: String

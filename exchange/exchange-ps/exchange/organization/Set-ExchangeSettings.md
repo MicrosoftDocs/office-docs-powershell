@@ -698,9 +698,21 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeFilter
-The ScopeFilter parameter specifies the scope of an Exchange settings group based an OPATH filter (for example, ServerRole -like "Mailbox\*"). The filter that's used for this parameter is available for all Scope parameter values other than Forest.
+The ScopeFilter parameter uses OPath filter syntax to specify the scope of an Exchange settings group based. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"ServerRole -like 'Mailbox*'"`).
 
-You use the ScopeFilter parameter only when you update Exchange settings groups by using the UpdateSettingsGroup switch with the GroupName parameter.
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+You can't use this parameter with the Scope parameter and the value Forest.
+
+You use this parameter only when you update Exchange settings groups by using the UpdateSettingsGroup switch with the GroupName parameter.
 
 You can't use this parameter with other scope-related parameters.
 

@@ -91,15 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserGroupFilter
-The UserGroupFilter parameter specifies the members of the organization segment based on user attributes in an OPATH filter. The OPATH filter uses the syntax "\<Property\> -\<Comparison operator\> '\<Value\>'".
+The UserGroupFilter parameter uses OPath filter syntax to specify the members of the organization segment. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"MemberOf -eq 'Engineering Department'"` or `"ExtensionAttribute1 -eq 'DayTrader'"`).
 
-- \<Property\> is a filterable attribute. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
+- Enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see [About Comparison Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- Property is a filterable property. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
 
-- \<Value\> is the attribute value.
+- ComparisonOperator is an OPath comparison operator. For example `-eq` for equals and `-like` for string comparison. For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-For example, "MemberOf -eq 'Engineering Department'" or "ExtensionAttribute1 -eq 'DayTrader'".
+- Value is the property value. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values $true, $false, or $null. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
 
 Use the same attribute for all of your segments, and verify that your segments don't overlap (a user must be assigned to only one segment).
 
