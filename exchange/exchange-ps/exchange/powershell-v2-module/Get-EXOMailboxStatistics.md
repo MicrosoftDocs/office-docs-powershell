@@ -43,10 +43,18 @@ You can only see move reports and move history for completed move requests.
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-EXOMailboxStatistics -Identity john@contoso.com
 ```
 
-{{ Add example description here }}
+Above example retrieves the mailbox statistics for mailbox user with UPN - john@contoso.com
+It only returns minimum set of properties as specified in the PropertySet list for Get-EXOMailboxStatistics cmdlet.
+
+### Example 2
+```
+Get-EXOMailboxStatistics -Identity john@contoso.com -Properties SystemMessageSize,SystemMessageSizeWarningQuota,SystemMessageCount
+```
+
+Above example retrieves the requested properties along with Minimum Property set for mailbox statistics for mailbox user with UPN - john@contoso.com
 
 ## PARAMETERS
 
@@ -66,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseGuid
-{{ Fill DatabaseGuid Description }}
+This is GUID of database which hosts the Mailbox. This property can be retreived using Get-EXOMailbox with Properies filter set to DatabaseGuid.
 
 ```yaml
 Type: Guid
@@ -81,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-{{ Fill ExchangeGuid Description }}
+This is the GUID of mailbox in Exchange, also known as Mailbox GUID. This property can be retreived using Get-EXOMailbox with Properies filter set to ExchangeGUID.
 
 ```yaml
 Type: Guid
@@ -97,10 +105,6 @@ Accept wildcard characters: False
 
 ### -Identity
 The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
-
-- Email address
-
-- GUID
 
 - User Principal Name (UPN)
 
@@ -176,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+It is the name of a user in email address format for e.g. john.doe@contoso.com
 
 ```yaml
 Type: String
