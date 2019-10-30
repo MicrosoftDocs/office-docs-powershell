@@ -148,6 +148,8 @@ The Filter parameter filters the results by using an OPath. This parameter searc
 
 This parameter uses the syntax `"Description -like '*Text*'"`. For example, `"Description -like *192.168.1.1*'"`.
 
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
 ```yaml
 Type: String
 Parameter Sets: (All)
