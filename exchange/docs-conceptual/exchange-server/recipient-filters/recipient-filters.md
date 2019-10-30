@@ -191,23 +191,23 @@ This example creates an export request that searches Ayla's mailbox for messages
 New-MailboxExportRequest -Mailbox Ayla -ContentFilter "Body -like 'company prospectus*'"
 ```
 
-For more information about the filterable properties you can use with the _ContentFilter_ parameter, see [Filterable Properties for the ContentFilter Parameter](https://technet.microsoft.com/library/cf504a59-1938-489c-bb48-b27b2ac3234e.aspx).
+For more information about the filterable properties that you can use with the _ContentFilter_ parameter, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
 
 ## Additional OPATH syntax information
 
-When creating your own custom filters, consider the following items:
+When creating your own custom OPath filters, consider the following items:
 
 - Use the following syntax to identify the types of values that you're searching for:
 
-  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters that you can use to enclose the whole OPath filter.
+  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
 
-  - **Variables**: Enclose variables in single quotation marks (for example, `'$User'`). If the variable value itself contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`.
+  - **Variables**: Enclose variables that need to be expanded in single quotation marks (for example, `'$User'`). If the variable value itself contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`.
 
-  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters that you can use to enclose the whole OPath filter.
+  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
 
   - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`).
 
-- You need to enclose the whole OPath filter in double quotation marks " ", single quotation marks ' '. Although the filter parameter is a string (not a script block), you can often use braces Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.. The syntax depends on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
+- You need to enclose the whole OPath filter in double quotation marks " or " single quotation marks ' '. Although any OPath filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPath filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
 
   - **Text values**: Depends on how you enclosed the text to search for:
   
@@ -227,9 +227,9 @@ When creating your own custom filters, consider the following items:
 
   - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`).
 
-  **Note**: You can't use search criteria that impose conflicting OPath syntax requirements together in the same filter. For example, searching for a property value using a variable requires that the entire OPath filter is enclosed in double quotation marks, but searching for a property with the value $true requires that the entire OPath filter is enclosed in single quotation marks or braces. Therefore, you can't use these two search criteria together in the same OPath filter.
+  **Note**: You can't use search criteria that impose conflicting character requirements for enclosing the whole OPath filter together in the same filter. For example, searching for an property using an expanded variable value requires that the entire OPath filter is enclosed in double quotation marks. But, you can't enclose an OPath filter in double quotation marks if you're searching for a property with the system value $true. Therefore, you can't use these two search criteria together in the same OPath filter.
 
-  The compatibility of values and the required OPath filter syntax are summarized in the following table:
+  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
 
   |**Search value**|**OPath filter enclosed <br/> in double quotation marks**|**OPath filter enclosed <br/> in single quotation marks**|**OPath filter enclosed <br/> in braces**|
   |:-----|:-----:|:-----:|:-----:|
@@ -261,13 +261,13 @@ When creating your own custom filters, consider the following items:
 
   - **-notlike** (string comparison)
 
-- Many of the properties for the _RecipientFilter_ and _Filter_ parameters accept wildcard characters. If you use a wildcard character, use the **like** operator instead of the **eq** operator. The **like** operator is used to find pattern matches in rich types, such as strings, whereas the **eq** operator is used to find an exact match.
+- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. The **-like** operator is used to find pattern matches in rich types (for example, strings) whereas the **-eq** operator is used to find an exact match.
 
 - For more information about operators you can use, see:
 
-  - [about_Logical_Operators](https://technet.microsoft.com/library/hh847789.aspx)
+  - [about_Logical_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logical_operators)
 
-  - [about_Comparison_Operators](https://technet.microsoft.com/library/hh847759.aspx)
+  - [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
 ## Recipient filter documentation
 
@@ -275,5 +275,5 @@ The following table contains links to topics that will help you learn more about
 
 |**Topic**|**Description**|
 |:-----|:-----|
-|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md) |Learn more about the filterable properties for the _RecipientFilter_ parameter. |
-|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties for the _Filter_ parameter. |
+|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
+|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|

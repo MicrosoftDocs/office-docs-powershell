@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
-description: "Learn about the filterable properties for the Filter parameter in on-premises Exchange."
+description: "Learn about the filterable properties for the Filter parameter in Exchange Server and Exchange Online."
 ---
 
 # Filterable properties for the Filter parameter
 
-You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server 2016 or later, and Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
+You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server and Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
 
 - [Get-CASMailbox](../../../exchange-ps/exchange/client-access/Get-CASMailbox.md)
 
@@ -48,9 +48,10 @@ You use the _Filter_ parameter to create OPATH filters based on the properties o
 
 - [Get-UnifiedGroup](../../../exchange-ps/exchange/users-and-groups/Get-UnifiedGroup.md)
 
-For more information, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).
+For more information, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
 
- **Note**: The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
+> [!NOTE]
+> The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
 
 ## Filterable properties
 
@@ -66,11 +67,11 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
 
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
+
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like '*abc'"`).
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
-
-- For more information about creating filters in recipient commands, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 |**Property name**|**LDAP display name**|**Available on cmdlets**|**Value**|**Comments**|
 |:-----|:-----|:-----|:-----|:-----|
