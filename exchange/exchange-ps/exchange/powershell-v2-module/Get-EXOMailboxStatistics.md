@@ -46,15 +46,14 @@ You can only see move reports and move history for completed move requests.
 Get-EXOMailboxStatistics -Identity john@contoso.com
 ```
 
-Above example retrieves the mailbox statistics for mailbox user with UPN - john@contoso.com
-It only returns minimum set of properties as specified in the PropertySet list for Get-EXOMailboxStatistics cmdlet.
+This example retrieves the mailbox statistics for the specified mailbox. Only the minimum set of properties are returned.
 
 ### Example 2
 ```
 Get-EXOMailboxStatistics -Identity john@contoso.com -Properties SystemMessageSize,SystemMessageSizeWarningQuota,SystemMessageCount
 ```
 
-Above example retrieves the requested properties along with Minimum Property set for mailbox statistics for mailbox user with UPN - john@contoso.com
+This example retrieves the minimum set of properties and the specified properties for the specified mailbox.
 
 ## PARAMETERS
 
@@ -74,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseGuid
-This is GUID of database which hosts the Mailbox. This property can be retreived using Get-EXOMailbox with Properies filter set to DatabaseGuid.
+The DatabaseGuid parameter filters the results by the GUID of mailbox database that hosts the Mailbox. You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to DatabaseGuid.
 
 ```yaml
 Type: Guid
@@ -90,6 +89,8 @@ Accept wildcard characters: False
 
 ### -ExchangeGuid
 This is the GUID of mailbox in Exchange, also known as Mailbox GUID. This property can be retreived using Get-EXOMailbox with Properies filter set to ExchangeGUID.
+
+The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to ExchangeGuid.
 
 ```yaml
 Type: Guid
@@ -180,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-It is the name of a user in email address format for e.g. john.doe@contoso.com
+The UserPrincipalName parameter specifies the UPN of the user (for example, navin@contoso.com).
 
 ```yaml
 Type: String
