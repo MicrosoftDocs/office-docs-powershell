@@ -43,7 +43,6 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForSharepoint <$true | $false>]
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
- [-CustomerLockboxEnabled <$true | $false>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
@@ -112,7 +111,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-Confirm]
  [-ConnectorsActionableMessagesEnabled <$true | $false>]
  [-ConnectorsEnabled <$true | $false>]
- [-CustomerLockboxEnabled <$true | $false>]
  [-CustomerFeedbackEnabled <$true | $false>]
  [-DataClassifications <String>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
@@ -839,29 +837,6 @@ Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CustomerLockboxEnabled
-This parameter is available only in the cloud-based service.
-
-The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabled or disabled for the organization. Valid values are:
-
-- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Microsoft 365 admin center for you to approve or reject.
-
-- $false: Customer Lockbox are disabled.
-
-Customer Lockbox is included in the Office 365 E5 plan. For more information about Customer Lockbox, see [Customer Lockbox in Office 365](https://go.microsoft.com/fwlink/p/?LinkId=624318).
-
-```yaml
-Type: $true | $false
-Parameter Sets: Default
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

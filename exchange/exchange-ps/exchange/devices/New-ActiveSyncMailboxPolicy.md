@@ -679,7 +679,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCalendarAgeFilter
-The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the device. Possible values are:
+The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the device. Valid values are:
 
 - All
 

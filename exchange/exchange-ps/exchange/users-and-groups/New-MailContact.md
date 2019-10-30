@@ -393,7 +393,7 @@ Accept wildcard characters: False
 ### -OrganizationalUnit
 The OrganizationalUnit parameter specifies the location in Active Directory where the new contact is created.
 
-Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
