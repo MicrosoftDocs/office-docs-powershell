@@ -43,10 +43,17 @@ You can only see move reports and move history for completed move requests.
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-EXOMailboxStatistics -Identity john@contoso.com
 ```
 
-{{ Add example description here }}
+This example retrieves the mailbox statistics for the specified mailbox. Only the minimum set of properties are returned.
+
+### Example 2
+```
+Get-EXOMailboxStatistics -Identity john@contoso.com -Properties SystemMessageSize,SystemMessageSizeWarningQuota,SystemMessageCount
+```
+
+This example retrieves the minimum set of properties and the specified properties for the specified mailbox.
 
 ## PARAMETERS
 
@@ -66,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseGuid
-{{ Fill DatabaseGuid Description }}
+The DatabaseGuid parameter filters the results by the GUID of mailbox database that hosts the Mailbox. You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to DatabaseGuid.
 
 ```yaml
 Type: Guid
@@ -81,7 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-{{ Fill ExchangeGuid Description }}
+This is the GUID of mailbox in Exchange, also known as Mailbox GUID. This property can be retreived using Get-EXOMailbox with Properies filter set to ExchangeGUID.
+
+The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to ExchangeGuid.
 
 ```yaml
 Type: Guid
@@ -97,10 +106,6 @@ Accept wildcard characters: False
 
 ### -Identity
 The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
-
-- Email address
-
-- GUID
 
 - User Principal Name (UPN)
 
@@ -176,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+The UserPrincipalName parameter specifies the UPN of the user (for example, navin@contoso.com).
 
 ```yaml
 Type: String
