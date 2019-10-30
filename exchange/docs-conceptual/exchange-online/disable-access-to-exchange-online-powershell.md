@@ -21,7 +21,7 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - Estimated time to complete each procedure: less than 5 minutes
 
-- Office 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://technet.microsoft.com/library/15073ce1-0917-403b-8839-02a2ebc96e16.aspx).
+- Office 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
 
 - You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
 
