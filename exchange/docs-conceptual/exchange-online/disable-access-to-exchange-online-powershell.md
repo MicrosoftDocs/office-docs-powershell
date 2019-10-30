@@ -25,6 +25,8 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
 
+- For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](../exchange-server/recipient-filters/recipient-filters.md#additional-opath-syntax-information).
+
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
@@ -121,11 +123,11 @@ Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePower
 To display only those users who don't have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $false"
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $true"
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```

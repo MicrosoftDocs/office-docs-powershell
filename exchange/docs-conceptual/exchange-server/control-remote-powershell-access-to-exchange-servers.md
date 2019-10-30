@@ -26,6 +26,8 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 - By default, all user accounts have access to remote PowerShell. However, to actually use remote PowerShell to connect to an Exchange server, the user needs to be a member of a management role group, or be directly assigned a management role that enables the user to run Exchange cmdlets. For more information about role groups and management roles, see [Permissions](https://technet.microsoft.com/library/d8dd605e-0af1-4e18-9ce6-e51d04e161ba.aspx).
 
+- For detailed information about OPath filter syntax in Exchange, see [Additional OPATH syntax information](../exchange-server/recipient-filters/recipient-filters.md#additional-opath-syntax-information).
+
 - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Remote PowerShell" entry in the [Exchange and Shell Infrastructure Permissions](https://technet.microsoft.com/library/3646a4e8-36b2-41fb-89a4-79b0963fcb11.aspx) topic.
 
 > [!TIP]
@@ -124,11 +126,11 @@ Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePower
 To display only those users who don't have access to remote PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $false"
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to remote PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter "RemotePowerShellEnabled -eq $true"
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```
