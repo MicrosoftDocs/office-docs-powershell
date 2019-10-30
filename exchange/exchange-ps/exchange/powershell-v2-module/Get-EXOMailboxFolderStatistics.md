@@ -59,7 +59,9 @@ This example returns statistics only for calendar folders.
 ## PARAMETERS
 
 ### -Archive
-The Archive switch specifies whether to return the usage statistics of the archive associated with the mailbox or mail user. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return the usage statistics of the archive mailbox that's associated with the mailbox or mail user. You don't need to specify a value with this switch.
+
+If you use this switch on a mailbox that doesn't have archiving enabled, an error is returned.
 
 ```yaml
 Type: SwitchParameter
