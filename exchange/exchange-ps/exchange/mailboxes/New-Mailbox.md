@@ -1764,6 +1764,8 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
+This parameter is available only in on-premises Exchange.
+
 The OrganizationalUnit parameter specifies the location in Active Directory where the new mailbox is created.
 
 Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
@@ -1780,7 +1782,7 @@ Valid input for this parameter is an organizational unit (OU) or domain that's r
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
