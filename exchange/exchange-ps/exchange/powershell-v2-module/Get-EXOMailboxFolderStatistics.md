@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The object ID for the Azure Active Directory account as the external directory object id of the mailbox.
+The ExternalDirectoryObjectId parameter specifies the object ID for the Azure Active Directory account as the external directory object id of the mailbox.
 
 ```yaml
 Type: Guid
@@ -199,7 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSoftDeletedRecipients
-Use this parameter to include results for mailboxes which are in soft-deleted state. This is a switch and no value needs to be passed for this input parameter
+The IncludeSoftDeletedRecipients switch specifies whether to include soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are mailboxes that have been deleted, but are still recoverable.
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-This is the name of the user in complete email address format i.e. John.doe@contoso.com
+The UserPrincipalName parameter specifies the UPN of the user (for example, navin@contoso.com).
 
 ```yaml
 Type: String
