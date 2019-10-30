@@ -42,7 +42,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-Though the Exchange Online PowerShell V2 module contains a set of ~10 new REST API backed CMDLETs and all the older remote PowerShell cmdlets, this single Connect cmdlet allows you to establish a remote PowerShell session and authenticate for the new ExO V2 module cmdlets.
+This cmdlet allows you to create a remote PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for the new REST API-backed cmdlets in the Exchange Online PowerShell V2 module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
 
 ## EXAMPLES
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-The ConnectionUri parameter specifies the connection endpoint for the Remote PowerShell endpoint.
+The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session.
 
 ```yaml
 Type: String
@@ -170,13 +170,22 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeEnvironmentName
-Exchange Environment name
+The ExchangeEnvironmentName specifies the Exchange Online environment. Valid values are:
+
+- O365China
+
+- O365Default (this is the default value)
+
+- O365GermanyCloud
+
+- O365USGovDoD
+
+- O365USGovGCCHigh
 
 ```yaml
 Type: ExchangeEnvironment
 Parameter Sets: (All)
 Aliases:
-Accepted values: O365Default, O365GermanyCloud, O365USGovGCCHigh, O365USGovDoD, O365China
 Applicable: Exchange Online
 Required: False
 Position: 3

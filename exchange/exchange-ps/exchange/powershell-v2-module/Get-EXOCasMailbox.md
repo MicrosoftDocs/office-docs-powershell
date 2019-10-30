@@ -304,7 +304,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - ProtocolSettings
 
-- All 
+- All
 
 You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
@@ -314,7 +314,6 @@ For more information about the properties that are included in each property set
 Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Minimum, All, ProtocolSettings, Pop, Imap, ActiveSync, Mapi, Ews
 Applicable: Exchange Online
 Required: False
 Position: Named

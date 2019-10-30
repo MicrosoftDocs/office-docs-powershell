@@ -123,20 +123,12 @@ The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the 
 |||
 |:-----|:-----|
 |**PropertySet**|**Properties**|
-|Minimum|Database <br/> DatabaseName <br/> DisplayName <br/> ExternalDirectoryOrganizationId <br/> Identity <br/> IsArchiveMailbox <br/> LegacyDN <br/> MailboxGuid <br/> MailboxType <br/> MailboxTypeDetail <br/> MapiIdentity <br/> OwnerADGuid|
-|AccessHistory|DisconnectDate <br/> LastCalendarTime <br/> LastContactsTime <br/> LastEmailTime <br/> LastFileTime <br/> LastInteractionTime <br/> LastLoggedOnUserAccount <br/> LastLogoffTime <br/> LastLogonTime <br/> LastProfileTime <br/> LastTasksTime <br/> LastUserAccessTime <br/> LastUserActionTime <br/> LastUserActionUpdateTime|
-|All|CurrentSchemaVersion <br/> DataEncryptionPolicyId <br/> DisconnectReason <br/> FastIsEnabled <br/> IsAbandonedMoveDestination <br/> IsClutterEnabled <br/> IsDatabaseCopyActive <br/> IsEncrypted <br/> IsMoveDestination <br/> IsQuarantined <br/> IsValid <br/> KeyVersionIDs <br/> NeedsToMove <br/> ObjectClass <br/> ObjectState <br/> QuarantineEnd <br/> ResourceUsageRollingAvgDatabaseReads <br/> ResourceUsageRollingAvgRop <br/> ResourceUsageRollingClientTypes <br/> StorageLimitStatus <br/> SystemMessageCount <br/> SystemMessageSize|
-|BigFunnel|BigFunnelCorruptedCount <br/> BigFunnelCorruptedSize <br/> BigFunnelFilterTableAvailableSize <br/> BigFunnelFilterTableTotalSize <br/> BigFunnelIndexedCount <br/> BigFunnelIndexedSize <br/> BigFunnelIsEnabled <br/> BigFunnelLargePOITableAvailableSize <br/> BigFunnelLargePOITableTotalSize <br/> BigFunnelMailboxCreationVersion <br/> BigFunnelMaintainRefiners <br/> BigFunnelMessageCount <br/> BigFunnelNotIndexedCount <br/> BigFunnelNotIndexedSize <br/> BigFunnelPartiallyIndexedCount <br/> BigFunnelPartiallyIndexedSize <br/> BigFunnelPostingListTableAvailableSize <br/> BigFunnelPostingListTableTotalSize <br/> BigFunnelShouldNotBeIndexedCount <br/> BigFunnelShouldNotBeIndexedSize <br/> BigFunnelStaleCount <br/> BigFunnelStaleSize <br/> BigFunnelTotalPOISize <br/> BigFunnelUpgradeInProgress|
-|Item|AssociatedItemCount <br/> DeletedItemCount <br/> ItemCount <br/> TotalDeletedItemSize <br/> TotalItemSize|
-|MCDB|MCDBBigFunnelFilterTableAvailableSize <br/> MCDBBigFunnelFilterTablePercentReplicated <br/> MCDBBigFunnelFilterTableTotalSize <br/> MCDBBigFunnelLargePOITableAvailableSize <br/> MCDBBigFunnelLargePOITablePercentReplicated <br/> MCDBBigFunnelLargePOITableTotalSize <br/> MCDBBigFunnelPostingListTableAvailableSize <br/> MCDBBigFunnelPostingListTablePercentReplicated <br/> MCDBBigFunnelPostingListTableTotalSize <br/> MCDBMessageTableAvailableSize <br/> MCDBMessageTablePercentReplicated <br/> MCDBMessageTableTotalSize <br/> MCDBOtherTablesAvailableSize <br/> MCDBOtherTablesTotalSize|
-|MoveHistory|MoveHistory|
-|MoveReport|MoveHistory|
-|Quota|DatabaseIssueWarningQuota <br/> DatabaseProhibitSendQuota <br/> DatabaseProhibitSendReceiveQuota <br/> DumpsterMessagesPerFolderCountReceiveQuota <br/> DumpsterMessagesPerFolderCountWarningQuota <br/> FolderHierarchyChildrenCountReceiveQuota <br/> FolderHierarchyChildrenCountWarningQuota <br/> FolderHierarchyDepthReceiveQuota <br/> FolderHierarchyDepthWarningQuota <br/> FoldersCountReceiveQuota <br/> FoldersCountWarningQuota <br/> MailboxMessagesPerFolderCountReceiveQuota <br/> MailboxMessagesPerFolderCountWarningQuota <br/> NamedPropertiesCountQuota <br/> SystemMessageSizeWarningQuota <br/> SystemMessageSizeShutoffQuota|
-|Table|AttachmentTableAvailableSize <br/> AttachmentTableTotalSize <br/> MailboxTableIdentifier <br/> MessageTableAvailableSize <br/> MessageTableTotalSize <br/> OtherTablesAvailableSize <br/> OtherTablesTotalSize|
+|Minimum|DeletedItemCount <br/> DisplayName <br/> ItemCount <br/> MailboxGuid <br/> TotalDeletedItemSize <br/> TotalItemSize|
+|All|AssociatedItemCount <br/> AttachmentTableAvailableSize <br/> AttachmentTableTotalSize <br/> DatabaseIssueWarningQuota <br/> DatabaseName <br/> DatabaseProhibitSendQuota <br/> DatabaseProhibitSendReceiveQuota <br/> DeletedItemCount <br/> DisconnectDate <br/> DisconnectReason <br/> DisplayName <br/> DumpsterMessagesPerFolderCountReceiveQuota <br/> DumpsterMessagesPerFolderCountWarningQuota <br/> ExternalDirectoryOrganizationId <br/> FastIsEnabled <br/> FolderHierarchyChildrenCountReceiveQuota <br/> FolderHierarchyChildrenCountWarningQuota <br/> FolderHierarchyDepthReceiveQuota <br/> FolderHierarchyDepthWarningQuota <br/> FoldersCountReceiveQuota <br/> FoldersCountWarningQuota <br/> IsAbandonedMoveDestination <br/> IsArchiveMailbox <br/> IsDatabaseCopyActive <br/> IsHighDensityShard <br/> IsMoveDestination <br/> IsQuarantined <br/> ItemCount <br/> LastLoggedOnUserAccount <br/> LastLogoffTime <br/> LastLogonTime <br/> LegacyDN <br/> MailboxGuid <br/> MailboxMessagesPerFolderCountReceiveQuota <br/> MailboxMessagesPerFolderCountWarningQuota <br/> MailboxType <br/> MailboxTypeDetail <br/> MessageTableAvailableSize <br/> MessageTableTotalSize <br/> NamedPropertiesCountQuota <br/> NeedsToMove <br/> OtherTablesAvailableSize <br/> OtherTablesTotalSize <br/> OwnerADGuid <br/> QuarantineClients <br/> QuarantineDescription <br/> QuarantineEnd <br/> QuarantineFileVersion <br/> QuarantineLastCrash <br/> ResourceUsageRollingAvgDatabaseReads <br/> ResourceUsageRollingAvgRop <br/> ResourceUsageRollingClientTypes <br/> ServerName <br/> StorageLimitStatus <br/> SystemMessageCount <br/> SystemMessageSize <br/> SystemMessageSizeShutoffQuota <br/> SystemMessageSizeWarningQuota <br/> TotalDeletedItemSize <br/> TotalItemSize|
 
 For more information, see:
 
-- Get-EXOMailboxStatistics
+- [Get-EXOMailboxStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics?branch=EXORestModule-chrisda)
 
 - [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
 
@@ -157,6 +149,6 @@ The available property sets for the **EXOMobileDeviceStatistics** cmdlet and the
 
 For more information, see:
 
-- Get-EXOMobileDeviceStatistics
+- [Get-EXOMobileDeviceStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics?branch=EXORestModule-chrisda)
 
 - [Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)

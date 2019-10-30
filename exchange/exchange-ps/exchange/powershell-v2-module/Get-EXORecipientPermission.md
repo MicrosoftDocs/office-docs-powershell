@@ -63,7 +63,6 @@ The value value for this parameter is SendAs.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Accepted values: SendAs
 Applicable: Exchange Online
 Required: False
 Position: Named

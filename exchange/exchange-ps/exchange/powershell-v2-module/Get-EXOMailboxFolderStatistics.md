@@ -38,7 +38,7 @@ Get-EXOMailboxFolderStatistics
 ## DESCRIPTION
 A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-EXOMailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
 
-The Get-EXOMailboxFolderStatistics cmdlet shouldn't be confused with the Get-EXOMailboxStatistics cmdlet.
+Don't confuse Get-EXOMailboxFolderStatistics cmdlet (folders) with the Get-EXOMailboxStatistics cmdlet (mailboxes).
 
 ## EXAMPLES
 

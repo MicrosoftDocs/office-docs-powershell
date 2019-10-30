@@ -35,7 +35,7 @@ Get-EXOMailboxStatistics
 ```
 
 ## DESCRIPTION
-You can use the Get-EXOMailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0.
+You can use the detailed move history and a move report output from this cmdlet to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database, are numbered incrementally, and the last run move request is always numbered 0.
 
 You can only see move reports and move history for completed move requests.
 
@@ -88,8 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-This is the GUID of mailbox in Exchange, also known as Mailbox GUID. This property can be retreived using Get-EXOMailbox with Properies filter set to ExchangeGUID.
-
 The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to ExchangeGuid.
 
 ```yaml

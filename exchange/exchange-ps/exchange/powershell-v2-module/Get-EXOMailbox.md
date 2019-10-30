@@ -58,7 +58,7 @@ Get-EXOMailbox [-Anr <String>]
 ```
 
 ## DESCRIPTION
-This commandlet returns you a summary list of all the mailboxes in your organization. It returns a minimum set of properties by default.
+By default, this cmdlet returns a summary list (a minimum set of properties) of all mailboxes in your organization.
 
 ## EXAMPLES
 
@@ -348,7 +348,6 @@ For more information about the properties that are included in each property set
 Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: All, Minimum, AddressList, Archive, Audit, Custom, Delivery, Hold, Moderation, Move, Policy, PublicFolder, Quota, Resource, Retention, SCL, SoftDelete, StatisticsSeed
 Applicable: Exchange Online
 Required: False
 Position: Named

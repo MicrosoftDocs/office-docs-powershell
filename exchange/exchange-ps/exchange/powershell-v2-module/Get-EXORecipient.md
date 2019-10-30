@@ -227,7 +227,6 @@ For more information about the properties that are included in each property set
 Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: All, Minimum, Custom, MailboxMove, Policy, Archive
 Applicable: Exchange Online
 Required: False
 Position: Named
