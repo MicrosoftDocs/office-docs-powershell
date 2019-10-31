@@ -34,7 +34,7 @@ A precanned filter is a commonly used Exchange filter that you can use to meet a
 
 - Add conditional filtering based on properties such as company, department, and state or region.
 
-- Add custom attributes for recipients. For more information, see [Custom Attributes](https://technet.microsoft.com/library/2b043878-0b34-4563-a9c2-28a9efa7447e.aspx).
+- Add custom attributes for recipients. For more information, see [Custom Attributes](https://docs.microsoft.com/Exchange/recipients/mailbox-custom-attributes).
 
 The following parameters are considered precanned filters:
 
@@ -129,7 +129,7 @@ New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.c
 
 You can use the _Filter_ parameter to filter the results of a command to specify which objects to retrieve. For example, instead of retrieving all users or groups, you can specify a set of users or groups by using a filter string. This type of filter doesn't modify any configuration or attributes of objects. It only modifies the set of objects that the command returns.
 
-Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. We also support client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://technet.microsoft.com/library/8320e1a5-d3f5-4615-878d-b23e2aaa6b1e.aspx).
+Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. We also support client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 To find the filterable properties for cmdlets that have the _Filter_ parameter, you can run the **Get** command against an object and format the output by pipelining the **Format-List** parameter. Most of the returned values will be available for use in the _Filter_ parameter. The following example returns a detailed list for the mailbox Ayla.
 
@@ -188,18 +188,58 @@ You can use the _ContentFilter_ parameter to select specific message content to 
 This example creates an export request that searches Ayla's mailbox for messages where the body contains the phrase "company prospectus". If that phrase is found, the command exports all messages with that phrase to a .pst file.
 
 ```PowerShell
-New-MailboxExportRequest -Mailbox Ayla -ContentFilter "Body -like "company prospectus*""
+New-MailboxExportRequest -Mailbox Ayla -ContentFilter "Body -like 'company prospectus*'"
 ```
 
-For more information about the filterable properties you can use with the _ContentFilter_ parameter, see [Filterable Properties for the ContentFilter Parameter](https://technet.microsoft.com/library/cf504a59-1938-489c-bb48-b27b2ac3234e.aspx).
+For more information about the filterable properties that you can use with the _ContentFilter_ parameter, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
 
 ## Additional OPATH syntax information
 
-When creating your own custom filters, be aware of the following:
+When creating your own custom OPath filters, consider the following items:
 
-- With the _Filter_ or _RecipientFilter_ parameters, enclose the whole OPath filter in double quotation marks " ". Braces { } will also work, but only if the filter doesn't contain variables.
+- Use the following syntax to identify the types of values that you're searching for:
 
-- Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). Don't use quotation marks with integers or the system values `$true`, `$false`, or `$null`. You need to escape any variables with values that contain single quotation marks. For example, instead of `"Property -eq '$x'"`, use `"Property -eq '$($x -Replace "'","''")'"`.
+  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+
+  - **Variables**: Enclose variables that need to be expanded in single quotation marks (for example, `'$User'`). If the variable value itself contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`.
+
+  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+
+  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`).
+
+- You need to enclose the whole OPath filter in double quotation marks " or " single quotation marks ' '. Although any OPath filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPath filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
+
+  - **Text values**: Depends on how you enclosed the text to search for:
+  
+    - **Text enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces.
+
+    - **Text enclosed in double quotation marks**: Enclose the whole OPath filter in braces.
+
+  - **Variables**: Enclose the whole OPath filter in double quotation marks (for example, `"Name -eq '$User'"`).
+
+  - **Integer values**: Depends on how you enclosed (or didn't enclose) the integer to search for:
+
+    - **Integer not enclosed**: Enclose the whole OPath filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
+
+    - **Integer enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces `"CountryCode -eq '840'"`.
+
+    - **Integer enclosed in double quotation marks**: Enclose the whole OPath filter in braces (for example `{CountryCode -eq "840"}`).
+
+  - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`).
+
+  **Note**: You can't use search criteria that impose conflicting character requirements for enclosing the whole OPath filter together in the same filter. For example, searching for an property using an expanded variable value requires that the entire OPath filter is enclosed in double quotation marks. But, you can't enclose an OPath filter in double quotation marks if you're searching for a property with the system value $true. Therefore, you can't use these two search criteria together in the same OPath filter.
+
+  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
+
+  |**Search value**|**OPath filter enclosed <br/> in double quotation marks**|**OPath filter enclosed <br/> in single quotation marks**|**OPath filter enclosed <br/> in braces**|
+  |:-----|:-----:|:-----:|:-----:|
+  |`'Text'`|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`"Text"`|||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'$Variable'`|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
+  |`500`|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'500'`|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`"500"`|||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`$true`||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 
 - Include the hyphen before all operators. The most common operators include:
 
@@ -221,13 +261,13 @@ When creating your own custom filters, be aware of the following:
 
   - **-notlike** (string comparison)
 
-- Many of the properties for the _RecipientFilter_ and _Filter_ parameters accept wildcard characters. If you use a wildcard character, use the **like** operator instead of the **eq** operator. The **like** operator is used to find pattern matches in rich types, such as strings, whereas the **eq** operator is used to find an exact match.
+- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. The **-like** operator is used to find pattern matches in rich types (for example, strings) whereas the **-eq** operator is used to find an exact match.
 
 - For more information about operators you can use, see:
 
-  - [about_Logical_Operators](https://technet.microsoft.com/library/hh847789.aspx)
+  - [about_Logical_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logical_operators)
 
-  - [about_Comparison_Operators](https://technet.microsoft.com/library/hh847759.aspx)
+  - [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
 ## Recipient filter documentation
 
@@ -235,5 +275,5 @@ The following table contains links to topics that will help you learn more about
 
 |**Topic**|**Description**|
 |:-----|:-----|
-|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md) |Learn more about the filterable properties for the _RecipientFilter_ parameter. |
-|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties for the _Filter_ parameter. |
+|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
+|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|
