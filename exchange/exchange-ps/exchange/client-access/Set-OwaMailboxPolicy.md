@@ -80,6 +80,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OutlookBetaToggleEnabled <$true | $false>] [<CommonParameters>]
  [-OWALightEnabled <$true | $false>]
  [-OWAMiniEnabled <$true | $false>]
+ [-PersonalAccountCalendarsEnabled <$true | $false>]
  [-PhoneticSupportEnabled <$true | $false>]
  [-PlacesEnabled <$true | $false>]
  [-PremiumClientEnabled <$true | $false>]
@@ -100,6 +101,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-SkipCreateUnifiedGroupCustomSharepointClassification <$true | $false>]
  [-SMimeEnabled <$true | $false>] [-SpellCheckerEnabled <$true | $false>]
  [-TasksEnabled <$true | $false>]
+ [-TeamSnapCalendarsEnabled <$true | $false>]
  [-TextMessagingEnabled <$true | $false>]
  [-ThemeSelectionEnabled <$true | $false>]
  [-ThirdPartyAttachmentsEnabled <$true | $false>]
@@ -1409,6 +1411,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PersonalAccountCalendarsEnabled
+This parameter is available only in the cloud-based service.
+
+The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Gmail calendars in Outlook on the web. Valid values are:
+
+- $true: Users can connect to their Outlook.com or Gmail calendars to see those events in their Outlook on the web calendar.
+
+- $false: Users can't connect to their Outlook.com or Gmail calendars in Outlook on the web.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhoneticSupportEnabled
 The PhoneticSupportEnabled parameter specifies phonetically spelled entries in the address book. This parameter is available for use in Japan.
 
@@ -1821,6 +1844,27 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamSnapCalendarsEnabled
+This parameter is available only in the cloud-based service.
+
+The TeamSnapCalendarsEnabled parameter specifies whether to allow users to connect to their personal TeamSnap calendars in Outlook on the web. Valid values are:
+
+- $true: Users can connect to their TeamSnap calendars to see those events in their Outlook on the web calendar.
+
+- $false: Users can't connect to their TeamSnap calendars in Outlook on the web.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
