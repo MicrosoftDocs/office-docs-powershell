@@ -82,8 +82,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-StopPolicyProcessing <$true | $false>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
- [-WhatIf]
- [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -160,7 +159,17 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressContainsWords
-{{ Fill AnyOfRecipientAddressContainsWords Description }}
+The AnyOfRecipientAddressContainsWords parameter specifies a condition for the DLP rule that looks for words or phrases in recipient email addresses. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -175,7 +184,11 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressMatchesPatterns
-{{ Fill AnyOfRecipientAddressMatchesPatterns Description }}
+The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -281,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-{{ Fill ContentExtensionMatchesWords Description }}
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file name extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -332,7 +345,11 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsPasswordProtected
-{{ Fill DocumentIsPasswordProtected Description }}
+The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected files.
+
+- $false: Don't look for password protected files.
 
 ```yaml
 Type: $true | $false
@@ -362,7 +379,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentNameMatchesPatterns
-{{ Fill DocumentNameMatchesPatterns Description }}
+The DocumentNameMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
 ```yaml
 Type: MultiValuedProperty
@@ -377,7 +396,15 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentNameMatchesWords
-{{ Fill DocumentNameMatchesWords Description }}
+The DocumentNameMatchesWords parameter specifies a condition for the DLP rule that looks for words or phrases in the file name of message attachments. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
 
 ```yaml
 Type: MultiValuedProperty
@@ -392,7 +419,9 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptRMSTemplate
-{{ Fill EncryptRMSTemplate Description }}
+The EncryptRMSTemplate parameter specifies an action for the DLP rule that applies rights management service (RMS) templates to files. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
+
+Use the Get-RMSTemplate cmdlet to see the RMS templates that are available.
 
 ```yaml
 Type: RmsTemplateIdParameter
@@ -407,7 +436,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAccessScope
-This parameter is reserved for internal Microsoft use.
+The ExceptIfAccessScopeAccessScope parameter specifies an exception for the DLP rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
+
+- InOrganization: The rule isn't applied to content that's accessible inside the organization.
+
+- NotInOrganization: The rule isn't applied to content that's accessible outside the organization.
+
+- None: The exception isn't used.
 
 ```yaml
 Type: AccessScope
@@ -422,7 +457,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
-{{ Fill ExceptIfAnyOfRecipientAddressContainsWords Description }}
+The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception for the DLP rule that looks for words or phrases in recipient email addresses. You can specify multiple words separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -437,7 +482,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
-{{ Fill ExceptIfAnyOfRecipientAddressMatchesPatterns Description }}
+The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -452,7 +501,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentContainsSensitiveInformation
-This parameter is reserved for internal Microsoft use.
+The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
+
+This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
+
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://go.microsoft.com/fwlink/p/?LinkId=529420).
 
 ```yaml
 Type: PswsHashtable[]
@@ -467,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-{{ Fill ExceptIfContentExtensionMatchesWords Description }}
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file name extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -482,7 +535,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentPropertyContainsWords
-This parameter is reserved for internal Microsoft use.
+The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
+
+This parameter accepts values in the format: "\<Property1\>:\<Value1\>,\<Value2\>","\<Property2\>:\<Value3\>,\<Value4\>",..."\<PropertyN\>:\<ValueN\>,\<ValueN\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -497,7 +552,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsPasswordProtected
-{{ Fill ExceptIfDocumentIsPasswordProtected Description }}
+The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected files.
+
+- $false: Don't look for password protected files.
 
 ```yaml
 Type: $true | $false
@@ -527,7 +586,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentNameMatchesPatterns
-{{ Fill ExceptIfDocumentNameMatchesPatterns Description }}
+The ExceptIfDocumentNameMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
 ```yaml
 Type: MultiValuedProperty
@@ -542,7 +603,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentNameMatchesWords
-{{ Fill ExceptIfDocumentNameMatchesWords Description }}
+The ExceptIfDocumentNameMatchesWords parameter specifies an exception for the DLP rule that looks for words or phrases in the file name of message attachments. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
 
 ```yaml
 Type: MultiValuedProperty
@@ -557,7 +626,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressContainsWords
-{{ Fill ExceptIfFromAddressContainsWords Description }}
+The ExceptIfFromAddressContainsWords parameter specifies an exception for the DLP rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -572,7 +651,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressMatchesPatterns
-{{ Fill ExceptIfFromAddressMatchesPatterns Description }}
+The ExceptIfFromAddressMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -602,7 +685,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-{{ Fill ExceptIfRecipientDomainIs Description }}
+The ExceptIfRecipientDomainIs parameter specifies an exception for the DLP rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -617,7 +700,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderIPRanges
-{{ Fill ExceptIfSenderIPRanges Description }}
+The ExceptIfSenderIpRanges parameter specifies an exception for the DLP rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -632,7 +723,23 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-{{ Fill ExceptIfSentTo Description }}
+The ExceptIfSentTo parameter specifies an exception for the DLP rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -647,7 +754,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectContainsWords
-{{ Fill ExceptIfSubjectContainsWords Description }}
+The ExceptIfSubjectContainsWords parameter specifies an exception for the DLP rule that looks for words or phrases in the Subject field of messages. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -662,7 +779,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectMatchesPatterns
-{{ Fill ExceptIfSubjectMatchesPatterns Description }}
+The ExceptIfSubjectMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -707,7 +828,17 @@ Accept wildcard characters: False
 ```
 
 ### -FromAddressContainsWords
-{{ Fill FromAddressContainsWords Description }}
+The FromAddressContainsWords parameter specifies a condition for the DLP rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -722,7 +853,11 @@ Accept wildcard characters: False
 ```
 
 ### -FromAddressMatchesPatterns
-{{ Fill FromAddressMatchesPatterns Description }}
+The FromAddressMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -948,7 +1083,17 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+
+- Valid priority values for the existing 8 rules are from 0 through 7.
+
+- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
+
+- The default value for a new rule (the 9th rule) is 8.
+
+If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
 ```yaml
 Type: Int32
@@ -978,7 +1123,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-{{ Fill RecipientDomainIs Description }}
+The RecipientDomainIs parameter specifies a condition for the DLP rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -993,7 +1138,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveHeader
-{{ Fill RemoveHeader Description }}
+The RemoveHeader parameter specifies an action for the DLP rule that removes a header field from the message header. This parameter uses the syntax HeaderName or "HeaderName:HeaderValue".You can specify multiple header names or header name and value pairs separated by commas: HeaderName1,"HeaderName2:HeaderValue2",HeaderName3,..."HeaderNameN:HeaderValueN".
+
+The maximum header name length is 64 characters, and header names can't contains spaces or colons ( : ). The maximum header value length is 128 characters.
+
+You can use this action in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1052,7 +1201,15 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPRanges
-{{ Fill SenderIPRanges Description }}
+The SenderIpRanges parameter specifies a condition for the DLP rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1067,7 +1224,23 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-{{ Fill SentTo Description }}
+The SentTo parameter specifies a condition for the DLP rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1082,7 +1255,11 @@ Accept wildcard characters: False
 ```
 
 ### -SetHeader
-{{ Fill SetHeader Description }}
+The SetHeader parameter specifies an action for the DLP rule that adds or modifies a header field and value in the message header. This parameter uses the syntax "HeaderName:HeaderValue".You can specify multiple header name and value pairs separated by commas: "HeaderName1:HeaderValue1",HeaderName2:HeaderValue2",..."HeaderNameN:HeaderValueN".
+
+The maximum header name length is 64 characters, and header names can't contains spaces or colons ( : ). The maximum header value length is 128 characters.
+
+You can use this action in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
@@ -1097,7 +1274,11 @@ Accept wildcard characters: False
 ```
 
 ### -StopPolicyProcessing
-{{ Fill StopPolicyProcessing Description }}
+The StopPolicyProcessing parameter specifies an action that stops processing more DLP policy rules. Valid values are:
+
+- $true: Stop processing more rules.
+
+- $false: Continue processing more rules after this one.
 
 ```yaml
 Type: $true | $false
@@ -1112,7 +1293,17 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectContainsWords
-{{ Fill SubjectContainsWords Description }}
+The SubjectContainsWords parameter specifies a condition for the DLP rule that looks for words or phrases in the Subject field of messages. You can specify multiple words or phrases separated by commas.
+
+- Single word: "no_reply"
+
+- Multiple words: no_reply,urgent,...
+
+- Multiple words and phrases: "phrase 1",word1,"phrase with , or spaces",word2,...
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1127,7 +1318,11 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectMatchesPatterns
-{{ Fill SubjectMatchesPatterns Description }}
+The SubjectMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>"\|"\<regular expression2\>"\|..."\<regular expressionN\>".
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
