@@ -28,6 +28,9 @@ The group policy assignment is set at the time a policy is being assigned to a g
 
 It’s helpful to think of priority as determining the position of each policy assignment in an ordered list, from highest priority to lowest priority.  In fact, priority can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest priority.  When assigning a policy to a group, set the priority to be the position in the list where you want the new group policy assignment to be.  If a priority is not specified, the policy assignment will be given the lowest priority, corresponding to the end of the list.
 
+Group policy assignment is currenly limited to the following policy types:
+TeamsAppSetupPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy
+
 ## EXAMPLES
 
 ### Example 1
