@@ -110,6 +110,18 @@ This example allows a list of users to submit in-policy meeting requests to the 
 
 ### -------------------------- Example 7 --------------------------
 ```
+$group = New-DistributionGroup "Room 221 Booking Allowed"
+$members = @()
+$members += "karina@contoso.com","tony@contoso.com"
+$members = $members | Get-Mailbox
+Add-DistributionGroupMember -Identity $group -Members $users -BypassSecurityGroupManagerCheck:$true
+Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group -AllBookInPolicy $false
+```
+
+This example rejects meeting requests from any user who isn't a member of "Room 221 Booking Allowed" distribution group.
+
+### -------------------------- Example 8 --------------------------
+```
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
 
@@ -387,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the users. For example:
+The BookInPolicy parameter specifies users or groups who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely Exchange Online object. For example:
 
 - Name
 
