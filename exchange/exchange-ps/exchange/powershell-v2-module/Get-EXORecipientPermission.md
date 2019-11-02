@@ -47,10 +47,9 @@ This cmdlet is used to view/manage information about SendAs permissions that are
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-EXORecipientPermission -ResultSize 100
 ```
-
-{{ Add example description here }}
+Above example returns recipient permission for first 100 mailbox users in the name sorted order.
 
 ## PARAMETERS
 
@@ -137,6 +136,8 @@ Accept wildcard characters: False
 ### -Trustee
 The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity, UserPrincipalName, or ExternalDirectoryObjectId parameters (and you can only use the Trustee parameter with those parameters).
 
+**Note**: Trustee parameter can be specified only with Identity, UserPrincipalName, ExternalDirectoryObjectId parameters
+
 You can specify the following types of users or groups:
 
 - Mailbox users
@@ -159,13 +160,7 @@ You can use any value that uniquely identifies the user or group. For example:
 
 - Email address
 
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
+- User Principal name (UPN)
 
 ```yaml
 Type: String
@@ -179,20 +174,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
