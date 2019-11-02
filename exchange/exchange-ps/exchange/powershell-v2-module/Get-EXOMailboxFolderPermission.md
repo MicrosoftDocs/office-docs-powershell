@@ -32,21 +32,30 @@ Get-EXOMailboxFolderPermission
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Use this cmdlet to retreive folder level permission in the mailbox. 
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
 ```
 
-{{ Add example description here }}
+This example returns the current list of user permissions for the Reports subfolder in the Marketing folder in John's mailbox.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Kim@contoso.com
+```
+
+This example returns the permissions for the same folder in John's mailbox, but only for the user Kim.
+
 
 ## PARAMETERS
 
 ### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
+The object ID for the Azure Active Directory account as the external directory object id of the mailbox.
 
 ```yaml
 Type: Guid
@@ -78,25 +87,9 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
 
-- Name
+- <UPN>:<\FolderPath> 
 
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
+- <ExternalDirectoryObjectId>:<\FolderPath>
 
 Example values for this parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
 
@@ -140,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+It is the name of a user in email address format for e.g. john.doe@contoso.com
 
 ```yaml
 Type: String
