@@ -40,7 +40,33 @@ Get-EXOMailboxPermission
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The output of this cmdlet shows the following information:
+
+Identity: The mailbox in question.
+
+User: The security principal (user, security group, Exchange management role group, etc.) that has permission to the mailbox.
+
+AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail) and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
+
+IsInherited: Whether the permission is inherited (True) or directly assigned to the mailbox (False). Permissions are inherited from the mailbox database and/or Active Directory. Typically, directly assigned permissions override inherited permissions.
+
+Deny: Whether the permission is allowed (False) or denied (True). Typically, deny permissions override allow permissions.
+
+By default, the following permissions are assigned to user mailboxes:
+
+FullAccess and ReadPermission are directly assigned to NT AUTHORITY\SELF. This entry gives a user permission to their own mailbox.
+
+FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
+
+ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
+
+FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited by NT AUTHORITY\NETWORK.
+
+FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
+
+By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet.
 
 ## EXAMPLES
 
@@ -54,7 +80,7 @@ Get-EXOMailboxPermission
 ## PARAMETERS
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+It is the ObjectId of the mailbox in Azure Active Directory. This can be used in place of Identity. Passing ExternalDirectoryObjectId fetches the mailbox permission for the mailbox user associated with that specific ExternalDirectoryObjectId.
 
 ```yaml
 Type: Guid
@@ -134,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedMailbox
-{{ Fill SoftDeletedMailbox Description }}
+Enabling this switch fetches the mailboxpermission for soft deleted mailbox items. If this switch is not passed and an array of objects are passed as input of which some are softly deleted, this cmdlet ignores retreiving permission for those soft-deleted items by default.
 
 ```yaml
 Type: SwitchParameter
@@ -174,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+This parameter is used to retrieve mailbox permission for a mailbox with given UserPrincipalName. User Principal Name is the email of a user in full-format i.e. john.doe@contoso.com
 
 ```yaml
 Type: String
