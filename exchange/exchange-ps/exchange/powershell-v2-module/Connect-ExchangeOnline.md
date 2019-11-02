@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-{{ Fill ShowProgress Description }}
+Enabling this switch shows a visual progress bar in the PowerShell client module. The visual progress shows number of objects received as well as total number of objects requested.
 
 ```yaml
 Type: $true | $ false
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMultithreading
-{{ Fill UseMultithreading Description }}
+Multi-threading is enabled by default in EXO V2 Module. Use this parameter and pass false to disable using multi-threading. Note that disabling multi-threading will degrade performance of V2 cmdlets.
 
 ```yaml
 Type: $true | $ false
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+Use this parameter to skip the first screen in authentication prompt where it asks for email. UserPrincipalName is User's email in this format i.e.  john.doe@contoso.com
 
 ```yaml
 Type: String
