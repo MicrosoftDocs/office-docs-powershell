@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOCasMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-EXOCasMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
@@ -71,7 +71,7 @@ This example returns the values of the following client access settings for the 
 
 - ImapEnabled
 
-- MAPIEnabled 
+- MAPIEnabled
 
 - ECPEnabled
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
+The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -118,87 +118,19 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-- \<Property\> is a filterable property.
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- Property is a filterable property. For more information about the filterable properties, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets) and [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/filter-properties).
 
-- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
-You can filter by the following properties:
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-- ActiveSyncAllowedDeviceIDs
-
-- ActiveSyncBlockedDeviceIDs
-
-- ActiveSyncDebugLogging
-
-- ActiveSyncEnabled
-
-- ActiveSyncMailboxPolicy
-
-- ActiveSyncSuppressReadReceipt
-
-- DisplayName
-
-- DistinguishedName
-
-- ECPEnabled
-
-- EmailAddresses
-
-- EwsApplicationAccessPolicy
-
-- EwsEnabled
-
-- ExchangeVersion
-
-- Guid
-
-- HasActiveSyncDevicePartnership
-
-- Id
-
-- ImapEnabled
-
-- LegacyExchangeDN
-
-- MAPIEnabled
-
-- Name
-
-- ObjectCategory
-
-- ObjectClass
-
-- OWAEnabled
-
-- OWAforDevicesEnabled
-
-- OwaMailboxPolicy
-
-- PopEnabled
-
-- PrimarySmtpAddress
-
-- SamAccountName
-
-- ServerLegacyDN
-
-- ServerName
-
-- WhenChanged
-
-- WhenChangedUTC
-
-- WhenCreated
-
-- WhenCreatedUTC
-
-For more information, see Filterable properties for the -Filter parameter (https://technet.microsoft.com/library/bb738155.aspx).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
@@ -213,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Distinguished name (DN)
 
@@ -273,7 +205,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the available properties, see [Get-EXOCasMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exocasmailbox-property-sets).
+For more information about the available properties, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 
 ```yaml
 Type: String[]
@@ -308,7 +240,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
-For more information about the properties that are included in each property set, see [Get-EXOCasMailbox property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exocasmailbox-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 
 ```yaml
 Type: PropertySet[]
@@ -367,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String

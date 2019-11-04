@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOMailboxStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-EXOMailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed.
 
@@ -41,14 +41,14 @@ You can only see move reports and move history for completed move requests.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-EXOMailboxStatistics -Identity john@contoso.com
 ```
 
 This example retrieves the mailbox statistics for the specified mailbox. Only the minimum set of properties are returned.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-EXOMailboxStatistics -Identity john@contoso.com -Properties SystemMessageSize,SystemMessageSizeWarningQuota,SystemMessageCount
 ```
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseGuid
-The DatabaseGuid parameter filters the results by the GUID of mailbox database that hosts the Mailbox. You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to DatabaseGuid.
+The DatabaseGuid parameter filters the results by the GUID of mailbox database that hosts the Mailbox. You can find this property value by using the Get-EXOMailbox cmdlet with the Properties parameter value DatabaseGuid.
 
 ```yaml
 Type: Guid
@@ -103,11 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
 
 - User Principal Name (UPN)
 
-- External Directory Object Id 
+- External Directory Object Id.
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
-For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
+For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: String[]
@@ -164,7 +164,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 You can specify multiple values separated by commas.
 
-For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets?branch=ExORestModule-chrisda#get-exomailboxstatistics-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: PropertySet[]
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN of the user (for example, navin@contoso.com).
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String

@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOMobileDeviceStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-EXOMobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
@@ -41,13 +41,13 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
 Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
 ```
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The object ID for the Azure Active Directory account as the external directory object id of the mailbox. Use this input parameter to pass an ObjectId for which all the device statistics need to be retreived.
+The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-It is the name of a user in email address format for e.g. john.doe@contoso.com
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String

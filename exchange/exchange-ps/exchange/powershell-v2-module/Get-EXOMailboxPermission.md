@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOMailboxPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-EXOMailboxPermission cmdlet to retrieve permissions on a mailbox.
 
@@ -66,11 +66,9 @@ FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, Ch
 
 By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet.
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 {{ Add example code here }}
 ```
@@ -80,7 +78,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -ExternalDirectoryObjectId
-It is the ObjectId of the mailbox in Azure Active Directory. This can be used in place of Identity. Passing ExternalDirectoryObjectId fetches the mailbox permission for the mailbox user associated with that specific ExternalDirectoryObjectId.
+The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -160,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedMailbox
-Enabling this switch fetches the mailboxpermission for soft deleted mailbox items. If this switch is not passed and an array of objects are passed as input of which some are softly deleted, this cmdlet ignores retreiving permission for those soft-deleted items by default.
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-This parameter is used to retrieve mailbox permission for a mailbox with given UserPrincipalName. User Principal Name is the email of a user in full-format i.e. john.doe@contoso.com
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String

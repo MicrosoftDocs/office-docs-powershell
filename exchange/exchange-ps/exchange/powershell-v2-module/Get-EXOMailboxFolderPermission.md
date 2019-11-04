@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOMailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-ExOMailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
@@ -55,13 +55,13 @@ This example returns the permissions for the same folder in John's mailbox, but 
 ## PARAMETERS
 
 ### -ExternalDirectoryObjectId
-The object ID for the Azure Active Directory account as the external directory object id of the mailbox.
+The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,7 @@ The GroupMailbox switch is required to return Office 365 groups in the results. 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -85,19 +85,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: `<Mailbox>:\<Folder>`. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
 
-- <UPN>:<\FolderPath> 
+- `<UPN>:<FolderPath>` (for example`john@contoso.com:\Calendar` or `John:\Marketing\Reports`).
 
-- <ExternalDirectoryObjectId>:<\FolderPath>
-
-Example values for this parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+- `<ExternalDirectoryObjectId>:<FolderPath>`
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: 0
 Default value: None
@@ -124,7 +122,7 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -133,13 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-It is the name of a user in email address format for e.g. john.doe@contoso.com
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

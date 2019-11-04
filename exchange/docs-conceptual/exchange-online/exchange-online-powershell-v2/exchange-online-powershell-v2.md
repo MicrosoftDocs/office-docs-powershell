@@ -29,16 +29,16 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 
 |**New cmdlet in the EXO V2 module**|**Older related cmdlet**|
 |:-----|:-----|
-|[Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda)|[Connect-EXOPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
-|[Get-EXOMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox?branch=ExORestModule-chrisda)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
-|[Get-EXORecipient](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient?branch=ExORestModule-chrisda)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
-|[Get-EXOCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox?branch=ExORestModule-chrisda)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
-|[Get-EXOMailboxPermission](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxpermission?branch=ExORestModule-chrisda)|[Get-MailboxPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxpermission)|
-|[Get-EXORecipientPermission](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipientpermission?branch=ExORestModule-chrisda)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
-|[Get-EXOMailboxStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics?branch=ExORestModule-chrisda)|[Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)|
-|[Get-EXOMailboxFolderStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderstatistics?branch=ExORestModule-chrisda)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderstatistics)|
-|[Get-EXOMailboxFolderPermission](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission?branch=ExORestModule-chrisda)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
-|[Get-EXOMobileDeviceStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics?branch=ExORestModule-chrisda)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)|
+|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline)|[Connect-EXOPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
+|[Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
+|[Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
+|[Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
+|[Get-EXOMailboxPermission](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxpermission)|[Get-MailboxPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxpermission)|
+|[Get-EXORecipientPermission](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipientpermission)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
+|[Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics)|[Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)|
+|[Get-EXOMailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderstatistics)|
+|[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
+|[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)|
 
 ## Install and maintain the Exchange Online PowerShell V2 module
 
@@ -156,7 +156,7 @@ Remove-Module ExchangeOnlineManagement
    Connect-ExchangeOnline -Credential $UserCredential
    ```
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline?branch=ExORestModule-chrisda).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline).
 
 ## What's new in the EXO V2 module?
 

@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Get-EXOMailboxFolderStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Get-EXOMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
@@ -54,7 +54,7 @@ This example returns statistics for all mailbox folders. Default is FolderScope 
 Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeAnalysis -IncludeOldestAndNewestItems
 ```
 
-This example returns statistics only for calendar folders. 
+This example returns statistics only for calendar folders.
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter specifies the object ID for the Azure Active Directory account as the external directory object id of the mailbox.
+The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Folderscope
-The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
+The FolderScope parameter specifies the scope of the search by folder type. Valid values include:
 
 - All
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN of the user (for example, navin@contoso.com).
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
 
 ```yaml
 Type: String

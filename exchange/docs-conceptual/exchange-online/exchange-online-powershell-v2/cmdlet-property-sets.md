@@ -46,7 +46,7 @@ The available property sets for the **Get-EXOCasMailbox** cmdlet and the propert
 
 For more information, see:
 
-- [Get-EXOCASMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox?branch=EXORestModule-chrisda)
+- [Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox)
 
 - [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)
 
@@ -89,7 +89,7 @@ The available property sets for the **Get-EXOMailbox** cmdlet and the properties
 
 For more information, see:
 
-- [Get-EXOMailbox](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox?branch=EXORestModule-chrisda)
+- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox)
 
 - [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)
 
@@ -112,7 +112,7 @@ The available property sets for the **Get-EXORecipient** cmdlet and the properti
 
 For more information, see:
 
-- [Get-EXORecipient](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient?branch=EXORestModule-chrisda)
+- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient)
 
 - [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)
 
@@ -128,7 +128,7 @@ The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the 
 
 For more information, see:
 
-- [Get-EXOMailboxStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics?branch=EXORestModule-chrisda)
+- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics)
 
 - [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
 
@@ -149,6 +149,6 @@ The available property sets for the **EXOMobileDeviceStatistics** cmdlet and the
 
 For more information, see:
 
-- [Get-EXOMobileDeviceStatistics](https://review.docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics?branch=EXORestModule-chrisda)
+- [Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics)
 
 - [Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)

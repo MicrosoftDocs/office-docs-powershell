@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Connect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://review.docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?branch=ExORestModule-chrisda).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to an Exchange Online organization.
 
@@ -60,7 +60,7 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 ## PARAMETERS
 
 ### -AzureADAuthorizationEndpointUri
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue the OAuth2 access tokens.
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassMailboxAnchoring
-The BypassMailboxAnchoring switch bypassing the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
+The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableErrorReporting
-The EnableErrorReporting switch enables logging errors to a disk file on client machine. You don't need to specify a value with this switch. By default, it creates 2 files in the %TMP% directory. You can use the LogDirectoryPath parameter to specify the location of the log files.
+The EnableErrorReporting switch enables logging errors to a local file. You don't need to specify a value with this switch.
+
+By default, it creates 2 files in the %TMP% folder. You can use the LogDirectoryPath parameter to specify the location of the log files.
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogDirectoryPath
-The LogDirectoryPath parameter specifies the location of the telemetry data. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
+The LogDirectoryPath parameter specifies the location of telemetry data. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
 
 If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
 
@@ -224,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The visual progress shows number of objects received as well as total number of objects requested. Valid values are:
+The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
 
 - $true: The progress bar is displayed.
 
@@ -277,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.com). Using this parameter allows you to skip the first screen in authentication prompt.
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in authentication prompt.
 
 ```yaml
 Type: String
