@@ -1416,7 +1416,7 @@ This parameter is available only in the cloud-based service.
 
 The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Gmail calendars in Outlook on the web. Valid values are:
 
-- $true: Users can connect to their Outlook.com or Gmail calendars to see those events in their Outlook on the web calendar.
+- $true: Users can connect to their Outlook.com or Gmail calendars to see those events in their Outlook on the web calendar. This is the default value.
 
 - $false: Users can't connect to their Outlook.com or Gmail calendars in Outlook on the web.
 
@@ -1856,7 +1856,7 @@ This parameter is available only in the cloud-based service.
 
 The TeamSnapCalendarsEnabled parameter specifies whether to allow users to connect to their personal TeamSnap calendars in Outlook on the web. Valid values are:
 
-- $true: Users can connect to their TeamSnap calendars to see those events in their Outlook on the web calendar.
+- $true: Users can connect to their TeamSnap calendars to see those events in their Outlook on the web calendar. This is the default value.
 
 - $false: Users can't connect to their TeamSnap calendars in Outlook on the web.
 
