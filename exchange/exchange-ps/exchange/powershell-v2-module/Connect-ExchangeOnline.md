@@ -242,7 +242,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-{{ Fill ShowProgress Description }}
+The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The visual progress shows number of objects received as well as total number of objects requested. Valid values are:
+
+- $true: The progress bar is displayed.
+
+- $false: The progress bar isn't displayed.
 
 ```yaml
 Type: $true | $ false
@@ -272,7 +276,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseMultithreading
-{{ Fill UseMultithreading Description }}
+The UseMultithreading parameter specifies whether to disable or enable multi-threading in the EXO V2 module Valid values are:
+
+- $true: Enable multi-threading. This is the default value.
+
+- $false: Disable multi-threading. Note this value will degrade performance of V2 cmdlets.
 
 ```yaml
 Type: $true | $ false
@@ -287,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.com). Using this parameter allows you to skip the first screen in authentication prompt.
 
 ```yaml
 Type: String
