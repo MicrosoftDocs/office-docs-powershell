@@ -28,8 +28,7 @@ Connect-ExchangeOnline
  [[-ConnectionUri] <String>]
  [-Credential <PSCredential>]
  [[-DelegatedOrganization] <String>]
- [-DoLogErrorMessage]
- [-EnableEXOTelemetry]
+ [-EnableErrorReporting]
  [[-ExchangeEnvironmentName] <ExchangeEnvironment>]
  [-LogDirectoryPath <String>]
  [-PageSize <UInt32>]
@@ -137,25 +136,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DoLogErrorMessage
-The DoLogErrorMessage switch disables error message logging in the telemetry file when you use the EnableEXOTelemetry switch. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableEXOTelemetry
-The EnableEXOTelemetry switch enables the collection of telemetry on Exchange cmdlets. You don't need to specify a value with this switch.
-
-You can use the LogDirectoryPath parameter to specify the location of the telemetry data.
+### -EnableErrorReporting
+The EnableErrorReporting switch enables logging errors to a disk file on client machine. You don't need to specify a value with this switch. By default, it creates 2 files in the %TMP% directory. You can use the LogDirectoryPath parameter to specify the location of the log files.
 
 ```yaml
 Type: SwitchParameter
