@@ -118,7 +118,7 @@ Add-DistributionGroupMember -Identity $group -Members $users -BypassSecurityGrou
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group -AllBookInPolicy $false
 ```
 
-This example rejects meeting requests from any user who isn't a member of "Room 221 Booking Allowed" distribution group.
+This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
 
 ### -------------------------- Example 8 --------------------------
 ```
