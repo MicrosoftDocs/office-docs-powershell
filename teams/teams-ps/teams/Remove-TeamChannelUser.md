@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-TeamChannelUser (available in private preview)
+# Remove-TeamChannelUser
 
 ## SYNOPSIS
 Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
