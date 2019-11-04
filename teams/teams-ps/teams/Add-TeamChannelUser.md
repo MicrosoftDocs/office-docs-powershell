@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Add-TeamChannelUser (available in private preview)
+# Add-TeamChannelUser
 
 ## SYNOPSIS
 Adds an owner or member to the private channel.
