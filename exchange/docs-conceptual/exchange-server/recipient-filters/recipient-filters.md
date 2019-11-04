@@ -205,7 +205,7 @@ When creating your own custom OPath filters, consider the following items:
 
   - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
 
-  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`).
+  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`). To enclose the whole OPath filter in double quotation marks, you need to escape the dollar sign in system value (for example, `` `$true``).
 
 - You need to enclose the whole OPath filter in double quotation marks " or " single quotation marks ' '. Although any OPath filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPath filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
 
@@ -225,9 +225,7 @@ When creating your own custom OPath filters, consider the following items:
 
     - **Integer enclosed in double quotation marks**: Enclose the whole OPath filter in braces (for example `{CountryCode -eq "840"}`).
 
-  - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`).
-
-  **Note**: You can't use search criteria that impose conflicting character requirements for enclosing the whole OPath filter together in the same filter. For example, searching for an property using an expanded variable value requires that the entire OPath filter is enclosed in double quotation marks. But, you can't enclose an OPath filter in double quotation marks if you're searching for a property with the system value $true. Therefore, you can't use these two search criteria together in the same OPath filter.
+  - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`). If you escape the dollar sign system value, you can also enclose the whole OPath filter in double quotation marks (for example, ``"HiddenFromAddressListsEnabled -eq `$true"``).
 
   The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
 
@@ -240,6 +238,7 @@ When creating your own custom OPath filters, consider the following items:
   |`'500'`|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`"500"`|||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`$true`||![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`` `$true``|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](../../media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 
 - Include the hyphen before all operators. The most common operators include:
 

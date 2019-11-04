@@ -56,12 +56,12 @@ This example retrieves the statistics for the mobile phone configured to synchro
 
 ### -------------------------- Example 2 --------------------------
 ```
-$UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like 'CAS_{*'}; Get-Mailbox $UserList | foreach {Get-ActiveSyncDeviceStatistics -Mailbox $_}
+$UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'"; Get-Mailbox $UserList | foreach {Get-ActiveSyncDeviceStatistics -Mailbox $_}
 ```
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
 
-**Note**: Although we typically recommend enclosing an OPath filter in double quotation marks " " instead of braces { }, you can't use double quotation marks here due to the `$true` system value. For more information, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+**Note**: For more information about OPath filter syntax, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ### -------------------------- Example 3 --------------------------
 ```
