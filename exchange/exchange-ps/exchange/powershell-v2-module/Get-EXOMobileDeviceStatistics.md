@@ -36,58 +36,30 @@ Get-EXOMobileDeviceStatistics
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
+Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
 
-{{ Add example description here }}
+### Example 2
+```
+Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
+```
+Above example fetches the statstics for active sync devices linked to user with email john.doe@contoso.com
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
-
-- GUID
-
-- DeviceID
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Mailbox
-The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
+This input parameter acts as Identity filter. The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
 
 - User ID or user principal name (UPN)
 
@@ -119,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-{{ Fill ExternalDirectoryObjectId Description }}
+The object ID for the Azure Active Directory account as the external directory object id of the mailbox. Use this input parameter to pass an ObjectId for which all the device statistics need to be retreived.
 
 ```yaml
 Type: Guid
@@ -194,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+It is the name of a user in email address format for e.g. john.doe@contoso.com
 
 ```yaml
 Type: String
