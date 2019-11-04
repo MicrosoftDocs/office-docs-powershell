@@ -72,14 +72,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-Message -Filter {FromAddress -like "*@contoso.com"} | Format-List
+Get-Message -Filter "FromAddress -like '*@contoso.com'" | Format-List
 ```
 
 This example displays detailed information about all messages queued on the local server and received from any sender at the contoso.com domain.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-Message -Filter {FromAddress -like "*@contoso.com" -and SCL -gt 3}
+Get-Message -Filter "FromAddress -like '*@contoso.com' -and SCL -gt 3"
 ```
 
 This example lists all messages queued on the local server, received from any sender at the contoso.com domain and that have an SCL value greater than 3.
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value, for example, {FromAddress -like "\*@contoso.com"}. For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 

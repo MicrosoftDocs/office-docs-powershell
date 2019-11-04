@@ -146,7 +146,9 @@ Accept wildcard characters: False
 ### -Filter
 The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
-This parameter uses the syntax -Filter "Description -like '\*\<text\>\*'". For example, -Filter "Description -like \*192.168.1.1\*'".
+This parameter uses the syntax `"Description -like '*Text*'"`. For example, `"Description -like *192.168.1.1*'"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String

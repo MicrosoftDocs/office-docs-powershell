@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value, for example, {NextHopDomain -eq "contoso.com"}. For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupBy
-The GroupedBy parameter sorts the messages in the delivery queue results. Valid values for this parameter are:
+The GroupedBy parameter sorts the messages in the delivery queue results. Valid values are:
 
 - DeliveryType
 
@@ -194,7 +194,7 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 
 - NextHopCategory
 
-- NextHopDomain
+- NextHopDomain (this is the default value)
 
 - NextHopKey
 
@@ -205,8 +205,6 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 - ServerName
 
 - OutboundIPPool
-
-The default value is NextHopDomain.
 
 ```yaml
 Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool

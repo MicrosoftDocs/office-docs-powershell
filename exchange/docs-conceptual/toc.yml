@@ -17,7 +17,7 @@
       href: exchange-server/exchange-cmdlet-syntax.md
     - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
       href: exchange-server/use-update-exchangehelp.md
-    - name: Recipient filters in Exchange Management Shell commands
+    - name: Recipient filters in Exchange PowerShell commands
       href: exchange-server/recipient-filters/recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
