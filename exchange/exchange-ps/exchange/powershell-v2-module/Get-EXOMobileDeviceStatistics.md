@@ -31,7 +31,6 @@ Get-EXOMobileDeviceStatistics
  [-Identity <String>]
  [-ExternalDirectoryObjectId <Guid>]
  [-UserPrincipalName <String>]
- [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -134,22 +133,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UniversalOutlook
 The UniversalOutlook switch filters the results by Mail and Calendar devices. You don't need to specify a value with this switch.
 
