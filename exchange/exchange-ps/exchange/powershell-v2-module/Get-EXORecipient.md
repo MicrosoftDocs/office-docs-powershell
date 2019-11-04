@@ -54,16 +54,21 @@ Get-EXORecipient
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Get-EXORecipient cmdlet can be used to view existing recipient objects in your organization. This cmdlet returns all mail-enabled objects (for example, mailboxes, mail users, mail contacts, and distribution groups).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-EXORecipient -ResultSize 100 
 ```
+Above examples returns the first 100 recipient objects in name sorted order.
 
-{{ Add example description here }}
+### -------------------------- Example 2 --------------------------
+```
+Get-EXORecipient -Identity john.doe@contosot.com
+```
+Above examples returns the recipient attribute details for the user with UserPrincipalName - john.doe@contoso.com
 
 ## PARAMETERS
 
@@ -93,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
+The object ID for the Azure Active Directory account as the external directory object id of the mailbox. Use this parameter to pass ObjectId of the recipient instead of Identity.
 
 ```yaml
 Type: Guid
@@ -127,15 +132,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient. For example:
 
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
+- UserPrincipalName
 
 - GUID
 
@@ -357,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+It is the name of a user in email address format for e.g. jodn.doe@contoso.com. Use this parameter to retreive recipient properties for the mailbox user with spefici UPN.
 
 ```yaml
 Type: String
