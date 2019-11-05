@@ -29,6 +29,8 @@ Get-InboxRule [[-Identity] <InboxRuleIdParameter>] [-DescriptionTimeFormat <Stri
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
+**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Azure Active Directory.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
