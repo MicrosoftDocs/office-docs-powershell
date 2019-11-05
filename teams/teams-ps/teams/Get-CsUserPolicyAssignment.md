@@ -56,7 +56,7 @@ Group          Vendor Live Events 566b8d39-5c5c-4aaa-bc07-4f36278a1b38
 ```
 
 ### Example 3
-In this example, the details for the TeamsMeetingPolicy are shown. The user is a member of two groups, each of which is assigned a TeamsMeetingPolicy.  
+In this example, the details for the TeamsMeetingPolicy are shown. The user is a member of two groups, each of which is assigned a TeamsMeetingPolicy.  The user has inherited the "AllOn" policy because the priority of the assignment is higher than that of the "Kiosk" policy assignment to the other group.
 
 ```
 Get-CsUserPolicyAssignment -Identity 3b90faad-9056-49ff-8357-0b53b1d45d39 -PolicyType TeamsMeetingPolicy | select -ExpandProperty PolicySource
@@ -65,11 +65,8 @@ AssignmentType PolicyName Reference
 -------------- ---------- ---------
 Group          AllOn      d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17
 Group          Kiosk      566b8d39-5c5c-4aaa-bc07-4f36278a1b38
-```
 
-The user has inherited the "AllOn" policy because the priority of the assignment is higher than that of the "Kiosk" policy assignment to the other group.
 
-```
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
 GroupId                              PolicyName PolicyType         Priority
