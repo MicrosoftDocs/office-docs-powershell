@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OrganizationConfig cmdlet to configure various settings of an Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,7 +43,6 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForSharepoint <$true | $false>]
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
- [-CustomerLockboxEnabled <$true | $false>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
@@ -112,7 +111,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-Confirm]
  [-ConnectorsActionableMessagesEnabled <$true | $false>]
  [-ConnectorsEnabled <$true | $false>]
- [-CustomerLockboxEnabled <$true | $false>]
  [-CustomerFeedbackEnabled <$true | $false>]
  [-DataClassifications <String>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
@@ -257,7 +255,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -386,7 +384,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-For more information about configuring AD FS claims based authentication in Exchange, see Use AD FS claims-based authentication with Outlook on the web (https://technet.microsoft.com/library/dn635116.aspx).
+For more information about configuring AD FS claims based authentication in Exchange, see [Use AD FS claims-based authentication with Outlook on the web](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/ad-fs-claims-based-auth).
 
 ```yaml
 Type: MultiValuedProperty
@@ -458,7 +456,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-signing certificates that are used for AD FS claims-based authentication. This parameter uses certificate thumbprint values (GUIDs) to identify the certificates.
 
-To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see Get-ADFSCertificate (https://go.microsoft.com/fwlink/p/?linkid=392706).
+To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://go.microsoft.com/fwlink/p/?linkid=392706).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -706,7 +704,7 @@ The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or
 
 - $false: Action buttons in connector cards are disabled.
 
-For more information about actionable messages in connected apps, see Connect apps to your inbox in Outlook on the web (https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
 
 ```yaml
 Type: $true | $false
@@ -752,7 +750,7 @@ The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable
 
 To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
-For more information about connectors for Outlook on the web, see Connect apps to your inbox in Outlook on the web (https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
 
 ```yaml
 Type: $true | $false
@@ -839,29 +837,6 @@ Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CustomerLockboxEnabled
-This parameter is available only in the cloud-based service.
-
-The CustomerLockboxEnabled specifies whether Customer Lockbox requests are enabled or disabled for the organization. Valid values are:
-
-- $true: Customer Lockbox requests are enabled. Requests by Microsoft support engineers to access your data appear in the Microsoft 365 admin center for you to approve or reject.
-
-- $false: Customer Lockbox are disabled.
-
-Customer Lockbox is included in the Office 365 E5 plan. For more information about Customer Lockbox, see Office 365 Customer Lockbox Requests (https://go.microsoft.com/fwlink/p/?LinkId=624318).
-
-```yaml
-Type: $true | $false
-Parameter Sets: Default
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2417,17 +2392,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

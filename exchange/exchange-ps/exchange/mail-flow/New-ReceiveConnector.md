@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-ReceiveConnector cmdlet to create Receive connectors on Mailbox servers and Edge Transport servers. Receive connectors listen for inbound SMTP connections on the Exchange server.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -366,9 +366,9 @@ New-ReceiveConnector [-Name] <String> -Usage <Custom | Internet | Internal | Cli
 ## DESCRIPTION
 On Mailbox servers, you can create Receive connectors in the Front End Transport service, and the Transport (Hub) service. On Edge Transport servers, you can create Receive connectors in the Transport service.
 
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors (https://technet.microsoft.com/library/aa996395.aspx).
+For more information about Receive connector usage types, permission groups, and authentication methods, see [Receive connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -1472,7 +1472,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see Receive connector permission groups (https://technet.microsoft.com/library/aa996395.aspx#PermissionGroups).
+For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
 
 ```yaml
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
@@ -1514,7 +1514,7 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see Protocol logging (https://technet.microsoft.com/library/aa997624.aspx).
+For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
 
 ```yaml
 Type: None | Verbose
@@ -1807,17 +1807,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

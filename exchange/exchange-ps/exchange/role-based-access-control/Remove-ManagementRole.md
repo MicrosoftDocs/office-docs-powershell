@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-ManagementRole cmdlet to remove custom management roles that you don't need anymore.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,9 +26,9 @@ Remove-ManagementRole [-Identity] <RoleIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see Remove a role (https://technet.microsoft.com/library/dd335178.aspx).
+You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see [Remove a role](https://docs.microsoft.com/exchange/remove-a-role-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 
 In on-premises Exchange, this example removes the In-house scripts unscoped top-level management role. Because this is an unscoped top-level role, the UnScopedTopLevel switch must be used. Note that the UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
 
-For more information about unscoped top-level management roles, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
+For more information about unscoped top-level management roles, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
 ## PARAMETERS
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ### -UnScopedTopLevel
 This parameter is available on in on-premises Exchange.
 
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
 The UnScopedTopLevel switch specifies the role that you want to remove is an unscoped top-level role. You don't need to specify a value with this switch.
 
@@ -190,17 +190,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

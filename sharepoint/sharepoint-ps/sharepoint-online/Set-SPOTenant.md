@@ -48,6 +48,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
  [-EnableAzureADB2BIntegration <Boolean>] 
+ [-ExternalUserExpirationRequired <Boolean>] 
+ [-ExternalUserExpireInDays <Int32>] 
  [<CommonParameters>]
 ```
 
@@ -1327,7 +1329,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
-PARAMVALUE: AllowFullAccess | LimitedAccess | BlockAccess
+PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
 ```yaml
 Type: SPOConditionalAccessPolicyType
@@ -1398,6 +1400,53 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ExternalUserExpirationRequired
+
+> [!NOTE] 
+> This feature is currently in development and will not work on Production tenants. 
+
+Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
+
+> [!NOTE] 
+> Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
+
+he valid values are:  
+True - Enables the Policy.  
+False (default) - Disables the policy.
+
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ExternalUserExpireInDays
+
+> [!NOTE] 
+> This feature is currently in development and will not work on Production tenants. 
+
+Specifies the number of days before an external user will expire and be removed from the site collection if the policy is enabled. Value can be from 30 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

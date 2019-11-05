@@ -44,7 +44,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer. If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module:
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange Admin Center in Exchange Online](https://technet.microsoft.com/library/ace44f6b-4084-4f9c-89b3-e0317962472b.aspx).
+  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
      **Note**: Internet Explorer or Edge is required because the download in the next step uses ClickOnce, so Google Chrome or Mozilla Firefox won't work.
 
@@ -56,15 +56,15 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
      ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
 
-  ```text
+  ```
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command from an elevated Command Prompt (a Command Prompt window you open by selecting **Run as administrator**) to enable basic authentication for WinRM:
 
-  ```text
+  ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 

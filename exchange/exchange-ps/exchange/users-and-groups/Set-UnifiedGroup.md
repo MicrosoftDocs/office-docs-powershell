@@ -18,7 +18,7 @@ Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based 
 
 **IMPORTANT**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see How the proxyAddresses attribute is populated in Azure AD (https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -83,7 +83,7 @@ Office 365 Groups are group objects that are available across Office 365 service
 
 The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Office 365 Group group.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -154,10 +154,6 @@ To specify senders for this parameter, you can use any value that uniquely ident
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
-
-To add or remove individual senders or groups without affecting other existing entries, use the AcceptMessagesOnlyFrom and AcceptMessageOnlyFromDLMembers parameters.
-
-The individual senders and groups you specify for this parameter are automatically copied to the AcceptMessagesOnlyFrom and AcceptMessagesOnlyFromDLMembers properties, respectively. Therefore, you can't use the AcceptMessagesOnlyFromSendersOrMembers parameter and the AcceptMessagesOnlyFrom or AcceptMessagesOnlyFromDLMembers parameters in the same command.
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
@@ -294,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see Azure Active Directory cmdlets for configuring group settings (https://go.microsoft.com/fwlink/p/?LinkId=827484).
+The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://go.microsoft.com/fwlink/p/?LinkId=827484).
 
 ```yaml
 Type: String
@@ -336,7 +332,7 @@ The ConnectorsEnabled specifies whether to enable the ability to use connectors 
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
-For more information about connectors for Office 365 Groups, see Connect apps to your groups (https://go.microsoft.com/fwlink/p/?LinkId=787545).
+For more information about connectors for Office 365 Groups, see [Connect apps to your groups in Outlook](https://go.microsoft.com/fwlink/p/?LinkId=787545).
 
 ```yaml
 Type: SwitchParameter
@@ -614,7 +610,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
+The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
@@ -846,7 +842,7 @@ Accept wildcard characters: False
 ### -Language
 The Language parameter specifies language preference for the Office 365 Group.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: CultureInfo
@@ -1177,7 +1173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

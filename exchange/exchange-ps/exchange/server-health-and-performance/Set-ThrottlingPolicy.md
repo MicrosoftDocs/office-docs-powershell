@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ThrottlingPolicy cmdlet to modify the settings for a user throttling policy.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -174,9 +174,9 @@ Throttling policy settings are stored in Active Directory.
 
 By default, there is one default user throttling policy named GlobalThrottlingPolicy with a throttling scope of Global. Microsoft Setup creates this policy as part of the Client Access server role. You shouldn't replace, re-create, or remove the existing default throttling policy. However, you can edit any additional throttling policies with the scope of Organization or Regular if you want to change your user throttling settings. You can create polices with the scope of Organization or Regular using the New-ThrottlingPolicy cmdlet.
 
-For more information about how to control the resources consumed by individual users, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
+For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -713,7 +713,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxStatsSearchMailboxes
-The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search without being able to view the statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, the user must copy the search results to a discovery mailbox to view the statistics for the discovery search. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
+The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search without being able to view the statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, the user must copy the search results to a discovery mailbox to view the statistics for the discovery search. For more information, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
 ```yaml
 Type: Unlimited
@@ -2472,7 +2472,7 @@ The ThrottlingPolicyScope parameter specifies the scope of the throttling policy
 
 - Global: This scope is reserved for the default throttling policy.
 
-For more information about throttling policy scopes, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
+For more information about throttling policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
 ```yaml
 Type: Regular | Organization | Global
@@ -2502,17 +2502,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
