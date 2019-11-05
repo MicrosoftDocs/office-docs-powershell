@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Enable-InboxRule [-Identity] <InboxRuleIdParameter>
+ [-AlwaysDeleteOutlookRulesBlob]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +47,15 @@ This example enables the Inbox rule named Move To Junk Mail in the mailbox that 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the display name or GUID of the Inbox rule.
+The Identity parameter specifies the Inbox rule that you want to enable. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+
+- RuleIdentity property (for example, 16752869479666417665).
+
+- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
+
+- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter
@@ -57,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysDeleteOutlookRulesBlob
-The AlwaysDeleteOutlookRulesBlob parameter suppresses a warning that end users or administrators get if they use Outlook Web App or Windows PowerShell to modify Inbox rules.
+The AlwaysDeleteOutlookRulesBlob switch hides a warning message when end users or administrators use Outlook on the web or PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

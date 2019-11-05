@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Disable-InboxRule [-Identity] <InboxRuleIdParameter>
+ [-AlwaysDeleteOutlookRulesBlob]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +47,15 @@ This example disables the Inbox rule MoveAnnouncements in the mailbox Joe@Contos
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the Inbox rule to be disabled.
+The Identity parameter specifies the Inbox rule that you want to disable. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+
+- RuleIdentity property (for example, 16752869479666417665).
+
+- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
+
+- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter

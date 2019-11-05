@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-InboxRule [[-Identity] <InboxRuleIdParameter>] [-DescriptionTimeFormat <String>]
- [-DescriptionTimeZone <ExTimeZoneValue>] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-IncludeHidden] [-BypassScopeCheck] [-SweepRules] [<CommonParameters>]
+Get-InboxRule [[-Identity] <InboxRuleIdParameter>]
+ [-DescriptionTimeFormat <String>]
+ [-DescriptionTimeZone <ExTimeZoneValue>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-IncludeHidden]
+ [-BypassScopeCheck]
+ [-SweepRules]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +77,7 @@ The DescriptionTimeZone parameter specifies time zone that's used for time value
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 
@@ -111,9 +117,9 @@ The Identity parameter specifies the Inbox rule that you want to view. You can u
 
 - RuleIdentity property (for example, 16752869479666417665).
 
-- Exchange Online: \<mailbox alias\>\\\<RuleIdentity\> (for example, rzaher\\16752869479666417665.
+- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
 
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleIdentity\> (for example, contoso.com/Users/Rick Zaher\\16752869479666417665.
+- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter
