@@ -40,7 +40,9 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-RefreshServerCertificates]
  [-RMSOnlineKeySharingLocation <Uri>]
  [-SearchEnabled <$true | $false>]
+ [-SimplifiedClientAccessDoNotForwardDisabled <$true | $false>]
  [-SimplifiedClientAccessEnabled <$true | $false>]
+ [-SimplifiedClientAccessEncryptOnlyDisabled <$true | $false>]
  [-TransportDecryptionSetting <Disabled | Optional | Mandatory>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -404,6 +406,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SimplifiedClientAccessDoNotForwardDisabled
+This parameter is available only in the cloud-based service.
+
+The SimplifiedClientAccessDoNotForwardDisabled parameter specifies whether to disable **Do not forward** in Outlook on the web. Valid values are:
+
+- $true: **Do not forward** is available in Outlook on the web.
+
+- $false: **Do not forward** is not available in Outlook on the web.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SimplifiedClientAccessEnabled
 This parameter is available only in the cloud-based service.
 
@@ -412,6 +435,27 @@ The SimplifiedClientAccessEnabled parameter specifies whether to enable the Prot
 - $true: The Protect button is enabled in Outlook on the web.
 
 - $false: The Protect button is disabled in Outlook on the web. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SimplifiedClientAccessEncryptOnlyDisabled
+This parameter is available only in the cloud-based service.
+
+The SimplifiedClientAccessEncryptOnlyDisabled parameter specifies whether to disable **Encrypt only** in Outlook on the web. Valid values are:
+
+- $true: **Encrypt only** is not available in Outlook on the web.
+
+- $false: **Encrypt only** is available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
