@@ -55,7 +55,6 @@ Direct         Employees Events
 Group          Vendor Live Events 566b8d39-5c5c-4aaa-bc07-4f36278a1b38
 ```
 
-
 ### Example 3
 In this example, the details for the TeamsMeetingPolicy are shown. The user is a member of two groups, each of which is assigned a TeamsMeetingPolicy.  
 
