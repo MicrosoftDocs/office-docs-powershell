@@ -15,7 +15,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 
 # Connect to Exchange Online PowerShell using multi-factor authentication
 
-If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
+If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-ExoPSSession** cmdlet to connect.
 
 > [!NOTE]
 > The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
@@ -112,9 +112,9 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
    This example connects to Exchange Online to manage another tenant
 
-   ```PowerShell
-   Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
-   ```
+     ```PowerShell
+     Connect-ExoPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+     ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
