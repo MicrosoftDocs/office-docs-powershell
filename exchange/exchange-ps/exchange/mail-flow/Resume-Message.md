@@ -43,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Resume-Message -Server Server1 -Filter {FromAddress -eq "kweku@contoso.com" -and ExpirationTime -lt "1/5/2013 3:00 PM"}
+Resume-Message -Server Server1 -Filter "FromAddress -eq 'kweku@contoso.com' -and ExpirationTime -lt '1/5/2018 3:00 PM'"
 ```
 
 This example resumes delivery of all messages in a suspended state and for which the following conditions are true:
@@ -52,12 +52,12 @@ This example resumes delivery of all messages in a suspended state and for which
 
 - The messages are queued on the server Server1.
 
-- The messages will expire before 15:00 on January 5, 2013.
+- The messages will expire before 15:00 on January 5, 2018.
 
 ## PARAMETERS
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value, for example, {FromAddress -like "\*@contoso.com"}. For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 

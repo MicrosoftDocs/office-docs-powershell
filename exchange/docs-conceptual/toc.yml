@@ -17,7 +17,7 @@
       href: exchange-server/exchange-cmdlet-syntax.md
     - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
       href: exchange-server/use-update-exchangehelp.md
-    - name: Recipient filters in Exchange Management Shell commands
+    - name: Recipient filters in Exchange PowerShell commands
       href: exchange-server/recipient-filters/recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
@@ -42,7 +42,12 @@
       - name: Filterable properties for the Filter parameter
         href: exchange-server/recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: exchange-server/recipient-filters/recipientfilter-properties.md 
+        href: exchange-server/recipient-filters/recipientfilter-properties.md
+  - name: Exchange Online PowerShell V2
+    href: exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md
+    items:
+    - name: Property sets in cmdlets
+      href: exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md
   - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
     items:

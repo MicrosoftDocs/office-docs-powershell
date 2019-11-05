@@ -41,7 +41,7 @@ This example tests archive connectivity to Gurinder Singh's archive.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-Mailbox -Filter {ArchiveGuid -ne $null -and ArchiveDomain -ne $null} -ResultSize Unlimited | Test-ArchiveConnectivity
+Get-Mailbox -Filter 'ArchiveGuid -ne $null -and ArchiveDomain -ne $null' -ResultSize Unlimited | Test-ArchiveConnectivity
 ```
 
 This command retrieves mailboxes that have a cloud-based archive provisioned and tests archive connectivity for each mailbox.

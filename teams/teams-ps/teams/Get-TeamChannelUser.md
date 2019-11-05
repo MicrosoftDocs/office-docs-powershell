@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamChannelUser (available in private preview)
+# Get-TeamChannelUser
 
 ## SYNOPSIS
 Returns users of a channel.

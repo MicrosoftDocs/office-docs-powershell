@@ -62,10 +62,12 @@ This example retrieves the statistics for the mobile phone configured to synchro
 
 ### -------------------------- Example 2 --------------------------
 ```
-$UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
+$UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'" | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
+
+**Note**: For more information about OPath filter syntax, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ### -------------------------- Example 3 --------------------------
 ```
