@@ -132,23 +132,3 @@ For more information, see:
 
 - [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
 
-### Get-EXOMobileDeviceStatistics property sets
-
-The available property sets for the **EXOMobileDeviceStatistics** cmdlet and the properties they contain are described in the following table:
-
-|||
-|:-----|:-----|
-|**PropertySet**|**Properties**|
-|Minimum|DeviceId <br/> Identity <br/> LastSuccessSync <br/> LastSyncAttemptTime|
-|Access|DeviceAccessState <br/> DeviceAccessStateReason <br/> DeviceAccessControlRule|
-|Device|ClientType <br/> DeviceEnableOutboundSMS <br/> DeviceFriendlyName <br/> DeviceID <br/> DeviceImei <br/> DeviceMobileOperator <br/> DeviceModel <br/> DeviceOS <br/> DeviceOSLanguage <br/> DevicePhoneNumber <br/> DeviceType <br/> DeviceUserAgent <br/> Status <br/> StatusNote|
-|Others|Guid <br/> Identity <br/> MailboxLogReport <br/> RecoveryPassword|
-|Policy|DevicePolicyApplicationStatus <br/> DevicePolicyApplied <br/> LastPolicyUpdateTime|
-|Sync|FirstSyncTime <br/> LastPingHeartbeat <br/> LastSuccessSync <br/> LastSyncAttemptTime <br/> NumberOfFoldersSynced <br/> SyncStateUpgradeTime|
-|Wipe|AccountOnlyDeviceWipeAckTime <br/> AccountOnlyDeviceWipeRequestTime <br/> AccountOnlyDeviceWipeSentTime <br/> DeviceWipeAckTime <br/> DeviceWipeRequestTime <br/> DeviceWipeSentTime <br/> IsRemoteWipeSupported <br/> LastAccountOnlyDeviceWipeRequestor <br/> LastDeviceWipeRequestor|
-
-For more information, see:
-
-- [Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomobiledevicestatistics)
-
-- [Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)
