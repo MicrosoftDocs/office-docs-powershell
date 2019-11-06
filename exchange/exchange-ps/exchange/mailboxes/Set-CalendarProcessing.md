@@ -114,7 +114,7 @@ $group = New-DistributionGroup "Room 221 Booking Allowed"
 $members = @()
 $members += "karina@contoso.com","tony@contoso.com"
 $members = $members | Get-Mailbox
-Add-DistributionGroupMember -Identity $group -Members $users -BypassSecurityGroupManagerCheck:$true
+Add-DistributionGroupMember -Identity $group -Members $members -BypassSecurityGroupManagerCheck:$true
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group -AllBookInPolicy $false
 ```
 
