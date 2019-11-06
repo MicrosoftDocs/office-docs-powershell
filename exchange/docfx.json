@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "exchange-ps",
         "dest": "exchange",
@@ -12,26 +14,41 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "exchange-ps",
         "dest": "exchange/exchange-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "exchange-ps",
-      "version": "exchange-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "exchange-ps",
-      "version": "exchange-ps",
-      "dest": "module/exchange-ps"
-    }
+        "files": [
+          "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "version": "exchange-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps",
+        "version": "exchange-ps",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "exchange-ps",
+        "dest": "module"
+      }
     ],
     "resource": [
       {
@@ -54,20 +71,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "chrisda",
-      "ms.author" : "chrisda",
-      "manager" : "serdars",
-      "ms.date" : "09/25/2017",
-      "ms.topic" : "reference",
-      "ms.service" : "exchange-powershell",
-      "ms.devlang" : "powershell",
+      "author": "chrisda",
+      "ms.author": "chrisda",
+      "manager": "serdars",
+      "ms.date": "09/25/2017",
+      "ms.topic": "reference",
+      "ms.service": "exchange-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "apiPlatform":{
-        "exchange-ps/exchange/**/*.md" : [ "powershell" ]
+      "apiPlatform": {
+        "exchange-ps/exchange/**/*.md": [
+          "powershell"
+        ]
       }
     },
     "template": [],
