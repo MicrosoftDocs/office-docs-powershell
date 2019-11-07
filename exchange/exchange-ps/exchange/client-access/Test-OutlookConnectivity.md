@@ -107,35 +107,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Test-OutlookConnectivity -ProbeIdentity OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe
 ```
 
 In Exchange 2013 or later, this example runs an MAPI over HTTP OutlookRpcSelfTestProbe on the Mailbox server that you're currently connected to.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Test-OutlookConnectivity "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
 ```
 
 In Exchange 2013 or later, this example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Test-OutlookConnectivity -Protocol HTTP -GetDefaultsFromAutoDiscover $true
 ```
 
 In Exchange 2010, this example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Test-OutlookConnectivity -RpcProxyTestType:Internal -RpcTestType:Server
 ```
 
 In Exchange 2010, this example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
 
-### -------------------------- Example 5 --------------------------
+### Example 5
 ```
 Test-OutlookConnectivity -RpcProxyServer RpcProxySrv01 -RpcProxyAuthenticationType Basic -RpcClientAccessServer CAS01 -RpcAuthenticationType NTLM
 ```
@@ -176,6 +176,7 @@ Type: MailboxIdParameter
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -193,6 +194,7 @@ Type: $true | $false
 Parameter Sets: RpcProxyServer
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -210,6 +212,7 @@ Type: HTTP | TCP | WS
 Parameter Sets: Protocol
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -231,6 +234,7 @@ Type: Array | Server
 Parameter Sets: RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -254,6 +258,7 @@ Type: Unknown | Internal | External
 Parameter Sets: WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -275,6 +280,7 @@ Type: $true | $false
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +302,7 @@ Type: SwitchParameter
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +320,7 @@ Type: PSCredential
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -328,6 +336,7 @@ Type: String
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +356,7 @@ Type: PSCredential
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -386,6 +396,7 @@ Type: MailboxIdParameter
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -403,6 +414,7 @@ Type: SwitchParameter
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -434,6 +446,7 @@ Type: String
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -459,6 +472,7 @@ Type: Negotiate | NTLM | Kerberos
 Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -476,6 +490,7 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -493,6 +508,7 @@ Type: Basic | NTLM | Negotiate
 Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -510,6 +526,7 @@ Type: ServerIdParameter
 Parameter Sets: RpcProxyServer
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -531,6 +548,7 @@ Type: External | Internal
 Parameter Sets: RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -546,6 +564,7 @@ Type: ServerIdParameter
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -561,6 +580,7 @@ Type: String
 Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -578,6 +598,7 @@ Type: Int32
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -595,6 +616,7 @@ Type: SwitchParameter
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -612,6 +634,7 @@ Type: SwitchParameter
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None

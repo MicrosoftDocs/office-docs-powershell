@@ -47,14 +47,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-UnifiedGroup
 ```
 
 This example returns a summary list of all Office 365 Groups.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
@@ -71,7 +71,7 @@ This example returns the following information about all Office 365 Groups:
 
 - Privacy
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
@@ -88,6 +88,7 @@ Type: String
 Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +116,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +144,7 @@ Type: UnifiedGroupIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -159,6 +162,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -191,6 +196,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -216,6 +222,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

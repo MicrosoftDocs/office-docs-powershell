@@ -26,7 +26,7 @@ Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>] [-Confi
 ```
 
 ## DESCRIPTION
-Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Office 365. For more information, see Controlling your data in Office 365 using Customer Key (https://aka.ms/customerkey).
+Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Office 365. For more information, see [Controlling your data in Office 365 using Customer Key](https://aka.ms/customerkey).
 
 You can assign a data encryption policy to a mailbox by using the DataEncryptionPolicy parameter on the Set-Mailbox cmdlet in Exchange Online PowerShell.
 
@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-DataEncryptionPolicy
 ```
 
 This example returns a summary list of all data encryption policies in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-DataEncryptionPolicy -Identity "Europe Mailboxes"
 ```
@@ -62,6 +62,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -113,6 +116,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -39,14 +39,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-InformationBarrierRecipientStatus -Identity meganb
 ```
 
 This example returns the information barrier policy information for the user meganb.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw
 ```
@@ -75,6 +75,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 0
 Default value: None
@@ -106,6 +107,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None

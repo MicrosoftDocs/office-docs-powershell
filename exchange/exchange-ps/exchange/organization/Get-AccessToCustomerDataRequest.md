@@ -32,21 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-AccessToCustomerDataRequest
 ```
 
 This example returns a summary list of all customer lockbox request.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-AccessToCustomerDataRequest -ApprovalStatus Pending
 ```
 
 This example returns a summary list of all customer lockbox requests that have the status value Pending.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-AccessToCustomerDataRequest -RequestId EXSR123456 | Format-List
 ```
@@ -71,6 +71,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +93,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

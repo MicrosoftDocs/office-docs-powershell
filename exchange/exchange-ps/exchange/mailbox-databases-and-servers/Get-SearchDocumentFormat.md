@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-SearchDocumentFormat
 ```
 
 This example retrieves a list of all file formats supported by Exchange Search.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-SearchDocumentFormat docx | Format-List *
 ```
@@ -55,6 +55,7 @@ Type: SearchDocumentFormatId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

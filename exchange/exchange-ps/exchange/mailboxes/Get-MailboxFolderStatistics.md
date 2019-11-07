@@ -44,28 +44,28 @@ The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-Mailbo
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-MailboxFolderStatistics -Identity contoso\chris
 ```
 
 This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
 ```
 
 This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
 ```
 
 This example uses the Archive switch to view the statistics for Ayla's archive.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
 ```
@@ -102,6 +102,7 @@ Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -114,6 +115,7 @@ Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: AuditLog
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -129,6 +131,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: AuditLog
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +167,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +185,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +245,7 @@ Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +263,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +279,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +297,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

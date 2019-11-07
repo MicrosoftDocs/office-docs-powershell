@@ -127,28 +127,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-ExchangeCertificate -Server Mailbox01
 ```
 
 This example returns a summary list of all Exchange certificates and pending certificate requests on the server named Mailbox01.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List
 ```
 
 This example returns detailed information for the specified certificate.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List *
 ```
 
 This example returns all available information for the specified certificate.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Get-ExchangeCertificate -DomainName mail.contoso.com
 ```
@@ -167,6 +167,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +183,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +207,7 @@ Type: ExchangeCertificateIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -220,6 +223,7 @@ Type: X509Certificate2
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +251,7 @@ Type: ServerIdParameter
 Parameter Sets: Instance, Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -264,6 +269,7 @@ Type: String
 Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None

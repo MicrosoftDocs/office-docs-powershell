@@ -49,7 +49,7 @@ Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a targe
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5,6ac794ca-2697-4137-8754-d2a78ae47d93 -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
 ```
@@ -64,7 +64,7 @@ This example creates a new application access policy with the following settings
 
 - Description: Engineering Group Policy
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
 ```
@@ -81,7 +81,7 @@ This example creates a new application access policy with the following settings
 
 
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
 ```
@@ -110,6 +110,7 @@ Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +128,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +155,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +175,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +191,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +207,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

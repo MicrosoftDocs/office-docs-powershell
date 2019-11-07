@@ -51,7 +51,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active
 ```
@@ -74,6 +74,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 0
 Default value: None
@@ -89,6 +90,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Type:
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +126,7 @@ Type: String
 Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +146,7 @@ Type:
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +167,7 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

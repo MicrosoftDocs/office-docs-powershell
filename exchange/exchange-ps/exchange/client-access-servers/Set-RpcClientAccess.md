@@ -32,7 +32,7 @@ Set-RpcClientAccess -Server <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-Outlook 2007 isn't supported in Exchange 2016, so you shouldn't see Outlook connections at or below version 12.Y.Z. However, you should monitor the RPC Client Access log to see the client versions that are connecting to your Exchange servers before you block any client versions.
+Outlook 2007 isn't supported in Exchange 2016 or later, so you shouldn't see Outlook connections at or below version 12.Y.Z. However, you should monitor the RPC Client Access log to see the client versions that are connecting to your Exchange servers before you block any client versions.
 
 To block Outlook versions for specific mailboxes, use the Set-CASMailbox cmdlet.
 
@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 14.0.0-14.32767.65535
 ```
 
 This example prevents Outlook Anywhere connections by Outlook 2010 clients on the server named MBX01.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 ```
@@ -74,6 +74,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +104,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +124,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +140,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +160,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +178,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +194,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

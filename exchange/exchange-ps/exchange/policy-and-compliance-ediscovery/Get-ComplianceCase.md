@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-ComplianceCase
 ```
 
 This example returns a summary list of all eDiscovery cases in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-ComplianceCase -Identity "Contoso Legal" | Format-List
 ```
@@ -58,6 +58,7 @@ Type: eDiscovery | DSR
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: eDiscovery
@@ -73,6 +74,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Type: ComplianceCaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -107,6 +110,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

@@ -51,7 +51,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-PopSubscription "Ayla Contoso" -Mailbox "Ayla Kol" -LeaveOnServer $false
 ```
@@ -74,6 +74,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +94,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +126,7 @@ Type: SmtpAddress
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +142,7 @@ Type: $true | $false
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +158,7 @@ Type: SwitchParameter
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +174,7 @@ Type: Basic | Spa
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +192,7 @@ Type: SecureString
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +208,7 @@ Type: Int32
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -215,6 +224,7 @@ Type: None | Ssl | Tls
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +240,7 @@ Type: Fqdn
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +256,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +272,7 @@ Type: $true | $false
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +308,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -312,6 +326,7 @@ Type: SwitchParameter
 Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +344,7 @@ Type: String
 Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -344,6 +360,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -31,14 +31,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-DlpSensitiveInformationType
 ```
 
 This example lists all the sensitive information types defined for your organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-DlpSensitiveInformationType -Identity "Credit Card Number" | Format-List
 ```
@@ -59,6 +59,7 @@ Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None

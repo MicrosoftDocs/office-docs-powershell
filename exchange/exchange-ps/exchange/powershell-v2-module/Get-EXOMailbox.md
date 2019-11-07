@@ -62,14 +62,14 @@ By default, this cmdlet returns a summary list (a minimum set of properties) of 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-EXOMailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all mailboxes in the organization, and includes the default set of minimum output properties. To return additional properties, use the Properties and/or PropertySets parameters.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-EXOMailbox -PropertySets Archive
 ```
@@ -77,7 +77,7 @@ Get-EXOMailbox -PropertySets Archive
 This example returns the Properties that are defined in Archive property set. For a complete list of these properties, see [Get-EXOMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailbox-property-sets).
 
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-EXOMailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
 ```
@@ -88,7 +88,7 @@ This example returns a summary list of all mailboxes in the organization, and in
 
 - The Name and DistinguishedName properties.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Get-EXOMailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias
 ```
@@ -115,6 +115,7 @@ Type: String
 Parameter Sets: Anr
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +131,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +147,7 @@ Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +175,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +203,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 0
 Default value: None
@@ -218,6 +223,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +243,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -264,6 +271,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +295,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +313,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -359,6 +369,7 @@ Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -398,6 +409,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -413,6 +425,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -430,6 +443,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -445,6 +459,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

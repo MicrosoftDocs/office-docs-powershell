@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-AntiPhishRule
 ```
 
 This example returns a summary list of all antiphishing rules in your organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
 ```
@@ -59,6 +59,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 0
 Default value: None
@@ -74,6 +75,7 @@ Type: Enabled | Disabled
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None

@@ -29,21 +29,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-RemoteDomain
 ```
 
 This example returns a summary list of all remote domains in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-RemoteDomain -Identity Contoso | Format-List
 ```
 
 This example returns detailed information for the remote domain named Contoso.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-RemoteDomain | Where {$_.TNEFEnabled -eq $false}
 ```
@@ -64,6 +64,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +86,7 @@ Type: RemoteDomainIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None

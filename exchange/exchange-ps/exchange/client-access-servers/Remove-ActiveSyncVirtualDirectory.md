@@ -34,21 +34,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync -Confirm $true
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso after confirmation is given.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Remove-ActiveSyncVirtualDirectory contoso\EAS
 ```
@@ -73,6 +73,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -92,6 +93,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +125,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

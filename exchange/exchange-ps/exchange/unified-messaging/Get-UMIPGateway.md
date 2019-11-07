@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-UMIPGateway | Format-List
 ```
 
 This example displays a formatted list of all the UM IP gateways in the Active Directory forest.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-UMIPGateway -Identity MyUMIPGateway
 ```
 
 This example displays the properties for the UM IP gateway MyUMIPGateway.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-UMIPGateway -IncludeSimulator $true
 ```
@@ -68,6 +68,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +84,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -98,6 +100,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -51,14 +51,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-ImapSubscription "Fabrikam IMAP" -Mailbox "Kim Akers" -DisplayName "Kim's Fabrikam Mail"
 ```
 
 This example modifies the display name of the IMAP subscription Fabrikam IMAP that's configured in the cloud-based mailbox of the user Kim Akers.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Set-ImapSubscription "Brian Contoso Mail" -Mailbox "Brian Johnson" -IncomingServer imap.contoso.com -Force
 ```
@@ -81,6 +81,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -100,6 +101,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +133,7 @@ Type: SmtpAddress
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: $true | $false
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +165,7 @@ Type: SwitchParameter
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +181,7 @@ Type: Basic | Ntlm
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +199,7 @@ Type: SecureString
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +215,7 @@ Type: Int32
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +231,7 @@ Type: None | Ssl | Tls
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +247,7 @@ Type: Fqdn
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +263,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +299,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +317,7 @@ Type: SwitchParameter
 Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +335,7 @@ Type: String
 Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -336,6 +351,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

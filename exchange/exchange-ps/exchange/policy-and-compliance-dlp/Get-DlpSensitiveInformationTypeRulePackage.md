@@ -32,14 +32,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-DlpSensitiveInformationTypeRulePackage
 ```
 
 This example returns a summary list of all sensitive information type rule packages in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-DlpSensitiveInformationTypeRulePackage -Identity "Microsoft Rule Package" | Format-List
 ```
@@ -62,6 +62,7 @@ Type: SensitiveInformationTypeRuleCollectionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None

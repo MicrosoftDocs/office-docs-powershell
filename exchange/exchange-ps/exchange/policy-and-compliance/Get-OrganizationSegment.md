@@ -37,14 +37,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-OrganizationSegment | Format-List Name,UserGroupFilter
 ```
 
 This example returns a summary list of all organization segments.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-OrganizationSegment -Identity "Engineering Group"
 ```
@@ -67,6 +67,7 @@ Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 0
 Default value: None

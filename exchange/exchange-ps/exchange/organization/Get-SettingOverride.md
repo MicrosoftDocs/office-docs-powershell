@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-SettingOverride | Format-List Name,Reason,ComponentName,SectionName,Parameters,Server
 ```
 
 This example displays a summary list of all setting override objects.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-SettingOverride -Identity "IM Server Integration"
 ```
@@ -57,6 +57,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +79,7 @@ Type: SettingOverrideIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None

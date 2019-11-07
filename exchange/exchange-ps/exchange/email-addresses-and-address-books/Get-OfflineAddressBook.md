@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-OfflineAddressBook
 ```
 
 This example returns a summary list of all existing OABs.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-OfflineAddressBook -Identity "\Default Offline Address Book" | Format-List
 ```
 
 This example returns detailed information about the OAB named Default Offline Address Book.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-OfflineAddressBook | Format-List Name,AddressLists,GeneratingMailbox,GUID
 ```
@@ -84,6 +84,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +102,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Type: OfflineAddressBookIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None

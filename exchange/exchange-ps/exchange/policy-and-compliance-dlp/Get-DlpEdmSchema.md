@@ -29,14 +29,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-DlpEdmSchema
 ```
 
 This example returns a summary list of all DLP EDM schemas in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-DlpEdmSchema -Identity "Schema for Patient Records"
 ```
@@ -57,6 +57,7 @@ Type: EdmStorageIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 0
 Default value: None

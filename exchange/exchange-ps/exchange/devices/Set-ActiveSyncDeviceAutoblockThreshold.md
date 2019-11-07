@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges" BehaviorTypeIncidenceLimit 2 -BehaviorTypeIncidenceDuration 1440 -DeviceBlockDuration 1440 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
 This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "RecentCommands" BehaviorTypeIncidenceLimit 5 -BehaviorTypeIncidenceDuration 720 -DeviceBlockDuration 720 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
@@ -58,6 +58,7 @@ Type: ActiveSyncDeviceAutoblockThresholdIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -73,6 +74,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +142,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +158,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

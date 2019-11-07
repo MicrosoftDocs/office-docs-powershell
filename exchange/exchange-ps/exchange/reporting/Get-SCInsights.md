@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-SCInsights
 ```
 
 This example returns all insights data.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-SCInsights -EndDate (Get-Date "3/3/2018 9:30 AM").ToUniversalTime()
 ```
@@ -71,6 +71,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

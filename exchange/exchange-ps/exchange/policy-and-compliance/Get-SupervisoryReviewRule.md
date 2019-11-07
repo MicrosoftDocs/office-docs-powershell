@@ -30,21 +30,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-SupervisoryReviewRule
 ```
 
 This example returns a summary list of all supervisory review rules.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-SupervisoryReviewRule -Identity "EU Brokers Rule" | Format-List
 ```
 
 This example returns detailed information for the supervisory review rule named EU Brokers Rule.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-SupervisoryReviewRule -Policy "EU Brokers Policy"
 ```
@@ -67,6 +67,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -88,6 +89,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-TransportAgent
 ```
 
 This example displays a summary list of all transport agents installed on all Exchange servers in your organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-TransportAgent "Transport Rule Agent" -TransportService Hub | Format-List
 ```
@@ -56,6 +56,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Type: TransportAgentObjectId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -96,6 +98,7 @@ Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

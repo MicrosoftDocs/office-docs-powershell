@@ -34,21 +34,21 @@ This cmdlet returns an error if the user requests a verification code more than 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith"
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
 ```
@@ -69,6 +69,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +123,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -136,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -51,28 +51,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-UMActiveCalls
 ```
 
 This example displays the details of all active calls on the local Mailbox server.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-UMActiveCalls -Server MyUMServer
 ```
 
 This example displays the details of all active calls on the Mailbox server MyUMServer.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-UMActiveCalls -IPGateway MyUMIPGateway
 ```
 
 This example displays the details of all active calls being processed by the UM IP gateway MyUMIPGateway.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Get-UMActiveCalls -DialPlan MyUMDialPlan
 ```
@@ -91,6 +91,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: DialPlan
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -108,6 +109,7 @@ Type: UMServer
 Parameter Sets: ServerInstance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +128,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: UMIPGateway
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -141,6 +144,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +170,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
