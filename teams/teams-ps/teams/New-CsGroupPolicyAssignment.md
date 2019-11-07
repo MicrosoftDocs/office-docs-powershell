@@ -22,11 +22,14 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 ```
 
 ## DESCRIPTION
-This cmdlet will assign a policy to a group.  The group can be specified by object id or by email/SIP address.
+This cmdlet will assign a policy to a group.  The policy assignment will then be propagated to the members of the group in accordance with the rules for group policy inheritance.  If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group.  If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest priority.
 
-The priority is used to determine which policy a user should inherit as their effective policy if they are a member of two or more groups that each have a policy of the same type assigned (and the user has not been directly assigned a policy of the same type).
+The group policy assignment is set at the time a policy is being assigned to a group and is relative to other group policy assignments of the same policy type.  For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be priority 1 while the other will be priority 2.
 
-It’s helpful to think of priority as determining the position of each policy assignment in an ordered list, from highest priority to lowest priority.  In fact, priority can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest priority.  When assigning a policy to a group, set the priority to be the position in the list where you want the new group policy assignment to be.  If a priority is not specified, the policy assignment will be given the lowest priority.
+It’s helpful to think of priority as determining the position of each policy assignment in an ordered list, from highest priority to lowest priority.  In fact, priority can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest priority.  When assigning a policy to a group, set the priority to be the position in the list where you want the new group policy assignment to be.  If a priority is not specified, the policy assignment will be given the lowest priority, corresponding to the end of the list.
+
+Group policy assignment is currently limited to the following policy types:
+TeamsCallingPolicy, TeamsCallParkPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy
 
 ## EXAMPLES
 
