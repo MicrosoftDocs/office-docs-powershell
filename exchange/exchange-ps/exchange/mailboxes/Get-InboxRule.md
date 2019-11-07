@@ -21,13 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-InboxRule [[-Identity] <InboxRuleIdParameter>] [-DescriptionTimeFormat <String>]
- [-DescriptionTimeZone <ExTimeZoneValue>] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-IncludeHidden] [-BypassScopeCheck] [-SweepRules] [<CommonParameters>]
+Get-InboxRule [[-Identity] <InboxRuleIdParameter>]
+ [-DescriptionTimeFormat <String>]
+ [-DescriptionTimeZone <ExTimeZoneValue>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-IncludeHidden]
+ [-BypassScopeCheck]
+ [-SweepRules]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+
+**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Azure Active Directory.
 
 ## EXAMPLES
 
@@ -69,7 +77,7 @@ The DescriptionTimeZone parameter specifies time zone that's used for time value
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 
@@ -109,9 +117,9 @@ The Identity parameter specifies the Inbox rule that you want to view. You can u
 
 - RuleIdentity property (for example, 16752869479666417665).
 
-- Exchange Online: \<mailbox alias\>\\\<RuleIdentity\> (for example, rzaher\\16752869479666417665.
+- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
 
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleIdentity\> (for example, contoso.com/Users/Rick Zaher\\16752869479666417665.
+- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter

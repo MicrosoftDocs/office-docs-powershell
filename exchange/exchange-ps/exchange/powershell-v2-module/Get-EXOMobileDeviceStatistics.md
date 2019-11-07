@@ -133,6 +133,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -UniversalOutlook
 The UniversalOutlook switch filters the results by Mail and Calendar devices. You don't need to specify a value with this switch.
 
