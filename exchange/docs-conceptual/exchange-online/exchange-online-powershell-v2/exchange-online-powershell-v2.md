@@ -214,13 +214,15 @@ In contrast, the same **Get-Mailbox** cmdlet would return at least 230 propertie
 
 For details about the property sets that are available in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md) or the individual EXO V2 module cmdlet reference topics.
 
-EXO Cmdlets also provide a way to retreive all properties for a cmdlet. Use ProperySets parameter with "All" value to get the same. 
-Below example returns all the properties in the "All" property Set for the 10 mailboxes - 
+EXO cmdlets also provide a way to retreive all properties for an object by using the _ProperySets_ parameter with the value `All`.
+
+The following example returns all properties for the 10 mailboxes: 
 
 ```PowerShell
 Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
-**Note**: Using PropertySets parameter with "All" is highly discouraged as it slows down the cmdlet and reduces the reliability as well. Always use PropertySets and Properties parameter to retreive only the requires attributes.
+> [!NOTE]
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
 
 
