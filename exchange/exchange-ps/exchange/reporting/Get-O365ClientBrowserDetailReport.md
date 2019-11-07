@@ -53,15 +53,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-O365ClientBrowserDetailReport -WindowsLiveID john@contoso.com -StartDate 05/01/2016 -EndDate 05/03/2016
 ```
 
 This example retrieves the browser details for the user john@contoso.com between May 1, 2016 and May 3, 2016.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-O365ClientBrowserDetailReport -Browser Chrome
 ```
 
@@ -87,6 +87,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +103,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +121,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +137,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +155,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +171,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

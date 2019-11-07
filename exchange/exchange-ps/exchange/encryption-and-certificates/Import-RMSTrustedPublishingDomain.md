@@ -61,8 +61,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-Content -Encoding byte -Path "C:\My Documents\Contoso.xml" -ReadCount 0)) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
@@ -90,6 +90,7 @@ Type: Uri
 Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +108,7 @@ Type: Byte[]
 Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Type: Uri
 Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -139,6 +142,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -156,6 +160,7 @@ Type: SecureString
 Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -171,6 +176,7 @@ Type: SwitchParameter
 Parameter Sets: RMSOnline
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -190,6 +196,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +216,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +234,7 @@ Type: Uri
 Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +252,7 @@ Type: Uri
 Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +278,7 @@ Type: SwitchParameter
 Parameter Sets: RefreshTemplates, RMSOnline
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +294,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

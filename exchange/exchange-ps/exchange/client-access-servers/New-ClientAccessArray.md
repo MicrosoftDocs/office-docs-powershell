@@ -34,15 +34,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ClientAccessArray -Fqdn casarray01.contoso.com -Site "Redmond"
 ```
 
 This example creates the Client Access array with the FQDN casarray01.contoso.com in the Active Directory site named Redmond. Because the Name parameter isn't used, the name of the Client Access array is casarray01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ClientAccessArray -Fqdn casarrayap.contoso.com -Site "China" -Name "China CAS Array"
 ```
 
@@ -58,6 +58,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: AdSiteIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +118,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +136,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -147,6 +152,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None

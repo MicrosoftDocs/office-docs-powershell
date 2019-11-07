@@ -48,43 +48,43 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport1
 ```
 
 This example returns the default statistics for the second export request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport | Export-CSV \\SERVER01\ExportRequest_Reports\Tony_Exportstats.csv
 ```
 
 This example returns statistics for Tony Smith's mailbox and exports the report to a .csv file.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxExportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
 ```
 
 This example returns additional information about the export request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command. (The export request was created using the New-MailboxExportRequest.)
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-MailboxExportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
 In Exchange Server 2010, this example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests that are currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-MailboxExportRequestStatistics -RequestQueue MailboxDatabase01
 ```
 
 This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Get-MailboxExportRequest -Status Failed | Get-MailboxExportRequestStatistics -IncludeReport | Format-List > AllExportReports.txt
 ```
 
@@ -102,6 +102,7 @@ Type: MailboxExportRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -121,6 +122,7 @@ Type: Fqdn
 Parameter Sets: MRSInstance
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +148,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -161,6 +164,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +180,7 @@ Type: String
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -193,6 +198,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +214,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +230,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +246,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +262,7 @@ Type: Guid
 Parameter Sets: MRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

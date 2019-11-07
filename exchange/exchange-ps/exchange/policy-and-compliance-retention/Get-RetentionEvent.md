@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RetentionEvent
 ```
 
 This example returns a summary list of all retention events.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RetentionEvent -Identity x | Format-List
 ```
 
@@ -53,6 +53,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -68,6 +69,7 @@ Type: EwsStoreObjectIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None

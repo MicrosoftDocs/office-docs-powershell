@@ -67,43 +67,43 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolder
 ```
 
 This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
 ```
 
 This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
 ```
 
@@ -121,6 +121,7 @@ Type: SwitchParameter
 Parameter Sets: GetChildren
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: Recurse
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -155,6 +157,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +173,7 @@ Type: PublicFolderIdParameter
 Parameter Sets: GetChildren, Recurse, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -189,6 +193,7 @@ Type: SwitchParameter
 Parameter Sets: LostAndFound
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -224,6 +229,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +247,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +263,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +279,7 @@ Type: Unlimited
 Parameter Sets: GetChildren, Recurse, LostAndFound
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +305,7 @@ Type: ServerIdParameter
 Parameter Sets: GetChildren, Recurse, Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None

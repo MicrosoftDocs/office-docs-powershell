@@ -31,15 +31,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.add("pilarp@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
 This example adds user pilarp@contoso.com to the compliance security filter named Ottawa Users Filter without affecting other users assigned to the filter.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.remove("annb@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
@@ -55,6 +55,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -80,6 +81,7 @@ Type: Unknown | Preview | Export | Purge | Search | All
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +101,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +141,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +157,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +183,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +199,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

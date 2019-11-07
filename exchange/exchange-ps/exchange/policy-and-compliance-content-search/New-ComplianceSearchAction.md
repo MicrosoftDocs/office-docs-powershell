@@ -97,28 +97,28 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
 This example creates a preview search action for the content search named Project X.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
 This example creates an export search action for the content search named Project X.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
 
 This example deletes the search results returned by a content search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 
 ```
 New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip
@@ -138,6 +138,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -155,6 +156,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +178,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +198,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -216,6 +220,7 @@ Type: $true | $false
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -249,6 +254,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -270,6 +276,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +292,7 @@ Type: String[]
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +308,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -323,6 +332,7 @@ Type: ComplianceDataTransferFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -338,6 +348,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -359,6 +370,7 @@ Type: $true | $false
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -374,6 +386,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +406,7 @@ Type: String
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -412,6 +426,7 @@ Type: String
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -429,6 +444,7 @@ Type: SwitchParameter
 Parameter Sets: Preview
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +459,7 @@ Notes:
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 
-- You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see Search for and delete email messages in your Office 365 organization (https://docs.microsoft.com/office365/securitycompliance/search-for-and-delete-messages-in-your-organization).
+- You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Office 365 organization](https://docs.microsoft.com/office365/securitycompliance/search-for-and-delete-messages-in-your-organization).
 
 - Unindexed items aren't removed from mailboxes when you use this switch.
 
@@ -454,6 +470,7 @@ Type: SwitchParameter
 Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -473,6 +490,7 @@ Type: ComplianceDestroyType
 Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -490,6 +508,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -507,6 +526,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -524,6 +544,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -539,6 +560,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -554,6 +576,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -583,6 +606,7 @@ Type: ComplianceSearchActionScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -606,6 +630,7 @@ Type: ComplianceExportScope
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -625,6 +650,7 @@ Type: ComplianceScopeDetail[]
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -644,6 +670,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -671,6 +698,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -686,6 +714,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -703,6 +732,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

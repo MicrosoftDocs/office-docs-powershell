@@ -33,8 +33,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Stop-HistoricalSearch -JobId f9c66f83-b5c8-4a0c-91f4-a38376f74182
 ```
 
@@ -50,6 +50,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None

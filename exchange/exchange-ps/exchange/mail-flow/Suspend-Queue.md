@@ -43,15 +43,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Suspend-Queue -Filter "NextHopDomain -eq "contoso.com" -and Status -eq 'Retry'"
 ```
 
 This example suspends processing on all queues holding messages for delivery to the domain contoso.com and that currently have a status of Retry.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Suspend-Queue -Server Server1.contoso.com -Filter "MessageCount -gt 100"
 ```
 
@@ -69,6 +69,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -84,6 +85,7 @@ Type: QueueIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -103,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +133,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

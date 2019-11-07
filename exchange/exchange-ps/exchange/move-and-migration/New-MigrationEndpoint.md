@@ -199,29 +199,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MigrationEndpoint -Name Endpoint1 -ExchangeRemoteMove -Autodiscover -EmailAddress tonysmith@contoso.com -Credentials (Get-Credential contoso\tonysmith)
 ```
 
 This example creates an endpoint for remote moves by using the Autodiscover parameter to detect the settings.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MigrationEndpoint -Name Endpoint2 -ExchangeRemoteMove -RemoteServer MRSServer.contoso.com -Credentials (Get-Credential Contoso.com\Administrator)
 ```
 
 This example creates an endpoint for remote moves by specifying the settings manually.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $Credentials = Get-Credential; New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH-AutoDiscover -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example creates an Outlook Anywhere migration endpoint by using the Autodiscover parameter to detect the connection settings to the on-premises organization. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The Get-Credential cmdlet is used to obtain the credentials for an on-premises account that has the necessary administrative privileges in the domain and that can access the mailboxes that will be migrated. When prompted for the user name, you can use either the email address or the domain\\username format for the administrator account. This account can be the same one that is specified by the EmailAddress parameter.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH_Manual -ExchangeServer EXCH-01-MBX.contoso.com -RPCProxyServer EXCH-02-CAS.contoso.com -Credentials (Get-Credential administrator@contoso.com) -EmailAddress annb@contoso.com
 ```
 
@@ -229,15 +229,15 @@ This example creates an Outlook Anywhere migration endpoint by specifying the co
 
 It's recommended that you use a migration endpoint created with connection settings that are automatically discovered (see Example 3) because the Autodiscover service will be used to connect to each user mailbox in the migration batch. If you manually specify the connection settings for the endpoint and a user mailbox isn't located on the server specified by the ExchangeServer parameter, the migration for that user will fail. This is important if you have multiple on-premises Outlook Anywhere servers. Otherwise, you may need to create different migration endpoints that correspond to each on-premises server.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -Port 993 -Security Ssl
 ```
 
 This example creates an IMAP migration endpoint. The value for the RemoteServer parameter specifies the FQDN of the IMAP server that hosts the mailboxes that will be migrated. The endpoint is configured to use port 993 for SSL encryption.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 New-MigrationEndpoint -IMAP -Name IMAP_TLS_Endpoint -RemoteServer imap.contoso.com -Port 143 -Security Tls -MaxConcurrentMigrations 50 -MaxConcurrentIncrementalSyncs 10
 ```
 
@@ -253,6 +253,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -268,6 +269,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -283,6 +285,7 @@ Type: SwitchParameter
 Parameter Sets: Compliance
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -300,6 +303,7 @@ Type: PSCredential
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -312,6 +316,7 @@ Type: PSCredential
 Parameter Sets: ExchangeRemoteMove, PSTImport
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -327,6 +332,7 @@ Type: SmtpAddress
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -339,6 +345,7 @@ Type: SmtpAddress
 Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -356,6 +363,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -371,6 +379,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -388,6 +397,7 @@ Type: SwitchParameter
 Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -405,6 +415,7 @@ Type: SwitchParameter
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -420,6 +431,7 @@ Type: SwitchParameter
 Parameter Sets: PSTImport
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -437,6 +449,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder, MrsProxyPublicFolder
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -454,6 +467,7 @@ Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -469,6 +483,7 @@ Type: SwitchParameter
 Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -488,6 +503,7 @@ Type: Fqdn
 Parameter Sets: ExchangeRemoteMove, PSTImport, IMAP, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -507,6 +523,7 @@ Type: Fqdn
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -519,6 +536,7 @@ Type: Fqdn
 Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -538,6 +556,7 @@ Type: Byte[]
 Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -555,6 +574,7 @@ Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -567,6 +587,7 @@ Type: String
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -584,6 +605,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: ExchangeOutlookAnywhere, IMAP, PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -603,6 +625,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -620,6 +643,7 @@ Type: Fqdn
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, ExchangeRemoteMove, PSTImport, IMAP, Gmail, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -639,6 +663,7 @@ Type: String
 Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -666,6 +691,7 @@ Type: Admin | FullAccess
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -681,6 +707,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -696,6 +723,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -713,6 +741,7 @@ Type: String
 Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -730,6 +759,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -747,6 +777,7 @@ Type: Int32
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -764,6 +795,7 @@ Type: None | Ssl | Tls
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -779,6 +811,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -820,6 +853,7 @@ Type: MailboxIdParameter
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -835,6 +869,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
