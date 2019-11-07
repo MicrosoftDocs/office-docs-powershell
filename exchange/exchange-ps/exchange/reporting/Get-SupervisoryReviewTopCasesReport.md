@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SupervisoryReviewTopCasesReport | Sort-Object Policy | Format-Table Policy,Pending,Total,Date
 ```

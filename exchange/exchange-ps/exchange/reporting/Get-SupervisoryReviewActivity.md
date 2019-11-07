@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | fl
 PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction
@@ -38,7 +38,7 @@ PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusA
 
 This example returns all the supervisory review activities for specified supervision policy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | select-object PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction | Export-csv 'C:\Temp\SupervisoryReviewActivity.csv'
 ```
