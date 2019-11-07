@@ -55,14 +55,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
 This example sets the Severity of the detection to High.
 
 ### Example 2
-```
+```powershell
 Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:$true -AggregationType SimpleAggregation -Threshold 10 -TimeWindow 120
 ```
 

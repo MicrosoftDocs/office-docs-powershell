@@ -32,7 +32,7 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for contoso.com" -Name "Address rewrite entry for northwindtraders.com" -InternalAddress northwindtraders.com
 ```
 
@@ -43,7 +43,7 @@ Changes the original email addresses that are affected by the address rewrite en
 Changes the Name value to "Address rewrite entry for northwindtraders.com".
 
 ### Example 2
-```
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for all contoso.com email addresses" -OutboundOnly $true
 ```
 

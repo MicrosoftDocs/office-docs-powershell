@@ -52,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ImapSubscription "Fabrikam IMAP" -Mailbox "Kim Akers" -DisplayName "Kim's Fabrikam Mail"
 ```
 
 This example modifies the display name of the IMAP subscription Fabrikam IMAP that's configured in the cloud-based mailbox of the user Kim Akers.
 
 ### Example 2
-```
+```powershell
 Set-ImapSubscription "Brian Contoso Mail" -Mailbox "Brian Johnson" -IncomingServer imap.contoso.com -Force
 ```
 

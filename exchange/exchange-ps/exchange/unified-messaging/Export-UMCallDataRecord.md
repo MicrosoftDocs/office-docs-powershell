@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Export-UMCallDataRecord -Date 02/01/12
 ```
 
 This example returns all Unified Messaging call data records on February 1, 2018, and exports them to a CSV file.
 
 ### Example 2
-```
+```powershell
 Export-UMCallDataRecord -Date 02/01/12 -UMDialPlan MyUMDialPlan
 ```
 

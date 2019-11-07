@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-GlobalMonitoringOverride
 ```
 
 This example returns a summary list of all global monitoring overrides that are configured in your organization.
 
 ### Example 2
-```
+```powershell
 Get-GlobalMonitoringOverride | Format-List
 ```
 

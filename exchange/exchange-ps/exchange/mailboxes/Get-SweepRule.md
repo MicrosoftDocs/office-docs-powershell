@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SweepRule
 ```
 
 This example returns a summary list of all Sweep rules.
 
 ### Example 2
-```
+```powershell
 Get-SweepRule -Mailbox julia@contoso.com
 ```
 
 This example returns a summary list of all Sweep rules in the specified mailbox.
 
 ### Example 3
-```
+```powershell
 Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 

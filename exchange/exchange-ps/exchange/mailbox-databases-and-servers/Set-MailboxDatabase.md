@@ -66,14 +66,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxDatabase "Mailbox Database01" -DeletedItemRetention 7.00:00:00
 ```
 
 This example sets the length of time that deleted items are retained. If a specific mailbox has its own item retention set, that value is used instead of this value, which is set on the mailbox database.
 
 ### Example 2
-```
+```powershell
 Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccessServer or ClientAccessServerArrayID>
 ```
 

@@ -31,14 +31,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-DlpCompliancePolicy -Identity 7e640345-1a7f-4f4e-9c17-681c070ed5e2
 ```
 
 This example removes a DLP policy specified by its GUID.
 
 ### Example 2
-```
+```powershell
 Remove-DlpCompliancePolicy -Identity "PII Main Policy"
 ```
 

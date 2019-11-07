@@ -56,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
 ```
 
@@ -73,7 +73,7 @@ For more information about pipelining and the Where cmdlet, see the following to
 - [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
 ### Example 2
-```
+```powershell
 New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
 ```
 

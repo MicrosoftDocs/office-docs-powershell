@@ -38,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
 ```
 
 This example associates a user with a username of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
 
 ### Example 2
-```
+```powershell
 $b = Get-ThrottlingPolicy ITStaffPolicy;
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```

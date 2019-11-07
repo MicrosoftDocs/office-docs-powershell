@@ -31,7 +31,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ComplianceSearchAction -Identity "Case 1234_Preview"
 ```
 

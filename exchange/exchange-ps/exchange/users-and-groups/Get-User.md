@@ -66,28 +66,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-User -ResultSize unlimited
 ```
 
 This example returns a summary list of all users in your organization.
 
 ### Example 2
-```
+```powershell
 Get-User -Identity "Coy Damon" | Format-List
 ```
 
 This example returns detailed information for the user named Coy Damon.
 
 ### Example 3
-```
+```powershell
 Get-User -OrganizationalUnit "Marketing"
 ```
 
 This example retrieves information about users in the Marketing OU.
 
 ### Example 4
-```
+```powershell
 Get-User -Filter "Title -like '*Manager'"
 ```
 

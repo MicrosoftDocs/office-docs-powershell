@@ -134,28 +134,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Connect-Mailbox -Database "Mailbox Database" -Identity "John Evans"
 ```
 
 This example connects John Evans' disconnected mailbox. The example doesn't specify a user to connect the mailbox to, so the command attempts to find a uniquely matched user object.
 
 ### Example 2
-```
+```powershell
 Connect-Mailbox -Identity "John Evans" -Database "MBXDB02" -LinkedDomainController FabrikamDC01 -LinkedMasterAccount john@fabrikam.com
 ```
 
 This example connects a linked mailbox.
 
 ### Example 3
-```
+```powershell
 Connect-Mailbox -Identity "CAR001" -Database "MBXResourceDB" -Equipment -User "CAR001"
 ```
 
 This example connects an equipment mailbox.
 
 ### Example 4
-```
+```powershell
 Connect-Mailbox -Identity "ConfRm212" -Database "MBXResourceDB" -Room -User "Conference Room 212"
 ```
 

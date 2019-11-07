@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
 ```
 
 This example creates the Edge Subscription file. It should be run on your Edge Transport server.
 
 ### Example 2
-```
+```powershell
 [byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
@@ -51,7 +51,7 @@ This example imports the Edge Subscription file generated in Example 1 to the Ac
 The first command reads the data from the Edge Subscription file and stores it in a temporary variable as a byte-encoded data object. The second command completes the Edge subscription process.
 
 ### Example 3
-```
+```powershell
 New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
 ```
 

@@ -52,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-OrganizationRelationship -Identity "Fourth Coffee" -FreeBusyAccessLevel LimitedDetails
 ```
 
 This example modifies the free/busy access level to LimitedDetails, which includes time, subject, and location.
 
 ### Example 2
-```
+```powershell
 Set-OrganizationRelationship -Identity "Contoso" -Enabled $false
 ```
 

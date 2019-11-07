@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ManagementScope "Redmond Servers"
 ```
 
 This example removes the Redmond Servers scope.
 
 ### Example 2
-```
+```powershell
 Get-ManagementScope -Orphan | Remove-ManagementScope -WhatIf
 ```
 

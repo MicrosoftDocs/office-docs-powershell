@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Disable-UMIPGateway -Identity MyUMIPGateway
 ```
 
 This example disables the UM IP gateway MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
 
 ### Example 2
-```
+```powershell
 Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
 ```
 

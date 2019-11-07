@@ -46,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AvailabilityReportOutage -ReportDate:"2009-12-02" -Identity: "OWA Service" -Comment:"Overriding particular outage" -DowntimeMinutes:40
 ```
 

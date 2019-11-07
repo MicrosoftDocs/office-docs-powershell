@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-TextMessagingAccount -Identity tony@contoso.com
 ```
 
 This example returns the text messaging settings for Tony's mailbox.
 
 ### Example 2
-```
+```powershell
 $mbx = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited
 $mbx | foreach {Get-TextMessagingAccount -Identity $_.Alias | where {($_.NotificationPhoneNumberVerified -eq $true)} | Format-Table Identity,NotificationPhoneNumber}
 ```

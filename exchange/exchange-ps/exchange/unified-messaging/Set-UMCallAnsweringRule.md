@@ -54,14 +54,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-UMCallAnsweringRule -Mailbox tonysmith -Name MyCallAnsweringRule -Priority 2
 ```
 
 This example sets the priority to 2 on the existing call answering rule MyCallAnsweringRule that exists in the mailbox for tonysmith.
 
 ### Example 2
-```
+```powershell
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1,4255550123,," -Priority 2 -CallersCanInterruptGreeting $true -Mailbox tonysmith
 ```
 
@@ -74,14 +74,14 @@ This example performs the following actions on the call answering rule MyCallAns
 - Sets the call answering rule to allow callers to interrupt the greeting.
 
 ### Example 3
-```
+```powershell
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith@contoso.com -ScheduleStatus 0x8
 ```
 
 This example changes the free/busy status to Out of Office on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and sets the priority to 2.
 
 ### Example 4
-```
+```powershell
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -ScheduleStatus 0x4 -KeyMappings "1,1,Receptionist,,,,,45678,","5,2,Urgent Issues,23456,23,45671,50,,"
 ```
 
@@ -98,7 +98,7 @@ If the caller reaches the voice mail for the user and the status of the user is 
 - Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first and then 45671.
 
 ### Example 5
-```
+```powershell
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "1,0,,"
 ```
 
@@ -109,7 +109,7 @@ This example performs the following actions on the call answering rule MyCallAns
 - If the caller reaches voice mail during working hours, the caller is asked to call back later.
 
 ### Example 6
-```
+```powershell
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "3,4,8:00,12:00"
 ```
 

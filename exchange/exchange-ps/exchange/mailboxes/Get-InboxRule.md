@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-InboxRule -Mailbox Joe@Contoso.com
 ```
 
 This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
 
 ### Example 2
-```
+```powershell
 Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
 ```
 

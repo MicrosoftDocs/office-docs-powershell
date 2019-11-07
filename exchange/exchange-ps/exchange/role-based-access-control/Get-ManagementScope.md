@@ -35,28 +35,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ManagementScope Redmond*
 ```
 
 This example retrieves all the management scopes that start with the string Redmond.
 
 ### Example 2
-```
+```powershell
 Get-ManagementScope "Redmond Servers Scope" | Format-List
 ```
 
 This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 3
-```
+```powershell
 Get-ManagementScope -Orphan
 ```
 
 This example retrieves a list of management scopes that aren't associated with any role assignments.
 
 ### Example 4
-```
+```powershell
 Get-ManagementScope -Exclusive $True
 ```
 

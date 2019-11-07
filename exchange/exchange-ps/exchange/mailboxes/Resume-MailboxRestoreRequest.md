@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-MailboxRestoreRequest -Identity "kweku\RestoreFromDB01"
 ```
 
 This example resumes the restore request with the identity kweku\\RestoreFromDB01.
 
 ### Example 2
-```
+```powershell
 Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
 ```
 

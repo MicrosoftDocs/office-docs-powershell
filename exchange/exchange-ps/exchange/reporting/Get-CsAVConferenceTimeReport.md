@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CsAVConferenceTimeReport -ReportType Monthly -StartDate 06/01/2015 -EndDate 06/30/2015
 ```
 

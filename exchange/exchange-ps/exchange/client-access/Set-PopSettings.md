@@ -45,35 +45,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-PopSettings -Server "MBX01" -UnencryptedOrTLSBindings 10.0.0.0:110
 ```
 
 This example configures the unencrypted or STARTTLS encrypted POP3 connection to the server named MBX01 by using the local IP address 10.0.0.0 on TCP port 110.
 
 ### Example 2
-```
+```powershell
 Set-PopSettings -ProtocolLogEnabled $true -LogFileLocation "C:\Pop3Logging"
 ```
 
 This example turns on POP3 protocol logging. It also changes the POP3 protocol logging directory to C:\\Pop3Logging.
 
 ### Example 3
-```
+```powershell
 Set-PopSettings -LogPerFileSizeQuota 2MB
 ```
 
 This example changes the POP3 protocol logging to create a new log file when a log file reaches 2 megabytes (MB).
 
 ### Example 4
-```
+```powershell
 Set-PopSettings -LogPerFileSizeQuota 0 -LogFileRollOverSettings Hourly
 ```
 
 This example changes the POP3 protocol logging to create a new log file every hour.
 
 ### Example 5
-```
+```powershell
 Set-PopSettings -X509CertificateName mail.contoso.com
 ```
 

@@ -34,7 +34,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Add-eDiscoveryCaseAdmin -User michelle@contoso.com
 ```
 

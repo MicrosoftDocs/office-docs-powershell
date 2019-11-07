@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AntiPhishRule
 ```
 
 This example returns a summary list of all antiphishing rules in your organization.
 
 ### Example 2
-```
+```powershell
 Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
 ```
 

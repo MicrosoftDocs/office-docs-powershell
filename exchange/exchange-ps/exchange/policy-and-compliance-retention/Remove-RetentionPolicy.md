@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-RetentionPolicy -Identity "Business Critical"
 ```
 
 This example removes the retention policy Business Critical.
 
 ### Example 2
-```
+```powershell
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
 ```
 
 This example removes the retention policy Business Critical and suppresses the confirmation prompt.
 
 ### Example 3
-```
+```powershell
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
 ```
 

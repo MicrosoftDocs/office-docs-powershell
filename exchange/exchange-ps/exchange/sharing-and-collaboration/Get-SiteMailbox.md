@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite
 ```
 
 This example returns the default information about the site mailbox ContentSite, which includes the site name, when the site mailbox was closed, and the SharePoint URL.
 
 ### Example 2
-```
+```powershell
 Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite | Format-List
 ```
 
 This example returns the full information about the site mailbox ContentSite.
 
 ### Example 3
-```
+```powershell
 Get-SiteMailbox -BypassOwnerCheck -DeletedSiteMailbox | Remove-Mailbox -Confirm:$false
 ```
 

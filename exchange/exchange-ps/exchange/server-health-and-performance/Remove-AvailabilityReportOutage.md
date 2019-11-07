@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-AvailabilityReportOutage -ReportDate:"2009-12-02" -SiteName:"Site1"
 ```
 

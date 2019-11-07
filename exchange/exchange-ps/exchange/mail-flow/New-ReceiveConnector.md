@@ -373,7 +373,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ReceiveConnector -Name Test -Usage Custom -Bindings 10.10.1.1:25 -RemoteIPRanges 192.168.0.1-192.168.0.24
 ```
 

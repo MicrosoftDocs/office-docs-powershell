@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-ApplicationAccessPolicy -Identity "Engineering Staff" -AppID 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5
 ```
 
 This example tests access to the specified app for the group "Engineering Staff".
 
 ### Example 2
-```
+```powershell
 Test-ApplicationAccessPolicy -Identity RandomUser9911@AppPolicyTest2.com -AppId e7e4dbfc-046-4074-9b3b-2ae8f144f59b
 ```
 

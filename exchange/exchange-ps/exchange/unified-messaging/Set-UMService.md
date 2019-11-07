@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-UMService -Identity MyUMServer -IPAddressFamily Any -UMStartupMode Dual
 ```
 
@@ -47,14 +47,14 @@ This example performs the following actions:
 - Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up using both TCP and TLS mode.
 
 ### Example 2
-```
+```powershell
 Set-UMService -Identity MyUMServer -DialPlans $null
 ```
 
 This example removes the Mailbox server MyUMServer from all UM dial plans.
 
 ### Example 3
-```
+```powershell
 Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com:5061 -UMStartupMode TLS
 ```
 

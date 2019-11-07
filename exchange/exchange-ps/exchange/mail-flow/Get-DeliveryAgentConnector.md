@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DeliveryAgentConnector "Contoso X.400 Connector" | Format-List
 ```
 
 This example reads the configuration of the delivery agent connector named Contoso X.400 Connector from Active Directory and displays all of its properties in a list format.
 
 ### Example 2
-```
+```powershell
 Get-DeliveryAgentConnector | Format-Table Name,DeliveryProtocol
 ```
 

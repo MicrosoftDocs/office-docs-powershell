@@ -59,14 +59,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Add-PublicFolderAdministrativePermission -User Chris -Identity \MyPublicFolder -AccessRights ViewInformationStore
 ```
 
 This example grants the user Chris the ViewInformationStore permission on the public folder MyPublicFolder.
 
 ### Example 2
-```
+```powershell
 Add-PublicFolderAdministrativePermission -User Chris -Identity \MyPublicFolder -AccessRights ViewInformationStore -Deny
 ```
 

@@ -30,7 +30,7 @@ A trusted publishing domain contains the settings needed to use RMS features in 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RMSTrustedPublishingDomain | Format-List
 ```
 

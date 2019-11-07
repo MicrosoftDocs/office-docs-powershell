@@ -60,14 +60,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-ExchangeSearch -Identity john@contoso.com
 ```
 
 This example tests Exchange Search results for the mailbox database on which the specified mailbox resides.
 
 ### Example 2
-```
+```powershell
 Test-ExchangeSearch -Identity john@contoso.com -Verbose
 ```
 

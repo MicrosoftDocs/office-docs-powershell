@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ComplianceRetentionEvent
 ```
 
 The example returns a summary list of all compliance retention events.
 
 ### Example 2
-```
+```powershell
 Get-ComplianceRetentionEvent -Identity "Case 1234"
 ```
 

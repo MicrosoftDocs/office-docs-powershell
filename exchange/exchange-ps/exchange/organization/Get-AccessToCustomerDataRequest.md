@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AccessToCustomerDataRequest
 ```
 
 This example returns a summary list of all customer lockbox request.
 
 ### Example 2
-```
+```powershell
 Get-AccessToCustomerDataRequest -ApprovalStatus Pending
 ```
 
 This example returns a summary list of all customer lockbox requests that have the status value Pending.
 
 ### Example 3
-```
+```powershell
 Get-AccessToCustomerDataRequest -RequestId EXSR123456 | Format-List
 ```
 

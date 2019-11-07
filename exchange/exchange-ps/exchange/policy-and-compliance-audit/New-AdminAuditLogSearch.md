@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-AdminAuditLogSearch -Name "Mailbox Quota Change Audit" -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2018 -EndDate 02/12/2018 -StatusMailRecipients david@contoso.com, chris@contoso.com
 ```
 
@@ -51,7 +51,7 @@ This example finds all the administrator audit log entries that match the follow
 - EndDate: 02/12/2018
 
 ### Example 2
-```
+```powershell
 New-AdminAuditLogSearch -ExternalAccess $true -StartDate 07/25/2018 -EndDate 10/24/2018 -StatusMailRecipients admin@contoso.com,pilarp@contoso.com -Name "Datacenter admin audit log"
 ```
 

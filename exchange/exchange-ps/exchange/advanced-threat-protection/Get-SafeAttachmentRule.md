@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SafeAttachmentRule
 ```
 
 This example returns a summary list of all Safe Attachments rules in your organization.
 
 ### Example 2
-```
+```powershell
 Get-SafeAttachmentRule -Identity "Research Department Attachment Rule" | Format-List
 ```
 

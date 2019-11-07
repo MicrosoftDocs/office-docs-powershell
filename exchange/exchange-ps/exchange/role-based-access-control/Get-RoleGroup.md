@@ -38,28 +38,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RoleGroup
 ```
 
 This example retrieves a list of role groups.
 
 ### Example 2
-```
+```powershell
 Get-RoleGroup "Recipient Administrators" | Format-List
 ```
 
 This example retrieves the details for the Recipient Administrators role group.
 
 ### Example 3
-```
+```powershell
 Get-RoleGroup -ReadFromDomainController
 ```
 
 This example retrieves a list of role groups as seen by the domain controller closest to the user.
 
 ### Example 4
-```
+```powershell
 Get-RoleGroup -Filter "RoleGroupType -eq 'Linked'" | Format-Table Name, LinkedGroup
 ```
 

@@ -48,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Add-ResubmitRequest -Destination 5364aeea-6e6b-4055-8258-229b2c6ac9a2 -StartTime "06/01/2018 6:00 PM" -EndTime "06/02/2018 5:00 AM"
 ```
 

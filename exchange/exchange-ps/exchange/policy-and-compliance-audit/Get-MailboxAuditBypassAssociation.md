@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxAuditBypassAssociation -ResultSize unlimited
 ```
 
 This example retrieves all user or computer accounts configured for mailbox audit logging bypass.
 
 ### Example 2
-```
+```powershell
 Get-MailboxAuditBypassAssociation -Identity "Svc-MyApplication"
 ```
 

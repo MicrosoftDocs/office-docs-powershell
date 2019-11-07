@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-MailboxImportRequest -Identity kweku\MailboxImport1
 ```
 
 This example resumes the second import request for Kweku's mailbox kweku\\MailboxImport1
 
 ### Example 2
-```
+```powershell
 Get-MailboxImportRequest -Status Failed | Resume-MailboxImportRequest
 ```
 

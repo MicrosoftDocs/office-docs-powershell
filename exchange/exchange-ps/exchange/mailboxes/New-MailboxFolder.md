@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-MailboxFolder -Parent Tony:\Inbox -Name Personal
 ```
 
 This example creates the folder Personal under the Inbox folder of Tony's mailbox.
 
 ### Example 2
-```
+```powershell
 New-MailboxFolder -Parent Tony -Name Personal
 ```
 
 This example creates the folder Personal in the root folder hierarchy of Tony's mailbox.
 
 ### Example 3
-```
+```powershell
 New-MailboxFolder -Parent :\Inbox -Name Personal
 ```
 

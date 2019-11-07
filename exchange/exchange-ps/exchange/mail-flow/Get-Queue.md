@@ -54,28 +54,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Queue | Format-List
 ```
 
 This example displays detailed information for all queues on the Mailbox server on which the command is run.
 
 ### Example 2
-```
+```powershell
 Get-Queue -Filter "MessageCount -gt 100"
 ```
 
 This example lists the queues that contain more than 100 messages.
 
 ### Example 3
-```
+```powershell
 Get-Queue Server1\contoso.com | Format-List
 ```
 
 This example displays detailed information for a specific queue that exists on the Mailbox server named Server1.
 
 ### Example 4
-```
+```powershell
 Get-Queue -Exclude Internal
 ```
 

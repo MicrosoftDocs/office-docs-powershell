@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "https://www.contoso.com/powershell"
 ```
 

@@ -56,14 +56,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailContact
 ```
 
 This example returns a summary list of all mail contacts.
 
 ### Example 2
-```
+```powershell
 Get-MailContact -Identity Arlene | Format-List
 ```
 

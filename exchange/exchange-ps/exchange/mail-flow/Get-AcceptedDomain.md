@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AcceptedDomain
 ```
 
 This example lists all the accepted domains in your organization.
 
 ### Example 2
-```
+```powershell
 Get-AcceptedDomain | Where{$_.DomainType -eq 'Authoritative'}
 ```
 

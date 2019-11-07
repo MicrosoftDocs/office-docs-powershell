@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AuthRedirect
 ```
 
 This example shows a summary list of all the OAuth redirection objects.
 
 ### Example 2
-```
+```powershell
 Get-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE | Format-List
 ```
 

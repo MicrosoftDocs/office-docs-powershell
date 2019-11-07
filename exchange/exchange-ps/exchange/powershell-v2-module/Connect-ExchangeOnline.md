@@ -46,7 +46,7 @@ This cmdlet allows you to create a remote PowerShell connection to your Exchange
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 UserCredential = Get-Credential
 Connect-ExchangeOnline -Credential $UserCredential
 ```

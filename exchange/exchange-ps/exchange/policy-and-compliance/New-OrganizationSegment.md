@@ -34,21 +34,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"
 ```
 
 In this example, a segment called HR is defined using HR, a value in the Department attribute.
 
 ### Example 2
-```
+```powershell
 New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"
 ```
 
 In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
 
 ### Example 3
-```
+```powershell
 New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"
 ```
 

@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
 ```
 
 This example removes the Recipients\_Seattle Recipient Management role assignment.
 
 ### Example 2
-```
+```powershell
 Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
 ```
 

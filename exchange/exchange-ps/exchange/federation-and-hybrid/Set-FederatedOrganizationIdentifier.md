@@ -39,21 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-FederatedOrganizationIdentifier -DelegationFederationTrust "Microsoft Federation Gateway" -AccountNamespace "Contoso.com" -Enabled $true
 ```
 
 This example configures a federated organization identifier for the Exchange organization.
 
 ### Example 2
-```
+```powershell
 Set-FederatedOrganizationIdentifier -Enabled $false
 ```
 
 This example temporarily disables federation for the Exchange organization.
 
 ### Example 3
-```
+```powershell
 Set-FederatedOrganizationIdentifier -Enabled $true
 ```
 

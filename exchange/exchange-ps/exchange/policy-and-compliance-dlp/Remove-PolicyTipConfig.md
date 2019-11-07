@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-PolicyTipConfig en\NotifyOnly
 ```
 
 This example removes the custom English Policy Tip for the action value NotifyOnly.
 
 ### Example 2
-```
+```powershell
 Get-PolicyTipConfig -Locale ru | Remove-PolicyTipConfig
 ```
 

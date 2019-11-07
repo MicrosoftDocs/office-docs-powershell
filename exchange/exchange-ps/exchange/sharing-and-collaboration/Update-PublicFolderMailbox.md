@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Update-PublicFolderMailbox -Identity PF_marketing
 ```
 
 This example updates the public folder hierarchy on the public folder mailbox PF\_marketing.
 
 ### Example 2
-```
+```powershell
 Get-Mailbox -PublicFolder | Update-PublicFolderMailbox
 ```
 

@@ -68,42 +68,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PublicFolder
 ```
 
 This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
 
 ### Example 2
-```
+```powershell
 Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
 ```
 
 This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
 
 ### Example 3
-```
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
 
 ### Example 4
-```
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
 
 ### Example 5
-```
+```powershell
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
 
 ### Example 6
-```
+```powershell
 Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
 ```
 

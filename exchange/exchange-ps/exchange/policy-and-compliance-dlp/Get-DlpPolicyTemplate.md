@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpPolicyTemplate
 ```
 
 This example returns a summary list of all DLP policy templates.
 
 ### Example 2
-```
+```powershell
 Get-DlpPolicyTemplate GLBA | Format-List
 ```
 

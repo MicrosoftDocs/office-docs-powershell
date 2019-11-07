@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ComplianceRetentionEventType | Format-Table Name,Priority
 ```
 
 This example returns a summary list of all retention event types
 
 ### Example 2
-```
+```powershell
 Get-ComplianceRetentionEventType -Identity "Fabrikam Project" -LoadTag
 ```
 

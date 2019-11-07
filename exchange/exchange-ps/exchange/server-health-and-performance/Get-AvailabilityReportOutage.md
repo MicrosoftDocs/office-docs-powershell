@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AvailabilityReportOutage
 ```
 
 This example returns all outages that occurred the previous day. This cmdlet always returns outages for one day.
 
 ### Example 2
-```
+```powershell
 Get-AvailabilityReportOutage -ReportDate:"2009-12-05" -Identity:"Outlook*"
 ```
 

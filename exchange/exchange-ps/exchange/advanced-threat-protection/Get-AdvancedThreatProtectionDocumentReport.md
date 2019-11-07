@@ -55,7 +55,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AdvancedThreatProtectionTrafficReport -Organization contoso.com -StartDate "4/26/2018" -EndDate "4/28/2018" | Format-Table
 ```
 

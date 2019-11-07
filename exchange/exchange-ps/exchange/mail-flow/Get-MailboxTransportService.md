@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxTransportService
 ```
 
 This example displays a list of all Mailbox servers in your organization.
 
 ### Example 2
-```
+```powershell
 Get-MailboxTransportService Mailbox01 | Format-List
 ```
 

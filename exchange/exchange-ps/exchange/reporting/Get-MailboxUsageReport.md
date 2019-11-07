@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxUsageReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 

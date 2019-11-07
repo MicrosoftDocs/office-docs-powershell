@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-MoveRequest -Identity "Tony@contoso.com"
 ```
 
 This example resumes the move request of Tony Smith's mailbox.
 
 ### Example 2
-```
+```powershell
 Get-MoveRequest -MoveStatus Failed | Resume-MoveRequest
 ```
 
 This example resumes any failed move requests.
 
 ### Example 3
-```
+```powershell
 Get-MoveRequest -MoveStatus Suspended | Get-MoveRequestStatistics |Where {$_.Message -like "*resume after 10 P.M."} | Resume-MoveRequest
 ```
 

@@ -36,14 +36,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity "Marketing Events 2015"
 ```
 
 This example returns the event information for the site mailbox by using its display name Marketing Events 2015.
 
 ### Example 2
-```
+```powershell
 Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity events2015@contoso.com -SendMeEmail
 ```
 

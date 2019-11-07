@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ThrottlingPolicy | Format-List
 ```
 
 This example returns the settings for all throttling policies.
 
 ### Example 2
-```
+```powershell
 Get-ThrottlingPolicy -Identity ThrottlingPolicy2 | Format-List
 ```
 

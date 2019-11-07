@@ -57,21 +57,21 @@ In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter s
 
 If you use these parameters in scheduled commands or scripts, we recommend that you review them and make any necessary changes.
 
-For more information, see Messaging Records Management (MRM) and Retention Policies in Office 365 (https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
+For more information, see [KB4032361](https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Start-ManagedFolderAssistant -Identity "Chris"
 ```
 
 This example processes the mailbox for a user with the alias Chris.
 
 ### Example 2
-```
+```powershell
 Get-Mailbox -Anr Chr -DomainController DC01 | Start-ManagedFolderAssistant
 ```
 

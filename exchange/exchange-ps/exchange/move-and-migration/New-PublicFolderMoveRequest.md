@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-PublicFolderMoveRequest -Folders \DeveloperReports\CustomerEngagements -TargetMailbox DeveloperReports01
 ```
 
 This example begins the move request for the public folder \\CustomerEngagements from public folder mailbox DeveloperReports to DeveloperReports01.
 
 ### Example 2
-```
+```powershell
 New-PublicFolderMoveRequest -Folders \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability -TargetMailbox DeveloperReports01
 ```
 
@@ -58,7 +58,7 @@ This example begins the move request for public folders under the \\Dev public f
 You can also move a branch of public folders by using the Move-PublicFolderBranch.ps1 script.
 
 ### Example 3
-```
+```powershell
 $folders = Get-PublicFolder \ -Recurse -Mailbox PUB1 -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity};New-PublicFolderMoveRequest -TargetMailbox PUB2 -Folders $folders
 ```
 

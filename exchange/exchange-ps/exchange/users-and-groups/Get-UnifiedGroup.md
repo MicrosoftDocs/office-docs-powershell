@@ -48,14 +48,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UnifiedGroup
 ```
 
 This example returns a summary list of all Office 365 Groups.
 
 ### Example 2
-```
+```powershell
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
 
@@ -72,7 +72,7 @@ This example returns the following information about all Office 365 Groups:
 - Privacy
 
 ### Example 3
-```
+```powershell
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
 

@@ -63,14 +63,14 @@ By default, this cmdlet returns a summary list (a minimum set of properties) of 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-EXOMailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all mailboxes in the organization, and includes the default set of minimum output properties. To return additional properties, use the Properties and/or PropertySets parameters.
 
 ### Example 2
-```
+```powershell
 Get-EXOMailbox -PropertySets Archive
 ```
 
@@ -78,7 +78,7 @@ This example returns the Properties that are defined in Archive property set. Fo
 
 
 ### Example 3
-```
+```powershell
 Get-EXOMailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
 ```
 
@@ -89,7 +89,7 @@ This example returns a summary list of all mailboxes in the organization, and in
 - The Name and DistinguishedName properties.
 
 ### Example 4
-```
+```powershell
 Get-EXOMailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias
 ```
 

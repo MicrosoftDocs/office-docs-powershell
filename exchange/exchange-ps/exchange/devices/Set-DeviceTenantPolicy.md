@@ -50,7 +50,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-DeviceTenantPolicy -Enabled $false
 ```
 

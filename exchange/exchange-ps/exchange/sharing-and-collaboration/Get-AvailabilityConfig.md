@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AvailabilityConfig
 ```
 
 This example retrieves the accounts that are trusted in the cross-forest exchange of free/busy information.
 
 ### Example 2
-```
+```powershell
 Get-AvailabilityConfig -Identity <AvailabilityConfig Value>
 ```
 

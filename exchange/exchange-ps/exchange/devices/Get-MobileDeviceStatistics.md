@@ -54,14 +54,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MobileDeviceStatistics -Identity TonySmith
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
 
 ### Example 2
-```
+```powershell
 $UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'" | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
@@ -70,7 +70,7 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 **Note**: For more information about OPath filter syntax, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ### Example 3
-```
+```powershell
 Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
 ```
 

@@ -70,28 +70,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DynamicDistributionGroup
 ```
 
 This example returns a summary list of all dynamic distribution groups in your organization.
 
 ### Example 2
-```
+```powershell
 Get-DynamicDistributionGroup -Identity "Marketing Department" | Format-List
 ```
 
 This example returns detailed information about the dynamic distribution group named Marketing Department.
 
 ### Example 3
-```
+```powershell
 Get-DynamicDistributionGroup -Anr *research* | Format-Table Name, ManagedBy -Auto
 ```
 
 This example returns all dynamic distribution groups whose names contain the string "research" and shows the group owners.
 
 ### Example 4
-```
+```powershell
 $FTE = Get-DynamicDistributionGroup "Full Time Employees"; Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
 ```
 

@@ -57,14 +57,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Search-MessageTrackingReport -Identity "David Jones" -Recipients "wendy@contoso.com"
 ```
 
 This example searches the message tracking report for messages sent from one user to another. This example returns the message tracking report for a message that David Jones sent to Wendy Richardson.
 
 ### Example 2
-```
+```powershell
 Search-MessageTrackingReport -Identity "Cigdem Akin" -Sender "joe@contoso.com" -BypassDelegateChecking -DoNotResolve
 ```
 

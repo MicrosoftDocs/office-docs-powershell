@@ -41,14 +41,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RetentionCompliancePolicy
 ```
 
 This example displays summary information for all retention policies in your organization.
 
 ### Example 2
-```
+```powershell
 Get-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -DistributionDetail | Format-List
 ```
 

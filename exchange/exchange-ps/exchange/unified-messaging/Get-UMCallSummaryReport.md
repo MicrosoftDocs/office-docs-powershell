@@ -72,28 +72,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMCallSummaryReport -GroupBy Total
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization.
 
 ### Example 2
-```
+```powershell
 Get-UMCallSummaryReport -GroupBy Month
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization over the last 12 months.
 
 ### Example 3
-```
+```powershell
 Get-UMCallSummaryReport -GroupBy Day
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization over the last 90 days.
 
 ### Example 4
-```
+```powershell
 Get-UMCallSummaryReport -GroupBy Month -UMDialPlan MyUMDialPlan
 ```
 

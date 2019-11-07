@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example removes the mobile device mailbox policy SalesPolicy.
 
 ### Example 2
-```
+```powershell
 Remove-ActiveSyncMailboxPolicy -Identity "Management" -Confirm:$false -Force $true
 ```
 

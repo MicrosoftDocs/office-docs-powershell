@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainsToIPAddresses $true
 ```
 
@@ -49,7 +49,7 @@ This example creates the Inbound connector named Contoso Inbound Connector with 
 - It only accepts mail from contoso.com, and from the IP range 192.168.0.1/25. It rejects mail from contoso.com if it originates from any other IP address.
 
 ### Example 2
-```
+```powershell
 New-InboundConnector -Name "Contoso Inbound Secure Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainsToIPAddresses $true -RequireTLS $true -TlsSenderCertificateName *.contoso.com
 ```
 

@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Train
 ```
 
 This example sets user Joe Healy's mailbox to train.
 
 ### Example 2
-```
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -CrossValidate -NumberOfSegments 15
 ```
 
 This example sets user Joe Healy's mailbox to cross-validate and sets the number of segments for cross-validation to 15.
 
 ### Example 3
-```
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Clear
 ```
 

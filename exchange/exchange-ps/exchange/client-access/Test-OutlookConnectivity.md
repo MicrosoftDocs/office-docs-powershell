@@ -108,35 +108,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-OutlookConnectivity -ProbeIdentity OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe
 ```
 
 In Exchange 2013 or later, this example runs an MAPI over HTTP OutlookRpcSelfTestProbe on the Mailbox server that you're currently connected to.
 
 ### Example 2
-```
+```powershell
 Test-OutlookConnectivity "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
 ```
 
 In Exchange 2013 or later, this example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
 
 ### Example 3
-```
+```powershell
 Test-OutlookConnectivity -Protocol HTTP -GetDefaultsFromAutoDiscover $true
 ```
 
 In Exchange 2010, this example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
 
 ### Example 4
-```
+```powershell
 Test-OutlookConnectivity -RpcProxyTestType:Internal -RpcTestType:Server
 ```
 
 In Exchange 2010, this example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
 
 ### Example 5
-```
+```powershell
 Test-OutlookConnectivity -RpcProxyServer RpcProxySrv01 -RpcProxyAuthenticationType Basic -RpcClientAccessServer CAS01 -RpcAuthenticationType NTLM
 ```
 
@@ -539,7 +539,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. Valid values are:
 
-- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, httpS://CAS01).
+- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, https://CAS01).
 
 - External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
 

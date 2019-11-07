@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-Group -Identity "Legal Department" -Universal -Notes "verified"
 ```
 
@@ -47,7 +47,7 @@ Change the group's scope to universal.
 Add a Notes parameter value of verified.
 
 ### Example 2
-```
+```powershell
 Set-Group -Identity "Human Resources" -IsHierarchicalGroup $true -SeniorityIndex 1
 ```
 

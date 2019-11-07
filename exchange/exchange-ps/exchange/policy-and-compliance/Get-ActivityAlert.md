@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ActivityAlert | Format-List Disabled,Name,Description,Operation,UserId,NotifyUser
 ```
 
 This example returns a summary list of all activity alerts.
 
 ### Example 2
-```
+```powershell
 Get-ActivityAlert -Identity "All Mailbox Activities"
 ```
 

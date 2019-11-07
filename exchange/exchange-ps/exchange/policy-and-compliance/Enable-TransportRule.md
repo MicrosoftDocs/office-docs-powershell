@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-TransportRule -Identity "Disclaimer-Finance"
 ```
 
 This example enables the transport rule named Disclaimer Finance.
 
 ### Example 2
-```
+```powershell
 Enable-TransportRule -Identity "Require approval of messages to contoso.com" -Mode Audit
 ```
 

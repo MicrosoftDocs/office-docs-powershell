@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
 ### Example 2
-```
+```powershell
 Insert example commands for example 2.
 ```
 

@@ -53,14 +53,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxLocation -User chris@contoso.com
 ```
 
 In Exchange Online, this example returns the mailbox location information for the user chris@contoso.com.
 
 ### Example 2
-```
+```powershell
 Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
 ```
 

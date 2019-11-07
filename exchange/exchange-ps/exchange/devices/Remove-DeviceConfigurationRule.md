@@ -40,7 +40,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-DeviceConfigurationRule "Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}"
 ```
 

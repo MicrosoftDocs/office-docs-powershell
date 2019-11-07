@@ -31,14 +31,14 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-AddressRewriteEntry "Address rewrite entry for contoso.com"
 ```
 
 This example removes a specific address rewrite entry.
 
 ### Example 2
-```
+```powershell
 Get-AddressRewriteEntry | Where {$_.InternalAddress -like '*contoso.com'} | Remove-AddressRewriteEntry
 ```
 

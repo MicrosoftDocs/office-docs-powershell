@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-OutlookProvider -Name MyOABUrl
 ```
 
 This example creates the AutoDiscoverConfig object MyOABUrl.
 
 ### Example 2
-```
+```powershell
 New-OutlookProvider -DomainController DC1 -Name Autodiscover1
 ```
 

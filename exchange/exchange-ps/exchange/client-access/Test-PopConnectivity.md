@@ -60,14 +60,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-PopConnectivity -ClientAccessServer Contoso12 -MailboxCredential (Get-Credential contoso\kweku)
 ```
 
 This example tests the client POP3 connectivity for the server named Contoso12 by using the credentials for the user contoso\\kweku.
 
 ### Example 2
-```
+```powershell
 Test-PopConnectivity -ClientAccessServer Contoso12
 ```
 

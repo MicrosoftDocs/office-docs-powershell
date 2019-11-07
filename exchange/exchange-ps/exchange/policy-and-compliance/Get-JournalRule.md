@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-JournalRule
 ```
 
 This example retrieves all journal rules configured in your organization.
 
 ### Example 2
-```
+```powershell
 Get-JournalRule "Brokerage Communications" | Format-List
 ```
 

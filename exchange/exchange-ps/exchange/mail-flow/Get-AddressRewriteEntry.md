@@ -31,14 +31,14 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AddressRewriteEntry
 ```
 
 This example returns a summary listing of all address rewrite entries.
 
 ### Example 2
-```
+```powershell
 Get-AddressRewriteEntry "Address rewrite entry for contoso.com" | Format-List
 ```
 

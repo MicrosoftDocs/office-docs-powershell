@@ -72,14 +72,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RetentionPolicyTag "AllUsers-DeletedItems" -Comment "Items in the Deleted Items folder will be automatically deleted in 120 days"
 ```
 
 This example changes the comment for the AllUsers-DeletedItems retention policy tag.
 
 ### Example 2
-```
+```powershell
 Set-RetentionPolicyTag -Mailbox "Terry Adams" -OptionalInMailbox "ProjectA","ProjectB"
 ```
 

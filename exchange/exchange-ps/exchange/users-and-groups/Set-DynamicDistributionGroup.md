@@ -127,7 +127,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-DynamicDistributionGroup -Identity Developers -IncludedRecipients MailboxUsers -ConditionalCompany "Contoso" -ConditionalCustomAttribute1 "Internal"
 ```
 
@@ -140,7 +140,7 @@ Change the IncludedRecipients query filter to MailboxUsers.
 Add the value Internal to the ConditionalCustomAttribute1 attribute.
 
 ### Example 2
-```
+```powershell
 $extAtrValue="Contoso"
 Set-DynamicDistributionGroup -Identity Developers -RecipientFilter "ExtensionCustomAttribute1 -eq '$extAtrValue'"
 ```

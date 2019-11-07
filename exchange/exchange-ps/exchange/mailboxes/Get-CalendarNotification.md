@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CalendarNotification -Identity "TonySmith"
 ```
 
 This example returns the calendar notification settings for the user Tony Smith using the user's alias.
 
 ### Example 2
-```
+```powershell
 Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
 ```
 
 This example returns the calendar notification settings for the user Tony Smith.
 
 ### Example 3
-```
+```powershell
 Get-CalendarNotification -Identity "contoso\tonysmith"
 ```
 

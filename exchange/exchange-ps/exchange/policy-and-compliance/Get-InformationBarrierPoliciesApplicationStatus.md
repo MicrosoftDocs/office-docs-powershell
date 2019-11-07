@@ -38,14 +38,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-InformationBarrierPoliciesApplicationStatus
 ```
 
 This example returns the most recent application of information barrier policies by the Start-InformationBarrierPoliciesApplication cmdlet.
 
 ### Example 2
-```
+```powershell
 Get-InformationBarrierPoliciesApplicationStatus -All
 ```
 

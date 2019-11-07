@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-OnPremisesOrganization -Identity ExchangeMail | Format-List
 ```
 
 This example retrieves the on-premises organization settings for ExchangeMail using the Identity parameter.
 
 ### Example 2
-```
+```powershell
 Get-OnPremisesOrganization -DomainController 'mail.contoso.com' | Format-List
 ```
 

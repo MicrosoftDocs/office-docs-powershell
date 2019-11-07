@@ -45,14 +45,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
 ```
 
 This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
 
 ### Example 2
-```
+```powershell
 Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
 ```
 

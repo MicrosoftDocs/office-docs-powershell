@@ -44,14 +44,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-SystemMessage -DsnCode 5.3.5 -Language en -Internal $false -Text "The recipient email system can't process this email message. Please contact your system administrator for more information."
 ```
 
 This example creates a custom English NDR for the enhanced status code 5.3.5 for external senders.
 
 ### Example 2
-```
+```powershell
 New-SystemMessage -QuotaMessageType WarningMailbox -Language en -Text "Your mailbox has exceeded the warning limit specified by your email administrator. Please reduce the size of your mailbox."
 ```
 

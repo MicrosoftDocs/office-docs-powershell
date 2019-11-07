@@ -66,14 +66,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxSearch -Identity "Legal-ProjectX" -StartDate "01/01/2016"
 ```
 
 This example modifies the start date of a mailbox search.
 
 ### Example 2
-```
+```powershell
 Set-MailboxSearch -Identity "Legal-ProjectX" -AllPublicFolderSources $true
 ```
 

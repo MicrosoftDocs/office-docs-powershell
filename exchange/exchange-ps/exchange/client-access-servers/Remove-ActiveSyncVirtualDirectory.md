@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso.
 
 ### Example 2
-```
+```powershell
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync -Confirm $true
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso after confirmation is given.
 
 ### Example 3
-```
+```powershell
 Remove-ActiveSyncVirtualDirectory contoso\EAS
 ```
 

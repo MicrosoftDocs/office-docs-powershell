@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\DAGNetwork01 -ReplicationEnabled:$true
 ```
 
 This example enables the DAG network DAGNetwork01 in the DAG DAG1 for replication.
 
 ### Example 2
-```
+```powershell
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
 ```
 

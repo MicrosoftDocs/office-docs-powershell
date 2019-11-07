@@ -60,21 +60,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Search-MailboxAuditLog -Identity kwok -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
 This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
 ### Example 2
-```
+```powershell
 Search-MailboxAuditLog -Mailboxes kwok,bsmith -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
 This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's mailboxes for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
 ### Example 3
-```
+```powershell
 Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2016 -EndDate 3/1/2016 | Where-Object {$_.Operation -eq "HardDelete"}
 ```
 

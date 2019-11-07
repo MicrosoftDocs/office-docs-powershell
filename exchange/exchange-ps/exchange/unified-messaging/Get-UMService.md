@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMService
 ```
 
 This example displays a summary list of the Microsoft Exchange Unified Messaging service settings on all Exchange servers in the Active Directory forest.
 
 ### Example 2
-```
+```powershell
 Get-UMService -Identity MBX01 | Format-List
 ```
 

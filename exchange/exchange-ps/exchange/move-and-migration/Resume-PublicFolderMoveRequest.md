@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
 This example resumes the public folder move request \\PublicFolderMove.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMoveRequest -MoveStatus Failed | Resume-PublicFolderMoveRequest
 ```
 
 This example resumes failed public folder move requests.
 
 ### Example 3
-```
+```powershell
 Get-PublicFolderMoveRequest -MoveStatus Suspended | Get-PublicFolderMoveRequestStatistics |Where {$_.Message -like "*resume after 10 P.M."} | Resume-PublicFolderMoveRequest
 ```
 

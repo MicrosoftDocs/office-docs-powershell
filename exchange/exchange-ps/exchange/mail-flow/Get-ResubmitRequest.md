@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ResubmitRequest
 ```
 
 This example returns the details of all resubmit requests.
 
 ### Example 2
-```
+```powershell
 Get-ResubmitRequest 1
 ```
 

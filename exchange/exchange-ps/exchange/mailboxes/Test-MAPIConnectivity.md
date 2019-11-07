@@ -78,14 +78,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-MapiConnectivity -Server "Server01"
 ```
 
 This example tests connectivity to the server Server01.
 
 ### Example 2
-```
+```powershell
 Test-MapiConnectivity -Identity "midwest\john"
 ```
 

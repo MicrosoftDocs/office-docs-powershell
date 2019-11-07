@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-RetentionPolicy "Business General"
 ```
 
 This example creates the retention policy Business General without associating any retention policy tags.
 
 ### Example 2
-```
+```powershell
 New-RetentionPolicy "Business General" -RetentionPolicyTagLinks "General Business","Legal"
 ```
 

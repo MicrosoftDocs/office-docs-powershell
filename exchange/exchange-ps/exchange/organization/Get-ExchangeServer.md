@@ -44,14 +44,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ExchangeServer | Format-List
 ```
 
 This example returns a summary list of all the Exchange servers in the organization.
 
 ### Example 2
-```
+```powershell
 Get-ExchangeServer -Identity Mailbox01 | Format-List
 ```
 

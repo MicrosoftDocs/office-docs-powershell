@@ -31,21 +31,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SupervisoryReviewRule
 ```
 
 This example returns a summary list of all supervisory review rules.
 
 ### Example 2
-```
+```powershell
 Get-SupervisoryReviewRule -Identity "EU Brokers Rule" | Format-List
 ```
 
 This example returns detailed information for the supervisory review rule named EU Brokers Rule.
 
 ### Example 3
-```
+```powershell
 Get-SupervisoryReviewRule -Policy "EU Brokers Policy"
 ```
 

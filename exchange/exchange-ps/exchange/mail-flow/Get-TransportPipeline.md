@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-TransportPipeline
 ```
 
 This example returns a summary list of all agents in the transport pipeline that were involved in processing email messages since the last server or service restart.
 
 ### Example 2
-```
+```powershell
 Get-TransportPipeline | Format-List
 ```
 

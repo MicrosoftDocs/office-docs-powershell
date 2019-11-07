@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Update-FileDistributionService -Identity Server1 -Type "OAB"
 ```
 
 This example polls Server1 to check for updated OAB files for OABs associated with Server1.
 
 ### Example 2
-```
+```powershell
 Update-FileDistributionService -Identity Server1
 ```
 
 This example polls Server1 for changes to OAB, Group Metrics, and Unified Messaging files associated with Server1.
 
 ### Example 3
-```
+```powershell
 Update-FileDistributionService -Identity Server1 -Type GM
 ```
 

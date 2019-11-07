@@ -128,28 +128,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ExchangeCertificate -Server Mailbox01
 ```
 
 This example returns a summary list of all Exchange certificates and pending certificate requests on the server named Mailbox01.
 
 ### Example 2
-```
+```powershell
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List
 ```
 
 This example returns detailed information for the specified certificate.
 
 ### Example 3
-```
+```powershell
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List *
 ```
 
 This example returns all available information for the specified certificate.
 
 ### Example 4
-```
+```powershell
 Get-ExchangeCertificate -DomainName mail.contoso.com
 ```
 

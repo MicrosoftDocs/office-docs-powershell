@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-FederatedOrganizationIdentifier
 ```
 
 This example retrieves the Exchange organization's federated organization identifier.
 
 ### Example 2
-```
+```powershell
 Get-FederatedOrganizationIdentifier -IncludeExtendedDomainInfo
 ```
 

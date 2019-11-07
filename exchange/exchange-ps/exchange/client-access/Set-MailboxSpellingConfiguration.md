@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
 ```
 
 This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
 
 ### Example 2
-```
+```powershell
 Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
 ```
 

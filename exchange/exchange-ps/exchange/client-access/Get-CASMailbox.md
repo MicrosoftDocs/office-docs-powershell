@@ -66,7 +66,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CASMailbox "Jeff Hay"
 ```
 
@@ -83,14 +83,14 @@ This example returns the values of the following client access settings for the 
 - MapiEnabled
 
 ### Example 2
-```
+```powershell
 Get-CASMailbox tony@contoso.com | Format-List Imap*
 ```
 
 This example returns all IMAP4 settings for the user tony@contoso.com.
 
 ### Example 3
-```
+```powershell
 Get-CASMailbox chris@contoso.com | Format-List Ews*
 ```
 

@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -Name "CASArray"
 ```
 
 This example changes the names the name of the existing Client Access array named ContosoArray to CASArray.
 
 ### Example 2
-```
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -FQDN "casarrayeu.contoso.com"
 ```
 
 This example changes the fully qualified domain name of the existing Client Access array named ContosoArray to casarrayeu.contoso.com.
 
 ### Example 3
-```
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -Site "SiteEU"
 ```
 

@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-GlobalMonitoringOverride -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
 ```
 
 This example removes a global monitoring override of the ActiveDirectoryConnectivityConfigDCServerReboot responder in the Exchange health set.
 
 ### Example 2
-```
+```powershell
 Remove-GlobalMonitoringOverride -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
 ```
 

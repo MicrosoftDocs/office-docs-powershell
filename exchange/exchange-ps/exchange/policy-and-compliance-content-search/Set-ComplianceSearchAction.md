@@ -33,7 +33,7 @@ This cmdlet is available in the Mailbox Search role. By default, this role is as
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ComplianceSearchAction -Identity "Project X_Export" -ChangeExportKey
 ```
 

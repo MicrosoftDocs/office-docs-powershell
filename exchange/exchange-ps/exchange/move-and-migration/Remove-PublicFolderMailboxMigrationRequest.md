@@ -43,27 +43,27 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-PublicFolderMailboxMigrationRequest -Identity \PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e
 ```
 
 This example removes the specified public folder mailbox migration request.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
 ```
 
 This example returns public folder mailbox migration requests that don't have a target mailbox. To remove these orphaned migration requests, add " | Remove-PublicFolderMailboxMigrationRequest" to the end of the command.
 
 ### Example 3
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
 ```
 
 This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
 
-A sample script is provided here: (https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) to detect duplicate or orphaned public folder mailbox migration requests and also remove them.
+The sample script [Remove Duplicate public folder MRS Requests](https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) detects duplicate or orphaned public folder mailbox migration requests and also removes them.
 
 ## PARAMETERS
 

@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-SharingPolicy Fabrikam
 ```
 
 This example removes the sharing policy Fabrikam.
 
 ### Example 2
-```
+```powershell
 Remove-SharingPolicy -Identity Contoso -Confirm:$false
 ```
 

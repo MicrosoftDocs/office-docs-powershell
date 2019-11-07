@@ -39,7 +39,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ComplianceTag -Identity "HR Content" -RetentionDuration 2555 -Comment "Retain HR content for 7 years"
 ```
 

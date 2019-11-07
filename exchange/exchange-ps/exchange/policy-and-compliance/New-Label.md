@@ -37,7 +37,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-Label -DisplayName "My New label" -Name "New Label"
 ```
 

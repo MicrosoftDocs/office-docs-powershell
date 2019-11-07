@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxServer | Test-MRSHealth
 ```
 
 This example tests the health of the Mailbox Replication service on all Mailbox servers.
 
 ### Example 2
-```
+```powershell
 Test-MRSHealth MBX01
 ```
 

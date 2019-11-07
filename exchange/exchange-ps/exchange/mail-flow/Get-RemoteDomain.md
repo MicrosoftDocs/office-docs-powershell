@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RemoteDomain
 ```
 
 This example returns a summary list of all remote domains in the organization.
 
 ### Example 2
-```
+```powershell
 Get-RemoteDomain -Identity Contoso | Format-List
 ```
 
 This example returns detailed information for the remote domain named Contoso.
 
 ### Example 3
-```
+```powershell
 Get-RemoteDomain | Where {$_.TNEFEnabled -eq $false}
 ```
 

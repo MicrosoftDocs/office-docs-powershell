@@ -97,14 +97,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RemoteMailbox -Identity davids -Type Room
 ```
 
 This example configures the mailbox in the service that's associated with the specified mail user as a room resource mailbox. This example assumes that directory synchronization has been configured.
 
 ### Example 2
-```
+```powershell
 Set-RemoteMailbox -Identity kima -AcceptMessagesOnlyFrom davids,"Executive Team",bill@contoso.com
 ```
 

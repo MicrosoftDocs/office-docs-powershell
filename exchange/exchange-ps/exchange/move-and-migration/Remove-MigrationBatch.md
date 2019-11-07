@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MigrationBatch -Identity Cutover1
 ```
 
 This example removes the migration batch Cutover1.
 
 ### Example 2
-```
+```powershell
 Remove-MigrationBatch -Identity LocalMove1 -Force
 ```
 

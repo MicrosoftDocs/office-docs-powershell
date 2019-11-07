@@ -43,14 +43,14 @@ Don't confuse Get-EXOMailboxFolderStatistics cmdlet (folders) with the Get-EXOMa
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-EXOMailboxFolderStatistics -Identity admin@contoso.com
 ```
 
 This example returns statistics for all mailbox folders. Default is FolderScope All.
 
 ### Example 2
-```
+```powershell
 Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeAnalysis -IncludeOldestAndNewestItems
 ```
 

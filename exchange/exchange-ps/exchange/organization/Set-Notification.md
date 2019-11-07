@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-Notification -NotificationEmails john@contoso.com,kweku@contoso.com -ProcessType CertExpiry
 ```
 
 This example configures all expiring and expired certificate notification events to send notification email messages to john@contoso.com and kweku@contoso.com.
 
 ### Example 2
-```
+```powershell
 Set-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf -NotificationEmails laura@contoso.com,julia@contoso.com
 ```
 

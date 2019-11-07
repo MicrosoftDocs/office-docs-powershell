@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMHuntGroup
 ```
 
 This example displays all the UM hunt groups in the Active Directory forest.
 
 ### Example 2
-```
+```powershell
 Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
 ```
 
 This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
 
 ### Example 3
-```
+```powershell
 Get-UMHuntGroup -UMDialPlan MyUMDialPlan
 ```
 

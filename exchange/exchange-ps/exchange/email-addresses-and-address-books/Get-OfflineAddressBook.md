@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-OfflineAddressBook
 ```
 
 This example returns a summary list of all existing OABs.
 
 ### Example 2
-```
+```powershell
 Get-OfflineAddressBook -Identity "\Default Offline Address Book" | Format-List
 ```
 
 This example returns detailed information about the OAB named Default Offline Address Book.
 
 ### Example 3
-```
+```powershell
 Get-OfflineAddressBook | Format-List Name,AddressLists,GeneratingMailbox,GUID
 ```
 

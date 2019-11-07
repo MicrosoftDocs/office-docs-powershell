@@ -68,28 +68,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-RoleGroup -Name "Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members Kim, Martin
 ```
 
 This example creates a role group. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users Kim and Martin are added as members. Because no scopes were provided, Kim and Martin can manage any recipient and reset passwords for any users in the organization.
 
 ### Example 2
-```
+```powershell
 New-RoleGroup -Name "Seattle Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members John, Carol -CustomRecipientWriteScope "Seattle Recipients"
 ```
 
 This example creates a role group with a custom recipient scope. The custom recipient scope, Seattle Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Seattle. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users John and Carol are added as members.
 
 ### Example 3
-```
+```powershell
 New-RoleGroup -Name "Transport Rules Management" -Roles "Transport Rules" -Members "Compliance Group" -ManagedBy Isabel
 ```
 
 This example creates a role group and enables Isabel to add or remove members to or from the role group by adding her to the ManagedBy property. The Transport Rules role is assigned to the role group, and the Compliance Group USG is added as a member.
 
 ### Example 4
-```
+```powershell
 $Credentials = Get-Credential; New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
@@ -98,7 +98,7 @@ This example creates a linked role group that enables the members of the Toronto
 The first command retrieves the credentials using the Get-Credential cmdlet and stores them in the $Credentials variable. Then the linked role group is created using the second command.
 
 ### Example 5
-```
+```powershell
 $RoleGroup = Get-RoleGroup "Recipient Management"; New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 
@@ -109,7 +109,7 @@ The first command stores the existing role group in a variable, and the second c
 This example uses variables to store information. For more information about variables, see [About Variables](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables).
 
 ### Example 6
-```
+```powershell
 Remove-ManagementRoleAssignment "Distribution Groups-Limited Recipient Management"
 ```
 

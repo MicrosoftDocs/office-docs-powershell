@@ -55,7 +55,7 @@ This cmdlet returns a variety of client access settings for one or more mailboxe
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-EXOCASMailbox -Identity "JeffHay@contoso.com"
 ```
 

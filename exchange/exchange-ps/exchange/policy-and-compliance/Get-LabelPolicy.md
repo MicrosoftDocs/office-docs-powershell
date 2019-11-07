@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-LabelPolicy | Format-Table Name
 ```
 
 This example returns a summary list of all policies in the organization.
 
 ### Example 2
-```
+```powershell
 Get-LabelPolicy -Identity "Engineering Group" | Format-List
 ```
 

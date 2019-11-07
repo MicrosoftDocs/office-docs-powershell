@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RMSTemplate -ResultSize unlimited
 ```
 
 This example retrieves all RMS templates available from the RMS deployment.
 
 ### Example 2
-```
+```powershell
 Get-RMSTemplate -Identity "Company Confidential"
 ```
 

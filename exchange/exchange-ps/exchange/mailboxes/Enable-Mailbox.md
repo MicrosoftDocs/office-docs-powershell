@@ -259,21 +259,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-Mailbox -Identity Ayla
 ```
 
 This example creates a mailbox for the existing user named Ayla.
 
 ### Example 2
-```
+```powershell
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
 This example creates an In-Place archive for the existing username Ayla who already has a mailbox.
 
 ### Example 3
-```
+```powershell
 Enable-Mailbox -Identity ayla@contoso.com -RemoteArchive -ArchiveDomain "archive.contoso.com"
 ```
 

@@ -30,7 +30,7 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PerimeterConfig
 ```
 

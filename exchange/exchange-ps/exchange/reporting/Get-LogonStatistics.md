@@ -48,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-LogonStatistics -Server Server01
 ```
 

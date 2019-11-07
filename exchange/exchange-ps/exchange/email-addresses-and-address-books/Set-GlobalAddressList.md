@@ -70,7 +70,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-GlobalAddressList 96d0c505-eba8-4103-ad4f-577a1bf4ad7b -Name GALwithNewName
 ```
 

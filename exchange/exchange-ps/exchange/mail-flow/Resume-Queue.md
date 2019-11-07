@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-Queue -Server Server1.contoso.com -Filter "NextHopDomain -eq 'Fourthcoffee.com'"
 ```
 

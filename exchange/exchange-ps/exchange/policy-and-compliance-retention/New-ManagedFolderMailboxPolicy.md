@@ -36,7 +36,7 @@ Managed custom folders are a premium feature of messaging records management (MR
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ManagedFolderMailboxPolicy -Name "My Managed Folder Mailbox Policy" -ManagedFolderLinks Inbox, MyFolder
 ```
 

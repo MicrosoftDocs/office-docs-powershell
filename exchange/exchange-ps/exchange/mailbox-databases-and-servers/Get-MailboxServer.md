@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxServer
 ```
 
 This example returns a summary list of all the Mailbox servers in the organization.
 
 ### Example 2
-```
+```powershell
 Get-MailboxServer -Identity Server1 | Format-List
 ```
 

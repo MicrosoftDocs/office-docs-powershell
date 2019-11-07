@@ -40,14 +40,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DeviceConfigurationPolicy | Format-Table Name,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device configuration policies.
 
 ### Example 2
-```
+```powershell
 Get-DeviceConfigurationPolicy -Identity "Engineering Group"
 ```
 

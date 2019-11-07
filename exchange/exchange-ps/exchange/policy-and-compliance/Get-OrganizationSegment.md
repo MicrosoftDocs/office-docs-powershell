@@ -38,14 +38,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-OrganizationSegment | Format-List Name,UserGroupFilter
 ```
 
 This example returns a summary list of all organization segments.
 
 ### Example 2
-```
+```powershell
 Get-OrganizationSegment -Identity "Engineering Group"
 ```
 

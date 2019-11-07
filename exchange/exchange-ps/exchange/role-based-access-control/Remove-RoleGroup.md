@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-RoleGroup "Training Administrators"
 ```
 
 This example removes the Training Administrators role group.
 
 ### Example 2
-```
+```powershell
 Remove-RoleGroup "Vancouver Recipient Administrators" -BypassSecurityGroupManagerCheck
 ```
 

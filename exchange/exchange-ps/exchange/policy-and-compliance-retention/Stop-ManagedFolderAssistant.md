@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Stop-ManagedFolderAssistant
 ```
 
 This example executes the Stop-ManagedFolderAssistant command without parameters. The Managed Folder Assistant is stopped as soon as processing of the current mailbox is completed on the current server.
 
 ### Example 2
-```
+```powershell
 Stop-ManagedFolderAssistant -Identity ExchSrvr1, Exchsrvr2
 ```
 

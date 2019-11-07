@@ -36,14 +36,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMMailboxPIN
 ```
 
 This example displays the UM mailbox PIN-related properties for all UM-enabled users.
 
 ### Example 2
-```
+```powershell
 Get-UMMailboxPIN -Identity tonysmith@contoso.com
 ```
 

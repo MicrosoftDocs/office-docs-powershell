@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Compare-TextMessagingVerificationCode -Identity TonySmith -VerificationCode 111555
 ```
 
 This example compares the verification code 111555 to the code sent to Tony Smith's mobile phone.
 
 ### Example 2
-```
+```powershell
 Compare-TextMessagingVerificationCode -Identity tony@contoso.com -VerificationCode 123456
 ```
 
 This example compares the verification code 123456 to the code sent to Tony Smith's mobile phone.
 
 ### Example 3
-```
+```powershell
 Compare-TextMessagingVerificationCode -Identity TonySmith -VerificationCode 111555 -Confirm $true
 ```
 

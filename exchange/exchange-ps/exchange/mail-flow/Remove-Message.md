@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-Message -Server Server1 -Filter "FromAddress -eq 'Kweku@contoso.com'" -WithNDR $false
 ```
 

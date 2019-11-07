@@ -85,21 +85,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-UserPhoto -Identity "Paul Cannon" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\PaulCannon.jpg"))
 ```
 
 This example uploads and saves a photo to Paul Cannon's user account using a single command.
 
 ### Example 2
-```
+```powershell
 Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview; Set-UserPhoto "Ann Beebe" -Save
 ```
 
 This example shows how to use two commands to upload and save a preview photo to Ann Beebe's user account. The first command uploads a preview photo to Ann Beebe's user account, and the second command saves the uploaded photo as the preview photo.
 
 ### Example 3
-```
+```powershell
 Set-UserPhoto -Identity "Ann Beebe" -Cancel
 ```
 

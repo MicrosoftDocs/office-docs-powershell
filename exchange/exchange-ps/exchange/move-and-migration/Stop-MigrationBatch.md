@@ -36,14 +36,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Stop-MigrationBatch
 ```
 
 This example stops the migration batch that's currently being processed by the migration service.
 
 ### Example 2
-```
+```powershell
 Stop-MigrationBatch -Identity MigrationBatch1
 ```
 

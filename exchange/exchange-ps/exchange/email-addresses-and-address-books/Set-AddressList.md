@@ -73,14 +73,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AddressList -Identity "All Users\Sales\building4" -Name building9
 ```
 
 This example modifies the name of an existing address list.
 
 ### Example 2
-```
+```powershell
 Set-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -IncludedRecipients MailboxUsers -ConditionalDepartment Sales
 ```
 

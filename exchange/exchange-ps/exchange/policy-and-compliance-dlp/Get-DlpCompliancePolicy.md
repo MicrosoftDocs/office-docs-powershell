@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpCompliancePolicy
 ```
 
 This example displays summary information for all DLP policies in the Security & Compliance Center.
 
 ### Example 2
-```
+```powershell
 Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 ```
 

@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges" BehaviorTypeIncidenceLimit 2 -BehaviorTypeIncidenceDuration 1440 -DeviceBlockDuration 1440 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
 This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
 
 ### Example 2
-```
+```powershell
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "RecentCommands" BehaviorTypeIncidenceLimit 5 -BehaviorTypeIncidenceDuration 720 -DeviceBlockDuration 720 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 

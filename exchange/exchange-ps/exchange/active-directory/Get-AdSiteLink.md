@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ADSiteLink
 ```
 
 This example returns a list of all IP site links in your organization.
 
 ### Example 2
-```
+```powershell
 Get-AdSiteLink | Where {$_.ExchangeCost -ne $null}
 ```
 

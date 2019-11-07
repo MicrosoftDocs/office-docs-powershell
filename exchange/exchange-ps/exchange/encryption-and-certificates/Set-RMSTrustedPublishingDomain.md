@@ -38,7 +38,7 @@ A TPD contains the settings needed to use RMS features in your organization. For
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -ExtranetCertificationUrl https://rms.contoso.com/_wmcs/certification/servercertification.asmx
 ```
 

@@ -55,21 +55,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxCalendarConfiguration -Identity kai | Format-List
 ```
 
 This example retrieves all the calendar settings for Kai's mailbox where the Identity parameter is specified in the alias format.
 
 ### Example 2
-```
+```powershell
 Get-MailboxCalendarConfiguration -Identity contoso\tony
 ```
 
 This example uses the Identity parameter specified in the domain\\account format and returns the calendar settings for Tony's mailbox.
 
 ### Example 3
-```
+```powershell
 Get-MailboxCalendarConfiguration -Identity kai -DomainController DC1
 ```
 

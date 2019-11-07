@@ -68,14 +68,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ADPermission -Identity Administrator -User Kim -ExtendedRights "Send As"
 ```
 
 This example removes the Send As permissions from user Kim on the user Administrator.
 
 ### Example 2
-```
+```powershell
 Remove-ADPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
 ```
 

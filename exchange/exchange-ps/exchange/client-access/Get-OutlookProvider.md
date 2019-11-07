@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-OutlookProvider
 ```
 
 This example returns a summary list of all available Outlook providers.
 
 ### Example 2
-```
+```powershell
 Get-OutlookProvider -Identity WEB | Format-List
 ```
 

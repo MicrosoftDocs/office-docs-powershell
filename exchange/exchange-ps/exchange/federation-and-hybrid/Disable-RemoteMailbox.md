@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Disable-RemoteMailbox "Kim Akers"
 ```
 
 This example removes the cloud-based mailbox that's associated with the on-premises mail user named Kim Akers. The mail user is automatically converted to a regular user. This example assumes that you've already removed the Exchange Online license for the mailbox, and that directory synchronization has been configured.
 
 ### Example 2
-```
+```powershell
 Disable-RemoteMailbox "David Strome" -Archive
 ```
 

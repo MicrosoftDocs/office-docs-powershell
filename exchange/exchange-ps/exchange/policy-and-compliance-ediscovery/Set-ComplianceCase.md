@@ -37,7 +37,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ComplianceCase -Identity "Fabrikam Litigation" -Description "For details, contact the Laura at the Contoso law firm"
 ```
 

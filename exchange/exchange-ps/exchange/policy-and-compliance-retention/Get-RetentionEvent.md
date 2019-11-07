@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RetentionEvent
 ```
 
 This example returns a summary list of all retention events.
 
 ### Example 2
-```
+```powershell
 Get-RetentionEvent -Identity x | Format-List
 ```
 

@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-GlobalAddressList
 ```
 
 This example returns a summary list of all GALs.
 
 ### Example 2
-```
+```powershell
 Get-GlobalAddressList -Identity GAL_AgencyB | Format-List
 ```
 

@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl https://www.contoso.com/Microsoft-Server-ActiveSync
 ```
 
 This example creates an Exchange ActiveSync virtual directory and specifies the external URL used to connect to the virtual directory.
 
 ### Example 2
-```
+```powershell
 New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl https://www.contoso.com/mail -InternalUrl https://contoso/mail
 ```
 
 This example creates an Exchange ActiveSync virtual directory and specifies the external and internal URLs used to connect to the virtual directory.
 
 ### Example 3
-```
+```powershell
 New-ActiveSyncVirtualDirectory -WebSiteName "Default Web Site" -ExternalUrl "https://www.fourthcoffee.com/Microsoft-Server-ActiveSync"
 ```
 

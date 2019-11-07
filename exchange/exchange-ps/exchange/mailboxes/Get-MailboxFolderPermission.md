@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
 ```
 
 This example returns the current list of user permissions for the Reports subfolder in the Marketing folder in John's mailbox.
 
 ### Example 2
-```
+```powershell
 Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Ayla@contoso.com
 ```
 
 This example returns the permissions for the same folder in John's mailbox, but only for the user Ayla.
 
 ### Example 3
-```
+```powershell
 Get-MailboxFolderPermission -Identity john@contoso.com:\Calendar -User Ayla@contoso.com
 ```
 

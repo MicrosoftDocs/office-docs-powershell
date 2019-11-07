@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-PublicFolder -Identity "\Test\Directory\My Public Folder"
 ```
 
 This example deletes the public folder My Public Folder from the \\Test\\Directory tree.
 
 ### Example 2
-```
+```powershell
 Remove-PublicFolder -Identity "\Test\Directory Folder" -Recurse
 ```
 

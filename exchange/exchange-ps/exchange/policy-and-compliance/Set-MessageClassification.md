@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MessageClassification -Identity "My Message Classification" -DisplayPrecedence Low -RetainClassificationEnabled $false
 ```
 

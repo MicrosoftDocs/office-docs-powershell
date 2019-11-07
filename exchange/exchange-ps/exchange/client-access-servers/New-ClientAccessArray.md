@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ClientAccessArray -Fqdn casarray01.contoso.com -Site "Redmond"
 ```
 
 This example creates the Client Access array with the FQDN casarray01.contoso.com in the Active Directory site named Redmond. Because the Name parameter isn't used, the name of the Client Access array is casarray01.
 
 ### Example 2
-```
+```powershell
 New-ClientAccessArray -Fqdn casarrayap.contoso.com -Site "China" -Name "China CAS Array"
 ```
 

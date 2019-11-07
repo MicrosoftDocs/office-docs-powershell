@@ -39,7 +39,7 @@ This cmdlet has been deprecated and no longer used.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-TenantAnalyticsConfig
 ```
 

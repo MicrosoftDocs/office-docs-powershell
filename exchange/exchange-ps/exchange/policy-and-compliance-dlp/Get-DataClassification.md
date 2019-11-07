@@ -42,21 +42,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DataClassification
 ```
 
 This example returns a summary list of all data classification rules in the organization.
 
 ### Example 2
-```
+```powershell
 Get-DataClassification -ClassificationRuleCollectionIdentity "Fingerprint Classification Collection"
 ```
 
 This example returns a summary list of all new data classification rules based on document fingerprints that you created.
 
 ### Example 3
-```
+```powershell
 Get-DataClassification "SWIFT Code" | Format-List
 ```
 

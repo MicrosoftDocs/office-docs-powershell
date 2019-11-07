@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-Message -Server Server1 -Filter "FromAddress -eq 'kweku@contoso.com' -and ExpirationTime -lt '1/5/2018 3:00 PM'"
 ```
 

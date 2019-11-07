@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-AvailabilityAddressSpace -Identity Contoso.com
 ```
 
 This example removes the availability address space object named Contoso.com.
 
 ### Example 2
-```
+```powershell
 Remove-AvailabilityAddressSpace -Identity Contoso.com -Confirm:$false
 ```
 

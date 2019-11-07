@@ -64,28 +64,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
 ```
 
 This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
 
 ### Example 2
-```
+```powershell
 Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
 ```
 
 This example sets the user Tony Smith as the owner of the resource mailbox named Room 222.
 
 ### Example 3
-```
+```powershell
 Add-MailboxPermission -Identity "Jeroen Cool" -User "Mark Steele" -AccessRights FullAccess -InheritanceType All -AutoMapping $false
 ```
 
 This example assigns the user Mark Steele Full Access permission to Jeroen Cool's mailbox, prevents Outlook from opening Jeroen Cool's mailbox when Mark Steele opens Outlook.
 
 ### Example 4
-```
+```powershell
 Get-Mailbox -ResultSize unlimited -Filter "(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')" | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
 ```
 

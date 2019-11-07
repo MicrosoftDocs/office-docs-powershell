@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-HotmailSubscription -Mailbox "Brian Johnson"
 ```
 
 This example lists all the Hotmail subscriptions configured in the mailbox of the user Brian Johnson.
 
 ### Example 2
-```
+```powershell
 Get-HotmailSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersHotmailReport
 ```
 

@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-SharingPolicy -Name "Contoso" -Domains 'mail.contoso.com: CalendarSharingFreeBusyDetail, ContactsSharing'
 ```
 
 This example creates the sharing policy Contoso for the contoso.com domain, which is a domain outside the organization. This policy allows users in the contoso.com domain to see detailed free/busy information and contacts. By default, this policy is enabled.
 
 ### Example 2
-```
+```powershell
 New-SharingPolicy -Name "SharingPolicy01" -Domains 'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusySimple' -Enabled $false -Default $true
 ```
 

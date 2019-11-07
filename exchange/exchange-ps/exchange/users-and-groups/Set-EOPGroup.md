@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2018"
 ```
 

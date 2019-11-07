@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ManagementRole ExampleRole1
 ```
 
 This example removes the single role ExampleRole1.
 
 ### Example 2
-```
+```powershell
 Remove-ManagementRole ExampleRole2 -Recurse -WhatIf
 ```
 
@@ -49,14 +49,14 @@ This example runs the Remove-ManagementRole cmdlet with the WhatIf switch. The W
 If the results are as expected, remove the WhatIf switch and run the command again to remove the ExampleRole2 parent role and all its child roles.
 
 ### Example 3
-```
+```powershell
 Get-ManagementRole *Example* | Remove-ManagementRole -WhatIf
 ```
 
 This example uses the Get-ManagementRole cmdlet to get a list of roles that contain the string "Example" in the role name, and then pipes the list to the Remove-ManagementRole cmdlet. The Remove-ManagementRole cmdlet, because the WhatIf switch is specified, displays the roles that would have been removed but doesn't commit any changes. If the results are as expected, the command can be run again without the WhatIf switch to remove the roles.
 
 ### Example 4
-```
+```powershell
 Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 ```
 

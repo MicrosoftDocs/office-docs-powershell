@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1" -BadItemLimit 10
 ```
 
 This example changes the second restore request for Ayla\\MailboxRestore1 to skip 10 corrupt mailbox items.
 
 ### Example 2
-```
+```powershell
 Set-MailboxRestoreRequest -Identity "Kweku\MailboxRestore" -BadItemLimit 100 -AcceptLargeDataLoss
 ```
 

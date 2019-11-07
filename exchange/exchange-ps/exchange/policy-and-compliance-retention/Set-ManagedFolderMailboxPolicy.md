@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ManagedFolderMailboxPolicy "PM Storage Template1" -Name "PM Storage Template2"
 ```
 
@@ -40,7 +40,7 @@ This example changes the name of the managed folder mailbox policy PM Storage Te
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see [About Parameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
 
 ### Example 2
-```
+```powershell
 Set-ManagedFolderMailboxPolicy -Identity "My Managed Folder Mailbox Policy" -ManagedFolderLinks "Custom Folder 1", "Custom Folder 2"
 ```
 

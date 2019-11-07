@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ClientAccessRule "Block Client Connections from 192.168.1.0/24"
 ```
 

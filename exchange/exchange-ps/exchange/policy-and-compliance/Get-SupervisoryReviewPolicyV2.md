@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SupervisoryReviewPolicyV2
 ```
 
 This example returns a summary list of all supervisory review policies.
 
 ### Example 2
-```
+```powershell
 Get-SupervisoryReviewPolicyV2 -Identity "EU Brokers Policy" | Format-List
 ```
 

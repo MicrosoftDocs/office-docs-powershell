@@ -78,21 +78,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-AddressList -Name MyAddressList -RecipientFilter "((RecipientType -eq 'UserMailbox') -and ((StateOrProvince -eq 'Washington') -or (StateOrProvince -eq 'Oregon')))"
 ```
 
 This example creates the address list MyAddressList. The address list includes recipients that are mailbox users and have the StateOrProvince property set to Washington or Oregon.
 
 ### Example 2
-```
+```powershell
 New-AddressList -Name MyAddressList2 -ConditionalStateOrProvince Washington -IncludedRecipients MailboxUsers
 ```
 
 This example creates the address list MyAddressList2 that includes mailboxes that have the ConditionalStateOrProvince parameter set to Washington.
 
 ### Example 3
-```
+```powershell
 New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like '*AgencyB*'))"
 ```
 

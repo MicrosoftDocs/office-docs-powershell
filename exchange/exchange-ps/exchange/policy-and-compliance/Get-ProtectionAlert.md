@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ProtectionAlert | Format-List Name,Category,Comment,NotifyUser
 ```
 
 This example returns a summary list of all alert policies.
 
 ### Example 2
-```
+```powershell
 Get-ProtectionAlert -Identity "Malicious Email Campaign"
 ```
 

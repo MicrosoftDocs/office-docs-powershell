@@ -72,14 +72,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ComplianceSearchAction
 ```
 
 This example shows a summary list of all compliance search actions.
 
 ### Example 2
-```
+```powershell
 Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
 ```
 

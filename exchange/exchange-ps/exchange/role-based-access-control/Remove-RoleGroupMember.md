@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-RoleGroupMember "Recipient Management" -Member David
 ```
 
 This example removes the user David from the role group Recipient Management.
 
 ### Example 2
-```
+```powershell
 Get-User -Filter "Department -eq 'Sales' -and -RecipientType -eq 'UserMailbox'" | Get-Mailbox | Remove-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
@@ -61,7 +61,7 @@ For more information about pipelining, and the WhatIf parameter, see the followi
 - WhatIf, Confirm and ValidateOnly switches
 
 ### Example 3
-```
+```powershell
 Remove-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
 ```
 

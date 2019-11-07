@@ -50,21 +50,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Install-UnifiedCompliancePrerequisite
 ```
 
 This example creates the Compliance Policy Center in SharePoint Online. If it has already been created, the command displays the current configuration information.
 
 ### Example 2
-```
+```powershell
 Install-UnifiedCompliancePrerequisite -LoadOnly
 ```
 
 This example loads the Compliance Policy Center using the current settings.
 
 ### Example 3
-```
+```powershell
 Install-UnifiedCompliancePrerequisite -ForceInitialize
 ```
 

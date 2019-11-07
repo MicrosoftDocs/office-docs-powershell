@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AutodiscoverVirtualDirectory -Identity 'Autodiscover(Default Web Site)' -WindowsAuthentication $false -BasicAuthentication $false -DigestAuthentication $true
 ```
 
 This example sets the authentication method to Digest authentication for the Autodiscover virtual directory.
 
 ### Example 2
-```
+```powershell
 Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'https://www.contoso.com'
 ```
 
 In Exchange Server 2010, this example sets the external URL for the Autodiscover virtual directory.
 
 ### Example 3
-```
+```powershell
 Set-AutodiscoverVirtualDirectory -Identity 'Autodiscover (Default Web Site)' -WindowsAuthentication $true
 ```
 

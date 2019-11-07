@@ -32,14 +32,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpSensitiveInformationType
 ```
 
 This example lists all the sensitive information types defined for your organization.
 
 ### Example 2
-```
+```powershell
 Get-DlpSensitiveInformationType -Identity "Credit Card Number" | Format-List
 ```
 

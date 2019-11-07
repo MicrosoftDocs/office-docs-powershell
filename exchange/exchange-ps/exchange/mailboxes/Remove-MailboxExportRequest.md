@@ -50,21 +50,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MailboxExportRequest -Identity "Ayla\MailboxExport1"
 ```
 
 This example removes the second export request Ayla\\MailboxExport1.
 
 ### Example 2
-```
+```powershell
 Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest
 ```
 
 This example removes all export requests that have the status of Completed.
 
 ### Example 3
-```
+```powershell
 Remove-MailboxExportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 

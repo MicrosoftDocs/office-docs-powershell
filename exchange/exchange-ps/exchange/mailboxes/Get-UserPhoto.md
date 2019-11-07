@@ -60,14 +60,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UserPhoto "Susan Burk"
 ```
 
 This example displays information about the user photo configured for Susan Burk.
 
 ### Example 2
-```
+```powershell
 Get-UserPhoto "Pilar Pinilla" -Preview
 ```
 

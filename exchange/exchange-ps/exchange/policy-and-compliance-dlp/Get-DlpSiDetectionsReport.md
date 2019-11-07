@@ -44,14 +44,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DLPSiDetectionsReport
 ```
 
 This example returns all DLP sensitive information type detections.
 
 ### Example 2
-```
+```powershell
 Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -StartDate 4/1/2019 -EndDate 4/8/2019
 ```
 

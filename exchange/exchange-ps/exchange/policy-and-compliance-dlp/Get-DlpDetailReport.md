@@ -69,7 +69,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpDetailReport -StartDate 11/01/2018 -EndDate 11/07/2018
 ```
 

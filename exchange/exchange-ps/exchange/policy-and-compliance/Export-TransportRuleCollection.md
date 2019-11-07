@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 $file = Export-TransportRuleCollection; Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
@@ -47,7 +47,7 @@ This example exports transport rules. Rule data is first exported to the variabl
 **Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ### Example 2
-```
+```powershell
 $file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```
 

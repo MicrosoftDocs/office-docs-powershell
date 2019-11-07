@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MigrationUser -Identity laura@contoso.com -LargeItemLimit 15 -BadItemLimit 15
 ```
 

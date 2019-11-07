@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-MailContact -Name "Chris Ashton" -ExternalEmailAddress "chris@tailspintoys.com"
 ```
 

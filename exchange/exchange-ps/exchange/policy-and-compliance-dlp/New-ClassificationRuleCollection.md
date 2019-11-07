@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
 ```
 

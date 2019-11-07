@@ -107,7 +107,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-SendConnector -Internet -Name MySendConnector -AddressSpaces contoso.com,fabrikam.com
 ```
 
@@ -118,7 +118,7 @@ This example creates the Send connector named MySendConnector with the following
 - It processes messages addressed only to Contoso.com and Fabrikam.com domains.
 
 ### Example 2
-```
+```powershell
 $CredentialObject = Get-Credential; New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
 ```
 

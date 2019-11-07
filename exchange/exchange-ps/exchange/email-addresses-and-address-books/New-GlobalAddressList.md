@@ -74,14 +74,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-GlobalAddressList -Name "NewGAL"
 ```
 
 This example creates the GAL named NewGAL.
 
 ### Example 2
-```
+```powershell
 New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -eq 'AgencyB')"
 ```
 

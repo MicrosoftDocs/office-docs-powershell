@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PublicFolderMigrationRequest
 ```
 
 This example returns the status of in-progress migration requests.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
 ```
 

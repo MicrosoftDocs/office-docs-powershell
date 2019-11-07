@@ -41,21 +41,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxSpellingConfiguration -Identity Tony
 ```
 
 This example retrieves the Outlook on the web options of user Tony.
 
 ### Example 2
-```
+```powershell
 Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
 ```
 
 This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
 
 ### Example 3
-```
+```powershell
 Get-MailboxSpellingConfiguration -Identity contoso\tony
 ```
 

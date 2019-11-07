@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Place -Identity "Conference Room 01"
 ```
 
 This example returns summary metadata for the room mailbox named Conference Room 1.
 
 ### Example 2
-```
+```powershell
 Get-Place -Identity "Conference Room 01" | Format-List
 ```
 

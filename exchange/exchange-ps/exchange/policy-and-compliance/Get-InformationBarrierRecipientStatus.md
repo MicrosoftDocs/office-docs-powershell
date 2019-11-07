@@ -40,14 +40,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-InformationBarrierRecipientStatus -Identity meganb
 ```
 
 This example returns the information barrier policy information for the user meganb.
 
 ### Example 2
-```
+```powershell
 Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw
 ```
 

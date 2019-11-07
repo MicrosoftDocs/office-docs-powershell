@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ThrottlingPolicy -Identity ClientThrottlingPolicy2
 ```
 
 This example removes the user throttling policy ClientThrottlingPolicy2.
 
 ### Example 2
-```
+```powershell
 $policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
 ```
 

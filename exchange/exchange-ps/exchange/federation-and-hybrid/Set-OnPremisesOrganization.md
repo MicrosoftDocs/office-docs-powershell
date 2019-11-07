@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-OnPremisesOrganization -Identity "ExchangeMail" -HybridDomains contoso.com, sales.contoso.com, legal.contoso.com
 ```
 

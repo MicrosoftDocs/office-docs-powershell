@@ -56,21 +56,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RemoteMailbox
 ```
 
 This example returns a summary list of all remote mailboxes in your organization.
 
 ### Example 2
-```
+```powershell
 Get-RemoteMailbox -Identity laura@contoso.com | Format-List
 ```
 
 This example returns a detailed information for the remote mailbox for the user laura@contoso.com.
 
 ### Example 3
-```
+```powershell
 $Credentials = Get-Credential; Get-RemoteMailbox -Credential $Credentials
 ```
 

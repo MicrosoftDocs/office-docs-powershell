@@ -64,7 +64,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-DeviceConfigurationRule -Policy "Engineering Group" -TargetGroups 5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 ```
 

@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpKeywordDictionary | Format-Table -Auto Name,Description
 ```
 
 This example returns a summary list of all DLP keyword dictionaries.
 
 ### Example 2
-```
+```powershell
 Get-DlpKeywordDictionary -Name "Financial Data"
 ```
 

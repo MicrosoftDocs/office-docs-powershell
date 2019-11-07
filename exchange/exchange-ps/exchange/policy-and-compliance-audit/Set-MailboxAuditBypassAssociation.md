@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $true
 ```
 
 This example bypasses the Svc-MyApplication account from mailbox audit logging.
 
 ### Example 2
-```
+```powershell
 Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $false
 ```
 

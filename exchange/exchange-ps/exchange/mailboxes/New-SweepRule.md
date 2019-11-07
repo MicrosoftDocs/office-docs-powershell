@@ -35,20 +35,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-SweepRule -Name "From Michelle" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender michelle@fabrikam.com -KeepLatest 1
 ```
 
 This example creates a new Sweep rule named "From Michelle" in Felipe Apodaca's mailbox that keeps the latest message from michelle@fabrikam.com in the Inbox folder, and moves older messages to the Deleted Items folder.
 
 ### Example 2
-```
+```powershell
 New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender lila@fabrikam.com -KeepForDays 10
 ```
 
 This example creates a new Sweep rule named "From Lila" in Felipe Apodaca's mailbox that moves messages from lila@fabrikam.com in the Inbox folder that are older than 10 days to the Deleted Items folder.
 ### Example 3
-```
+```powershell
 New-SweepRule -Name "From Jeff" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender jeffm@fabrikam.com -SourceFolder "Felipe:\Sent Items" -KeepForDays 10
 ```
 

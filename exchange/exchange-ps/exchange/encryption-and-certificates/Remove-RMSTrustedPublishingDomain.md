@@ -35,7 +35,7 @@ If you delete the only trusted publishing domain, all RMS features are disabled 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-RMSTrustedPublishingDomain "Contoso TPD"
 ```
 

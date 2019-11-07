@@ -260,7 +260,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-OrganizationConfig -DistributionGroupDefaultOU Users\Groups -DistributionGroupNameBlockedWordsList curse,bad,offensive -DistributionGroupNamingPolicy "DL_<GroupName>_<Department><CountryCode>"
 ```
 
@@ -273,35 +273,35 @@ The words curse, bad, and offensive will be blocked from being used in distribut
 All distribution groups will be prefixed with "DL\_" and suffixed with an underscore (\_) and the user's department and country code.
 
 ### Example 2
-```
+```powershell
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList $null
 ```
 
 This example allows all client applications to use REST and EWS.
 
 ### Example 3
-```
+```powershell
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList "OtherApps*"
 ```
 
 This example allows all client applications to use REST and EWS, except those that are specified by the EwsBlockList parameter.
 
 ### Example 4
-```
+```powershell
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList $null
 ```
 
 This example prevents all client applications from using REST and EWS.
 
 ### Example 5
-```
+```powershell
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList "CorpApp*"
 ```
 
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
 ### Example 6
-```
+```powershell
 Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15"
 ```
 
@@ -1900,7 +1900,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
-When you enable modern authentication in Exchange Online, we recommend that you also enable it in Skype for Business Online. For more information, see https://aka.ms/SkypeModernAuth (https://aka.ms/SkypeModernAuth).
+When you enable modern authentication in Exchange Online, we recommend that you also enable it in Skype for Business Online. For more information, see [Skype for Business Online: Enable your tenant for modern authentication](https://aka.ms/SkypeModernAuth).
 
 ```yaml
 Type: $true | $false

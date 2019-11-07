@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Label
 ```
 
 This example returns a summary list of all sensitivity labels in the organization.
 
 ### Example 2
-```
+```powershell
 Get-Label -Identity "Engineering Group" | Format-List
 ```
 

@@ -60,35 +60,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-MailboxRepairRequest -Mailbox tony@contoso.com -CorruptionType FolderView
 ```
 
 This example detects and repairs all folder views for the mailbox tony@contoso.com.
 
 ### Example 2
-```
+```powershell
 New-MailboxRepairRequest -Mailbox ayla -CorruptionType ProvisionedFolder,SearchFolder -DetectOnly
 ```
 
 This example only detects and reports on ProvisionedFolder and SearchFolder corruption issues to Ayla Kol's mailbox. This command doesn't repair the mailbox.
 
 ### Example 3
-```
+```powershell
 New-MailboxRepairRequest -Database MBX-DB01 -CorruptionType AggregateCounts
 ```
 
 This example detects and repairs AggregateCounts for all mailboxes on mailbox database MBX-DB01.
 
 ### Example 4
-```
+```powershell
 New-MailboxRepairRequest -Mailbox ayla -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview -Archive
 ```
 
 This example detects and repairs all corruption types for Ayla Kol's mailbox and archive.
 
 ### Example 5
-```
+```powershell
 $Mailbox = Get-MailboxStatistics annb; New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
 ```
 

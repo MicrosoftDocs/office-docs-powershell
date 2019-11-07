@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" -InternalUrl https://contoso.com/mapi -IISAuthenticationMethods NTLM,Negotiate,OAuth
 ```
 

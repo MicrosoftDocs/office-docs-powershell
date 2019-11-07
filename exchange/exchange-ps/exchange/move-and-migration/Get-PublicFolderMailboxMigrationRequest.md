@@ -55,28 +55,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest
 ```
 
 This example returns information about all migration requests.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest -HighPriority $true
 ```
 
 In on-premises Exchange, this example returns all migration requests that have a priority value of High, Higher, Highest or Emergency.
 
 ### Example 3
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
 ```
 
 This example returns public folder mailbox migration requests that don't have a target mailbox.
 
 ### Example 4
-```
+```powershell
 Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
 ```
 

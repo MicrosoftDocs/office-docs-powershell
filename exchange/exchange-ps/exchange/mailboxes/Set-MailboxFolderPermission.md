@@ -34,42 +34,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User ed@contoso.com -AccessRights Owner
 ```
 
 This example overwrites Ed's existing permissions for the Marketing folder in Ayla's mailbox. Ed is now granted the Owner role on the folder.
 
 ### Example 2
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate -SendNotificationToUser $true
 ```
 
 In Office 365, this example resends the sharing invitation to an existing delegate without changing their effective permissions (Ed is already a delegate with Editor permissions to Ayla's mailbox).
 
 ### Example 3
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
 In Office 365, this example removes access to private items for an existing delegate.
 
 ### Example 4
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags None
 ```
 
 In Office 365, this example changes an existing calendar delegate to Editor.
 
 ### Example 5
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor
 ```
 
 In Office 365, this example changes an existing user's permissions to Editor without changing their current delegate status.
 
 ### Example 6
-```
+```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SendNotificationToUser $false
 ```
 

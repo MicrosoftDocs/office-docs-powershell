@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-OutlookAnywhere -Server MBX01
 ```
 
 This example returns all Outlook Anywhere virtual directories on the server named MBX01.
 
 ### Example 2
-```
+```powershell
 Get-OutlookAnywhere -Identity "EXCH01\Rpc (Default Web Site)"
 ```
 

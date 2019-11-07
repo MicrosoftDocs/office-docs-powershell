@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMMailboxPolicy | Format-List
 ```
 
 This example returns a formatted list of all UM mailbox policies in the Active Directory forest.
 
 ### Example 2
-```
+```powershell
 Get-UMMailboxPolicy -Identity MyUMMailboxPolicy
 ```
 
 This example returns the properties and values for the UM mailbox policy MyUMMailboxPolicy.
 
 ### Example 3
-```
+```powershell
 Get-UMMailboxPolicy -UMDialPlan MyUMDialPlan
 ```
 

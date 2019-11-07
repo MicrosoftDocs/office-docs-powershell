@@ -70,14 +70,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-QueueDigest -Forest
 ```
 
 This example returns information about all queues in the Active Directory forest.
 
 ### Example 2
-```
+```powershell
 Get-QueueDigest -Dag DAG01
 ```
 

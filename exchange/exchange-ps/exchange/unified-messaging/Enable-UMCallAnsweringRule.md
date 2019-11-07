@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
 ```
 
 This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
 
 ### Example 2
-```
+```powershell
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
 ```
 
 The example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be enabled and if there are any errors within the command.
 
 ### Example 3
-```
+```powershell
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
 ```
 

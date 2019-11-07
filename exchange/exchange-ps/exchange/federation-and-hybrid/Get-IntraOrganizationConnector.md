@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-IntraOrganizationConnector
 ```
 
 This example returns a summary list of all Intra-Organization connectors.
 
 ### Example 2
-```
+```powershell
 Get-IntraOrganizationConnector "MainCloudConnector" | Format-List
 ```
 

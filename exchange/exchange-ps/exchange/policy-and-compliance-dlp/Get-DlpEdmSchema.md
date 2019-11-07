@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DlpEdmSchema
 ```
 
 This example returns a summary list of all DLP EDM schemas in the organization.
 
 ### Example 2
-```
+```powershell
 Get-DlpEdmSchema -Identity "Schema for Patient Records"
 ```
 

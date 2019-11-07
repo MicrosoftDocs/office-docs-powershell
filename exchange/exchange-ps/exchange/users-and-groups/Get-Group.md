@@ -56,21 +56,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Group
 ```
 
 This example returns a summary list of all groups in your organization.
 
 ### Example 2
-```
+```powershell
 Get-Group -Identity "Marketing Reports" | Format-List
 ```
 
 This example returns detailed information for the group named Marketing Reports.
 
 ### Example 3
-```
+```powershell
 Get-Group -Anr Mar*
 ```
 

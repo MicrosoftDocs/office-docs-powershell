@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-SafeAttachmentRule -Name "Research Department Attachment Rule" -SafeAttachmentPolicy "Research Block Attachments" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
 

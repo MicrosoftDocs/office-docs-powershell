@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ClientAccessRule
 ```
 
 This example shows a summary list of all client access rules.
 
 ### Example 2
-```
+```powershell
 Get-ClientAccessRule "Block Client Connections from 192.168.1.0/24" | Format-List
 ```
 

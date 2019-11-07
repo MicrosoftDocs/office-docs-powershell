@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RoutingGroupConnector -Identity "Exchange Administrative Group (FYDIBOHF23SPDLT)\Exchange Routing Group (DWBGZMFD01QNBJR)\Ex2010 to Ex2003 RGC" -Cost 70 -MaxMessageSize 10MB -SourceTransportServers 2010Hub1.contoso.com -TargetTransportServers 2003BH1.contoso.com
 ```
 

@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SearchDocumentFormat
 ```
 
 This example retrieves a list of all file formats supported by Exchange Search.
 
 ### Example 2
-```
+```powershell
 Get-SearchDocumentFormat docx | Format-List *
 ```
 

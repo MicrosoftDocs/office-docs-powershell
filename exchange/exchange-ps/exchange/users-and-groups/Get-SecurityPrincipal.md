@@ -40,28 +40,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SecurityPrincipal -OrganizationalUnit OU=People,DC=Contoso,DC=com
 ```
 
 This example retrieves security principals from the People OU.
 
 ### Example 2
-```
+```powershell
 Get-SecurityPrincipal -Filter "Department -eq 'Legal'"
 ```
 
 This example retrieves security principals from the Legal department by using the Filter parameter. Only security principals matching the filter condition are retrieved.
 
 ### Example 3
-```
+```powershell
 Get-SecurityPrincipal -Identity Administrator
 ```
 
 This example retrieves a single security principal explicitly specified by using the Identity parameter.
 
 ### Example 4
-```
+```powershell
 Get-SecurityPrincipal -Types WellKnownSecurityPrincipal | Format-Table Name,SID -AutoSize
 ```
 

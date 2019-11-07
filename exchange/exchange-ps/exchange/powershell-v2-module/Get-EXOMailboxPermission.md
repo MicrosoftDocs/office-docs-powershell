@@ -69,7 +69,7 @@ By default, other security groups and role groups inherit permissions to mailbox
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 {{ Add example code here }}
 ```
 

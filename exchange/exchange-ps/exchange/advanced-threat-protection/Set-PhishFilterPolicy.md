@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
@@ -47,7 +47,7 @@ This configures the phish filter policy to block or allow all spoofed email mess
 - Step 3: Use the $UpdateSpoofedSenders variable to configure the phish filter policy.
 
 ### Example 2
-```
+```powershell
 Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 

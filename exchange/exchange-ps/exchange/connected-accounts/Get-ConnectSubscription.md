@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ConnectSubscription -Mailbox "Kim Akers" | Format-List
 ```
 
 This example shows detailed information for all the contact subscriptions that are configured in the mailbox of the user Kim Akers.
 
 ### Example 2
-```
+```powershell
 Get-ConnectSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersConnectReport
 ```
 

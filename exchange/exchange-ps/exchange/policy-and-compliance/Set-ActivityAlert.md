@@ -47,7 +47,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 $NU = Get-ActivityAlert "Contoso Elevation of Privilege"; $NU.NotifyUser.Add("chris@fabrikam.com"); Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
 ```
 
@@ -56,7 +56,7 @@ This example adds the external user chris@fabrikam.com to the list of recipients
 Note: To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
 
 ### Example 2
-```
+```powershell
 Set-ActivityAlert -Identity "External Sharing Alert" -Disabled $true
 ```
 

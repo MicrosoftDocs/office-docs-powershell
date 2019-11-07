@@ -51,14 +51,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-PublicFolderMigrationRequestStatistics -RequestQueue "MBXDB02"
 ```
 
 This example returns default statistics for all migration requests that are in progress or haven't been cleared for the database MBXDB02.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMigrationRequestStatistics -Identity "PFMigrate_MarketingReports" -IncludeReport | Export-CSV C:\PFMigstats.csv
 ```
 

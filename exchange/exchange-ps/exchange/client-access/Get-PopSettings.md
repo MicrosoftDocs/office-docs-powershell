@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-POPSettings
 ```
 
 This example returns a summary list of the configuration of the Microsoft Exchange POP3 service on the local server.
 
 ### Example 2
-```
+```powershell
 Get-POPSettings -Server MBX01 | Format-List
 ```
 

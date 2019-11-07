@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-TransportRule
 ```
 
 This example returns a summary list of all rules in your organization.
 
 ### Example 2
-```
+```powershell
 Get-TransportRule "Ethical Wall - Sales and Brokerage Departments" | Format-List
 ```
 
@@ -50,14 +50,14 @@ This example returns detailed information for the rule named "Ethical Wall - Sal
 For more information about pipelining, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines). For more information about how to work with the output of a command, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 3
-```
+```powershell
 Get-TransportRule -DlpPolicy "PII (U.S.)"
 ```
 
 This example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in your organization.
 
 ### Example 4
-```
+```powershell
 Get-TransportRule | Where {$_.DlpPolicy -ne $null}
 ```
 

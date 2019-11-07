@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-PushNotificationProxy -WhatIf
 ```
 
 This example displays the status of the push notification proxy in the on-premises Exchange organization.
 
 ### Example 2
-```
+```powershell
 Enable-PushNotificationProxy -Organization contoso.com
 ```
 

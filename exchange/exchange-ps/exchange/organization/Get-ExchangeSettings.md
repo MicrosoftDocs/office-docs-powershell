@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ExchangeSettings
 ```
 
 This example returns a summary list of all Exchange setting objects.
 
 ### Example 2
-```
+```powershell
 Get-ExchangeSettings -Identity Audit | Format-List
 ```
 

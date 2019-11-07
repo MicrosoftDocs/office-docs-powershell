@@ -30,7 +30,7 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 ```
 

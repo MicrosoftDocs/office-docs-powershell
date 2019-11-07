@@ -45,14 +45,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SupervisoryReviewPolicyReport -StartDate 03/01/2018 -EndDate 03/31/2018
 ```
 
 This example returns the supervisory review policy events for the month of March, 2018.
 
 ### Example 2
-```
+```powershell
 Get-SupervisoryReviewPolicyReport -Policies "EU Brokers Policy"
 ```
 

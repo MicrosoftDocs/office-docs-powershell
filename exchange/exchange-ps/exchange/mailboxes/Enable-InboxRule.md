@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-InboxRule "Move To Junk Mail" -Mailbox "User 1"
 ```
 

@@ -31,14 +31,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AuditConfigurationRule | Format-List Name,Workload,AuditOperation,Policy
 ```
 
 This example lists summary information about all audit configuration rules.
 
 ### Example 2
-```
+```powershell
 Get-AuditConfigurationRule 989a3a6c-dc40-4fa4-8307-beb3ece992e9
 ```
 

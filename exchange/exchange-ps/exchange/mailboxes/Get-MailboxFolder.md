@@ -44,35 +44,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxFolder -Identity Tony:\Inbox
 ```
 
 This example retrieves the Inbox folder in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>:\<Folder\>.
 
 ### Example 2
-```
+```powershell
 Get-MailboxFolder -Identity Tony
 ```
 
 This example returns the root folders in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>.
 
 ### Example 3
-```
+```powershell
 Get-MailboxFolder -Identity Tony -GetChildren -MailFolderOnly
 ```
 
 This example returns the first level of mail folders in Tony's mailbox.
 
 ### Example 4
-```
+```powershell
 Get-MailboxFolder -Identity Tony:\Inbox -GetChildren
 ```
 
 This example returns information about all the subfolders under Inbox in Tony's mailbox.
 
 ### Example 5
-```
+```powershell
 Get-MailboxFolder -Identity Tony:\Inbox -Recurse
 ```
 

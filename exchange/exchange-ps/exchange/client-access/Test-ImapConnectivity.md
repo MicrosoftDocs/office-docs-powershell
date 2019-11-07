@@ -66,14 +66,14 @@ When you receive this error, run the command again on the server that's hosting 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-ImapConnectivity -ClientAccessServer Contoso12 -MailboxCredential (Get-Credential contoso\kweku)
 ```
 
 This example tests the client IMAP4 connectivity for the server named Contoso12 by using the credentials for the user contoso\\kweku.
 
 ### Example 2
-```
+```powershell
 Test-ImapConnectivity -ClientAccessServer Contoso12
 ```
 

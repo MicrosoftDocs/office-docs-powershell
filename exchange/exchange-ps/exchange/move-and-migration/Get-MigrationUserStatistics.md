@@ -32,42 +32,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | Format-List Status,Error,Report
 ```
 
 This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
 
 ### Example 2
-```
+```powershell
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | Format-List SkippedItemCount,SkippedItems
 ```
 
 This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
 
 ### Example 3
-```
+```powershell
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | Format-List SkippedItemCount,SkippedItems
 ```
 
 This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
 
 ### Example 4
-```
+```powershell
 Get-MigrationUser -BatchId StagedBatch1 | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users in the migration batch named StagedBatch1.
 
 ### Example 5
-```
+```powershell
 Get-MigrationUser | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users from all current migration batches.
 
 ### Example 6
-```
+```powershell
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | Format-List Status,Error,DiagnosticInfo
 ```
 

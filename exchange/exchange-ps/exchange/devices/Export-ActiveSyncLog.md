@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060818.log" -StartDate:"06/08/18" -EndDate:"06/09/18" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 
 This example exports the Exchange ActiveSync log for the date range 06/08/18 to 06/09/18. The times on the report are in Coordinated Universal Time (UTC) and the report is saved in c:\\exreports\\easreports.
 
 ### Example 2
-```
+```powershell
 Get-Childitem D:\Logs\*.log | foreach { Export-ActiveSyncLog -Filename $_.FullName -StartDate:"06/20/18" -EndDate:"07/20/18" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports" }
 ```
 
 This example exports the Exchange ActiveSync log for the date range 06/20/18 to 07/20/18 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report and a confirmation message is displayed. The times on the report are in UTC and the report is saved in c:\\exreports\\easreports.
 
 ### Example 3
-```
+```powershell
 Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020918.log" -StartDate:"02/01/18" -EndDate:"02/09/18" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 

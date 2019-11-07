@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MobileDeviceMailboxPolicy -Identity SalesPolicy
 ```
 
 This example removes the mobile device mailbox policy SalesPolicy.
 
 ### Example 2
-```
+```powershell
 Remove-MobileDeviceMailboxPolicy -Identity Engineering -Confirm:$false
 ```
 
 This example removes the mobile device mailbox policy named Engineering and hides the confirmation prompt.
 
 ### Example 3
-```
+```powershell
 Remove-MobileDeviceMailboxPolicy -Identity Management -Force
 ```
 

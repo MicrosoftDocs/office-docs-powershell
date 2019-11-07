@@ -48,14 +48,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Disable-OutlookAnywhere -Server CAS01
 ```
 
 This example disables Outlook Anywhere on the Client Access server named CAS01.
 
 ### Example 2
-```
+```powershell
 Disable-OutlookAnywhere -Identity: "exch01\rpc (Default Web Site)"
 ```
 

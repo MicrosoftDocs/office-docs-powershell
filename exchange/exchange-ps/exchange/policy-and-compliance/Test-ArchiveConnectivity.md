@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-ArchiveConnectivity -UserSmtp gsingh@contoso.com
 ```
 
 This example tests archive connectivity to Gurinder Singh's archive.
 
 ### Example 2
-```
+```powershell
 Get-Mailbox -Filter 'ArchiveGuid -ne $null -and ArchiveDomain -ne $null' -ResultSize Unlimited | Test-ArchiveConnectivity
 ```
 

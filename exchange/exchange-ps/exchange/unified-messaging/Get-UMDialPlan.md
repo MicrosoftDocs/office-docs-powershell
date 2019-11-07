@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-UMDialPlan
 ```
 
 This example displays a list of all the UM dial plans in the Active Directory forest.
 
 ### Example 2
-```
+```powershell
 Get-UMDialPlan -Identity MyUMDialPlan | Format-List
 ```
 

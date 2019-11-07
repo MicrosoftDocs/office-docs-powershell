@@ -36,28 +36,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com
 ```
 
 This example resets the PIN on the UM-enabled mailbox for tonysmith@contoso.com.
 
 ### Example 2
-```
+```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -PIN 1985848 -PinExpired $true
 ```
 
 This example resets the initial PIN to 1985848 on the UM-enabled mailbox for tonysmith@contoso.com, and then sets the PIN as expired so that the user will be asked to change the PIN the next time the user logs on.
 
 ### Example 3
-```
+```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -LockedOut $true
 ```
 
 This example locks the UM-enabled mailbox for tonysmith@contoso.com to prevent the user from accessing the mailbox.
 
 ### Example 4
-```
+```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -LockedOut $false
 ```
 

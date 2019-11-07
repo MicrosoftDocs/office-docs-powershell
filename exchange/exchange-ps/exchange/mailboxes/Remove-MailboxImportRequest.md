@@ -50,21 +50,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
 ```
 
 This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
 
 ### Example 2
-```
+```powershell
 Remove-MailboxImportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 
 This example cancels the import request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
 
 ### Example 3
-```
+```powershell
 Get-MailboxImportRequest -Status Completed | Remove-MailboxImportRequest
 ```
 

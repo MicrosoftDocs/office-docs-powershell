@@ -72,21 +72,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -RemindersEnabled $false
 ```
 
 This example disables the calendar reminders for the calendar of the user peter@contoso.com.
 
 ### Example 2
-```
+```powershell
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -WorkingHoursTimeZone "Pacific Standard Time"
 ```
 
 This example sets the time zone of the work hours' start and end times to Pacific Standard Time for the calendar of the user peter@contoso.com.
 
 ### Example 3
-```
+```powershell
 Set-MailboxCalendarConfiguration -Identity Tony -WorkingHoursStartTime 07:00:00
 ```
 

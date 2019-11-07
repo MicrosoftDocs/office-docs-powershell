@@ -42,14 +42,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-HoldCompliancePolicy
 ```
 
 This example displays summary information for all preservation policies in your organization.
 
 ### Example 2
-```
+```powershell
 Get-HoldCompliancePolicy -Identity "Regulation 123 Compliance" | Format-List
 ```
 

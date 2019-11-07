@@ -33,7 +33,7 @@ This cmdlet is reserved for internal Microsoft use.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Invoke-ComplianceSearchActionStep
 ```
 

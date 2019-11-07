@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
 ```
 
 This example enables the default Bing Maps app installed for user Tony.
 
 ### Example 2
-```
+```powershell
 Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 ```
 

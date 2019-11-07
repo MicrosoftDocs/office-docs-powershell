@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DetailsTemplate -Identity en-us\User
 ```
 
 This example retrieves all attributes for the User details template for the English language.
 
 ### Example 2
-```
+```powershell
 Get-DetailsTemplate -Identity *\*
 ```
 
 This example retrieves all attributes for all details template types in all languages.
 
 ### Example 3
-```
+```powershell
 Get-DetailsTemplate -Identity *\User
 ```
 

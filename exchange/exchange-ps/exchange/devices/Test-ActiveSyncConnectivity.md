@@ -60,14 +60,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Test-ActiveSyncConnectivity -ClientAccessServer MBX01
 ```
 
 This example tests Exchange ActiveSync client connectivity for the server named MBX01.
 
 ### Example 2
-```
+```powershell
 Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "https://contoso.com/mail" -MailboxCredential (Get-Credential pauls@contoso.com)
 ```
 

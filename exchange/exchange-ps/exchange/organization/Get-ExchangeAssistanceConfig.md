@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ExchangeAssistanceConfig -Identity Contoso.com
 ```
 
 This example shows the configuration information that the web management interface uses to locate the source of the documentation for Contoso.com.
 
 ### Example 2
-```
+```powershell
 Get-ExchangeAssistanceConfig | Format-Table
 ```
 

@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Disable-UMServer -Identity MyUMServer
 ```
 
 This example disables Unified Messaging on the Unified Messaging server named MyUMServer but doesn't disconnect calls that are being processed.
 
 ### Example 2
-```
+```powershell
 Disable-UMServer -Identity MyUMServer -Immediate $true
 ```
 

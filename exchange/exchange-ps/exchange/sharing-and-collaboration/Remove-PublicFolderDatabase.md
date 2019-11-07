@@ -33,7 +33,7 @@ Removing a public folder database can have a broad range of serious consequences
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-PublicFolderDatabase "Public Folder Database"
 ```
 

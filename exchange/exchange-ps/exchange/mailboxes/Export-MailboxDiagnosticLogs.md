@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Export-MailboxDiagnosticLogs -ComponentName OOF -Identity JohnSmith
 ```
 
 In Exchange Server 2010 and 2013, this example retrieves the out-of-office diagnostic log for the user John Smith.
 
 ### Example 2
-```
+```powershell
 Export-MailboxDiagnosticLogs -ComponentName CalendarPermissions -Identity "Yuuto Sasaki"
 ```
 

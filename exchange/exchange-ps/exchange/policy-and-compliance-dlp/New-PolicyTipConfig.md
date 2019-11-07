@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-PolicyTipConfig -Name en\NotifyOnly -Value "This message contains content that is restricted by Contoso company policy."
 ```
 
@@ -44,7 +44,7 @@ This example creates a custom Policy Tip with the following settings:
 - Policy Tip text: "This message contains content that is restricted by Contoso company policy."
 
 ### Example 2
-```
+```powershell
 New-PolicyTipConfig Url -Value "https://www.contoso.com/PolicyTipInformation"
 ```
 

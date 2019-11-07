@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SharingPolicy -Identity FourthCoffee
 ```
 
 This example retrieves the default information for the sharing policy FourthCoffee.
 
 ### Example 2
-```
+```powershell
 Get-SharingPolicy Fabrikam | Format List
 ```
 

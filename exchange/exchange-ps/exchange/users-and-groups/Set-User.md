@@ -90,14 +90,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
 ```
 
 This example sets the display name for user Jill Frank.
 
 ### Example 2
-```
+```powershell
 Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
 ```
 

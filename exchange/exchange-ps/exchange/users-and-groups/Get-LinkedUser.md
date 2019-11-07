@@ -45,14 +45,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-LinkedUser
 ```
 
 This example lists all linked users in the organization.
 
 ### Example 2
-```
+```powershell
 Get-RemoteMailbox -Identity laura@contoso.com | Format-List
 ```
 

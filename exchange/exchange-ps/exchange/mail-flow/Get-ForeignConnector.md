@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ForeignConnector
 ```
 
 This example lists all Foreign connectors in your organization.
 
 ### Example 2
-```
+```powershell
 Get-ForeignConnector "Fax Connector" | Format-List
 ```
 

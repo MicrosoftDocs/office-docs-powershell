@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ActiveSyncDeviceClass -Filter "DeviceType -eq 'WP'"
 ```
 
 This example returns a list of all Windows Phones.
 
 ### Example 2
-```
+```powershell
 Get-ActiveSyncDeviceClass | group-object -Property DeviceType
 ```
 

@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MobileDevice -Identity WM_JeffHay
 ```
 
 This example removes the mobile device partnership for the device named WM\_JeffHay.
 
 ### Example 2
-```
+```powershell
 Remove-MobileDevice -Identity iPhone_TonySmith -Confirm:$false
 ```
 

@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-SystemMessage En\Internal\5.3.5 -Text "The recipient email system can't process this email message. Please contact your system administrator for more information."
 ```
 
 This example modifies the text of the custom English system message for the enhanced status code 5.3.5 for internal senders.
 
 ### Example 2
-```
+```powershell
 Set-SystemMessage En\WarningMailbox -Text "Your mailbox has exceeded the warning limit specified by your email administrator. Please reduce the size of your mailbox."
 ```
 

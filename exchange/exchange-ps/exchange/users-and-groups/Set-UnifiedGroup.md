@@ -88,7 +88,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-UnifiedGroup -Identity "Marketing Department" -PrimarySmtpAddress marketing@contoso.com -RequireSenderAuthenticationEnabled $false
 ```
 
@@ -99,7 +99,7 @@ This example makes the following changes to the Office 365 Group named Marketing
 - The Office 365 Group is allowed to receive mail from unauthenticated (external) senders.
 
 ### Example 2
-```
+```powershell
 Set-UnifiedGroup -Identity "Legal Department" -AccessType Private
 ```
 

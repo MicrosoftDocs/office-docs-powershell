@@ -47,35 +47,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-ImapSettings -Server "MBX01" -UnencryptedOrTLSBindings 10.0.0.0:143
 ```
 
 This example configures the unencrypted or STARTTLS encrypted IMAP4 connection to the server named MBX01 by using the local IP address 10.0.0.0 on TCP port 143.
 
 ### Example 2
-```
+```powershell
 Set-ImapSettings -ProtocolLogEnabled $true -LogFileLocation "C:\Imap4Logging"
 ```
 
 This example turns on IMAP4 protocol logging. It also changes the IMAP4 protocol logging directory to C:\\Imap4Logging.
 
 ### Example 3
-```
+```powershell
 Set-ImapSettings -LogPerFileSizeQuota 2MB
 ```
 
 This example changes the IMAP4 protocol logging to create a new log file when a log file reaches 2 megabytes (MB).
 
 ### Example 4
-```
+```powershell
 Set-ImapSettings -LogPerFileSizeQuota 0 -LogFileRollOverSettings Hourly
 ```
 
 This example changes the IMAP4 protocol logging to create a new log file every hour.
 
 ### Example 5
-```
+```powershell
 Set-ImapSettings -X509CertificateName mail.contoso.com
 ```
 

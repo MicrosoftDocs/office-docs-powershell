@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Clear-MobileDevice -Identity WM_JeffHay
 ```
 
 This example clears all data from the mobile device with the Identity WM\_JeffHay.
 
 ### Example 2
-```
+```powershell
 Clear-MobileDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
 ```
 
 This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
 
 ### Example 3
-```
+```powershell
 Clear-MobileDevice -Identity WM_TonySmith -Cancel
 ```
 

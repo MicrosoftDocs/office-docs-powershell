@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ExchangeDiagnosticInfo
 ```
 
 This example returns a summary list of all Exchange processes that are running on the server.
 
 ### Example 2
-```
+```powershell
 [xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
 ```
 

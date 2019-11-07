@@ -38,14 +38,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-InformationBarrierPolicy | Format-Table Name,State,AssignedSegment,Segments* -Auto
 ```
 
 This example displays a summary list of all information barrier policies.
 
 ### Example 2
-```
+```powershell
 Get-InformationBarrierPolicy -Identity HR-Sales
 ```
 

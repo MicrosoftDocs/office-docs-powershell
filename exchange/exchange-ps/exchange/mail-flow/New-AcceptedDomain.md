@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-AcceptedDomain -DomainName Contoso.com -DomainType Authoritative -Name Contoso
 ```
 

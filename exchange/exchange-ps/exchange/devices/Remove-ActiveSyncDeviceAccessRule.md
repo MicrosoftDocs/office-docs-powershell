@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ActiveSyncDeviceAccessRule | Remove-ActiveSyncDeviceAccessRule
 ```
 
 This example removes all device access rules.
 
 ### Example 2
-```
+```powershell
 Get-ActiveSyncDeviceAccessRule | where {$_.Name -like 'Contoso*'} | Remove-ActiveSyncDeviceAccessRule
 ```
 

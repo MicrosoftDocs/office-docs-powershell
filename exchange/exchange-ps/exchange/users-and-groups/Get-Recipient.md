@@ -111,21 +111,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Recipient -ResultSize unlimited
 ```
 
 This example retrieves as summary list of all recipients in your organization.
 
 ### Example 2
-```
+```powershell
 Get-Recipient -Identity "Marketing Department" | Format-List
 ```
 
 This example returns detailed information for the recipient named Marketing Department.
 
 ### Example 3
-```
+```powershell
 Get-Recipient -RecipientType MailContact -SortBy Office | Format-Table -Auto Office,Name
 ```
 

@@ -46,7 +46,7 @@ This cmdlet is used to view/manage information about SendAs permissions that are
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-EXORecipientPermission -ResultSize 100
 ```
 Above example returns recipient permission for first 100 mailbox users in the name sorted order.

@@ -73,14 +73,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-X400AuthoritativeDomain -Name Sales -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales"
 ```
 
 This example creates the X.400 authoritative domain Sales in the private domain Contoso, which is under the administrative domain Fabrikam.
 
 ### Example 2
-```
+```powershell
 New-X400AuthoritativeDomain -Name "Sales Europe" -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales;OU1=Europe" -X400ExternalRelay: $true
 ```
 

@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-SiteMailbox -Identity "MarketingEvents 2013" -SharePointUrl "https://myserver/teams/marketing"
 ```
 
 This example changes the SharePoint URL for the MarketingEvents 2013 site mailbox.
 
 ### Example 2
-```
+```powershell
 Set-SiteMailbox -Identity SMO_ContosoSales -RemoveDuplicateMessages $true
 ```
 

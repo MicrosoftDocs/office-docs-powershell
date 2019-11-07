@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-TransportConfig
 ```
 
 This example lists the organization-wide transport settings on Mailbox server, or the local transport settings on an Edge Transport server.
 
 ### Example 2
-```
+```powershell
 Get-TransportConfig | Format-List *DSN*
 ```
 

@@ -36,14 +36,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Suspend-PublicFolderMigrationRequest -Identity PFMigReq1
 ```
 
 This example suspends the public folder migration request PFMigReq1.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMigrationRequest -Status InProgress | Suspend-PublicFolderMigrationRequest
 ```
 

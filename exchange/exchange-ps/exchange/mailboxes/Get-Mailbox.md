@@ -164,35 +164,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-Mailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all the mailboxes in your organization.
 
 ### Example 2
-```
+```powershell
 Get-Mailbox -OrganizationalUnit Users
 ```
 
 This example returns a list of all the mailboxes in your organization in the Users OU.
 
 ### Example 3
-```
+```powershell
 Get-Mailbox -Anr Chr
 ```
 
 This example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr". This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
 ### Example 4
-```
+```powershell
 Get-Mailbox -Archive -Server Mailbox01
 ```
 
 This example returns a summary list of all archive mailboxes on the Mailbox server named Mailbox01.
 
 ### Example 5
-```
+```powershell
 Get-Mailbox -Identity ed@contoso.com -RemoteArchive
 ```
 

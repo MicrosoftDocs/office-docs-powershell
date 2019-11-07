@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-PublicFolderMigrationRequest -Identity "PublicFolderMigration"
 ```
 
 This example resumes the migration request PublicFolderMigration.
 
 ### Example 2
-```
+```powershell
 Get-PublicFolderMigrationRequest -Status Failed | Resume-PublicFolderMigrationRequest
 ```
 

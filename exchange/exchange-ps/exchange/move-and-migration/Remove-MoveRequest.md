@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
 ```
 
 This example removes the mailbox move request for Ayla Kol's mailbox.
 
 ### Example 2
-```
+```powershell
 Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 

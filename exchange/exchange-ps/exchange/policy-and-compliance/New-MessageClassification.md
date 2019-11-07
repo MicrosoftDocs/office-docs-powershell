@@ -52,7 +52,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-MessageClassification -Name "My Message Classification" -DisplayName "New Message Classification" -SenderDescription "This is the description text"
 ```
 
@@ -63,7 +63,7 @@ This example creates the message classification named My Message Classification 
 - The sender description is "This is the description text".
 
 ### Example 2
-```
+```powershell
 New-MessageClassification -Name "My Message Classification" -Locale es-ES -DisplayName "España Example" -SenderDescription "Este es el texto de la descripción"
 ```
 

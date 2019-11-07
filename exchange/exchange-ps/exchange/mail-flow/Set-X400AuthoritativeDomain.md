@@ -74,7 +74,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-X400AuthoritativeDomain Sales -X400DomainName "C=US;A=att,P=Contoso;O=Sales and Marketing" -Name "Sales and Marketing"
 ```
 

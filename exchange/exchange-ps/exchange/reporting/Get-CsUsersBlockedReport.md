@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CsUsersBlockedReport -StartDate 11/01/2015 -EndDate 12/30/2015
 ```
 

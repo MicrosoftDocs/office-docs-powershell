@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level High
 ```
 

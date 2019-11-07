@@ -210,7 +210,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-TransportRule "Ethical Wall - Sales and Brokerage Departments" -BetweenMemberOf1 "Sales Department" -BetweenMemberOf2 "Brokerage Department" -ExceptIfFrom "Tony Smith","Pilar Ackerman" -ExceptIfSubjectContainsWords "Press Release","Corporate Communication" -RejectMessageReasonText "Messages sent between the Sales and Brokerage departments are strictly prohibited."
 ```
 

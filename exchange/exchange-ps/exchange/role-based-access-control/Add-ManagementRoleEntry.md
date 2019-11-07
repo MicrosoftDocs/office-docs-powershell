@@ -56,28 +56,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
 
 ### Example 2
-```
+```powershell
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters "Identity","Anr","Server","Filter"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server and Filter parameters are added to the new role entry.
 
 ### Example 3
-```
+```powershell
 Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
 ```
 
 This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
 
 ### Example 4
-```
+```powershell
 Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters "Department","Location" -UnScopedTopLevel
 ```
 

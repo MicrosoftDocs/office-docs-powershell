@@ -62,7 +62,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-DistributionGroup -Name "Managers" -Type "Security"
 ```
 
@@ -71,7 +71,7 @@ This example creates a mail-enabled security group named Managers without specif
 You use the Add-DistributionGroupMember cmdlet to add members after you create the group.
 
 ### Example 2
-```
+```powershell
 New-DistributionGroup -Name "ITDepartment" -Members chris@contoso.com,michelle@contoso.com,laura@contoso.com,julia@contoso.com
 ```
 

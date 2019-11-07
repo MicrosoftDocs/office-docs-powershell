@@ -32,14 +32,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-CaseHoldRule -Name "2016 Budget Spreadsheets" -Policy "Internal Company Policy" -ContentMatchQuery "filename:2016 budget filetype:xlsx"
 ```
 
 This example creates a new case hold rule named 2016 Budget Spreadsheets and adds it to the existing case hold policy named "Internal Company Policy". The rule applies to Excel worksheets that contain the phrase 2016 budget, such as "2016 budget planning.xlsx" and "2016 budget review.xlsx"
 
 ### Example 2
-```
+```powershell
 New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
 ```
 

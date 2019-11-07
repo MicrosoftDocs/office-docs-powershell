@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Resume-MailboxExportRequest -Identity kweku\export
 ```
 
 This example resumes the export request kweku\\export.
 
 ### Example 2
-```
+```powershell
 Get-MailboxExportRequest -Status Failed | Resume-MailboxExportRequest
 ```
 

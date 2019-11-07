@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-AddressBookPolicy -Name "All Fabrikam ABP" -AddressLists "\All Fabrikam","\All Fabrikam Mailboxes","\All Fabrikam DLs","\All Fabrikam Contacts" -RoomList "\All Fabrikam-Rooms" -OfflineAddressBook "\Fabrikam-All-OAB" -GlobalAddressList "\All Fabrikam"
 ```
 

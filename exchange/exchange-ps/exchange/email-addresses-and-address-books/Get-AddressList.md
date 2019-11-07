@@ -48,14 +48,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-AddressList
 ```
 
 This example returns a summary list of all the address lists.
 
 ### Example 2
-```
+```powershell
 Get-AddressList -Identity "All Users\Sales\building4" | Format-List
 ```
 

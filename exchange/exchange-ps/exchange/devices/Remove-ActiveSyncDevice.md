@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-ActiveSyncDevice -Identity WM_JeffHay
 ```
 
 This example removes the mobile device partnership for the device named WM\_JeffHay.
 
 ### Example 2
-```
+```powershell
 Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
 ```
 
 This example removes the mobile device partnership for the device named iPhone\_TonySmith after displaying the confirm prompt.
 
 ### Example 3
-```
+```powershell
 Remove-ActiveSyncDevice -Identity Tablet_JeffHay -Confirm $true
 ```
 

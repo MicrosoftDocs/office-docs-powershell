@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MobileDeviceMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy SalesPolicy.
 
 ### Example 2
-```
+```powershell
 Get-MobileDeviceMailboxPolicy -Identity "Default"
 ```
 

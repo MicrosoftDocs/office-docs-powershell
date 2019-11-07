@@ -33,14 +33,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-ComplianceSecurityFilter | Format-Table -Auto FilterName,Action
 ```
 
 This example returns a summary list of all compliance security filters.
 
 ### Example 2
-```
+```powershell
 Get-ComplianceSecurityFilter -FilterName "HR Filter"
 ```
 

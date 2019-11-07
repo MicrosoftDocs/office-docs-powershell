@@ -83,21 +83,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-CASMailbox adam@contoso.com -OWAEnabled $false -PopEnabled $false
 ```
 
 This example disables Outlook on the web and POP3 access for the user adam@contoso.com.
 
 ### Example 2
-```
+```powershell
 Set-CASMailbox adam@contoso.com -ActiveSyncDebugLogging $true -ActiveSyncMailboxPolicy Management
 ```
 
 This example enables Exchange ActiveSync debug logging and specifies the Exchange ActiveSync mailbox policy named Management for the user adam@contoso.com.
 
 ### Example 3
-```
+```powershell
 Set-CASMailbox tony@contoso.com -DisplayName "Tony Smith" -MAPIBlockOutlookRpcHttp $true
 ```
 

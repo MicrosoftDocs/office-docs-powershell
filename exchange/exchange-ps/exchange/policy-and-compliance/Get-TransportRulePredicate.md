@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-TransportRulePredicate
 ```
 
 This example returns a summary list of all predicates.
 
 ### Example 2
-```
+```powershell
 Get-TransportRulePredicate -Name SubjectMatches | Format-List
 ```
 
@@ -50,7 +50,7 @@ This example returns detailed information about the predicate named SubjectMatch
 For more information about pipelining, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines). For more information about how to work with the output of a command, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 3
-```
+```powershell
 Get-TransportRulePredicate | Where {$_.Name -like "*Attachment*"}
 ```
 

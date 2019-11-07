@@ -32,7 +32,7 @@ RMS templates exist in one or more trusted publishing domains (TPDs) that have b
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RMSTemplate "Contoso Confidential" -Type Archived
 ```
 

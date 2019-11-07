@@ -45,28 +45,28 @@ The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-Mailbo
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MailboxFolderStatistics -Identity contoso\chris
 ```
 
 This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
 
 ### Example 2
-```
+```powershell
 Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
 ```
 
 This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
 
 ### Example 3
-```
+```powershell
 Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
 ```
 
 This example uses the Archive switch to view the statistics for Ayla's archive.
 
 ### Example 4
-```
+```powershell
 Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
 ```
 

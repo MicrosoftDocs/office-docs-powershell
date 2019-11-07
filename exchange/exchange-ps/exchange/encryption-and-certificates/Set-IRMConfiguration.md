@@ -55,21 +55,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-IRMConfiguration -JournalReportDecryptionEnabled $true
 ```
 
 This example enables journal report decryption.
 
 ### Example 2
-```
+```powershell
 Set-IRMConfiguration -TransportDecryptionSetting Mandatory
 ```
 
 This example enables transport decryption and enforces decryption. When decryption is enforced, messages that can't be decrypted are rejected, and an NDR is returned.
 
 ### Example 3
-```
+```powershell
 Set-IRMConfiguration -ExternalLicensingEnabled $true
 ```
 

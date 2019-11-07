@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-RoleGroupMember "Recipient Administrators"
 ```
 
 This example retrieves a list of all the members of the Recipient Administrators role group.
 
 ### Example 2
-```
+```powershell
 Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
 ```
 

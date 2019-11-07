@@ -51,7 +51,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-FederationInformation -DomainName Contoso.com | New-OrganizationRelationship -Name "Contoso" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel LimitedDetails
 ```
 
@@ -64,7 +64,7 @@ The requesting organization receives time, subject, and location information fro
 This example attempts to automatically discover configuration information from the external organization by using the domain names provided in the Get-FederationInformation command. If you use this method to create your organization relationship, you must first ensure that you've created an organization identifier by using the Set-FederationOrganizationIdentifier cmdlet.
 
 ### Example 2
-```
+```powershell
 New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "mail.fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
 ```
 

@@ -38,7 +38,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-LabelPolicy -Name "Research and Development" -Labels "R and D","R and D Management"
 ```
 

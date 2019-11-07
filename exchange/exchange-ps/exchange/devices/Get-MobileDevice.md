@@ -58,21 +58,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-MobileDevice -Mailbox "TonySmith"
 ```
 
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
 
 ### Example 2
-```
+```powershell
 Get-MobileDevice -ResultSize unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
 This example returns a summary list of all mobile devices in the organization.
 
 ### Example 3
-```
+```powershell
 Get-MobileDevice -Identity lila\ExchangeActiveSyncDevices\Android§android94732903 | Format-List
 ```
 

@@ -169,21 +169,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-TransportService Mailbox01 -DelayNotificationTimeout 13:00:00
 ```
 
 This example sets the DelayNotificationTimeout parameter to 13 hours for the Transport service on a Mailbox server named Mailbox01.
 
 ### Example 2
-```
+```powershell
 Set-TransportService Mailbox01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
 ```
 
 This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Transport service on a Mailbox server named Mailbox01.
 
 ### Example 3
-```
+```powershell
 Set-TransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 

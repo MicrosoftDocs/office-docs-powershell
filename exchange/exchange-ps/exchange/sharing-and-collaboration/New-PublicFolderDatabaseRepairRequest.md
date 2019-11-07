@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-PublicFolderDatabaseRepairRequest -Database PFDB01 -CorruptionType ReplState
 ```
 
 This example detects and repairs replication issues in the public folder database PFDB01.
 
 ### Example 2
-```
+```powershell
 New-PublicFolderDatabaseRepairRequest -Database PFDB02 -CorruptionType ReplState -DetectOnly
 ```
 

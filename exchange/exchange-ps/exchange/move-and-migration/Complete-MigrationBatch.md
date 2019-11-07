@@ -50,7 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.com,lucio@contoso.com
 ```
 

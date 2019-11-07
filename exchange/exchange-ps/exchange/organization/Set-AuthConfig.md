@@ -65,14 +65,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AuthConfig -NewCertificateThumbprint DB821B4FCA2A5DA9593B9DE00C86BC5EA35D0FC0 -NewCertificateEffectiveDate 4/17/2013
 ```
 
 This example specifies a new certificate and a date when the certificate will become effective.
 
 ### Example 2
-```
+```powershell
 Set-AuthConfig -PublishCertificate
 ```
 

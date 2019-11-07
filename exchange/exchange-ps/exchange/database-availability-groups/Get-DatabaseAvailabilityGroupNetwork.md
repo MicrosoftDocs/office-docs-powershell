@@ -59,21 +59,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1
 ```
 
 This example gets basic configuration and status information for all networks in the DAG DAG1.
 
 ### Example 2
-```
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1 | Format-List
 ```
 
 This example gets complete configuration and status information for all networks in the DAG DAG1.
 
 ### Example 3
-```
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -Server MBX1 | Format-List
 ```
 
