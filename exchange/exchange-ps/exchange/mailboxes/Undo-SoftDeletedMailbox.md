@@ -45,15 +45,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Undo-SoftDeletedMailbox -SoftDeletedObject florencef
 ```
 
 This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Windows Live ID was also deleted.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```
 
@@ -71,6 +71,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -105,6 +107,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +159,7 @@ Type: SecureString
 Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +175,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +193,7 @@ Type: WindowsLiveId
 Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

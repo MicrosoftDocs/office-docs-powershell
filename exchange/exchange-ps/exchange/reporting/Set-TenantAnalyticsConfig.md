@@ -38,8 +38,8 @@ This cmdlet has been deprecated and no longer used.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TenantAnalyticsConfig
 ```
 
@@ -55,6 +55,7 @@ Type: Int32
 Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -67,6 +68,7 @@ Type: Int32
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Type: Int32
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -97,6 +100,7 @@ Type: $true | $false
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None

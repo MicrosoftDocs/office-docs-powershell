@@ -29,15 +29,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DlpCompliancePolicy
 ```
 
 This example displays summary information for all DLP policies in the Security & Compliance Center.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 ```
 
@@ -53,6 +53,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +77,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None

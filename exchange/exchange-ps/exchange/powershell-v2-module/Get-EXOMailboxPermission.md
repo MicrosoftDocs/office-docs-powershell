@@ -68,8 +68,8 @@ By default, other security groups and role groups inherit permissions to mailbox
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 {{ Add example code here }}
 ```
 
@@ -85,6 +85,7 @@ Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +121,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +137,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +153,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +171,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +197,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -30,15 +30,15 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AddressRewriteEntry
 ```
 
 This example returns a summary listing of all address rewrite entries.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AddressRewriteEntry "Address rewrite entry for contoso.com" | Format-List
 ```
 
@@ -56,6 +56,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Type: AddressRewriteEntryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None

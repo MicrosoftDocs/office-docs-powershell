@@ -45,15 +45,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Reset-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell -GlobalCache
 ```
 
 This example resets the provisioning cache for Windows PowerShell running on the server EXSRV1.contoso.com in an on-premises Exchange organization and specifies that all cache keys are cleared.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum.com -GlobalCache
 ```
 
@@ -81,6 +81,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -96,6 +97,7 @@ Type: SwitchParameter
 Parameter Sets: GlobalCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -111,6 +113,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -128,6 +131,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +151,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +167,7 @@ Type: SwitchParameter
 Parameter Sets: OrganizationCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +183,7 @@ Type: MultiValuedProperty
 Parameter Sets: OrganizationCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +199,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

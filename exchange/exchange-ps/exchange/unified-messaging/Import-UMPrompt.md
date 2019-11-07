@@ -61,22 +61,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
 ```
 
 This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM dial plan MyUMDialPlan.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
 ```
 
 This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 [byte[]]$c = Get-content -Path "d:\UMPrompts\AfterHoursWelcomeGreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData $c
 ```
 
@@ -92,6 +92,7 @@ Type: Byte[]
 Parameter Sets: UploadDialPlanPrompts, UploadAutoAttendantPrompts
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +108,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -122,6 +124,7 @@ Type: Stream
 Parameter Sets: UploadAutoAttendantPromptsStream, UploadDialPlanPromptsStream
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -137,6 +140,7 @@ Type: UMAutoAttendantIdParameter
 Parameter Sets: UploadAutoAttendantPrompts, UploadAutoAttendantPromptsStream
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: UploadDialPlanPrompts, UploadDialPlanPromptsStream
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -171,6 +176,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +194,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

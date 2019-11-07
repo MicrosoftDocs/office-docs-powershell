@@ -32,22 +32,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxDatabase -Identity "EXCH-MBX-01" | Get-MailboxRepairRequest | Remove-MailboxRepairRequest
 ```
 
 This example removes all mailbox repair requests for the mailbox database EXCH-MBX-01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
 ```
 
 This example removes all related mailbox repair requests that have the same \<DatabaseGuid\>\\\<RequestGuid\>. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
 ```
 
@@ -63,6 +63,7 @@ Type: StoreIntegrityCheckJobIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +99,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +115,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

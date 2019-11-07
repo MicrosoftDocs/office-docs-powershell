@@ -44,15 +44,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SupervisoryReviewPolicyReport -StartDate 03/01/2018 -EndDate 03/31/2018
 ```
 
 This example returns the supervisory review policy events for the month of March, 2018.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SupervisoryReviewPolicyReport -Policies "EU Brokers Policy"
 ```
 
@@ -70,6 +70,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +86,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +120,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +138,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

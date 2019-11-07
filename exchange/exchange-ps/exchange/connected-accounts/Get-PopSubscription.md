@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PopSubscription -Mailbox "Kim Akers" | Format-List
 ```
 
 This example shows detailed information for all the POP subscriptions configured in the mailbox of the user Kim Akers.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PopSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersPopReport
 ```
 
@@ -67,6 +67,7 @@ Type: Aggregation | Mirrored | Migration | PeopleConnection | All
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -122,6 +125,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +161,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +177,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +193,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

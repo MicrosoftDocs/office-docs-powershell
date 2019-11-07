@@ -37,15 +37,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-InformationBarrierPoliciesApplicationStatus
 ```
 
 This example returns the most recent application of information barrier policies by the Start-InformationBarrierPoliciesApplication cmdlet.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-InformationBarrierPoliciesApplicationStatus -All
 ```
 
@@ -61,6 +61,7 @@ Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 0
 Default value: None
@@ -78,6 +79,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

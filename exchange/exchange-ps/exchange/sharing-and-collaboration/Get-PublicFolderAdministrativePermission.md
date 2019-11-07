@@ -39,22 +39,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder"
 ```
 
 This example retrieves the administrative permissions for all users of the public folder My Public Folder.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -User Chris -Server "My Server" | Format-List
 ```
 
 This example retrieves the administrative permissions for the public folder My Public Folder, for the user Chris, on the server My Server. In this example, the output of the Get-PublicFolderAdministrativePermission command is piped to the Format-List command so that all the available information is displayed in the result.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -Owner
 ```
 
@@ -72,6 +72,7 @@ Type: PublicFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -87,6 +88,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +104,7 @@ Type: SwitchParameter
 Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +128,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +144,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None

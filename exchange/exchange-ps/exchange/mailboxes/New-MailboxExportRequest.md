@@ -131,29 +131,29 @@ If you don't grant this permission, you will receive an error message stating th
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MailboxExportRequest -Mailbox AylaKol -FilePath "\\SERVER01\PSTFileShare\Ayla_Recovered.pst"
 ```
 
 This example exports the user Ayla Kol's primary mailbox to a .pst file on the network shared folder PSTFileShare on SERVER01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MailboxExportRequest -Mailbox Kweku -FilePath "\\SERVER01\PSTFileShare\Kweku_Archive.pst" -IsArchive
 ```
 
 This example exports the user Kweku's archive to a .pst file on the network shared folder PSTFileShare on SERVER01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like "*profit*") -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
 This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2018.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-MailboxExportRequest -Mailbox Kweku -IncludeFolders "#Inbox#" -FilePath \\SERVER01\PSTFileShare\Kweku\InPlaceHold.pst
 ```
 
@@ -169,6 +169,7 @@ Type: String
 Parameter Sets: MailboxComplianceExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -192,6 +193,7 @@ Type: LongPath
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -231,6 +233,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: True
 Position: 1
 Default value: None
@@ -243,6 +246,7 @@ Type: MailboxLocationIdParameter
 Parameter Sets: MailboxExportRequest, MailboxComplianceExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -258,6 +262,7 @@ Type: PSCredential
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -270,6 +275,7 @@ Type: PSCredential
 Parameter Sets: MailboxComplianceExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -285,6 +291,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -308,6 +315,7 @@ Type: DoNotCopy | MapByMessageClass | Copy
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -327,6 +335,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -342,6 +351,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -357,6 +367,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -376,6 +387,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -403,6 +415,7 @@ Type: KeepSourceItem | KeepLatestItem | KeepAll
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -430,6 +443,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -447,6 +461,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -462,6 +477,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -483,6 +499,7 @@ Type: SwitchParameter
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -542,6 +559,7 @@ Type: String[]
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -601,6 +619,7 @@ Type: String[]
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -616,6 +635,7 @@ Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -631,6 +651,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -656,6 +677,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -673,6 +695,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -690,6 +713,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -705,6 +729,7 @@ Type: Default | Mime
 Parameter Sets: MailboxComplianceExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -734,6 +759,7 @@ Type: Normal | High
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -749,6 +775,7 @@ Type: Fqdn
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -772,6 +799,7 @@ Type: Unlimited
 Parameter Sets: MailboxComplianceExportRequest, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -787,6 +815,7 @@ Type: SkippableMergeComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -802,6 +831,7 @@ Type: String
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -817,6 +847,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -832,6 +863,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -847,6 +879,7 @@ Type: String
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -862,6 +895,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -877,6 +911,7 @@ Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

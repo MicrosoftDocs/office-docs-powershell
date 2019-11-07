@@ -32,8 +32,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AccessToCustomerDataRequest -ApprovalDecision Approve -RequestId EXSR123456 -Comment "Troubleshoot issues in Rick Hofer mailbox"
 ```
 
@@ -55,6 +55,7 @@ Type: Approve | Deny | Cancel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -70,6 +71,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -85,6 +87,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

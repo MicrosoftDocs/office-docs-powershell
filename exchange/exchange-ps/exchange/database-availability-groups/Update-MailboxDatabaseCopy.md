@@ -73,36 +73,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-MailboxDatabaseCopy -Identity DB1\MBX1
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 using MBX2 as the source Mailbox server for the seed.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 without seeding the content index catalog.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
 ```
 
 This example seeds the content index catalog for the copy of the database DB1 on the Mailbox server MBX1 without seeding the database file. The content index catalog seeding occurs over the MAPI network.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Update-MailboxDatabaseCopy -Server MBX1
 ```
 
@@ -118,6 +118,7 @@ Type: SwitchParameter
 Parameter Sets: CancelSeed
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -133,6 +134,7 @@ Type: DatabaseCopyIdParameter
 Parameter Sets: CancelSeed, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -148,6 +150,7 @@ Type: MailboxServerIdParameter
 Parameter Sets: ExplicitServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -165,6 +168,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +184,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +204,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +220,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -231,6 +238,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +254,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -261,6 +270,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +288,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -293,6 +304,7 @@ Type: Int32
 Parameter Sets: ExplicitServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -308,6 +320,7 @@ Type: DatabaseAvailabilityGroupNetworkIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -323,6 +336,7 @@ Type: UseDagDefault | Off | On
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -338,6 +352,7 @@ Type: UseDagDefault | Off | On
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -353,6 +368,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -368,6 +384,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -385,6 +402,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -400,6 +418,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -425,6 +444,7 @@ Type: ServerIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -440,6 +460,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

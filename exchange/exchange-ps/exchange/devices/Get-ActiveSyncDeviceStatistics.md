@@ -47,15 +47,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActiveSyncDeviceStatistics -Mailbox TonySmith
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'"; Get-Mailbox $UserList | foreach {Get-ActiveSyncDeviceStatistics -Mailbox $_}
 ```
 
@@ -63,8 +63,8 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 
 **Note**: For more information about OPath filter syntax, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ActiveSyncDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
 ```
 
@@ -80,6 +80,7 @@ Type: ActiveSyncDeviceIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -115,6 +116,7 @@ Type: MailboxIdParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +134,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +150,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +166,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +182,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -77,22 +77,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-AddressList -Name MyAddressList -RecipientFilter "((RecipientType -eq 'UserMailbox') -and ((StateOrProvince -eq 'Washington') -or (StateOrProvince -eq 'Oregon')))"
 ```
 
 This example creates the address list MyAddressList. The address list includes recipients that are mailbox users and have the StateOrProvince property set to Washington or Oregon.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-AddressList -Name MyAddressList2 -ConditionalStateOrProvince Washington -IncludedRecipients MailboxUsers
 ```
 
 This example creates the address list MyAddressList2 that includes mailboxes that have the ConditionalStateOrProvince parameter set to Washington.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like '*AgencyB*'))"
 ```
 
@@ -108,6 +108,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -139,6 +140,7 @@ Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | 
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -170,6 +172,7 @@ Type: String
 Parameter Sets: CustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -189,6 +192,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +212,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +232,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +252,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +272,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -284,6 +292,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +312,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -322,6 +332,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +352,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -360,6 +372,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +392,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -398,6 +412,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -417,6 +432,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -436,6 +452,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -455,6 +472,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -474,6 +492,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -493,6 +512,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -512,6 +532,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -531,6 +552,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -556,6 +578,7 @@ Type: AddressListIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -573,6 +596,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -590,6 +614,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -617,6 +642,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -632,6 +658,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -46,36 +46,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OutlookAnywhere -Identity:CAS01\Rpc (Default Web Site) -ClientAuthenticationMethod:Ntlm
 ```
 
 In Exchange 2010, this example sets the client authentication method to NTLM for the /rpc virtual directory on the Client Access server CAS01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-OutlookAnywhere -Identity: "EXCH1\rpc (Default Web Site)" -ExternalClientAuthenticationMethod NTLM
 ```
 
 This example sets the client authentication method to NTLM for the Outlook Anywhere virtual directory on the server named EXCH1.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -SSLOffloading $false -InternalClientsRequireSsl $true -ExternalClientsRequireSsl $true
 ```
 
 This example sets the SSLOffloading parameter to $false for the Outlook Anywhere virtual directory on the server named EXCH1. This setting informs Outlook Anywhere to expect no SSL decryption between clients and the server, and enables the Require SSL value on the virtual directory. Because SSL is now required for Outlook Anywhere connections, we need to configure internal and external clients to use SSL.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods NTLM
 ```
 
 This example sets the authentication method for the Outlook Anywhere virtual directory setting in IIS to NTLM.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods Basic,NTLM
 ```
 
@@ -99,6 +99,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -122,6 +123,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +143,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +167,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +183,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +209,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +255,7 @@ Type: None | Allow | Require
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +279,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +301,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +317,7 @@ Type: Hostname
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +343,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -355,6 +367,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -376,6 +389,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -391,6 +405,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +421,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -431,6 +447,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -446,6 +463,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

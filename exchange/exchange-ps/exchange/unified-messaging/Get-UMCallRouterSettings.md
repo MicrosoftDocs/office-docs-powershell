@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UMCallRouterSettings
 ```
 
 This example displays a summary list of the Microsoft Exchange Unified Messaging Call Router service settings on all Exchange servers in the Active Directory forest.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-UMCallRouterSettings -Server EXCH01 | Format-List
 ```
 
@@ -65,6 +65,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -80,6 +81,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

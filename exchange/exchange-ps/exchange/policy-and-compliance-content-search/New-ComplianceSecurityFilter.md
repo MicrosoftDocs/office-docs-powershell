@@ -33,29 +33,29 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ComplianceSecurityFilter -FilterName CountryFilter -Users annb@contoso.com -Filters "Mailbox_CountryCode -eq '124'" -Action All
 ```
 
 This example allows the user annb to perform all compliance search actions only for mailboxes in Canada. The filter uses the ISO 3166-1 numeric country code value.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ComplianceSecurityFilter -FilterName MarketingFilter -Users donh,suzanf -Filters "Mailbox_CustomAttribute1 -eq 'Marketing'" -Action Search
 ```
 
 This example allows the users donh and suzanf to search only the mailboxes that have the value Marketing for the CustomAttribute1 mailbox property.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ComplianceSecurityFilter -FilterName USDiscoveryManagers -Users "US Discovery Managers" -Filters "Mailbox_CountryCode -eq 'US'" -Action All
 ```
 
 This example allows members of the US Discovery Managers role group to perform all compliance search actions only on mailboxes in the United States.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 $DG = Get-DistributionGroup "Ottawa Users"; New-ComplianceSecurityFilter -FilterName DGFilter -Users eDiscoveryManager -Filters "Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'" -Action Search
 ```
 
@@ -63,8 +63,8 @@ This example assigns allows members of the eDiscovery Manager role group to only
 
 This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 $DG = Get-DistributionGroup "Executive Team"; New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Purge
 ```
 
@@ -72,29 +72,29 @@ This example prevents any user from deleting content from the mailboxes of membe
 
 This example requires you to connect to Security & Compliance Center PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 New-ComplianceSecurityFilter -FilterName EmailDateRestrictionFilter -Users donh@contoso.com -Filters "MailboxContent_Received -ge '01-01-2018' -and MailboxContent_Received -le '12-31-2018'" -Action All
 ```
 
 This example restricts the user to performing all compliance search actions only on email messages sent during the calendar year 2018.
 
-### -------------------------- Example 7 --------------------------
-```
+### Example 7
+```powershell
 New-ComplianceSecurityFilter -FilterName OneDriveOnly -Users "OneDrive eDiscovery Managers" -Filters "Site_Path -like 'https://contoso-my.sharepoint.com/personal*'" -Action Search
 ```
 
 This example allows members of the OneDrive eDiscovery Managers custom role group to only search for content in OneDrive for Business locations in the organization.
 
-### -------------------------- Example 8 --------------------------
-```
+### Example 8
+```powershell
 New-ComplianceSecurityFilter -FilterName DocumentDateRestrictionFilter -Users donh@contoso.com -Filters "SiteContent_LastModifiedTime -ge '01-01-2018' -and SiteContent_LastModifiedTime -le '12-31-2018'" -Action All
 ```
 
 This example restricts the user to performing all compliance search actions on documents that were last changed sometime in the calendar year 2018.
 
-### -------------------------- Example 9 --------------------------
-```
+### Example 9
+```powershell
 New-ComplianceSecurityFilter -FilterName NoEXO -Users suzanf@contoso.com -Filters "Mailbox_Alias -notlike '*'" -Action All
 ```
 
@@ -120,6 +120,7 @@ Type: Unknown | Preview | Export | Purge | Search | All
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -135,6 +136,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -158,6 +160,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -177,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +196,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +222,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +238,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +254,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

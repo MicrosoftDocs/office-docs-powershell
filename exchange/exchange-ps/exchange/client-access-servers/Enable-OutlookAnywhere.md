@@ -57,22 +57,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-OutlookAnywhere -Server:Server01 -ExternalHostname:mail.contoso.com -ClientAuthenticationMethod:Ntlm -SSLOffloading:$true
 ```
 
 This example enables the server Server01 for Outlook Anywhere. The external host name is set to mail.contoso.com, both Basic and NTLM authentication are used, and SSL offloading is set to $true.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-OutlookAnywhere -DefaultAuthenticationMethod:Ntlm -ExternalHostname:mail.contoso.com -SSLOffloading:$false
 ```
 
 This example enables Outlook Anywhere on the server that has the Client Access role installed. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is specified as mail.contoso.com, and the DefaultAuthenticationMethod parameter is set to NTLM.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
 ```
 
@@ -96,6 +96,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +120,7 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: DefaultIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -134,6 +136,7 @@ Type: Hostname
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -149,6 +152,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -168,6 +172,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +188,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +214,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +236,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +264,7 @@ Type: None | Allow | Require
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +286,7 @@ Type: MultiValuedProperty
 Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +310,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +326,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
