@@ -45,15 +45,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-O365ClientOSReport -OS Windows
 ```
 
 This example gets the summary report of client Windows use for the 366 day data retention period (no start and end date are specified).
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-O365ClientOSReport -StartDate 06/13/2013 -EndDate 06/15/2013
 ```
 
@@ -71,6 +71,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +95,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +111,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +129,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

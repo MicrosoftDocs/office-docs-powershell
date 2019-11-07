@@ -33,22 +33,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy named SalesPolicy.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ActiveSyncMailboxPolicy -Identity "Default"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy named Default.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ActiveSyncMailboxPolicy -Identity "Management"
 ```
 
@@ -66,6 +66,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None

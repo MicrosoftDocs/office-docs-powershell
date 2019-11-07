@@ -54,22 +54,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxCalendarConfiguration -Identity kai | Format-List
 ```
 
 This example retrieves all the calendar settings for Kai's mailbox where the Identity parameter is specified in the alias format.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxCalendarConfiguration -Identity contoso\tony
 ```
 
 This example uses the Identity parameter specified in the domain\\account format and returns the calendar settings for Tony's mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxCalendarConfiguration -Identity kai -DomainController DC1
 ```
 
@@ -105,6 +105,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -122,6 +123,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

@@ -45,11 +45,11 @@ Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
 ## DESCRIPTION
 The Export-ExchangeCertificate cmdlet creates the following types of files:
 
-- Certificate files: When you export a certificate, the command creates a PKCS #12 file. PKCS #12 is the Personal Information Exchange Syntax standard specified by RSA Laboratories. For more information, see PKCS #12: Personal Information Exchange Syntax Standard (https://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs12-personal-information-exchange-syntax-standard.htm).
+- Certificate files: When you export a certificate, the command creates a PKCS #12 file. PKCS #12 is the Personal Information Exchange Syntax standard specified by RSA Laboratories. For more information, see [PKCS #12: Personal Information Exchange Syntax Standard](https://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs12-personal-information-exchange-syntax-standard.htm).
 
   To export a certificate from an Exchange server, the certificate's PrivateKeyExportable property needs to have the value True. To import an exported certificate on another Exchange server, you need to export the certificate by using the Password parameter to include the private key or chain of trust in the certificate file. The default Microsoft Exchange self-signed certificate or new self-signed certificates that you create in the Exchange admin center or by using the default settings of the New-ExchangeCertificate cmdlet aren't exportable, because the private key isn't exportable (the default value of the PrivateKeyExportable parameter is $false).
 
-- Certificate request files: When you export a certificate request, the command creates a PKCS #10 file. PKCS #10 is the Certification Request Syntax standard specified by RFC 2314. For more information, see PKCS #10: Certification Request Syntax (https://www.ietf.org/rfc/rfc2314.txt).
+- Certificate request files: When you export a certificate request, the command creates a PKCS #10 file. PKCS #10 is the Certification Request Syntax standard specified by RFC 2314. For more information, see [PKCS #10: Certification Request Syntax](https://www.ietf.org/rfc/rfc2314.txt).
 
   Typically, you export a certificate request file if you need to resubmit the certificate request to the certification authority. You can't import an exported certificate request on another server.
 
@@ -57,8 +57,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -FileName "C:\Data\HT cert.pfx" -BinaryEncoded -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
@@ -70,8 +70,8 @@ The exported certificate file is encoded by DER (not Base64).
 
 The password for the certificate file is P@ssw0rd1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -FileName "\\FileServer01\Data\Fabrikam.req"
 ```
 
@@ -93,6 +93,7 @@ Type: String
 Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -110,6 +111,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +131,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +149,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +167,7 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +195,7 @@ Type: ServerIdParameter
 Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +211,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +227,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +253,7 @@ Type: ExchangeCertificateIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None

@@ -116,8 +116,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 ```
 
@@ -151,6 +151,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -174,6 +175,7 @@ Type: Public | Private
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +199,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +223,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +241,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +257,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +277,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +299,7 @@ Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +321,7 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +339,7 @@ Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +357,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -384,6 +395,7 @@ Type: ProxyAddressCollection
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -399,6 +411,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -416,6 +429,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -435,6 +449,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -452,6 +467,7 @@ Type: CultureInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -467,6 +483,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +499,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +529,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -528,6 +547,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -543,6 +563,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -572,6 +593,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -587,6 +609,7 @@ Type: SmtpAddress
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -606,6 +629,7 @@ Type: $true | $false
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -621,6 +645,7 @@ Type: SwitchParameter
 Parameter Sets: SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -636,6 +661,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -651,6 +677,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

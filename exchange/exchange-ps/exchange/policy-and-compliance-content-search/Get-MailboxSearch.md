@@ -51,15 +51,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxSearch -ResultSize "unlimited"
 ```
 
 This example retrieves a list of all mailbox searches.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxSearch "Project Hamilton" | Format-List
 ```
 
@@ -67,8 +67,8 @@ This example retrieves all properties for the mailbox search Project Hamilton.
 
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see [About Parameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 (Get-Mailbox Mark).InPlaceHolds; Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
 ```
 
@@ -84,6 +84,7 @@ Type: String
 Parameter Sets: InPlaceHoldIdentity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +102,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +134,7 @@ Type: SearchObjectIdParameter
 Parameter Sets: EwsStoreObjectIdentity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -144,6 +147,7 @@ Type: SearchObjectIdParameter
 Parameter Sets: SearchObjectIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -159,6 +163,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +179,7 @@ Type: SwitchParameter
 Parameter Sets: EwsStoreObjectIdentity, InPlaceHoldIdentity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
