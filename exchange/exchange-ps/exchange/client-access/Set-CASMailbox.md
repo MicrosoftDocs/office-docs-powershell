@@ -1205,7 +1205,7 @@ Valid values for this parameter are:
 
 - $true: Authenticated SMTP is disabled for the mailbox.
 
-- $false: Authenticated SMTP is enaled for the mailbox.
+- $false: Authenticated SMTP is enabled for the mailbox.
 
 - blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization. By default, authenticated SMTP is enabled for the organization ($false), which means authenticated SMTP is also enabled for the mailbox.
 

@@ -233,6 +233,7 @@ Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -ActiveSyncIntegrationEnabled
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
