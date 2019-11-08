@@ -7,6 +7,10 @@ schema: 2.0.0
 
 # Add-TeamChannelUser
 
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. 
+Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.  
+
 ## SYNOPSIS
 Adds an owner or member to the private channel.
 
