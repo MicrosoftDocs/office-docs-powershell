@@ -6,7 +6,7 @@ schema: 2.0.0
 # Set-PnPUnifiedGroup
 
 ## SYNOPSIS
-Sets Office 365 Group (aka Unified Group) properties
+Sets Office 365 Group (aka Unified Group) properties. Take into account that you will need to connect to sharepoint site using a special scope as "Group.ReadWrite.All", "User.ReadWrite.All", "Directory.ReadWrite.All"
 
 ## SYNTAX 
 
