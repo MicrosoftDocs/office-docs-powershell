@@ -10,9 +10,6 @@ ms.reviewer:
 
 # Set-TeamChannel
 
-> [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.  
-
 ## SYNOPSIS
 
 Update Team channels settings.
@@ -25,6 +22,9 @@ Set-TeamChannel -GroupId <String> -CurrentDisplayName <String> [-NewDisplayName 
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
 
 ## EXAMPLES
 

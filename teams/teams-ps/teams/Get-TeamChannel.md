@@ -5,12 +5,10 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamChannel
-
-> [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.  
+# Get-TeamChannel  
 
 ## SYNOPSIS
+
 Get all the channels for a team.
 
 ## SYNTAX
