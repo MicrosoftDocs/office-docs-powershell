@@ -136,7 +136,7 @@ Remove-Module ExchangeOnlineManagement
 ## Connect to Exchange Online using the EXO V2 module
 
 > [!NOTE]
-> If your account uses multi-factor authentication (MFA), skip step #1 from below as Get-Credential doesn't support MFA enabled accounts.
+> If your account uses multi-factor authentication (MFA), skip the first step (the **Get-Credential** cmdlet doesn't support MFA enabled accounts).
 
 1. On your local computer, open a Windows PowerShell window and run the following command:
 
@@ -146,24 +146,21 @@ Remove-Module ExchangeOnlineManagement
 
    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
 
-   **Note**:
+2. Run one of the following commands:
 
-   Get-Credential doesn't work for MFA enabled accounts. For using MFA enabled-accounts, remove the Credential parameter from below command instruction.
+   - **Accounts without MFA enabled**:
 
-2. Run the following command:
-Use below step if your account doesn't have MFA enabled.
-   ```PowerShell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
-   ```
+     ```PowerShell
+     Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
+     ```
 
-Use below syntax if your account has MFA enabled. Get-Credential doesn't support MFA and hence credentials can't be passed using -Credential parameter.
-   ```PowerShell
-   Connect-ExchangeOnline -UserPrincipalName john.doe@contoso.com -ShowProgress $true
-   ```
+   - **Accounts with MFA enabled**: Replace `<UPN>` with your account in user principal name format (for example, `navin@contoso.com`) and run the following command:
+
+     ```PowerShell
+     Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true
+     ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline).
-
-
 
 ## What's new in the EXO V2 module?
 
