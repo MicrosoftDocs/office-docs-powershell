@@ -23,6 +23,9 @@ Add-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-Rol
 
 ## DESCRIPTION
 
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+
 ## EXAMPLES
 
 ### Example 1

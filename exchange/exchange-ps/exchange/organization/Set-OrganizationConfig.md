@@ -1324,7 +1324,7 @@ The EwsApplicationAccessPolicy parameter specifies the client applications that 
 
 - EnforceBlockList: All applications are allowed to access EWS and REST, except for the applications specified by the EwsBlockList parameter.
 
-Note that this parameter doesn't affect access to EWS by Entourage, Mac Outlook, and Outlook. Access to EWS by these applications is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters.
+Note that if the EwsAllowEntourage, EwsAllowMacOutlook or EwsAllowOutlook parameters are set to a true or false value, they take precedence for access to EWS by Entourage, Mac Outlook, or Outlook, respectively.
 
 ```yaml
 Type: EnforceAllowList | EnforceBlockList
