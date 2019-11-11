@@ -138,6 +138,8 @@ Remove-Module ExchangeOnlineManagement
 > [!NOTE]
 > If your account uses multi-factor authentication (MFA), don't follow the instructions in this section; 
 
+The note above is confusing and ambiguous, so what if someone is using MFA? Are there different steps to use new EXO V2? or They cannot use EXO V2? Please clarify 
+
 1. On your local computer, open a Windows PowerShell window and run the following command:
 
    ```PowerShell
