@@ -133,6 +133,10 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 Get-PSSession | Remove-PSSession
 ```
 
+## Single Sign-On (SSO)
+If your organization has single sign-on enabled and you are logged into a computer as a user in that domain, then **Connect-EXPOPSSession** may fail with the error similar to "*New-ExoPSSession : User 'loggedonuser@contoso.com' returned by service does not match user
+'userprincipalname@contoso.com' in the request.*".  This occurs because single sign-on overrides the specified userprincipalname. As a work-around, log into another non-domain-joined computer or log in as a local user on the computer and try again.
+
 ## How do you know this worked?
 
 After Step 4, the Exchange Online cmdlets are imported into your Exchange Online Remote PowerShell Module session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online cmdlet, for example, **Get-Mailbox**, and see the results.
