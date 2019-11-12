@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
+The Notes parameter specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
