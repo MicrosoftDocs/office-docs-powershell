@@ -157,7 +157,7 @@ The QueryStartDate parameter specifies the start date to look for meetings that 
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-[!NOTE]If you don't use this parameter, today's date is used.
+**Note**: If you don't use this parameter, today's date is used.
 
 You use the QueryWindowInDays parameter to specify the end date.
 
@@ -181,7 +181,7 @@ If you don't use this parameter, all future meetings on or after the specified s
 
 If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
 
-[!NOTE] Maximum window sllowed for meeting cancellation is 1825 days
+**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
 
 ```yaml
 Type: Int32
