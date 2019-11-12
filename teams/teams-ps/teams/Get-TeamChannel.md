@@ -5,9 +5,10 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TeamChannel
+# Get-TeamChannel  
 
 ## SYNOPSIS
+
 Get all the channels for a team.
 
 ## SYNTAX

@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AuthenticationPolicy | Format-Table -Auto Name
 ```
 
 This example returns a summary list of all authentication policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AuthenticationPolicy -Identity "Engineering Group"
 ```
 
@@ -59,6 +59,7 @@ Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 0
 Default value: None

@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
 Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
 ```
 Above example fetches the statstics for active sync devices linked to user with email john.doe@contoso.com
@@ -67,6 +67,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +99,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +115,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -127,12 +131,14 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -UniversalOutlook
 The UniversalOutlook switch filters the results by Mail and Calendar devices. You don't need to specify a value with this switch.
 
@@ -141,6 +147,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +163,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

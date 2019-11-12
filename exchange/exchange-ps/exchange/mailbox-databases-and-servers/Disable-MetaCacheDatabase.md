@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Disable-MetaCacheDatabase -Server Mailbox01
 ```
 
@@ -76,6 +76,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None

@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-PublicFolderDatabaseRepairRequest cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, access isn't available to the public folder currently being repaired.
 
-After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see Dismount a Database.
+After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see [Dismount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123903(v=exchg.141)).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-PublicFolderDatabaseRepairRequest -Database PFDB01 -CorruptionType ReplState
 ```
 
 This example detects and repairs replication issues in the public folder database PFDB01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-PublicFolderDatabaseRepairRequest -Database PFDB02 -CorruptionType ReplState -DetectOnly
 ```
 
@@ -59,6 +59,7 @@ Type: PublicFolderDatabaseCorruptionType[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -80,6 +81,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -99,6 +101,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +133,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -168,4 +174,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9ad7ebc3-4a12-4af7-bbdf-ae1a6c2a7a84.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabaserepairrequest)

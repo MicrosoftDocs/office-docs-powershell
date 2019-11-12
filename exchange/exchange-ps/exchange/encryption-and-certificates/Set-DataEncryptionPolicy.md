@@ -60,15 +60,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DataEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
 ```
 
 This example disabled the data encryption policy named US Mailboxes.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 ```
 
@@ -90,6 +90,7 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -107,6 +108,7 @@ Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +121,7 @@ Type: String
 Parameter Sets: DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +139,7 @@ Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -155,6 +159,7 @@ Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -170,6 +175,7 @@ Type: SwitchParameter
 Parameter Sets: RefreshKey
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -189,6 +195,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +211,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -219,6 +227,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +247,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +263,7 @@ Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +279,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +295,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -305,4 +318,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/55c089cd-1497-4660-94ed-847561e89734.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-dataencryptionpolicy)

@@ -45,22 +45,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-WebServicesVirtualDirectory -ServerMBX01
 ```
 
 This example returns a summary list of all EWS virtual directories on the server named MBX01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-WebServicesVirtualDirectory -Identity "MBX01\EWS*" | Format-List
 ```
 
 This example returns detailed information for the EWS virtual directory named "EWS (Default Web Site)" on the server named MBX01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-WebServicesVirtualDirectory
 ```
 
@@ -86,6 +86,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -111,6 +112,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +128,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +144,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +164,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,4 +189,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d8babcc-ed3f-4f6a-9b34-e332996dc74a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-webservicesvirtualdirectory)

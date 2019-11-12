@@ -27,15 +27,14 @@ Set-DlpEdmSchema [-FileData] <Byte[]>
 ```
 
 ## DESCRIPTION
-For an explanation and example of the EDM schema, see Define the schema for your database of sensitive information
- (https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm#define-the-schema-for-your-database-of-sensitive-information).
+For an explanation and example of the EDM schema, see [Define the schema for your database of sensitive information](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm#define-the-schema-for-your-database-of-sensitive-information).
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0; Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
 
@@ -53,6 +52,7 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 0
 Default value: None
@@ -72,6 +72,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

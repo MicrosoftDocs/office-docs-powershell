@@ -51,8 +51,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SendAddress -Mailbox "Diane Prescott"
 ```
 
@@ -78,6 +78,7 @@ Type: String
 Parameter Sets: LookUpId
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +104,7 @@ Type: SendAddressIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -138,6 +140,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -162,4 +165,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b2c57a7e-bd6d-461d-8a9d-5384a715344b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-sendaddress)

@@ -34,22 +34,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UMHuntGroup
 ```
 
 This example displays all the UM hunt groups in the Active Directory forest.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
 ```
 
 This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-UMHuntGroup -UMDialPlan MyUMDialPlan
 ```
 
@@ -67,6 +67,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Type: UMHuntGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -97,6 +99,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -121,4 +124,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/89471543-4fae-42b0-a807-fd15bec97307.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-umhuntgroup)

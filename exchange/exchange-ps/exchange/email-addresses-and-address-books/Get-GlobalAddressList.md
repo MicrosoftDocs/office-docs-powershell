@@ -41,15 +41,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-GlobalAddressList
 ```
 
 This example returns a summary list of all GALs.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-GlobalAddressList -Identity GAL_AgencyB | Format-List
 ```
 
@@ -65,6 +65,7 @@ Type: SwitchParameter
 Parameter Sets: DefaultOnly
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Type: GlobalAddressListIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -127,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1cf4684c-0347-488e-aa04-04d11dd5661c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-globaladdresslist)
