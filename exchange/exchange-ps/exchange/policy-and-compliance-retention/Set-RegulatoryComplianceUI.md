@@ -28,7 +28,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-RegulatoryComplianceUI -Enabled $true
 ```
 
@@ -48,6 +48,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
