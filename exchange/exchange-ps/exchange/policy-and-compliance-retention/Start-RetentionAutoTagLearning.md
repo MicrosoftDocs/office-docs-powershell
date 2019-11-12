@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Start-RetentionAutoTagLearning cmdlet to start auto-tagging for a specified mailbox or to cross-validate auto-tagging results for the mailbox.
 
-Messaging records management (MRM) must be configured before the Start-RetentionAutoTagLearning cmdlet can be used. For more information, see Understanding Retention Tags and Retention Policies.
+Messaging records management (MRM) must be configured before the Start-RetentionAutoTagLearning cmdlet can be used. For more information, see [Understanding Retention Tags and Retention Policies](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd297955(v=exchg.141)).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -43,22 +43,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Train
 ```
 
 This example sets user Joe Healy's mailbox to train.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -CrossValidate -NumberOfSegments 15
 ```
 
 This example sets user Joe Healy's mailbox to cross-validate and sets the number of segments for cross-validation to 15.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Clear
 ```
 
@@ -74,6 +74,7 @@ Type: SwitchParameter
 Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -109,6 +110,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -124,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +146,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +162,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +184,7 @@ Type: Int32
 Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -194,6 +200,7 @@ Type: SwitchParameter
 Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +216,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -233,4 +241,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b760ee59-89f0-4d73-94e4-ac816584b13c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/start-retentionautotaglearning)

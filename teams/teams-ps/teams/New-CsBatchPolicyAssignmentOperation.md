@@ -28,6 +28,9 @@ Users can be specified by their object ID (guid) or by their UPN/SIP/email (user
 
 A batch may contain up to 20,000 users.
 
+Batch policy assignment is currently limited to the following policy types:
+CallingLineIdentity, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
+
 ## EXAMPLES
 
 ### Example 1

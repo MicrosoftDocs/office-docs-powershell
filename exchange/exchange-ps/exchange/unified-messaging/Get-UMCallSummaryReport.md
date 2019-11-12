@@ -71,29 +71,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UMCallSummaryReport -GroupBy Total
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-UMCallSummaryReport -GroupBy Month
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization over the last 12 months.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-UMCallSummaryReport -GroupBy Day
 ```
 
 This example displays the statistics for all calls received or placed by Mailbox servers in the organization over the last 90 days.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-UMCallSummaryReport -GroupBy Month -UMDialPlan MyUMDialPlan
 ```
 
@@ -115,6 +115,7 @@ Type: Day | Month | Total
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +133,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +149,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +165,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -186,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fb22cc49-03b7-47f1-9cfb-e05acdcc93d6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-umcallsummaryreport)

@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-HistoricalSearch
 ```
 
 The example returns a summary list of all historical searches that have been performed in the last ten days.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-HistoricalSearch -JobId f9c66f83-b5c8-4a0c-91f4-a38376f74182 | Format-List
 ```
 
@@ -55,6 +55,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -79,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/70f2ec73-2733-4f87-ac89-1665d575a4dc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-historicalsearch)

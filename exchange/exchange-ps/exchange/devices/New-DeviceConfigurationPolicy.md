@@ -40,8 +40,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DeviceConfigurationPolicy -Name "Engineering Group"
 ```
 
@@ -50,13 +50,14 @@ This example creates a new mobile device configuration policy named Engineering 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the policy. If the value contains spaces, enclose the value in double-quotation marks.
+The Name parameter specifies a unique name for the policy. If the value contains spaces, enclose the value in double quotation marks.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -72,6 +73,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +113,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +129,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +145,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -162,4 +168,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d286fd8f-7695-4b4c-a24f-51975d939a60.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-deviceconfigurationpolicy)

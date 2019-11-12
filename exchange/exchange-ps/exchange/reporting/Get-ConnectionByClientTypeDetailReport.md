@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ConnectionByClientTypeDetailReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
@@ -51,6 +51,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -67,6 +68,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +85,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -125,4 +129,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cfb0abba-0cc1-4a6a-9b38-55c4eef5805e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-connectionbyclienttypedetailreport)

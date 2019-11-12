@@ -18,18 +18,18 @@ When you open the Exchange Management Shell you can perform administrative tasks
 
 - On the Exchange server directly or in a Remote Desktop Connection session.
 
-- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange 2016 Management Tools](https://technet.microsoft.com/library/71fcbe4c-783b-4f77-aabb-a21aa7a4ef23.aspx).
+- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete this procedure: less than 1 minute.
 
-- The user must be assigned at least one management role. For detailed steps, see [Permissions](https://technet.microsoft.com/library/d8dd605e-0af1-4e18-9ce6-e51d04e161ba.aspx).
+- The user must be assigned at least one management role. For detailed steps, see [Exchange Server permissions](https://docs.microsoft.com/Exchange/permissions/permissions).
 
 - If you want to run the Exchange Management Shell from a local installation of the Exchange management tools, you need to consider remote PowerShell access for your user account. By default, users are allowed to use remote PowerShell to connect to an Exchange server. However, you can block remote PowerShell access for a user account. For more information, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
 
 > [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612).
 
 ## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 

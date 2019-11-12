@@ -46,15 +46,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
 ```
 
 This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
 ```
 
@@ -70,6 +70,7 @@ Type: Fqdn
 Parameter Sets: SingleDC
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -85,6 +86,7 @@ Type: RunspaceServerSettingsPresentationObject
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: Fqdn
 Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +138,7 @@ Type: Fqdn
 Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +154,7 @@ Type: String
 Parameter Sets: SingleDC, FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +170,7 @@ Type: MultiValuedProperty
 Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +188,7 @@ Type: $true | $false
 Parameter Sets: SingleDC, FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +204,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,4 +229,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/741b74a2-65ff-476f-aabf-1af42a3a2d6a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adserversettings)
