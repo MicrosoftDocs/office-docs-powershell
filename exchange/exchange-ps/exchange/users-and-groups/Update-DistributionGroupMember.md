@@ -192,4 +192,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/010394d3-5554-42f6-b0c3-5af5881c75ff.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/update-distributiongroupmember)

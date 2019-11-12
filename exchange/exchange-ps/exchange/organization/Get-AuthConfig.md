@@ -71,4 +71,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cef1b36e-78d8-4937-bdc3-7d99b1f349a4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-authconfig)

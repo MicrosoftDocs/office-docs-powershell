@@ -54,11 +54,11 @@ This example removes the specified public folder mailbox migration request.
 Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
 ```
 
-This example returns public folder mailbox migration requests that don't have a target mailbox. To remove these orphaned migration requests, add " | Remove-PublicFolderMailboxMigrationRequest" to the end of the command.
+This example returns public folder mailbox migration requests that don't have a target mailbox. To remove these orphaned migration requests, add ` | Remove-PublicFolderMailboxMigrationRequest` to the end of the command.
 
 ### Example 3
 ```powershell
-Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
+Get-PublicFolderMailboxMigrationRequest | group TargetMailbox | ?{$_.Count -gt 1}
 ```
 
 This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
@@ -212,4 +212,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3921f9da-77c9-4943-b184-436a1a9875b3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-publicfoldermailboxmigrationrequest)

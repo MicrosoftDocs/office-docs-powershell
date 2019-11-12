@@ -150,4 +150,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b2e46c22-7e99-4d04-b5ef-81ef64bf7445.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/new-owamailboxpolicy)

@@ -31,7 +31,7 @@ Remove-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
 ## DESCRIPTION
 Use the Remove-MigrationEndpoint cmdlet to remove an existing migration endpoint.
 
-For more information about migration endpoints, see Set-MigrationEndpoint and New-MigrationEndpoint.
+For more information about migration endpoints, see [Set-MigrationEndpoint](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationendpoint) and [New-MigrationEndpoint](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationendpoint).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -151,4 +151,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/11e5d978-5e9f-4694-b29a-e63314f626c4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-migrationendpoint)

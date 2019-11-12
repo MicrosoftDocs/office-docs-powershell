@@ -162,4 +162,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e1cdca04-2d84-49dd-8a64-e19b8ab52ca3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-serviceemailchannel)

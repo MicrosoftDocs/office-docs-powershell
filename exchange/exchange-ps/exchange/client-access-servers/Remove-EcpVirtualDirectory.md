@@ -138,4 +138,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cbf3d4ae-1a73-4bb3-9c20-47880d84f18f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-ecpvirtualdirectory)

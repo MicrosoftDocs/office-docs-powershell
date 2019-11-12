@@ -124,4 +124,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8da3ddc3-72e0-4c1b-8d3f-848c3ab5584e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/remove-databaseavailabilitygroupnetwork)

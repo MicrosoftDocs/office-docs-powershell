@@ -257,7 +257,7 @@ If you have a proxy server between the client and the Client Access server that'
 
 If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
 
-To learn more about Extended Protection for Authentication, see Understanding Extended Protection for Authentication.
+To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
 ```yaml
 Type: None | Allow | Require
@@ -351,4 +351,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e5e30ed6-cc78-4e0c-b200-3160ccb77deb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/enable-outlookanywhere)

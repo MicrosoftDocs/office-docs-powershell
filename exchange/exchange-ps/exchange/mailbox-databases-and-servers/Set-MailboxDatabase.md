@@ -79,7 +79,7 @@ Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccess
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
 
-For more information about RPC access through Client Access servers, see Set-RpcClientAccess and Set-ClientAccessArray.
+For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-rpcclientaccess) and [Set-ClientAccessArray](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessarray).
 
 ## PARAMETERS
 
@@ -974,7 +974,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
-When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see Understanding RPC Client Access.
+When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
 
 ```yaml
 Type: ClientAccessServerOrArrayIdParameter
@@ -1022,4 +1022,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a01edc66-bc10-4f65-9df4-432cb9e88f58.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/set-mailboxdatabase)

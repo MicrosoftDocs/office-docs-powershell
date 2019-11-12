@@ -182,4 +182,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1666ee72-6e8e-4d07-b71a-fe6ddbc0c2ef.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxfolder)

@@ -320,4 +320,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/df73c45e-3797-4da5-95e3-8478f48d06c1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-queue)

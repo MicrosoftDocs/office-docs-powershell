@@ -997,4 +997,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/380aea89-c38e-4651-bf18-990032a04f04.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxmessageconfiguration)

@@ -815,4 +815,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5b9cf002-848a-4f35-b51f-e1ede131b136.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-sendconnector)

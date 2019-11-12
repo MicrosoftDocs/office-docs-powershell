@@ -148,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8ffece5d-acc9-4061-822e-e452479c03e9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendarprocessing)

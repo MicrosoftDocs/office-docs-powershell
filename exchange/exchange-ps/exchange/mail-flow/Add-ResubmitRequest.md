@@ -309,4 +309,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7d6f8a28-2f23-4139-b44f-2a6d57ee912a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/add-resubmitrequest)

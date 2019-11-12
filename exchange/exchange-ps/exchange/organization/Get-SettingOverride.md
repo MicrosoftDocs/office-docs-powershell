@@ -102,4 +102,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3052da37-a77c-423b-a4ce-3022a6dbf19e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-settingoverride)

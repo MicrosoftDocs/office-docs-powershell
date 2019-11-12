@@ -97,4 +97,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/54f1d3b1-a1d6-4438-900b-c77e94f1f6d7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-mailboxtransportservice)

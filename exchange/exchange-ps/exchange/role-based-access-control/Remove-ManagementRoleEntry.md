@@ -159,4 +159,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dcd62514-a541-4385-859a-c8503a33d2e5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-managementroleentry)

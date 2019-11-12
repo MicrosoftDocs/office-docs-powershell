@@ -164,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/62b4902a-2773-4c2e-9c11-870e24303825.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-mobiledevicemailboxpolicy)

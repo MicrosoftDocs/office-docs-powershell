@@ -444,4 +444,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5e1b2b06-f24e-4f33-8ddc-fdb1c5bb7eb2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-webservicesconnectivity)

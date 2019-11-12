@@ -179,4 +179,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dff63523-52a1-43c9-8ae2-beb93411b7e5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/remove-servermonitoringoverride)

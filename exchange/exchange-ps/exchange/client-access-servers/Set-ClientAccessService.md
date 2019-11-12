@@ -245,4 +245,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/59440ef8-8ea4-4168-9b75-8f4d7aa6652d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessservice)

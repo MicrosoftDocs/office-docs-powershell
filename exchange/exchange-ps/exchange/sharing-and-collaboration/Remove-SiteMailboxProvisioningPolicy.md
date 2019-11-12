@@ -132,4 +132,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8430cadd-def3-408b-ab1c-c3d8a10f64f7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-sitemailboxprovisioningpolicy)

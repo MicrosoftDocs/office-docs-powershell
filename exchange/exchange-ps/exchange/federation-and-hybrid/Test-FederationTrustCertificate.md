@@ -109,4 +109,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/40622dd1-5ed0-4ec2-8ade-370fac02c605.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/test-federationtrustcertificate)

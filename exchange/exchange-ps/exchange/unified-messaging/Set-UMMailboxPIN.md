@@ -292,4 +292,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bd068710-2375-4ce4-96ee-79e76608ebaa.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-ummailboxpin)

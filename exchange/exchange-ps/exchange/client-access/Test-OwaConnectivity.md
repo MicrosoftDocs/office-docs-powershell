@@ -370,4 +370,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/44808bba-56b3-45bc-8cab-b45f52758636.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-owaconnectivity)

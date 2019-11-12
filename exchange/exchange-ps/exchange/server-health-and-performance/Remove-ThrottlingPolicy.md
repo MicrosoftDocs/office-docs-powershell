@@ -153,4 +153,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d98b709b-672e-42ad-afc4-c6e860d33bc9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/remove-throttlingpolicy)

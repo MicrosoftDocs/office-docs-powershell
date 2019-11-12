@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4e042d49-0cec-4b7d-aa64-fc9605077714.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/disable-distributiongroup)

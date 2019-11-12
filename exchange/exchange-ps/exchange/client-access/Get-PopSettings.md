@@ -104,4 +104,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/30bd001f-d923-4936-a997-f005a392302e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-popsettings)

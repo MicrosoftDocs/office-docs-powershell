@@ -150,4 +150,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bed90147-4ff9-4b9d-b9fc-3e7843397818.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopgroup)

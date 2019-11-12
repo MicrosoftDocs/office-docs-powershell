@@ -191,4 +191,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1f9070cd-cae6-4e16-93d7-301abac8cab5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailboxplan)

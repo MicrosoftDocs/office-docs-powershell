@@ -303,4 +303,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/21b8a099-92d0-49cf-b492-a052e0f23135.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/new-umdialplan)

@@ -188,4 +188,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/40f2ae97-409e-481e-b92d-f6bc6e19b140.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-distributiongroup)

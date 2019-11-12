@@ -107,4 +107,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/deffb9df-6326-44dc-862b-424085d14d00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-activesyncmailboxpolicy)

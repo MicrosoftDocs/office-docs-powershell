@@ -285,4 +285,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6a74c20a-d4e5-40f8-8921-9e416125c305.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)

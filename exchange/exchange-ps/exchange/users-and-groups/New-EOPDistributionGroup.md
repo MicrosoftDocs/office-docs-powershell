@@ -244,4 +244,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopdistributiongroup)

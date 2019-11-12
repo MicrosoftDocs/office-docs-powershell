@@ -267,4 +267,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0f0c328e-0316-4040-a54a-5efe2071edb5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-authserver)

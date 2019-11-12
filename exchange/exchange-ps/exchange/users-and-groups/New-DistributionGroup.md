@@ -674,4 +674,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7446962a-cf07-47a1-90d8-45df44057065.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup)

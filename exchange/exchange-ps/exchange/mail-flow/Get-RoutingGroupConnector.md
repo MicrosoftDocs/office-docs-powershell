@@ -90,4 +90,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2d68242a-8aaf-43c8-a1ae-eab561391a72.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-routinggroupconnector)

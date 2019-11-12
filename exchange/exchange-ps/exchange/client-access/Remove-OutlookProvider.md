@@ -126,4 +126,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b01d44c2-d9f9-4d58-9ce3-2db3e998ed25.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/remove-outlookprovider)

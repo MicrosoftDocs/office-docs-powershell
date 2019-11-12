@@ -134,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7695cde3-71d2-4523-8300-ada77cb8e7d4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-mailboxspellingconfiguration)

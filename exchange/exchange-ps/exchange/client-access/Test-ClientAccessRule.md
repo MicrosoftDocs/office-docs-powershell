@@ -274,4 +274,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d17ee6d8-e5f4-4b5d-977c-85e8dadeaf48.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule)

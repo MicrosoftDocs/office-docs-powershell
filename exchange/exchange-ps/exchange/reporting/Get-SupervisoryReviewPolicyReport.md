@@ -161,4 +161,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cdd3cf55-6319-47ef-bcf8-12b6d4dc29e7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewpolicyreport)

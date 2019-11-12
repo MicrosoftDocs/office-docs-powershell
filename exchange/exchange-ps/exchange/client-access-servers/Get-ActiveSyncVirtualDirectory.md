@@ -187,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0e3f22ce-75d2-4e15-90ef-061dcc1ac7c9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-activesyncvirtualdirectory)

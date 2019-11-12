@@ -411,4 +411,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ce8a4142-23c1-47d5-89c5-961bd6e9d162.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevice)

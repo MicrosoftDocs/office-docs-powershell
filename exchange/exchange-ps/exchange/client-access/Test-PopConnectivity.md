@@ -358,4 +358,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/73f0ce87-e723-43e5-a32c-29cd2d899ff9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-popconnectivity)

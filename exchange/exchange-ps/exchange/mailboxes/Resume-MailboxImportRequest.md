@@ -137,4 +137,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4175a9af-6651-4094-bb6b-ef292d753107.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/resume-mailboximportrequest)

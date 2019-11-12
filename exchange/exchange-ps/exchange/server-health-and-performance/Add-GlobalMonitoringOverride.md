@@ -274,4 +274,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9d5ec0ec-a7bc-4bea-a62e-6252407ed7e8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/add-globalmonitoringoverride)

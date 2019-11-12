@@ -245,4 +245,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4c8642ad-0844-457a-af41-45feec280906.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationuser)

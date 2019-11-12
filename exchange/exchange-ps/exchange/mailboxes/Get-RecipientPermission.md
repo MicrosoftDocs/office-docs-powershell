@@ -204,4 +204,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a80d1ec7-2504-44f1-b6b4-2e65310b4c6e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)

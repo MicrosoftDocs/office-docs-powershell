@@ -358,4 +358,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1a6e86d0-09d8-4570-bf43-7ae6f1386c78.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/enable-mailuser)

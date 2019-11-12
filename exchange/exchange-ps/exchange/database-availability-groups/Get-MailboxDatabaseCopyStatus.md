@@ -215,4 +215,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6ad690fb-3a23-41d4-b19d-666b34e62b26.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/get-mailboxdatabasecopystatus)

@@ -472,4 +472,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4537bb70-8806-4e23-b596-6dbf9f85e84d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-publicfoldermigrationrequest)

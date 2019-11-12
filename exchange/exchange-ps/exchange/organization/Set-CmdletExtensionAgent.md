@@ -166,4 +166,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2eebd4fc-0496-46e3-a3c1-60f75d680b4d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-cmdletextensionagent)

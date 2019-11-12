@@ -102,4 +102,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cb46009b-ee6c-4c84-8534-4fb74c32d2eb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-outlookprovider)

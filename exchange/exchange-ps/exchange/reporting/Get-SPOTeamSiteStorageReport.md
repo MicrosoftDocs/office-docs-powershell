@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2b46faee-568b-4a61-810e-b2876b9d736e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-spoteamsitestoragereport)

@@ -106,4 +106,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5a220f26-585d-4aa7-812d-9fbcd29979ab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/upgrade-distributiongroup)

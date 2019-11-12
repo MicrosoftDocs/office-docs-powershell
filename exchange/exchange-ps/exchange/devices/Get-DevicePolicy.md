@@ -92,4 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2bbcb1ef-f86f-46ff-aff0-33b875c1f88e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-devicepolicy)

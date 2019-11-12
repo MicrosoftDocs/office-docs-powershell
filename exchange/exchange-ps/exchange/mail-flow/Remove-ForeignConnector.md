@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e0d69dab-1e9b-4e2b-b615-5d12cb24f792.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-foreignconnector)

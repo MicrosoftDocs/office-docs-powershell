@@ -205,4 +205,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a354fe4-34ed-4f8a-bc21-e092b27e133d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/import-contactlist)

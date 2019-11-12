@@ -129,4 +129,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0da2890d-c4cc-4402-b689-122b6dd7fbd3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-cspstnconferencetimereport)

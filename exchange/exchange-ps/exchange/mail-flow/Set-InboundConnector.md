@@ -382,4 +382,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d21f091-def4-49a8-ab44-d36b9a12499d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-inboundconnector)

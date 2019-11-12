@@ -253,4 +253,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/932fada2-3d7a-4caa-b925-b7bfbae3ae51.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/invoke-monitoringprobe)

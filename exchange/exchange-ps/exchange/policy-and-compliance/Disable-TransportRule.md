@@ -136,4 +136,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f1b5c2d6-cfcd-4180-89f5-13723d87a1b4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/disable-transportrule)

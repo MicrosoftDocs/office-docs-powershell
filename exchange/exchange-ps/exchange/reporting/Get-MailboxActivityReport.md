@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7704f42d-51bf-4e39-bebf-b1ee0f698f8f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailboxactivityreport)

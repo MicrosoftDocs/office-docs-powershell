@@ -2568,4 +2568,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/530166f7-ab42-4609-ba73-9b5a39b567be.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-owamailboxpolicy)

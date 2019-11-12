@@ -309,4 +309,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b28d5835-1f8f-4cd9-8f72-9d592adef3d9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxrestorerequeststatistics)

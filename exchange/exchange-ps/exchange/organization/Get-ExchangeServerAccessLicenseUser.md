@@ -81,4 +81,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/de51a293-5c86-4767-9add-1b32f0a1ccd3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangeserveraccesslicenseuser)

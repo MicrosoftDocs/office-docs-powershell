@@ -127,4 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/96a444f0-ee9a-4da3-952d-4ad0deac0bcd.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-activityalert)

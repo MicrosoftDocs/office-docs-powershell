@@ -251,4 +251,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/eaa7f08c-cc7e-4700-8784-ebe2d586f3fb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-settingoverride)

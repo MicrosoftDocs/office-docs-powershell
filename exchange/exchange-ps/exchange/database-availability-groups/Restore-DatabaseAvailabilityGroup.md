@@ -209,4 +209,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d65394ad-9680-423d-9a93-0b46906123e5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/restore-databaseavailabilitygroup)

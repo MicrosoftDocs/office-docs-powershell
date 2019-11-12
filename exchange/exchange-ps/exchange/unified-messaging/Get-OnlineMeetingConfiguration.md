@@ -105,4 +105,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/76c698d3-7b0c-444e-bfdd-da4ecd906300.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-onlinemeetingconfiguration)

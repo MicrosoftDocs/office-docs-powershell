@@ -139,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8b3ddb29-03d3-4269-8a61-73db15adaa24.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-mobiledevice)

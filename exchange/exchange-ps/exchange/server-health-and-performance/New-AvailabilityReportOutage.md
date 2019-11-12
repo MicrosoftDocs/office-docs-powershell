@@ -205,4 +205,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2383aa16-5993-4555-8ab8-9a09eea2d8e9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/new-availabilityreportoutage)

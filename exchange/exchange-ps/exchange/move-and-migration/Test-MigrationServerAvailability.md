@@ -716,4 +716,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a0959dbe-94ae-4f2e-8e2c-e5d5bd5e1521.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/test-migrationserveravailability)

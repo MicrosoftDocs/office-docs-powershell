@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1ccb3442-1101-45c5-8508-599af6e56076.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticanalysis)

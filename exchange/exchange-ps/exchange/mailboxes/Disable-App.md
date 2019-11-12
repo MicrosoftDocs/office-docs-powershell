@@ -175,4 +175,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1e78ce38-eebf-4460-92d1-1296edb81983.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/disable-app)

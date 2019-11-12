@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/248138e5-6da4-4652-9cde-f8060c4a854c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/redirect-message)

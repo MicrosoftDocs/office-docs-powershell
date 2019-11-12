@@ -402,4 +402,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/eda30705-6070-413a-88c5-db262fbad8d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailboxpermission)

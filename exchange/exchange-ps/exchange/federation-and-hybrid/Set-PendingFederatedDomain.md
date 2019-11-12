@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b16b8ac2-4414-4510-a0f0-936591b2642d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/set-pendingfederateddomain)

@@ -139,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a588e988-3f80-42c6-aae0-8efaf2f439b3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-addressrewriteentry)

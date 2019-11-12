@@ -327,4 +327,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0accff85-3a03-4068-81e2-0508a4df21ec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/enable-mailcontact)

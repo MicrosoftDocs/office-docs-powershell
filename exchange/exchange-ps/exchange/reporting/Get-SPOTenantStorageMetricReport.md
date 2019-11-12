@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/add2ac19-8c31-405b-9196-3eab6d5ff544.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-spotenantstoragemetricreport)

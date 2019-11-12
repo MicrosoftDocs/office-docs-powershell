@@ -98,4 +98,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e0c2366a-eda9-4152-bd3e-3a2d1953562d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-accepteddomain)

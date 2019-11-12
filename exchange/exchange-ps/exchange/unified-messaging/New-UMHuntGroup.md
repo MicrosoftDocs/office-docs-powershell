@@ -186,4 +186,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4aaad0e7-7125-42d5-a51c-78f872f56594.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/new-umhuntgroup)

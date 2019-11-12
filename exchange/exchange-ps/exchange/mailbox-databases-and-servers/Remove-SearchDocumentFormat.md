@@ -136,4 +136,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a476ea8b-ff7d-4209-b39d-4e3d2705d4db.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/remove-searchdocumentformat)

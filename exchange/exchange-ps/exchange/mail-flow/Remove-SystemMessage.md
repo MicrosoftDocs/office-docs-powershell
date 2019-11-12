@@ -201,4 +201,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1566222b-407a-4e78-a0df-5190b23d53da.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-systemmessage)

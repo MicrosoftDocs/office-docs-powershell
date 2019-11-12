@@ -109,4 +109,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3900e919-0404-452f-9cef-2a80bc7af77c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailboxusagedetailreport)

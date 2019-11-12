@@ -314,4 +314,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/40557a97-7cc0-45b7-8b49-7fee2a1d7dc3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangesettings)

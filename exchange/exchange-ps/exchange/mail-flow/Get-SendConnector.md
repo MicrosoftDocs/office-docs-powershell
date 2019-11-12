@@ -89,4 +89,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca71bbd3-14db-4196-a265-0938efead108.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-sendconnector)

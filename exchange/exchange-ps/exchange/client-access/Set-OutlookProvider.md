@@ -233,4 +233,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8a3d7245-528d-4501-9fc4-92ce0616cff9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-outlookprovider)

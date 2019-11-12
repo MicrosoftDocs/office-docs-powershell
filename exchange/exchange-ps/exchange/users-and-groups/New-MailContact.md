@@ -546,4 +546,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c5abe0d4-3004-4d25-bda6-cb6155a47142.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-mailcontact)

@@ -275,4 +275,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf47b2e4-2aba-4df5-a444-5b187328482d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxregionalconfiguration)

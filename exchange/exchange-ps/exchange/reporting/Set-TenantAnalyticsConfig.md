@@ -123,4 +123,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3f34a5c1-350f-4f1f-92dd-d16587a0097b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/set-tenantanalyticsconfig)

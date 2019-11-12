@@ -486,4 +486,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a33c9e6-33da-438c-912d-28ce3f4c9afb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-user)

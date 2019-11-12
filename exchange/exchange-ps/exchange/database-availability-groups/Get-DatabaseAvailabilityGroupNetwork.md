@@ -154,4 +154,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/43f57126-a685-4208-ac63-4e3aba4a3e00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/get-databaseavailabilitygroupnetwork)

@@ -332,4 +332,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c66ee1a2-cec7-4b76-a592-a5e626f4f9d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/set-rolegroup)

@@ -187,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c41152b0-b304-4b13-b8ea-a24e2c2c3ea8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookwebservices)

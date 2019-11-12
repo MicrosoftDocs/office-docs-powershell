@@ -885,4 +885,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/df67ae65-cfae-4f52-9d12-19f863808705.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-ummailboxpolicy)

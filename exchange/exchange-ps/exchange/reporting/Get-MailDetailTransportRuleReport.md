@@ -308,4 +308,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/26484f90-7063-4c95-a1c2-3792926b3e79.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-maildetailtransportrulereport)

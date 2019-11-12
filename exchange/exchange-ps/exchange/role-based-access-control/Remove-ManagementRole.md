@@ -213,4 +213,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d67099bd-bb7e-4ad7-8d8a-9d4909d59dba.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-managementrole)

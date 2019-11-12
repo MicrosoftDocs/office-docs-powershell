@@ -402,4 +402,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bef9f3db-84f6-4a40-81cb-c9cb9b9ee201.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/add-adpermission)

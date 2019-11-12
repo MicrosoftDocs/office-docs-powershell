@@ -254,4 +254,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0310d606-eb30-45b0-ae4b-14fa9ab19cc0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-powershellvirtualdirectory)

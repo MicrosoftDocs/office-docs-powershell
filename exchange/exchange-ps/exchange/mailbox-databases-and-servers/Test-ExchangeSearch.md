@@ -282,4 +282,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d50b8f0b-7b79-45d5-b1a4-8a5bc84d0724.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/test-exchangesearch)

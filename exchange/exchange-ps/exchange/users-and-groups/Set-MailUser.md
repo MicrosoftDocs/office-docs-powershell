@@ -2073,4 +2073,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/087a55a2-ee8d-41a8-9c8f-d86e32ce8448.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-mailuser)

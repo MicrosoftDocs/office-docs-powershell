@@ -146,4 +146,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/66fc6568-469f-4f06-9864-841cdbf7d367.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-authredirect)

@@ -80,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ad72a9d6-4bac-4dd5-ae22-3246e05aac4e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-inboundconnector)

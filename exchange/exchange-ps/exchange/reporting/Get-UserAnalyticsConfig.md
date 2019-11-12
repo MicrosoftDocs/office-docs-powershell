@@ -81,4 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c10fd535-627a-4e9e-be13-5dda9820979e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-useranalyticsconfig)

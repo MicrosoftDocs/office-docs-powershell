@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/961266ab-21f2-4410-896b-9ede09ba20cd.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-popsubscription)

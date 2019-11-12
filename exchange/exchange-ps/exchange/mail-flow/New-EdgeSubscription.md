@@ -254,4 +254,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/94c4a829-0ef4-4623-aeb9-b362f66f4a71.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-edgesubscription)

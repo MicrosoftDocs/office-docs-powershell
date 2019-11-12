@@ -100,4 +100,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8f54a77c-7a5c-446f-b661-022c7e53f5c0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-transportconfig)

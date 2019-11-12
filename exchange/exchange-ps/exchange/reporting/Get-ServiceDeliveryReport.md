@@ -104,4 +104,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/27b11891-b4de-465f-88de-6357bcdbf86a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-servicedeliveryreport)

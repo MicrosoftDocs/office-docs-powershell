@@ -90,4 +90,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1dc9974b-de67-47d2-a177-c358c9fe366b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-activesyncdeviceautoblockthreshold)

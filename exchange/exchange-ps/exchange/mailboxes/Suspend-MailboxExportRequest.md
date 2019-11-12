@@ -149,4 +149,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3779c7b2-a25d-4213-bd20-fb58ba9d6925.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/suspend-mailboxexportrequest)

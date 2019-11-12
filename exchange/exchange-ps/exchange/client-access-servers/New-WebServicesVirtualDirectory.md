@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ### -MRSProxyMaxConnections
 This parameter is available or functional only in Exchange Server 2010.
 
-The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see Understanding Move Requests.
+The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
 ```yaml
 Type: Unlimited
@@ -544,4 +544,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f16d1732-0bc9-438a-a286-05b8c42a9bab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-webservicesvirtualdirectory)

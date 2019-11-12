@@ -281,4 +281,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2bcadd33-e520-498b-8551-9ef38d6d5f54.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermoverequest)

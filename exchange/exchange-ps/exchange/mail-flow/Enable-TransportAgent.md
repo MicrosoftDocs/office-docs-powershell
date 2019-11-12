@@ -152,4 +152,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e1022587-f9b6-4ff5-8970-73465e55a34d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/enable-transportagent)

@@ -152,4 +152,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e45d4d65-a7d1-4b65-8a55-9bea54f63328.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-devicetenantpolicy)

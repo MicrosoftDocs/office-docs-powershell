@@ -150,4 +150,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a50a165-5830-4771-8968-a13ab057532a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-mailboxregionalconfiguration)

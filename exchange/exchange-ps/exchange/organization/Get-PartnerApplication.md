@@ -112,4 +112,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e6ce8128-f174-4bca-91e6-004fc94cf0f8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-partnerapplication)

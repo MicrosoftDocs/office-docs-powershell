@@ -530,4 +530,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f397cd16-dcd7-4929-8c9f-35415ca6b009.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/new-clientaccessrule)

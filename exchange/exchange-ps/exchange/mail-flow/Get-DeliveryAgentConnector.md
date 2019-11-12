@@ -99,4 +99,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c7b369b6-fce1-4e60-ba6b-183fec700660.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-deliveryagentconnector)

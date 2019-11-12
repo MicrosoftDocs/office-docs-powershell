@@ -251,4 +251,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a9c74996-557b-4437-9aeb-658449d4d012.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-subscription)

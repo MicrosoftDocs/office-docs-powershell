@@ -161,7 +161,7 @@ This parameter is available only in on-premises Exchange.
 
 The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy its free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the value of the AccessMethod parameter to InternalProxy.
 
-This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see New-FederationTrust.
+This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/new-federationtrust).
 
 ```yaml
 Type: Uri
@@ -247,4 +247,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/abbd48f3-adf6-40ed-9a52-36800d8429ef.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/add-availabilityaddressspace)

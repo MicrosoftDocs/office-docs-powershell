@@ -98,4 +98,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dc05b43c-ddc3-468b-97ff-5e915f56c751.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-edgesubscription)

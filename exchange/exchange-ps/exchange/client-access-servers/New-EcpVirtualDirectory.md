@@ -317,4 +317,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e788e191-5159-4995-9f4c-8643c025ac37.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-ecpvirtualdirectory)

@@ -128,4 +128,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/62d403c8-d1cf-4507-a0d7-342bdfb17a9a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-messagecategory)

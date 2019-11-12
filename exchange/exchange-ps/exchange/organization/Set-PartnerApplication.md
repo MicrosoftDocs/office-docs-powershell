@@ -403,4 +403,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/22550369-102f-424a-bfa3-98144695ecbe.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-partnerapplication)

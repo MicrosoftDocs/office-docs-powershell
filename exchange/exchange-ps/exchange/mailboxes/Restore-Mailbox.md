@@ -478,4 +478,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f7205547-b2c5-4429-bae6-43c1bc4dce75.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/restore-mailbox)

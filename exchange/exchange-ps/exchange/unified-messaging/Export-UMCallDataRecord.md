@@ -187,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/974bfc60-6c9c-4452-877b-3a302f39dd95.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/export-umcalldatarecord)

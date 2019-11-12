@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceTransportServers
-The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see Modifying Multivalued Properties.
+The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetTransportServers
-The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see Modifying Multivalued Properties.
+The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -242,4 +242,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/63311a62-c2b6-46a3-91ba-c9fa9af16573.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-routinggroupconnector)

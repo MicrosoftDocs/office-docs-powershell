@@ -451,4 +451,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5341a329-71db-4180-ac0e-83515035ae2f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-ecpvirtualdirectory)

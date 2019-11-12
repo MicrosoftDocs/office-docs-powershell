@@ -170,4 +170,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4c0758cc-754e-49cc-b236-7b3ad83e1048.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/start-migrationbatch)

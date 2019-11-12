@@ -700,4 +700,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/187acc17-10de-4f38-8efc-7c95d2b3df00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-unifiedgroup)

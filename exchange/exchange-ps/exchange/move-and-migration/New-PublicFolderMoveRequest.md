@@ -407,4 +407,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d046e950-ac45-4cfd-99ae-d09b8d725615.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-publicfoldermoverequest)

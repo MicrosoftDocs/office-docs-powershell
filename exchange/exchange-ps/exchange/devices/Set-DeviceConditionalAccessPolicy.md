@@ -199,4 +199,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a4365cf4-8ac5-4cee-97ee-28232c191a51.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconditionalaccesspolicy)

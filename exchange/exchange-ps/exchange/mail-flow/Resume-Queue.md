@@ -165,4 +165,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca3da195-5f4f-45b4-9941-ee6aec79ea3d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/resume-queue)

@@ -185,4 +185,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/241011bb-e9d7-43ae-9e79-e47206a35010.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-autodiscovervirtualdirectory)

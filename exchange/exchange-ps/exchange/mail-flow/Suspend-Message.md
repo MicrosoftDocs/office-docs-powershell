@@ -39,7 +39,7 @@ A message already in delivery won't be suspended. Delivery will continue and the
 
 A message being sent to multiple recipients might be located in multiple queues. If you specify an Identity parameter, the message is suspended in a single queue if that identity matches only a single message. If the identity matches more than one message, you receive an error. To suspend a message in more than one queue in a single operation, you must use the Filter parameter.
 
-For instructions on how to resume a suspended message, see Resume-Message.
+For instructions on how to resume a suspended message, see [Resume-Message](https://docs.microsoft.com/powershell/module/exchange/mail-flow/resume-message).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -173,4 +173,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3c35583b-8691-4ec8-83e3-daa3090a4185.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/suspend-message)

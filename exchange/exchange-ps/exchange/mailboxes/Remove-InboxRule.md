@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f9748fab-1740-460b-9df6-4b438007dd48.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-inboxrule)

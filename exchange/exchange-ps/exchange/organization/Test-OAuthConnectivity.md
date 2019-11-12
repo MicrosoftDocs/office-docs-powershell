@@ -235,4 +235,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/26aa9772-aa31-4765-b2a4-d0dd78d77fc8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/test-oauthconnectivity)

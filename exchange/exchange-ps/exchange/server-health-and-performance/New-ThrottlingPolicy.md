@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxKeywords
-The DiscoveryMaxKeywords parameter specifies the maximum number of keywords that a user can include in a discovery search. For more information, see Search-Mailbox.
+The DiscoveryMaxKeywords parameter specifies the maximum number of keywords that a user can include in a discovery search. For more information, see [Search-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/search-mailbox).
 
 ```yaml
 Type: Unlimited
@@ -2724,4 +2724,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/aa6afac5-12bf-41b5-829c-a39e1d276e8b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/new-throttlingpolicy)

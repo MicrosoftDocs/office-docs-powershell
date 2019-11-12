@@ -1670,4 +1670,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/04c4e889-8546-4395-9d26-31af08264e45.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-mailcontact)

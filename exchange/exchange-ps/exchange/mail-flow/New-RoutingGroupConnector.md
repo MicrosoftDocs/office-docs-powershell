@@ -217,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6297510c-7022-4702-83e6-a213a93d46e1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-routinggroupconnector)

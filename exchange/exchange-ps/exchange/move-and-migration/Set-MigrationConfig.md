@@ -203,4 +203,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/641aaeb0-3a1b-4cc8-9092-07c9013d77e5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationconfig)

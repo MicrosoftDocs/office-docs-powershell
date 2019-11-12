@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f6be04e8-bd1c-41ee-b410-e832de66048f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/disable-outlookprotectionrule)

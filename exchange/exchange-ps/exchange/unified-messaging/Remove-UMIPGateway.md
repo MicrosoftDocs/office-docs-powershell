@@ -132,4 +132,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8f49a018-e49b-40ed-ad4a-40e89fbafa89.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/remove-umipgateway)

@@ -132,4 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/56877b0e-f972-4c00-9822-57867811dbf4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-settingoverride)

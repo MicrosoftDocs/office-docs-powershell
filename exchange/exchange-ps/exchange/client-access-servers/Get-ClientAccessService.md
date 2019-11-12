@@ -140,4 +140,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b46d6c59-6e46-4089-a984-09b280dcb1ba.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessservice)

@@ -220,4 +220,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/96488cda-9d33-4b67-9e86-2d03e89b1a20.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/export-activesynclog)

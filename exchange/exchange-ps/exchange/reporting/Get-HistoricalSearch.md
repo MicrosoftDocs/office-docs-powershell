@@ -80,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/70f2ec73-2733-4f87-ac89-1665d575a4dc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-historicalsearch)

@@ -139,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/af8602ce-0dba-4f89-b993-0ba02624e567.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/resume-publicfoldermigrationrequest)

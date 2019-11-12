@@ -570,4 +570,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dd7b429d-53a8-46dd-b16b-3a8ca8424bbc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-ummailbox)

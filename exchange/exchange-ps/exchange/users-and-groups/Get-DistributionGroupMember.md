@@ -190,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/15c71bc5-4246-44ac-8b34-8ccd585294b5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-distributiongroupmember)

@@ -669,4 +669,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4738bf25-39b8-4433-bd64-1d60252c2832.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-remotedomain)
