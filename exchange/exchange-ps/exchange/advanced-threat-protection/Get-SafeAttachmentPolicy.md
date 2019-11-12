@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SafeAttachmentPolicy
 ```
 
 This example shows a summary list of all Safe Attachments policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SafeAttachmentPolicy -Identity Default | Format-List
 ```
 
@@ -63,6 +63,7 @@ Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -85,4 +86,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/00b066b5-2066-4525-b368-d8b1815990b4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-safeattachmentpolicy)

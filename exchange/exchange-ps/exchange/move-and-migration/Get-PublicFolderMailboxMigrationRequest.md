@@ -54,29 +54,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolderMailboxMigrationRequest
 ```
 
 This example returns information about all migration requests.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderMailboxMigrationRequest -HighPriority $true
 ```
 
 In on-premises Exchange, this example returns all migration requests that have a priority value of High, Higher, Highest or Emergency.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
 ```
 
 This example returns public folder mailbox migration requests that don't have a target mailbox.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
 ```
 
@@ -94,6 +94,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +112,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +136,7 @@ Type: $true | $false
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +166,7 @@ Type: PublicFolderMailboxMigrationRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -180,6 +184,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +210,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +226,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +264,7 @@ Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +282,7 @@ Type: $true | $false
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -296,4 +305,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/27e715ca-1b64-493b-8f78-24d29a7b6b0a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermailboxmigrationrequest)

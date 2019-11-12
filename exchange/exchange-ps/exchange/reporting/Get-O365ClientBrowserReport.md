@@ -45,15 +45,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-O365ClientBrowserReport -Browser IE
 ```
 
 This example gets the summary report of client Internet Explorer use for the 366 day data retention period (no start and end date are specified).
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-O365ClientBrowserReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
@@ -79,6 +79,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +97,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +113,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +131,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,4 +154,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0b7e1883-b9d1-41d4-b521-9481270299fc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientbrowserreport)

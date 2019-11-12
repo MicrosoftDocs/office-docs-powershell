@@ -137,8 +137,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-EmailAddressPolicy -Name "Southeast Offices" -IncludedRecipients MailboxUsers -ConditionalStateorProvince "GA","AL","LA" -EnabledEmailAddressTemplates "SMTP:%s%2g@southeast.contoso.com","smtp:%s%2g@southeast.contoso.net"
 ```
 
@@ -154,8 +154,8 @@ This example creates an email address policy in an on-premises Exchange organiza
 
 - Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')" -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
 ```
 
@@ -181,6 +181,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -210,6 +211,7 @@ Type: ProxyAddressTemplateCollection
 Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -231,6 +233,7 @@ Type: String
 Parameter Sets: SMTPTemplateWithPrecannedFilter, SMTPTemplateWithCustomFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -264,6 +267,7 @@ Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | 
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -281,6 +285,7 @@ Type: SwitchParameter
 Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -305,7 +310,7 @@ The RecipientFilter parameter specifies a custom OPath filter that's based on th
 
 - In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 You can't use this parameter in combination with the IncludedRecipients parameter or any Conditional parameters (which are used to create precanned filters).
 
@@ -314,6 +319,7 @@ Type: String
 Parameter Sets: AllTemplatesWithCustomFilter, SMTPTemplateWithCustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -335,6 +341,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -356,6 +363,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -377,6 +385,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -398,6 +407,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -419,6 +429,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -440,6 +451,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -461,6 +473,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +495,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -503,6 +517,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -524,6 +539,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -545,6 +561,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -566,6 +583,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -587,6 +605,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -608,6 +627,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -629,6 +649,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -650,6 +671,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -671,6 +693,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -692,6 +715,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -711,6 +735,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -736,6 +761,7 @@ Type: ProxyAddressTemplateCollection
 Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -753,6 +779,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -779,7 +806,7 @@ This parameter is an OPath filter that's based on the value of any available rec
 
 For more information, see [Choose the domain to use when creating Office 365 Groups](https://go.microsoft.com/fwlink/p/?linkid=838413).
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
 
@@ -788,6 +815,7 @@ Type: String
 Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -807,6 +835,7 @@ Type: EmailAddressPolicyPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -834,6 +863,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -849,6 +879,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -873,4 +904,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/23b6e364-b56e-4c5a-bc71-ff5652d7e42b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/new-emailaddresspolicy)

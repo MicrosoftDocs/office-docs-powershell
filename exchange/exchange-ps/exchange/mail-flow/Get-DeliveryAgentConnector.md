@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DeliveryAgentConnector "Contoso X.400 Connector" | Format-List
 ```
 
 This example reads the configuration of the delivery agent connector named Contoso X.400 Connector from Active Directory and displays all of its properties in a list format.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DeliveryAgentConnector | Format-Table Name,DeliveryProtocol
 ```
 
@@ -58,6 +58,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -73,6 +74,7 @@ Type: DeliveryAgentConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -97,4 +99,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c7b369b6-fce1-4e60-ba6b-183fec700660.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-deliveryagentconnector)

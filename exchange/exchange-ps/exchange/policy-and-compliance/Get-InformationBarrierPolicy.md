@@ -37,15 +37,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-InformationBarrierPolicy | Format-Table Name,State,AssignedSegment,Segments* -Auto
 ```
 
 This example displays a summary list of all information barrier policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-InformationBarrierPolicy -Identity HR-Sales
 ```
 
@@ -69,6 +69,7 @@ Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 0
 Default value: None
@@ -86,6 +87,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

@@ -258,22 +258,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-Mailbox -Identity Ayla
 ```
 
 This example creates a mailbox for the existing user named Ayla.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
 This example creates an In-Place archive for the existing username Ayla who already has a mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Enable-Mailbox -Identity ayla@contoso.com -RemoteArchive -ArchiveDomain "archive.contoso.com"
 ```
 
@@ -297,6 +297,7 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -316,6 +317,7 @@ Type: SwitchParameter
 Parameter Sets: Arbitration
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -335,6 +337,7 @@ Type: SmtpDomain
 Parameter Sets: RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -352,6 +355,7 @@ Type: SwitchParameter
 Parameter Sets: Discovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -371,6 +375,7 @@ Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -390,6 +395,7 @@ Type: String
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -417,6 +423,7 @@ Type: UserIdParameter
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -436,6 +443,7 @@ Type: SwitchParameter
 Parameter Sets: LinkedRoomMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -455,6 +463,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -474,6 +483,7 @@ Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -493,6 +503,7 @@ Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -518,6 +529,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -543,6 +555,7 @@ Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -574,6 +587,7 @@ Type: String
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -589,6 +603,7 @@ Type: SwitchParameter
 Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -612,6 +627,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -627,6 +643,7 @@ Type: Guid
 Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -644,6 +661,7 @@ Type: MultiValuedProperty
 Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -661,6 +679,7 @@ Type: SwitchParameter
 Parameter Sets: AuditLog
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -686,6 +705,7 @@ Type: SwitchParameter
 Parameter Sets: AutoExpandingArchive
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -705,6 +725,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -728,6 +749,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Arbitration, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -745,6 +767,7 @@ Type: String
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -762,6 +785,7 @@ Type: Fqdn
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -777,6 +801,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -798,6 +823,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -817,6 +843,7 @@ Type: PSCredential
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -834,6 +861,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -853,6 +881,7 @@ Type: SwitchParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -872,6 +901,7 @@ Type: SmtpAddress
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -891,6 +921,7 @@ Type: SwitchParameter
 Parameter Sets: RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -916,6 +947,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -939,6 +971,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -954,6 +987,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -978,4 +1012,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/58de5b3c-05c3-4a1f-84c6-f082d990f22b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-mailbox)

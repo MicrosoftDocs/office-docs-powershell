@@ -29,8 +29,8 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PerimeterConfig
 ```
 
@@ -46,6 +46,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -70,4 +71,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34ef07d4-b055-4f33-bb88-15e41e0386db.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-perimeterconfig)

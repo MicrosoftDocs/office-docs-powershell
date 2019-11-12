@@ -37,21 +37,21 @@ Suspend-Queue [-Identity] <QueueIdentity>
 ## DESCRIPTION
 The Suspend-Queue cmdlet stops processing on a queue that has a status of Active or Retry. Messages being processed are delivered, but no additional messages leave the queue. When you use the Identity parameter, the queue is suspended only if the identity matches a single queue. If the identity matches more than one queue, you receive an error. To suspend more than one queue in a single operation, you must use the Filter parameter.
 
-For instructions on how to resume suspended queues, see Resume-Queue.
+For instructions on how to resume suspended queues, see [Resume-Queue](https://docs.microsoft.com/powershell/module/exchange/mail-flow/resume-queue).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Suspend-Queue -Filter "NextHopDomain -eq "contoso.com" -and Status -eq 'Retry'"
 ```
 
 This example suspends processing on all queues holding messages for delivery to the domain contoso.com and that currently have a status of Retry.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Suspend-Queue -Server Server1.contoso.com -Filter "MessageCount -gt 100"
 ```
 
@@ -69,6 +69,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -84,6 +85,7 @@ Type: QueueIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -103,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +133,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,4 +174,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7dca48c4-69a1-4157-a50e-88907dd32d04.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/suspend-queue)

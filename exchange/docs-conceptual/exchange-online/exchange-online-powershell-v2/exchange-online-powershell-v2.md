@@ -19,6 +19,9 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
+> [!TIP]
+> If you have any feedback/concern or facing any issues with EXO V2 module, please send an email to exocmdletpreview[at]service[dot]microsoft[dot]com.
+
 ## What's new in the EXO V2 module?
 
 The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). It also contains the 700 or more older remote PowerShell cmdlets baked into the same module. Note that after you install the EXO V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the EXO V2 module.
@@ -136,7 +139,7 @@ Remove-Module ExchangeOnlineManagement
 ## Connect to Exchange Online using the EXO V2 module
 
 > [!NOTE]
-> If your account uses multi-factor authentication (MFA), don't follow the instructions in this section; 
+> If your account uses multi-factor authentication (MFA), skip the first step (the **Get-Credential** cmdlet doesn't support MFA enabled accounts).
 
 1. On your local computer, open a Windows PowerShell window and run the following command:
 
@@ -146,15 +149,19 @@ Remove-Module ExchangeOnlineManagement
 
    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
 
-   **Note**:
+2. Run one of the following commands:
 
-   Get-Credential doesn't work for MFA enabled accounts. For using MFA enabled-accounts, remove the Credential parameter from below command instruction.
+   - **Accounts without MFA enabled**:
 
-2. Run the following command:
+     ```PowerShell
+     Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
+     ```
 
-   ```PowerShell
-   Connect-ExchangeOnline -Credential $UserCredential
-   ```
+   - **Accounts with MFA enabled**: Replace `<UPN>` with your account in user principal name format (for example, `navin@contoso.com`) and run the following command:
+
+     ```PowerShell
+     Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true
+     ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline).
 
@@ -213,3 +220,16 @@ Get-EXOMailbox -ResultSize 10
 In contrast, the same **Get-Mailbox** cmdlet would return at least 230 properties for the same ten mailboxes.
 
 For details about the property sets that are available in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md) or the individual EXO V2 module cmdlet reference topics.
+
+EXO cmdlets also provide a way to retreive all properties for an object by using the _ProperySets_ parameter with the value `All`.
+
+The following example returns all properties for the 10 mailboxes: 
+
+```PowerShell
+Get-EXOMailbox -ResultSize 10 -PropertySets All
+```
+
+> [!NOTE]
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
+
+

@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level High
 ```
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
 
-Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
+Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-eventloglevel).
 
 ## PARAMETERS
 
@@ -49,6 +49,7 @@ Type: ECIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -74,6 +75,7 @@ Type: Lowest | Low | Medium | High | Expert
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -93,6 +95,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +111,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,4 +136,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/797f1691-32b7-4752-bb01-fea54cc28e1c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/set-eventloglevel)

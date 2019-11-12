@@ -49,15 +49,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-PublicFolderMailbox -Identity PF_marketing
 ```
 
 This example updates the public folder hierarchy on the public folder mailbox PF\_marketing.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Mailbox -PublicFolder | Update-PublicFolderMailbox
 ```
 
@@ -93,6 +93,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -108,6 +109,7 @@ Type: PublicFolderIdParameter
 Parameter Sets: InvokeSingleFolderSynchronizer
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -125,6 +127,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSingleFolderSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -137,6 +140,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +160,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +176,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSingleFolderSynchronizer
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +194,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,6 +226,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +244,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +264,7 @@ Type: SwitchParameter
 Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +280,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -293,4 +305,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/36a24f50-89d9-4976-884d-f46eacd0f4d4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/update-publicfoldermailbox)
