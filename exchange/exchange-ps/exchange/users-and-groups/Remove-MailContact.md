@@ -165,4 +165,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/86b8ea84-5111-489e-a320-003b429d8131.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-mailcontact)

@@ -342,4 +342,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d22cdada-08ed-487e-8e91-1a984a0c2409.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-deliveryagentconnector)

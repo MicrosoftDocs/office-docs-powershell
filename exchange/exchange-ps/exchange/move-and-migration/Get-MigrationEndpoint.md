@@ -237,4 +237,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3576e65b-4b64-46a5-a95a-7045daf4893e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-migrationendpoint)

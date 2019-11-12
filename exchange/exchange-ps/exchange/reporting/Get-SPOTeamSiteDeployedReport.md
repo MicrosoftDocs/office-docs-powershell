@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7717d439-ca5a-490e-84e4-765dad859ae3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-spoteamsitedeployedreport)

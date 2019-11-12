@@ -135,4 +135,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0324144b-2818-4e7f-a483-d6d6a19f8276.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/disable-journalrule)

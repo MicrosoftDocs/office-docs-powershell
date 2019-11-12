@@ -134,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8e4b3691-b8e8-4299-97a3-027b9503966a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/disable-cmdletextensionagent)

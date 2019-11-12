@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e13a9ab2-8cca-4b98-b304-837d13fd4a60.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-imapsubscription)

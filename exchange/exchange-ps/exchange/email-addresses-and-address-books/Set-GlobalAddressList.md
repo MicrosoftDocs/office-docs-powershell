@@ -689,4 +689,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/96bf236f-0fb8-44db-9b22-ddc0933db951.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/set-globaladdresslist)

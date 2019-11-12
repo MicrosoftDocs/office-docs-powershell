@@ -126,4 +126,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ccfd43d1-991c-4936-adb3-fbda792ca707.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-activesyncdeviceclass)

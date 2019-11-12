@@ -1063,4 +1063,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/593be8fd-ae2d-4cd2-a98a-88c2e8c36ddd.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-frontendtransportservice)

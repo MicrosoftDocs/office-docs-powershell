@@ -186,4 +186,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b10216c9-0052-47bb-8da3-4ff9e9ecf9b0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-supervisoryreviewrule)

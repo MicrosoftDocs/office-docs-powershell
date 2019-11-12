@@ -156,4 +156,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dcf2aed0-7906-4272-adc4-8ae0ea20c43e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/new-exchangesettings)

@@ -894,4 +894,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0383b4ea-10df-4e1d-9470-2eeb9fd1ea68.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationendpoint)

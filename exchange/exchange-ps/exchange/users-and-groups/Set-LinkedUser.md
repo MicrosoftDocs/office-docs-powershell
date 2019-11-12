@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9252ba30-a3b3-484f-9750-6103f246cbbf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-linkeduser)

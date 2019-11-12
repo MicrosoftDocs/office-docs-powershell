@@ -278,4 +278,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ef0aec0-ce28-411d-abe8-7236f082af1b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-omeconfiguration)

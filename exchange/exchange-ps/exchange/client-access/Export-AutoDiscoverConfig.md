@@ -225,4 +225,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/70733d70-7e35-4c60-b0f8-47a00b894fd1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/export-autodiscoverconfig)

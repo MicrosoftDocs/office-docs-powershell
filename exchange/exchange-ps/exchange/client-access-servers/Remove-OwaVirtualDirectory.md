@@ -142,4 +142,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5842b6a4-aa87-4ca2-94db-87b36fd90e7e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-owavirtualdirectory)

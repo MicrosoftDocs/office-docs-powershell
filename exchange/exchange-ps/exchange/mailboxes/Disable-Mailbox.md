@@ -369,4 +369,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/33be55a3-1880-437d-a631-c1cca1736421.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/disable-mailbox)

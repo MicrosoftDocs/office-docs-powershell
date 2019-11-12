@@ -147,4 +147,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a6d4f790-1b94-42f8-af6f-fa79c504d8ec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/update-eopdistributiongroupmember)

@@ -241,4 +241,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/350eb7e0-3181-4de9-9934-6c8467b920c3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/add-servermonitoringoverride)

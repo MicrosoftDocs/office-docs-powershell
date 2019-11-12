@@ -228,4 +228,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2d6bc8d2-aa4c-497a-beaf-ec99b10a6a96.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/test-edgesynchronization)

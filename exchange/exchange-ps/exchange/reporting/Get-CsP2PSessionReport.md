@@ -139,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b40efbe0-d1f1-427b-97a7-c5c304962914.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csp2psessionreport)

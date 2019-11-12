@@ -128,4 +128,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7e38396a-5d3d-424d-86e1-5d2f972d56a2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-classificationrulecollection)

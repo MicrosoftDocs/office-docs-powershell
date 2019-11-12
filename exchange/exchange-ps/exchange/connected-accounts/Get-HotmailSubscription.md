@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/61e79b8f-2806-4c15-bdc3-74b181482d8f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-hotmailsubscription)

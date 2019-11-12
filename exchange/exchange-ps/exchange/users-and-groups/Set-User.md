@@ -1180,4 +1180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/56d7fc86-2ac3-4e28-bc7a-761e91ac655a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-user)

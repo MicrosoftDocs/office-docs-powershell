@@ -310,4 +310,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/77b06405-076d-43cf-89b1-aa62b6565d8d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-systemmessage)

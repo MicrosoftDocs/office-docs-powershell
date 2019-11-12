@@ -206,4 +206,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/54d3650c-fd80-43c0-a64f-41d57673ff8b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-systemmessage)

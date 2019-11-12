@@ -190,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/95ad02a9-8874-455e-b697-e39a47b4a032.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/export-recipientdataproperty)

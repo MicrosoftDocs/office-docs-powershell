@@ -113,4 +113,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/da0ecaa3-ce67-4ea2-aca3-56e056555900.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-roleassignmentpolicy)

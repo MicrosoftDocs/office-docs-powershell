@@ -75,4 +75,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e1821219-fe18-4642-a9c2-58eb0aadd61a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)

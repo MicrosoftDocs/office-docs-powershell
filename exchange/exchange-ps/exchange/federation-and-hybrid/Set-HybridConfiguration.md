@@ -373,4 +373,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/64bd673d-0f1c-4ed5-91dc-f19328942d71.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/set-hybridconfiguration)

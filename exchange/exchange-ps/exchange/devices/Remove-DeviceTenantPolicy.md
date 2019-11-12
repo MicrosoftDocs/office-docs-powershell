@@ -115,4 +115,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c8e32152-2e47-4532-bcbe-824e200d99e8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-devicetenantpolicy)

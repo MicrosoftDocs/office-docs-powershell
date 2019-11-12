@@ -168,4 +168,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/91952b6e-099e-4182-95d2-da5d9001ca0b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/set-servermonitor)

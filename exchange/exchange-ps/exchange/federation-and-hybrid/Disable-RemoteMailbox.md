@@ -217,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/28f5ea7e-bab0-4a57-aa8b-0fbca3b56ffe.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/disable-remotemailbox)

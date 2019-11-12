@@ -372,4 +372,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a876f48-9431-47fa-b65a-f3ea57c7f220.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-powershellconnectivity)

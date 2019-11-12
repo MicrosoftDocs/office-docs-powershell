@@ -672,4 +672,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)

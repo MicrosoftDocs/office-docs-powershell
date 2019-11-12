@@ -156,4 +156,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ccb89e00-a90d-4324-b066-15bd733a78db.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/suspend-publicfoldermigrationrequest)

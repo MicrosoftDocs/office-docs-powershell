@@ -278,4 +278,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c0cd98a9-eaaa-4cfb-845d-213e5d606d3b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/new-databaseavailabilitygroup)

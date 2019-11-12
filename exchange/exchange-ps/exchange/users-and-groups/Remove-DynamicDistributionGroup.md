@@ -162,4 +162,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e86f4313-aaeb-42ad-8bac-6add2ca79762.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-dynamicdistributiongroup)

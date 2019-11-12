@@ -104,4 +104,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/077acd5a-7af0-48f8-bc68-123aef416a93.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-authserver)

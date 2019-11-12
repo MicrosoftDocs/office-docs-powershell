@@ -256,4 +256,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d4438459-d8b6-4214-b0d0-e374ef75c29e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/set-managementroleentry)

@@ -158,4 +158,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f8f0b66c-dcd2-43ef-88f0-0cc760ce7602.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/set-useranalyticsconfig)

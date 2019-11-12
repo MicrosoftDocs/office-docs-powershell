@@ -198,4 +198,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/37f82792-aaf1-4306-a563-37d6de3a8ee8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/update-rolegroupmember)

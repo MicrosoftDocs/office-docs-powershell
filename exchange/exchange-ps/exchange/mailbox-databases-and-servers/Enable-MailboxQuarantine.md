@@ -263,4 +263,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/68bb689f-10e4-4fd0-9db4-6f00a55278d2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/enable-mailboxquarantine)

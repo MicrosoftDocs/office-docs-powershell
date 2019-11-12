@@ -265,4 +265,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/25da87cf-f0bc-4de5-b03a-51bb77263c18.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/new-subscription)

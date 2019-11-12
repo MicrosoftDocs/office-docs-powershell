@@ -530,4 +530,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4e8f5561-a098-4bfe-94e1-baf7c24b01bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/test-umconnectivity)

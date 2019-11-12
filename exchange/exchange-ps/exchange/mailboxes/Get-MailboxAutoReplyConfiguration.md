@@ -188,4 +188,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0963eab0-8bc8-4f06-b6f7-7dd88b1559f5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxautoreplyconfiguration)

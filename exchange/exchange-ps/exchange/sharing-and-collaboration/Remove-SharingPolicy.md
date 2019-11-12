@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b59d9faa-3418-4f4f-9f90-35cf12fde86e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-sharingpolicy)

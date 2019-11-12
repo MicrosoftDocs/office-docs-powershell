@@ -177,4 +177,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cf98ab73-1448-455f-842d-f0d2aa3a2a79.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/update-filedistributionservice)

@@ -77,4 +77,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ab76294-cde8-4a15-9949-eb744713dd65.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/update-exchangehelp)

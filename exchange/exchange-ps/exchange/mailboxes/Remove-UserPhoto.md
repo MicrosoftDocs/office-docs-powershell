@@ -239,4 +239,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/016a380d-435b-4c5a-bd7c-f14c3ab2de98.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-userphoto)

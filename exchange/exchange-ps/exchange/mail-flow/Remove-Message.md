@@ -187,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/15d5987b-bedd-437e-b86a-6b0e80619fde.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-message)

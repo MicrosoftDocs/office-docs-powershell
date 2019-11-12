@@ -132,4 +132,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0db7cb8a-83aa-4843-b7fb-d562b837294a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-retentionpolicytag)

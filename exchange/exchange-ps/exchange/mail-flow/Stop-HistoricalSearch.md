@@ -75,4 +75,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8868372f-842b-417d-acb2-8c08a914a779.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/stop-historicalsearch)

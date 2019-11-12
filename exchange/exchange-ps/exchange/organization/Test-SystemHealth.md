@@ -427,4 +427,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/65ceedf4-796d-4dda-a126-c7cd4d509f67.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/test-systemhealth)

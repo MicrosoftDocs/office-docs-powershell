@@ -167,4 +167,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5c183eda-11e4-4e4e-a43e-7972eb899cec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/new-ummailboxpolicy)

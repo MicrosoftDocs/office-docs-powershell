@@ -82,7 +82,7 @@ New-OfflineAddressBook -Name "Legacy OAB" -AddressLists "\Default Global Address
 
 In Exchange Server 2010, this example creates the OAB Legacy OAB that uses public folder distribution for Outlook 2003 Service Pack 1 (SP1) and Outlook 98 Service Pack 2 (SP2) clients on SERVER01.
 
-If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error will be returned. For more information, see Managing Public Folders.
+If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error will be returned. For more information, see [Managing Public Folders](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb124411(v=exchg.141)).
 
 ## PARAMETERS
 
@@ -517,4 +517,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8b9a3931-90c3-4b36-9dcb-5e2e65cd7e5e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/new-offlineaddressbook)

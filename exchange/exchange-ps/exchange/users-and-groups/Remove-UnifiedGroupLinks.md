@@ -180,4 +180,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5c2b4a0e-a8cb-4b29-a771-e6ebd13957a3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-unifiedgrouplinks)

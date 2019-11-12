@@ -122,4 +122,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34036966-9014-4096-9e2d-82a01889dbe4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/export-message)

@@ -103,4 +103,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/41cc58a9-25c2-4e04-b404-4e3afa71f79c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mxrecordreport)

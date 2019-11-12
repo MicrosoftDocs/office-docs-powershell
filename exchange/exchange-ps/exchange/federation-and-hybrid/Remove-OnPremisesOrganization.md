@@ -116,4 +116,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d6362891-3ea6-4994-ab90-08b0a23802c1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/remove-onpremisesorganization)

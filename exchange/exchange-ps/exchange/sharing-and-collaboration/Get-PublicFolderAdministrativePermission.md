@@ -169,4 +169,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e0d52900-ee08-4f7e-bb13-a0fabee1d26f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-publicfolderadministrativepermission)

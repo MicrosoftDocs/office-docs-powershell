@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf1569b0-51a1-4468-ba99-6cfaf18eab5d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-sposkydriveprodeployedreport)

@@ -506,4 +506,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34d4f2e3-f2c5-49e1-a6a9-1366da65a78c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-managementroleassignment)

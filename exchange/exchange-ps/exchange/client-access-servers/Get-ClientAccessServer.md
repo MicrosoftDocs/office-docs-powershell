@@ -144,4 +144,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/db492f66-cd67-420d-9479-a9499e9301b2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessserver)

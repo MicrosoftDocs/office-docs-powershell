@@ -205,4 +205,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/92d506ae-3de5-4a52-b4f8-a79ef94da4c7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/export-migrationreport)

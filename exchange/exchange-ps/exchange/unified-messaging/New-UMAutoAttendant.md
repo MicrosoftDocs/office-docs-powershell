@@ -217,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d439154c-eba7-4783-a7a3-0e73556eedef.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/new-umautoattendant)

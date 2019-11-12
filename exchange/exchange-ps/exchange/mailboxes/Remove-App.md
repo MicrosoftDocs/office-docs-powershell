@@ -196,4 +196,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cfd1245f-dcd2-48c1-b753-a7ebedd2803f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-app)

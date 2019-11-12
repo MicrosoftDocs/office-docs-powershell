@@ -260,4 +260,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/76367e39-a387-430f-b3a5-1df20dd31201.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-managementrole)

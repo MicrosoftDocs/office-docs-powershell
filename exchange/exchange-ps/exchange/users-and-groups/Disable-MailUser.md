@@ -178,4 +178,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/62ebb096-f227-4dbe-a158-791577a79b23.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/disable-mailuser)

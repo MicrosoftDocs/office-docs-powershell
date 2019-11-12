@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4787d6dc-d38b-427a-83f8-7c57d604dff0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-clientaccessrule)

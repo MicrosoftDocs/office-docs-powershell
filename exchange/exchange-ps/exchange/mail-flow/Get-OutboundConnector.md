@@ -124,4 +124,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f9140086-9f74-4446-b1e7-b195300da122.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-outboundconnector)

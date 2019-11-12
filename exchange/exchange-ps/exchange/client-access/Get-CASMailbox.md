@@ -465,4 +465,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d80a5990-9106-4eb8-bba8-b3975805c325.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)

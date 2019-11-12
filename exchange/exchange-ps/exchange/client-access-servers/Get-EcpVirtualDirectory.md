@@ -187,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/afa04216-965d-4a6c-949c-170f916e8f4c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-ecpvirtualdirectory)

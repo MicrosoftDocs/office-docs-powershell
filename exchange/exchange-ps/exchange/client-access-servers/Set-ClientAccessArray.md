@@ -204,4 +204,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d8682149-2822-4a6d-ac54-e4898f89a633.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessarray)

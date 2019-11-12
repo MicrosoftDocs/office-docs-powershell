@@ -262,4 +262,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b771bb31-7f5a-462f-b5e2-ce49fde9bfe5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-migrationuserstatistics)

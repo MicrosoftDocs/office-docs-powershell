@@ -186,4 +186,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a26f3af3-96a2-4ce8-bc6b-c7109325f321.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/update-hybridconfiguration)

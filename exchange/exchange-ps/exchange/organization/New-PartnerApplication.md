@@ -349,4 +349,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e7cce1f0-d4f1-4eb9-a136-551725a35599.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/new-partnerapplication)

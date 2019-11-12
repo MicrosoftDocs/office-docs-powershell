@@ -748,4 +748,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/307a1dd0-3a4c-4431-bd9f-35aa5cb57aad.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-popsettings)

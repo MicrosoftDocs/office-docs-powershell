@@ -95,4 +95,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7a4da080-0fe6-4dd7-85a2-cceeb68f95e0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-monitoringitemidentity)

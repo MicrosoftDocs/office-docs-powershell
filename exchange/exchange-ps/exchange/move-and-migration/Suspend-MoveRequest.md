@@ -201,4 +201,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/078dd2f7-2562-4a33-aa9f-e5e2fb0f908b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/suspend-moverequest)

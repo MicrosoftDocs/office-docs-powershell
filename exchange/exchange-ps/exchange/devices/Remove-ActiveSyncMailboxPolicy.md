@@ -159,4 +159,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/acfe84cc-acb1-4840-9986-d6dc07e16620.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-activesyncmailboxpolicy)

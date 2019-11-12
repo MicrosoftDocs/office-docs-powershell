@@ -471,4 +471,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/30cdae85-3d72-450f-98cd-be1413e86cc0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-activesyncvirtualdirectory)

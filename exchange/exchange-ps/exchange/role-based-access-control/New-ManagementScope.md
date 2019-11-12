@@ -418,4 +418,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1ea1f474-69d6-48c0-9beb-bfa4442c5dab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-managementscope)

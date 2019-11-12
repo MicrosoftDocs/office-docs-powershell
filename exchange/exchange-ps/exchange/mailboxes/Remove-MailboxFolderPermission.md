@@ -202,4 +202,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/da9b68c7-0261-4a41-b64d-d9f279c853e7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailboxfolderpermission)

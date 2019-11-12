@@ -406,4 +406,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/497785d1-c2ae-4ddd-af28-a96cb3e62332.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopuser)

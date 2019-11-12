@@ -128,4 +128,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/212f2994-16e0-477e-9cc1-8d5a611b5521.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-protectionalert)

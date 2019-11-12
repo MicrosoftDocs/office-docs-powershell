@@ -261,4 +261,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dea91ccf-5572-40f1-a133-859c6aa58095.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-textmessagingaccount)

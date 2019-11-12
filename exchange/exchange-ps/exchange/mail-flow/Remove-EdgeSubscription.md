@@ -154,4 +154,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dce6cec3-9fb5-4c5e-b80c-9f9c40de3177.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-edgesubscription)

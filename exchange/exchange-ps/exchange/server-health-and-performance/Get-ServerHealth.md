@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca9cff3a-ecda-422d-abd7-b7d8da71a6c7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-serverhealth)

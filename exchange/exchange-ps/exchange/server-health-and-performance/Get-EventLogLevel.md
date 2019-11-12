@@ -123,4 +123,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ea6a0956-c3b8-49fb-98ed-6570a06ce782.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-eventloglevel)

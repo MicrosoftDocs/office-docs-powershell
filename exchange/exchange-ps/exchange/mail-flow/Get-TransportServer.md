@@ -106,4 +106,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fd4f9f4a-338d-44de-b5e8-e91bae697d4f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-transportserver)

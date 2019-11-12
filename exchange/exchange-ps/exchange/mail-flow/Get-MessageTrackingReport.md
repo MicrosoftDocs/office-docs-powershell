@@ -31,7 +31,7 @@ Get-MessageTrackingReport [-Identity] <MessageTrackingReportId> [-BypassDelegate
 ```
 
 ## DESCRIPTION
-This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see Search-MessageTrackingReport.
+This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see [Search-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/mail-flow/search-messagetrackingreport).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -282,4 +282,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b949297c-843b-4eb6-9e5e-378c84b841a3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrackingreport)

@@ -226,4 +226,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/da55fa0f-e100-44b1-b9b4-bf14e55a5b4d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/test-replicationhealth)

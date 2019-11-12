@@ -197,4 +197,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c8df374b-db7c-4dbc-b6d5-3ffcbbe4274b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailboxplan)

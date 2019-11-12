@@ -111,4 +111,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/72b8e608-1c1a-4e6f-a2db-27a812f185f3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-networkconnectioninfo)

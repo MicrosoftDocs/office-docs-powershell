@@ -119,4 +119,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/675934e6-8a55-4615-8c46-a20bc656afdc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/stop-compliancesearch)

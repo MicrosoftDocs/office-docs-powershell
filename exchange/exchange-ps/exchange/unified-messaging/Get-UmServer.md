@@ -108,4 +108,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/af1f90d6-a2b1-437b-aeaa-f1324bfd0731.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-umserver)

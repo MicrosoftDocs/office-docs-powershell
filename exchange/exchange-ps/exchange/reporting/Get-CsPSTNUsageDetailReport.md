@@ -127,4 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f0b3d5e7-fa3f-4a3b-8a42-5750b7544cfc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-cspstnusagedetailreport)

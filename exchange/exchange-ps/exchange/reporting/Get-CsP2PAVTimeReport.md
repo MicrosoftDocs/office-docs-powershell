@@ -131,4 +131,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/679b91cf-769d-4158-81a6-e97570d98408.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csp2pavtimereport)

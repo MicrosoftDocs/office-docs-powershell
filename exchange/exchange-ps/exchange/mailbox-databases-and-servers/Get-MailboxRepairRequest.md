@@ -243,4 +243,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1b9d3047-8e4c-4847-af01-ce7513b7aa7b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/get-mailboxrepairrequest)

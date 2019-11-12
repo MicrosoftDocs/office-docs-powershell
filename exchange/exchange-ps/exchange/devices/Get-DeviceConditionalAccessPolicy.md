@@ -92,4 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ce78b63e-885e-4888-9b08-33f8affb50a9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-deviceconditionalaccesspolicy)

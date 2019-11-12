@@ -216,4 +216,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/93924584-5955-4e54-8b74-bf00cf269317.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-ummailboxpin)

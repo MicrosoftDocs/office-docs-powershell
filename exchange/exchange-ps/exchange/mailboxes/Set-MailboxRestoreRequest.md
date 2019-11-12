@@ -389,4 +389,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9290eac1-2701-499f-a7a3-f150d28945c3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxrestorerequest)

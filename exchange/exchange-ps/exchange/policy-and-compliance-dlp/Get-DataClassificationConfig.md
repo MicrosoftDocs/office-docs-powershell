@@ -55,4 +55,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2d6b5b26-37f6-44d9-b8d8-80ece8cfff32.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dataclassificationconfig)

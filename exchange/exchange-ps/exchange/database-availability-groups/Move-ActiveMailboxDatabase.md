@@ -502,4 +502,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/755d1ecb-95d1-45e3-9a21-56df9f196f37.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/move-activemailboxdatabase)

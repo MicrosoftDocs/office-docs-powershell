@@ -198,4 +198,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6a1d971d-923d-41cf-9612-ab466bb2bcbf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/clear-mobiledevice)

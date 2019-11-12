@@ -659,4 +659,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/09d810f1-0550-4cd3-8feb-f524018a5d6b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookconnectivity)

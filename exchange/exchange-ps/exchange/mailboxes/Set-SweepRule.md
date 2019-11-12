@@ -453,4 +453,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d8c929db-9ec4-4f75-b79d-f5297bf9e8e1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule)

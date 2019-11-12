@@ -134,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fe3df1ee-a02c-4b9d-ab7a-706cfa7f765c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/enable-pushnotificationproxy)

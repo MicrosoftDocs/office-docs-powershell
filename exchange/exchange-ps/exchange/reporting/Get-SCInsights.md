@@ -94,4 +94,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e237daae-d2a7-4668-98a7-6c599f4a6545.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-scinsights)

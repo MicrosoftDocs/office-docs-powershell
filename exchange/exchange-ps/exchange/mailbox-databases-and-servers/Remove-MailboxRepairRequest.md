@@ -140,4 +140,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7f5e19bb-4d3e-4454-b4cf-b530c797cfa4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/remove-mailboxrepairrequest)

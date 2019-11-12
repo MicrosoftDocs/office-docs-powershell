@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more information about KQL in Exchange, see Message properties and search operators for In-Place eDiscovery(https://docs.microsoft.com/exchange/security-and-compliance/in-place-ediscovery/message-properties-and-search-operators).
+The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more information about KQL in Exchange, see [Message properties and search operators for In-Place eDiscovery](https://docs.microsoft.com/exchange/security-and-compliance/in-place-ediscovery/message-properties-and-search-operators).
 
 If this parameter is empty, all messages are returned.
 
@@ -454,4 +454,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9ee3b02c-d343-4816-a583-a90b1fad4b26.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/search-mailbox)

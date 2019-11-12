@@ -138,4 +138,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f3027ef9-e7bf-4db0-b844-9e9426a5b9a8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/restore-detailstemplate)

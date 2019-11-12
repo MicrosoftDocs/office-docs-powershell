@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1d6ea6f3-d3ba-4b65-a46c-cfd3d0868e62.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/remove-umhuntgroup)

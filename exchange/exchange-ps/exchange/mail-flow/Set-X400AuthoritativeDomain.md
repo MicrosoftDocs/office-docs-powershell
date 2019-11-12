@@ -245,4 +245,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/188bd7f3-a88c-411a-a4ef-16697d7f8c7b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-x400authoritativedomain)

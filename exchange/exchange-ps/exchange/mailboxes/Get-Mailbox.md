@@ -845,4 +845,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8a5a6eb9-4a75-47f9-ae3b-a3ba251cf9a8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)

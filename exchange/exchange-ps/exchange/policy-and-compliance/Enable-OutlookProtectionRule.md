@@ -128,4 +128,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/30344629-5705-4827-b3d1-d56b036d0eac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/enable-outlookprotectionrule)

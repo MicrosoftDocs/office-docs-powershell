@@ -321,4 +321,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/568aa7c5-4b59-4e10-9139-782d49cd0969.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/set-managementscope)

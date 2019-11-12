@@ -193,4 +193,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b78bc86e-343a-4f0c-ae17-1fb2dcb1f080.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-devicetenantpolicy)

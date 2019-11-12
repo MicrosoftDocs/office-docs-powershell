@@ -333,4 +333,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/acb5be3d-f42b-4685-ba2a-680731281edf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-mapivirtualdirectory)

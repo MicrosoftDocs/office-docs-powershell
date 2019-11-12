@@ -212,4 +212,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f3baf354-3d7d-4909-b4fa-754d1e44bf1f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/import-recipientdataproperty)

@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4b46de5b-9d1c-44eb-86bb-70d5e8339fdf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csconferencereport)

@@ -440,4 +440,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/00acaba4-66ee-454a-b9db-fe6d80c13f28.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/test-mailflow)

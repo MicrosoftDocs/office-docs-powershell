@@ -283,4 +283,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3506b2b9-dc23-4ed9-84f5-8839c4c3c974.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-app)

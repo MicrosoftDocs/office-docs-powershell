@@ -157,4 +157,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c925a5ef-ed07-4c31-b074-7ac04aa709f6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/set-mailboxauditbypassassociation)

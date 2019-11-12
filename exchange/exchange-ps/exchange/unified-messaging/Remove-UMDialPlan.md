@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b513bb62-ed81-4f90-bff4-39d4e6d3dfaf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/remove-umdialplan)

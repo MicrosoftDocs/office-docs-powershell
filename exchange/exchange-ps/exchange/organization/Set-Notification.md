@@ -192,4 +192,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/56275c13-8c86-42e6-ab3f-2e0aa100983a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-notification)

@@ -340,4 +340,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d254bdd5-d497-424c-97ad-d7e8f7e73c27.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-mailcontact)

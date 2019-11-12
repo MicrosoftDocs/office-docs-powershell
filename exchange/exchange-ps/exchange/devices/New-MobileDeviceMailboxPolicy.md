@@ -1164,4 +1164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/06b6aca8-46a3-4609-821e-d28df1bd2846.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-mobiledevicemailboxpolicy)

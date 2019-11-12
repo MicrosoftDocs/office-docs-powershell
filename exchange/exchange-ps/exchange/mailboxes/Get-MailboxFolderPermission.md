@@ -170,4 +170,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/048000f2-70ce-4630-985f-b3902903ae67.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)

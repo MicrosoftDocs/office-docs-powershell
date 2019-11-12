@@ -211,4 +211,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/89ac946b-575e-460c-8a9f-a775d22c87e9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/disable-inboxrule)

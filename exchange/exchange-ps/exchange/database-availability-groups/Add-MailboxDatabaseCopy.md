@@ -286,4 +286,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/84198fa9-ac8e-44ea-bd7b-64fe1e83e709.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/add-mailboxdatabasecopy)

@@ -80,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34e6e29d-e10b-4ed0-8393-d9f89c78fd9c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-globalmonitoringoverride)

@@ -194,4 +194,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/71c11ba9-e0bf-4540-ae00-146a44286f2e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientbrowserdetailreport)

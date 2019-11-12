@@ -422,4 +422,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7802e75f-e7db-424f-b68f-751cdabb324b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboximportrequest)

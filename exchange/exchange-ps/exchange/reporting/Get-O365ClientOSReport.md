@@ -152,4 +152,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a0266b64-2455-4037-bbc5-34730691247b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientosreport)

@@ -2201,4 +2201,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/42dbb25a-0b23-4775-ae15-7af62c089565.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailbox)

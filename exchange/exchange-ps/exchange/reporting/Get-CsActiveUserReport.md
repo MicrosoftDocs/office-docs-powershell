@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5668eadd-31ce-4aa9-bbda-f6aacde92de7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csactiveuserreport)

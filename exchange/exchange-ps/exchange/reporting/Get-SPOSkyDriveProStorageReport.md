@@ -125,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5eb2b347-871c-40fc-bb42-5c4fd69af7cf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-sposkydriveprostoragereport)

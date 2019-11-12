@@ -139,4 +139,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bd658b86-a548-4172-8a76-36c1508b72b5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/install-unifiedcomplianceprerequisite)

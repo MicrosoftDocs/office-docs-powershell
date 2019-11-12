@@ -370,4 +370,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c8d0cba8-a8cb-41dc-b3fe-11d5882e425b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-inboundconnector)

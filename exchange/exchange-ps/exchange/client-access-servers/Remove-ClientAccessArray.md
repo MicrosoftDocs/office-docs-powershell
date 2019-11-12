@@ -134,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c0e7cf59-400f-4462-95b7-984cf2e4ba4e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-clientaccessarray)

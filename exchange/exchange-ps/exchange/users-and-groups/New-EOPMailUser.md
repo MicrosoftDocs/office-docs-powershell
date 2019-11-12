@@ -207,4 +207,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0520cf33-4ad0-44e4-99a3-1b485739fc05.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopmailuser)

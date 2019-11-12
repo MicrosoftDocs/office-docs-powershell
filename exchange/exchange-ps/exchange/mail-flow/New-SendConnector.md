@@ -1003,4 +1003,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7b315ab0-8778-4835-a252-fb94129d7a8e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-sendconnector)

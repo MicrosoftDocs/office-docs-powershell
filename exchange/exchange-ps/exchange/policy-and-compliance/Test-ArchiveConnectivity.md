@@ -149,4 +149,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0db98a12-8cbb-4e9a-add4-c1847b057a44.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/test-archiveconnectivity)

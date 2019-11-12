@@ -1012,4 +1012,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/58de5b3c-05c3-4a1f-84c6-f082d990f22b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-mailbox)

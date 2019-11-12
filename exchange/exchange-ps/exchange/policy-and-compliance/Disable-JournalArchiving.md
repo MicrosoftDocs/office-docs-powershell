@@ -144,4 +144,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4425a74d-f63e-413f-b42d-8c3ae8d53791.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/disable-journalarchiving)

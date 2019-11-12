@@ -854,4 +854,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/93c537dd-5769-4307-abe1-aab2c71f7397.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-syncmailpublicfolder)

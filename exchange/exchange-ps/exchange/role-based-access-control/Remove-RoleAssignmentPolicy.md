@@ -148,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cfcfe435-cd52-4d40-a298-0c1ca11b8995.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-roleassignmentpolicy)

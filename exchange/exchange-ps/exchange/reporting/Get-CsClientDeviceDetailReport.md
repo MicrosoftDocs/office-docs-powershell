@@ -137,4 +137,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5b52cbc6-8fe3-4c1f-8218-2a8848e79459.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csclientdevicedetailreport)

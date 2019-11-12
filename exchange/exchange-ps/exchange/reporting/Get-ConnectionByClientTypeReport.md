@@ -127,4 +127,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f5e9bb82-1fc5-46df-aaa3-41db6dc64e22.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-connectionbyclienttypereport)

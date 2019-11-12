@@ -966,4 +966,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/000bc90f-1d00-4384-ab59-d6cf6f674825.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing)

@@ -104,4 +104,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0864f701-484d-4a57-9291-ea63e25c1f1b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-edgesyncserviceconfig)

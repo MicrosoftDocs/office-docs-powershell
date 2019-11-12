@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3da890b5-8985-48a0-a5eb-2667394fe788.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-umautoattendant)

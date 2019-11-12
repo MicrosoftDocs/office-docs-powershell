@@ -150,4 +150,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2c46293a-7703-48cc-872a-6a7065ab26db.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-activesyncvirtualdirectory)

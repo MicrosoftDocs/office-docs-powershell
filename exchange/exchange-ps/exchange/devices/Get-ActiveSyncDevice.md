@@ -334,4 +334,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/06a82fdc-9bf7-43c7-8471-d977034d3560.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-activesyncdevice)

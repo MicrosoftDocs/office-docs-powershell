@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1ab9c702-0547-46da-8c4d-a10b5ab91339.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-partnerapplication)

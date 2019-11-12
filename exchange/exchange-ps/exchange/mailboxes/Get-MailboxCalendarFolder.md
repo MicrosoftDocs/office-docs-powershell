@@ -122,4 +122,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dba2cebb-3c37-40ce-8ac0-93ec8d79ce0d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxcalendarfolder)

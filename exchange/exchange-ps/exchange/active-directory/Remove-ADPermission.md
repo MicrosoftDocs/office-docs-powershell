@@ -384,4 +384,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0e45951a-2b5a-4aa9-a709-def61d7d4972.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/remove-adpermission)

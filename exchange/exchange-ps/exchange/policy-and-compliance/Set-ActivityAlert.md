@@ -515,4 +515,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/798baa99-ff27-45e2-a19a-8c3d7b288a3d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-activityalert)

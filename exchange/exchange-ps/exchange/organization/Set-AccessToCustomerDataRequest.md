@@ -110,4 +110,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b3d866b1-628f-4d66-8114-1798934a2fcf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-accesstocustomerdatarequest)

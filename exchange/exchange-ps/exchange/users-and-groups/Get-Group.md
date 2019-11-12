@@ -345,4 +345,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1dff448b-e4ac-45b8-9a60-2ab3b5859559.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-group)

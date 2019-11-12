@@ -308,4 +308,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/28191e78-1cbb-4d90-a909-80a2a9883173.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/export-mailboxdiagnosticlogs)

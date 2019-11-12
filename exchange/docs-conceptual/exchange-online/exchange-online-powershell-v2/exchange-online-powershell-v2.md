@@ -19,6 +19,9 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
+> [!TIP]
+> If you have any feedback/concern or facing any issues with EXO V2 module, please send an email to exocmdletpreview[at]service[dot]microsoft[dot]com.
+
 ## What's new in the EXO V2 module?
 
 The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). It also contains the 700 or more older remote PowerShell cmdlets baked into the same module. Note that after you install the EXO V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the EXO V2 module.

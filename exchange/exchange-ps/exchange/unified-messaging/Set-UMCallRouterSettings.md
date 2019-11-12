@@ -275,4 +275,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d7436ccb-4efd-465f-981a-f487e158cbf3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umcallroutersettings)

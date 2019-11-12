@@ -148,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/46cc31dd-3799-45e4-bcce-0d0699a61dd6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-cmdletextensionagent)

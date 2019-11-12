@@ -203,4 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/42021435-189d-44f6-99b9-3a171bd3f667.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/set-caseholdrule)

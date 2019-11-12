@@ -190,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b6e03402-706e-40c6-b392-92e3da21b5c0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/suspend-mailboxdatabasecopy)

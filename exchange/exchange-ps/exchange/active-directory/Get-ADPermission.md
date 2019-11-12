@@ -140,4 +140,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f20251dc-ab54-4dd5-b80c-de0808fd4dc2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-adpermission)

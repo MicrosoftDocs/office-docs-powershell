@@ -111,4 +111,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/183b2f07-4225-4ef3-96c8-d29269730d18.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-remotedomain)

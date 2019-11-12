@@ -69,4 +69,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/500b5bf7-d1f3-42d6-85de-232f701421f9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-licensevsusagesummaryreport)

@@ -129,4 +129,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9bed5675-2cdd-4ebb-a555-8d83afa66659.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csavconferencetimereport)

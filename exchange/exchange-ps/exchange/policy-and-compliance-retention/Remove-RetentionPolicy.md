@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4af0ae71-cdfa-4db4-9473-21c25fd6e351.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-retentionpolicy)

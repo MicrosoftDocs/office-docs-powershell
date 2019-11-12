@@ -305,4 +305,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/36a24f50-89d9-4976-884d-f46eacd0f4d4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/update-publicfoldermailbox)

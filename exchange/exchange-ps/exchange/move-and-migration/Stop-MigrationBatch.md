@@ -156,4 +156,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/92d2f432-2bc0-469d-86b3-b82de8d3241c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/stop-migrationbatch)

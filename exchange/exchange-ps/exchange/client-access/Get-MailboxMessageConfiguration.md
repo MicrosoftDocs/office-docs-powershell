@@ -171,4 +171,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c9929748-cd71-43c0-b1d9-a7f6cd2da99a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-mailboxmessageconfiguration)

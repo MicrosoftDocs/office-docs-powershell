@@ -163,4 +163,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6837cb55-6734-4a28-9062-7227f57dafb2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-mapivirtualdirectory)

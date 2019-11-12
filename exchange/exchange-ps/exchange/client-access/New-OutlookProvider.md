@@ -132,4 +132,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3e80fb04-531f-4044-b957-9ba4fc712e4b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/new-outlookprovider)

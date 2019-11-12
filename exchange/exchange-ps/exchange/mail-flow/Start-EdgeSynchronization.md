@@ -186,4 +186,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7f8240bb-05fa-47c5-adcf-c843dbced0e8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/start-edgesynchronization)

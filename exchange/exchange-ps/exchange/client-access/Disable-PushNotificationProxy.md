@@ -93,4 +93,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/917432cc-85d6-4505-9608-51ce0608eb6e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/disable-pushnotificationproxy)

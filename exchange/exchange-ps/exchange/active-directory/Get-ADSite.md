@@ -91,4 +91,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/af3b6cc3-eb86-41d9-a643-171e36a3482d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-adsite)

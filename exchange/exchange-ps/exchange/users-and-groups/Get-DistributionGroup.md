@@ -399,4 +399,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d84f5670-f3ac-4d63-a6ac-af9de67677c5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-distributiongroup)

@@ -140,4 +140,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/12ef145f-14d5-4b81-b189-d5ba80b52d9c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/suspend-publicfoldermailboxmigrationrequest)

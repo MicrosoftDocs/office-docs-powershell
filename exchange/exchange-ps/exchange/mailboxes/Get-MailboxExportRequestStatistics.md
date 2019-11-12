@@ -287,4 +287,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/73c79d8c-d8c0-4389-a5ad-520c2c94909e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxexportrequeststatistics)

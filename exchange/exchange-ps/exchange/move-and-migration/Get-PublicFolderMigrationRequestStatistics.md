@@ -229,4 +229,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bfbcc746-b259-471b-97a4-0cf87f3cb2a6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermigrationrequeststatistics)

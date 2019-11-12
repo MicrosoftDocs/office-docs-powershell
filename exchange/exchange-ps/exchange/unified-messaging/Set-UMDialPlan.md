@@ -967,4 +967,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf6cbfde-35aa-4a03-86b0-50e2c3664eeb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umdialplan)

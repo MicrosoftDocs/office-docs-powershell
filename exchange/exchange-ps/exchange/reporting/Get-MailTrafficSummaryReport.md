@@ -230,4 +230,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/58c279cd-d548-46b2-90b9-d7be69241421.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtrafficsummaryreport)

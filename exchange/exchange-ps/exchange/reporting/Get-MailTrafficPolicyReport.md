@@ -307,4 +307,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1f26abdf-ac82-4792-965c-9b839d7e2231.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtrafficpolicyreport)

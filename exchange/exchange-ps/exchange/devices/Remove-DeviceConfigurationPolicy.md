@@ -121,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/27fa336b-c627-414e-b2c9-6415a8183388.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-deviceconfigurationpolicy)

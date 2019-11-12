@@ -193,4 +193,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c235645b-3361-404d-bf0d-3d8920aeb4e4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-rpcclientaccess)

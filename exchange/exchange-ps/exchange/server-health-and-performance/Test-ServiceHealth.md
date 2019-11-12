@@ -168,4 +168,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/73afc45e-e09b-4e27-b295-696894b53261.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/test-servicehealth)

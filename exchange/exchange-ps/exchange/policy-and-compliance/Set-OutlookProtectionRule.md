@@ -293,4 +293,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/55878738-7045-4a38-87fe-2ecd01f8303a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-outlookprotectionrule)

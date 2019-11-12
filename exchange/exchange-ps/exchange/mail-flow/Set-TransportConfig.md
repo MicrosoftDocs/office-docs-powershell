@@ -1431,4 +1431,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ad3910a5-2227-47a2-8ccc-a208ce6210bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-transportconfig)

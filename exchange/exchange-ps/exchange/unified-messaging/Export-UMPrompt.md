@@ -180,4 +180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4bf35665-1643-4fec-bdb5-3aa27ff9984f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/export-umprompt)

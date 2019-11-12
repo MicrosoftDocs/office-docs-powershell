@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/077d03e7-363d-4ba4-9cfc-5585a73689bc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/remove-oabvirtualdirectory)

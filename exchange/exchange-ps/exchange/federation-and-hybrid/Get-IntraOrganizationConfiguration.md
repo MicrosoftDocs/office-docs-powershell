@@ -78,4 +78,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/774d9f77-ecde-4c6f-ac4f-8068dcb4fb90.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-intraorganizationconfiguration)
