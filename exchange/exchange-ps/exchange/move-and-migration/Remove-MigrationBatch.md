@@ -175,4 +175,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/59eb82ed-8210-41c1-a74b-8d783af3c391.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-migrationbatch)

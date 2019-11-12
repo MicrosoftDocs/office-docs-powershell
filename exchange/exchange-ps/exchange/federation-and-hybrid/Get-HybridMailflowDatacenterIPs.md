@@ -59,4 +59,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d055d1e1-7f5d-4233-bd68-d449937fb674.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-hybridmailflowdatacenterips)

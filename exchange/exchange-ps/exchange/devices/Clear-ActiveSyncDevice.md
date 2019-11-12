@@ -178,4 +178,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/016768f2-98b3-4f71-b15a-830285a6feac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/clear-activesyncdevice)

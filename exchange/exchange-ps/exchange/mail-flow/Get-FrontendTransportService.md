@@ -107,4 +107,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/12908079-b1ef-4a8b-82ba-fc92a342032e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-frontendtransportservice)

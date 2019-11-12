@@ -620,4 +620,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/48757062-abe5-4c61-acc5-5884569c1d8b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/connect-mailbox)

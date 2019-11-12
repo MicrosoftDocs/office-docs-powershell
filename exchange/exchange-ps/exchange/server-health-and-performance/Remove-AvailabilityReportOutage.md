@@ -172,4 +172,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ef11332e-dfbf-464e-9174-ef24129b72e9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/remove-availabilityreportoutage)

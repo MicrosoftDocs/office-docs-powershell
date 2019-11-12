@@ -138,4 +138,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a68d31b6-4f32-4a73-b9d9-5d5a6fc1c2f0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/clean-mailboxdatabase)

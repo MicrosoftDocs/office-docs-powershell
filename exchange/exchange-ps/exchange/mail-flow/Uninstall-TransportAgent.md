@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e0f9c8e5-2279-4e4d-8a32-108b8e8e9f00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/uninstall-transportagent)

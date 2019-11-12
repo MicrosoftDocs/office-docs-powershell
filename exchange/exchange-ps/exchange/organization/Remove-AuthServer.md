@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ec5971e8-7340-4584-9916-7a93d0096832.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-authserver)

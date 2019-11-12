@@ -151,4 +151,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/49836c94-b353-49e8-a1f1-ca59e4a37443.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/suspend-mailboximportrequest)

@@ -126,4 +126,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/79bedc01-7b50-4127-ba54-06bf55c3f43d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-accepteddomain)

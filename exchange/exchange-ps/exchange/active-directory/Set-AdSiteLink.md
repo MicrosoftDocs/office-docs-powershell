@@ -192,4 +192,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8c1853fd-e5d8-47d9-b603-33a6c7cec87c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adsitelink)

@@ -385,4 +385,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ec02987-7404-47fa-a6b0-43239344b6c8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-popsubscription)

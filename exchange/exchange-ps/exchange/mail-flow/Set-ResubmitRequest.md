@@ -150,4 +150,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cbe44cb2-bde2-49d5-823c-9aa52360393e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-resubmitrequest)

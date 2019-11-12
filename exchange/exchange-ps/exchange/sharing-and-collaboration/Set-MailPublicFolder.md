@@ -1590,4 +1590,4 @@ To see the return types (also known as "output types") that this cmdlet accepts,
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8db48034-24cd-43d8-9133-1c8226616be5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-mailpublicfolder)

@@ -57,4 +57,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c09f17ff-7830-4a4e-a951-501bc44a26ab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-adserversettings)

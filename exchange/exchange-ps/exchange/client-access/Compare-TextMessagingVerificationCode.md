@@ -180,4 +180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/aef03828-bd6b-4bd4-9aaf-56d4fc5872d5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/compare-textmessagingverificationcode)

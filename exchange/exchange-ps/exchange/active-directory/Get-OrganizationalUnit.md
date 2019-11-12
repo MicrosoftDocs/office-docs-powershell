@@ -190,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ec2d1cc9-863f-47f1-b235-57f2a2835437.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-organizationalunit)

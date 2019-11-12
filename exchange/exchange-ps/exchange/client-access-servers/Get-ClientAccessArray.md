@@ -137,4 +137,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4d366fb0-58b9-4730-9c67-8d4a0d47e19a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessarray)

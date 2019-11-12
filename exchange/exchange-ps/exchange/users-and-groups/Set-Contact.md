@@ -804,4 +804,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c86ca5af-bb1d-4619-8af8-9f04c83d84c5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-contact)

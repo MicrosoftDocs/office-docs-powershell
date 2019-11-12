@@ -306,4 +306,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cb002b53-c307-40a6-aca2-a7f29dc740d8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/new-imapsubscription)

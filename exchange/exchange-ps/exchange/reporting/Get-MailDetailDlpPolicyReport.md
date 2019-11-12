@@ -324,4 +324,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3eb34454-65f8-4741-9c9b-bba087bc9cb2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-maildetaildlppolicyreport)

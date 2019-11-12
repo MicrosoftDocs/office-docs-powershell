@@ -182,4 +182,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d345ef5-771e-43d5-8a15-28ac7c597d1f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/disable-outlookanywhere)

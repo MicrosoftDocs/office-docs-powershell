@@ -93,4 +93,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/69499195-f08f-41bd-b0ed-443688410b12.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-rmstrustedpublishingdomain)

@@ -1738,4 +1738,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e3a8c709-770a-4900-9a57-adcf0d98ff68.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-distributiongroup)

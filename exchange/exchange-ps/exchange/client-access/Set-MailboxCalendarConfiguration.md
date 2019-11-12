@@ -1027,4 +1027,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/092aa4db-3f0f-4b17-b7b1-1987a8268760.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxcalendarconfiguration)

@@ -281,4 +281,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/27e9b80c-66db-4038-b93e-edd68fe86a12.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetracedetail)

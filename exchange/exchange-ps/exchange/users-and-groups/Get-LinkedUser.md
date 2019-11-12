@@ -219,4 +219,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7c425c78-f2eb-4971-b0d7-cfb7f67ddb17.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-linkeduser)

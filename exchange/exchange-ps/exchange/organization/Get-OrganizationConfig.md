@@ -95,4 +95,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3e07e5cc-5066-40e7-8642-845ad080f9a9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-organizationconfig)

@@ -156,4 +156,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/96543903-10fa-46fe-9ea0-90570ca0ad2e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangeserver)

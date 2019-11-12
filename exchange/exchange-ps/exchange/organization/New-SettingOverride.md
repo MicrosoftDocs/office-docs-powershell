@@ -290,4 +290,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/29be9ee9-d9c7-4aef-b068-8ab44ceecd0a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/new-settingoverride)

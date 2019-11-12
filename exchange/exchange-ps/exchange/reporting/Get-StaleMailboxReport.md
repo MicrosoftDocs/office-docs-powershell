@@ -109,4 +109,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cb42b081-092c-4239-ad93-eb8beee4c68a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-stalemailboxreport)

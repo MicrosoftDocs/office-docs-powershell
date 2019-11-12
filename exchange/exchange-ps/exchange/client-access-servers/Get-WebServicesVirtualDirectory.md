@@ -189,4 +189,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d8babcc-ed3f-4f6a-9b34-e332996dc74a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-webservicesvirtualdirectory)

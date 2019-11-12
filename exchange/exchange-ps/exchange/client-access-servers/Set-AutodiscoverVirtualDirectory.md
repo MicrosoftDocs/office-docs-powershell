@@ -367,4 +367,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/66285113-25d5-4fbf-baa9-8e65778761ad.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-autodiscovervirtualdirectory)

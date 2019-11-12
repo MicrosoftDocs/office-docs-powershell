@@ -229,4 +229,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/741b74a2-65ff-476f-aabf-1af42a3a2d6a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adserversettings)

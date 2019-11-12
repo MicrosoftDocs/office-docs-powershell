@@ -205,4 +205,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b586ea3a-8243-460a-a400-9ab5823ba782.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/add-distributiongroupmember)

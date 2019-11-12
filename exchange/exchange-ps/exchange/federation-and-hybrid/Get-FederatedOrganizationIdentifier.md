@@ -115,4 +115,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/922052b7-0aec-46a3-a2be-32ed6d0628fa.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-federatedorganizationidentifier)

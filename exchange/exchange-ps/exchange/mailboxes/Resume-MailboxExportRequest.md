@@ -135,4 +135,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dba2880f-ac7c-40d4-8792-1bf30262142e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/resume-mailboxexportrequest)

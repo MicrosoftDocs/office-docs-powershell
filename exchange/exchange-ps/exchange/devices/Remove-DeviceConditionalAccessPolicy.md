@@ -121,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/72f09025-da9c-447e-8d86-2e2ca591abb0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-deviceconditionalaccesspolicy)

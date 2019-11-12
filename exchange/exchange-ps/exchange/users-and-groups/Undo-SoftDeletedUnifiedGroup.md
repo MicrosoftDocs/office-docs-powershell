@@ -134,4 +134,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/89f09bfc-43d6-457c-978f-b699c27ea325.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/undo-softdeletedunifiedgroup)

@@ -124,4 +124,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f3a09cda-c1b9-4d7c-b1a5-eefc3603ebe7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-ummailboxpolicy)

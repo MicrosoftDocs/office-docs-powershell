@@ -136,4 +136,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/49bbc944-c55d-4c85-bf6b-63669a601621.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/validate-outboundconnector)

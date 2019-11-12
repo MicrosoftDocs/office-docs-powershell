@@ -485,4 +485,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/37ebb66a-382e-4fd9-81f8-795f776a87b1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/update-mailboxdatabasecopy)

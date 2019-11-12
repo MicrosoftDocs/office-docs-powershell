@@ -139,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7570aaf0-2cbe-46b6-92ea-cdd704f4eecc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-resourceconfig)

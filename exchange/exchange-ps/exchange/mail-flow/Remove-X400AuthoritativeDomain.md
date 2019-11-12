@@ -126,4 +126,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bb58853a-b51e-4f90-b88f-c5adda88d14d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-x400authoritativedomain)

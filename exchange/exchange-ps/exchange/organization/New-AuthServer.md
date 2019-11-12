@@ -228,4 +228,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/67539efd-309f-4155-8b8f-c370fe7681b6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/new-authserver)

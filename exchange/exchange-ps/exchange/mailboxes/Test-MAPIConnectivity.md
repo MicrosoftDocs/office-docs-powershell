@@ -398,4 +398,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/89c5b599-0a92-4857-880c-aea5f1e6c8bd.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/test-mapiconnectivity)

@@ -182,4 +182,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/23b31348-7055-4328-887e-46e7792b0e25.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/enable-umcallansweringrule)

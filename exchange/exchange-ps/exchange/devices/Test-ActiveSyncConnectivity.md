@@ -370,4 +370,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/83f7b578-496e-4903-aeb7-95517a28a9f4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/test-activesyncconnectivity)

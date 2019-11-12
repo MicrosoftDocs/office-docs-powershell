@@ -175,4 +175,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c9bb1fab-4d0f-43e3-ad4a-36643baa6553.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adsite)

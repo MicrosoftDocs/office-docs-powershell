@@ -151,4 +151,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c6309ab0-77fe-4feb-b2ac-4844de841996.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/export-journalrulecollection)

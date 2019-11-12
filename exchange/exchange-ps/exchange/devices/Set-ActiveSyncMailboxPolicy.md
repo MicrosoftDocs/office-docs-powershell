@@ -1066,4 +1066,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/913c04bf-110d-465f-81c3-40887b44bf63.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-activesyncmailboxpolicy)

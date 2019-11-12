@@ -162,4 +162,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8cd3096e-79ca-4af8-bfb2-48bb8cee5208.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/remove-federateddomain)

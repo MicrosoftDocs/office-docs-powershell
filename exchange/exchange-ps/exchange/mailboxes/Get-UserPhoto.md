@@ -368,4 +368,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a9b22e66-a511-4a47-ba50-a0fc9c204fcc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-userphoto)

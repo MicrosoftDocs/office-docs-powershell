@@ -1615,4 +1615,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c545d9ea-af01-4ca1-87bb-3b6ec1da9166.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconditionalaccessrule)

@@ -130,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cf131dc1-6067-4952-a6c3-7d6651a326da.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-sendconnector)

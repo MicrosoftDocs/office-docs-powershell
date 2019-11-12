@@ -330,4 +330,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8e8d3fca-59b3-4355-a637-28bf5e5ca4cf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangeserver)

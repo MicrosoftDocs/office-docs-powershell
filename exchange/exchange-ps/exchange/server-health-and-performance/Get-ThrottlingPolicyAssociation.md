@@ -232,4 +232,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/45e1248f-89c2-467c-8d5d-de1367111e08.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-throttlingpolicyassociation)

@@ -152,4 +152,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a1463ac7-6874-4b6a-92b6-4a7a044c344f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/remove-subscription)

@@ -281,4 +281,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/53b76641-d341-42a8-b281-018a91af6a36.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-systemmessage)

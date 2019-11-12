@@ -322,4 +322,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a8405b09-04aa-4b31-866a-3361bb1ad8b4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/new-popsubscription)

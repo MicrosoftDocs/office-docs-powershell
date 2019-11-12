@@ -160,4 +160,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3c957be4-d13e-45c3-8730-3be45ffad19a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/disable-mailcontact)

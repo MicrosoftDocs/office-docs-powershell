@@ -200,4 +200,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a13fdafb-1ad8-47ee-b57f-2377d67c01ae.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-connectsubscription)

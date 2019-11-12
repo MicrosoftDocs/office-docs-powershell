@@ -180,4 +180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a33c69d8-4d19-4e9d-b5cf-27727b7c4a8f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-activesyncdeviceaccessrule)

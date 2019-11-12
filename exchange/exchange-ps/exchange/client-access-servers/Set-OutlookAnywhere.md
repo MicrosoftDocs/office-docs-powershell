@@ -488,4 +488,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/85806a0c-0e98-4aba-b103-8ec128dd4222.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-outlookanywhere)

@@ -90,4 +90,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b5741539-21d0-475d-b4a7-c6355d7b1c0b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-transportpipeline)

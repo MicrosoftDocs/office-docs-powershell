@@ -411,4 +411,4 @@ Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData |
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08cb17bb-0fcd-4664-b6f5-000b7f668336.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog)

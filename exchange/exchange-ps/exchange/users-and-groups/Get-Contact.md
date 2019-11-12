@@ -351,4 +351,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/59315afb-fab5-4984-b3a1-ba1f82df8a10.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-contact)

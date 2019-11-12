@@ -1920,4 +1920,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2c6b8ee8-1ff0-4353-845c-f3ea9778abc3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule)

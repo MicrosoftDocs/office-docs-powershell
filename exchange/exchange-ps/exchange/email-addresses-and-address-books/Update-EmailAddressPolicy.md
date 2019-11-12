@@ -164,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/283081a2-14bb-46cd-918e-e2dd168c43ab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/update-emailaddresspolicy)

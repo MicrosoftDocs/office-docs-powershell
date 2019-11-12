@@ -148,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/31442c97-1813-43d9-b9d1-da487e6b00ea.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-remotedomain)

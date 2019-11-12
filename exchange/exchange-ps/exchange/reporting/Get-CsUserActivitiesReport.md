@@ -181,4 +181,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/75814871-1959-475d-b10d-d43775ac65e4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-csuseractivitiesreport)

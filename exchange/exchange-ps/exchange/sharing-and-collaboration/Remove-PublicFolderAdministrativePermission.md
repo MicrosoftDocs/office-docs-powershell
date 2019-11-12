@@ -321,4 +321,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/04ebd367-7dd3-4e7b-8323-68d62c74fb07.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderadministrativepermission)

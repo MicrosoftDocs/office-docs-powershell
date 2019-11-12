@@ -352,4 +352,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d6020f77-c852-46f6-b7c5-5ca6feae0fdf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-message)

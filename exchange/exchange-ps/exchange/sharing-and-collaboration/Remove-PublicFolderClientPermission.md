@@ -238,4 +238,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cc35b182-d90d-4f0a-9e4c-cd97bd81b4f3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderclientpermission)

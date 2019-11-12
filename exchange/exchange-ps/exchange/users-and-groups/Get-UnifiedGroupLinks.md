@@ -127,4 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b7f00aad-61ae-4ca8-8a3d-9efd28bbbbd0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-unifiedgrouplinks)

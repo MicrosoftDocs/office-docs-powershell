@@ -217,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d79009fc-4dea-44f9-89e0-732106ac67a0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/dump-provisioningcache)

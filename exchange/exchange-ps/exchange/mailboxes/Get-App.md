@@ -178,4 +178,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/85dfb69d-d637-410e-931c-36685dda84c7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-app)

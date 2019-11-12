@@ -1376,4 +1376,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/eb7f8960-e772-4312-9d3f-47dd27d9545c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-receiveconnector)

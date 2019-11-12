@@ -109,4 +109,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08834e46-f181-4d9d-95f4-0d5157e75f2a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-outboundconnector)

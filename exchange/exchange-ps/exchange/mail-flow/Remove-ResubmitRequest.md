@@ -141,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9b3f460b-3853-4fa2-8d1f-4f60bb82a908.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-resubmitrequest)

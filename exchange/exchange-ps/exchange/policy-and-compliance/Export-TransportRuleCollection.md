@@ -164,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bfdb6ced-cd81-49f1-a929-4d76dbaf5590.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/export-transportrulecollection)

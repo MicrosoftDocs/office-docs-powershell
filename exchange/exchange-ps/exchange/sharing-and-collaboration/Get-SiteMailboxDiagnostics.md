@@ -166,4 +166,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4d6c7fb2-8b5c-44c8-add2-f862240b9da0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-sitemailboxdiagnostics)

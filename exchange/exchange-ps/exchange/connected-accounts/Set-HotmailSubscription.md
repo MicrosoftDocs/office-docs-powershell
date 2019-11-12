@@ -203,4 +203,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d9139ac-1e96-439d-86f3-7e2ea4d8d914.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-hotmailsubscription)

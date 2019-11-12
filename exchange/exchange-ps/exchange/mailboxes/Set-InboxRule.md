@@ -1912,4 +1912,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/baef3e69-ff01-4e00-a4bb-e8826bbbf38b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-inboxrule)

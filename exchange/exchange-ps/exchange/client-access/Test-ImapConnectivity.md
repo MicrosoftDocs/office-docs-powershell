@@ -364,4 +364,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/273690c8-4e0d-4f05-8786-11d71868dae0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-imapconnectivity)

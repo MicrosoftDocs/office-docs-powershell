@@ -387,4 +387,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/93d43160-f34a-418c-86b7-61c25fd9e847.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-foreignconnector)

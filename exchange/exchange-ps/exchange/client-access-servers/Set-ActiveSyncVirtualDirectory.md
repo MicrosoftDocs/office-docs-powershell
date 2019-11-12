@@ -608,4 +608,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/899fa80c-41e9-4fc0-b28e-5ca2f55e6369.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-activesyncvirtualdirectory)

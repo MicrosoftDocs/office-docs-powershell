@@ -103,4 +103,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/159f050b-c015-4fc5-b6b0-2aceaecb71ac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-sitemailboxprovisioningpolicy)

@@ -752,4 +752,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/58e51734-83bd-4e71-bd13-9960efaa80c3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-imapsettings)

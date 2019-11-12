@@ -111,4 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/29f40631-f393-47ec-8081-464aacb1eb14.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-focusedinbox)

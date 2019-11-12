@@ -260,4 +260,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5357cc82-3224-4df5-ac0b-24b1afc90713.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtraffictopreport)

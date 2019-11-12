@@ -329,4 +329,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a53ae55-9f2c-4dbd-b476-19bacacad3bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-sitemailboxprovisioningpolicy)

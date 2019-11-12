@@ -123,4 +123,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ab1b0e0f-cbda-4724-863f-04a944c1a7dd.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/start-migrationuser)

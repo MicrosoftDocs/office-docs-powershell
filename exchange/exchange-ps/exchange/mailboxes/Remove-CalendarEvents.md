@@ -225,4 +225,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf188d1c-d6e5-4c82-9508-35f9b788ff82.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-calendarevents)

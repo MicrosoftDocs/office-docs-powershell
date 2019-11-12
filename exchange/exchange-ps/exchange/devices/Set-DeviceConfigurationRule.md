@@ -1587,4 +1587,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/27cc86c5-8835-41fa-a880-cfe14f615f3b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconfigurationrule)

@@ -171,4 +171,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c15f872c-af1b-48ca-b95d-cca1b0a78977.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/resume-message)

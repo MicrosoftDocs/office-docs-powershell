@@ -376,4 +376,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2d7f36c8-38db-4318-879c-8f77cfd09b06.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-imapsubscription)

@@ -311,4 +311,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2ef9a20b-0974-45d0-9dae-23bab22d736e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-accepteddomain)

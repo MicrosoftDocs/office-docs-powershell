@@ -173,4 +173,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ebc17689-0c30-4d0b-9a53-d81a909458d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/clear-textmessagingaccount)

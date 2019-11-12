@@ -151,4 +151,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ae182f13-dacb-471b-a5a3-9bedb58d3b44.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-eligibledistributiongroupformigration)

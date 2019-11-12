@@ -421,4 +421,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5391a63c-ca60-498c-8358-5f0667140738.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/enable-ummailbox)

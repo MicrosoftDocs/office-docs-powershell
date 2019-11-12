@@ -28,7 +28,7 @@ Remove-PublicFolderDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-Domai
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-Removing a public folder database can have a broad range of serious consequences. (This is particularly true when removing the last public folder database in the organization.) For more information, see Remove Public Folder Databases.
+Removing a public folder database can have a broad range of serious consequences. (This is particularly true when removing the last public folder database in the organization.) For more information, see [Remove Public Folder Databases](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd876883(v=exchg.141)).
 
 ## EXAMPLES
 
@@ -148,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/11289582-170b-445e-94a4-8f73df6ccb13.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderdatabase)

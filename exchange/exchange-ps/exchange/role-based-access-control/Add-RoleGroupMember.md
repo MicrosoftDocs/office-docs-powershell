@@ -190,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ed53e269-a855-4066-88a7-1ba36086bd72.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/add-rolegroupmember)

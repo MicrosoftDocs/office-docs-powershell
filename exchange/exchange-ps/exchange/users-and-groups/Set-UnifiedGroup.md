@@ -1240,4 +1240,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e120e5c5-8643-4623-a15d-f97811f58e99.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-unifiedgroup)

@@ -241,4 +241,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a447bf51-fcdc-4f8d-8d06-533d299c11fe.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-activesyncorganizationsettings)

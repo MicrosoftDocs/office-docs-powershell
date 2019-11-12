@@ -252,4 +252,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/90a1639f-b5d1-4512-a506-a4c3953865ae.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-sitemailbox)

@@ -235,4 +235,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b606d241-aecd-4bb9-a34f-6dd6b02a712c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-rpcclientaccess)

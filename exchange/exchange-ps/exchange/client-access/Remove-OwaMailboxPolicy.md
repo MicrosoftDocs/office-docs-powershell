@@ -164,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/834bee7a-1044-4628-9d0d-1601e88a73f8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/remove-owamailboxpolicy)

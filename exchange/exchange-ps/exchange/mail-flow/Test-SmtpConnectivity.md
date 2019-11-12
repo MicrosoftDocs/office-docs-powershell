@@ -177,4 +177,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/40e81fee-c9ce-472d-8626-b1d3fa85d365.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/test-smtpconnectivity)

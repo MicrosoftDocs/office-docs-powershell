@@ -85,4 +85,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7d7ce148-4924-49e9-a57d-06bdc2d9f365.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-userprincipalnamessuffix)

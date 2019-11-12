@@ -218,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e12b0c43-06c7-45f9-9890-eaac56745573.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/undo-softdeletedmailbox)

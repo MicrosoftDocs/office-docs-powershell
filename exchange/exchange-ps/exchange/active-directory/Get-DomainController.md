@@ -138,4 +138,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c90cec1b-4aa4-4f94-b547-05af263417f1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/get-domaincontroller)

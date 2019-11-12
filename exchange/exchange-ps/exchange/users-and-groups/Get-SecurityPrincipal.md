@@ -254,4 +254,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/98d70e10-6972-4317-88d0-59f99845cf15.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-securityprincipal)

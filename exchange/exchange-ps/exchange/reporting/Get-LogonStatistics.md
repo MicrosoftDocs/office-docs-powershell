@@ -173,4 +173,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c06f202e-2302-4122-a514-9d11b6ad2c47.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-logonstatistics)

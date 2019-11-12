@@ -1256,4 +1256,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c28ca2ce-963f-4676-81c3-cef3c290ee7b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-moverequest)

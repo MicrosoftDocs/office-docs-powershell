@@ -301,4 +301,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b09ac95b-ea07-41cf-9c69-95c215bfa02c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-deliveryagentconnector)

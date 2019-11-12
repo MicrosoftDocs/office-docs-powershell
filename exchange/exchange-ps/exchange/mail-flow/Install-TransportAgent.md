@@ -204,4 +204,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/520bfa38-f51a-400c-9ff3-46fa50222092.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/install-transportagent)

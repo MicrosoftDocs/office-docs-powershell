@@ -224,4 +224,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/687309c9-150e-4cdf-9639-3247eb6608a4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/reset-provisioningcache)

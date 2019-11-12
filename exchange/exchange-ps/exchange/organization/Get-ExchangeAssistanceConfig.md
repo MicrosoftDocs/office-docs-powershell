@@ -97,4 +97,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5b060db2-edaf-40ff-9ae3-1d36c65a3234.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangeassistanceconfig)

@@ -306,4 +306,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/48e305d0-426b-455f-b160-41b199d6fdee.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-calendarconnectivity)

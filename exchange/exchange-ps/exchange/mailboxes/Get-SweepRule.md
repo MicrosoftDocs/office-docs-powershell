@@ -176,4 +176,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3893ff38-931d-49f8-b34d-d7666b629d54.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-sweeprule)

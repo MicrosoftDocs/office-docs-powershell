@@ -140,4 +140,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d15d2ae-77cf-4f4b-8d43-ef9864a797d8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/suspend-publicfoldermoverequest)

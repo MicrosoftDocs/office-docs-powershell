@@ -128,4 +128,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4286a209-077f-4413-a3aa-48c4a2af0aa5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/enable-umautoattendant)

@@ -311,4 +311,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dfc5be21-3a9c-4888-b1e9-8a308262eb67.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-authconfig)

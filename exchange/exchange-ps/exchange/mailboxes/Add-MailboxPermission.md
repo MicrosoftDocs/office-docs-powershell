@@ -421,4 +421,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a9aacbf5-5e6c-47ef-95d6-e24547e95d01.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/add-mailboxpermission)

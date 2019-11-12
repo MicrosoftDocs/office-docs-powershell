@@ -230,4 +230,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2390ee56-7d46-4584-aae8-fba8455e9e04.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-addressrewriteentry)

@@ -165,4 +165,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b2c57a7e-bd6d-461d-8a9d-5384a715344b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-sendaddress)

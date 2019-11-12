@@ -120,4 +120,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e295ac9a-3ecf-405a-b81c-c77e3067126a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailfilterlistreport)

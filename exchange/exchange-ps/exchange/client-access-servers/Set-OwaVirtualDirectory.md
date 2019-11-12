@@ -2891,4 +2891,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7fadcc2e-6339-48b1-b15c-c89e45d4e430.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-owavirtualdirectory)

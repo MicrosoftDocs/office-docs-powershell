@@ -189,4 +189,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a75a524b-2491-47b2-83e6-922cd0887c6d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/retry-queue)

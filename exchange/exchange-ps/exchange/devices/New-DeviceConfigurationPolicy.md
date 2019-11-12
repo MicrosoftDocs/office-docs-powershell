@@ -168,4 +168,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d286fd8f-7695-4b4c-a24f-51975d939a60.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-deviceconfigurationpolicy)

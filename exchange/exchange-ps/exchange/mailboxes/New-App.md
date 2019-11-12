@@ -539,4 +539,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f05951d8-1e49-42b6-a341-66eb67b2870f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-app)

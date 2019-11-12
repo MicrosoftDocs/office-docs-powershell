@@ -93,4 +93,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/55a0227e-633a-4e4b-b68e-e05f60f84c83.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-reportexecutioninstance)

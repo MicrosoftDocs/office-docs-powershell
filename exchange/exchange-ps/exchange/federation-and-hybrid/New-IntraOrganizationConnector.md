@@ -183,4 +183,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34af9609-b018-4eee-8c77-e1f0dcd5b4a7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/new-intraorganizationconnector)

@@ -110,4 +110,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3a151aa9-ff32-46a9-a3b8-8fbd043cedc3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-managedfoldermailboxpolicy)

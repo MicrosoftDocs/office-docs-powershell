@@ -235,4 +235,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6a91a841-a054-4b30-a899-2c51c997f527.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/import-umprompt)

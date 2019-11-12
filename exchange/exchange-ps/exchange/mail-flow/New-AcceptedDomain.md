@@ -167,4 +167,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08bcaaec-51e3-447d-b3bf-406a705c64b4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-accepteddomain)

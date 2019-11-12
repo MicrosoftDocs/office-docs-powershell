@@ -134,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7c17847a-310e-45df-8c0c-58b4297e6f8d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-remotedomain)

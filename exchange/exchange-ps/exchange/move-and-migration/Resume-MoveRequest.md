@@ -208,4 +208,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2e8143b6-0c47-4afa-92ac-e6a251088345.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/resume-moverequest)

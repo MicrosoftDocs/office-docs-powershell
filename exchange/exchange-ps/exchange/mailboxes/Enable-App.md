@@ -173,4 +173,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/616079e2-3cbd-43e9-8e71-098374943cf0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-app)

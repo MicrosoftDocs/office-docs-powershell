@@ -1094,4 +1094,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/72ed234d-cd25-4070-a5b2-ae5f056cc6a0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-mailboxtransportservice)

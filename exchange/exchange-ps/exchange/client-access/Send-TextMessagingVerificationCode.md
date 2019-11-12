@@ -164,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2807693e-cc82-44bc-a670-e8ae4dd7429b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/send-textmessagingverificationcode)

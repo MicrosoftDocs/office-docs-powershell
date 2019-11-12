@@ -878,4 +878,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e9920bd1-06c1-4f75-992f-dd7fc98a5c2b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-dynamicdistributiongroup)

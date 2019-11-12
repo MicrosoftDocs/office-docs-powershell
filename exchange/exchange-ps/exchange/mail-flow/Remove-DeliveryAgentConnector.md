@@ -128,4 +128,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/41c4859f-0a8d-41ff-8074-e3ea7f08df69.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-deliveryagentconnector)

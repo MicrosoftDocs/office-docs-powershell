@@ -143,4 +143,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/82c2215b-88ec-4c20-a2e8-245b915d8394.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/stop-managedfolderassistant)

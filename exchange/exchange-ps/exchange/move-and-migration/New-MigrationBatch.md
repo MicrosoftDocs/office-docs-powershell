@@ -1225,4 +1225,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4f797f11-e4ef-48f9-83ab-dda8a3f61e2b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch)
