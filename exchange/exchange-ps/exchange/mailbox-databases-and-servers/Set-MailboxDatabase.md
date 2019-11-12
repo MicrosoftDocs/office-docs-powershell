@@ -65,21 +65,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxDatabase "Mailbox Database01" -DeletedItemRetention 7.00:00:00
 ```
 
 This example sets the length of time that deleted items are retained. If a specific mailbox has its own item retention set, that value is used instead of this value, which is set on the mailbox database.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccessServer or ClientAccessServerArrayID>
 ```
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
 
-For more information about RPC access through Client Access servers, see Set-RpcClientAccess and Set-ClientAccessArray.
+For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-rpcclientaccess) and [Set-ClientAccessArray](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessarray).
 
 ## PARAMETERS
 
@@ -97,6 +97,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -116,6 +117,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +137,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +153,7 @@ Type: Lossless | GoodAvailability | BestAvailability
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +173,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +209,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +231,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +251,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +267,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +301,7 @@ Type: DataMoveReplicationConstraintParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +325,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +341,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +361,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -370,6 +383,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -385,6 +399,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +421,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -433,6 +449,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -462,6 +479,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -485,6 +503,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -518,6 +537,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -543,6 +563,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -570,6 +591,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -589,6 +611,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -630,6 +653,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -647,6 +671,7 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -666,6 +691,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -681,6 +707,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -704,6 +731,7 @@ Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -737,6 +765,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -770,6 +799,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -793,6 +823,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -834,6 +865,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -869,6 +901,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -904,6 +937,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -927,6 +961,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -939,13 +974,14 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
-When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see Understanding RPC Client Access.
+When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
 
 ```yaml
 Type: ClientAccessServerOrArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -961,6 +997,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -985,4 +1022,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a01edc66-bc10-4f65-9df4-432cb9e88f58.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/set-mailboxdatabase)

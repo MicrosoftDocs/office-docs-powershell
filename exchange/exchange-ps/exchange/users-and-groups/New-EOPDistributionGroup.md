@@ -43,15 +43,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-EOPDistributionGroup -Name Managers -Type Security -ManagedBy "Kitty Petersen"
 ```
 
 This example creates a mail-enabled universal security group named Managers that's managed by Kitty Petersen.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-EOPDistributionGroup -Name "Security Team" -ManagedBy "Tyson Fawcett" -Alias SecurityTeamThree -DisplayName "Security Team" -Notes "Security leads from each division" -PrimarySmtpAddress SecTeamThree@contoso.com -Type Distribution -Members @("Tyson Fawcett","Kitty Petersen")
 ```
 
@@ -69,6 +69,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +103,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +173,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +189,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +205,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +221,7 @@ Type: Distribution | Security
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -236,4 +244,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopdistributiongroup)

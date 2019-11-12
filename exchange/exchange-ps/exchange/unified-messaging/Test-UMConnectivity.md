@@ -102,22 +102,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-UMConnectivity
 ```
 
 This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
 ```
 
 This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through the UM IP gateway MyUMIPGateway by using the telephone number 56780.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
 ```
 
@@ -133,6 +133,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +149,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -163,6 +165,7 @@ Type: $true | $false
 Parameter Sets: PinReset
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -178,6 +181,7 @@ Type: $true | $false
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -193,6 +197,7 @@ Type: $true | $false
 Parameter Sets: TuiLogonGeneral
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -208,6 +213,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -238,6 +245,7 @@ Type: SwitchParameter
 Parameter Sets: LocalLoop
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +261,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -272,6 +281,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +297,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -302,6 +313,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -317,6 +329,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +345,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +361,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +377,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -377,6 +393,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -392,6 +409,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -407,6 +425,7 @@ Type: $true | $false
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -422,6 +441,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -437,6 +457,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -452,6 +473,7 @@ Type: $true | $false
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -467,6 +489,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +505,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -506,4 +530,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4e8f5561-a098-4bfe-94e1-baf7c24b01bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/test-umconnectivity)

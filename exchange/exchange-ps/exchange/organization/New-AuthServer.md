@@ -54,8 +54,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-AuthServer -Name WindowsAzureACS -AuthMetadataUrl https://accounts.accesscontrol.windows.net/contoso.onmicrosoft.com/metadata/json/1
 ```
 
@@ -71,6 +71,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -86,6 +87,7 @@ Type: String
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -111,6 +113,7 @@ Type: Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD
 Parameter Sets: NativeClientAuthServer, AppSecret
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -130,6 +133,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +187,7 @@ Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +203,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,4 +228,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/67539efd-309f-4155-8b8f-c370fe7681b6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/new-authserver)

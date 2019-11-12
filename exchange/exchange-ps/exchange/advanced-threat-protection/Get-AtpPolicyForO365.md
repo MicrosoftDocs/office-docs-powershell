@@ -33,8 +33,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AtpPolicyForO365
 ```
 
@@ -50,6 +50,7 @@ Type: AtpPolicyForO365IdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -72,4 +73,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4649aa3a-e49d-42ba-84e8-ef2871fa2b58.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-atppolicyforo365)

@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ClientAccessRule
 ```
 
 This example shows a summary list of all client access rules.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ClientAccessRule "Block Client Connections from 192.168.1.0/24" | Format-List
 ```
 
@@ -60,6 +60,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Type: ClientAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -113,6 +116,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -137,4 +141,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4787d6dc-d38b-427a-83f8-7c57d604dff0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-clientaccessrule)

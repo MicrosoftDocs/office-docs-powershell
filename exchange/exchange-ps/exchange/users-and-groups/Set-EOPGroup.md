@@ -34,8 +34,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2018"
 ```
 
@@ -51,6 +51,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +79,7 @@ Type: GroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +111,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +127,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -146,4 +150,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bed90147-4ff9-4b9d-b9fc-3e7843397818.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopgroup)

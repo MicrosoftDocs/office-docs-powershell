@@ -29,15 +29,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SupervisoryReviewPolicyV2
 ```
 
 This example returns a summary list of all supervisory review policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SupervisoryReviewPolicyV2 -Identity "EU Brokers Policy" | Format-List
 ```
 
@@ -59,6 +59,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -81,4 +82,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ce966c7e-a0ba-4c7b-afc7-d9a0a7f3f831.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-supervisoryreviewpolicyv2)

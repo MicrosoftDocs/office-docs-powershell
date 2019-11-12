@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-OutlookProvider
 ```
 
 This example returns a summary list of all available Outlook providers.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-OutlookProvider -Identity WEB | Format-List
 ```
 
@@ -55,6 +55,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +77,7 @@ Type: OutlookProviderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -100,4 +102,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cb46009b-ee6c-4c84-8534-4fb74c32d2eb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-outlookprovider)

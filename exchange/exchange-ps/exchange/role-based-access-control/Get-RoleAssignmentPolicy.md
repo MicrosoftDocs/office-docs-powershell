@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RoleAssignmentPolicy
 ```
 
 This example returns a list of all the existing role assignment policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RoleAssignmentPolicy "End User Policy" | Format-List
 ```
 
@@ -47,8 +47,8 @@ This example returns the details of the specified assignment policy. The output 
 
 For more information about pipelining and the Format-List cmdlet, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }
 ```
 
@@ -72,6 +72,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +88,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -111,4 +113,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/da0ecaa3-ce67-4ea2-aca3-56e056555900.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-roleassignmentpolicy)

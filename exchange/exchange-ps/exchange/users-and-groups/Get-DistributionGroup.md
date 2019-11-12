@@ -67,22 +67,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DistributionGroup
 ```
 
 This examples returns a summary list of all distribution groups and mail-enabled security groups in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DistributionGroup -Identity "Marketing Reports" | Format-List
 ```
 
 This example returns detailed information about the distribution group named Marketing Reports.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-DistributionGroup -Anr marketing | Format-Table Name, ManagedBy -Auto
 ```
 
@@ -108,6 +108,7 @@ Type: String
 Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +126,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +144,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,13 +165,14 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +200,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -219,6 +224,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +252,7 @@ Type: GeneralRecipientIdParameter
 Parameter Sets: ManagedBySet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +276,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +296,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +322,7 @@ Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -328,6 +338,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -363,6 +374,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -387,4 +399,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d84f5670-f3ac-4d63-a6ac-af9de67677c5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-distributiongroup)

@@ -51,29 +51,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RetentionPolicyTag
 ```
 
 This example returns all retention tags.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RetentionPolicyTag -IncludeSystemTags
 ```
 
 This example returns system tags in addition to personal and default tags.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-RetentionPolicyTag "Consolidated Messenger"
 ```
 
 This example returns the settings for the tag Consolidated Messenger.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-RetentionPolicyTag -Types Inbox,All | Format-Table Name,Type,RetentionEnabled,AgeLimitForRetention,RetentionAction -AutoSize
 ```
 
@@ -91,6 +91,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +107,7 @@ Type: RetentionPolicyTagIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -121,6 +123,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +161,7 @@ Type: MailboxIdParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +179,7 @@ Type: SwitchParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +227,7 @@ Type: ElcFolderType[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -246,4 +252,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5cddcfea-6f67-4481-9c00-5b13c11d5ced.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-retentionpolicytag)

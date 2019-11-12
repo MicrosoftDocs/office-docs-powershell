@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-TransportRulePredicate
 ```
 
 This example returns a summary list of all predicates.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-TransportRulePredicate -Name SubjectMatches | Format-List
 ```
 
@@ -49,8 +49,8 @@ This example returns detailed information about the predicate named SubjectMatch
 
 For more information about pipelining, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines). For more information about how to work with the output of a command, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-TransportRulePredicate | Where {$_.Name -like "*Attachment*"}
 ```
 
@@ -68,6 +68,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -92,4 +93,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3054220d-0973-4832-840e-b9ef9e7c9064.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-transportrulepredicate)

@@ -35,15 +35,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UMServer
 ```
 
 This example returns a summary list of Unified Messaging servers in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-UMServer -Identity MyUMServer | Format-List
 ```
 
@@ -67,6 +67,7 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -106,4 +108,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/af1f90d6-a2b1-437b-aeaa-f1324bfd0731.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-umserver)

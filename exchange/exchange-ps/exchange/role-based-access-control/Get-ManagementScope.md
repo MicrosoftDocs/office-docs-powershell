@@ -34,29 +34,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ManagementScope Redmond*
 ```
 
 This example retrieves all the management scopes that start with the string Redmond.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ManagementScope "Redmond Servers Scope" | Format-List
 ```
 
 This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagementScope -Orphan
 ```
 
 This example retrieves a list of management scopes that aren't associated with any role assignments.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-ManagementScope -Exclusive $True
 ```
 
@@ -74,6 +74,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +90,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +106,7 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -119,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -143,4 +147,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a14e4ca3-2035-4959-a55f-efc50685a224.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-managementscope)

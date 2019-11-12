@@ -30,15 +30,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 
 This example enables the specified Sweep rule.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SweepRule -Mailbox laura@contoso.com | Enable-SweepRule
 ```
 
@@ -60,6 +60,7 @@ Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -79,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +98,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +134,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +150,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,4 +173,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ce918d8d-448b-4e67-927f-6aaa35581882.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-sweeprule)

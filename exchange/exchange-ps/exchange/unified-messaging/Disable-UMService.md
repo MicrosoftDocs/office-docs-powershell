@@ -44,15 +44,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Disable-UMService -Identity MyUMServer
 ```
 
 This example disables Unified Messaging on the UM server MyUMServer but doesn't disconnect calls that are being processed.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Disable-UMService -Identity MyUMServer -Immediate $true
 ```
 
@@ -76,6 +76,7 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -95,6 +96,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +112,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +128,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +144,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,4 +169,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/16e5df98-4875-42a2-a429-2c66ac6a2e32.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-umservice)

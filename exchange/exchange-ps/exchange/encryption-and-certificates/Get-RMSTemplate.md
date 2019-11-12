@@ -36,15 +36,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RMSTemplate -ResultSize unlimited
 ```
 
 This example retrieves all RMS templates available from the RMS deployment.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RMSTemplate -Identity "Company Confidential"
 ```
 
@@ -62,6 +62,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: RmsTemplateIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -92,6 +94,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +118,7 @@ Type: RmsTrustedPublishingDomainIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +142,7 @@ Type: Archived | Distributed | All
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -162,4 +167,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4a5066e8-b770-4aa2-b464-0d2190914f71.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-rmstemplate)

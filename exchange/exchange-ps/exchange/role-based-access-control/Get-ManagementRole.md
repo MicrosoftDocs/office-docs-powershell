@@ -58,43 +58,43 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ManagementRole
 ```
 
 This example lists all the roles that have been created in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ManagementRole "Mail Recipients" -Recurse
 ```
 
 This example lists all the roles that are children of the Mail Recipients management role. The command performs a recursive query of all the child roles of the specified parent role. This recursive query finds every child role from the immediate children of the parent to the last child role in the hierarchy. In a recursive list, the parent role is also returned in the list.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagementRole -CmdletParameters Identity, Database
 ```
 
 This example lists all the roles that contain both the Identity and Database parameters. Roles that contain only one parameter or the other aren't returned.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-ManagementRole -RoleType UnScopedTopLevel
 ```
 
 This example lists all the roles that have a type of UnScopedTopLevel. These roles contain custom scripts or non-Exchange cmdlets.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-ManagementRole "Transport Rules" | Format-List Name, RoleType
 ```
 
 This example retrieves only the Transport Rules role and passes the output of the Get-ManagementRole cmdlet to the Format-List cmdlet. The Format-List cmdlet then shows only the Name and RoleType properties of the Transport Rules role. For more information about pipelining and the Format-List cmdlet, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Get-ManagementRole "Mail Recipients" -GetChildren
 ```
 
@@ -110,6 +110,7 @@ Type: RoleIdParameter
 Parameter Sets: GetChildren, Recurse
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -122,6 +123,7 @@ Type: RoleIdParameter
 Parameter Sets: Identity, Script
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -137,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: GetChildren
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +155,7 @@ Type: SwitchParameter
 Parameter Sets: Recurse
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -167,6 +171,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +187,7 @@ Type: String[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +205,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +221,7 @@ Type: RoleType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +237,7 @@ Type: String
 Parameter Sets: Script
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +253,7 @@ Type: String[]
 Parameter Sets: Script
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -268,4 +278,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c3a48baa-ee7d-4615-88e3-5798443dee35.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-managementrole)

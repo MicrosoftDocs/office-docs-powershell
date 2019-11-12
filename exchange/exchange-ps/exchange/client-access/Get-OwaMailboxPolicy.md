@@ -29,22 +29,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-OwaMailboxPolicy
 ```
 
 This example retrieves a summary list of all mailbox policies in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-OwaMailboxPolicy -Identity Executives | Format-List
 ```
 
 This example retrieves detailed information for the mailbox policy named Executives.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
 ```
 
@@ -62,6 +62,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +84,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -107,4 +109,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bdd580d3-8812-4b4a-93e8-c6401b0d2f0f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-owamailboxpolicy)

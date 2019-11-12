@@ -39,8 +39,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-EligibleDistributionGroupForMigration -ResultSize unlimited
 ```
 
@@ -58,6 +58,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -87,6 +88,7 @@ Type: GeneralRecipientIdParameter
 Parameter Sets: ManagedBy
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +112,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +128,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -147,4 +151,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ae182f13-dacb-471b-a5a3-9bedb58d3b44.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-eligibledistributiongroupformigration)

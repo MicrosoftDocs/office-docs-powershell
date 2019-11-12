@@ -64,29 +64,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxExportRequest -Identity "tony\DB01toPST"
 ```
 
 This example returns the status of the ongoing export request with the identity tony\\DB01toPST.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxExportRequest -Status InProgress -Database DB01
 ```
 
 In Exchange Server 2010, this example returns the status of in progress export requests for mailboxes or archives that reside on database DB01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxExportRequest -BatchName "Attachment_CompanyReport" -Status Completed
 ```
 
 This example returns the status of export requests in the Attachment\_CompanyReport batch that completed.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-MailboxExportRequest -Name "DB01toPST" -Suspend $true
 ```
 
@@ -116,6 +116,7 @@ Type: MailboxExportRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -133,6 +134,7 @@ Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +160,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +176,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -194,6 +198,7 @@ Type: $true | $false
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +240,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: MailboxFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +253,7 @@ Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +275,7 @@ Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +291,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -322,6 +331,7 @@ Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Comple
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -339,6 +349,7 @@ Type: $true | $false
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +373,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -386,4 +398,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f9372840-f387-4e4e-bf56-cf9c4f49d4cb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxexportrequest)

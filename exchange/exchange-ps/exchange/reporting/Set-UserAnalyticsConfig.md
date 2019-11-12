@@ -39,8 +39,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode OptIn
 ```
 
@@ -68,6 +68,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -89,6 +90,7 @@ Type: String
 Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +103,7 @@ Type: String
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +119,7 @@ Type: $true | $false
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +135,7 @@ Type: $true | $false
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,4 +158,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f8f0b66c-dcd2-43ef-88f0-0cc760ce7602.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/set-useranalyticsconfig)

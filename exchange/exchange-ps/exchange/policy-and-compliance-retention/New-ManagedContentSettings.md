@@ -38,21 +38,21 @@ Managed content settings are settings that you associate with managed folders to
 
 - By automatically journaling important content to a separate storage location outside the mailbox.
 
-For more information about managed content settings, see Messaging Records Management.
+For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ManagedContentSettings -Name "CS-Exec-DeletedItems" -FolderName "Exec-DeletedItems" -MessageClass * -RetentionEnabled $true -RetentionAction DeleteAndAllowRecovery -AgeLimitForRetention 30.00:00:00 -TriggerForRetention WhenDelivered
 ```
 
 This example creates managed content settings for the managed default folder Exec-DeletedItems. When added to a managed folder mailbox policy and applied to a mailbox, items in the Deleted Items folder will be permanently deleted 30 days from the date of delivery.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ManagedContentSettings -Name CS-Exec-Calendar -FolderName Exec-Calendar -MessageClass Calendar -RetentionEnabled $true -RetentionAction MoveToDeletedItems -AgeLimitForRetention 180
 ```
 
@@ -68,6 +68,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -123,6 +124,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +140,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -167,6 +170,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +186,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +206,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -216,6 +222,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -231,6 +238,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +254,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +274,7 @@ Type: UseMsg | UseTnef
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +292,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +308,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +336,7 @@ Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDe
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -339,6 +352,7 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -364,6 +378,7 @@ Type: WhenDelivered | WhenMoved
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +394,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -403,4 +419,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cbb71121-b857-4d1f-8806-952e42841a9b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedcontentsettings)

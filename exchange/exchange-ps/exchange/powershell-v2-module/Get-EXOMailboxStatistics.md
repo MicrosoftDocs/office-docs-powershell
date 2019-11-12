@@ -41,15 +41,15 @@ You can only see move reports and move history for completed move requests.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-EXOMailboxStatistics -Identity john@contoso.com
 ```
 
 This example retrieves the mailbox statistics for the specified mailbox. Only the minimum set of properties are returned.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-EXOMailboxStatistics -Identity john@contoso.com -Properties SystemMessageSize,SystemMessageSizeWarningQuota,SystemMessageCount
 ```
 
@@ -65,6 +65,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +81,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +135,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +153,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +177,7 @@ Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +193,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

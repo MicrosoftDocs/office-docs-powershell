@@ -29,8 +29,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Validate-RetentionRuleQuery -KqlQueryString 'from:"Ann Beebe" AND subject:northwind'
 ```
 
@@ -48,6 +48,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -70,4 +71,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7e630b2a-d199-495e-91f7-349d426f6e8c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/validate-retentionrulequery)

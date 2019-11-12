@@ -73,15 +73,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-GlobalAddressList -Name "NewGAL"
 ```
 
 This example creates the GAL named NewGAL.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -eq 'AgencyB')"
 ```
 
@@ -97,6 +97,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -128,6 +129,7 @@ Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | 
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +152,7 @@ The RecipientFilter parameter specifies a custom OPath filter that's based on th
 
 - In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 You can't use this parameter in combination with the IncludedRecipients parameter or any Conditional parameters (which are used to create precanned filters).
 
@@ -159,6 +161,7 @@ Type: String
 Parameter Sets: CustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -178,6 +181,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +201,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -216,6 +221,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +241,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +261,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +281,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +301,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -311,6 +321,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +341,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +361,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,6 +381,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -387,6 +401,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +421,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -425,6 +441,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -444,6 +461,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +481,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +501,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -501,6 +521,7 @@ Type: MultiValuedProperty
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -520,6 +541,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -537,6 +559,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -564,6 +587,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -579,6 +603,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -603,4 +628,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9349a281-f92f-40f9-bf29-2a2e138c2783.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/new-globaladdresslist)
