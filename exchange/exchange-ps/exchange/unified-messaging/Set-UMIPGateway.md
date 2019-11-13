@@ -21,11 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Address <UMSmartHost>] [-Confirm]
- [-DelayedSourcePartyInfoEnabled <$true | $false>] [-DomainController <Fqdn>] [-ForceUpgrade]
- [-MessageWaitingIndicatorAllowed <$true | $false>] [-Name <String>] [-OutcallsAllowed <$true | $false>]
- [-Port <Int32>] [-Simulator <$true | $false>] [-Status <Enabled | Disabled | NoNewCalls>] [-WhatIf]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>] [<CommonParameters>]
+Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
+ [-Address <UMSmartHost>]
+ [-Confirm]
+ [-DelayedSourcePartyInfoEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-ForceUpgrade]
+ [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
+ [-MessageWaitingIndicatorAllowed <$true | $false>]
+ [-Name <String>]
+ [-OutcallsAllowed <$true | $false>]
+ [-Port <Int32>]
+ [-Simulator <$true | $false>]
+ [-Status <Enabled | Disabled | NoNewCalls>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -173,6 +182,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IPAddressFamily
+The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
+
+- IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
+
+- IPv6Only: The UM IP gateway will only use IPv6.
+
+- Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
+
+```yaml
+Type: IPv4Only | IPv6Only | Any
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageWaitingIndicatorAllowed
 The MessageWaitingIndicatorAllowed parameter specifies whether to enable the UM IP gateway to allow SIP NOTIFY messages to be sent to users associated with a UM dial plan and the UM IP gateway. The default value is $true.
 
@@ -254,7 +285,13 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter specifies whether to enable or disable the UM IP gateway.
+The Status parameter specifies whether to enable or disable the UM IP gateway. Valid values are:
+
+- Enabled
+
+- Disabled
+
+- NoNewCalls
 
 ```yaml
 Type: Enabled | Disabled | NoNewCalls
@@ -277,22 +314,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IPAddressFamily
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway will only use IPv4 to communicate. If set to IPv6Only, the UM IP gateway will only use IPv6. If set to Any, IPv6 will be used first, and then if necessary, it will fall back to IPv4. The default is IPv4Only.
-
-```yaml
-Type: IPv4Only | IPv6Only | Any
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

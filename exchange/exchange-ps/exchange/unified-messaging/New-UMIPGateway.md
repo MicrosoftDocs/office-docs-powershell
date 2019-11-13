@@ -12,7 +12,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 # New-UMIPGateway
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the New-UMIPGateway cmdlet to create a Unified Messaging (UM) IP gateway. A UM IP gateway is used to connect Unified Messaging servers to an IP gateway or a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX).
 
@@ -48,10 +48,10 @@ This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox serv
 
 ### Example 2
 ```powershell
-New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
+New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any
 ```
 
-This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address and allows the UM IP gateway to use IPv4 and IPV6 addresses.
+This example creates the UM IP gateway MyUMIPGateway with an IPv6 address and allows the UM IP gateway to use IPv4 and IPV6 addresses.
 
 ### Example 3
 ```powershell
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ### -GlobalCallRoutingScheme
 This parameter is available or functional only in Exchange Server 2010.
 
-The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the setting is E.164, the IP gateway accepts the call.
+The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the value is E.164, the IP gateway accepts the call.
 
 ```yaml
 Type: None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3
@@ -151,7 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressFamily
-The IPAddressFamily parameter specifies whether the UM IP gateway uses Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 will be used first, and then, if necessary, it will fallback to IPv4. The default is IPv4Only.
+The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
+
+- IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
+
+- IPv6Only: The UM IP gateway will only use IPv6.
+
+- Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
 
 ```yaml
 Type: IPv4Only | IPv6Only | Any
