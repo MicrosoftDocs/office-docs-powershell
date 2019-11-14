@@ -22,14 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ApplyVersion
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
+Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Duration
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Duration <EnhancedTimeSpan>]
+Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Duration <EnhancedTimeSpan>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -96,7 +96,7 @@ The ItemType parameter specifies the server item type for the property that you 
 - Responder
 
 ```yaml
-Type: Probe | Monitor | Responder | Maintenance
+Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

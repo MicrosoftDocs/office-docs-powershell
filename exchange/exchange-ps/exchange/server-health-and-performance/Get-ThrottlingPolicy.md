@@ -25,7 +25,7 @@ Get-ThrottlingPolicy [[-Identity] <ThrottlingPolicyIdParameter>]
  [-DomainController <Fqdn>]
  [-Diagnostics]
  [-Explicit]
- [-ThrottlingPolicyScope <Regular | Organization | Global>]
+ [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
  [<CommonParameters>]
 ```
 
@@ -132,7 +132,7 @@ The ThrottlingPolicyScope parameter specifies the scope of the throttling policy
 For information about each of these policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
 ```yaml
-Type: Regular | Organization | Global
+Type: ThrottlingPolicyScopeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

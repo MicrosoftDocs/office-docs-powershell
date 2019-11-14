@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SharingPolicy [-Identity] <SharingPolicyIdParameter> [-Confirm] [-Default] [-DomainController <Fqdn>]
- [-Domains <MultiValuedProperty>] [-Enabled <$true | $false>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+ [-Domains <MultiValuedProperty>] [-Enabled <Boolean>] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -173,7 +173,7 @@ The Enabled parameter specifies whether to enable the sharing policy. Valid valu
 When the sharing policy is disabled, users who are provisioned to use this policy continue to share information until the sharing policy assistant runs.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

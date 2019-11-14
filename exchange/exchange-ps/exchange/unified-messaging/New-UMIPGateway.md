@@ -24,8 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-GlobalCallRoutingScheme <None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3>]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
+ [-GlobalCallRoutingScheme <UMGlobalCallRoutingScheme>]
+ [-IPAddressFamily <IPAddressFamily>]
  [-UMDialPlan <UMDialPlanIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -138,7 +138,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the value is E.164, the IP gateway accepts the call.
 
 ```yaml
-Type: None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3
+Type: UMGlobalCallRoutingScheme
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -160,7 +160,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 - Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
 
 ```yaml
-Type: IPv4Only | IPv6Only | Any
+Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

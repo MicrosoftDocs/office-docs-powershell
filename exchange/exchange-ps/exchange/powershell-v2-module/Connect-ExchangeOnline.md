@@ -33,9 +33,9 @@ Connect-ExchangeOnline
  [-LogDirectoryPath <String>]
  [-PageSize <UInt32>]
  [[-PSSessionOption] <PSSessionOption>]
- [-ShowProgress <$true | $false>]
- [-TrackPerformance <$true | $false>]
- [-UseMultithreading <$true | $false>]
+ [-ShowProgress <Boolean>]
+ [-TrackPerformance <Boolean>]
+ [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -243,7 +243,7 @@ The ShowProgress parameter shows a visual progress bar in the PowerShell client 
 - $false: The progress bar isn't displayed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 {{ Fill TrackPerformance Description }}
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -279,7 +279,7 @@ The UseMultithreading parameter specifies whether to disable or enable multi-thr
 - $false: Disable multi-threading. Note this value will degrade performance of V2 cmdlets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

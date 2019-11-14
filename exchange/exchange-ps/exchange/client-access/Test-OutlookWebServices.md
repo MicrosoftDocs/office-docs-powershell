@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-ClientAccessServer <ClientAccessServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <$true | $false>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+ [-MonitoringContext <Boolean>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether the results of the command include monitoring events and performance counters. The two possible values for this parameter are $true or $false. If you specify $true, the results include monitoring events and performance counters, in addition to information about the MAPI transaction.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

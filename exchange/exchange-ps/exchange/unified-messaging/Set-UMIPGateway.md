@@ -24,16 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
  [-Address <UMSmartHost>]
  [-Confirm]
- [-DelayedSourcePartyInfoEnabled <$true | $false>]
+ [-DelayedSourcePartyInfoEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-ForceUpgrade]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
- [-MessageWaitingIndicatorAllowed <$true | $false>]
+ [-IPAddressFamily <IPAddressFamily>]
+ [-MessageWaitingIndicatorAllowed <Boolean>]
  [-Name <String>]
- [-OutcallsAllowed <$true | $false>]
+ [-OutcallsAllowed <Boolean>]
  [-Port <Int32>]
- [-Simulator <$true | $false>]
- [-Status <Enabled | Disabled | NoNewCalls>]
+ [-Simulator <Boolean>]
+ [-Status <GatewayStatus>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 The DelayedSourcePartyInfoEnabled parameter specifies whether Unified Messaging should delay the process of accepting an inbound call from the Voice over IP (VoIP) gateway if the corresponding SIP INVITE of the call contains no calling party and diversion information.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -192,7 +192,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 - Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
 
 ```yaml
-Type: IPv4Only | IPv6Only | Any
+Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 The MessageWaitingIndicatorAllowed parameter specifies whether to enable the UM IP gateway to allow SIP NOTIFY messages to be sent to users associated with a UM dial plan and the UM IP gateway. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 The OutcallsAllowed parameter specifies whether to allow this UM IP gateway to be used for outgoing calls. This doesn't govern call transfers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 The Simulator parameter specifies the simulator used for the UM IP gateway being viewed. A simulator allows a client to connect to the Mailbox server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -294,7 +294,7 @@ The Status parameter specifies whether to enable or disable the UM IP gateway. V
 - NoNewCalls
 
 ```yaml
-Type: Enabled | Disabled | NoNewCalls
+Type: GatewayStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

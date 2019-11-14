@@ -26,24 +26,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>]
+ [-AggregationType <AlertAggregationType>]
  [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>]
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+ [-Category <AlertRuleCategory>]
  [-Comment <String>]
  [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-Filter <String>]
  [-Name <String>]
  [-NotificationCulture <CultureInfo>]
  [-NotifyUser <MultiValuedProperty>]
- [-NotifyUserOnFilterMatch <$true | $false>]
+ [-NotifyUserOnFilterMatch <Boolean>]
  [-NotifyUserSuppressionExpiryDate <DateTime>]
  [-NotifyUserThrottleThreshold <Int32>]
  [-NotifyUserThrottleWindow <Int32>]
  [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>]
+ [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
  [-WhatIf] [<CommonParameters>]
@@ -103,7 +103,7 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 - AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
-Type: None | SimpleAggregation | AnomalousAggregation
+Type: AlertAggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -169,7 +169,7 @@ The Category parameter specifies a category for the alert policy. Valid values a
 When an activity occurs that matches the conditions of the alert policy, the alert that's generated is tagged with the category that's specified by this parameter. This allows you to track and manage alerts that have the same category setting
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -241,7 +241,7 @@ The Disabled parameter enables or disables the alert policy. Valid values are:
 - $false: The alert policy is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -419,7 +419,7 @@ The NotifyUserOnFilterMatch parameter specifies whether to trigger an alert for 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -519,7 +519,7 @@ The Severity parameter specifies the severity of the detection. Valid values are
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

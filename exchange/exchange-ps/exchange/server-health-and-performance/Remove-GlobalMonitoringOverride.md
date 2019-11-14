@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
+Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum>
  -PropertyName <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-BuildRange <String>]
  [-Roles <String>] [<CommonParameters>]
 ```
@@ -73,7 +73,7 @@ The ItemType parameter specifies the item type that you want to remove. It can b
 - Responder
 
 ```yaml
-Type: Probe | Monitor | Responder | Maintenance
+Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

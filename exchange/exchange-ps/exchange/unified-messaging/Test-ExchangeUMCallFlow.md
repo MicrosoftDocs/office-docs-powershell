@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Set1
 ```
-Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <Unsecured | SIPSecured | Secured>
+Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <UMVoIPSecurityType>
  <CommonParameters>]
 ```
 
@@ -235,7 +235,7 @@ The VoIPSecurity parameter specifies the security mode when using the cmdlet in 
 - Secured (TLS/SRTP)
 
 ```yaml
-Type: Unsecured | SIPSecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016

@@ -25,12 +25,12 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
  [-Confirm]
  [-DialPlans <MultiValuedProperty>]
  [-DomainController <Fqdn>]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
- [-IPAddressFamilyConfigurable <$true | $false>]
+ [-IPAddressFamily <IPAddressFamily>]
+ [-IPAddressFamilyConfigurable <Boolean>]
  [-MaxCallsAllowed <Int32>]
  [-SipTcpListeningPort <Int32>]
  [-SipTlsListeningPort <Int32>]
- [-UMStartupMode <TCP | TLS | Dual>]
+ [-UMStartupMode <UMStartupMode>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 is used first, and then if necessary, it falls back to IPv4. The default is Any.
 
 ```yaml
-Type: IPv4Only | IPv6Only | Any
+Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 The IPAddressFamilyConfigurable parameter specifies whether you're able to set the IPAddressFamily parameter to IPv6Only or Any. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging Call Router service starts up in TCP, TLS, or Dual mode. If the Exchange server isn't associated with any UM dial plans or is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Microsoft server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging Call Router service must be restarted.
 
 ```yaml
-Type: TCP | TLS | Dual
+Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

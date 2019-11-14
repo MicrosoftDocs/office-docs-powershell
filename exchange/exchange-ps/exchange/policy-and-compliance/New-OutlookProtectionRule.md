@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-OutlookProtectionRule [-Name] <String> -ApplyRightsProtectionTemplate <RmsTemplateIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Force] [-FromDepartment <String[]>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-Force] [-FromDepartment <String[]>]
  [-Priority <Int32>] [-SentTo <RecipientIdParameter[]>]
- [-SentToScope <All | InOrganization>] [-UserCanOverride <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-SentToScope <ToUserScope>] [-UserCanOverride <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the Outlook protection rules are enabled. New Outlook protection rules are enabled by default. To create a rule without enabling it, set the Enabled parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -225,7 +225,7 @@ The SentToScope parameter specifies the message scope as a condition. You can us
 - All: This value is for messages sent to all recipients.
 
 ```yaml
-Type: All | InOrganization
+Type: ToUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 The UserCanOverride parameter specifies whether users can override actions taken by Outlook protection rules. By default, users can override actions taken by Outlook protection rules. When set to $false, the UserCanOverride parameter prevents the user from overriding the rule when sending the message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

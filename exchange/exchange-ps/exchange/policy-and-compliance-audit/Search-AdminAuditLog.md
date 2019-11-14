@@ -25,8 +25,8 @@ Search-AdminAuditLog
  [-Cmdlets <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
- [-ExternalAccess <$true | $false>]
- [-IsSuccess <$true | $false>]
+ [-ExternalAccess <Boolean>]
+ [-IsSuccess <Boolean>]
  [-ObjectIds <MultiValuedProperty>]
  [-Parameters <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -153,7 +153,7 @@ The ExternalAccess parameter filters the results by changes that were made (cmdl
 - $false: Only return audit log entries where the change was made by an internal user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -175,7 +175,7 @@ The IsSuccess parameter filters the results by whether the changes were successf
 In the results of this cmdlet, this property is named **Succeeded**.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

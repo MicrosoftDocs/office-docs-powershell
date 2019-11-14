@@ -24,15 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
  [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
  [-AdminAuditLogCmdlets <MultiValuedProperty>]
- [-AdminAuditLogEnabled <$true | $false>]
+ [-AdminAuditLogEnabled <Boolean>]
  [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>]
  [-AdminAuditLogParameters <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-LogLevel <None | Verbose>]
+ [-LogLevel <AuditLogLevel>]
  [-Name <String>]
- [-TestCmdletLoggingEnabled <$true | $false>]
- [-UnifiedAuditLogIngestionEnabled <$true | $false>]
+ [-TestCmdletLoggingEnabled <Boolean>]
+ [-UnifiedAuditLogIngestionEnabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -124,7 +124,7 @@ The AdminAuditLogEnabled parameter specifies whether administrator audit logging
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -254,7 +254,7 @@ The LogLevel parameter specifies whether additional properties should be include
 By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
 
 ```yaml
-Type: None | Verbose
+Type: AuditLogLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -294,7 +294,7 @@ The TestCmdletLoggingEnabled parameter specifies whether the execution of test c
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -316,7 +316,7 @@ The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or dis
 - $false: User and admin activities aren't recorded in the Office 365 audit log, and you can't search the Office 365 audit log. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

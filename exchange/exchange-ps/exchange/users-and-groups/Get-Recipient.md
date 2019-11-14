@@ -25,13 +25,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AnrSet
 ```
 Get-Recipient [-Anr <String>]
- [-AuthenticationType <Managed | Federated>]
+ [-AuthenticationType <AuthenticationType>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-PropertySet <PropertySet>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
@@ -46,15 +46,15 @@ Get-Recipient [-Anr <String>]
 ### Identity
 ```
 Get-Recipient [[-Identity] <RecipientIdParameter>]
- [-AuthenticationType <Managed | Federated>]
+ [-AuthenticationType <AuthenticationType>]
  [-BookmarkDisplayName <String>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
- [-IncludeBookmarkObject <$true | $false>]
+ [-IncludeBookmarkObject <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-PropertySet <PropertySet>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
@@ -169,7 +169,7 @@ The AuthenticationType parameter specifies the recipient by authentication type.
 - Managed
 
 ```yaml
-Type: Managed | Federated
+Type: AuthenticationType
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum
+Type: PropertySet
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection

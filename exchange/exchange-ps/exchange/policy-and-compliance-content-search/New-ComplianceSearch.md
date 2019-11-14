@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ComplianceSearch [-Name] <String>
- [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-AllowNotFoundExchangeLocationsEnabled <Boolean>]
  [-Case <String>]
  [-Confirm]
  [-ContentMatchQuery <String>]
@@ -31,9 +31,9 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
- [-IncludeUserAppContent <$true | $false>]
+ [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
- [-LogLevel <Suppressed | Basic | Full>]
+ [-LogLevel <ComplianceJobLogLevel>]
  [-OneDriveLocation <String[]>]
  [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>]
@@ -118,7 +118,7 @@ The mailbox types that are affected by the value of this parameter include:
 - On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
@@ -292,7 +292,7 @@ The IncludeUserAppContent parameter specifies that you want to search the cloud-
 - $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Suppressed | Basic | Full
+Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center

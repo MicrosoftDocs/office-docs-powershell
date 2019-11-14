@@ -32,19 +32,19 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress>
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>]
- [-MessageFormat <Text | Mime>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
- [-UsePreferMessageFormat <$true | $false>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-UsePreferMessageFormat <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -60,19 +60,19 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <Se
  [-ImmutableId <String>]
  [-Initials <String>]
  [-LastName <String>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>]
- [-MessageFormat <Text | Mime>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
- [-UsePreferMessageFormat <$true | $false>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-UsePreferMessageFormat <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -90,13 +90,13 @@ New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Passwo
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -114,13 +114,13 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -138,13 +138,13 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServic
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -160,10 +160,10 @@ New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -528,7 +528,7 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
 ```yaml
-Type: BinHex | UuEncode | AppleSingle | AppleDouble
+Type: MacAttachmentFormat
 Parameter Sets: DisabledUser, EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -574,7 +574,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 ```yaml
-Type: Text | Html | TextAndHtml
+Type: MessageBodyFormat
 Parameter Sets: DisabledUser, EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -602,7 +602,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
 
 ```yaml
-Type: Text | Mime
+Type: MessageFormat
 Parameter Sets: DisabledUser, EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -656,7 +656,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -724,7 +724,7 @@ The RemotePowerShellEnabled parameter specifies whether the user can connect to 
 - $false: The user can't use remote PowerShell.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -746,7 +746,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -788,7 +788,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -808,7 +808,7 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: DisabledUser, EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

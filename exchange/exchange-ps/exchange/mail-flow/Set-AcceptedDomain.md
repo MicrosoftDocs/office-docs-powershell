@@ -21,13 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-AddressBookEnabled <$true | $false>]
+Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-AddressBookEnabled <Boolean>]
  [-Confirm] [-DomainController <Fqdn>]
- [-DomainType <Authoritative | ExternalRelay | InternalRelay>]
- [-MakeDefault <$true | $false>] [-Name <String>]
- [-OutboundOnly <$true | $false>] [-PendingRemoval <$true | $false>] [-WhatIf]
- [-EnableNego2Authentication <$true | $false>] [-MatchSubDomains <$true | $false>]
- [-PendingCompletion <$true | $false>] [<CommonParameters>]
+ [-DomainType <AcceptedDomainType>]
+ [-MakeDefault <Boolean>] [-Name <String>]
+ [-OutboundOnly <Boolean>] [-PendingRemoval <Boolean>] [-WhatIf]
+ [-EnableNego2Authentication <Boolean>] [-MatchSubDomains <Boolean>]
+ [-PendingCompletion <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +72,7 @@ The AddressBookEnabled parameter specifies whether to enable recipient filtering
 - $false for external relay domains.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -138,7 +138,7 @@ Note:
 For the value InternalRelay or ExternalRelay you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
 
 ```yaml
-Type: Authoritative | ExternalRelay | InternalRelay
+Type: AcceptedDomainType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -164,7 +164,7 @@ The default accepted domain is used in sender email addresses when the senders h
 If you don't use non-SMTP email addresses in your organization, you don't need to worry about the value of this parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -202,7 +202,7 @@ The OutboundOnly parameter specifies whether this accepted domain is an internal
 The authoritative accepted domain for the on-premises deployment is configured as an internal relay accepted domain on the cloud side. If the on-premises deployment is using Exchange Online Protection, you need to set this parameter to $true for the accepted domain that represents your on-premises deployment. This parameter is used only if the DomainType parameter is set to Authoritative or InternalRelay. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 The MatchSubDomains parameter enables mail to be sent by and received from users on any subdomain of this accepted domain. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

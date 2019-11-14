@@ -31,7 +31,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <Smtp
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
  [-Confirm]
- [-MailboxPermission <Admin | FullAccess>]
+ [-MailboxPermission <MigrationMailboxPermission>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -47,9 +47,9 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
 ### ExchangeOutlookAnywhere
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
- [-MailboxPermission <Admin | FullAccess>] [-TestMailbox <MailboxIdParameter>]
+ [-MailboxPermission <MigrationMailboxPermission>] [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -58,7 +58,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <St
 ### PublicFolder
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -81,7 +81,7 @@ Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
 ### IMAP
 ```
 Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>] [-Security <None | Ssl | Tls>]
+ [-Authentication <AuthenticationMethod>] [-Security <NIMAPSecurityMechanism]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -111,7 +111,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
 ### LegacyPublicFolderToUnifiedGroup
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -573,7 +573,7 @@ The Authentication parameter specifies the authentication method used by the on-
 The parameter is only used for cutover Exchange migrations and staged Exchange migrations.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: ExchangeOutlookAnywhere, PublicFolder, IMAP, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
@@ -635,7 +635,7 @@ Specify one of the following values for the account defined by the Credentials p
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
 
 ```yaml
-Type: Admin | FullAccess
+Type: MigrationMailboxPermission
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
@@ -653,7 +653,7 @@ This parameter is available only in the cloud-based service.
 For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online

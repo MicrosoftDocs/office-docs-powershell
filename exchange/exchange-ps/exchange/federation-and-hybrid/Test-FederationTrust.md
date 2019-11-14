@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-FederationTrust [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <$true | $false>]
+Test-FederationTrust [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <Boolean>]
  [-UserIdentity <RecipientIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

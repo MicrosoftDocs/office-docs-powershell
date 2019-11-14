@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <$true | $false>] [<CommonParameters>]
+Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +84,7 @@ The FocusedInboxOn parameter enables or disables Focused Inbox for the mailbox. 
 - $false: Focused Inbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

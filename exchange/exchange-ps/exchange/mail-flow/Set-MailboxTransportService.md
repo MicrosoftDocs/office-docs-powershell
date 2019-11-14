@@ -23,34 +23,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter>
  [-Confirm]
- [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogEnabled <Boolean>]
  [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
  [-ConnectivityLogMaxDirectorySize <Unlimited>]
  [-ConnectivityLogMaxFileSize <Unlimited>]
  [-ConnectivityLogPath <LocalLongFullPath>]
- [-ContentConversionTracingEnabled <$true | $false>]
+ [-ContentConversionTracingEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-MailboxDeliveryAgentLogEnabled <$true | $false>]
+ [-MailboxDeliveryAgentLogEnabled <Boolean>]
  [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>]
  [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
  [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>]
  [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
  [-MailboxDeliveryConnectorMaxInboundConnection <Unlimited>]
- [-MailboxDeliveryConnectorProtocolLoggingLevel <None | Verbose>]
- [-MailboxDeliveryConnectorSMTPUtf8Enabled <$true | $false>]
- [-MailboxDeliveryThrottlingLogEnabled <$true | $false>]
+ [-MailboxDeliveryConnectorProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-MailboxDeliveryConnectorSMTPUtf8Enabled <Boolean>]
+ [-MailboxDeliveryThrottlingLogEnabled <Boolean>]
  [-MailboxDeliveryThrottlingLogMaxAge <EnhancedTimeSpan>]
  [-MailboxDeliveryThrottlingLogMaxDirectorySize <Unlimited>]
  [-MailboxDeliveryThrottlingLogMaxFileSize <Unlimited>]
  [-MailboxDeliveryThrottlingLogPath <LocalLongFullPath>]
- [-MailboxSubmissionAgentLogEnabled <$true | $false>]
+ [-MailboxSubmissionAgentLogEnabled <Boolean>]
  [-MailboxSubmissionAgentLogMaxAge <EnhancedTimeSpan>]
  [-MailboxSubmissionAgentLogMaxDirectorySize <Unlimited>]
  [-MailboxSubmissionAgentLogMaxFileSize <Unlimited>]
  [-MailboxSubmissionAgentLogPath <LocalLongFullPath>]
  [-MaxConcurrentMailboxDeliveries <Int32>]
  [-MaxConcurrentMailboxSubmissions <Int32>]
- [-PipelineTracingEnabled <$true | $false>]
+ [-PipelineTracingEnabled <Boolean>]
  [-PipelineTracingPath <LocalLongFullPath>]
  [-PipelineTracingSenderAddress <SmtpAddress>]
  [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -245,7 +245,7 @@ The ContentConversionTracingEnabled parameter specifies whether content conversi
 - System: Full Control
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 The MailboxDeliveryAgentLogEnabled parameter specifies whether the agent log for the Mailbox Transport Delivery service is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -413,7 +413,7 @@ The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables S
 - Verbose: Protocol logging is enabled for the mailbox delivery Receive connector. The location of the log files is controlled by the ReceiveProtocolLogPath parameter.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -433,7 +433,7 @@ The MailboxDeliveryConnectorSmtpUtf8Enabled parameters or disables email address
 - $false: Mail can't be delivered to local mailboxes that have international characters in email addresses.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 The MailboxDeliveryThrottlingLogEnabled parameter specifies whether the mailbox delivery throttling log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 The MailboxSubmissionAgentLogEnabled parameter specifies whether the agent log is enabled for the Mailbox Transport Submission service. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -713,7 +713,7 @@ Accept wildcard characters: False
 The PipelineTracingEnabled parameter specifies whether to enable pipeline tracing. Pipeline tracing captures message snapshot files that record the changes made to the message by each transport agent configured in the transport service on the server. Pipeline tracing creates verbose log files that accumulate quickly. Pipeline tracing should only be enabled for a short time to provide in-depth diagnostic information that enables you to troubleshoot problems. In addition to troubleshooting, you can use pipeline tracing to validate changes that you make to the configuration of the transport service where you enable pipeline tracing. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

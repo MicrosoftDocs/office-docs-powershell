@@ -23,10 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### NonRecovery
 ```
 New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
- [-AutoDagExcludeFromMonitoring <$true | $false>]
- [-IsExcludedFromProvisioning <$true | $false>]
+ [-AutoDagExcludeFromMonitoring <Boolean>]
+ [-IsExcludedFromProvisioning <Boolean>]
  [-IsExcludedFromInitialProvisioning]
- [-IsSuspendedFromProvisioning <$true | $false>]
+ [-IsSuspendedFromProvisioning <Boolean>]
  [-OfflineAddressBook <OfflineAddressBookIdParameter>]
  [-PublicFolderDatabase <DatabaseIdParameter>]
  [-Confirm]
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 The AutoDagExcludeFromMonitoring parameter specifies that the database being created should not be monitored by managed availability.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 The IsExcludedFromProvisioning parameter specifies whether this database is considered by the mailbox provisioning load balancer. If the IsExcludedFromProvisioning parameter is set to $true, no new mailboxes are automatically added to this database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 The IsSuspendedFromProvisioning parameter specifies whether this database is temporarily considered by the mailbox provisioning load balancer.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

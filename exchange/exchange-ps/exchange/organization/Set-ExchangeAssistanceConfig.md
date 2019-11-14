@@ -22,13 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ExchangeAssistanceConfig [[-Identity] <OrganizationIdParameter>]
- [-CommunityLinkDisplayEnabled <$true | $false>] [-CommunityURL <Uri>] [-Confirm]
- [-ControlPanelFeedbackEnabled <$true | $false>] [-ControlPanelFeedbackURL <Uri>] [-ControlPanelHelpURL <Uri>]
- [-DomainController <Fqdn>] [-ExchangeHelpAppOnline <$true | $false>]
- [-ManagementConsoleFeedbackEnabled <$true | $false>] [-ManagementConsoleFeedbackURL <Uri>]
- [-ManagementConsoleHelpURL <Uri>] [-OWAFeedbackEnabled <$true | $false>] [-OWAFeedbackURL <Uri>]
- [-OWAHelpURL <Uri>] [-OWALightFeedbackEnabled <$true | $false>] [-OWALightFeedbackURL <Uri>]
- [-OWALightHelpURL <Uri>] [-PrivacyLinkDisplayEnabled <$true | $false>] [-PrivacyStatementURL <Uri>] [-WhatIf]
+ [-CommunityLinkDisplayEnabled <Boolean>] [-CommunityURL <Uri>] [-Confirm]
+ [-ControlPanelFeedbackEnabled <Boolean>] [-ControlPanelFeedbackURL <Uri>] [-ControlPanelHelpURL <Uri>]
+ [-DomainController <Fqdn>] [-ExchangeHelpAppOnline <Boolean>]
+ [-ManagementConsoleFeedbackEnabled <Boolean>] [-ManagementConsoleFeedbackURL <Uri>]
+ [-ManagementConsoleHelpURL <Uri>] [-OWAFeedbackEnabled <Boolean>] [-OWAFeedbackURL <Uri>]
+ [-OWAHelpURL <Uri>] [-OWALightFeedbackEnabled <Boolean>] [-OWALightFeedbackURL <Uri>]
+ [-OWALightHelpURL <Uri>] [-PrivacyLinkDisplayEnabled <Boolean>] [-PrivacyStatementURL <Uri>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ This example changes the Help location for the Exchange admin center.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -172,7 +172,7 @@ The ExchangeHelpAppOnline specifies whether your organization uses the public he
 - $false: Your organization doesn't use the help that's hosted by Microsoft. You need to use the ControlPanelHelpURL, ManagementConsoleHelpURL, OWAHelpURL, and OWALightHelpURL parameters to configure the URLs where the help files are hosted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

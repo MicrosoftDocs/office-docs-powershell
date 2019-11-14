@@ -22,64 +22,64 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AnomalousOperationAuditAlert
 ```
-New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <AlertType>
+ [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
- [-ScopeLevel <SingleUser | AllUsers>]
- [-Severity <Low | Medium | High | None>]
+ [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>]
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+ [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
- [-Severity <Low | Medium | High | None>]
+ [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SimpleAggregationAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+ [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
- [-ScopeLevel <SingleUser | AllUsers>]
- [-Severity <Low | Medium | High | None>]
+ [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### ElevationOfPrivilegeAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+ [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
- [-Severity <Low | Medium | High | None>]
+ [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -243,7 +243,7 @@ The Type parameter specifies the type alert. Valid values are:
 Note: You can't change the Type value in an existing activity alert.
 
 ```yaml
-Type: Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation
+Type: AlertType
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation
+Type: AlertType
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -284,7 +284,7 @@ The Category parameter specifies a category for the activity alert. Valid values
 - Others
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -356,7 +356,7 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 - $false: The activity alert is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -492,7 +492,7 @@ The ScopeLevel parameter specifies the scope for activity alerts that use the Ty
 - AllUsers
 
 ```yaml
-Type: SingleUser | AllUsers
+Type: AlertScopeLevel
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -516,7 +516,7 @@ The Severity parameter specifies a severity level for the activity alert. Valid 
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

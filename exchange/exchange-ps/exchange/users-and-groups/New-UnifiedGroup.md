@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-New-UnifiedGroup [-AccessType <Public | Private>] [-MailboxRegion <String>]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-MailboxRegion <String>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -41,14 +41,14 @@ New-UnifiedGroup [-AccessType <Public | Private>] [-MailboxRegion <String>]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### ProvisioningOptions
 ```
-New-UnifiedGroup [-AccessType <Public | Private>]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -67,14 +67,14 @@ New-UnifiedGroup [-AccessType <Public | Private>]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SegmentationOption
 ```
-New-UnifiedGroup [-AccessType <Public | Private>] [-SubscriptionEnabled]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-SubscriptionEnabled]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -93,7 +93,7 @@ New-UnifiedGroup [-AccessType <Public | Private>] [-SubscriptionEnabled]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -171,7 +171,7 @@ You can change the privacy type at any point in the lifecycle of the group.
 Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
-Type: Public | Private
+Type: ModernGroupTypeInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
@@ -625,7 +625,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online

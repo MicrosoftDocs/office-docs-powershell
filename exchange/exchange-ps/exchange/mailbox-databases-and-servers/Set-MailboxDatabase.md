@@ -22,31 +22,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
- [-AllowFileRestore <$true | $false>]
- [-AutoDagExcludeFromMonitoring <$true | $false>]
- [-AutoDatabaseMountDial <Lossless | GoodAvailability | BestAvailability>]
- [-BackgroundDatabaseMaintenance <$true | $false>]
+ [-AllowFileRestore <Boolean>]
+ [-AutoDagExcludeFromMonitoring <Boolean>]
+ [-AutoDatabaseMountDial <AutoDatabaseMountDial>]
+ [-BackgroundDatabaseMaintenance <Boolean>]
  [-CalendarLoggingQuota <Unlimited>]
- [-CircularLoggingEnabled <$true | $false>]
+ [-CircularLoggingEnabled <Boolean>]
  [-Confirm]
  [-DatabaseGroup <String>]
  [-DataMoveReplicationConstraint <DataMoveReplicationConstraintParameter>]
  [-DeletedItemRetention <EnhancedTimeSpan>]
  [-DomainController <Fqdn>]
  [-EventHistoryRetentionPeriod <EnhancedTimeSpan>]
- [-IndexEnabled <$true | $false>]
- [-IsExcludedFromInitialProvisioning <$true | $false>]
- [-IsExcludedFromProvisioning <$true | $false>]
- [-IsExcludedFromProvisioningByOperator <$true | $false>]
- [-IsExcludedFromProvisioningDueToLogicalCorruption <$true | $false>]
+ [-IndexEnabled <Boolean>]
+ [-IsExcludedFromInitialProvisioning <Boolean>]
+ [-IsExcludedFromProvisioning <Boolean>]
+ [-IsExcludedFromProvisioningByOperator <Boolean>]
+ [-IsExcludedFromProvisioningDueToLogicalCorruption <Boolean>]
  [-IsExcludedFromProvisioningReason <String>]
  [-IssueWarningQuota <Unlimited>]
- [-IsSuspendedFromProvisioning <$true | $false>]
+ [-IsSuspendedFromProvisioning <Boolean>]
  [-JournalRecipient <RecipientIdParameter>]
  [-MailboxRetention <EnhancedTimeSpan>]
  [-MaintenanceSchedule <Schedule>]
  [-MetaCacheDatabaseMaxCapacityInBytes <Int64>]
- [-MountAtStartup <$true | $false>]
+ [-MountAtStartup <Boolean>]
  [-Name <String>]
  [-OfflineAddressBook <OfflineAddressBookIdParameter>]
  [-ProhibitSendQuota <Unlimited>]
@@ -55,7 +55,7 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
  [-QuotaNotificationSchedule <Schedule>]
  [-RecoverableItemsQuota <Unlimited>]
  [-RecoverableItemsWarningQuota <Unlimited>]
- [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-RetainDeletedItemsUntilBackup <Boolean>]
  [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -113,7 +113,7 @@ The AllowFileRestore parameter specifies whether to allow a database to be resto
 - $false: You can't replace an existing database with a newly-created database. You can't mount a database that doesn't match the database entry in Active Directory. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -133,7 +133,7 @@ The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mai
 - $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Lossless | GoodAvailability | BestAvailability
+Type: AutoDatabaseMountDial
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -169,7 +169,7 @@ The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Sto
 - $false: The mailbox database reads the object during database mount and initializes the database without the option to perform background maintenance.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -227,7 +227,7 @@ The CircularLoggingEnabled parameter specifies whether circular logging is enabl
 For more information about circular logging, see [Exchange Native Data Protection](https://docs.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -379,7 +379,7 @@ The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox
 - $false: Exchange Search doesn't index the mailbox database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -417,7 +417,7 @@ The IsExcludedFromProvisioning parameter specifies whether to exclude the databa
 The value is automatically set to $true when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter to $true, and isn't changed back to $false when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter back to $false. In the case of database corruption, you should set the IsExcludedFromProvisioning parameter back to $false only after you fix the corruption issue or recreate the database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -445,7 +445,7 @@ Note that setting this parameter to the value $true has these additional effects
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -475,7 +475,7 @@ Note that setting this parameter to the value $true has these additional effects
 - The IsExcludedFromProvisioning property is automatically set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -559,7 +559,7 @@ Note that setting this parameter to the value $true has these additional effects
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -687,7 +687,7 @@ The MountAtStartup parameter specifies whether to mount the mailbox database whe
 - $false: The database isn't mounted when the service starts.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -957,7 +957,7 @@ For more information, see [Recoverable Items folder in Exchange Server](https://
 This settings applies to all mailboxes in the database that don't have this value specifically configured.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

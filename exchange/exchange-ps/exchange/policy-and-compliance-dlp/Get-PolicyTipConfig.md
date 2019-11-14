@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Parameters
 ```
-Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-Locale <CultureInfo>] [-Original]
+Get-PolicyTipConfig [-Action <PolicyTipMessageConfigAction>] [-Locale <CultureInfo>] [-Original]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -74,7 +74,7 @@ You can't use the value Url with the Action parameter. Instead, use command: Get
 You can't use the Action parameter with the Identity parameter.
 
 ```yaml
-Type: NotifyOnly | RejectOverride | Reject | Url
+Type: PolicyTipMessageConfigAction
 Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

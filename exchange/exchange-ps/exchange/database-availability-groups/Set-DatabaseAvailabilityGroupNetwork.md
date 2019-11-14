@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter> [-Confirm]
- [-Description <String>] [-DomainController <Fqdn>] [-IgnoreNetwork <$true | $false>] [-Name <String>]
- [-ReplicationEnabled <$true | $false>] [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf]
+ [-Description <String>] [-DomainController <Fqdn>] [-IgnoreNetwork <Boolean>] [-Name <String>]
+ [-ReplicationEnabled <Boolean>] [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 The IgnoreNetwork parameter indicates that the specified network should be ignored and not used by the DAG.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 The ReplicationEnabled parameter specifies whether the network can be used for replication activity. If this parameter isn't specified, the default behavior is to enable the network for replication.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

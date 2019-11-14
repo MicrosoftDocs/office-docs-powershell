@@ -29,7 +29,7 @@ Set-DeviceTenantPolicy [-Identity <PolicyIdParameter>] [-RetryDistribution]
 
 ### Identity
 ```
-Set-DeviceTenantPolicy [-Identity <PolicyIdParameter>] [-Comment <String>] [-Enabled <$true | $false>] [-Force]
+Set-DeviceTenantPolicy [-Identity <PolicyIdParameter>] [-Comment <String>] [-Enabled <Boolean>] [-Force]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -118,7 +118,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center

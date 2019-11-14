@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-HoldComplianceRule [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
  [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-Disabled <$true | $false>] [-HoldContent <Unlimited>] [-HoldDurationDisplayHint <Days | Months | Years>]
+ [-Disabled <Boolean>] [-HoldContent <Unlimited>] [-HoldDurationDisplayHint <HoldDurationHint>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the preservation rule is enabled or disabled. Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -203,7 +203,7 @@ The HoldDurationDisplayHint parameter specifies the units that are used to displ
 For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
+Type: HoldDurationHint
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

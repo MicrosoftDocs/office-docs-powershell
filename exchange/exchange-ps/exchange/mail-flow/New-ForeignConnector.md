@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> [-Confirm]
- [-DomainController <Fqdn>] [-IsScopedConnector <$true | $false>]
+ [-DomainController <Fqdn>] [-IsScopedConnector <Boolean>]
  [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. When the value of this parameter is $false, the connector can be used by all Mailbox servers in the Exchange organization. When the value of this parameter is $true, the connector can be used only by Mailbox servers in the same Active Directory site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

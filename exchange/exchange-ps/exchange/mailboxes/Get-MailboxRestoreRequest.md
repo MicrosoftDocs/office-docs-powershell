@@ -29,7 +29,7 @@ Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>]
 
 ### Filtering
 ```
-Get-MailboxRestoreRequest [-BatchName <String>] [-HighPriority <$true | $false>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-SourceDatabase <DatabaseIdParameter>] [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>] [-Suspend <$true | $false>] [-TargetDatabase <DatabaseIdParameter>] [-TargetMailbox <MailboxOrMailUserIdParameter>]
+Get-MailboxRestoreRequest [-BatchName <String>] [-HighPriority <Boolean>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-SourceDatabase <DatabaseIdParameter>] [-Status <RequestStatus>] [-Suspend <Boolean>] [-TargetDatabase <DatabaseIdParameter>] [-TargetMailbox <MailboxOrMailUserIdParameter>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
@@ -135,7 +135,7 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -263,7 +263,7 @@ The Status parameter filters the results based on status. You can use the follow
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
+Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -281,7 +281,7 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

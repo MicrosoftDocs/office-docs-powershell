@@ -25,7 +25,7 @@ Set-RpcClientAccess -Server <ServerIdParameter>
  [-BlockedClientVersions <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-EncryptionRequired <$true | $false>]
+ [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
@@ -156,7 +156,7 @@ The EncryptionRequired parameter specifies whether encryption is required for RP
 - $false: Unencrypted RPC client connections are allowed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EventLogLevel [-Identity] <ECIdParameter> -Level <Lowest | Low | Medium | High | Expert> [-Confirm]
+Set-EventLogLevel [-Identity] <ECIdParameter> -Level <ECIdParameter> [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -71,7 +71,7 @@ The Level parameter specifies the log level for the specific event logging categ
 - Expert
 
 ```yaml
-Type: Lowest | Low | Medium | High | Expert
+Type: ECIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
