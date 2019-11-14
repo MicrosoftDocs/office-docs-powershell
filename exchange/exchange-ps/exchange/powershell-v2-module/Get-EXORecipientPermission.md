@@ -6,7 +6,7 @@ title: Get-EXORecipientPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+ms.reviewer: navgupta
 monikerRange: "exchonline-ps"
 ---
 
