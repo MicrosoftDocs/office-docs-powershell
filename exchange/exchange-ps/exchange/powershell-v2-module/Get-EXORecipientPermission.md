@@ -56,7 +56,7 @@ Above example returns recipient permission for first 100 mailbox users in the na
 ### -AccessRights
 The AccessRights parameter filters the results by permission.
 
-The value value for this parameter is SendAs.
+The only valid value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty
