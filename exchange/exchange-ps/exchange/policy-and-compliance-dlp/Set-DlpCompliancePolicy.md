@@ -42,7 +42,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
  [-Force]
- [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
+ [-Mode <PolicyMode>]
  [-Priority <Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
@@ -333,7 +333,7 @@ The Mode parameter specifies the action and notification level of the DLP policy
 - TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
 
 ```yaml
-Type: Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion
+Type: PolicyMode
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center

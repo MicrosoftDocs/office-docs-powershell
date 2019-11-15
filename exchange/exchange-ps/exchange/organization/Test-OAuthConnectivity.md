@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-OAuthConnectivity -Service <EWS | AutoD | Generic> -TargetUri <Uri> [-AppOnly] [-Confirm]
+Test-OAuthConnectivity -Service <ModServiceType> -TargetUri <Uri> [-AppOnly] [-Confirm]
  [-Mailbox <MailboxIdParameter>] [-OrganizationDomain <String>] [-ReloadConfig] [-UseCachedToken] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ The Service parameter specifies the partner application. Valid values for this p
 - Generic
 
 ```yaml
-Type: EWS | AutoD | Generic
+Type: ModServiceType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

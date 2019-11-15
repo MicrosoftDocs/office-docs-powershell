@@ -27,9 +27,9 @@ New-ComplianceTag [-Name] <String>
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
  [-Force]
- [-IsRecordLabel <$true | $false>]
+ [-IsRecordLabel <Boolean>]
  [-Notes <String>]
- [-Regulatory <$true | $false>]
+ [-Regulatory <Boolean>]
  [-RetentionAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
@@ -205,7 +205,7 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 - $false: The label isn't a record label. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 {{ Fill Regulatory Description }}
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

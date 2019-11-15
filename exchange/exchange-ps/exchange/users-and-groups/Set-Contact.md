@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
+Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
  [-AssistantName <String>] [-City <String>] [-Company <String>] [-Confirm] [-CountryOrRegion <CountryInfo>]
- [-CreateDTMFMap <$true | $false>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-CreateDTMFMap <Boolean>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-Fax <String>] [-FirstName <String>] [-HomePhone <String>] [-IgnoreDefaultScope] [-Initials <String>]
  [-LastName <String>] [-Manager <UserContactIdParameter>] [-MobilePhone <String>] [-Name <String>]
  [-Notes <String>] [-Office <String>] [-OtherFax <MultiValuedProperty>] [-OtherHomePhone <MultiValuedProperty>]
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 The AllowUMCallsFromNonUsers parameter specifies whether to exclude the contact from directory searches.
 
 ```yaml
-Type: None | SearchEnabled
+Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -185,7 +185,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

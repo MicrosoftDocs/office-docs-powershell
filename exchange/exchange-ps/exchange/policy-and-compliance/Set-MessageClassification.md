@@ -25,12 +25,12 @@ Set-MessageClassification [-Identity] <MessageClassificationIdParameter>
  [-ClassificationID <Guid>]
  [-Confirm]
  [-DisplayName <String>]
- [-DisplayPrecedence <Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest>]
+ [-DisplayPrecedence <ClassificationDisplayPrecedenceLevel>]
  [-DomainController <Fqdn>]
  [-Name <String>]
- [-PermissionMenuVisible <$true | $false>]
+ [-PermissionMenuVisible <Boolean>]
  [-RecipientDescription <String>]
- [-RetainClassificationEnabled <$true | $false>]
+ [-RetainClassificationEnabled <Boolean>]
  [-SenderDescription <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -157,7 +157,7 @@ The DisplayPrecedence parameter specifies the relative precedence of the message
 Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
 
 ```yaml
-Type: Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest
+Type: ClassificationDisplayPrecedenceLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -213,7 +213,7 @@ The PermissionMenuVisible parameter specifies whether the values that you entere
 - $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -247,7 +247,7 @@ The RetainClassificationEnabled parameter specifies whether the message classifi
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

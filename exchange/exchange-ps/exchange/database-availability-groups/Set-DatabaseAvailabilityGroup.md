@@ -22,34 +22,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- [-ActivityState <NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare>]
+ [-ActivityState <ActivityStateOption>]
  [-AllowCrossSiteRpcClientAccess]
  [-AlternateWitnessDirectory <NonRootLocalLongFullPath>]
  [-AlternateWitnessServer <FileShareWitnessServerName>]
- [-AutoDagAllServersInstalled <$true | $false>]
- [-AutoDagAutoRedistributeEnabled <$true | $false>]
- [-AutoDagAutoReseedEnabled <$true | $false>]
- [-AutoDagBitlockerEnabled <$true | $false>]
+ [-AutoDagAllServersInstalled <Boolean>]
+ [-AutoDagAutoRedistributeEnabled <Boolean>]
+ [-AutoDagAutoReseedEnabled <Boolean>]
+ [-AutoDagBitlockerEnabled <Boolean>]
  [-AutoDagDatabaseCopiesPerDatabase <Int32>]
  [-AutoDagDatabaseCopiesPerVolume <Int32>]
  [-AutoDagDatabasesRootFolderPath <NonRootLocalLongFullPath>]
- [-AutoDagDiskReclaimerEnabled <$true | $false>]
+ [-AutoDagDiskReclaimerEnabled <Boolean>]
  [-AutoDagTotalNumberOfDatabases <Int32>]
  [-AutoDagTotalNumberOfServers <Int32>]
  [-AutoDagVolumesRootFolderPath <NonRootLocalLongFullPath>]
  [-Confirm]
  [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
  [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
- [-DatacenterActivationMode <Off | DagOnly>]
+ [-DatacenterActivationMode <DatacenterActivationModeOption>]
  [-DiscoverNetworks]
  [-DomainController <Fqdn>]
- [-FileSystem <NTFS | ReFS>]
- [-ManualDagNetworkConfiguration <$true | $false>]
+ [-FileSystem <FileSystemMode>]
+ [-ManualDagNetworkConfiguration <Boolean>]
  [-MetaCacheDatabaseVolumesPerServer <Int32>]
- [-NetworkCompression <Disabled | Enabled | InterSubnetOnly | SeedOnly>]
- [-NetworkEncryption <Disabled | Enabled | InterSubnetOnly | SeedOnly>]
+ [-NetworkCompression <NetworkOption>]
+ [-NetworkEncryption <NetworkOption>]
  [-PreferenceMoveFrequency <TimeSpan>]
- [-ReplayLagManagerEnabled <$true | $false>]
+ [-ReplayLagManagerEnabled <Boolean>]
  [-ReplicationPort <UInt16>]
  [-SkipDagValidation]
  [-WhatIf]
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare
+Type: ActivityStateOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 The AutoDagAutoRedistributeEnabled parameter specifies whether automatic DAG redistribution is enabled or disabled during AutoReseed. The default value is $true (enabled).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 The AutoDagAutoReseedEnabled is used to enable or disable Autoreseed. The default value is $true (enabled).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 The AutoDagBitlockerEnabled parameter ensures that Disk Reclaimer handles spare disks correctly and encrypts them with BitLocker. If Bitlocker is used to encrypt database disks, set the value of this parameter to $true on all Mailbox servers in the DAG after they are all running Exchange 2013 CU13 or later, or Exchange 2016 CU2 or later.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is $true (enabled). If you set this to $false, you will need to manually format the volume before the database(s) can be reseeded.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -451,7 +451,7 @@ The DatacenterActivationMode parameter specifies the datacenter activation mode 
 - DagOnly: Datacenter activation mode is enabled.
 
 ```yaml
-Type: Off | DagOnly
+Type: DatacenterActivationModeOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -505,7 +505,7 @@ The FileSystem parameter specifies the file system that's used for the DAG. Vali
 - ReFS
 
 ```yaml
-Type: NTFS | ReFS
+Type: FileSystemMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to $false, DAG networks are automatically configured. If this parameter is set to $true, you must manually configure DAG networks.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -561,7 +561,7 @@ The NetworkCompression parameter specifies the network compression option for th
 - SeedOnly: Network compression is enabled only for seeding.
 
 ```yaml
-Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
+Type: NetworkOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -585,7 +585,7 @@ The NetworkEncryption parameter specifies the network encryption option for the 
 - SeedOnly: Network encryption is enabled only for seeding.
 
 ```yaml
-Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
+Type: NetworkOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -621,7 +621,7 @@ Accept wildcard characters: False
 The ReplayLagManagerEnabled parameter specifies whether to disable the automatic playdown of log files for a lagged database copy.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

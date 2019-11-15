@@ -32,7 +32,7 @@ Set-MailPublicFolder [-Identity] <MailPublicFolderIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-Confirm]
  [-Contacts <RecipientIdParameter[]>]
- [-CreateDTMFMap <$true | $false>]
+ [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
  [-CustomAttribute11 <String>]
@@ -48,11 +48,11 @@ Set-MailPublicFolder [-Identity] <MailPublicFolderIdParameter>
  [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
- [-DeliverToMailboxAndForward <$true | $false>]
+ [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EmailAddressPolicyEnabled <Boolean>]
  [-EntryId <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -62,25 +62,25 @@ Set-MailPublicFolder [-Identity] <MailPublicFolderIdParameter>
  [-ExternalEmailAddress <ProxyAddress>]
  [-ForwardingAddress <RecipientIdParameter>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-IgnoreDefaultScope]
- [-IgnoreMissingFolderLink <$true | $false>]
+ [-IgnoreMissingFolderLink <Boolean>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Name <String>]
  [-OnPremisesObjectId <Guid>]
  [-PhoneticDisplayName <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-PublicFolderType <GeneralPurpose | Mapi | Nntp | NotSpecified>]
+ [-PublicFolderType <PublicFolderType>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-Server <ServerIdParameter>]
  [-SimpleDisplayName <String>]
  [-UMDtmfMap <MultiValuedProperty>]
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 The CreateDTMFMap parameter specifies that a dual tone multi-frequency (DTMF) map be created for the user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -659,7 +659,7 @@ The DeliverToMailboxAndForward parameter specifies the message delivery behavior
 The default value is $false. The value of this parameter is meaningful only if you configure a forwarding recipient or email address.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -755,7 +755,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -997,7 +997,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1039,7 +1039,7 @@ The IgnoreMissingFolderLink parameter specifies whether to exclude the mail-enab
 - $false: Don't skip the validation check. If the Active Directory object for the mail-enabled public folder doesn't have EntryId or ContentMailbox property values, the entire public folder migration will fail. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1205,7 +1205,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1297,7 +1297,7 @@ The PublicFolderType parameter specifies which of the following four types is as
 - NotSpecified
 
 ```yaml
-Type: GeneralPurpose | Mapi | Nntp | NotSpecified
+Type: PublicFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -1433,7 +1433,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1457,7 +1457,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

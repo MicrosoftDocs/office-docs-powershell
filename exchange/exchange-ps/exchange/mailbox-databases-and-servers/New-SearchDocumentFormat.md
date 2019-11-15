@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Extension <String> -MimeType <String>
- -Name <String> [-Confirm] [-Enabled <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
+ -Name <String> [-Confirm] [-Enabled <Boolean>] [-Server <ServerIdParameter>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -132,7 +132,7 @@ The Enabled parameter specifies whether the new format is enabled at creation.
 Valid input for this parameter is $true or $false. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

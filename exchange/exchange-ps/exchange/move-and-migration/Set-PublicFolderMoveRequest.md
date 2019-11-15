@@ -24,8 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-PublicFolderMoveRequest [-Identity] <PublicFolderMoveRequestIdParameter> [-AcceptLargeDataLoss]
  [-BadItemLimit <Unlimited>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-DomainController <Fqdn>]
  [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-SuspendWhenReadyToComplete <$true | $false>] [-WhatIf] [-RequestExpiryInterval <Unlimited>]
+ [-Priority <RequestPriority>]
+ [-SuspendWhenReadyToComplete <Boolean>] [-WhatIf] [-RequestExpiryInterval <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -211,7 +211,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 The SuspendWhenReadyToComplete parameter specifies whether to suspend the request before it reaches the status of CompletionInProgress. After the move is suspended, it has a status of AutoSuspended. You can then manually complete the move by using the Resume-PublicFolderMoveRequest command.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

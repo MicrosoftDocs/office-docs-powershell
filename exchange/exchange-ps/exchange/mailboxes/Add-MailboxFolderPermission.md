@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Add-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]>
- -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <$true | $false>] [-SharingPermissionFlags <None | Delegate | CanViewPrivateItems>] [<CommonParameters>]
+ -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <Boolean>] [-SharingPermissionFlags <MailboxFolderPermissionFlags>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -269,7 +269,7 @@ This parameter only applies to calendar folders and can only be used with the fo
 - Editor
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -295,7 +295,7 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 You can specify multiple values separated by commas.
 
 ```yaml
-Type: None | Delegate | CanViewPrivateItems
+Type: MailboxFolderPermissionFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

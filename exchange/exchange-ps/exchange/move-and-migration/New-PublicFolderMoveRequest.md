@@ -26,9 +26,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox <MailboxIdParameter>
  [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>] [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm] [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>] [-Suspend]
+ [-Priority <RequestPriority>] [-Suspend]
  [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
 ```
 
@@ -274,7 +274,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>] [-Confirm]
- [-CreateInboundSendConnector <$true | $false>] [-CreateInternetSendConnector <$true | $false>]
+ [-CreateInboundSendConnector <Boolean>] [-CreateInternetSendConnector <Boolean>]
  [-DomainController <Fqdn>] [-FileData <Byte[]>] [-FileName <LongPath>] [-Force] [-Site <AdSiteIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 The CreateInboundSendConnector parameter specifies whether to create the Send connector to connect the Edge Transport server and the Hub Transport servers. The default value is $true. The Send connector address space is set to "--", the smart hosts are set to "--", the Edge Transport server is set as the source server and Domain Name System (DNS) routing is disabled. This parameter is only used when you run the command on the Hub Transport server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 The CreateInternetSendConnector parameter specifies whether to create the Send connector to connect to the Internet. The default value is $true. The Send connector address space is set to all domains (\*), the Edge Transport server is set as the source server, and DNS routing is enabled. This parameter is only used when you run the command on the Hub Transport server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -26,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-ContentCodePage <Int32>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
@@ -42,7 +42,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <Lo
  [-LargeItemLimit <Unlimited>]
  [-MRSServer <Fqdn>]
  [-Name <String>]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-RemoteCredential <PSCredential>]
  [-RemoteHostName <Fqdn>]
  [-SkipMerging <SkippableMergeComponent[]>]
@@ -51,7 +51,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <Lo
  [-SuspendComment <String>]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -59,12 +59,12 @@ New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <Lo
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-ContentCodePage <Int32>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
@@ -75,7 +75,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
  [-LargeItemLimit <Unlimited>]
  [-MigrationMailbox <MailboxIdParameter>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
@@ -84,7 +84,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
  [-SuspendComment <String>]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -92,13 +92,13 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri> -AzureSharedAccessSignatureToken <String>
  [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-AzureStatusPublishEndpointInfo <String>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-ContentCodePage <Int32>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
@@ -110,7 +110,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStora
  [-MigrationMailbox <MailboxIdParameter>]
  [-MRSContentFilterSasUri <Uri>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
@@ -119,7 +119,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStora
  [-SuspendComment <String>]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -127,12 +127,12 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStora
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath <LongPath> -RemoteHostName <Fqdn>
  [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-ContentCodePage <Int32>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
@@ -143,7 +143,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath
  [-LargeItemLimit <Unlimited>]
  [-MigrationMailbox <MailboxIdParameter>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RemoteCredential <PSCredential>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
@@ -153,7 +153,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath
  [-SuspendComment <String>]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -347,7 +347,7 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 Content filtering doesn't apply to associated messages.
 
 ```yaml
-Type: DoNotCopy | MapByMessageClass | Copy
+Type: FAICopyOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -501,7 +501,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - UpdateFromSource
 
 ```yaml
-Type: KeepSourceItem | KeepLatestItem | KeepAll
+Type: ConflictResolutionOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -823,7 +823,7 @@ Accept wildcard characters: False
 The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority and last update time.
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -997,7 +997,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

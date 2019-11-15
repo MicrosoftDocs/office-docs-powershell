@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-SharingPolicy [-Name] <String> -Domains <MultiValuedProperty> [-Confirm] [-Default]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-WhatIf]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -155,7 +155,7 @@ The Enabled parameter specifies whether to enable the new sharing policy. Valid 
 When the sharing policy is disabled, users who are provisioned to use this policy continue to share information until the sharing policy assistant runs and removes the permissions on the shared folder. The frequency with which the sharing policy assistant runs is assigned in the Set-MailboxServer cmdlet using the SharingPolicySchedule parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

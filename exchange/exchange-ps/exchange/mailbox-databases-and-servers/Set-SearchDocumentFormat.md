@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <$true | $false> [-Confirm]
+Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <Boolean> [-Confirm]
  [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -47,7 +47,7 @@ This command disables the Zip file format for indexing by Exchange Search.
 The Enabled parameter specifies whether the file format is enabled. Set the parameter to $false to disable the format for content indexing.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

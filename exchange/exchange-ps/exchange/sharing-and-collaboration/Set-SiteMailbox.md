@@ -22,17 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SiteMailbox [-Identity] <RecipientIdParameter>
- [-Active <$true | $false>]
+ [-Active <Boolean>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Force]
  [-Members <RecipientIdParameter[]>]
  [-Owners <RecipientIdParameter[]>]
- [-RemoveDuplicateMessages <$true | $false>]
+ [-RemoveDuplicateMessages <Boolean>]
  [-SharePointUrl <Uri>]
- [-ShowInMyClient <$true | $false>]
- [-SyncEnabled <$true | $false>]
+ [-ShowInMyClient <Boolean>]
+ [-SyncEnabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 The Active parameter specifies whether to change the site mailbox's lifecycle status. This parameter accepts $true or $false. This parameter is intended for use only by the user interface. We recommend that you don't use this parameter in the Exchange Management Shell.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 The RemoveDuplicateMessages parameter specifies that when users post messages to a site mailbox, duplicate messages will be deleted. This parameter accepts the values of $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -276,7 +276,7 @@ This parameter is intended for use only by the user interface. We recommend that
 The ShowInMyClient parameter specifies that the site mailbox folder will show in your email client.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -296,7 +296,7 @@ The SyncEnabled parameter specifies whether to enable or disable synchronization
 - $true: Synchronization is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

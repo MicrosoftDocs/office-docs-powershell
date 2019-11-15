@@ -37,8 +37,8 @@ Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-
  [-DeleteExistingFiles]
  [-DomainController <Fqdn>]
  [-ManualResume]
- [-NetworkCompressionOverride <UseDagDefault | Off | On>]
- [-NetworkEncryptionOverride <UseDagDefault | Off | On>]
+ [-NetworkCompressionOverride <UseDagDefaultOnOff>]
+ [-NetworkEncryptionOverride <UseDagDefaultOnOff>]
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
@@ -54,8 +54,8 @@ Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInPa
  [-DeleteExistingFiles]
  [-DomainController <Fqdn>]
  [-ManualResume]
- [-NetworkCompressionOverride <UseDagDefault | Off | On>]
- [-NetworkEncryptionOverride <UseDagDefault | Off | On>]
+ [-NetworkCompressionOverride <UseDagDefaultOnOff>]
+ [-NetworkEncryptionOverride <UseDagDefaultOnOff>]
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 The NetworkCompressionOverride parameter specifies whether to override the current DAG network compression settings.
 
 ```yaml
-Type: UseDagDefault | Off | On
+Type: UseDagDefaultOnOff
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 The NetworkEncryptionOverride parameter specifies whether to override the current DAG encryption settings.
 
 ```yaml
-Type: UseDagDefault | Off | On
+Type: UseDagDefaultOnOff
 Parameter Sets: Identity, ExplicitServer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -22,10 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-Confirm]
- [-DetailLevel <AvailabilityOnly | LimitedDetails | FullDetails>] [-DomainController <Fqdn>]
- [-PublishDateRangeFrom <OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear>]
- [-PublishDateRangeTo <OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear>]
- [-PublishEnabled <$true | $false>] [-ResetUrl] [-SearchableUrlEnabled <$true | $false>] [-WhatIf]
+ [-DetailLevel <DetailLevelEnumType>] [-DomainController <Fqdn>]
+ [-PublishDateRangeFrom <DateRangeEnumType>]
+ [-PublishDateRangeTo <DateRangeEnumType>]
+ [-PublishEnabled <Boolean>] [-ResetUrl] [-SearchableUrlEnabled <Boolean>] [-WhatIf]
  [-SetAsSharingSource] [-UseHttps] [<CommonParameters>]
 ```
 
@@ -126,7 +126,7 @@ The DetailLevel parameter specifies the level of calendar detail that's publishe
 The default value is AvailabilityOnly.
 
 ```yaml
-Type: AvailabilityOnly | LimitedDetails | FullDetails
+Type: DetailLevelEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -176,7 +176,7 @@ The PublishDateRangeFrom parameter specifies the number of days of calendar info
 The default value is ThreeMonths.
 
 ```yaml
-Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
+Type: DateRangeEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -208,7 +208,7 @@ The PublishDateRangeTo parameter specifies the number of days of calendar inform
 The default value is ThreeMonths.
 
 ```yaml
-Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
+Type: DateRangeEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 The PublishEnabled parameter specifies whether the specified calendar should be enabled for publishing. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the web. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

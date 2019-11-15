@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <Boolean>]
  [-Arbitration]
  [-AuditLog]
  [-AuxAuditLog]
@@ -382,7 +382,7 @@ The Permanent parameter specifies whether to permanently delete the mailbox from
 - $false: The mailbox disabled and retained until the deleted mailbox retention period expires. You can reconnect or restore the mailbox until the deleted mailbox retention period expires. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

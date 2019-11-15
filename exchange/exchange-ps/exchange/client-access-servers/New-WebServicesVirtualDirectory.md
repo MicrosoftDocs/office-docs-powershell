@@ -24,15 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-WebServicesVirtualDirectory [-ApplicationRoot <String>] [-AppPoolId <String>]
- [-AppPoolIdForManagement <String>] [-BasicAuthentication <$true | $false>] [-Confirm]
- [-DigestAuthentication <$true | $false>] [-DomainController <Fqdn>]
+ [-AppPoolIdForManagement <String>] [-BasicAuthentication <Boolean>] [-Confirm]
+ [-DigestAuthentication <Boolean>] [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-ExternalUrl <Uri>] [-Force]
- [-GzipLevel <Off | Low | High | Error>] [-InternalNLBBypassUrl <Uri>] [-InternalUrl <Uri>]
- [-MRSProxyEnabled <$true | $false>] [-MRSProxyMaxConnections <Unlimited>] [-Path <String>]
- [-WebSiteName <String>] [-WhatIf] [-WindowsAuthentication <$true | $false>]
- [-WSSecurityAuthentication <$true | $false>] [-OAuthAuthentication <$true | $false>]
- [-Role <ClientAccess | Mailbox>] [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>] [-ExternalUrl <Uri>] [-Force]
+ [-GzipLevel <GzipLevel>] [-InternalNLBBypassUrl <Uri>] [-InternalUrl <Uri>]
+ [-MRSProxyEnabled <Boolean>] [-MRSProxyMaxConnections <Unlimited>] [-Path <String>]
+ [-WebSiteName <String>] [-WhatIf] [-WindowsAuthentication <Boolean>]
+ [-WSSecurityAuthentication <Boolean>] [-OAuthAuthentication <Boolean>]
+ [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,7 +105,7 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -145,7 +145,7 @@ The DigestAuthentication parameter specifies whether Digest authentication is en
 - $false: Digest authentication is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -233,7 +233,7 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -291,7 +291,7 @@ The GzipLevel parameter sets the Gzip configuration for the Exchange Web Service
 - Error: Identifies errors in the Gzip compression configuration.
 
 ```yaml
-Type: Off | Low | High | Error
+Type: GzipLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Mailbox server. MRSProxy is a service that runs on Mailbox servers in a remote forest and helps to proxy a mailbox move. For more information, see [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -429,7 +429,7 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -449,7 +449,7 @@ The WSSecurityAuthentication parameter specifies whether WS-Security (Web Servic
 - $false: WS-Security authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -469,7 +469,7 @@ The OAuthAuthentication parameter specifies whether OAuth authentication is enab
 - $false: OAuth authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -491,7 +491,7 @@ The Role parameter species the configuration for the virtual directory. Valid va
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
 
 ```yaml
-Type: ClientAccess | Mailbox
+Type: VirtualDirectoryRole
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

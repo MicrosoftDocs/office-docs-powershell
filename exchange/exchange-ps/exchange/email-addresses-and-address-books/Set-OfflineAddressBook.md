@@ -32,22 +32,22 @@ Set-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter>
  [-DomainController <Fqdn>]
  [-FullOabDownloadPreventionThreshold <Int32>]
  [-GeneratingMailbox <MailboxIdParameter>]
- [-GlobalWebDistributionEnabled <$true | $false>]
- [-IsDefault <$true | $false>]
+ [-GlobalWebDistributionEnabled <Boolean>]
+ [-IsDefault <Boolean>]
  [-MaxBinaryPropertySize <Int32>]
  [-MaxMultivaluedBinaryPropertySize <Int32>]
  [-MaxMultivaluedStringPropertySize <Int32>]
  [-MaxStringPropertySize <Int32>]
  [-Name <String>]
- [-PublicFolderDistributionEnabled <$true | $false>]
+ [-PublicFolderDistributionEnabled <Boolean>]
  [-Schedule <Schedule>]
- [-ShadowMailboxDistributionEnabled <$true | $false>]
+ [-ShadowMailboxDistributionEnabled <Boolean>]
  [-UpgradeFromE14]
  [-UseDefaultAttributes]
  [-Versions <MultiValuedProperty>]
  [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
  [-WhatIf]
- [-ZipOabFilesBeforeUploading <$true | $false>]
+ [-ZipOabFilesBeforeUploading <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -280,7 +280,7 @@ The GlobalWebDistributionEnabled parameter specifies whether all OAB virtual dir
 In Exchange 2013 CU7 or later, we recommend that you use the value $true for this parameter. The Client Access services on any Mailbox server can proxy incoming OAB download requests to the correct location.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -300,7 +300,7 @@ The IsDefault parameter specifies whether the OAB is used by all mailboxes and m
 - $false: The OAB is isn't the default OAB.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -406,7 +406,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is to be distributed via public folders. Setting the PublicFolderDistributionEnabled parameter to a value of $true sets the OAB to be distributed via public folders. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -476,7 +476,7 @@ The ShadowMailboxDistributionEnabled parameter specifies whether a read only cop
 The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -596,7 +596,7 @@ The ZipOabFilesBeforeUploading specifies whether to use ZIP file compression on 
 - $false: Don't ZIP the OAB files. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

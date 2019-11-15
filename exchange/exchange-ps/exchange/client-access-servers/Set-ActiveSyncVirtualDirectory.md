@@ -23,31 +23,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-ActiveSyncServer <String>]
- [-BadItemReportingEnabled <$true | $false>]
- [-BasicAuthEnabled <$true | $false>]
- [-ClientCertAuth <Ignore | Accepted | Required>]
- [-CompressionEnabled <$true | $false>]
+ [-BadItemReportingEnabled <Boolean>]
+ [-BasicAuthEnabled <Boolean>]
+ [-ClientCertAuth <ClientCertAuthTypes>]
+ [-CompressionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalAuthenticationMethods <MultiValuedProperty>]
  [-ExternalUrl <Uri>]
- [-InstallIsapiFilter <$true | $false>]
+ [-InstallIsapiFilter <Boolean>]
  [-InternalAuthenticationMethods <MultiValuedProperty>]
  [-InternalUrl <Uri>]
  [-MobileClientCertificateAuthorityURL <String>]
- [-MobileClientCertificateProvisioningEnabled <$true | $false>]
+ [-MobileClientCertificateProvisioningEnabled <Boolean>]
  [-MobileClientCertTemplateName <String>]
  [-Name <String>]
- [-RemoteDocumentsActionForUnknownServers <Allow | Block>]
+ [-RemoteDocumentsActionForUnknownServers <RemoteDocumentsActions>]
  [-RemoteDocumentsAllowedServers <MultiValuedProperty>]
  [-RemoteDocumentsBlockedServers <MultiValuedProperty>]
  [-RemoteDocumentsInternalDomainSuffixList <MultiValuedProperty>]
- [-SendWatsonReport <$true | $false>]
+ [-SendWatsonReport <Boolean>]
  [-WhatIf]
- [-WindowsAuthEnabled <$true | $false>]
+ [-WindowsAuthEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 The BadItemReportingEnabled parameter specifies whether items that can't be synchronized should be reported to the user. If set to $true, the user receives a notification when an item can't be synchronized to the mobile phone.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -145,7 +145,7 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 The ClientCertAuth parameter specifies the status of client certificate authentication. By default, client certificate authentication is disabled. The default setting is Ignore.
 
 ```yaml
-Type: Ignore | Accepted | Required
+Type: ClientCertAuthTypes
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 The CompressionEnabled parameter is a Boolean value that identifies the compression applied to the specified Exchange ActiveSync virtual directory. The default setting is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -285,7 +285,7 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 The InstallIsapiFilter parameter specifies whether the Internet Server API (ISAPI) filter is installed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 The MobileClientCertificateProvisioningEnabled parameter specifies whether the Autodiscover service returns the Certificate Services server URL in the XML file.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 The RemoteDocumentsActionForUnknownServers parameter specifies the action that occurs when a Microsoft Windows SharePoint Services or Microsoft Windows file share request comes in via Exchange ActiveSync. When a request arrives, Exchange ActiveSync looks for the requested host name in the Allow and Block lists. If the host name isn't found in either list, the action specified in this parameter, either Block or Allow, is performed.
 
 ```yaml
-Type: Allow | Block
+Type: RemoteDocumentsActions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -547,7 +547,7 @@ Accept wildcard characters: False
 The SendWatsonReport parameter specifies whether a Watson report is sent for errors and events.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -579,7 +579,7 @@ Accept wildcard characters: False
 The WindowsAuthEnabled parameter specifies whether Integrated Windows authentication is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

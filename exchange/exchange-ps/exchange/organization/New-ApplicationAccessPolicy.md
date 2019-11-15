@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Set1
 ```
-New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
+New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
  [-Confirm]
  [-Description <String>]
  [-WhatIf] [<CommonParameters>]

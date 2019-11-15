@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ApplyVersion
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
+Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Roles <String>]
@@ -31,7 +31,7 @@ Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemT
 
 ### Duration
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> [-BuildRange <String>] [-Duration <EnhancedTimeSpan>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> [-BuildRange <String>] [-Duration <EnhancedTimeSpan>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Roles <String>]
@@ -105,7 +105,7 @@ The ItemType parameter specifies the item type for the property that you want to
 - Responder
 
 ```yaml
-Type: Probe | Monitor | Responder | Maintenance
+Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

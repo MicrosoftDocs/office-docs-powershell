@@ -27,7 +27,7 @@ Import-ExchangeCertificate -FileData <Byte[]>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -39,7 +39,7 @@ Import-ExchangeCertificate -Instance <String[]>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -51,7 +51,7 @@ Import-ExchangeCertificate -FileName <String>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -209,7 +209,7 @@ The PrivateKeyExportable parameter specifies whether the certificate has an expo
 - $false: The private key isn't exportable, so you can't export the certificate from this server. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -23,20 +23,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
- [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
+ [-ConfigWriteScope <ConfigWriteScopeType>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
- [-Delegating <$true | $false>]
+ [-Delegating <Boolean>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
- [-Exclusive <$true | $false>]
+ [-Enabled <Boolean>]
+ [-Exclusive <Boolean>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
+ [-RecipientWriteScope <RecipientWriteScopeType>]
+ [-RoleAssigneeType <RoleAssigneeType>]
  [-WritableDatabase <DatabaseIdParameter>]
  [-WritableRecipient <GeneralRecipientIdParameter>]
  [-WritableServer <ServerIdParameter>]
@@ -46,21 +46,21 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
 ### RoleAssignee
 ```
 Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>] [-Role <RoleIdParameter>]
- [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
+ [-ConfigWriteScope <ConfigWriteScopeType>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
- [-Delegating <$true | $false>]
+ [-Delegating <Boolean>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
- [-Exclusive <$true | $false>]
+ [-Enabled <Boolean>]
+ [-Exclusive <Boolean>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssignee <RoleAssigneeIdParameter>]
- [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
+ [-RoleAssigneeType <RoleAssigneeType>]
  [-WritableDatabase <DatabaseIdParameter>]
  [-WritableRecipient <GeneralRecipientIdParameter>]
  [-WritableServer <ServerIdParameter>]
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 The ConfigWriteScope parameter specifies the type of management configuration scope to include in the results returned by the cmdlet. The valid values are None, OrganizationConfig, CustomConfigScope, and ExclusiveConfigScope.
 
 ```yaml
-Type: None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope
+Type: ConfigWriteScopeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -235,7 +235,7 @@ The Delegating parameter specifies whether delegating or regular role assignment
 By default, both delegating and regular scopes are returned. To return only delegating role assignments, specify a value of $true. To return only regular role assignments, specify a value of $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether enabled or disabled role assignments should be returned. To return enabled role assignments, specify a value of $true. To return disabled role assignments, specify a value of $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -287,7 +287,7 @@ The Exclusive parameter specifies whether exclusive or regular role assignments 
 By default, both exclusive and regular scopes are returned. To return only exclusive role assignments, specify a value of $true. To return only regular role assignments, specify a value of $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 The RecipientWriteScope parameter returns only the role assignments associated with the recipient scope restriction type specified. The valid values are None, MyGAL, Self, OU, CustomRecipientScope, MyDistributionGroups and ExclusiveRecipientScope.
 
 ```yaml
-Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
+Type: RecipientWriteScopeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup, LinkedRoleGroup and Computer.
 
 ```yaml
-Type: User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup
+Type: RoleAssigneeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

@@ -49,7 +49,7 @@ Set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EmailAddressPolicyEnabled <Boolean>]
  [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -57,13 +57,13 @@ Set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter>
  [-ExtensionCustomAttribute4 <MultiValuedProperty>]
  [-ExtensionCustomAttribute5 <MultiValuedProperty>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-IgnoreDefaultScope]
  [-ImmutableId <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Name <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecoverableItemsQuota <Unlimited>]
@@ -74,11 +74,11 @@ Set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter>
  [-RemoteRoutingAddress <ProxyAddress>]
  [-RemovePicture]
  [-RemoveSpokenName]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
- [-Type <Regular | Room | Equipment | Shared>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-Type <ConvertibleRemoteMailboxSubType>]
  [-UserPrincipalName <String>]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
@@ -716,7 +716,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -880,7 +880,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1022,7 +1022,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1318,7 +1318,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1338,7 +1338,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1380,7 +1380,7 @@ This parameter is only meaningful when moderation is enabled (the ModerationEnab
 The default value is Never.
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1410,7 +1410,7 @@ Notes on the value Shared:
 - You can only use Shared on a mailbox that was originally created in Exchange Online. If the mailbox was originally created in on-premises Exchange and then migrated to Exchange Online, you need to migrate the mailbox back to on-premises Exchange, convert the mailbox to a shared mailbox in on-premises Exchange, and then migrate the shared mailbox to Exchange Online. Or, you can change the RemoteRecipientType property value of the on-premises mailbox to "ProvisionMailbox, Migrated, DeprovisionArchive" by running the following command on an Exchange server: Set-ADUser -Identity "\<UserName\>" -Replace @{msExchRemoteRecipientTYpe="21"}.
 
 ```yaml
-Type: Regular | Room | Equipment
+Type: ConvertibleRemoteMailboxSubType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

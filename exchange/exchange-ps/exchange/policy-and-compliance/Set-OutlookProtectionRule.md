@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-OutlookProtectionRule [-Identity] <RuleIdParameter>
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force]
  [-FromDepartment <String[]>] [-Name <String>] [-Priority <Int32>] [-SentTo <MultiValuedProperty>]
- [-SentToScope <All | InOrganization>] [-UserCanOverride <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-SentToScope <ToUserScope>] [-UserCanOverride <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -228,7 +228,7 @@ The SentToScope parameter specifies the scope of messages to which the rule appl
 If not specified, the parameter defaults to All.
 
 ```yaml
-Type: All | InOrganization
+Type: ToUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -248,7 +248,7 @@ The UserCanOverride parameter specifies whether the Outlook user can override th
 - $false: User can't override rule action.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

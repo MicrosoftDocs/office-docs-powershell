@@ -49,10 +49,10 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <
 ### ExchangeOutlookAnywhere
 ```
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] [-ExchangeServer <String>]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-MailboxPermission <Admin | FullAccess>]
+ [-MailboxPermission <MigrationMailboxPermission>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-NspiServer <String>]
@@ -90,8 +90,8 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCrede
 
 ### IMAP
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>] [-Security <None | Ssl | Tls>]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>] [-Security <IMAPSecurityMechanism>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -116,7 +116,7 @@ New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail
 ### PublicFolder
 ```
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -167,7 +167,7 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <
 ### LegacyPublicFolderToUnifiedGroup
 ```
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -601,7 +601,7 @@ This parameter is available only in the cloud-based service.
 The Authentication parameter specifies the authentication method used by the on-premises mail server. If you don't include this parameter, Basic authentication is used.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: ExchangeOutlookAnywhere, IMAP, PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
@@ -687,7 +687,7 @@ If this parameter isn't specified, the cmdlet tries to access source mailboxes u
 This parameter can't be used for creating non-Outlook Anywhere migration endpoints.
 
 ```yaml
-Type: Admin | FullAccess
+Type: MigrationMailboxPermission
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
@@ -791,7 +791,7 @@ This parameter is available only in the cloud-based service.
 For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online

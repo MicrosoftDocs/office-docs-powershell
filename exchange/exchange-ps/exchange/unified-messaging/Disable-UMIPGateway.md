@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Disable-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 The Immediate parameter specifies whether the Mailbox server running the Microsoft Exchange Unified Messaging service drops incoming calls associated with this UM IP gateway immediately or waits for the current calls to finish processing.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -24,24 +24,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-AdfsAuthentication <$true | $false>]
- [-AdminEnabled <$true | $false>]
- [-BasicAuthentication <$true | $false>]
+ [-AdfsAuthentication <Boolean>]
+ [-AdminEnabled <Boolean>]
+ [-BasicAuthentication <Boolean>]
  [-Confirm]
- [-DigestAuthentication <$true | $false>]
+ [-DigestAuthentication <Boolean>]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalAuthenticationMethods <MultiValuedProperty>]
  [-ExternalUrl <Uri>]
- [-FormsAuthentication <$true | $false>]
- [-GzipLevel <Off | Low | High | Error>]
+ [-FormsAuthentication <Boolean>]
+ [-GzipLevel <GzipLevel>]
  [-InternalUrl <Uri>]
- [-LiveIdAuthentication <$true | $false>]
- [-OwaOptionsEnabled <$true | $false>]
+ [-LiveIdAuthentication <Boolean>]
+ [-OwaOptionsEnabled <Boolean>]
  [-WhatIf]
- [-WindowsAuthentication <$true | $false>]
+ [-WindowsAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -98,7 +98,7 @@ The AdfsAuthentication parameter specifies that the ECP virtual directory allows
 The ADFS authentication settings for Set-OwaVirtualDirectory and Set-EcpVirtualDirectory are related. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $true before you can set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $true. Likewise, you need to set the AdfsAuthentication parameter on Set-OwaVirtualDirectory to $false before you can set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://docs.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-acces). This parameter accepts $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -136,7 +136,7 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 This parameter can be used with the FormsAuthentication parameter or with the DigestAuthentication and WindowsAuthentication parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -176,7 +176,7 @@ The DigestAuthentication parameter specifies whether Digest authentication is en
 - $false: Digest authentication is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -264,7 +264,7 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -318,7 +318,7 @@ The FormsAuthentication parameter specifies whether forms-based authentication i
 - $false: Forms authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 The GzipLevel parameter sets Gzip configuration information for the ECP virtual directory.
 
 ```yaml
-Type: Off | Low | High | Error
+Type: GzipLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -370,7 +370,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The LiveIdAuthentication parameter specifies whether Windows Live ID authentication is enabled for the Exchange Control Panel virtual directory.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -422,7 +422,7 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

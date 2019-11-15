@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActiveSyncDeviceAccessRule [-Identity] <ActiveSyncDeviceAccessRuleIdParameter>
- [-AccessLevel <Allow | Block | Quarantine>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+ [-AccessLevel <DeviceAccessLevel>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 The AccessLevel parameter specifies whether the devices are allowed, blocked or quarantined.
 
 ```yaml
-Type: Allow | Block | Quarantine
+Type: DeviceAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

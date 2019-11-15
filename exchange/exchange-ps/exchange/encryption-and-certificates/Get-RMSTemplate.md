@@ -25,7 +25,7 @@ Get-RMSTemplate [[-Identity] <RmsTemplateIdParameter>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-TrustedPublishingDomain <RmsTrustedPublishingDomainIdParameter>]
- [-Type <Archived | Distributed | All>]
+ [-Type <RmsTemplateType>]
  [<CommonParameters>]
 ```
 
@@ -138,7 +138,7 @@ The Type parameter specifies the type of RMS template. Use one of the following 
 - Distributed
 
 ```yaml
-Type: Archived | Distributed | All
+Type: RmsTemplateType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

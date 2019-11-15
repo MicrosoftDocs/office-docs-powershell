@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-Enable <$true | $false>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter> [-Enable <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +82,7 @@ The Enable parameter specifies whether to enable or disable Clutter for the mail
 - $false: Clutter is disabled for the mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

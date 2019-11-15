@@ -62,7 +62,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-MinVersion <String>]
  [-NameMatch <String>]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-ScopeFilter <String>]
+ [-Scope <ExchangeSettingsScope>] [-ScopeFilter <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -75,7 +75,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-Force]
  [-GroupName <String>]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-WhatIf]
+ [-Scope <ExchangeSettingsScope>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -97,7 +97,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-DomainController <Fqdn>]
  [-Force]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>]
+ [-Scope <ExchangeSettingsScope>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -715,7 +715,7 @@ The Scope parameter specifies the scope of the Exchange settings object. Valid v
 - User
 
 ```yaml
-Type: Forest | Dag | Server | Process | Database | Organization | User | Generic
+Type: ExchangeSettingsScope
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

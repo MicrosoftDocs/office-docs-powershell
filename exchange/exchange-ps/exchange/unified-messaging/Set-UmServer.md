@@ -27,7 +27,7 @@ Set-UMServer [-Identity] <UMServerIdParameter>
  [-DomainController <Fqdn>]
  [-ExternalServiceFqdn <UMSmartHost>]
  [-GrammarGenerationSchedule <ScheduleInterval[]>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
@@ -36,8 +36,8 @@ Set-UMServer [-Identity] <UMServerIdParameter>
  [-SIPAccessService <ProtocolConnectionSettings>]
  [-SipTcpListeningPort <Int32>]
  [-SipTlsListeningPort <Int32>]
- [-Status <Enabled | Disabled | NoNewCalls>]
- [-UMStartupMode <TCP | TLS | Dual>]
+ [-Status <ServerStatus>]
+ [-UMStartupMode <UMStartupMode>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -222,7 +222,7 @@ The IrmLogEnabled parameter specifies whether to enable logging of Information R
 - $false Disable IRM logging
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 The Status parameter specifies the Unified Messaging server status. The available options are Enabled, Disabled, and NoNewCalls.
 
 ```yaml
-Type: Enabled | Disabled | NoNewCalls
+Type: ServerStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging service on a Unified Messaging server will start up in TCP, TLS, or Dual mode. If the Unified Messaging server is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Unified Messaging server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging service must be restarted.
 
 ```yaml
-Type: TCP | TLS | Dual
+Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

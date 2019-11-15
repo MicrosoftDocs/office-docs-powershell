@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Disable-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 The Immediate parameter specifies whether the UM server drops all current calls or enables current calls to finish. If this parameter is set to $true, all calls that are currently connected are disconnected.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

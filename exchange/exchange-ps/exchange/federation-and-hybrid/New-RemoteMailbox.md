@@ -25,11 +25,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -38,11 +38,11 @@ New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <
 New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -51,11 +51,11 @@ New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrin
 New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -64,11 +64,11 @@ New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-Use
 New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -77,11 +77,11 @@ New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPr
 New-RemoteMailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -522,7 +522,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -586,7 +586,7 @@ The RemotePowerShellEnabled parameter specifies whether the user can connect to 
 - $false: The user can't use remote PowerShell.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -624,7 +624,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -664,7 +664,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

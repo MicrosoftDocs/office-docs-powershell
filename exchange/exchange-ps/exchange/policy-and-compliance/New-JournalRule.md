@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>]
  [-Recipient <SmtpAddress>]
- [-Scope <Internal | External | Global>] [-WhatIf] [<CommonParameters>]
+ [-Scope <JournalRuleScope>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the journal rule is enabled or disabled. If the rule is disabled, it isn't applied to any email messages. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -169,7 +169,7 @@ The Scope parameter specifies the scope of email messages to which the journal r
 - External: External rules process email messages sent to recipients or from senders outside your organization.
 
 ```yaml
-Type: Internal | External | Global
+Type: JournalRuleScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
