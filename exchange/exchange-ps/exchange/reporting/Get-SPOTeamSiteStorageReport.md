@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SPOTeamSiteStorageReport [-EndDate <DateTime>] [-ReportType <Daily | Weekly | Monthly | Yearly>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SPOTeamSiteStorageReport [-EndDate <DateTime>] [-ReportType <ReportType>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 The ReportType parameter aggregates the data in the report by the value you specify. Valid values for this parameter are Daily, Weekly, Monthly and Yearly. Use the value of ReportType with appropriate values for the StartDate and EndDate parameters to review the data from a specific time period.
 
 ```yaml
-Type: Daily | Weekly | Monthly | Yearly
+Type: ReportType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

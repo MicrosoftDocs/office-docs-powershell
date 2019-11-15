@@ -27,7 +27,7 @@ Update-SiteMailbox [-Identity] <RecipientIdParameter>
  [-FullSync]
  [-Organization <OrganizationIdParameter>]
  [-Server <String>]
- [-Target <All | Document | Membership | Maintenance>]
+ [-Target <TargetType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -178,7 +178,7 @@ The Target parameter specifies whether to update the SharePoint documents, the s
 If you don't specify this parameter when you run the cmdlet, this parameter value defaults to ALL.
 
 ```yaml
-Type: All | Document | Membership | Maintenance
+Type: TargetType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

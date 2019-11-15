@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2>
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
  -StartDate <DateTime> [-DeliveryStatus <String>]
- [-Direction <All | Sent | Received>]
+ [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
  [-Locale <CultureInfo>]
  [-MessageID <MultiValuedProperty>]
@@ -127,7 +127,7 @@ The ReportType parameter specifies the type of historical search that you want t
 You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
+Type: HistoricalSearchReportType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -189,7 +189,7 @@ The Direction parameter filters the results by the direction of the message. Val
 - Sent: Outgoing messages only.
 
 ```yaml
-Type: All | Sent | Received
+Type: MessageDirection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

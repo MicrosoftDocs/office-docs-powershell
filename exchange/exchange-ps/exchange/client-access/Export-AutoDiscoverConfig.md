@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController <String>
  [-Confirm]
- [-DeleteConfig <$true | $false>]
+ [-DeleteConfig <Boolean>]
  [-DomainController <Fqdn>]
- [-MultipleExchangeDeployments <$true | $false>]
+ [-MultipleExchangeDeployments <Boolean>]
  [-PreferredSourceFqdn <Fqdn>]
  [-SourceForestCredential <PSCredential>]
  [-TargetForestCredential <PSCredential>]
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 The DeleteConfig parameter causes the command to delete your configuration settings on the service connection point object.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2016 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook 2010 clients use this object to select the most appropriate forest to search for the Autodiscover service.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -34,7 +34,7 @@ New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <Strin
  [-IncludeServerNetBIOSName]
  [-Instance <X509Certificate2>]
  [-KeySize <Int32>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
@@ -43,7 +43,7 @@ New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <Strin
 
 ### Certificate
 ```
-New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federation>]
+New-ExchangeCertificate [-Services <AllowedServices>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainName <MultiValuedProperty>]
@@ -55,7 +55,7 @@ New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federa
  [-IncludeServerNetBIOSName]
  [-Instance <X509Certificate2>]
  [-KeySize <Int32>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
@@ -424,7 +424,7 @@ The PrivateKeyExportable parameter specifies whether the new self-signed certifi
 This parameter is only meaningful for new self-signed certificates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -508,7 +508,7 @@ You can't use this parameter with the GenerateRequest switch.
 Once you enable a certificate for a service, you can't remove the service from the certificate.
 
 ```yaml
-Type: None | IMAP | POP | UM | IIS | SMTP | Federation
+Type: AllowedServices
 Parameter Sets: Certificate
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -31,7 +31,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-DisplayDeviceName <String>]
  [-Floor <System.Int32>]
  [-GeoCoordinates <GeoCoordinates>]
- [-IsWheelChairAccessible <$true | $false>]
+ [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
  [-Phone <String>]
  [-PostalCode <String>]
@@ -248,7 +248,7 @@ The IsWheelChairAccessible parameter specifies whether the room is wheelchair ac
 - $false: The room is not wheelchair accessible. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

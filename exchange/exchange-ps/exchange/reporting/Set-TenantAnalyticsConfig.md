@@ -28,7 +28,7 @@ Set-TenantAnalyticsConfig -MinRecipients <Int32>
 
 ### TeamAnalytics
 ```
-Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <Boolean>
  [-MinRecipients <Int32>]
  [<CommonParameters>]
 ```
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 This cmdlet has been deprecated and no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online

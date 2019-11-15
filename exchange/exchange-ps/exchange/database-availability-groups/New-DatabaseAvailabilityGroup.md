@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DatabaseAvailabilityGroup [-Name] <String> [-Confirm] [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
- [-DomainController <Fqdn>] [-ThirdPartyReplication <Disabled | Enabled>] [-WhatIf]
+ [-DomainController <Fqdn>] [-ThirdPartyReplication <ThirdPartyReplicationMode>] [-WhatIf]
  [-WitnessDirectory <NonRootLocalLongFullPath>] [-WitnessServer <FileShareWitnessServerName>]
  [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
- [-ActivityState <NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare>]
- [-FileSystem <NTFS | ReFS>] [<CommonParameters>]
+ [-ActivityState <ActivityStateOption>]
+ [-FileSystem <FileSystemMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 The ThirdPartyReplication parameter specifies to configure and enable a DAG to use third-party replication that leverages the Exchange Third Party Replication API instead of the built-in continuous replication. Valid values are Enabled and Disabled. After this mode is enabled, it can't be changed.
 
 ```yaml
-Type: Disabled | Enabled
+Type: ThirdPartyReplicationMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare
+Type: ActivityStateOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -249,7 +249,7 @@ The FileSystem parameter specifies the file system that's used for the DAG. Vali
 - ReFS
 
 ```yaml
-Type: NTFS | ReFS
+Type: FileSystemMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AuthRedirect -AuthScheme <Unknown | Bearer> -TargetUrl <String> [-Confirm] [-DomainController <Fqdn>]
+New-AuthRedirect -AuthScheme <AuthScheme> -TargetUrl <String> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -49,7 +49,7 @@ This example creates an OAuth redirection object with the following settings:
 The AuthScheme parameter specifies the authentication scheme that's used by the authentication redirection object. Typically, this value is Bearer.
 
 ```yaml
-Type: Unknown | Bearer
+Type: AuthScheme
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

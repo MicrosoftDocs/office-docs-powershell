@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AddressRewriteEntry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-ExceptionList <MultiValuedProperty>] [-ExternalAddress <String>] [-InternalAddress <String>]
- [-Name <String>] [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Name <String>] [-OutboundOnly <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -185,7 +185,7 @@ You must set this parameter to $true if the InternalAddress parameter contains t
 Also, when you configure outbound-only address rewriting, you need to configure the rewritten email address as a proxy address on the affected recipients. For example, if laura@sales.contoso.com is rewritten to laura@contoso.com, the proxy address laura@contoso.com must be configured on Laura's mailbox. This allows replies and inbound messages to be delivered correctly.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

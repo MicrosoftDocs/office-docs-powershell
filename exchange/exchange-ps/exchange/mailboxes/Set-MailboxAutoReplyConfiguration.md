@@ -22,17 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
- [-AutoDeclineFutureRequestsWhenOOF <$true | $false>]
- [-AutoReplyState <Disabled | Enabled | Scheduled>]
+ [-AutoDeclineFutureRequestsWhenOOF <Boolean>]
+ [-AutoReplyState <OofState>]
  [-Confirm]
- [-CreateOOFEvent <$true | $false>]
- [-DeclineAllEventsForScheduledOOF <$true | $false>]
- [-DeclineEventsForScheduledOOF <$true | $false>]
+ [-CreateOOFEvent <Boolean>]
+ [-DeclineAllEventsForScheduledOOF <Boolean>]
+ [-DeclineEventsForScheduledOOF <Boolean>]
  [-DeclineMeetingMessage <String>]
  [-DomainController <Fqdn>]
  [-EndTime <DateTime>]
  [-EventsToDeleteIDs <String[]>]
- [-ExternalAudience <None | Known | All>]
+ [-ExternalAudience <ExternalAudience>]
  [-ExternalMessage <String>]
  [-IgnoreDefaultScope]
  [-InternalMessage <String>]
@@ -112,7 +112,7 @@ The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automaticall
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -140,7 +140,7 @@ The Enabled and Scheduled values require these additional settings:
 - A value for the ExternalMessageValue parameter if the ExternalAudience parameter is set to Known or All.
 
 ```yaml
-Type: Disabled | Enabled | Scheduled
+Type: OofState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -182,7 +182,7 @@ The CreateOOFEvent parameter specifies whether to create a calendar event that c
 - $false: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, no calendar event is created for those dates. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -208,7 +208,7 @@ You can use this parameter only when the DeclineEventsForScheduledOOF parameter 
 You can't use this parameter with the EventsToDeleteIDs parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -232,7 +232,7 @@ The DeclineEventsForScheduledOOF parameter specifies whether it's possible to de
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -340,7 +340,7 @@ The ExternalAudience parameter specifies whether Automatic Replies are sent to e
 The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
 
 ```yaml
-Type: None | Known | All
+Type: ExternalAudience
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

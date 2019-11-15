@@ -173,7 +173,7 @@ The SendNotificationToUser parameter specifies whether to send a notification to
 This parameter only applies to calendar folders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

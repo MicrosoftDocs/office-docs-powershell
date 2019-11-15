@@ -24,10 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MessageTrackingReport [-Identity] <MessageTrackingReportId> [-BypassDelegateChecking]
- [-DetailLevel <Basic | Verbose>] [-DomainController <Fqdn>] [-DoNotResolve]
- [-RecipientPathFilter <SmtpAddress>] [-Recipients <String[]>] [-ReportTemplate <Summary | RecipientPath>]
- [-ResultSize <Unlimited>] [-Status <Unsuccessful | Pending | Delivered | Transferred | Read>]
- [-TraceLevel <Low | Medium | High>] [<CommonParameters>]
+ [-DetailLevel <MessageTrackingDetailLevel>] [-DomainController <Fqdn>] [-DoNotResolve]
+ [-RecipientPathFilter <SmtpAddress>] [-Recipients <String[]>] [-ReportTemplate <ReportTemplate>]
+ [-ResultSize <Unlimited>] [-Status <_DeliveryStatus>]
+ [-TraceLevel <TraceLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,7 +99,7 @@ The DetailLevel parameter specifies the amount of detail to return in the result
 - Verbose: Full report information is returned, including server names and physical topology information.
 
 ```yaml
-Type: Basic | Verbose
+Type: MessageTrackingDetailLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -187,7 +187,7 @@ The ReportTemplate parameter specifies a predefined format for the output. Valid
 - Summary: Returns a summary for all recipients of the message. You specify the recipients by using the Recipients parameter.
 
 ```yaml
-Type: Summary | RecipientPath
+Type: ReportTemplate
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -229,7 +229,7 @@ The Status parameter filters the results by the specified delivery status codes.
 - Unsuccessful
 
 ```yaml
-Type: Unsuccessful | Pending | Delivered | Transferred | Read
+Type: _DeliveryStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -253,7 +253,7 @@ The TraceLevel parameter specifies the details to include in the results. Valid 
 You only need to use this parameter for troubleshooting message tracking issues.
 
 ```yaml
-Type: Low | Medium | High
+Type: TraceLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

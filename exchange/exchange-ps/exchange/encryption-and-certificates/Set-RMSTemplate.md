@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RMSTemplate [-Identity] <RmsTemplateIdParameter> -Type <Archived | Distributed | All>
+Set-RMSTemplate [-Identity] <RmsTemplateIdParameter> -Type <RmsTemplateType>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -74,7 +74,7 @@ The Type parameter specifies the type of RMS template. You can specify one of th
 The default type for imported RMS templates is Archived.
 
 ```yaml
-Type: Archived | Distributed | All
+Type: RmsTemplateType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

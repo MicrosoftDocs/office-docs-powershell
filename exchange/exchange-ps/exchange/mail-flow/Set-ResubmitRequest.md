@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <$true | $false> [-Confirm]
+Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <Boolean> [-Confirm]
  [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ This example disables the resubmit request with the identity 8.
 The Enabled parameter enables or disables an active resubmit request. Valid input for this parameter is $true or $false. Setting the value to $false disables the resubmit request.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

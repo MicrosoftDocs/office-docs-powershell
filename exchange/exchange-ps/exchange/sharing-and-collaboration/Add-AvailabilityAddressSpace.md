@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-AvailabilityAddressSpace -AccessMethod <PerUserFB | OrgWideFB | PublicFolder | InternalProxy>
+Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod>
  -ForestName <String> [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>] [-ProxyUrl <Uri>]
- [-UseServiceAccount <$true | $false>] [-WhatIf] [-TargetAutodiscoverEpr <Uri>] [<CommonParameters>]
+ [-UseServiceAccount <Boolean>] [-WhatIf] [-TargetAutodiscoverEpr <Uri>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +72,7 @@ The AccessMethod parameter specifies how the free/busy data is accessed. Valid v
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
 ```yaml
-Type: PerUserFB | OrgWideFB | PublicFolder | InternalProxy
+Type: AvailabilityAccessMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -186,7 +186,7 @@ The UseServiceAccount parameter specifies whether to use the local Availability 
 - $false: The local Availability service account isn't used for authorization. You need to use the Credentials parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

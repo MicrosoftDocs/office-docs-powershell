@@ -44,7 +44,7 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-DomainController <Fqdn>]
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RemoteCredential <PSCredential>]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
@@ -281,7 +281,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

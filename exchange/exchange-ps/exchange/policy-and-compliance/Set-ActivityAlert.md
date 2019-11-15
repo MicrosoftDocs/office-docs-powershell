@@ -22,10 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
+ [-Category <AlertRuleCategory>]
  [-Condition <String>] [-Confirm]
  [-Description <String>]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-Multiplier <Double>]
@@ -33,8 +33,8 @@ Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-NotifyUser <MultiValuedProperty>]
  [-Operation <MultiValuedProperty>]
  [-RecordType <AuditRecordType>]
- [-ScopeLevel <SingleUser | AllUsers>]
- [-Severity <Low | Medium | High | None>]
+ [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
  [-UserId <MultiValuedProperty>]
@@ -102,7 +102,7 @@ The Category parameter specifies a category for the activity alert. Valid values
 - Others
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -174,7 +174,7 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 - $false: The activity alert is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -386,7 +386,7 @@ The ScopeLevel parameter specifies the scope for activity alerts that use the Ty
 - AllUsers
 
 ```yaml
-Type: SingleUser | AllUsers
+Type: AlertScopeLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -410,7 +410,7 @@ The Severity parameter specifies a severity level for the activity alert. Valid 
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

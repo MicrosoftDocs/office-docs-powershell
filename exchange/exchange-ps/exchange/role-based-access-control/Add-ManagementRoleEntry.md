@@ -29,7 +29,7 @@ Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
  [-Overwrite]
  [-Parameters <String[]>]
  [-PSSnapinName <String>]
- [-Type <Cmdlet | Script | ApplicationPermission | All>]
+ [-Type <ManagementRoleEntryType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
 
 ```yaml
-Type: Cmdlet | Script | ApplicationPermission | All
+Type: ManagementRoleEntryType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

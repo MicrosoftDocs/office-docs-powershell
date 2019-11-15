@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-EdgeSyncServiceConfig [-Identity] <EdgeSyncServiceConfigIdParameter>
  [-ConfigurationSyncInterval <EnhancedTimeSpan>] [-Confirm] [-CookieValidDuration <EnhancedTimeSpan>]
  [-DomainController <Fqdn>] [-FailoverDCInterval <EnhancedTimeSpan>] [-LockDuration <EnhancedTimeSpan>]
- [-LockRenewalDuration <EnhancedTimeSpan>] [-LogEnabled <$true | $false>]
+ [-LockRenewalDuration <EnhancedTimeSpan>] [-LogEnabled <Boolean>]
  [-LogLevel <None | Low | Medium | High>] [-LogMaxAge <EnhancedTimeSpan>] [-LogMaxDirectorySize <Unlimited>]
  [-LogMaxFileSize <Unlimited>] [-LogPath <String>] [-Name <String>] [-OptionDuration <EnhancedTimeSpan>]
  [-RecipientSyncInterval <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 The LogEnabled parameter specifies enables or disables the EdgeSyncLog. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

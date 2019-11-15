@@ -28,23 +28,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-MailboxSearch [-Name] <String>
- [-AllPublicFolderSources <$true | $false>]
- [-AllSourceMailboxes <$true | $false>]
+ [-AllPublicFolderSources <Boolean>]
+ [-AllSourceMailboxes <Boolean>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-DoNotIncludeArchive]
  [-EndDate <ExDateTime>]
  [-EstimateOnly]
- [-ExcludeDuplicateMessages <$true | $false>]
+ [-ExcludeDuplicateMessages <Boolean>]
  [-Force]
  [-IncludeKeywordStatistics]
  [-IncludeUnsearchableItems]
- [-InPlaceHoldEnabled <$true | $false>]
+ [-InPlaceHoldEnabled <Boolean>]
  [-InPlaceHoldIdentity <String>]
  [-ItemHoldPeriod <Unlimited>]
  [-Language <CultureInfo>]
- [-LogLevel <Suppress | Basic | Full>]
+ [-LogLevel <LoggingLevel>]
  [-MessageTypes <KindKeyword[]>]
  [-Recipients <String[]>]
  [-SearchDumpster]
@@ -134,7 +134,7 @@ The AllPublicFolderSources parameter specifies whether to include all public fol
 - $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -156,7 +156,7 @@ The AllSourceMailboxes parameter specifies whether to include all mailboxes in t
 - $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -284,7 +284,7 @@ The ExcludeDuplicateMessages parameter eliminates duplication of messages in sea
 - $false: Copy all instances of a message if the same message exists in multiple folders or mailboxes.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -358,7 +358,7 @@ You can't set an In-Place Hold on the search results when the AllSourceMailboxes
 If you attempt to place a hold but don't specify mailboxes using the SourceMailboxes parameter, the command may succeed but the mailboxes are not placed on In-Place Hold.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -434,7 +434,7 @@ The LogLevel parameter specifies the logging level for the search. Valid values 
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
 
 ```yaml
-Type: Suppress | Basic | Full
+Type: LoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

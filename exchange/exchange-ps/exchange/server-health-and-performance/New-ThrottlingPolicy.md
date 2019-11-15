@@ -167,7 +167,7 @@ New-ThrottlingPolicy [-Name] <String>
  [-SuiteMaxBurst <Unlimited>]
  [-SuiteMaxConcurrency <Unlimited>]
  [-SuiteRechargeRate <Unlimited>]
- [-ThrottlingPolicyScope <Regular | Organization | Global>]
+ [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -2679,7 +2679,7 @@ The ThrottlingPolicyScope parameter specifies the scope of the throttling policy
 For more information about throttling policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
 ```yaml
-Type: Regular | Organization | Global
+Type: ThrottlingPolicyScopeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

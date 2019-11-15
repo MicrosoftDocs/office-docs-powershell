@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DeviceTenantRule [-ApplyPolicyTo <None | ExchangeOnline | SharepointOnline | ExchangeAndSharepoint>]
- [-BlockUnsupportedDevices <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
+New-DeviceTenantRule [-ApplyPolicyTo <PolicyResourceScope>]
+ [-BlockUnsupportedDevices <Boolean>] [-Confirm] [-DomainController <Fqdn>]
  [-ExclusionList <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -62,7 +62,7 @@ The ApplyPolicyTo parameter specifies where to apply the policy in your organiza
 - ExchangeAndSharePoint
 
 ```yaml
-Type: None | ExchangeOnline | SharepointOnline | ExchangeAndSharepoint
+Type: PolicyResourceScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -82,7 +82,7 @@ The BlockUnsupportedDevices parameter specifies whether to block access to your 
 - $false: Unsupported devices are allowed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

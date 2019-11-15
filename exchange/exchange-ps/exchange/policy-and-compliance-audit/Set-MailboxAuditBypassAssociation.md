@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxAuditBypassAssociation [-Identity] <MailboxAuditBypassAssociationIdParameter>
- -AuditBypassEnabled <$true | $false> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ -AuditBypassEnabled <Boolean> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +58,7 @@ The AuditBypassEnabled parameter specifies whether audit bypass is enabled for t
 - $false: Disables mailbox audit logging bypass
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallSummaryReport -GroupBy <Day | Month | Total> [-DomainController <Fqdn>]
+Get-UMCallSummaryReport -GroupBy <GroupBy> [-DomainController <Fqdn>]
  [-UMDialPlan <UMDialPlanIdParameter>]
  [-UMIPGateway <UMIPGatewayIdParameter>] [<CommonParameters>]
 ```
@@ -111,7 +111,7 @@ The GroupBy parameter specifies how to return the results. Valid values are:
 - Total: A summary of all call statistics for your Mailbox servers running the Microsoft Exchange Unified Messaging service in your organization.
 
 ```yaml
-Type: Day | Month | Total
+Type: GroupBy
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

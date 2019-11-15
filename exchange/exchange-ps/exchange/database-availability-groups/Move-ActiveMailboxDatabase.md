@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MountDialOverride <DatabaseMountDialOverride>]
  [-MoveComment <String>]
  [-SkipActiveCopyChecks]
  [-SkipClientExperienceChecks]
@@ -43,7 +43,7 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
 Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MountDialOverride <DatabaseMountDialOverride>]
  [-MoveComment <String>]
  [-SkipActiveCopyChecks]
  [-SkipClientExperienceChecks]
@@ -61,7 +61,7 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer
 Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>] [-MoveAllDatabasesOrNone]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MountDialOverride <DatabaseMountDialOverride>]
  [-MoveComment <String>]
  [-SkipActiveCopyChecks]
  [-SkipClientExperienceChecks]
@@ -79,7 +79,7 @@ Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnSer
 Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter> [-SkipAllChecks]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MountDialOverride <DatabaseMountDialOverride>]
  [-MoveComment <String>]
  [-SkipActiveCopyChecks]
  [-SkipClientExperienceChecks]
@@ -289,7 +289,7 @@ The MountDialOverride parameter is used to override the auto database mount dial
 - BestAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
 
 ```yaml
-Type: None | Lossless | GoodAvailability | BestAvailability | BestEffort
+Type: DatabaseMountDialOverride
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-User [-Identity] <UserIdParameter>
- [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
+ [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
  [-Arbitration]
  [-AssistantName <String>]
  [-AuthenticationPolicy <String>]
@@ -31,7 +31,7 @@ Set-User [-Identity] <UserIdParameter>
  [-Company <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
- [-CreateDTMFMap <$true | $false>]
+ [-CreateDTMFMap <Boolean>]
  [-Department <String>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
@@ -61,9 +61,9 @@ Set-User [-Identity] <UserIdParameter>
  [-PostalCode <String>]
  [-PostOfficeBox <MultiValuedProperty>]
  [-PublicFolder]
- [-RemotePowerShellEnabled <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
  [-RemoveMailboxProvisioningConstraint]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SeniorityIndex <Int32>]
  [-SimpleDisplayName <String>]
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 The AllowUMCallsFromNonUsers parameter specifies whether to exclude the user from directory searches.
 
 ```yaml
-Type: None | SearchEnabled
+Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -295,7 +295,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -833,7 +833,7 @@ The RemotePowerShellEnabled parameter specifies whether the user has access to r
 The default value depends on the management roles that are assigned to the user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -871,7 +871,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

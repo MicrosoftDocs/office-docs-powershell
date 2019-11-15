@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -52,8 +52,8 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
 ### LocalPublicFolder
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase <DatabaseIdParameter>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -77,8 +77,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 ### PreexistingUserIds
 ```
 New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -100,7 +100,7 @@ New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
 ### Preexisting
 ```
 New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
- [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -122,8 +122,8 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
 ### Onboarding
 ```
 New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -157,8 +157,8 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -190,8 +190,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
 ### PublicFolderToUnifiedGroup
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -215,8 +215,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
 ### WorkflowTemplate
 ```
 New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -482,7 +482,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -502,7 +502,7 @@ The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns 
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

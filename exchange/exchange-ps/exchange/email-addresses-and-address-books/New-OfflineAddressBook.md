@@ -28,13 +28,13 @@ New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParamete
  [-DiffRetentionPeriod <Unlimited>]
  [-DomainController <Fqdn>]
  [-GeneratingMailbox <MailboxIdParameter>]
- [-GlobalWebDistributionEnabled <$true | $false>]
- [-IsDefault <$true | $false>]
+ [-GlobalWebDistributionEnabled <Boolean>]
+ [-IsDefault <Boolean>]
  [-PublicFolderDatabase <DatabaseIdParameter>]
- [-PublicFolderDistributionEnabled <$true | $false>]
+ [-PublicFolderDistributionEnabled <Boolean>]
  [-Schedule <Schedule>]
  [-Server <ServerIdParameter>]
- [-ShadowMailboxDistributionEnabled <$true | $false>]
+ [-ShadowMailboxDistributionEnabled <Boolean>]
  [-SkipPublicFolderInitialization]
  [-Versions <MultiValuedProperty>]
  [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
@@ -236,7 +236,7 @@ The GlobalWebDistributionEnabled parameter specifies whether all OAB virtual dir
 In Exchange 2013 CU7 or later, we recommend that you use the value $true for this parameter. The Client Access services on any Mailbox server can proxy incoming OAB download requests to the correct location.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -256,7 +256,7 @@ The IsDefault parameter specifies whether the OAB is used by all mailboxes and m
 - $false: The OAB is isn't the default OAB. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -300,7 +300,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is distributed via public folders. If the value of the PublicFolderDistributionEnabled parameter is $true, the OAB is distributed via public folders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -394,7 +394,7 @@ The ShadowMailboxDistributionEnabled parameter specifies whether a read only cop
 The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

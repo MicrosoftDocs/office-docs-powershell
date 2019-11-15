@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-X400ExternalRelay <$true | $false>] [<CommonParameters>]
+ [-WhatIf] [-X400ExternalRelay <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 The X400ExternalRelay parameter specifies authoritative domain an external relay domain. If you set the X400ExternalRelay parameter to $true, Microsoft Exchange routes email to the external address and doesn't treat resolution failures to this subdomain as an error.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

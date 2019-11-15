@@ -23,18 +23,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### DefaultSet
 ```
 Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
 ### LocationSet
 ```
 Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
@@ -149,7 +149,7 @@ The DetailLevel parameter specifies the level of detail you want to see in the a
 - Advanced: 37 additional calendar item properties are returned. You should use this value only for detailed debugging information.
 
 ```yaml
-Type: Basic | Advanced
+Type: AnalysisDetailLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -189,7 +189,7 @@ The OutputAs parameter specifies the output format of the command. Valid values 
 - XML
 
 ```yaml
-Type: HTML | CSV | XML
+Type: OutputType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

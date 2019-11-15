@@ -38,20 +38,20 @@ Get-MoveRequest [[-Identity] <MoveRequestIdParameter>]
 Get-MoveRequest [-BatchName <String>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
- [-Flags <None | CrossOrg | IntraOrg | Push | Pull | Offline | Protected | RemoteLegacy | HighPriority | Suspend | SuspendWhenReadyToComplete | MoveOnlyPrimaryMailbox | MoveOnlyArchiveMailbox | TargetIsAggregatedMailbox | Join | Split>]
- [-HighPriority <$true | $false>]
+ [-Flags <RequestFlags>]
+ [-HighPriority <Boolean>]
  [-IncludeSoftDeletedObjects]
- [-MoveStatus <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Offline <$true | $false>]
+ [-MoveStatus <RequestStatus>]
+ [-Offline <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-Protect <$true | $false>]
+ [-Protect <Boolean>]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteHostName <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-SourceDatabase <DatabaseIdParameter>]
- [-Suspend <$true | $false>]
- [-SuspendWhenReadyToComplete <$true | $false>]
+ [-Suspend <Boolean>]
+ [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
  [<CommonParameters>]
 ```
@@ -236,7 +236,7 @@ The Flags parameter specifies the move type to retrieve information for. The fol
 - TargetIsAggregatedMailbox
 
 ```yaml
-Type: None | CrossOrg | IntraOrg | Push | Pull | Offline | Protected | RemoteLegacy | HighPriority | Suspend | SuspendWhenReadyToComplete | MoveOnlyPrimaryMailbox | MoveOnlyArchiveMailbox | TargetIsAggregatedMailbox | Join | Split
+Type: RequestFlags
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -256,7 +256,7 @@ The HighPriority parameter specifies that the cmdlet returns requests that were 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -310,7 +310,7 @@ The MoveStatus parameter returns move requests in the specified status. You can 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
+Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -328,7 +328,7 @@ The Offline parameter specifies whether to return mailboxes that are being moved
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -372,7 +372,7 @@ The Protect parameter returns mailboxes being moved in protected mode. This para
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -514,7 +514,7 @@ The Suspend parameter specifies whether to return mailboxes with moves that have
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -532,7 +532,7 @@ The SuspendWhenReadytoComplete parameter specifies whether to return mailboxes t
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Thumbprint
 ```
-Enable-ExchangeCertificate [-Thumbprint] <String> -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter>
+Enable-ExchangeCertificate [-Thumbprint] <String> -Services <AllowedServices>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DoNotRequireSsl]
@@ -36,7 +36,7 @@ Enable-ExchangeCertificate [-Thumbprint] <String> -Services <None | IMAP | POP |
 
 ### Identity
 ```
-Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] -Services <None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter>
+Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] -Services <AllowedServices>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DoNotRequireSsl]
@@ -91,7 +91,7 @@ The values that you specify with this parameter are additive. When you enable a 
 Different services have different certificate requirements. For example, some services may require a server name in the certificate's Subject Name or Subject Alternative Name fields, but other services may require an FQDN. Verify that the certificate supports the services that you want to configure.
 
 ```yaml
-Type: None | IMAP | POP | UM | IIS | SMTP | Federation | UMCallRouter
+Type: AllowedServices
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

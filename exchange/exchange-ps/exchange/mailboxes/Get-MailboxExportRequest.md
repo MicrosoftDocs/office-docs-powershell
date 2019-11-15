@@ -35,11 +35,11 @@ Get-MailboxExportRequest [-Mailbox <MailboxOrMailUserIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
  [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
@@ -49,11 +49,11 @@ Get-MailboxExportRequest [-Mailbox <MailboxLocationIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
  [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
@@ -194,7 +194,7 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -327,7 +327,7 @@ You can't use this parameter with the Identity parameter.
 CompletionInProgress and AutoSuspended don't apply to export requests and won't return any information.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
+Type: RequestStatus
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -345,7 +345,7 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

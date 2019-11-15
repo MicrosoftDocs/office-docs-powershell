@@ -22,12 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-ApplyDefaults <$true | $false>]
+ [-ApplyDefaults <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalUrl <Uri>]
  [-IISAuthenticationMethods <MultiValuedProperty>]
  [-InternalUrl <Uri>]
@@ -82,7 +82,7 @@ The ApplyDefaults switch specifies whether to apply the correct defaults to the 
 This switch doesn't affect the values you configure by using the IISAuthenticationMethods, InternalUrl or ExternalUrl parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -196,7 +196,7 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013

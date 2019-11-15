@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### PrecannedFilter
 ```
-New-AddressList [-Name] <String> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+New-AddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
  [-ConditionalCompany <MultiValuedProperty>]
  [-ConditionalCustomAttribute1 <MultiValuedProperty>]
  [-ConditionalCustomAttribute10 <MultiValuedProperty>]
@@ -136,7 +136,7 @@ You can specify multiple values separated by commas. When you use multiple value
 You need to use this parameter when you use any Conditional parameters as part of a precanned filter. You can't use this parameter in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
+Type: WellKnownRecipientType
 Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>] [-AccountNamespace <SmtpDomain>]
  [-Confirm] [-DelegationFederationTrust <FederationTrustIdParameter>] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-OrganizationContact <SmtpAddress>] [-WhatIf] [-DefaultDomain <SmtpDomain>]
+ [-Enabled <Boolean>] [-OrganizationContact <SmtpAddress>] [-WhatIf] [-DefaultDomain <SmtpDomain>]
  [<CommonParameters>]
 ```
 
@@ -137,7 +137,7 @@ The Enabled parameter specifies whether the organization identifier is enabled. 
 Setting the parameter to $false disables federation.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

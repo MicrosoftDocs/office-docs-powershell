@@ -27,10 +27,10 @@ New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInE
  [-DefaultLanguage <UMLanguage>]
  [-DefaultOutboundCallingLineId <String>]
  [-DomainController <Fqdn>]
- [-FaxEnabled <$true | $false>]
- [-GenerateUMMailboxPolicy <$true | $false>]
- [-URIType <TelExtn | E164 | SipName>]
- [-VoIPSecurity <SIPSecured | Unsecured | Secured>]
+ [-FaxEnabled <Boolean>]
+ [-GenerateUMMailboxPolicy <Boolean>]
+ [-URIType <UMURIType>]
+ [-VoIPSecurity <UMVoIPSecurityType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 The FaxEnabled parameter specifies whether the Mailbox servers associated with the dial plan answer and process incoming fax calls. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 The GenerateUMMailboxPolicy parameter specifies whether a default UM mailbox policy is created when the UM dial plan is created. The default setting is to create a UM mailbox when the UM dial plan is created.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 The URIType parameter specifies the URI type to be sent and received with SIP messages from the Private Branch eXchange (PBX).
 
 ```yaml
-Type: TelExtn | E164 | SipName
+Type: UMURIType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -258,7 +258,7 @@ This parameter is available only in on-premises Exchange.
 The VoIPSecurity parameter specifies whether the signaling channel is encrypted using mutual Transport Layer Security (TLS). The default setting is Unsecured.
 
 ```yaml
-Type: SIPSecured | Unsecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter> [-BodyFormat <PlainText | Html | Rtf>]
+New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter> [-BodyFormat <MailBodyFormat>]
  [-Confirm] [-DomainController <Fqdn>] [-Subject <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 The BodyFormat parameter specifies the format of the message body. The values can be PlainText, Rtf (Rich Text Format), or Html. By default, if the BodyFormat parameter isn't specified when the Body parameter is used, the message body is rendered in plain text.
 
 ```yaml
-Type: PlainText | Html | Rtf
+Type: MailBodyFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

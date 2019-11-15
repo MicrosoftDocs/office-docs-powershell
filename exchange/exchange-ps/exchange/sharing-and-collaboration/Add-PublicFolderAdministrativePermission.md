@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter>
  [-Confirm] [-Deny]
  [-DomainController <Fqdn>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -39,7 +39,7 @@ Add-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAc
  [-Deny]
  [-DomainController <Fqdn>]
  [[-Identity] <PublicFolderIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -281,7 +281,7 @@ The InheritanceType parameter specifies the type of inheritance. Valid values ar
 - Children
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: Identity, Instance
 Aliases:
 Applicable: Exchange Server 2010

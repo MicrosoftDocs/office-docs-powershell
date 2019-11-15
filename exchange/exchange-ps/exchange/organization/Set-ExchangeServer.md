@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ExchangeServer [-Identity] <ServerIdParameter>
  [-Confirm]
- [-CustomerFeedbackEnabled <$true | $false>]
+ [-CustomerFeedbackEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-ErrorReportingEnabled <$true | $false>]
+ [-ErrorReportingEnabled <Boolean>]
  [-InternetWebProxy <Uri>]
  [-InternetWebProxyBypassList <MultiValuedProperty>]
  [-MonitoringGroup <String>]
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 The CustomerFeedbackEnabled parameter specifies whether the Exchange server is enrolled in the Microsoft Customer Experience Improvement Program (CEIP). The CEIP collects anonymous information about how you use Exchange and problems that you might encounter. If you decide not to participate in the CEIP, the servers are opted-out automatically.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 The ErrorReportingEnabled parameter specifies whether error reporting is enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

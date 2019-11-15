@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Dsn
 ```
-New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Language <CultureInfo> -Text <String>
+New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -30,7 +30,7 @@ New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Lang
 
 ### Quota
 ```
-New-SystemMessage -Language <CultureInfo> -QuotaMessageType <WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox> -Text <String>
+New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -95,7 +95,7 @@ You need to use this parameter with the DsnCode and Language parameters.
 You can't use this parameter with the QuotaMessageType parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Dsn
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -181,7 +181,7 @@ You need to use this parameter with the Language parameter.
 You can't use this parameter with the DsnCode or Internal parameters.
 
 ```yaml
-Type: WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox
+Type: QuotaMessageType
 Parameter Sets: Quota
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

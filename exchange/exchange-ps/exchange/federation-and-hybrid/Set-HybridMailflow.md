@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-HybridMailflow [-CentralizedTransportEnabled <$true | $false>] [-CertificateSubject <String>] [-Confirm]
+Set-HybridMailflow [-CentralizedTransportEnabled <Boolean>] [-CertificateSubject <String>] [-Confirm]
  [-InboundIPs <IPRange[]>] [-OnPremisesFQDN <Fqdn>] [-OutboundDomains <SmtpDomainWithSubdomains[]>]
- [-SecureMailEnabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-SecureMailEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +48,7 @@ This example configures the message transport settings in the EOP service for a 
 The CentralizedTransportEnabled parameter specifies that the Exchange Online organization routes all outbound mail messages to external recipients to the on-premises Exchange organization. The on-premises Exchange organization then routes the messages to the external recipients. The valid input for the CentralizedTransportEnabled parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 The SecureMailEnabled parameter specifies that all messages sent between the on-premises Exchange and the Exchange Online organizations must use the Transport Layer Security (TLS) protocol and the assigned digital certificate. The valid input for the SecureMailEnabled parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
