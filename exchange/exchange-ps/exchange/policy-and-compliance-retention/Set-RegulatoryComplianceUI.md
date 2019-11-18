@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RegulatoryComplianceUI -Enabled <$true | $false> [<CommonParameters>]
+Set-RegulatoryComplianceUI -Enabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +44,7 @@ $true: The preservation lock checkbox is displayed for retention policies and th
 $false: The preservation lock checkbox is not displayed for retention policies and the immutable label checkbox is not displayed for retention labels. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
