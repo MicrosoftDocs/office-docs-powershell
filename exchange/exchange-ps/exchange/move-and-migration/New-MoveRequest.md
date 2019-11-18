@@ -43,7 +43,7 @@ New-MoveRequest [-Identity]
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteArchiveTargetDatabase <String>]
@@ -57,7 +57,7 @@ New-MoveRequest [-Identity]
  [-SuspendWhenReadyToComplete]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -84,7 +84,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteOrganizationName <String>]
@@ -97,7 +97,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-TargetDatabase <DatabaseIdParameter>]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -121,7 +121,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-MoveOptions <MultiValuedProperty>]
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteTargetDatabase <String>]
@@ -134,7 +134,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-TargetDatabase <DatabaseIdParameter>]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -163,7 +163,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -174,7 +174,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -195,7 +195,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTe
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
  [-PreventCompletion]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -205,7 +205,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTe
  [-SuspendComment <String>]
  [-SuspendWhenReadyToComplete]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -227,7 +227,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTena
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
  [-PreventCompletion]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -237,7 +237,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTena
  [-SuspendComment <String>]
  [-SuspendWhenReadyToComplete]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -943,7 +943,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1227,7 +1227,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

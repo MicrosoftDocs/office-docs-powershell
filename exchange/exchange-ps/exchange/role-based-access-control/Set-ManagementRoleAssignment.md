@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RelativeRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -37,7 +37,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomCon
  [-Confirm]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -48,7 +48,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Recipient
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -58,7 +58,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Recipient
 Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>] [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -68,7 +68,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Exclusive
 Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the management role assignment is enabled or disabled. The valid values are $true and $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -336,7 +336,7 @@ The available types are: None, Organization, MyGAL, Self and MyDistributionGroup
 Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They're used internally by the cmdlet.
 
 ```yaml
-Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
+Type: RecipientWriteScopeType
 Parameter Sets: RelativeRecipientWriteScope
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

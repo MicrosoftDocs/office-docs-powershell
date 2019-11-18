@@ -30,7 +30,7 @@ Test-EdgeSynchronization -VerifyRecipient <ProxyAddress>
 
 ### Default
 ```
-Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <$true | $false>] [-TargetServer <String>]
+Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <Boolean>] [-TargetServer <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

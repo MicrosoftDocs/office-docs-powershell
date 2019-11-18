@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceSecurityFilter [-Action <Unknown | Preview | Export | Purge | Search | All>] [-Confirm]
+Get-ComplianceSecurityFilter [-Action <ComplianceSecurityFilterActionType>] [-Confirm]
  [-FilterName <String>] [-User <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -62,7 +62,7 @@ The Action parameter filters the results by the type of search action that a fil
 - Search
 
 ```yaml
-Type: Unknown | Preview | Export | Purge | Search | All
+Type: ComplianceSecurityFilterActionType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

@@ -28,18 +28,18 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] [-AutoDiscoverTargetMailboxServe
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### CrossPremises
 ```
-Test-Mailflow -CrossPremises <$true | $false> [-ActiveDirectoryTimeout <Int32>] [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
+Test-Mailflow -CrossPremises <Boolean> [-ActiveDirectoryTimeout <Int32>] [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetDatabase <DatabaseIdParam
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -63,7 +63,7 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String> [-T
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -75,7 +75,7 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetMailboxServer <ServerIdPa
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -88,7 +88,7 @@ Test-Mailflow [[-Identity] <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -151,7 +151,7 @@ Set this parameter to $true if your organization is using a cross-premises deplo
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress or TargetMailboxServer parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: CrossPremises
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -377,7 +377,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

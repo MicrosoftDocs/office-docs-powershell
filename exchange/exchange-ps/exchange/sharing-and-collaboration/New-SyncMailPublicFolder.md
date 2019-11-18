@@ -30,10 +30,10 @@ New-SyncMailPublicFolder [-Alias] <String> [-Name] <String> -EntryId <String> [-
  [-CustomAttribute15 <String>] [-CustomAttribute2 <String>] [-CustomAttribute3 <String>]
  [-CustomAttribute4 <String>] [-CustomAttribute5 <String>] [-CustomAttribute6 <String>]
  [-CustomAttribute7 <String>] [-CustomAttribute8 <String>] [-CustomAttribute9 <String>]
- [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>]
+ [-DeliverToMailboxAndForward <Boolean>] [-DisplayName <String>]
  [-ForwardingAddress <RecipientIdParameter>] [-GrantSendOnBehalfTo <RecipientIdParameter[]>]
  [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>] [-OnPremisesObjectId <Guid>]
- [-RejectMessagesFrom <DeliveryRecipientIdParameter[]>] [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RejectMessagesFrom <DeliveryRecipientIdParameter[]>] [-RequireSenderAuthenticationEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -601,7 +601,7 @@ The DeliverToMailboxAndForward parameter specifies the message delivery behavior
 The default value is $false. This parameter is meaningful only if you configure a forwarding recipient by using the ForwardingAddress parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -825,7 +825,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

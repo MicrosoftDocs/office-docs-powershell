@@ -22,20 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ImapSettings [-AuthenticatedConnectionTimeout <EnhancedTimeSpan>] [-Banner <String>]
- [-CalendarItemRetrievalOption <iCalendar | intranetUrl | InternetUrl | Custom>] [-Confirm]
- [-DomainController <Fqdn>] [-EnableExactRFC822Size <$true | $false>]
- [-EnableGSSAPIAndNTLMAuth <$true | $false>] [-EnforceCertificateErrors <$true | $false>]
- [-ExtendedProtectionPolicy <None | Allow | Require>] [-ExternalConnectionSettings <MultiValuedProperty>]
+ [-CalendarItemRetrievalOption <CalendarItemRetrievalOptions>] [-Confirm]
+ [-DomainController <Fqdn>] [-EnableExactRFC822Size <Boolean>]
+ [-EnableGSSAPIAndNTLMAuth <Boolean>] [-EnforceCertificateErrors <Boolean>]
+ [-ExtendedProtectionPolicy <ExtendedProtectionTokenCheckingMode>] [-ExternalConnectionSettings <MultiValuedProperty>]
  [-InternalConnectionSettings <MultiValuedProperty>] [-LogFileLocation <String>]
- [-LogFileRollOverSettings <Hourly | Daily | Weekly | Monthly>]
- [-LoginType <PlainTextLogin | PlainTextAuthentication | SecureLogin>] [-LogPerFileSizeQuota <Unlimited>]
+ [-LogFileRollOverSettings <LogFileRollOver>]
+ [-LoginType <LoginOptions>] [-LogPerFileSizeQuota <Unlimited>]
  [-MaxCommandSize <Int32>] [-MaxConnectionFromSingleIP <Int32>] [-MaxConnections <Int32>]
  [-MaxConnectionsPerUser <Int32>]
- [-MessageRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
+ [-MessageRetrievalMimeFormat <MimeTextFormat>]
  [-OwaServerUrl <Uri>] [-PreAuthenticatedConnectionTimeout <EnhancedTimeSpan>]
- [-ProtocolLogEnabled <$true | $false>] [-ProxyTargetPort <Int32>] [-Server <ServerIdParameter>]
- [-ShowHiddenFoldersEnabled <$true | $false>] [-SSLBindings <MultiValuedProperty>]
- [-SuppressReadReceipt <$true | $false>] [-UnencryptedOrTLSBindings <MultiValuedProperty>] [-WhatIf]
+ [-ProtocolLogEnabled <Boolean>] [-ProxyTargetPort <Int32>] [-Server <ServerIdParameter>]
+ [-ShowHiddenFoldersEnabled <Boolean>] [-SSLBindings <MultiValuedProperty>]
+ [-SuppressReadReceipt <Boolean>] [-UnencryptedOrTLSBindings <MultiValuedProperty>] [-WhatIf]
  [-X509CertificateName <String>] [<CommonParameters>]
 ```
 
@@ -135,7 +135,7 @@ The CalendarItemRetrievalOption parameter specifies how calendar items are prese
 If you specify 3 or Custom, you need to specify a value for the OwaServerUrl parameter setting.
 
 ```yaml
-Type: iCalendar | intranetUrl | InternetUrl | Custom
+Type: CalendarItemRetrievalOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -191,7 +191,7 @@ The EnableExactRFC822Size parameter specifies how message sizes are presented to
 - $false: Use an estimated message size. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -211,7 +211,7 @@ The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Inte
 - $false: NTLM for IMAP4 connections is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -233,7 +233,7 @@ The default setting is $false.
 - $false: The server doesn't deny IMAP4 connections based on certificate errors. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -257,7 +257,7 @@ The ExtendedProtectionPolicy parameter specifies how Extended Protection for Aut
 Extended Protection for Authentication enhances the protection and handling of credentials by Integrated Windows authentication (also known as NTLM), so we strongly recommend that you use it if it's supported by your clients (default installations of Windows 7 or later and Windows Server 2008 R2 or later support it).
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -353,7 +353,7 @@ The LogFileRollOverSettings parameter specifies how frequently IMAP4 protocol lo
 This parameter is only meaningful when the LogPerFileSizeQuota parameter value is 0, and the ProtocolLogEnabled parameter value is $true.
 
 ```yaml
-Type: Hourly | Daily | Weekly | Monthly
+Type: LogFileRollOver
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -375,7 +375,7 @@ The LoginType parameter specifies the authentication method for IMAP4 connection
 - 3 or SecureLogin. This is the default value.
 
 ```yaml
-Type: PlainTextLogin | PlainTextAuthentication | SecureLogin
+Type: LoginOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -503,7 +503,7 @@ The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages
 - 6 or Tnef.
 
 ```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
+Type: MimeTextFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -559,7 +559,7 @@ The ProtocolLogEnabled parameter specifies whether to enable protocol logging fo
 - $false: IMAP4 protocol logging is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -621,7 +621,7 @@ The ShowHiddenFoldersEnabled parameter specifies whether hidden mailbox folders 
 - $false: Hidden folders aren't visible. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -663,7 +663,7 @@ The SuppressReadReceipt parameter specifies whether to stop duplicate read recei
 - $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

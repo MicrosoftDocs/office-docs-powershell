@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AuditConfigurationRule -AuditOperation <MultiValuedProperty>
- -Workload <None | Exchange | SharePoint | Intune | OneDriveForBusiness | PublicFolder | SharePointOnPremises | ExchangeOnPremises | AuditAlerting | Skype | ModernGroup>
+ -Workload <Workload>
  [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -100,7 +100,7 @@ The Workload parameter specifies where the audit configuration policy applies. V
 - SharePoint
 
 ```yaml
-Type: None | Exchange | SharePoint | Intune | OneDriveForBusiness | PublicFolder | SharePointOnPremises | ExchangeOnPremises | AuditAlerting | Skype | ModernGroup
+Type: Workload
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

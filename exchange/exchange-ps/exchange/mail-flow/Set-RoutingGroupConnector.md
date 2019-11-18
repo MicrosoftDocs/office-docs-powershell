@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter> [-Confirm] [-Cost <Int32>]
  [-DomainController <Fqdn>] [-MaxMessageSize <Unlimited>] [-Name <String>]
- [-PublicFolderReferralsEnabled <$true | $false>] [-SourceTransportServers <MultiValuedProperty>]
+ [-PublicFolderReferralsEnabled <Boolean>] [-SourceTransportServers <MultiValuedProperty>]
  [-TargetTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 The PublicFolderReferralsEnabled parameter specifies whether users can use this routing group connector to access a public folder replica located in the routing group of the target servers when an instance of that public folder isn't available in the same routing group as the user's mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

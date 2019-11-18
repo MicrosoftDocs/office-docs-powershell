@@ -29,14 +29,14 @@ Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentation
 
 ### FullParams
 ```
-Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-PreferredGlobalCatalog <Fqdn>] [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>] [-ViewEntireForest <$true | $false>]
+Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-PreferredGlobalCatalog <Fqdn>] [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>] [-ViewEntireForest <Boolean>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SingleDC
 ```
-Set-AdServerSettings [[-PreferredServer] <Fqdn>] [-RecipientViewRoot <String>] [-ViewEntireForest <$true | $false>]
+Set-AdServerSettings [[-PreferredServer] <Fqdn>] [-RecipientViewRoot <String>] [-ViewEntireForest <Boolean>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -184,7 +184,7 @@ The ViewEntireForest parameter specifies whether all the objects in the forest a
 When you specify a value of $true, the value stored in the RecipientViewRoot parameter is removed and all of the recipients in the forest can be viewed and managed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SingleDC, FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

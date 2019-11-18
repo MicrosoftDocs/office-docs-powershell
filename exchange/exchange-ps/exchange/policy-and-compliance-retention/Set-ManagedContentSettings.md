@@ -23,11 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ManagedContentSettings [-Identity] <ELCContentSettingsIdParameter>
  [-AddressForJournaling <RecipientIdParameter>] [-AgeLimitForRetention <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-JournalingEnabled <$true | $false>] [-LabelForJournaling <String>]
- [-MessageFormatForJournaling <UseMsg | UseTnef>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>] [-JournalingEnabled <Boolean>] [-LabelForJournaling <String>]
+ [-MessageFormatForJournaling <JournalingFormat>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
  [-Name <String>]
- [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-TriggerForRetention <WhenDelivered | WhenMoved>] [-WhatIf]
+ [-RetentionAction <RetentionAction>]
+ [-RetentionEnabled <Boolean>] [-TriggerForRetention <RetentionDateType>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 The JournalingEnabled parameter specifies that journaling is enabled when it's set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -187,7 +187,7 @@ The MessageFormatForJournaling parameter specifies the format in which an item s
 - UseTnef Outlook MAPI format
 
 ```yaml
-Type: UseMsg | UseTnef
+Type: JournalingFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -247,7 +247,7 @@ The RetentionAction parameter specifies one of the following actions to take whe
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
+Type: RetentionAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 The RetentionEnabled parameter specifies that retention is enabled when it's set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -287,7 +287,7 @@ Valid values include:
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: WhenDelivered | WhenMoved
+Type: RetentionDateType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

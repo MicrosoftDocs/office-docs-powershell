@@ -26,14 +26,14 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-EntryId <String>]
- [-ExactMatch <$true | $false>]
+ [-ExactMatch <Boolean>]
  [-ItemClass <String[]>]
  [-ItemIds <String[]>]
  [-MeetingId <String>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-ShouldBindToItem <$true | $false>]
- [-ShouldFetchRecurrenceExceptions <$true | $false>]
+ [-ShouldBindToItem <Boolean>]
+ [-ShouldFetchRecurrenceExceptions <Boolean>]
  [-StartDate <ExDateTime>]
  [-Subject <String>]
  [<CommonParameters>]
@@ -206,7 +206,7 @@ You only use this parameter with the Subject parameter.
 The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -306,7 +306,7 @@ The ShouldBindToItem parameter specifies whether to truncate large streamable pr
 - $false: The values of large streamable properties are truncated. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -326,7 +326,7 @@ The ShouldFetchRecurrenceExceptions parameter specifies whether to include excep
 - $false: Don't Include exceptions to recurring meetings. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

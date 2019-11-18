@@ -25,7 +25,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-Disabled <$true | $false>]
+ [-Disabled <Boolean>]
  [-DisplayName <String>]
  [-LocaleSettings <MultiValuedProperty>]
  [-NextLabel <ComplianceRuleIdParameter>]

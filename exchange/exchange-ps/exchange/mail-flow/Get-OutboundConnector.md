@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-OutboundConnector [[-Identity] <OutboundConnectorIdParameter>]
- [-IncludeTestModeConnectors <$true | $false>] [-IsTransportRuleScoped <$true | $false>] [<CommonParameters>]
+ [-IncludeTestModeConnectors <Boolean>] [-IsTransportRuleScoped <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +73,7 @@ The IncludeTestModeConnectors parameter filters the results by Outbound connecto
 You configure an Outbound connector in test mode by using the TestMode parameter on the New-OutboundConnector or Set-OutboundConnector cmdlets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -95,7 +95,7 @@ The IsTransportRuleScoped parameter filters the results by Outbound connectors t
 You scope a transport rule to a specific Outbound connector by using the RouteMessageOutboundConnector parameter on the New-TransportRule or Set-TransportRule cmdlets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

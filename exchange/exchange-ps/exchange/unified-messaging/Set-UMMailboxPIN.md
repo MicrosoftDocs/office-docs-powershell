@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-UMMailboxPIN [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-LockedOut <$true | $false>] [-NotifyEmail <String>] [-Pin <String>] [-PINExpired <$true | $false>]
- [-SendEmail <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-LockedOut <Boolean>] [-NotifyEmail <String>] [-Pin <String>] [-PINExpired <Boolean>]
+ [-SendEmail <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 The LockedOut parameter specifies whether the mailbox will continue to be locked. If set to $true, the mailbox is marked as locked out. By default, if this parameter is omitted or set to $false, the command clears the locked-out status on the mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 The PINExpired parameter specifies whether the PIN is treated as expired. If this parameter is supplied and is set to $false, the user isn't required to reset the PIN the next time that the user logs on. If the PIN isn't supplied, the PIN is treated as expired and the user is prompted to reset the PIN the next time that the user logs on.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 The SendEmail parameter specifies whether to send a PIN to the user in an email message. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 The PINExpired parameter specifies whether the PIN is treated as expired. If this parameter is supplied and is set to $false, the user isn't required to reset the PIN the next time that the user logs on. If the PIN isn't supplied, the PIN is treated as expired and the user is prompted to reset the PIN the next time that the user logs on.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

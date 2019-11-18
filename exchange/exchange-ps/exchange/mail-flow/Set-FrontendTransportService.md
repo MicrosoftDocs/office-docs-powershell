@@ -22,34 +22,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-FrontendTransportService [-Identity] <FrontendTransportServerIdParameter>
- [-AgentLogEnabled <$true | $false>]
+ [-AgentLogEnabled <Boolean>]
  [-AgentLogMaxAge <EnhancedTimeSpan>]
  [-AgentLogMaxDirectorySize <Unlimited>]
  [-AgentLogMaxFileSize <Unlimited>]
  [-AgentLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>]
+ [-AntispamAgentsEnabled <Boolean>]
  [-Confirm]
- [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogEnabled <Boolean>]
  [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
  [-ConnectivityLogMaxDirectorySize <Unlimited>]
  [-ConnectivityLogMaxFileSize <Unlimited>]
  [-ConnectivityLogPath <LocalLongFullPath>]
- [-DnsLogEnabled <$true | $false>]
+ [-DnsLogEnabled <Boolean>]
  [-DnsLogMaxAge <EnhancedTimeSpan>]
  [-DnsLogMaxDirectorySize <Unlimited>]
  [-DnsLogMaxFileSize <Unlimited>]
  [-DnsLogPath <LocalLongFullPath>]
  [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>]
+ [-ExternalDNSAdapterEnabled <Boolean>]
  [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-ExternalDNSProtocolOption <ProtocolOption>]
  [-ExternalDNSServers <MultiValuedProperty>]
  [-ExternalIPAddress <IPAddress>]
- [-InternalDNSAdapterEnabled <$true | $false>]
+ [-InternalDNSAdapterEnabled <Boolean>]
  [-InternalDNSAdapterGuid <Guid>]
- [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-InternalDNSProtocolOption <ProtocolOption>]
  [-InternalDNSServers <MultiValuedProperty>]
- [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
+ [-IntraOrgConnectorProtocolLoggingLevel <ProtocolLoggingLevel>]
  [-MaxConnectionRatePerMinute <Int32>]
  [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
  [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -228,7 +228,7 @@ The AntispamAgentsEnabled parameter specifies whether anti-spam agents are insta
 You set this parameter by using a script. You shouldn't modify this parameter manually.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -512,7 +512,7 @@ Accept wildcard characters: False
 The ExternalDNSAdapterEnabled parameter specifies one or more Domain Name System (DNS) servers that Exchange uses for external DNS lookups. When the ExternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations outside the Exchange organization are performed by using the DNS settings of the external network adapter specified by the value of the ExternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for external Exchange DNS lookups only, you must specify the DNS servers by using the ExternalDNSServers parameter, and you must also set the value of the ExternalDNSAdapterEnabled parameter to $false. The default value of the ExternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -546,7 +546,7 @@ Accept wildcard characters: False
 The ExternalDNSProtocolOption parameter specifies which protocol to use when querying external DNS servers. The valid options for this parameter are Any, UseTcpOnly, and UseUdpOnly. The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -596,7 +596,7 @@ Accept wildcard characters: False
 The InternalDNSAdapterEnabled parameter specifies one or more DNS servers that Exchange uses for internal DNS lookups. When the InternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations inside the Exchange organization are performed by using the DNS settings of the internal network adapter specified by the value of the InternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for internal Exchange DNS lookups only, you must specify the DNS servers by using the InternalDNSServers parameter, and you must also set the value of the InternalDNSAdapterEnabled parameter to $false. The default value of the InternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -632,7 +632,7 @@ The InternalDNSProtocolOption parameter specifies which protocol to use when you
 The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -670,7 +670,7 @@ The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP pro
 - Verbose: Protocol logging is enabled for the intra-organization Send connector in the Front End Transport service. This is the default value. The location of the log files is controlled by the SendProtocolLogPath parameter.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

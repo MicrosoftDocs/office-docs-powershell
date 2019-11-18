@@ -26,7 +26,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
  [-DynamicScopeLocation <MultiValuedProperty>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
@@ -35,7 +35,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
  [-PublicFolderLocation <MultiValuedProperty>]
- [-RestrictiveRetention <$true | $false>]
+ [-RestrictiveRetention <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
  [-SkypeLocation <MultiValuedProperty>]
@@ -48,9 +48,9 @@ New-RetentionCompliancePolicy [-Name] <String>
 New-RetentionCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
- [-RestrictiveRetention <$true | $false>]
+ [-RestrictiveRetention <Boolean>]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -150,7 +150,7 @@ The Enabled parameter specifies whether the policy is enabled or disabled. Valid
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -370,7 +370,7 @@ After a policy has been locked, no one can turn off or disable it, or remove con
 Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

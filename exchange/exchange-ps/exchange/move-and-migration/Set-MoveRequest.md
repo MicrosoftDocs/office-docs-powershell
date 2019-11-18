@@ -30,14 +30,14 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IgnoreRuleLimitErrors <$true | $false>]
+ [-IgnoreRuleLimitErrors <Boolean>]
  [-IncrementalSyncInterval <TimeSpan>]
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
- [-PreventCompletion <$true | $false>]
- [-Priority <Normal | High>]
- [-Protect <$true | $false>]
+ [-PreventCompletion <Boolean>]
+ [-Priority <RequestPriority>]
+ [-Protect <Boolean>]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteCredential <PSCredential>]
  [-RemoteGlobalCatalog <Fqdn>]
@@ -45,7 +45,7 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
  [-StartAfter <DateTime>]
- [-SuspendWhenReadyToComplete <$true | $false>]
+ [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 The IgnoreRuleLimitErrors parameter specifies that the command won't move the user's rules to the target server running Microsoft Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
@@ -361,7 +361,7 @@ The PreventCompletion parameter specifies whether to run the move request, but n
 - $false: This is the default value. The move request is run and allowed to complete. If you created the move request with the SuspendWhenReadyToComplete or PreventCompletion switches, set this parameter to $false before you run the Resume-MoveRequest cmdlet to complete the move request.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -395,7 +395,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -413,7 +413,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 The SuspendWhenReadyToComplete parameter specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this parameter, we recommend using CompleteAfter parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

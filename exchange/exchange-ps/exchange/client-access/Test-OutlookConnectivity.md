@@ -29,8 +29,8 @@ Test-OutlookConnectivity [-ProbeIdentity] <String> [-Credential <PSCredential>] 
 
 ### Protocol
 ```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <HTTP | TCP | WS>
- [-Archive <$true | $false>]
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <Protocol>
+ [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
  [-MonitoringContext]
@@ -41,13 +41,13 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <HTTP | TC
 
 ### RpcProxyServer
 ```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAutodiscover <$true | $false>
- [-Archive <$true | $false>]
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAutodiscover <Boolean>
+ [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
- [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
+ [-RpcAuthenticationType <RpcAuthenticationType>]
  [-RpcClientAccessServer <ClientAccessServerIdParameter>]
- [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>]
+ [-RpcProxyAuthenticationType <RPCProxyAuthenticationType>]
  [-RpcProxyServer <ServerIdParameter>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
@@ -58,15 +58,15 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAuto
 
 ### RpcTestType
 ```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <Array | Server>
- [-Archive <$true | $false>]
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <RpcTestType>
+ [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
  [-MonitoringContext]
- [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
+ [-RpcAuthenticationType <RpcAuthenticationType>]
  [-RpcClientAccessServer <ClientAccessServerIdParameter>]
- [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>]
- [-RpcProxyTestType <External | Internal>]
+ [-RpcProxyAuthenticationType <RPCProxyAuthenticationType>]
+ [-RpcProxyTestType <RpcProxyTestType>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
  [-WhatIf] [<CommonParameters>]
@@ -74,8 +74,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <Array 
 
 ### WSTestType
 ```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Unknown | Internal | External>
- [-Archive <$true | $false>]
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <VirtualDirectoryUriScope>
+ [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
  [-MonitoringContext]
@@ -190,7 +190,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The GetDefaultsFromAutodiscover parameter specifies whether to get default values for all of the other parameters for the command from the Autodiscover service settings. If you run the command specifying values for other parameters, those values override the default values from the Autodiscover service. The default value for this parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: RpcProxyServer
 Aliases:
 Applicable: Exchange Server 2010
@@ -208,7 +208,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The Protocol parameter specifies whether to test for Outlook Anywhere connectivity or directly test for RPC or TCP/IP connectivity. The value is either HTTP or TCP.
 
 ```yaml
-Type: HTTP | TCP | WS
+Type: Protocol
 Parameter Sets: Protocol
 Aliases:
 Applicable: Exchange Server 2010
@@ -230,7 +230,7 @@ The RpcTestType parameter specifies which type of RPC endpoint the command shoul
 - Array: The command looks for a ClientAccessArray object in the local Active Directory site.
 
 ```yaml
-Type: Array | Server
+Type: RpcTestType
 Parameter Sets: RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
@@ -254,7 +254,7 @@ The WSTestType parameter specifies type of servers that you want to include in y
 - External
 
 ```yaml
-Type: Unknown | Internal | External
+Type: VirtualDirectoryUriScope
 Parameter Sets: WSTestType
 Aliases:
 Applicable: Exchange Server 2010
@@ -276,7 +276,7 @@ $true: Connect to the user's on-premises archive mailbox.
 $false: Don't connect to the user's on-premises mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
@@ -468,7 +468,7 @@ The RpcAuthenticationType parameter specifies the authentication setting to test
 The default value is Negotiate.
 
 ```yaml
-Type: Negotiate | NTLM | Kerberos
+Type: RpcAuthenticationType
 Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
@@ -504,7 +504,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The RpcProxyAuthenticationType parameter specifies the authentication setting for the RPC Proxy endpoint. The value can be specified as Basic, NTLM, or Negotiate. There is no default value unless used with the GetDefaultsFromAutodiscover parameter.
 
 ```yaml
-Type: Basic | NTLM | Negotiate
+Type: RPCProxyAuthenticationType
 Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
@@ -544,7 +544,7 @@ The RpcProxyTestType parameter specifies which HTTP endpoint the command should 
 - External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
 
 ```yaml
-Type: External | Internal
+Type: RpcProxyTestType
 Parameter Sets: RpcTestType
 Aliases:
 Applicable: Exchange Server 2010

@@ -32,7 +32,7 @@ Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddre
  [-MessageId <String>]
  [-ResultSize <Unlimited>]
  [-Subject <String>]
- [-TraceLevel <Low | Medium | High>]
+ [-TraceLevel <TraceLevel>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -47,7 +47,7 @@ Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <Smtp
  [-MessageId <String>]
  [-ResultSize <Unlimited>]
  [-Subject <String>]
- [-TraceLevel <Low | Medium | High>]
+ [-TraceLevel <TraceLevel>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -300,7 +300,7 @@ The TraceLevel parameter specifies the details to include in the results. Valid 
 You only need to use this parameter for troubleshooting message tracking issues.
 
 ```yaml
-Type: Low | Medium | High
+Type: TraceLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

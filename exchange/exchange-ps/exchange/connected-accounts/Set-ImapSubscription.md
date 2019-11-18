@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SubscriptionModification
 ```
-Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Ntlm>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>]
+Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <Boolean>] [-Force] [-IncomingAuth <IMAPAuthenticationMechanism>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <IMAPSecurityMechanism>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the IMAP subscription is enabled. This parameter accepts $true or $false values. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by IMAP clients to access the IMAP server. The values are Basic or Ntlm. The default value is Basic.
 
 ```yaml
-Type: Basic | Ntlm
+Type: IMAPAuthenticationMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by IMAP clients to connect to the IMAP server. The values are None, Ssl, or Tls. The default value is None.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online

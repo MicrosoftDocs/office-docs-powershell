@@ -28,9 +28,9 @@ Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String>
 
 ### TeamAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <$true | $false>
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <Boolean>
  [-PrivacyMode <String>]
- [-TeamAnalyticsManagerViewEnabled <$true | $false>]
+ [-TeamAnalyticsManagerViewEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -112,10 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -TeamAnalyticsEnabled
-PARAMVALUE: $true | $false
+PARAMVALUE: Boolean
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
@@ -128,10 +128,10 @@ Accept wildcard characters: False
 ```
 
 ### -TeamAnalyticsManagerViewEnabled
-PARAMVALUE: $true | $false
+PARAMVALUE: Boolean
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online

@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Test-CalendarConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
  [-LightMode] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-ResetTestAccountCredentials]
- [-TestType <Internal | External>] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
+ [-TestType <OwaConnectivityTestType>] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
  [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 The TestType parameter specifies whether the command tests internal or external URLs. Values are Internal and External. The default value is Internal.
 
 ```yaml
-Type: Internal | External
+Type: OwaConnectivityTestType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

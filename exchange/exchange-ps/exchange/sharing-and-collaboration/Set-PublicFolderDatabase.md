@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
- [-AllowFileRestore <$true | $false>]
- [-BackgroundDatabaseMaintenance <$true | $false>]
- [-CircularLoggingEnabled <$true | $false>]
+ [-AllowFileRestore <Boolean>]
+ [-BackgroundDatabaseMaintenance <Boolean>]
+ [-CircularLoggingEnabled <Boolean>]
  [-Confirm]
  [-CustomReferralServerList <MultiValuedProperty>]
  [-DeletedItemRetention <EnhancedTimeSpan>]
@@ -34,15 +34,15 @@ Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
  [-ItemRetentionPeriod <Unlimited>]
  [-MaintenanceSchedule <Schedule>]
  [-MaxItemSize <Unlimited>]
- [-MountAtStartup <$true | $false>]
+ [-MountAtStartup <Boolean>]
  [-Name <String>]
  [-ProhibitPostQuota <Unlimited>]
  [-QuotaNotificationSchedule <Schedule>]
  [-ReplicationMessageSize <ByteQuantifiedSize>]
  [-ReplicationPeriod <UInt32>]
  [-ReplicationSchedule <Schedule>]
- [-RetainDeletedItemsUntilBackup <$true | $false>]
- [-UseCustomReferralServerList <$true | $false>]
+ [-RetainDeletedItemsUntilBackup <Boolean>]
+ [-UseCustomReferralServerList <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 The AllowFileRestore parameter specifies that the public folder database can be overwritten if the public folder database is restored. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Storage Engine (ESE) performs database maintenance. The two possible values are $true or $false. If you specify $true, the public folder database reads the object during database mount and initializes the database to perform the background database maintenance. If you specify $false, the public folder database reads the object during database mount and initializes the database without the option to perform the background database maintenance.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The CircularLoggingEnabled parameter specifies whether to enable circular logging. If you specify a value of $true, circular logging is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 The MountAtStartup parameter specifies whether the database should be mounted when the store starts. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -494,7 +494,7 @@ Accept wildcard characters: False
 The RetainDeletedItemsUntilBackup parameter specifies that deleted items aren't removed until a backup of the public folder database is performed. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -512,7 +512,7 @@ The UseCustomReferralServerList parameter specifies whether to use the server co
 Setting this parameter to $false also clears the PublicFolderReferralServerList parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

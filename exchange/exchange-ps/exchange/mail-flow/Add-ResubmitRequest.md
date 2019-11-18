@@ -26,7 +26,7 @@ Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Destination <Gui
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
- [-TestOnly <$true | $false>]
+ [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -37,7 +37,7 @@ Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-MessageId <Strin
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
- [-TestOnly <$true | $false>]
+ [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

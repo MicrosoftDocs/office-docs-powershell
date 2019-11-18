@@ -28,7 +28,7 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-BodyContainsWords <MultiValuedProperty>]
  [-Confirm]
  [-CopyToFolder <MailboxFolderIdParameter>]
- [-DeleteMessage <$true | $false>]
+ [-DeleteMessage <Boolean>]
  [-DeleteSystemCategory <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-ExceptIfBodyContainsWords <MultiValuedProperty>]
@@ -36,25 +36,25 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
- [-ExceptIfHasAttachment <$true | $false>]
+ [-ExceptIfHasAttachment <Boolean>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
- [-ExceptIfMessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-ExceptIfMyNameInCcBox <$true | $false>]
- [-ExceptIfMyNameInToBox <$true | $false>]
- [-ExceptIfMyNameInToOrCcBox <$true | $false>]
- [-ExceptIfMyNameNotInToBox <$true | $false>]
+ [-ExceptIfMessageTypeMatches <InboxRuleMessageType>]
+ [-ExceptIfMyNameInCcBox <Boolean>]
+ [-ExceptIfMyNameInToBox <Boolean>]
+ [-ExceptIfMyNameInToOrCcBox <Boolean>]
+ [-ExceptIfMyNameNotInToBox <Boolean>]
  [-ExceptIfReceivedAfterDate <ExDateTime>]
  [-ExceptIfReceivedBeforeDate <ExDateTime>]
  [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfSentOnlyToMe <$true | $false>]
+ [-ExceptIfSentOnlyToMe <Boolean>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
- [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExceptIfWithImportance <Importance>]
  [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-ExceptIfWithSensitivity <Sensitivity>]
  [-FlaggedForAction <String>]
  [-Force]
  [-ForwardAsAttachmentTo <RecipientIdParameter[]>]
@@ -62,36 +62,36 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
  [-FromSubscription <AggregationSubscriptionIdentity[]>]
- [-HasAttachment <$true | $false>]
+ [-HasAttachment <Boolean>]
  [-HasClassification <MessageClassificationIdParameter[]>]
  [-HeaderContainsWords <MultiValuedProperty>]
  [-Mailbox <MailboxIdParameter>]
- [-MarkAsRead <$true | $false>]
- [-MarkImportance <Low | Normal | High>]
- [-MessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
+ [-MarkAsRead <Boolean>]
+ [-MarkImportance <Importance>]
+ [-MessageTypeMatches <InboxRuleMessageType>]
  [-MoveToFolder <MailboxFolderIdParameter>]
- [-MyNameInCcBox <$true | $false>]
- [-MyNameInToBox <$true | $false>]
- [-MyNameInToOrCcBox <$true | $false>]
- [-MyNameNotInToBox <$true | $false>]
+ [-MyNameInCcBox <Boolean>]
+ [-MyNameInToBox <Boolean>]
+ [-MyNameInToOrCcBox <Boolean>]
+ [-MyNameNotInToBox <Boolean>]
  [-Name <String>]
- [-PinMessage <$true | $false>]
+ [-PinMessage <Boolean>]
  [-Priority <Int32>]
  [-ReceivedAfterDate <ExDateTime>]
  [-ReceivedBeforeDate <ExDateTime>]
  [-RecipientAddressContainsWords <MultiValuedProperty>]
  [-RedirectTo <RecipientIdParameter[]>]
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
- [-SentOnlyToMe <$true | $false>]
+ [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
- [-StopProcessingRules <$true | $false>]
+ [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-WhatIf]
- [-WithImportance <Low | Normal | High>]
+ [-WithImportance <Importance>]
  [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-WithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-WithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-WithSensitivity <Sensitivity>]
  [<CommonParameters>]
 ```
 
@@ -371,7 +371,7 @@ The DeleteMessage parameter specifies an action for the Inbox rule that sends me
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -547,7 +547,7 @@ The ExceptIfHasAttachment parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is HasAttachment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -627,7 +627,7 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the Inbox ru
 The corresponding condition parameter to this exception is MessageTypeMatches.
 
 ```yaml
-Type: AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport
+Type: InboxRuleMessageType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -649,7 +649,7 @@ The ExceptIfMyNameInCcBox parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is MyNameInCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -671,7 +671,7 @@ The ExceptIfMyNameInToBox parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is MyNameInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -693,7 +693,7 @@ The ExceptIfMyNameInToOrCcBox parameter specifies an exception for the Inbox rul
 The corresponding condition parameter to this exception is MyNameInToOrCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -715,7 +715,7 @@ The ExceptIfMyNameNotInToBox parameter specifies an exception for the Inbox rule
 The corresponding condition parameter to this exception is MyNameNotInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -799,7 +799,7 @@ The ExceptIfSentOnlyToMe parameter specifies an exception for the Inbox rule tha
 The corresponding condition parameter to this exception is SentOnlyToMe.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -899,7 +899,7 @@ The ExceptIfWithImportance parameter specifies an exception for the Inbox rule t
 The corresponding condition parameter to this exception is WithImportance.
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -993,7 +993,7 @@ The ExceptIfWithSensitivity parameter specifies an exception for the Inbox rule 
 The corresponding condition parameter to this exception is WithSensitivity.
 
 ```yaml
-Type: Normal | Personal | Private | CompanyConfidential
+Type: Sensitivity
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1205,7 +1205,7 @@ The HasAttachment parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfHasAttachment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1301,7 +1301,7 @@ The MarkAsRead parameter specifies an action for the Inbox rule that marks messa
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1323,7 +1323,7 @@ The MarkImportance parameter specifies an action for the Inbox rule that marks m
 - High
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1363,7 +1363,7 @@ The MessageTypeMatches parameter specifies a condition for the Inbox rule that l
 The corresponding exception parameter to this condition is ExceptIfMessageTypeMatches.
 
 ```yaml
-Type: AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport
+Type: InboxRuleMessageType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1401,7 +1401,7 @@ The MyNameInCcBox parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfMyNameInCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1423,7 +1423,7 @@ The MyNameInToBox parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfMyNameInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1445,7 +1445,7 @@ The MyNameInToOrCcBox parameter specifies a condition for the Inbox rule that lo
 The corresponding exception parameter to this condition is ExceptIfMyNameInToOrCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1467,7 +1467,7 @@ The MyNameNotInToBox parameter specifies a condition for the Inbox rule that loo
 The corresponding exception parameter to this condition is ExceptIfMyNameNotInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1503,7 +1503,7 @@ The PinMessage parameter specifies an action for the Inbox rule that pins messag
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1653,7 +1653,7 @@ The SentOnlyToMe parameter specifies a condition for the Inbox rule that looks f
 The corresponding exception parameter to this condition is ExceptIfSentOnlyToMe.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1705,7 +1705,7 @@ The StopProcessingRules parameter specifies an action for the Inbox rule that st
 - $false: The action isn't used (continue processing more rules after this one).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1789,7 +1789,7 @@ The WithImportance parameter specifies a condition for the Inbox rule that looks
 The corresponding exception parameter to this condition is ExceptIfWithImportance.
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1883,7 +1883,7 @@ The WithSensitivity parameter specifies a condition for the Inbox rule that look
 The corresponding exception parameter to this condition is ExceptIfWithSensitivity.
 
 ```yaml
-Type: Normal | Personal | Private | CompanyConfidential
+Type: Sensitivity
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

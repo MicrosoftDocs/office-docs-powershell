@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
  [-Confirm]
- [-Resubmit <$true | $false>]
+ [-Resubmit <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
 ```
 Retry-Queue [-Identity] <QueueIdentity>
  [-Confirm]
- [-Resubmit <$true | $false>]
+ [-Resubmit <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 The Resubmit parameter specifies whether the queue contents should be resubmitted to the categorizer before a connection is established. Valid input for this parameter is $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
