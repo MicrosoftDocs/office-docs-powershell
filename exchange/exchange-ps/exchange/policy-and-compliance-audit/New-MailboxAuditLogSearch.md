@@ -24,9 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-MailboxAuditLogSearch -EndDate <ExDateTime> -StartDate <ExDateTime> -StatusMailRecipients <MultiValuedProperty>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-ExternalAccess <$true | $false>]
+ [-ExternalAccess <Boolean>]
  [-GroupMailbox]
- [-HasAttachments <$true | $false>]
+ [-HasAttachments <Boolean>]
  [-LogonTypes <MultiValuedProperty>]
  [-Mailboxes <MultiValuedProperty>]
  [-Name <String>]
@@ -158,7 +158,7 @@ $true: Audit log entries for mailbox access by external users or Microsoft datac
 $false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -196,7 +196,7 @@ The HasAttachments parameter filters the search by messages that have attachment
 - $false: Messages with and without attachments are included in the search.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

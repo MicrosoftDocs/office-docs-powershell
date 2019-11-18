@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ManagedFolder [-Identity] <ELCFolderIdParameter> [-BaseFolderOnly <$true | $false>] [-Comment <String>]
+Set-ManagedFolder [-Identity] <ELCFolderIdParameter> [-BaseFolderOnly <Boolean>] [-Comment <String>]
  [-Confirm] [-DomainController <Fqdn>] [-FolderName <String>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>] [-Name <String>]
+ [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <Boolean>] [-Name <String>]
  [-StorageQuota <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 The BaseFolderOnly parameter specifies whether the managed content settings should be applied only to the managed folder or to the folder and all its subfolders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 The MustDisplayCommentEnabled parameter specifies whether to set a flag that's used by any client that displays comments and accepts this setting. If this parameter is set to $true, a flag is set that prevents users from minimizing a folder comment, which is visible in Outlook 2007 only. If the parameter isn't present or is set to $false, users can minimize the comment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

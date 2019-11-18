@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AdSite [-Identity] <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HubSiteEnabled <$true | $false>] [-PartnerId <Int32>]
- [-WhatIf] [-InboundMailEnabled <$true | $false>] [<CommonParameters>]
+ [-HubSiteEnabled <Boolean>] [-PartnerId <Int32>]
+ [-WhatIf] [-InboundMailEnabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 The HubSiteEnabled parameter specifies whether this site acts as a hub site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -146,7 +146,7 @@ The InboundMailEnabled parameter enables or disables receiving incoming messages
 Valid input for this parameter is $true or $false. The default value is $true. If you set the value to $false, none of the Exchange servers in the Active Directory site will be able to receive incoming messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

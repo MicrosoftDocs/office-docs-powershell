@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-HotmailSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Confirm] [-DisplayName <String>]
- [-Enabled <$true | $false>] [-Mailbox <MailboxIdParameter>] [-Password <SecureString>] [-WhatIf]
+ [-Enabled <Boolean>] [-Mailbox <MailboxIdParameter>] [-Password <SecureString>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the Hotmail subscription is enabled. This parameter accepts $true or $false values. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

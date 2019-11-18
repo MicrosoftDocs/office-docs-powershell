@@ -32,7 +32,7 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
 
 ### Default
 ```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <Days | Months | Years>]
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <HoldDurationHint>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
@@ -322,7 +322,7 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
+Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center

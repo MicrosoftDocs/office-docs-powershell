@@ -47,7 +47,7 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-ConditionalDepartment <MultiValuedProperty>]
  [-ConditionalStateOrProvince <MultiValuedProperty>]
  [-Confirm]
- [-CreateDTMFMap <$true | $false>]
+ [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
  [-CustomAttribute11 <String>]
@@ -63,11 +63,11 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
- [-DirectMembershipOnly <$true | $false>]
+ [-DirectMembershipOnly <Boolean>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EmailAddressPolicyEnabled <Boolean>]
  [-ExpansionServer <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -76,7 +76,7 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-ExtensionCustomAttribute5 <MultiValuedProperty>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-IgnoreDefaultScope]
  [-IncludedRecipients <WellKnownRecipientType>]
  [-MailTip <String>]
@@ -85,7 +85,7 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Name <String>]
  [-Notes <String>]
  [-PhoneticDisplayName <String>]
@@ -95,11 +95,11 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-ReportToManagerEnabled <$true | $false>]
- [-ReportToOriginatorEnabled <$true | $false>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-ReportToManagerEnabled <Boolean>]
+ [-ReportToOriginatorEnabled <Boolean>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-SendOofMessageToOriginatorEnabled <$true | $false>]
+ [-SendOofMessageToOriginatorEnabled <Boolean>]
  [-SimpleDisplayName <String>]
  [-UMDtmfMap <MultiValuedProperty>]
  [-WhatIf]
@@ -823,7 +823,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1081,7 +1081,7 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1179,7 +1179,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1397,7 +1397,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1675,7 +1675,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1939,7 +1939,7 @@ The ReportToManagerEnabled parameter specifies whether delivery status notificat
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1961,7 +1961,7 @@ The ReportToOriginatorEnabled parameter specifies whether delivery status notifi
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1981,7 +1981,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -2025,7 +2025,7 @@ The SendOofMessageToOriginatorEnabled parameter specifies how to handle out of o
 - $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

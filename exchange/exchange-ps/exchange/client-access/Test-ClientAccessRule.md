@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ClientAccessRule
- -AuthenticationType <BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication>
- -Protocol <ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
+ -AuthenticationType <ClientAccessAuthenticationMethod>
+ -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
  [-OAuthClaims <Hashtable>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -81,7 +81,7 @@ Valid values for this parameter are:
 In client access rules, authentication types are defined by the AnyOfAuthenticationTypes and ExceptAnyOfAuthenticationTypes parameters.
 
 ```yaml
-Type: BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication
+Type: ClientAccessAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
@@ -123,7 +123,7 @@ Valid values for this parameter are:
 In client access rules, protocol types are defined by the AnyOfProtocols and ExceptAnyOfProtocols parameters.
 
 ```yaml
-Type: ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST
+Type: ClientAccessProtocol
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DeviceConfigurationPolicy [-Name] <String> [-Comment <String>] [-Confirm] [-Enabled <$true | $false>]
+New-DeviceConfigurationPolicy [-Name] <String> [-Comment <String>] [-Confirm] [-Enabled <Boolean>]
  [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -109,7 +109,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

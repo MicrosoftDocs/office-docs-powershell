@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DeliveryAgentConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> -DeliveryProtocol <String>
- [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-IsScopedConnector <$true | $false>] [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>]
+ [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
+ [-IsScopedConnector <Boolean>] [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>]
  [-MaxMessagesPerConnection <Int32>] [-SourceTransportServers <MultiValuedProperty>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -164,7 +164,7 @@ The Enabled parameter specifies whether the delivery agent connector is enabled.
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. If the value of this parameter is $false, the connector can be used by all Mailbox servers in your organization. If the value of this parameter is $true, the connector can only be used by Mailbox servers in the same Active Directory site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeSend <$true | $false>]
+Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeSend <Boolean>]
  [-Confirm]
- [-DictionaryLanguage <Spanish | Arabic | Danish | Dutch | EnglishAustralia | EnglishCanada | EnglishUnitedKingdom | EnglishUnitedStates | Finnish | French | GermanPostReform | GermanPreReform | Hebrew | Italian | Korean | NorwegianBokmal | NorwegianNynorsk | PortuguesePortugal | PortugueseBrasil | Swedish | Catalan>]
- [-DomainController <Fqdn>] [-IgnoreMixedDigits <$true | $false>] [-IgnoreUppercase <$true | $false>] [-WhatIf]
+ [-DictionaryLanguage <SpellCheckerSupportedLanguage>]
+ [-DomainController <Fqdn>] [-IgnoreMixedDigits <Boolean>] [-IgnoreUppercase <Boolean>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 The CheckBeforeSend parameter specifies whether Outlook on the web checks the spelling for every message when the user clicks Send in the new message form. Valid values are$true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -167,7 +167,7 @@ The DictionaryLanguage parameter specifies the dictionary language to use when t
 - Swedish
 
 ```yaml
-Type: Spanish | Arabic | Danish | Dutch | EnglishAustralia | EnglishCanada | EnglishUnitedKingdom | EnglishUnitedStates | Finnish | French | GermanPostReform | GermanPreReform | Hebrew | Italian | Korean | NorwegianBokmal | NorwegianNynorsk | PortuguesePortugal | PortugueseBrasil | Swedish | Catalan
+Type: SpellCheckerSupportedLanguage
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 The IgnoreMixedDigits parameter specifies whether the spelling checker ignores words that contain numbers. Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -219,7 +219,7 @@ The IgnoreUppercase parameter specifies whether the spelling checker ignores wor
 Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

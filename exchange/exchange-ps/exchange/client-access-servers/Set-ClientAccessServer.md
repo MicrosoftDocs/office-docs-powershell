@@ -29,12 +29,12 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-CleanUpInvalidAlternateServiceAccountCredentials]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-IsOutOfService <$true | $false>]
+ [-IsOutOfService <Boolean>]
  [-RemoveAlternateServiceAccountCredentials]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -47,12 +47,12 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-AutoDiscoverSiteScope <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-IsOutOfService <$true | $false>]
+ [-IsOutOfService <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -224,7 +224,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The IrmLogEnabled parameter specifies whether logging is enabled for Information Rights Management (IRM). Valid values are $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

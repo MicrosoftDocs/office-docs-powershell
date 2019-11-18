@@ -35,7 +35,7 @@ Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential>
 
 ### Identity
 ```
-Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
+Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
  [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 The TestType parameter specifies whether the command tests internal or external URLs. Values are Internal and External. You can't use this parameter with the URL parameter. When neither the TestType parameter nor the URL parameter is specified, the default is TestType:Internal.
 
 ```yaml
-Type: Internal | External
+Type: OwaConnectivityTestType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010

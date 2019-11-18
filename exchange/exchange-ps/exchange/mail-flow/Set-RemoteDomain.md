@@ -22,32 +22,32 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
- [-AllowedOOFType <External | InternalLegacy | ExternalLegacy | None>]
- [-AutoForwardEnabled <$true | $false>]
- [-AutoReplyEnabled <$true | $false>]
- [-ByteEncoderTypeFor7BitCharsets <Use7Bit | UseQP | UseBase64 | UseQPHtmlDetectTextPlain | UseBase64HtmlDetectTextPlain | UseQPHtml7BitTextPlain | UseBase64Html7BitTextPlain | Undefined>]
+ [-AllowedOOFType <AllowedOOFType>]
+ [-AutoForwardEnabled <Boolean>]
+ [-AutoReplyEnabled <Boolean>]
+ [-ByteEncoderTypeFor7BitCharsets <ByteEncoderTypeFor7BitCharsetsEnum>]
  [-CharacterSet <String>]
  [-Confirm]
- [-ContentType <MimeHtmlText | MimeText | MimeHtml>]
- [-DeliveryReportEnabled <$true | $false>]
- [-DisplaySenderName <$true | $false>]
+ [-ContentType <ContentType>]
+ [-DeliveryReportEnabled <Boolean>]
+ [-DisplaySenderName <Boolean>]
  [-DomainController <Fqdn>]
- [-IsCoexistenceDomain <$true | $false>]
- [-IsInternal <$true | $false>]
+ [-IsCoexistenceDomain <Boolean>]
+ [-IsInternal <Boolean>]
  [-LineWrapSize <Unlimited>]
- [-MeetingForwardNotificationEnabled <$true | $false>]
+ [-MeetingForwardNotificationEnabled <Boolean>]
  [-MessageCountThreshold <Int32>]
  [-Name <String>]
- [-NDRDiagnosticInfoEnabled <$true | $false>]
- [-NDREnabled <$true | $false>]
+ [-NDRDiagnosticInfoEnabled <Boolean>]
+ [-NDREnabled <Boolean>]
  [-NonMimeCharacterSet <String>]
- [-PreferredInternetCodePageForShiftJis <Undefined | Iso2022Jp | Esc2022Jp | Sio2022Jp>]
+ [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
- [-TargetDeliveryDomain <$true | $false>]
- [-TNEFEnabled <$true | $false>]
- [-TrustedMailInboundEnabled <$true | $false>]
- [-TrustedMailOutboundEnabled <$true | $false>]
- [-UseSimpleDisplayName <$true | $false>]
+ [-TargetDeliveryDomain <Boolean>]
+ [-TNEFEnabled <Boolean>]
+ [-TrustedMailInboundEnabled <Boolean>]
+ [-TrustedMailOutboundEnabled <Boolean>]
+ [-UseSimpleDisplayName <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -114,7 +114,7 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 - None: No automatic replies are sent to recipients in the remote domain.
 
 ```yaml
-Type: External | InternalLegacy | ExternalLegacy | None
+Type: AllowedOOFType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -134,7 +134,7 @@ The AutoForwardEnabled parameter specifies whether to allow messages that are au
 - $false: Auto-forwarded messages aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -154,7 +154,7 @@ The AutoReplyEnabled parameter specifies whether to allow messages that are auto
 - $false: Automatic replies aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -186,7 +186,7 @@ The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encodi
 - Undefined: Always use QP encoding for HTML and plain text. This is the default value.
 
 ```yaml
-Type: Use7Bit | UseQP | UseBase64 | UseQPHtmlDetectTextPlain | UseBase64HtmlDetectTextPlain | UseQPHtml7BitTextPlain | UseBase64Html7BitTextPlain | Undefined
+Type: ByteEncoderTypeFor7BitCharsetsEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -250,7 +250,7 @@ The ContentType parameter specifies the outbound message content type and format
 - MimeHtml: Converts all messages to MIME messages that use HTML formatting.
 
 ```yaml
-Type: MimeHtmlText | MimeText | MimeHtml
+Type: ContentType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -270,7 +270,7 @@ The DeliveryReportEnabled parameter specifies whether to allow delivery reports 
 - $false: Delivery reports aren't delivered to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -292,7 +292,7 @@ The DisplaySenderName parameter specifies whether to show the sender's Display N
 - $false. Sender names aren't displayed in messages sent to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -334,7 +334,7 @@ The IsCoexistenceDomain parameter specifies whether this remote domain is used t
 - $false: The remote domain doesn't represent your Exchange Online organization. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -354,7 +354,7 @@ The IsInternal parameter specifies whether the recipients in the remote domain a
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -390,7 +390,7 @@ The MeetingForwardNotificationEnabled parameter specifies whether to enable meet
 - $false: Meeting requests forwarded to recipients in the remote domain don't generate a meeting forward notification to the meeting organizer.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -450,7 +450,7 @@ The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information 
 This parameter is meaningful only when the value of the NDREnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -472,7 +472,7 @@ The NDREnabled parameter specifies whether to allow non-delivery reports (also k
 - $false: NDRs from your organization aren't sent to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -518,7 +518,7 @@ The PreferredInternetCodePageForShiftJis parameter specifies the specific code p
 - Undefined: No codepage is defined. This is the default value.
 
 ```yaml
-Type: Undefined | Iso2022Jp | Esc2022Jp | Sio2022Jp
+Type: PreferredInternetCodePageForShiftJisEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -558,7 +558,7 @@ The TargetDeliveryDomain parameter specifies whether the remote domain is used i
 - $false: The remote domain isn't used for the target email address of mail users that represent the users in the other forest. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -580,7 +580,7 @@ The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Form
 - $null (blank): TNEF encoding isn't specified for the remote domain. This is the default value. TNEF encoding for recipients in the remote domain is controlled by the value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects, the sender's per-recipient settings in Outlook, or the sender's default internet message settings in Outlook
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -600,7 +600,7 @@ The TrustedMailInboundEnabled parameter specifies whether messages from senders 
 - $false: Inbound messages from senders in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -620,7 +620,7 @@ The TrustedMailOutboundEnabled parameter specifies whether messages sent to reci
 - $false: Outbound messages to recipients in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -640,7 +640,7 @@ The UseSimpleDisplayName parameter specifies whether the sender's simple display
 - $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

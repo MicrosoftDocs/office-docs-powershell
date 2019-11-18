@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ImapConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm]
- [-ConnectionType <Plaintext | Tls | Ssl>] [-DomainController <Fqdn>] [-LightMode]
+ [-ConnectionType <ProtocolConnectionType>] [-DomainController <Fqdn>] [-LightMode]
  [-MailboxCredential <PSCredential>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
  [-PerConnectionTimeout <Int32>] [-PortClientAccessServer <Int32>] [-ResetTestAccountCredentials]
  [-Timeout <UInt32>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
@@ -137,7 +137,7 @@ The ConnectionType parameter specifies the type of connection that's used to con
 - Tls
 
 ```yaml
-Type: Plaintext | Tls | Ssl
+Type: ProtocolConnectionType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

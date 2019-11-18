@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AliasPrefix <String>]
  [-Confirm]
- [-DefaultAliasPrefixEnabled <$true | $false>]
+ [-DefaultAliasPrefixEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-IsDefault]
  [-IssueWarningQuota <ByteQuantifiedSize>]
@@ -136,7 +136,7 @@ The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes hav
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

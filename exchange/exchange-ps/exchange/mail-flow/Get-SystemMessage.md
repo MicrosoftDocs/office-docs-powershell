@@ -100,7 +100,7 @@ You can't use this parameter with the Original switch.
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes:\<Language\>\\\<Internal | External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
+- System messages for enhanced status codes:\<Language\>\\\<Internal \| External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
 
 - System messages for quotas:\<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
 

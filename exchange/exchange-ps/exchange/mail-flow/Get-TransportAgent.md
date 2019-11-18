@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-TransportAgent [[-Identity] <TransportAgentObjectId>] [-DomainController <Fqdn>]
- [-TransportService <Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery>] [<CommonParameters>]
+ [-TransportService <TransportService>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,7 +94,7 @@ The TransportService parameter specifies the transport service that you want to 
 - Edge on Edge Transport servers.
 
 ```yaml
-Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
+Type: TransportService
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -23,13 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ACSTrustApplication
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-ApplicationIdentifier <String>] [-Realm <String>]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -39,13 +39,13 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-Application
 ### AuthMetadataUrl
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -55,13 +55,13 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadat
 ### RefreshAuthMetadata
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-RefreshAuthMetadata]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 The AcceptSecurityIdentifierInformation parameter specifies whether Exchange should accept security identifiers (SIDs) from another trusted Active Directory forest for the partner application. By default, new partner applications are configured to not accept SIDs from another forest. If you're in deployment with a trusted forest, set the parameter to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -132,7 +132,7 @@ The AccountType parameter specifies the type of Microsoft account that's require
 - ConsumerAccount
 
 ```yaml
-Type: OrganizationalAccount | ConsumerAccount
+Type: SupportedAccountType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the partner application is enabled. By default, new partner applications are enabled. Set the parameter to $false to create the application configuration in a disabled state.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

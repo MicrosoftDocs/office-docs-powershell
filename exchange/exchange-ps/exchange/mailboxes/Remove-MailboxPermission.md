@@ -27,7 +27,7 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
  [-Deny]
  [-DomainController <Fqdn>] [-IgnoreDefaultScope]
  [[-Identity] <MailboxIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -62,7 +62,7 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies whether permissions are inherited to folders within the mailbox.
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

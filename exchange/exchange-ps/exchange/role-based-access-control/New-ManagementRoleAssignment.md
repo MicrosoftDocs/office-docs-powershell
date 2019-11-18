@@ -31,7 +31,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -48,7 +48,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -65,7 +65,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -Securit
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -82,7 +82,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -439,7 +439,7 @@ The RecipientRelativeWriteScope parameter specifies the type of restriction to a
 Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They are used internally by the cmdlet.
 
 ```yaml
-Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
+Type: RecipientWriteScopeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

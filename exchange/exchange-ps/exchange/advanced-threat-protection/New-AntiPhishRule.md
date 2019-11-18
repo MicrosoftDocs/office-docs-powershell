@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
  [-Comments <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
@@ -142,7 +142,7 @@ The Enabled parameter specifies whether the rule is enabled. Valid values are:
 In the properties of the rule, the value of this parameter is visible in the State property.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

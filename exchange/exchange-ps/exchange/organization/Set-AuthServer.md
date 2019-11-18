@@ -25,17 +25,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <$true | $false>] [-TrustAnySSLCertificate]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <Boolean>] [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -45,7 +45,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [
 Set-AuthServer [-Identity] <AuthServerIdParameter> [-RefreshAuthMetadata]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -152,7 +152,7 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 - $false: The authorization server does not issue or accept authorization tokens.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -172,7 +172,7 @@ $true: The authorization server's URL is advertised to calling partner applicati
 $false: The authorization server's URL is not advertised. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

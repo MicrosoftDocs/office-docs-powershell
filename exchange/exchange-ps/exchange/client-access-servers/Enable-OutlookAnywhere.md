@@ -22,26 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CustomIdentity
 ```
-Enable-OutlookAnywhere -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-IISAuthenticationMethods <MultiValuedProperty>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod>
+ -ExternalHostname <Hostname> -SSLOffloading <Boolean> [-IISAuthenticationMethods <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### DefaultIdentity
 ```
-Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false>
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod>
+ -ExternalHostname <Hostname> -SSLOffloading <Boolean>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -92,7 +92,7 @@ This parameter must be specified if you don't use the DefaultAuthenticationMetho
 Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
@@ -116,7 +116,7 @@ When you set an authentication value by using the DefaultAuthenticationMethod pa
 If the DefaultAuthenticationMethod parameter is specified, neither the ClientAuthenticationMethod nor the IISAuthenticationMethods parameter can be used.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: DefaultIdentity
 Aliases:
 Applicable: Exchange Server 2010
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 The SSLOffloading parameter specifies whether the Client Access server requires Secure Sockets Layer (SSL). This value should be set only to $true when an SSL hardware solution is running in front of the Client Access server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -260,7 +260,7 @@ If you have a proxy server between the client and the Client Access server that'
 To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

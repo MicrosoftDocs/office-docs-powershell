@@ -25,7 +25,7 @@ New-AdminAuditLogSearch [ -EndDate <ExDateTime>
  -StartDate <ExDateTime> -StatusMailRecipients <MultiValuedProperty> [-Cmdlets <MultiValuedProperty>]
  [-Confirm] [-DomainController <Fqdn>] [-Name <String>] [-ObjectIds <MultiValuedProperty>]
  [-Parameters <MultiValuedProperty>] [-UserIds <MultiValuedProperty>] [-WhatIf]
- [-ExternalAccess <$true | $false>] [<CommonParameters>]
+ [-ExternalAccess <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 The ExternalAccess parameter returns only audit log entries for cmdlets that were run by a user outside of your organization. In Exchange Online, use this parameter to return audit log entries for cmdlets run by Microsoft datacenter administrators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>] [-CaseType <eDiscovery | DSR>] [-DomainController <Fqdn>] [-RoleGroup <String>]
+Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>] [-CaseType <ComplianceCaseType>] [-DomainController <Fqdn>] [-RoleGroup <String>]
  [<CommonParameters>]
 ```
 
@@ -54,7 +54,7 @@ The CaseType parameter specifies the type of eDiscovery case that you want to vi
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy \> DSR cases.
 
 ```yaml
-Type: eDiscovery | DSR
+Type: ComplianceCaseType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

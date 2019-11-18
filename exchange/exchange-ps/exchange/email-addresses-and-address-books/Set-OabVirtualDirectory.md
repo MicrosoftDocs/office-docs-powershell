@@ -22,19 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>]
+ [-BasicAuthentication <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalUrl <Uri>]
  [-InternalUrl <Uri>]
- [-OAuthAuthentication <$true | $false>]
+ [-OAuthAuthentication <Boolean>]
  [-PollInterval <Int32>]
- [-RequireSSL <$true | $false>]
+ [-RequireSSL <Boolean>]
  [-WhatIf]
- [-WindowsAuthentication <$true | $false>]
+ [-WindowsAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -86,7 +86,7 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 You can use this parameter with the WindowsAuthentication parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -194,7 +194,7 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -278,7 +278,7 @@ The RequireSSL parameter specifies whether the client connection to the virtual 
 - $false: SSL encryption isn't required to connect to the virtual directory.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -316,7 +316,7 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 You can use this parameter with the BasicAuthentication parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

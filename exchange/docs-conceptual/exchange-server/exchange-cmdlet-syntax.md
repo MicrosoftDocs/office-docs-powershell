@@ -43,11 +43,9 @@ Parameter sets are groups of parameters that can be used with each other in the 
 
 Many cmdlets have only one parameter set, which means that all available parameters can be used with each other. Other cmdlets have several parameter sets, which indicates some parameters perform functions that are incompatible with other parameters. For example, suppose the following parameter sets are available on the **New-SystemMessage** cmdlet:
 
-```PowerShell
-New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Language <CultureInfo> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>
+`New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>`
 
-New-SystemMessage -Language <CultureInfo> -QuotaMessageType <WarningMailboxUnlimitedSize| WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>
-```
+`New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>`
 
 This cmdlet has two separate parameter sets. Based on the entries, you can use these parameters together in the same command:
 

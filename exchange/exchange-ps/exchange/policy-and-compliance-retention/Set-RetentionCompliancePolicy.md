@@ -43,7 +43,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSkypeLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
@@ -56,7 +56,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveSkypeLocation <MultiValuedProperty>]
  [-RemoveSkypeLocationException <MultiValuedProperty>]
- [-RestrictiveRetention <$true | $false>]
+ [-RestrictiveRetention <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -69,7 +69,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddTeamsChatLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-RemoveTeamsChannelLocation <MultiValuedProperty>]
  [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
@@ -500,7 +500,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity, TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -792,7 +792,7 @@ After a policy has been locked, no one can turn off or disable it, or remove con
 Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center

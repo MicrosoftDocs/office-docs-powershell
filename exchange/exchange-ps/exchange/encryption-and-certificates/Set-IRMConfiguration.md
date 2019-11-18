@@ -24,26 +24,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
- [-AutomaticServiceUpdateEnabled <$true | $false>]
- [-AzureRMSLicensingEnabled <$true | $false>]
- [-ClientAccessServerEnabled <$true | $false>]
+ [-AutomaticServiceUpdateEnabled <Boolean>]
+ [-AzureRMSLicensingEnabled <Boolean>]
+ [-ClientAccessServerEnabled <Boolean>]
  [-Confirm]
- [-DecryptAttachmentForEncryptOnly <$true | $false>]
+ [-DecryptAttachmentForEncryptOnly <Boolean>]
  [-DomainController <Fqdn>]
- [-EDiscoverySuperUserEnabled <$true | $false>]
- [-EnablePdfEncryption <$true | $false>]
- [-ExternalLicensingEnabled <$true | $false>]
+ [-EDiscoverySuperUserEnabled <Boolean>]
+ [-EnablePdfEncryption <Boolean>]
+ [-ExternalLicensingEnabled <Boolean>]
  [-Force]
- [-InternalLicensingEnabled <$true | $false>]
- [-JournalReportDecryptionEnabled <$true | $false>]
+ [-InternalLicensingEnabled <Boolean>]
+ [-JournalReportDecryptionEnabled <Boolean>]
  [-LicensingLocation <MultiValuedProperty>]
  [-RefreshServerCertificates]
  [-RMSOnlineKeySharingLocation <Uri>]
- [-SearchEnabled <$true | $false>]
- [-SimplifiedClientAccessDoNotForwardDisabled <$true | $false>]
- [-SimplifiedClientAccessEnabled <$true | $false>]
- [-SimplifiedClientAccessEncryptOnlyDisabled <$true | $false>]
- [-TransportDecryptionSetting <Disabled | Optional | Mandatory>]
+ [-SearchEnabled <Boolean>]
+ [-SimplifiedClientAccessDoNotForwardDisabled <Boolean>]
+ [-SimplifiedClientAccessEnabled <Boolean>]
+ [-SimplifiedClientAccessEncryptOnlyDisabled <Boolean>]
+ [-TransportDecryptionSetting <TransportDecryptionSetting>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -105,7 +105,7 @@ The AutomaticServiceUpdateEnabled parameter specifies whether to allow the autom
 - $false: Prevents new Azure Information Protection features from automatically being introduced into your tenant organization.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -127,7 +127,7 @@ The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online org
 - $false: The Exchange Online organization can't connect directly to Azure Rights Management.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -149,7 +149,7 @@ The ClientAccessServerEnabled parameter specifies whether Exchange Client Access
 - $false: Client Access servers aren't allowed to authenticate clients.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -193,7 +193,7 @@ The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients 
 This parameter replaces the deprecated DecryptAttachmentFromPortal parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -233,7 +233,7 @@ The EDiscoverySuperUserEnabled parameter specifies whether members of the Discov
 For more information about In-Place eDiscovery and IRM-protected messages, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -255,7 +255,7 @@ The EnablePdfEncryption parameter specifies whether to enable the encryption of 
 - $false: Messages that contain PDF attachments can't be encrypted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -277,7 +277,7 @@ The ExternalLicensingEnabled parameter specifies whether to enable IRM features 
 - $false: IRM features are disabled for external messages. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -315,7 +315,7 @@ The InternalLicensingEnabled parameter specifies whether to enable IRM features 
 - $false: IRM features are disabled for internal messages. This is the default value in on-premises Exchange. Note that this value causes the Get-RMSTemplate to return no AD RMS templates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -335,7 +335,7 @@ The JournalReportDecryptionEnabled parameter specifies whether to enable journal
 - $false: Journal report decryption is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -411,7 +411,7 @@ The SearchEnabled parameter specifies whether to enable searching of IRM-encrypt
 - $false: Searching IRM-encrypted messages in Outlook on the web is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -433,7 +433,7 @@ The SimplifiedClientAccessDoNotForwardDisabled parameter specifies whether to di
 - $false: **Do not forward** is not available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -455,7 +455,7 @@ The SimplifiedClientAccessEnabled parameter specifies whether to enable the Prot
 - $false: The Protect button is disabled in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -477,7 +477,7 @@ The SimplifiedClientAccessEncryptOnlyDisabled parameter specifies whether to dis
 - $false: **Encrypt only** is available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -499,7 +499,7 @@ The TransportDecryptionSetting parameter specifies the transport decryption conf
 - Optional: Messages are decrypted if possible, but are delivered even if decryption fails. This is the default value.
 
 ```yaml
-Type: Disabled | Optional | Mandatory
+Type: TransportDecryptionSetting
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

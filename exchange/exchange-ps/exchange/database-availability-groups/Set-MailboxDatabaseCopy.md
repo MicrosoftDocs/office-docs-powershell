@@ -185,7 +185,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Unrestricted | IntrasiteOnly | Blocked
+Type: DatabaseCopyAutoActivationPolicyType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

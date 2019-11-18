@@ -27,12 +27,12 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
  [-FileTypeExclusionsForUnindexedItems <String[]>]
- [-EnableDedupe <$true | $false>]
+ [-EnableDedupe <Boolean>]
  [-ExchangeArchiveFormat <ComplianceExportArchiveFormat>]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
- [-IncludeSharePointDocumentVersions <$true | $false>]
+ [-IncludeSharePointDocumentVersions <Boolean>]
  [-JobOptions <Int32>]
  [-NotifyEmail <String>]
  [-NotifyEmailCC <String>]
@@ -216,7 +216,7 @@ The EnableDedupe parameter eliminates duplication of messages when you export co
 - $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -366,7 +366,7 @@ The IncludeSharePointDocumentVersions parameter specifies whether to export prev
 - $false: Export only the current published version of the topic. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center

@@ -22,12 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
- [-AssociatedAcceptedDomains <MultiValuedProperty>] [-CloudServicesMailEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>]
- [-ConnectorType <OnPremises | Partner>] [-Enabled <$true | $false>] [-RequireTls <$true | $false>]
- [-RestrictDomainsToCertificate <$true | $false>] [-RestrictDomainsToIPAddresses <$true | $false>]
+ [-AssociatedAcceptedDomains <MultiValuedProperty>] [-CloudServicesMailEnabled <Boolean>]
+ [-Comment <String>] [-Confirm] [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>] [-Enabled <Boolean>] [-RequireTls <Boolean>]
+ [-RestrictDomainsToCertificate <Boolean>] [-RestrictDomainsToIPAddresses <Boolean>]
  [-SenderIPAddresses <MultiValuedProperty>] [-TlsSenderCertificateName <TlsCertificate>]
- [-TreatMessagesAsInternal <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-TreatMessagesAsInternal <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,7 +117,7 @@ Valid values are:
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -177,7 +177,7 @@ The ConnectorSource parameter specifies how the connector is created. Valid inpu
 The default value for connectors you create yourself is Default. It isn't recommended that you change this value.
 
 ```yaml
-Type: Default | Migrated | HybridWizard | AdminUI
+Type: TenantConnectorSource
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -197,7 +197,7 @@ The ConnectorType parameter specifies a category for the domains that are servic
 - OnPremises: The connector services domains that are used by your on-premises organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
 
 ```yaml
-Type: OnPremises | Partner
+Type: TenantConnectorType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 The Enabled parameter enables or disables the connector. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 The RequireTLS parameter specifies that all messages received by this connector require TLS transmission. Valid values for this parameter are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 The RestrictDomainsToCertificate parameter specifies that Office 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -263,7 +263,7 @@ The RestrictDomainsToIPAddresses parameter, when set to $true, automatically rej
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -325,7 +325,7 @@ The TreatMessagesAsInternal parameter specifies an alternative method to identif
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Office 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

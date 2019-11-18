@@ -22,30 +22,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxServer [-Identity] <MailboxServerIdParameter>
- [-AutoDagServerConfigured <$true | $false>]
- [-AutoDatabaseMountDial <Lossless | GoodAvailability | BestAvailability>]
+ [-AutoDagServerConfigured <Boolean>]
+ [-AutoDatabaseMountDial <AutoDatabaseMountDial>]
  [-CalendarRepairIntervalEndWindow <Int32>]
  [-CalendarRepairLogDirectorySizeLimit <Unlimited>]
- [-CalendarRepairLogEnabled <$true | $false>]
+ [-CalendarRepairLogEnabled <Boolean>]
  [-CalendarRepairLogFileAgeLimit <EnhancedTimeSpan>]
  [-CalendarRepairLogPath <LocalLongFullPath>]
- [-CalendarRepairLogSubjectLoggingEnabled <$true | $false>]
- [-CalendarRepairMissingItemFixDisabled <$true | $false>]
- [-CalendarRepairMode <ValidateOnly | RepairAndValidate>]
+ [-CalendarRepairLogSubjectLoggingEnabled <Boolean>]
+ [-CalendarRepairMissingItemFixDisabled <Boolean>]
+ [-CalendarRepairMode <CalendarRepairType>]
  [-CalendarRepairSchedule <ScheduleInterval[]>]
  [-CalendarRepairWorkCycle <EnhancedTimeSpan>]
  [-CalendarRepairWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-Confirm]
  [-DarTaskStoreTimeBasedAssistantWorkCycle <EnhancedTimeSpan>]
  [-DarTaskStoreTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-DatabaseCopyActivationDisabledAndMoveNow <$true | $false>]
- [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>]
+ [-DatabaseCopyActivationDisabledAndMoveNow <Boolean>]
+ [-DatabaseCopyAutoActivationPolicy <DatabaseCopyAutoActivationPolicyType>]
  [-DirectoryProcessorWorkCycle <EnhancedTimeSpan>]
  [-DirectoryProcessorWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-DomainController <Fqdn>]
  [-FaultZone <String>]
- [-FolderLogForManagedFoldersEnabled <$true | $false>]
- [-ForceGroupMetricsGeneration <$true | $false>]
+ [-FolderLogForManagedFoldersEnabled <Boolean>]
+ [-ForceGroupMetricsGeneration <Boolean>]
  [-GroupMailboxWorkCycle <EnhancedTimeSpan>]
  [-GroupMailboxWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-GroupMetricsGenerationTime <String>]
@@ -53,13 +53,13 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-InferenceDataCollectionWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-InferenceTrainingWorkCycle <EnhancedTimeSpan>]
  [-InferenceTrainingWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-IsExcludedFromProvisioning <$true | $false>]
- [-JournalingLogForManagedFoldersEnabled <$true | $false>]
+ [-IsExcludedFromProvisioning <Boolean>]
+ [-JournalingLogForManagedFoldersEnabled <Boolean>]
  [-JunkEmailOptionsCommitterWorkCycle <EnhancedTimeSpan>]
  [-Locale <MultiValuedProperty>]
  [-LogDirectorySizeLimitForManagedFolders <Unlimited>]
@@ -72,17 +72,17 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-ManagedFolderAssistantSchedule <ScheduleInterval[]>]
  [-ManagedFolderWorkCycle <EnhancedTimeSpan>]
  [-ManagedFolderWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-MAPIEncryptionRequired <$true | $false>]
+ [-MAPIEncryptionRequired <Boolean>]
  [-MaximumActiveDatabases <Int32>]
  [-MaximumPreferredActiveDatabases <Int32>]
- [-MessageTrackingLogEnabled <$true | $false>]
+ [-MessageTrackingLogEnabled <Boolean>]
  [-MessageTrackingLogMaxAge <EnhancedTimeSpan>]
  [-MessageTrackingLogMaxDirectorySize <Unlimited>]
  [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>]
  [-MessageTrackingLogPath <LocalLongFullPath>]
- [-MessageTrackingLogSubjectLoggingEnabled <$true | $false>]
+ [-MessageTrackingLogSubjectLoggingEnabled <Boolean>]
  [-MigrationLogFilePath <LocalLongFullPath>]
- [-MigrationLogLoggingLevel <None | Error | Warning | Information | Verbose | Instrumentation>]
+ [-MigrationLogLoggingLevel <MigrationEventType>]
  [-MigrationLogMaxAge <EnhancedTimeSpan>]
  [-MigrationLogMaxDirectorySize <ByteQuantifiedSize>]
  [-MigrationLogMaxFileSize <ByteQuantifiedSize>]
@@ -96,7 +96,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-ProbeTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-PublicFolderWorkCycle <EnhancedTimeSpan>]
  [-PublicFolderWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-RetentionLogForManagedFoldersEnabled <$true | $false>]
+ [-RetentionLogForManagedFoldersEnabled <Boolean>]
  [-SearchIndexRepairTimeBasedAssistantWorkCycle <EnhancedTimeSpan>]
  [-SearchIndexRepairTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-SharePointSignalStoreWorkCycle <EnhancedTimeSpan>]
@@ -117,7 +117,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-StoreScheduledIntegrityCheckWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-StoreUrgentMaintenanceWorkCycle <EnhancedTimeSpan>]
  [-StoreUrgentMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-SubjectLogForManagedFoldersEnabled <$true | $false>]
+ [-SubjectLogForManagedFoldersEnabled <Boolean>]
  [-SubmissionServerOverrideList <MultiValuedProperty>]
  [-TopNWorkCycle <EnhancedTimeSpan>]
  [-TopNWorkCycleCheckpoint <EnhancedTimeSpan>]
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -240,7 +240,7 @@ The AutoDatabaseMountDial parameter specifies the automatic database mount behav
 The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
 
 ```yaml
-Type: Lossless | GoodAvailability | BestAvailability
+Type: AutoDatabaseMountDial
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -320,7 +320,7 @@ The value of this parameter affects the following parameters:
 - CalendarRepairLogSubjectLoggingEnabled
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 The CalendarRepairLogSubjectLoggingEnabled parameter specifies whether to include the subject of repaired calendar items in the calendar repair log on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant won't fix missing calendar items in mailboxes on the Mailbox server.Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 The CalendarRepairMode parameter specifies the Calendar Repair Assistant mode on the Mailbox server. Valid values for this parameter are ValidateOnly or RepairAndValidate. The default value is RepairAndValidate.
 
 ```yaml
-Type: ValidateOnly | RepairAndValidate
+Type: CalendarRepairType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -570,7 +570,7 @@ Valid input for this parameter is $true or $false. The default value is $false.
 Setting this parameter to $truewon't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -592,7 +592,7 @@ The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic a
 - Unrestricted: There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This is the default value.
 
 ```yaml
-Type: Unrestricted | IntrasiteOnly | Blocked
+Type: DatabaseCopyAutoActivationPolicyType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -696,7 +696,7 @@ The value of this parameter affects the following parameters:
 - SubjectLogForManagedFoldersEnabled
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -714,7 +714,7 @@ The ForceGroupMetricsGeneration parameter specifies that group metrics informati
 By default, group metrics are generated only on servers that generate OABs. Group metrics information is used by MailTips to inform senders about how many recipients their messages will be sent to. You need to set this parameter to $true if your organization doesn't generate OABs and you want the group metrics data to be available.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -862,7 +862,7 @@ The IrmLogEnabled parameter enables or disables logging of Information Rights Ma
 - $false Disable IRM logging
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -984,7 +984,7 @@ The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't
 If you specify$true, the server won't be used for provisioning a new OAB or for moving existing OABs.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1002,7 +1002,7 @@ The JournalingLogForManagedFoldersEnabled parameter specifies whether journaling
 If you specify $true, information about messages that were journaled in managed folders is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1322,7 +1322,7 @@ Accept wildcard characters: False
 The MAPIEncryptionRequired parameter specifies whether Exchange blocks MAPI client connections to the Mailbox server that don't use encrypted remote procedure calls (RPCs). Valid input for this parameter is$true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1378,7 +1378,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The MessageTrackingLogEnabled parameter specifies whether message tracking is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -1500,7 +1500,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The MessageTrackingLogSubjectLoggingEnabled parameter specifies if the message subject should be included in the message tracking log. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -1532,7 +1532,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Error | Warning | Information | Verbose | Instrumentation
+Type: MigrationEventType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1792,7 +1792,7 @@ The RetentionLogForManagedFoldersEnabled parameter specifies whether retention p
 If you specify $true, information about messages in managed folders that have been processed because they have reached their retention limits is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -2246,7 +2246,7 @@ The SubjectLogForManagedFoldersEnabled parameter specifies whether to include th
 By default, the subject of messages is blank in the managed folder log.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

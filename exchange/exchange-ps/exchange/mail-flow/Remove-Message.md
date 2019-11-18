@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-Message -Filter <String> [-Server <ServerIdParameter>]
  [-Confirm]
  [-WhatIf]
- [-WithNDR <$true | $false>] [<CommonParameters>]
+ [-WithNDR <Boolean>] [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +33,7 @@ Remove-Message -Filter <String> [-Server <ServerIdParameter>]
 Remove-Message [-Identity] <MessageIdentity>
  [-Confirm]
  [-WhatIf]
- [-WithNDR <$true | $false>] [<CommonParameters>]
+ [-WithNDR <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 The WithNDR parameter specifies whether a non-delivery report (NDR) is returned to the sender of a message. The default value is $true. This parameter can be used with both the Identity parameter and Filter parameter sets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
