@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
- [-IncludeExecutionRuleGuids <$true | $false>]
+ [-IncludeExecutionRuleGuids Boolean]
  [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
