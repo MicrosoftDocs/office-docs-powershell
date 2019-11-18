@@ -28,7 +28,7 @@ Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -41,7 +41,7 @@ Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -54,7 +54,7 @@ Get-FailedContentIndexDocuments -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -263,7 +263,7 @@ The FailureMode parameter specifies the type of error. Use the following values.
 - All: Returns items that couldn't be indexed regardless of nature of failure.
 
 ```yaml
-Type: Transient | Permanent | All
+Type: FailureMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

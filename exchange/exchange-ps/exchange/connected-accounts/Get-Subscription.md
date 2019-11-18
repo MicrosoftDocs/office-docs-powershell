@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-Subscription [[-Identity] <AggregationSubscriptionIdParameter>]
- [-AggregationType <Aggregation | Mirrored | Migration | PeopleConnection | All>] [-Confirm] [-IncludeReport]
+ [-AggregationType <AggregationType>] [-Confirm] [-IncludeReport]
  [-Mailbox <MailboxIdParameter>] [-ResultSize <Unlimited>]
- [-SubscriptionType <Unknown | Pop | DeltaSyncMail | IMAP | AllEMail | Facebook | LinkedIn | SinaWeibo | Google | Yahoo | Twitter | Skype | AbchType | AllThatSupportSendAs | AllThatSupportPolicyInducedDeletion | AllThatSupportSendAsAndPeopleConnect | All>]
+ [-SubscriptionType <AggregationSubscriptionType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ The AggregationType parameter filters the results by type. The acceptable values
 - PeopleConnection
 
 ```yaml
-Type: Aggregation | Mirrored | Migration | PeopleConnection | All
+Type: AggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -206,7 +206,7 @@ The SubscriptionType parameter filters the results based on the type of subscrip
 - Unknown
 
 ```yaml
-Type: Unknown | Pop | DeltaSyncMail | IMAP | AllEMail | Facebook | LinkedIn | SinaWeibo | Google | Yahoo | Twitter | Skype | AbchType | AllThatSupportSendAs | AllThatSupportPolicyInducedDeletion | AllThatSupportSendAsAndPeopleConnect | All
+Type: AggregationSubscriptionType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

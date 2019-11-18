@@ -26,16 +26,16 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ActivationDate <DateTime>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
- [-BlockAccess <$true | $false>]
+ [-BlockAccess <Boolean>]
  [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
- [-Disabled <$true | $false>]
- [-DocumentIsPasswordProtected <$true | $false>]
- [-DocumentIsUnsupported <$true | $false>]
+ [-Disabled <Boolean>]
+ [-DocumentIsPasswordProtected <Boolean>]
+ [-DocumentIsUnsupported <Boolean>]
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
@@ -45,13 +45,13 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
- [-ExceptIfDocumentIsPasswordProtected <$true | $false>]
- [-ExceptIfDocumentIsUnsupported <$true | $false>]
+ [-ExceptIfDocumentIsPasswordProtected <Boolean>]
+ [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfDocumentNameMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
- [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
  [-ExceptIfSenderIPRanges <MultiValuedProperty>]
  [-ExceptIfSentTo <MultiValuedProperty>]
@@ -71,7 +71,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
  [-Priority <Int32>]
- [-ProcessingLimitExceeded <$true | $false>]
+ [-ProcessingLimitExceeded <Boolean>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-RemoveHeader <MultiValuedProperty>]
  [-ReportSeverityLevel <RuleSeverity>]
@@ -79,9 +79,12 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SetHeader <PswsHashtable>]
- [-StopPolicyProcessing <$true | $false>]
+ [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
+ [-ProcessingLimitExceeded <Boolean>]
+ [-ReportSeverityLevel <RuleSeverity>]
+ [-RuleErrorAction <PolicyRuleErrorAction>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -215,7 +218,7 @@ The BlockAccess parameter specifies an action for the DLP rule that blocks acces
 - $false: Allows access to the source item that matched the rule. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -583,7 +586,7 @@ The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the
 - $false: Don't look for password protected files.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -599,7 +602,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -1161,7 +1164,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

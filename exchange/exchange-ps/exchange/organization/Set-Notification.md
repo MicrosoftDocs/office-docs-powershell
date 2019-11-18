@@ -30,7 +30,7 @@ Set-Notification [-Identity] <EwsStoreObjectIdParameter> -NotificationEmails <Mu
 
 ### Settings
 ```
-Set-Notification -NotificationEmails <MultiValuedProperty> -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>
+Set-Notification -NotificationEmails <MultiValuedProperty> -ProcessType <AsyncOperationType>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -109,7 +109,7 @@ The ProcessType parameter specifies the notification event type that sends notif
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
+Type: AsyncOperationType
 Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

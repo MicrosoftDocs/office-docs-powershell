@@ -24,13 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ManagedDefaultFolder
 ```
-New-ManagedFolder [-Name] <String> -DefaultFolderType <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory>
- [-BaseFolderOnly <$true | $false>]
+New-ManagedFolder [-Name] <String> -DefaultFolderType <DefaultManagedFolderType>
+ [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
- [-MustDisplayCommentEnabled <$true | $false>]
+ [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -38,12 +38,12 @@ New-ManagedFolder [-Name] <String> -DefaultFolderType <Calendar | Contacts | Del
 ### ManagedCustomFolder
 ```
 New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <MultiValuedProperty>] [-StorageQuota <Unlimited>]
- [-BaseFolderOnly <$true | $false>]
+ [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
- [-MustDisplayCommentEnabled <$true | $false>]
+ [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -134,7 +134,7 @@ The default folder types that you can specify are:
 - ConversationHistory
 
 ```yaml
-Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory
+Type: DefaultManagedFolderType
 Parameter Sets: ManagedDefaultFolder
 Aliases:
 Applicable: Exchange Server 2010
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 The BaseFolderOnly parameter specifies whether the managed content settings should be applied only to the managed folder or to the folder and all its subfolders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 The MustDisplayCommentEnabled parameter specifies whether to set a flag used by Outlook 2007 to prevent users from minimizing a folder comment (that's visible in Outlook 2007 and Outlook Web App). If the MustDisplayCommentEnabled parameter is present and set to $true, the parameter sets a flag used by Outlook 2007 to prevent users from minimizing a folder comment. If the parameter isn't present or is set to $false, users can minimize the comment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

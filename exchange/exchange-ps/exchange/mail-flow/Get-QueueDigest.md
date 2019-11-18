@@ -25,9 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Dag
 ```
 Get-QueueDigest -Dag <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
@@ -35,9 +35,9 @@ Get-QueueDigest -Dag <MultiValuedProperty>
 ### Forest
 ```
 Get-QueueDigest [-Forest]
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
@@ -45,9 +45,9 @@ Get-QueueDigest [-Forest]
 ### Server
 ```
 Get-QueueDigest -Server <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
@@ -56,9 +56,9 @@ Get-QueueDigest -Server <MultiValuedProperty>
 ### Site
 ```
 Get-QueueDigest -Site <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 The DetailsLevel parameter specifies the level of detail to display in the results. Valid values for this parameter are None, Normal and Verbose. The default value is Normal.
 
 ```yaml
-Type: None | Normal | Verbose
+Type: DetailsLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -213,7 +213,7 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 - OutboundIPPool
 
 ```yaml
-Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool
+Type: QueueDigestGroupBy
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -25,25 +25,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD> [-TrustAnySSLCertificate]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType> [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AppSecret
 ```
-New-AuthServer [-Name] <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD>
+New-AuthServer [-Name] <String> -Type <AuthServerType>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -109,7 +109,7 @@ The Type parameter specifies the type of authorization tokens that are issued by
 - MicrosoftACS
 
 ```yaml
-Type: Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD
+Type: AuthServerType
 Parameter Sets: NativeClientAuthServer, AppSecret
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -165,7 +165,7 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 - $false: Authorization tokens that are issued by the authorization server are are not accepted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

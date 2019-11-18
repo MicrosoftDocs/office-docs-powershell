@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
- [-ActiveSyncEnabled <$true | $false>]
+ [-ActiveSyncEnabled <Boolean>]
  [-Confirm]
- [-ImapEnabled <$true | $false>]
+ [-ImapEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
- [-PopEnabled <$true | $false>]
+ [-PopEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ The ActiveSyncEnabled parameter enables or disables access to the mailbox by usi
 - $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -118,7 +118,7 @@ The ImapEnabled parameter enables or disables access to the mailbox by using IMA
 - $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -164,7 +164,7 @@ The PopEnabled parameter enables or disables access to the mailbox by using POP3
 - $false: POP3 access to the mailbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

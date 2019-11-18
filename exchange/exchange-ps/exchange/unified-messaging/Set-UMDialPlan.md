@@ -22,30 +22,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <MultiValuedProperty>]
- [-AllowDialPlanSubscribers <$true | $false>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <$true | $false>]
- [-AllowHeuristicADCallingLineIdResolution <$true | $false>] [-AudioCodec <G711 | Wma | Gsm | Mp3>]
- [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-CallAnsweringRulesEnabled <$true | $false>]
- [-CallSomeoneEnabled <$true | $false>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
+ [-AllowHeuristicADCallingLineIdResolution <Boolean>] [-AudioCodec <AudioCodecEnum>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringRulesEnabled <Boolean>]
+ [-CallSomeoneEnabled <Boolean>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
  [-ConfiguredInternationalGroups <MultiValuedProperty>] [-Confirm]
  [-ContactAddressList <AddressListIdParameter>] [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
- [-ContactScope <DialPlan | GlobalAddressList | Extension | AutoAttendantLink | AddressList>]
+ [-ContactScope <CallSomeoneScopeEnum>]
  [-CountryOrRegionCode <String>] [-DefaultLanguage <UMLanguage>] [-DefaultOutboundCallingLineId <String>]
- [-DialByNamePrimary <LastFirst | FirstLast | SMTPAddress>]
- [-DialByNameSecondary <LastFirst | FirstLast | SMTPAddress | None>] [-DomainController <Fqdn>]
- [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <$true | $false>]
+ [-DialByNamePrimary <DialByNamePrimaryEnum>]
+ [-DialByNameSecondary <DialByNameSecondaryEnum>] [-DomainController <Fqdn>]
+ [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <Boolean>]
  [-ForceUpgrade] [-InCountryOrRegionNumberFormat <NumberFormat>]
- [-InfoAnnouncementEnabled <True | False | Uninterruptible>] [-InfoAnnouncementFilename <String>]
+ [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>] [-InfoAnnouncementFilename <String>]
  [-InputFailuresBeforeDisconnect <Int32>] [-InternationalAccessCode <String>]
  [-InternationalNumberFormat <NumberFormat>] [-LegacyPromptPublishingPoint <String>]
  [-LogonFailuresBeforeDisconnect <Int32>]
- [-MatchedNameSelectionMethod <Title | Department | Location | None | PromptForAlias>]
+ [-MatchedNameSelectionMethod <DisambiguationFieldEnum>]
  [-MaxCallDuration <Int32>] [-MaxRecordingDuration <Int32>] [-Name <String>] [-NationalNumberPrefix <String>]
  [-NumberingPlanFormats <MultiValuedProperty>] [-OperatorExtension <String>] [-OutsideLineAccessCode <String>]
  [-PilotIdentifierList <MultiValuedProperty>] [-RecordingIdleTimeout <Int32>]
- [-SendVoiceMsgEnabled <$true | $false>] [-TUIPromptEditingEnabled <$true | $false>]
- [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <SIPSecured | Unsecured | Secured>]
- [-WelcomeGreetingEnabled <$true | $false>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
+ [-SendVoiceMsgEnabled <Boolean>] [-TUIPromptEditingEnabled <Boolean>]
+ [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <UMVoIPSecurityType>]
+ [-WelcomeGreetingEnabled <Boolean>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 The AllowDialPlanSubscribers parameter specifies whether to allow subscribers dial numbers that resolve to a subscriber within the same dial plan. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 The AllowExtensions parameter specifies whether to allow calls to dial plan extensions. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that may be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You may want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Mailbox server may not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 The AudioCodec parameter specifies the audio codec used for recording. Mp3 is the default setting.
 
 ```yaml
-Type: G711 | Wma | Gsm | Mp3
+Type: AudioCodecEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 The AutomaticSpeechRecognitionEnabled parameter specifies whether Automatic Speech Recognition (ASR) is enabled for users who are members of the dial plan.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 The CallAnsweringRulesEnabled parameter specifies whether Call Answering Rules are enabled for UM-enabled users associated with the UM dial plan.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 The CallSomeoneEnabled parameter specifies whether the Call Someone feature is enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 The ContactScope parameter specifies the scope of the directory search provided to callers when they access the UM dial plan and specify a user's name.
 
 ```yaml
-Type: DialPlan | GlobalAddressList | Extension | AutoAttendantLink | AddressList
+Type: CallSomeoneScopeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 The DialByNamePrimary parameter specifies that the Dial by Name lookup key is to be created from the specified source. The default value is LastFirst.
 
 ```yaml
-Type: LastFirst | FirstLast | SMTPAddress
+Type: DialByNamePrimaryEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -444,7 +444,7 @@ Accept wildcard characters: False
 The DialByNameSecondary parameter specifies that the secondary Dial by Name lookup key is to be created from the specified source. The default value is SMTPAddress.
 
 ```yaml
-Type: LastFirst | FirstLast | SMTPAddress | None
+Type: DialByNameSecondaryEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -510,7 +510,7 @@ Accept wildcard characters: False
 The FaxEnabled parameter specifies whether the Mailbox servers associated with the UM dial plan answers and processes incoming fax calls. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -558,7 +558,7 @@ Accept wildcard characters: False
 The InfoAnnouncementEnabled parameter specifies whether an informational announcement is enabled. This parameter can be set to True, False, or Uninterruptible. The default value is False.
 
 ```yaml
-Type: True | False | Uninterruptible
+Type: InfoAnnouncementEnabledEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -680,7 +680,7 @@ The MatchedNameSelectionMethod parameter specifies the selection to use to diffe
 - PromptForAlias
 
 ```yaml
-Type: Title | Department | Location | None | PromptForAlias
+Type: DisambiguationFieldEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -840,7 +840,7 @@ Accept wildcard characters: False
 The SendVoiceMsgEnabled parameter specifies whether the Send Message feature is enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -856,7 +856,7 @@ Accept wildcard characters: False
 The TUIPromptEditingEnabled parameter specifies whether authorized users are permitted to record UM dial plan or automated attendant prompts by using the Telephone User Interface (TUI). The default setting is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -890,7 +890,7 @@ This parameter is available only in on-premises Exchange.
 The VoIPSecurity parameter specifies whether the Voice over IP (VoIP) traffic is encrypted or that the signaling channel or the signaling and the media channels are encrypted by using mutual Transport Layer Security (TLS). The default setting is Unsecured.
 
 ```yaml
-Type: SIPSecured | Unsecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -906,7 +906,7 @@ Accept wildcard characters: False
 The WelcomeGreetingEnabled parameter specifies whether a custom welcome greeting is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

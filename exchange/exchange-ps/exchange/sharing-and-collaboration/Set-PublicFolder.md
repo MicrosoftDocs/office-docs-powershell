@@ -26,25 +26,25 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EformsLocaleId <CultureInfo>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-IssueWarningQuota <Unlimited>]
  [-LocalReplicaAgeLimit <EnhancedTimeSpan>]
  [-MailRecipientGuid <Guid>]
- [-MailEnabled <$true | $false>]
+ [-MailEnabled <Boolean>]
  [-MaxItemSize <Unlimited>]
  [-Name <String>]
  [-OverrideContentMailbox <MailboxIdParameter>]
  [-Path <PublicFolderIdParameter>]
- [-PerUserReadStateEnabled <$true | $false>]
+ [-PerUserReadStateEnabled <Boolean>]
  [-ProhibitPostQuota <Unlimited>]
  [-Replicas <DatabaseIdParameter[]>]
  [-ReplicationSchedule <Schedule>]
  [-RetainDeletedItemsFor <EnhancedTimeSpan>]
  [-Server <ServerIdParameter>]
- [-UseDatabaseAgeDefaults <$true | $false>]
- [-UseDatabaseQuotaDefaults <$true | $false>]
- [-UseDatabaseReplicationSchedule <$true | $false>]
- [-UseDatabaseRetentionDefaults <$true | $false>]
+ [-UseDatabaseAgeDefaults <Boolean>]
+ [-UseDatabaseQuotaDefaults <Boolean>]
+ [-UseDatabaseReplicationSchedule <Boolean>]
+ [-UseDatabaseRetentionDefaults <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -186,7 +186,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The HiddenFromAddressListsEnabled parameter specifies whether to hide the public folder from address lists.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -256,7 +256,7 @@ The MailEnabled parameter specifies that the public folder is mail-enabled. To d
 You use this parameter to correct a mail-enabled public folder that lost its mail-enabled status. If you attempt to use this parameter to mail-enable a public folder that was never mail-enabled, the command will fail.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 The PerUserReadStateEnabled parameter specifies whether to maintain read and unread data on a per-user basis.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -556,7 +556,7 @@ This parameter is available or functional only in Exchange Server 2010
 The UseDatabaseAgeDefaults parameter specifies whether to use the database age limit.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -574,7 +574,7 @@ This parameter is available or functional only in Exchange Server 2010
 The UseDatabaseQuotaDefaults parameter specifies whether to use the public store quota limits.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -592,7 +592,7 @@ This parameter is available or functional only in Exchange Server 2010
 The UseDatabaseReplicationSchedule parameter specifies whether to use the public folder replication schedule.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -610,7 +610,7 @@ This parameter is available or functional only in Exchange Server 2010
 The UseDatabaseRetentionDefaults parameter specifies whether to use the database retention defaults.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

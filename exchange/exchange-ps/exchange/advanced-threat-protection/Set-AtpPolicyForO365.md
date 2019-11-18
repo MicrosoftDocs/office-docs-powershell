@@ -26,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
- [-AllowClickThrough <$true | $false>]
+ [-AllowClickThrough <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
- [-EnableATPForSPOTeamsODB <$true | $false>]
- [-EnableSafeLinksForClients <$true | $false>]
- [-TrackClicks <$true | $false>]
+ [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeLinksForClients <Boolean>]
+ [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -77,7 +77,7 @@ The AllowClickThrough parameter specifies whether to allow users to click throug
 - $false: Users aren't allowed to click through to the original URL.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -133,7 +133,7 @@ The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for Share
 - $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -153,7 +153,7 @@ The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enab
 - $false: Safe Links are disabled for Office 365 apps.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -173,7 +173,7 @@ The TrackClicks parameter specifies whether to track user clicks related to bloc
 - $false: User clicks aren't tracked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

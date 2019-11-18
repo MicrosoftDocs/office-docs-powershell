@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-CalendarNotification [-Identity] <MailboxIdParameter> [-CalendarUpdateNotification <$true | $false>]
- [-CalendarUpdateSendDuringWorkHour <$true | $false>] [-Confirm] [-DailyAgendaNotification <$true | $false>]
+Set-CalendarNotification [-Identity] <MailboxIdParameter> [-CalendarUpdateNotification <Boolean>]
+ [-CalendarUpdateSendDuringWorkHour <Boolean>] [-Confirm] [-DailyAgendaNotification <Boolean>]
  [-DailyAgendaNotificationSendTime <TimeSpan>] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-MeetingReminderNotification <$true | $false>] [-MeetingReminderSendDuringWorkHour <$true | $false>]
+ [-MeetingReminderNotification <Boolean>] [-MeetingReminderSendDuringWorkHour <Boolean>]
  [-NextDays <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 The CalendarUpdateNotification parameter specifies whether calendar notifications are enabled for the user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar notifications are sent during working hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 The DailyAgendaNotification parameter specifies whether a daily agenda should be sent to the user's mobile phone.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 The MeetingReminderNotification parameter specifies whether meeting reminders are sent to the user's mobile phone.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminders are only sent during working hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

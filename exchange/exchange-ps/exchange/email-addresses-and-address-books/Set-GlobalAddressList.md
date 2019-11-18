@@ -45,7 +45,7 @@ Set-GlobalAddressList [-Identity] <GlobalAddressListIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ForceUpgrade]
- [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
+ [-IncludedRecipients <WellKnownRecipientType>]
  [-Name <String>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-RecipientFilter <String>]
@@ -570,7 +570,7 @@ The IncludedRecipients parameter specifies a precanned filter that's based on th
 You can specify multiple values separated by commas. When you use multiple values, the OR Boolean operator is applied.
 
 ```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
+Type: WellKnownRecipientType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

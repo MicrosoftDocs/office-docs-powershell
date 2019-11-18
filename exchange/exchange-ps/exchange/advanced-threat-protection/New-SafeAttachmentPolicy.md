@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SafeAttachmentPolicy [-Name] <String> [-Action <Block | Replace | Allow | DynamicDelivery>]
- [-ActionOnError <$true | $false>] [-AdminDisplayName <String>] [-Confirm] [-Enable <$true | $false>]
- [-Redirect <$true | $false>] [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
+New-SafeAttachmentPolicy [-Name] <String> [-Action <SafeAttachmentAction>]
+ [-ActionOnError <Boolean>] [-AdminDisplayName <String>] [-Confirm] [-Enable <Boolean>]
+ [-Redirect <Boolean>] [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +80,7 @@ The Action parameter specifies the action for the Safe Attachments policy. Valid
 The results of all actions are available in message trace.
 
 ```yaml
-Type: Block | Replace | Allow | DynamicDelivery
+Type: SafeAttachmentAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -100,7 +100,7 @@ The ActionOnError parameter specifies the error handling option for Safe Attachm
 - $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -156,7 +156,7 @@ The Enable parameter specifies whether policy is enabled. Valid values are:
 - $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -176,7 +176,7 @@ The Redirect parameter specifies whether to send detected malware attachments to
 - $false: Malware attachments aren't sent to another email address. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

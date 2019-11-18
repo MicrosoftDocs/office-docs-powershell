@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ConnectSubscription [[-Identity] <AggregationSubscriptionIdParameter>]
- [-AggregationType <Aggregation | Mirrored | Migration | PeopleConnection | All>] [-Confirm] [-IncludeReport]
+ [-AggregationType <AggregationType>] [-Confirm] [-IncludeReport]
  [-Mailbox <MailboxIdParameter>] [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -63,7 +63,7 @@ The AggregationType parameter filters the results by type. The acceptable values
 - PeopleConnection
 
 ```yaml
-Type: Aggregation | Mirrored | Migration | PeopleConnection | All
+Type: AggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

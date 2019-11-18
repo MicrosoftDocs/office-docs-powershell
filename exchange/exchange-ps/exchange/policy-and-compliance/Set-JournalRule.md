@@ -27,7 +27,7 @@ Set-JournalRule [-Identity] <RuleIdParameter>
  [-JournalEmailAddress <RecipientIdParameter>]
  [-Name <String>]
  [-Recipient <SmtpAddress>]
- [-Scope <Internal | External | Global>]
+ [-Scope <JournalRuleScope>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -180,7 +180,7 @@ The Scope parameter specifies the scope of email messages to which the journal r
 - External: External rules process email messages sent to recipients or from senders outside your organization.
 
 ```yaml
-Type: Internal | External | Global
+Type: JournalRuleScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

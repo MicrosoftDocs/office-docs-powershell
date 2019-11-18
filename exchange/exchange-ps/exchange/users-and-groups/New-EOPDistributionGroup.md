@@ -26,7 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-EOPDistributionGroup -Name <String> [-Alias <String>] [-DisplayName <String>] [-ManagedBy <String[]>]
- [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <Distribution | Security>]
+ [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <GroupType>]
  [<CommonParameters>]
 ```
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 The Type parameter specifies the group type. Valid values are Distribution or Security.
 
 ```yaml
-Type: Distribution | Security
+Type: GroupType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection

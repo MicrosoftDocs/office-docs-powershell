@@ -22,10 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter> [-AdminDisplayName <String>]
- [-AllowClickThrough <$true | $false>] [-Confirm] [-DoNotAllowClickThrough <$true | $false>]
- [-DoNotRewriteUrls <MultiValuedProperty>] [-DoNotTrackUserClicks <$true | $false>] [-Enabled <$true | $false>]
- [-EnableForInternalSenders <$true | $false>] [-ExcludedUrls <String[]>] [-IsEnabled <$true | $false>]
- [-ScanUrls <$true | $false>] [-TrackClicks <$true | $false>] [-WhatIf] [-WhiteListedUrls <String>]
+ [-AllowClickThrough <Boolean>] [-Confirm] [-DoNotAllowClickThrough <Boolean>]
+ [-DoNotRewriteUrls <MultiValuedProperty>] [-DoNotTrackUserClicks <Boolean>] [-Enabled <Boolean>]
+ [-EnableForInternalSenders <Boolean>] [-ExcludedUrls <String[]>] [-IsEnabled <Boolean>]
+ [-ScanUrls <Boolean>] [-TrackClicks <Boolean>] [-WhatIf] [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeAttachmentsPolicy -Identity "Engineering Block URL" -TrackClicks $true
+Set-SafeLinksPolicy -Identity "Engineering Block URL" -TrackClicks $true
 ```
 
 This example modifies the existing Safe Links policy named Engineering Block URL to track user clicks on URLs in URL trace.
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -129,7 +129,7 @@ The DoNotAllowClickThrough parameter specifies whether to allow users to click t
 - $false: The user is allowed to click through to the original URL.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -165,7 +165,7 @@ The DoNotTrackUserClicks parameter specifies whether to track user clicks relate
 - $false: User clicks are tracked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -185,7 +185,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -205,7 +205,7 @@ The EnableForInternalSenders parameter specifies whether the Safe Links policy i
 - $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -241,7 +241,7 @@ This parameter specifies whether the rule or policy is enabled. Valid values are
 - $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -261,7 +261,7 @@ The ScanUrls parameter specifies whether to enable or disable the scanning of li
 - $false: Scanning links in email messages is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

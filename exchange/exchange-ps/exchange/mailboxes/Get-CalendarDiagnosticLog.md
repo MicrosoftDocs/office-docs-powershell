@@ -337,7 +337,7 @@ You only use this parameter with the Subject parameter.
 The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

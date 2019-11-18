@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-ImapSubscription [-Name] <String> -EmailAddress <SmtpAddress> -IncomingPassword <SecureString>
  -IncomingServer <Fqdn> -IncomingUserName <String> [-Confirm] [-DisplayName <String>] [-Force]
- [-IncomingAuth <Basic | Ntlm>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>]
+ [-IncomingAuth <IMAPAuthenticationMechanism>] [-IncomingPort <Int32>] [-IncomingSecurity <IMAPSecurityMechanism>]
  [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by IMAP clients to access the IMAP server. Valid values are Basic or Ntlm. If you don't specify a value for the IncomingAuth parameter, the value Basic is used.
 
 ```yaml
-Type: Basic | Ntlm
+Type: IMAPAuthenticationMechanism
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by IMAP clients to connect to the IMAP server. Valid values are None, Ssl, or Tls. If you don't specify a value for the IncomingSecurity parameter, the value None is used.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

@@ -6,7 +6,7 @@ title: Get-EXORecipientPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+ms.reviewer: navgupta
 monikerRange: "exchonline-ps"
 ---
 
@@ -56,7 +56,7 @@ Above example returns recipient permission for first 100 mailbox users in the na
 ### -AccessRights
 The AccessRights parameter filters the results by permission.
 
-The value value for this parameter is SendAs.
+The only valid value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty

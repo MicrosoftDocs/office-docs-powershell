@@ -34,7 +34,7 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-OutlookAnywhereHostName <Fqdn>]
- [-PreventCompletion <$true | $false>]
+ [-PreventCompletion <Boolean>]
  [-Priority <RequestPriority>]
  [-RemoteMailboxLegacyDN <String>]
  [-RemoteMailboxServerLegacyDN <String>]
@@ -48,7 +48,7 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
 Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter> -RehomeRequest
  [-Confirm]
  [-DomainController <Fqdn>]
- [-PreventCompletion <$true | $false>]
+ [-PreventCompletion <Boolean>]
  [-RequestExpiryInterval <Unlimited>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -259,7 +259,7 @@ The PreventCompletion parameter specifies whether to run the migration request, 
 - $false: The migration request is run and allowed to complete. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

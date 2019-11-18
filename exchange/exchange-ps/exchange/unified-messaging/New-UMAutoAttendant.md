@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-UMAutoAttendant [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SpeechEnabled <$true | $false>] [-Status <Enabled | Disabled>] [-WhatIf] [<CommonParameters>]
+ [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SpeechEnabled <Boolean>] [-Status <StatusEnum] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 The SpeechEnabled parameter specifies whether the UM auto attendant is speech-enabled. The default value is $true. If this parameter is omitted, or if the value is $false, the UM auto attendant isn't speech-enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -169,10 +169,14 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter specifies whether the UM auto attendant being created will be enabled. If this parameter isn't supplied, the UM auto attendant is created but left in a disabled state.
+The Status parameter specifies whether the UM auto attendant being created will be enabled. Valid values are:
+
+- Enabled
+
+- Disabled (This is the default value)
 
 ```yaml
-Type: Enabled | Disabled
+Type: StatusEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

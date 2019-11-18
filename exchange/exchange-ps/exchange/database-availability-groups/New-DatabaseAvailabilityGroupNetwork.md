@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-DatabaseAvailabilityGroupNetwork [-Name] <String>
  [-DatabaseAvailabilityGroup] <DatabaseAvailabilityGroupIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-IgnoreNetwork <$true | $false>] [-ReplicationEnabled <$true | $false>]
+ [-DomainController <Fqdn>] [-IgnoreNetwork <Boolean>] [-ReplicationEnabled <Boolean>]
  [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 The IgnoreNetwork parameter excludes the DAG network from use by the DAG.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 The ReplicationEnabled parameter specifies whether the DAG network being created is enabled for continuous replication.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -22,27 +22,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
- [-AfterMoveOrDeleteBehavior <OpenPreviousItem | OpenNextItem | ReturnToView>]
- [-AlwaysShowBcc <$true | $false>] [-AlwaysShowFrom <$true | $false>] [-AutoAddSignature <$true | $false>]
+ [-AfterMoveOrDeleteBehavior <AfterMoveOrDeleteBehavior>]
+ [-AlwaysShowBcc <Boolean>] [-AlwaysShowFrom <Boolean>] [-AutoAddSignature <Boolean>]
  [-Confirm]
- [-ConversationSortOrder <Chronological | Tree | NewestOnTop | NewestOnBottom | ChronologicalNewestOnTop | ChronologicalNewestOnBottom | TreeNewestOnBottom>]
- [-DefaultFontColor <String>] [-DefaultFontFlags <Normal | Bold | Italic | Underline | All>]
- [-DefaultFontName <String>] [-DefaultFontSize <Int32>] [-DefaultFormat <Html | PlainText>]
- [-DomainController <Fqdn>] [-EmptyDeletedItemsOnLogoff <$true | $false>] [-HideDeletedItems <$true | $false>]
- [-IgnoreDefaultScope] [-NewItemNotification <None | Sound | EMailToast | VoiceMailToast | FaxToast | All>]
- [-PreviewMarkAsReadBehavior <Delayed | OnSelectionChange | Never>] [-PreviewMarkAsReadDelaytime <Int32>]
- [-ReadReceiptResponse <DoNotAutomaticallySend | AlwaysSend | NeverSend>] [-SendAddressDefault <String>]
- [-ShowConversationAsTree <$true | $false>] [-SignatureHtml <String>] [-SignatureText <String>] [-WhatIf]
- [-AutoAddSignatureOnMobile <$true | $false>] [-CheckForForgottenAttachments <$true | $false>]
- [-EmailComposeMode <Inline | SeparateForm>] [-SignatureTextOnMobile <String>]
- [-UseDefaultSignatureOnMobile <$true | $false>] [-AutoAddSignatureOnReply <$true | $false>]
- [-GlobalReadingPanePosition <Off | Right | Bottom>] [-IsFavoritesFolderTreeCollapsed <$true | $false>]
- [-IsMailRootFolderTreeCollapsed <$true | $false>] [-IsReplyAllTheDefaultResponse <$true | $false>]
- [-LinkPreviewEnabled <$true | $false>] [-MailFolderPaneExpanded <$true | $false>]
- [-NavigationPaneViewOption <Default | MailFolders | PeopleFolders | Groups | PinnedMailFolders>]
- [-PreferAccessibleContent <$true | $false>] [-ShowPreviewTextInListView <$true | $false>]
- [-ShowReadingPaneOnFirstLoad <$true | $false>] [-ShowSenderOnTopInListView <$true | $false>]
- [-ShowUpNext <$true | $false>] [<CommonParameters>]
+ [-ConversationSortOrder <ConversationSortOrder>]
+ [-DefaultFontColor <String>] [-DefaultFontFlags <FontFlags>]
+ [-DefaultFontName <String>] [-DefaultFontSize <Int32>] [-DefaultFormat <MailFormat>]
+ [-DomainController <Fqdn>] [-EmptyDeletedItemsOnLogoff <Boolean>] [-HideDeletedItems <Boolean>]
+ [-IgnoreDefaultScope] [-NewItemNotification <NewItemNotification>]
+ [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>] [-PreviewMarkAsReadDelaytime <Int32>]
+ [-ReadReceiptResponse <ReadReceiptResponse>] [-SendAddressDefault <String>]
+ [-ShowConversationAsTree <Boolean>] [-SignatureHtml <String>] [-SignatureText <String>] [-WhatIf]
+ [-AutoAddSignatureOnMobile <Boolean>] [-CheckForForgottenAttachments <Boolean>]
+ [-EmailComposeMode <EmailComposeMode>] [-SignatureTextOnMobile <String>]
+ [-UseDefaultSignatureOnMobile <Boolean>] [-AutoAddSignatureOnReply <Boolean>]
+ [-GlobalReadingPanePosition <MailReadingPanePosition>] [-IsFavoritesFolderTreeCollapsed <Boolean>]
+ [-IsMailRootFolderTreeCollapsed <Boolean>] [-IsReplyAllTheDefaultResponse <Boolean>]
+ [-LinkPreviewEnabled <Boolean>] [-MailFolderPaneExpanded <Boolean>]
+ [-NavigationPaneViewOption <NavigationPaneView>]
+ [-PreferAccessibleContent <Boolean>] [-ShowPreviewTextInListView <Boolean>]
+ [-ShowReadingPaneOnFirstLoad <Boolean>] [-ShowSenderOnTopInListView <Boolean>]
+ [-ShowUpNext <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,7 +116,7 @@ The AfterMoveOrDeleteBehavior parameter specifies the behavior after moving or d
 The default value is OpenNextItem.
 
 ```yaml
-Type: OpenPreviousItem | OpenNextItem | ReturnToView
+Type: AfterMoveOrDeleteBehavior
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -134,7 +134,7 @@ The AlwaysShowBcc parameter shows or hides the blind carbon copy (Bcc) field whe
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -152,7 +152,7 @@ The AlwaysShowFrom parameter shows or hides the From field when the user creates
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -174,7 +174,7 @@ The AutoAddSignature parameter specifies whether to automatically add signatures
 The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -226,7 +226,7 @@ The ConversationSortOrder parameter specifies the sorting of messages in the rea
 The default value is ChronologicalNewestOnTop.
 
 ```yaml
-Type: Chronological | Tree | NewestOnTop | NewestOnBottom | ChronologicalNewestOnTop | ChronologicalNewestOnBottom | TreeNewestOnBottom
+Type: ConversationSortOrder
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -272,7 +272,7 @@ The DefaultFontFlags parameter specifies the default text effect when the user c
 The default value is Normal.
 
 ```yaml
-Type: Normal | Bold | Italic | Underline | All
+Type: FontFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 The DefaultFormat parameter specifies the default message format when the user creates messages in Outlook on the web. Accepted values are Html and PlainText. The default value is Html.
 
 ```yaml
-Type: Html | PlainText
+Type: MailFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -360,7 +360,7 @@ The EmptyDeletedItemsOnLogoff parameter specifies whether to delete items from t
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -378,7 +378,7 @@ The HideDeletedItems parameter shows or hides deleted messages in Conversation v
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -430,7 +430,7 @@ The NewItemNotification parameter specifies how to provide notification for the 
 The default value is All.
 
 ```yaml
-Type: None | Sound | EMailToast | VoiceMailToast | FaxToast | All
+Type: NewItemNotification
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -454,7 +454,7 @@ The PreviewMarkAsReadBehavior parameter specifies the options for marking an ite
 The default value is OnSelectionChange.
 
 ```yaml
-Type: Delayed | OnSelectionChange | Never
+Type: PreviewMarkAsReadBehavior
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -498,7 +498,7 @@ The ReadReceiptResponse parameter specifies how to respond to requests for read 
 The default value is DoNotAutomaticallySend.
 
 ```yaml
-Type: DoNotAutomaticallySend | AlwaysSend | NeverSend
+Type: ReadReceiptResponse
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -550,7 +550,7 @@ The ShowConversationAsTree parameter specifies how to sort messages in the list 
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -620,7 +620,7 @@ The AutoAddSignatureOnMobile parameter automatically adds the signature specifie
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -640,7 +640,7 @@ Valid input for this parameter is $true or $false. The default value is $true.
 For example, the user creates a message that includes the text "Please see the attached Word document", but the user doesn't attach a file, and clicks Send. If this value is set to $true, the user gets a warning prompt so they can go back to the message and attach a file. If this value is set to $false, the user doesn't get the warning prompt.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -660,7 +660,7 @@ The EmailComposeMode parameter specifies how the user creates messages in Outloo
 - SeparateForm: New messages and replies are created in a new browser window.
 
 ```yaml
-Type: Inline | SeparateForm
+Type: EmailComposeMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -696,7 +696,7 @@ The UseDefaultSignatureOnMobile parameter specifies whether to add the default e
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -718,7 +718,7 @@ The AutoAddSignature parameter specifies whether to automatically add signatures
 The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -740,7 +740,7 @@ The GlobalReadingPanePosition specifies the default location of the reading pane
 - Right (This is the default value)
 
 ```yaml
-Type: Off | Right | Bottom
+Type: MailReadingPanePosition
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -760,7 +760,7 @@ The IsFavoritesFolderTreeCollapsed parameter specifies whether to collapse the F
 - $false: The Favorites folder tree isn't collapsed by default. This is the default value
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -780,7 +780,7 @@ The IsMailRootFolderTreeCollapsed parameter specifies whether to collapse the Ma
 - $false: The Mail root folder tree isn't collapsed by default. This is the default value
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -800,7 +800,7 @@ The IsReplyAllTheDefaultResponse parameter specifies whether Reply All is the de
 - $false: Reply All isn't the default response option for messages in the reading pane.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -822,7 +822,7 @@ The LinkPreviewEnabled parameter specifies whether link preview of URLs in email
 This parameter depends on the value of the LinkPreviewEnabled parameter on the Set-OrganizationConfig cmdlet, which controls the link preview behavior in Outlook on the web for the entire organization. If link preview is disabled for the organization, users can't enable it for themselves.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -842,7 +842,7 @@ The MailFolderPaneExpanded parameter specifies whether the Mail folder pane is e
 - $false: The Mail folder pane isn't expanded by default.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -868,7 +868,7 @@ The NavigationPaneViewOption parameter specifies the default navigation pane vie
 - PinnedMailFolders
 
 ```yaml
-Type: Default | MailFolders | PeopleFolders | Groups | PinnedMailFolders
+Type: NavigationPaneView
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -888,7 +888,7 @@ The PreferAccessibleContent parameter specifies whether to prefer accessible con
 - $false: Don't prefer accessible content. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -908,7 +908,7 @@ The ShowPreviewTextInListView parameter specifies whether to show preview text f
 - $false: Don't show preview text for messages in list view.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -928,7 +928,7 @@ The ShowReadingPaneOnFirstLoad parameter specifies whether to show the reading p
 - $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -948,7 +948,7 @@ The ShowSenderOnTopInListView parameter specifies whether to show the message se
 - $false: Don't show the message sender on top in list view.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -968,7 +968,7 @@ The ShowUpNext parameter specifies whether the next upcoming event should be sho
 - $false: Don't show the next upcoming event above the mail list view.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

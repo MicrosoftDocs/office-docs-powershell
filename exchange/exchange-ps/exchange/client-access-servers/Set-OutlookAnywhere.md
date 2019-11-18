@@ -22,22 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
- [-ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
+ [-ClientAuthenticationMethod <AuthenticationMethod>]
  [-Confirm]
- [-DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
+ [-DefaultAuthenticationMethod <AuthenticationMethod>]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-ExternalClientsRequireSsl <$true | $false>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalClientAuthenticationMethod <AuthenticationMethod>]
+ [-ExternalClientsRequireSsl <Boolean>]
  [-ExternalHostname <Hostname>]
  [-IISAuthenticationMethods <MultiValuedProperty>]
- [-InternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-InternalClientsRequireSsl <$true | $false>]
+ [-InternalClientAuthenticationMethod <AuthenticationMethod>]
+ [-InternalClientsRequireSsl <Boolean>]
  [-InternalHostname <String>]
  [-Name <String>]
- [-SSLOffloading <$true | $false>]
+ [-SSLOffloading <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -119,7 +119,7 @@ The ClientAuthenticationMethod parameter specifies the authentication method tha
 Although you can use this parameter to set only one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -163,7 +163,7 @@ The DefaultAuthenticationMethod parameter specifies the default authentication m
 You can't use this parameter with the ExternalClientAuthenticationMethod, InternalClientAuthenticationMethod and IISAuthenticationMethods parameters.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -251,7 +251,7 @@ Note:
 If you use the value Allow or Require and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -275,7 +275,7 @@ The ExternalClientAuthenticationMethod parameter specifies the authentication me
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -297,7 +297,7 @@ The ExternalClientsRequireSsl parameter specifies whether external Outlook Anywh
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -363,7 +363,7 @@ The InternalClientAuthenticationMethod parameter specifies the authentication me
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -385,7 +385,7 @@ The InternalClientsRequireSsl parameter specifies whether internal Outlook Anywh
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -443,7 +443,7 @@ You need to use the value $true for this parameter if you don't require SSL conn
 The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

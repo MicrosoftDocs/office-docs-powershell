@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-SafeAttachmentRule [-Name] <String> -SafeAttachmentPolicy <SafeAttachmentPolicyIdParameter>
  [-Comments <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
@@ -151,7 +151,7 @@ The default value is $true.
 In the properties of the rule, the value of this parameter is visible in the State property.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

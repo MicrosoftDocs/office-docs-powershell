@@ -23,48 +23,48 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
  [-AfterHoursKeyMapping <MultiValuedProperty>]
- [-AfterHoursKeyMappingEnabled <$true | $false>]
- [-AfterHoursMainMenuCustomPromptEnabled <$true | $false>]
+ [-AfterHoursKeyMappingEnabled <Boolean>]
+ [-AfterHoursMainMenuCustomPromptEnabled <Boolean>]
  [-AfterHoursMainMenuCustomPromptFilename <String>]
- [-AfterHoursTransferToOperatorEnabled <$true | $false>]
- [-AfterHoursWelcomeGreetingEnabled <$true | $false>]
+ [-AfterHoursTransferToOperatorEnabled <Boolean>]
+ [-AfterHoursWelcomeGreetingEnabled <Boolean>]
  [-AfterHoursWelcomeGreetingFilename <String>]
- [-AllowDialPlanSubscribers <$true | $false>]
+ [-AllowDialPlanSubscribers <Boolean>]
  [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
  [-AllowedInternationalGroups <MultiValuedProperty>]
- [-AllowExtensions <$true | $false>]
+ [-AllowExtensions <Boolean>]
  [-BusinessHoursKeyMapping <MultiValuedProperty>]
- [-BusinessHoursKeyMappingEnabled <$true | $false>]
- [-BusinessHoursMainMenuCustomPromptEnabled <$true | $false>]
+ [-BusinessHoursKeyMappingEnabled <Boolean>]
+ [-BusinessHoursMainMenuCustomPromptEnabled <Boolean>]
  [-BusinessHoursMainMenuCustomPromptFilename <String>]
  [-BusinessHoursSchedule <ScheduleInterval[]>]
- [-BusinessHoursTransferToOperatorEnabled <$true | $false>]
- [-BusinessHoursWelcomeGreetingEnabled <$true | $false>]
+ [-BusinessHoursTransferToOperatorEnabled <Boolean>]
+ [-BusinessHoursWelcomeGreetingEnabled <Boolean>]
  [-BusinessHoursWelcomeGreetingFilename <String>]
  [-BusinessLocation <String>]
  [-BusinessName <String>]
- [-CallSomeoneEnabled <$true | $false>]
+ [-CallSomeoneEnabled <Boolean>]
  [-Confirm]
  [-ContactAddressList <AddressListIdParameter>]
  [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
- [-ContactScope <DialPlan | GlobalAddressList | AddressList>]
+ [-ContactScope <DialScopeEnum>]
  [-DomainController <Fqdn>]
  [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>]
  [-ForceUpgrade]
  [-HolidaySchedule <MultiValuedProperty>]
- [-InfoAnnouncementEnabled <True | False | Uninterruptible>]
+ [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>]
  [-InfoAnnouncementFilename <String>]
  [-Language <UMLanguage>]
- [-MatchedNameSelectionMethod <Title | Department | Location | None | PromptForAlias | InheritFromDialPlan>]
+ [-MatchedNameSelectionMethod <AutoAttendantDisambiguationFieldEnum>]
  [-Name <String>]
- [-NameLookupEnabled <$true | $false>]
+ [-NameLookupEnabled <Boolean>]
  [-OperatorExtension <String>]
  [-PilotIdentifierList <MultiValuedProperty>]
- [-SendVoiceMsgEnabled <$true | $false>]
- [-SpeechEnabled <$true | $false>]
+ [-SendVoiceMsgEnabled <Boolean>]
+ [-SpeechEnabled <Boolean>]
  [-Timezone <String>]
  [-TimeZoneName <UMTimeZone>]
- [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>]
+ [-WeekStartDay <DayOfWeek>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -146,7 +146,7 @@ The following is an example for a custom table that has two entries:
 "Sales, 77899","Service, 78990".
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 The AfterHoursMainMenuCustomPromptEnabled parameter specifies whether the after business hours custom main menu is enabled. The default value is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 The AfterHoursTransferToOperatorEnabled parameter specifies whether to allow calls to be transferred to the operator's extension number after business hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 The AfterHoursWelcomeGreetingEnabled parameter specifies whether the after hours greeting is enabled. The system default audio is used if this parameter is set to disabled. The default value is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 The AllowDialPlanSubscribers parameter specifies whether to allow the dial plan subscribers to dial numbers that are resolved to a subscriber in the same dial plan. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 The AllowExtensions parameter specifies whether callers can make calls to extensions that have the same number of digits as the number specified on the dial plan object. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 The BusinessHoursKeyMappingEnabled parameter specifies whether the custom menus for business hours are enabled or disabled. The default value is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 The BusinessHoursMainMenuCustomPromptEnabled parameter specifies whether the business hours custom main menu prompt is enabled. The default value is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 The BusinessHoursTransferToOperatorEnabled parameter specifies whether to allow call transfers to the operator's extension number during business hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 The BusinessHoursWelcomeGreetingEnabled parameter specifies whether the custom business hours greeting is enabled. The system default audio is used if this parameter is set to disabled. The default value is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 The CallSomeoneEnabled parameter specifies whether the Call Someone feature is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -566,7 +566,7 @@ Accept wildcard characters: False
 The ContactScope parameter specifies the scope of the directory search given to callers when they access the UM auto attendant and specify a user's name.
 
 ```yaml
-Type: DialPlan | GlobalAddressList | AddressList
+Type: DialScopeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 The InfoAnnouncementEnabled parameter specifies whether to enable the informational greeting. The default setting is $true.
 
 ```yaml
-Type: True | False | Uninterruptible
+Type: InfoAnnouncementEnabledEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -718,7 +718,7 @@ The MatchedNameSelectionMethod parameter specifies the selection to use to diffe
 - Inherited from UM dial plan
 
 ```yaml
-Type: Title | Department | Location | None | PromptForAlias | InheritFromDialPlan
+Type: AutoAttendantDisambiguationFieldEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -750,7 +750,7 @@ Accept wildcard characters: False
 The NameLookupEnabled parameter specifies whether to allow callers to perform directory lookups by dialing the name or by speaking the name. This parameter can prevent callers from connecting to unknown extensions.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -798,7 +798,7 @@ Accept wildcard characters: False
 The SendVoiceMsgEnabled parameter specifies whether to allow the Send Message feature.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -814,7 +814,7 @@ Accept wildcard characters: False
 The SpeechEnabled parameter specifies whether the auto attendant is speech-enabled. The default setting on the UM auto attendant is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -878,7 +878,7 @@ Accept wildcard characters: False
 The WeekStartDay parameter specifies the starting day of the week. The valid values for this parameter are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.
 
 ```yaml
-Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
+Type: DayOfWeek
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

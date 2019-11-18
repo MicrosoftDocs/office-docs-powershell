@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String>
- -State <Inactive | Active | Draining>
+ -State <ServiceState>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalOnly]
@@ -121,7 +121,7 @@ The State parameter specifies the state that you want for the component. Valid v
 - Draining
 
 ```yaml
-Type: Inactive | Active | Draining
+Type: ServiceState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

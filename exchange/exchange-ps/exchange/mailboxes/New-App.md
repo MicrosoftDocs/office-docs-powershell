@@ -25,13 +25,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
  [-AllowReadWriteMailbox]
  [-Confirm]
- [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-OrganizationApp]
  [-PrivateCatalog]
- [-ProvidedTo <Everyone | SpecificUsers>]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -41,14 +41,14 @@ New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelat
 New-App [-FileData <Byte[]>]
  [-AllowReadWriteMailbox]
  [-Confirm]
- [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
- [-ProvidedTo <Everyone | SpecificUsers>]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -58,14 +58,14 @@ New-App [-FileData <Byte[]>]
 New-App [-FileStream <Stream>]
  [-AllowReadWriteMailbox]
  [-Confirm]
- [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
- [-ProvidedTo <Everyone | SpecificUsers>]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -75,14 +75,14 @@ New-App [-FileStream <Stream>]
 New-App [-Url <Uri>]
  [-AllowReadWriteMailbox]
  [-Confirm]
- [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
+ [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
- [-ProvidedTo <Everyone | SpecificUsers>]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -160,7 +160,7 @@ The DefaultStateForUser parameter specifies the default initial state of an orga
 You need to use the OrganizationApp switch when you use this parameter.
 
 ```yaml
-Type: Enabled | Disabled | AlwaysEnabled
+Type: DefaultStateForUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -218,7 +218,7 @@ The Enabled parameter specifies whether the app is available to users in the org
 This setting overrides the ProvidedTo, UserList and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -438,7 +438,7 @@ The ProvidedTo parameter specifies the availability of the app in your organizat
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Everyone | SpecificUsers
+Type: ClientExtensionProvidedTo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ManagementScope [[-Identity] <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
- [-Exclusive <$true | $false>] [-Orphan] [<CommonParameters>]
+ [-Exclusive <Boolean>] [-Orphan] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 The Exclusive parameter specifies whether exclusive scopes should be returned. If the Exclusive parameter isn't specified, regular scopes and exclusive scopes are returned. If the Exclusive parameter is set to $True, only exclusive scopes are returned. If the Exclusive parameter is set to $False, only regular scopes are returned. The valid values are $True and $False.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

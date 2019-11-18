@@ -21,23 +21,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-AllowAutomaticSpeechRecognition <$true | $false>]
- [-AllowCallAnsweringRules <$true | $false>] [-AllowCommonPatterns <$true | $false>]
- [-AllowDialPlanSubscribers <$true | $false>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <$true | $false>]
- [-AllowFax <$true | $false>] [-AllowMessageWaitingIndicator <$true | $false>]
- [-AllowMissedCallNotifications <$true | $false>] [-AllowPinlessVoiceMailAccess <$true | $false>]
- [-AllowPlayOnPhone <$true | $false>] [-AllowSMSNotification <$true | $false>]
- [-AllowSubscriberAccess <$true | $false>] [-AllowTUIAccessToCalendar <$true | $false>]
- [-AllowTUIAccessToDirectory <$true | $false>] [-AllowTUIAccessToEmail <$true | $false>]
- [-AllowTUIAccessToPersonalContacts <$true | $false>] [-AllowVoiceMailAnalysis <$true | $false>]
- [-AllowVoiceMailPreview <$true | $false>] [-AllowVoiceResponseToOtherMessageTypes <$true | $false>] [-Confirm]
+Set-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-AllowAutomaticSpeechRecognition <Boolean>]
+ [-AllowCallAnsweringRules <Boolean>] [-AllowCommonPatterns <Boolean>]
+ [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
+ [-AllowFax <Boolean>] [-AllowMessageWaitingIndicator <Boolean>]
+ [-AllowMissedCallNotifications <Boolean>] [-AllowPinlessVoiceMailAccess <Boolean>]
+ [-AllowPlayOnPhone <Boolean>] [-AllowSMSNotification <Boolean>]
+ [-AllowSubscriberAccess <Boolean>] [-AllowTUIAccessToCalendar <Boolean>]
+ [-AllowTUIAccessToDirectory <Boolean>] [-AllowTUIAccessToEmail <Boolean>]
+ [-AllowTUIAccessToPersonalContacts <Boolean>] [-AllowVoiceMailAnalysis <Boolean>]
+ [-AllowVoiceMailPreview <Boolean>] [-AllowVoiceResponseToOtherMessageTypes <Boolean>] [-Confirm]
  [-DomainController <Fqdn>] [-FaxMessageText <String>] [-FaxServerURI <String>] [-ForceUpgrade]
- [-InformCallerOfVoiceMailAnalysis <$true | $false>] [-LogonFailuresBeforePINReset <Unlimited>]
+ [-InformCallerOfVoiceMailAnalysis <Boolean>] [-LogonFailuresBeforePINReset <Unlimited>]
  [-MaxGreetingDuration <Int32>] [-MaxLogonAttempts <Unlimited>] [-MinPINLength <Int32>] [-Name <String>]
- [-PINHistoryCount <Int32>] [-PINLifetime <Unlimited>] [-ProtectAuthenticatedVoiceMail <None | Private | All>]
- [-ProtectedVoiceMailText <String>] [-ProtectUnauthenticatedVoiceMail <None | Private | All>]
- [-RequireProtectedPlayOnPhone <$true | $false>] [-ResetPINText <String>]
+ [-PINHistoryCount <Int32>] [-PINLifetime <Unlimited>] [-ProtectAuthenticatedVoiceMail <DRMProtectionOptions>]
+ [-ProtectedVoiceMailText <String>] [-ProtectUnauthenticatedVoiceMail <DRMProtectionOptions>]
+ [-RequireProtectedPlayOnPhone <Boolean>] [-ResetPINText <String>]
  [-SourceForestPolicyNames <MultiValuedProperty>] [-UMDialPlan <UMDialPlanIdParameter>]
  [-UMEnabledText <String>] [-VoiceMailPreviewPartnerAddress <SmtpAddress>]
  [-VoiceMailPreviewPartnerAssignedID <String>] [-VoiceMailPreviewPartnerMaxDeliveryDelay <Int32>]
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 The AllowAutomaticSpeechRecognition parameter specifies whether users associated with the UM mailbox policy can use Automatic Speech Recognition (ASR). The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 The AllowCallAnsweringRules parameter specifies whether users associated with the UM mailbox policy are allowed to configure or set up Call Answering Rules for their accounts. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 The AllowCommonPatterns parameter specifies whether to allow obvious PINs. Examples of obvious PINs include subsets of the telephone number, sequential numbers, or repeated numbers. If set to $false, sequential and repeated numbers and the suffix of the mailbox extension are rejected. If set to $true, only the suffix of the mailbox extension is rejected.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 The AllowDialPlanSubscribers parameter specifies whether to let subscribers in a dial plan dial a number that resolves to another subscriber within the same dial plan. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 The AllowExtensions parameter specifies whether to let subscribers dial calls to the number of digits specified on the UM dial plan. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 The AllowFax parameter specifies whether users associated with the UM mailbox policy are allowed to receive incoming faxes. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 The AllowMessageWaitingIndicator parameter specifies whether users associated with the UM mailbox policy can receive notifications that they've received a new voice mail message. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -242,7 +242,7 @@ The AllowMissedCallNotifications parameter specifies whether missed call notific
 When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 The AllowPinlessVoiceMailAccess parameter specifies whether users associated with the UM mailbox policy are required to use a PIN to access their voice mail. A PIN is still required to access their email and calendar. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 The AllowPlayOnPhone parameter specifies whether users associated with the UM mailbox policy can use the Play on Phone feature to listen to voice mail messages. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 The AllowSMSNotification parameter specifies whether UM-enabled users associated with the UM mailbox policy are allowed to get SMS or text messages sent to their mobile phones. If this parameter is set to $true, you also want to set the Set-UMMailbox cmdlet UMSMSNotificationOption parameter for the UM-enabled user to either VoiceMail or VoiceMailAndMissedCalls. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 The AllowSubscriberAccess parameter specifies whether users associated with the UM mailbox policy are allowed subscriber access to their individual mailboxes. If this parameter is set to $true, after users are authenticated, they're able to retrieve voice mail over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 The AllowTUIAccessToCalendar parameter specifies whether users associated with the UM mailbox policy can access their individual calendars over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 The AllowTUIAccessToDirectory parameter specifies whether users associated with the UM mailbox policy can access the directory over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 The AllowTUIAccessToEmail parameter specifies whether users associated with the UM mailbox policy can access their individual email messages over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 The AllowTUIAccessToPersonalContacts parameter specifies whether users associated with the UM mailbox policy can access their personal contacts over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 The AllowVoiceMailAnalysis parameter specifies whether a copy of each voice mail left for the users associated with the UM mailbox policy will be forwarded to Microsoft for analysis and improvement of our speech recognition features.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 The AllowVoiceMailPreview parameter specifies whether users associated with the UM mailbox policy are able to receive Voice Mail Previews for call-answered messages, or have Voice Mail Previews provided for voice mail messages that they send to other users in their mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 The AllowVoiceResponseToOtherMessageTypes parameter specifies whether UM-enabled users associated with the UM mailbox policy can record and attach a voice mail message when replying to email messages and calendar items.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 The InformCallerOfVoiceMailAnalysis parameter specifies whether the callers leaving the voice mails will be informed about the possibility of their voice mails being forwarded to Microsoft for analysis.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -648,7 +648,7 @@ Accept wildcard characters: False
 The ProtectAuthenticatedVoiceMail parameter specifies whether Mailbox servers that answer Outlook Voice Access calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
 
 ```yaml
-Type: None | Private | All
+Type: DRMProtectionOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -680,7 +680,7 @@ Accept wildcard characters: False
 The ProtectUnauthenticatedVoiceMail parameter specifies whether the Mailbox servers that answer calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. This also applies when a message is sent from a UM auto attendant to a UM-enabled user associated with the UM mailbox policy. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
 
 ```yaml
-Type: None | Private | All
+Type: DRMProtectionOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 The RequireProtectedPlayOnPhone parameter specifies whether users associated with the UM mailbox policy can only use Play on Phone for protected voice mail messages or whether users can use multimedia software to play the protected message. The default value is $false. When set to $false, users are able to use both methods to listen to protected voice mail messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

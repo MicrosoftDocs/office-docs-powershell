@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-DeliveryAgentConnector [-Identity] <DeliveryAgentConnectorIdParameter>
  [-AddressSpaces <MultiValuedProperty>] [-Comment <String>] [-Confirm] [-DeliveryProtocol <String>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Force] [-IsScopedConnector <$true | $false>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-Force] [-IsScopedConnector <Boolean>]
  [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>] [-MaxMessagesPerConnection <Int32>]
  [-Name <String>] [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
@@ -165,7 +165,7 @@ The Enabled parameter specifies whether the delivery agent connector is enabled.
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -199,7 +199,7 @@ The IsScopedConnector parameter specifies the availability of the connector to o
 The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

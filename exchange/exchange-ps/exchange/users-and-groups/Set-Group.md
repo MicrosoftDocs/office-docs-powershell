@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-Group [-Identity] <GroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IsHierarchicalGroup <$true | $false>]
+ [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IsHierarchicalGroup <Boolean>]
  [-ManagedBy <GeneralRecipientIdParameter[]>] [-Name <String>] [-Notes <String>]
  [-PhoneticDisplayName <String>] [-SeniorityIndex <Int32>] [-SimpleDisplayName <String>] [-Universal] [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 The IsHierarchicalGroup parameter specifies whether the group is part of a hierarchical address book. Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

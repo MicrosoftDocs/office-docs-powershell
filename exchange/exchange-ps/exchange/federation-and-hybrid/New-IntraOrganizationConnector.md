@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-IntraOrganizationConnector [-Name] <String> -DiscoveryEndpoint <Uri>
- -TargetAddressDomains <MultiValuedProperty> [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ -TargetAddressDomains <MultiValuedProperty> [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -138,7 +138,7 @@ The Enabled parameter enables or disabled the Intra-organization connector. The 
 When you set the value to $false, you completely stop connectivity for the specific connection.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

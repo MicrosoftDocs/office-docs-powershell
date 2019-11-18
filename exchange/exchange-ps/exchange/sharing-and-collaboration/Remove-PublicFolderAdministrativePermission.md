@@ -26,7 +26,7 @@ Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -39,7 +39,7 @@ Remove-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativ
  [-Deny]
  [-DomainController <Fqdn>]
  [[-Identity] <PublicFolderIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -250,7 +250,7 @@ The InheritanceType parameter specifies the type of inheritance. Valid values ar
 - Children
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

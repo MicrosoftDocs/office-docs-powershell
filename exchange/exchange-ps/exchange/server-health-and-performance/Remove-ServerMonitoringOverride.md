@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
+Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum>
  -PropertyName <String> -Server <ServerIdParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -74,7 +74,7 @@ The ItemType parameter specifies the item type of the override that you want to 
 - Responder
 
 ```yaml
-Type: Probe | Monitor | Responder | Maintenance
+Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

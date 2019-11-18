@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <Disabled | SoftDeleted>
+Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <MailboxStateParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -110,7 +110,7 @@ The MailboxState parameter specifies the mailbox state on the source mailbox dat
 - SoftDeleted
 
 ```yaml
-Type: Disabled | SoftDeleted
+Type: MailboxStateParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
