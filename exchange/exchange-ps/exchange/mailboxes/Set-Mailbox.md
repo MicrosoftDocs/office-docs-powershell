@@ -101,7 +101,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GMGen <Boolean>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-IgnoreDefaultScope]
  [-ImListMigrationCompleted <Boolean>]
@@ -263,6 +262,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+[-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -382,6 +382,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -501,6 +502,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -738,6 +740,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -858,6 +861,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -976,6 +980,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -2396,7 +2401,7 @@ The DisableThrottling parameter enables or disables sender rate throttling for t
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 
@@ -3116,7 +3121,7 @@ You can use any value that uniquely identifies the Group Mailbox. For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Identity, RemoveDelayHoldApplied
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -5328,13 +5333,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDualWrite
+This parameter is available only in on-premises Exchange
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
