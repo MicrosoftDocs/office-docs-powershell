@@ -688,7 +688,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter>
+Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -774,7 +774,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayReleaseHoldApplied]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
