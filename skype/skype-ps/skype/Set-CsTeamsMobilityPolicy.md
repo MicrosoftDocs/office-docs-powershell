@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
 ## SYNTAX
 
@@ -24,7 +25,7 @@ Set-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
 ## EXAMPLES
 
