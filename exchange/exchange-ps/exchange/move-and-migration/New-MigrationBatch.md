@@ -595,6 +595,8 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
+This parameter is in the process of being deprecated in the cloud-based service. In the future, if neither BadItemLimit nor LargeItemLimit is specified then the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
@@ -758,6 +760,8 @@ For more information about maximum message size values, see the following topics
 - Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+
+This parameter is in the process of being deprecated in the cloud-based service. In the future, if neither BadItemLimit nor LargeItemLimit is specified then the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
