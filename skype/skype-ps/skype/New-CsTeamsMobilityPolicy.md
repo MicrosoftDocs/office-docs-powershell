@@ -25,10 +25,11 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-CsTeamsMobilityPolicy -Identity SalesMobilityPolicy -IPAudioMobileMode "WifiOnly"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 uses the New-CsTeamsMobilityPolicy cmdlet to create a new Teams Mobility Policy with the Identity SalesMobilityPolicy and IPAudioMobileMode equal to WifiOnly. 
+
 
 ## PARAMETERS
 
@@ -48,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Enables administrators to provide explanatory text about the mobility policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
 Type: String
