@@ -29,15 +29,14 @@ Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-Get-CsTeamsMobilityPolicy
 ```
-
-{{ Add example description here }}
+Retrieve all policies that are available in your organization
 
 ## PARAMETERS
 
 ### -Filter
-{{ Fill Filter Description }}
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned. For example, to return a collection of all the per-user policies, use this syntax: -Filter "tag:".
 
 ```yaml
 Type: String
@@ -52,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Specify the unique name of a policy you would like to retrieve
 
 ```yaml
 Type: XdsIdentity
@@ -67,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{ Fill LocalStore Description }}
+Internal Microsoft use only.
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Fill Tenant Description }}
+Internal Microsoft use only.
 
 ```yaml
 Type: System.Guid
