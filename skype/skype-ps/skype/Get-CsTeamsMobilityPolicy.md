@@ -8,6 +8,9 @@ schema: 2.0.0
 # Get-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
+The TeamsMobilityPolicy allows Admins to control Teams mobile usag for users. 
+
+The Get-CsTeamsCallParkPolicy cmdlet returns the policies that are available for your organization.
 
 ## SYNTAX
 
@@ -23,7 +26,9 @@ Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The TeamsMobilityPolicy allows Admins to control Teams mobile usag for users. 
+
+The Get-CsTeamsCallParkPolicy cmdlet returns the policies that are available for your organization.
 
 ## EXAMPLES
 
