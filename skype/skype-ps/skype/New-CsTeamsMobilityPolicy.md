@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
+The TeamsMobilityPolicy allows Admins to control Teams mobile usag for users. 
 
 ## SYNTAX
 
@@ -18,7 +19,7 @@ New-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The TeamsMobilityPolicy allows Admins to control Teams mobile usag for users. 
 
 ## EXAMPLES
 
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppress all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAudioMobileMode
-{{ Fill IPAudioMobileMode Description }}
+When set to WifiOnly, prohibits the user from making, receiving calls or joining meetings using VoIP calls on the mobile device while on cellular data connection.
 
 ```yaml
 Type: String
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPVideoMobileMode
-{{ Fill IPVideoMobileMode Description }}
+When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection.
 
 ```yaml
 Type: String
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Specify the name of the policy that you are creating.
 
 ```yaml
 Type: XdsIdentity
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Fill Tenant Description }}
+Internal Microsoft use only.
 
 ```yaml
 Type: System.Guid
