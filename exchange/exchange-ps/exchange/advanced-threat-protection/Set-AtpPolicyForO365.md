@@ -27,9 +27,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-AllowClickThrough <Boolean>]
+ [-AllowSafeDocsOpen <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForClients <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
@@ -89,6 +91,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSafeDocsOpen
+{{ Fill AllowSafeDocsOpen Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockUrls
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by commas.
 
@@ -137,6 +155,22 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSafeDocs
+{{ Fill EnableSafeDocs Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
