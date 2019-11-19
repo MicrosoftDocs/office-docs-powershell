@@ -54,7 +54,7 @@ PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternalyAndModernAuthInterna
 
 This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients). 
 >[!NOTE]
->Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is mispelled and to be able to use it, only one l for Externally should be used.
+>Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is misspelled and to be able to use it, only one l for Externally should be used.
 
 
 ## PARAMETERS
