@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
 Type: String
