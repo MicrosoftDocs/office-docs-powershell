@@ -92,7 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSafeDocsOpen
-{{ Fill AllowSafeDocsOpen Description }}
+The AllowSafeDocsOpen parameter specifies whether users can click through and bypass the Protected View container even when Safe Documents in Microsoft Defender Advanced Threat Protection (MDATP) identifies a file as malicious. Valid values are:
+
+- $true: Users are allowed to exit the Protected View container even if the document has been identified as malicious.
+
+- $false: Users aren't allowed to exit Protected View in case of a malicious detection.
+
 
 ```yaml
 Type: Boolean
@@ -164,7 +169,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeDocs
-{{ Fill EnableSafeDocs Description }}
+The EnableSafeDocs parameter specifies whether to enable the Safe Documents feature in the organization. Valid values are:
+
+- $true: Safe Documents is enabled and will upload user files to Microsoft Defender Advanced Threat Protection (MDATP) for scanning and verification.
+
+- $false: Safe Documents is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
