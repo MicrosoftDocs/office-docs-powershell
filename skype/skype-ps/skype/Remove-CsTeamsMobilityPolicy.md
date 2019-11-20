@@ -1,9 +1,14 @@
 ---
-external help file: tmp_mwszjisg.vzj-help.xml
-Module Name: tmp_mwszjisg.vzj
-online version:
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Online
+title: Remove-CsTeamsMobilityPolicy
 schema: 2.0.0
+manager: ritikag
+author: saragava
+ms.author: saragava
+ms.reviewer:
 ---
+
 
 # Remove-CsTeamsMobilityPolicy
 

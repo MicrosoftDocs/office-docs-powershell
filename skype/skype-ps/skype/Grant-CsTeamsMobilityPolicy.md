@@ -1,9 +1,14 @@
 ---
-external help file: tmp_4hoyazlh.jvo-help.xml
-Module Name: tmp_4hoyazlh.jvo
-online version:
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Online
+title: Grant-CsTeamsMobilityPolicy
 schema: 2.0.0
+manager: ritikag
+author: saragava
+ms.author: saragava
+ms.reviewer:
 ---
+
 
 # Grant-CsTeamsMobilityPolicy
 
