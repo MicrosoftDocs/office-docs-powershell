@@ -8,6 +8,7 @@ schema: 2.0.0
 # Grant-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
+Assigns a teams mobility policy at the per-user scope. 
 
 ## SYNTAX
 
@@ -24,16 +25,15 @@ Grant-CsTeamsMobilityPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-Dom
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Assigns a teams mobility policy at the per-user scope. 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>  Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
 ```
-
-{{ Add example description here }}
+Assigns a custom policy "Sales Policy" to the user "Ken Myer"
 
 ## PARAMETERS
 
@@ -53,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{ Fill DomainController Description }}
 
 ```yaml
 Type: Fqdn
@@ -67,23 +66,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Global
-{{ Fill Global Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+The User Id of the user to whom the policy is being assigned.
 
 ```yaml
 Type: UserIdParameter
@@ -98,8 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -113,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{ Fill PolicyName Description }}
+The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the Global policy, you can assign $Null.
 
 ```yaml
 Type: String
@@ -122,21 +104,6 @@ Aliases:
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{ Fill Tenant Description }}
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
