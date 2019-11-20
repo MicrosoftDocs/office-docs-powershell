@@ -30,7 +30,7 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ### Example 1
 ```powershell
-PS C:\> Get-Get-CsTeamsMobilityPolicy
+PS C:\> Get-CsTeamsMobilityPolicy
 ```
 Retrieve all policies that are available in your organization
 
