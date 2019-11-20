@@ -25,7 +25,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
  [-BlockAccess <Boolean>]
- [-BlockAccessScope <Boolean>]
+ [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
@@ -176,7 +176,7 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - PerUser: Block access to external users.
 
 ```yaml
-Type: Boolean
+Type: BlockAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
