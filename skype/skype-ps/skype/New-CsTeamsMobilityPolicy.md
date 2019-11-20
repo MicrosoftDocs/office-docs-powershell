@@ -21,6 +21,8 @@ New-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ## DESCRIPTION
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
+The New-CsTeamsMobilityPolicy cmdlet lets an Admin create a custom teams mobility policy to assign to particular sets of users. 
+
 ## EXAMPLES
 
 ### Example 1

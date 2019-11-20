@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. The Remove-CsTeamsMobilityPolicy cmdlet lets an Admin delete a custom policy that has been created. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.  
 
 ## SYNTAX
 
@@ -18,7 +18,9 @@ Remove-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [
 ```
 
 ## DESCRIPTION
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. The Remove-CsTeamsMobilityPolicy cmdlet lets an Admin delete a custom policy that has been created. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+
+The Remove-CsTeamsMobilityPolicy cmdlet lets an Admin delete a custom teams mobility policy that has been created. 
 
 ## EXAMPLES
 

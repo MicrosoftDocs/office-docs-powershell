@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-Assigns a teams mobility policy at the per-user scope. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
 ## SYNTAX
 
@@ -26,6 +26,8 @@ Grant-CsTeamsMobilityPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-Dom
 
 ## DESCRIPTION
 Assigns a teams mobility policy at the per-user scope. 
+
+The Grant-CsTeamsMobilityPolicy cmdlet lets an Admin assign a custom teams mobility policy to a user. 
 
 ## EXAMPLES
 

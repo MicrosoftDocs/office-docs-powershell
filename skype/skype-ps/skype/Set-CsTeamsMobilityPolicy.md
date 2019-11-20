@@ -27,7 +27,7 @@ Set-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ## DESCRIPTION
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
-The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update existing Teams Mobility Policies.
+The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobility policies.
 
 ## EXAMPLES
 

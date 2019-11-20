@@ -26,13 +26,15 @@ Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ## DESCRIPTION
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
+The Get-CsTeamsMobilityPolicy cmdlet allows administrators to get all teams mobility policies.
+
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsMobilityPolicy
 ```
-Retrieve all policies that are available in your organization
+Retrieve all teams mobility policies that are available in your organization
 
 ## PARAMETERS
 
