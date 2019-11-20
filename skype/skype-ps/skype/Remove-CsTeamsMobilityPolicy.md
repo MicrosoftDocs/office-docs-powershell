@@ -23,10 +23,10 @@ Remove-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTeamsMobilityPolicy -Identity SalesPolicy
 ```
 
-{{ Add example description here }}
+Deletes a custom policy that has already been created in the organization.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Unique identifier for the client policy to be removed. To "remove" the global policy, use the following syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the properties in that policy will be reset to their default values.) To remove a per-user policy, use syntax similar to this: -Identity "SalesDepartmentPolicy". You cannot use wildcards when specifying a policy Identity.
 
 ```yaml
 Type: XdsIdentity
@@ -72,21 +72,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{ Fill Tenant Description }}
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
