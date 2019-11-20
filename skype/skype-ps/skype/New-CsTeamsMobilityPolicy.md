@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Enables administrators to provide explanatory text about the mobility policy. For example, the Description might indicate the users the policy should be assigned to.
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
 Type: String
