@@ -51,7 +51,7 @@ $UserCredential = Get-Credential
 Connect-ExchangeOnline -Credential $UserCredential
 ```
 
-The first command gets the user credentials and stores them in the $Credential variable.
+The first command gets the user credentials and stores them in the $UserCredential variable.
 
 The second command connects the current PowerShell session using the credentials in the $Credential. Note that after the second command is complete, the password key in the $Credential variable becomes empty.
 
