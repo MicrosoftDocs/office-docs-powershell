@@ -580,7 +580,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-This parameter is in the process of being deprecated in the cloud-based service. In the future, if neither BadItemLimit nor LargeItemLimit is specified then the request will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
@@ -838,7 +838,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-This parameter is in the process of being deprecated in the cloud-based service. In the future, if neither BadItemLimit nor LargeItemLimit is specified then the request will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
