@@ -761,7 +761,7 @@ For more information about maximum message size values, see the following topics
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
-This parameter is in the process of being deprecated in the cloud-based service. In the future, if neither BadItemLimit nor LargeItemLimit is specified then the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
