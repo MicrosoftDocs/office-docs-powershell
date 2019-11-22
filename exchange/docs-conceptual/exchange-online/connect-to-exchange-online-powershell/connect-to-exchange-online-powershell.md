@@ -59,6 +59,9 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
+> [!IMPORTANT]
+> On October 13th, 2020 we will retire Basic Authentication for Remote PowerShell (RPS) in Exchange Online.
+
 ## Connect to Exchange Online
 
 1. On your local computer, open Windows PowerShell and run the following command.
