@@ -70,10 +70,10 @@ By default, other security groups and role groups inherit permissions to mailbox
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-EXOMailboxPermission -Identity john@contoso.com
 ```
 
-{{ Add example description here }}
+This example return the permission the user has on mailboxes
 
 ## PARAMETERS
 
