@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyDialString
- Specific the emergency phone number
+ Specifies the emergency phone number
 
 ```yaml
 Type: String
