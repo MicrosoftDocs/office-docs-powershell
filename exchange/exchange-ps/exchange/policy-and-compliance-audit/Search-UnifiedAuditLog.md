@@ -34,6 +34,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-SiteIds <String[]>]
  [-UserIds <String[]>]
  [<CommonParameters>]
+ [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -91,6 +92,21 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https:/
 This example searches the unified audit log from May 1, 2018 to May 8, 2018 for all events relating to a specific Word document identified by its ObjectIDs value.
 
 ## PARAMETERS
+
+### -AsJob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
@@ -239,6 +255,8 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - DataCenterSecurityCmdlet
 
+- DataGovernance
+
 - Discovery
 
 - ExchangeAdmin
@@ -247,13 +265,31 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ExchangeItem
 
+- ExchangeItemAggregated
+
 - ExchangeItemGroup
 
+- HygieneEvent
+
+- LabelExplorer
+
 - MicrosoftTeams
+
+- MicrosoftTeamsAddOns
+
+- MicrosoftStream
+
+- MicrosoftTeamsSettingsOperation
 
 - OneDrive
 
 - PowerBIAudit
+
+- Project
+
+- PowerAppsApp
+
+- PowerAppsPlan
 
 - SecurityComplianceAlerts
 
@@ -264,6 +300,8 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 - SharePoint
 
 - SharePointFileOperation
+
+- SharePointFieldOperation
 
 - SharePointListOperation
 
@@ -277,11 +315,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Sway
 
+- SyntheticProbe
+
+- ThreatFinder
+
 - ThreatIntelligence
 
 - ThreatIntelligenceAtpContent
 
 - ThreatIntelligenceUrl
+
+- TeamsHealthcare
 
 - WorkplaceAnalytics
 
