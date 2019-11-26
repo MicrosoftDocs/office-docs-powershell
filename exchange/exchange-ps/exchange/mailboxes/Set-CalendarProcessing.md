@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalResponse
-The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
+The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AddAdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
