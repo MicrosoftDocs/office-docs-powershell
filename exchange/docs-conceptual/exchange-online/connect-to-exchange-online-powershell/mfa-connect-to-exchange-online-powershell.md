@@ -133,6 +133,66 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 Get-PSSession | Remove-PSSession
 ```
 
+## Connect to Exchange Online PowerShell V2 Module(Public Preview)
+
+1. On your local computer, open Windows PowerShell and run the following command.
+
+   ```PowerShell
+    Install-Module PowerShellGet -Force
+   ```
+   
+2. Run the following command:
+
+   ```PowerShell
+    Install-Module -Name ExchangeOnlineManagement
+   ```
+   
+3. The command that you need to run uses the following syntax:
+
+   ```PowerShell
+   Connect-ExchangeOnline [-UserPrincipalName -ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri> -DelegatedOrganization <String>]
+   ```
+
+   - _\<UPN\>_ is your Office 365 work or school account.
+
+   - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the nature of your Office 365 organization as described in the following table:
+
+     |**Office 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
+     |:-----|:-----|:-----|
+     |Office 365|Not used|Not used|
+     |Office 365 Germany|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+     |Office 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
+     |Office 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
+
+   This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
+
+   ```PowerShell
+   Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
+   ```
+
+   This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
+
+   ```PowerShell
+   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+   This example connects to Exchange Online to manage another tenant
+
+     ```PowerShell
+     Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+     ```
+
+3. In the sign-in window that opens, enter your password, and then click **Sign in**.
+
+   ![Enter your password in the Exchange Online Remote PowerShell window](../../media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
+
+   A verification code is generated and delivered based on the verification response option that's configured for your account (for example, a text message or the Azure Authenticator app on your mobile phone).
+
+4. In the verification window that opens, enter the verification code, and then click **Sign in**.
+
+   ![Enter your verification code in the Exchange Online Remote PowerShell window](../../media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
+
+
 ## Single sign-on
 
 If your organization has single sign-on (SSO) enabled and you are logged on to a computer as a user in the SSO domain, then **Connect-EXPOPSSession** may fail with the following error:
