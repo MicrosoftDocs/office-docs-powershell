@@ -135,7 +135,10 @@ Get-PSSession | Remove-PSSession
 
 ## Connect to Exchange Online PowerShell V2 Module(Public Preview)
 
-1. On your local computer, open Windows PowerShell and run the following command:
+> [!NOTE]
+> The Exchange Online PowerShell V2 Module is not supported in PowerShell Core (v6+ on Windows, macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+
+1. On your local computer, open Windows PowerShell (as Administrator) and run the following command:
 
    ```PowerShell
     Install-Module PowerShellGet -Force
