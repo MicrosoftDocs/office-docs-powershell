@@ -176,7 +176,7 @@ Get-PSSession | Remove-PSSession
    Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
    ```
 
-   This example connects to Exchange Online to manage another tenant
+   This example connects to Exchange Online to manage another tenant.
 
      ```PowerShell
      Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
