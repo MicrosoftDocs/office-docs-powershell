@@ -135,7 +135,7 @@ Get-PSSession | Remove-PSSession
 
 ## Connect to Exchange Online PowerShell V2 Module(Public Preview)
 
-1. On your local computer, open Windows PowerShell and run the following command.
+1. On your local computer, open Windows PowerShell and run the following command:
 
    ```PowerShell
     Install-Module PowerShellGet -Force
