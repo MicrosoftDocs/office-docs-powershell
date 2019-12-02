@@ -1091,6 +1091,13 @@ Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741
 
 This example removes the message tracking organization capability from the arbitration mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c} and assigns it to an arbitration mailbox named SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}.
 
+### Example 7
+```powershell
+Set-Mailbox -Identity "John Woods" -EmailAddresses @{add="Jwoods@contoso.com"}
+```
+
+This example add's a secondary email address to John's mailbox.
+
 ## PARAMETERS
 
 ### -Identity
