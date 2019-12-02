@@ -22,20 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
- [-ArchiveAccessEnabled <$true | $false>]
+ [-ArchiveAccessEnabled <Boolean>]
  [-Confirm]
- [-DeliveryReportEnabled <$true | $false>]
+ [-DeliveryReportEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
- [-FreeBusyAccessEnabled <$true | $false>]
- [-FreeBusyAccessLevel <None | AvailabilityOnly | LimitedDetails>]
+ [-Enabled <Boolean>]
+ [-FreeBusyAccessEnabled <Boolean>]
+ [-FreeBusyAccessLevel <FreeBusyAccessLevel>]
  [-FreeBusyAccessScope <GroupIdParameter>]
- [-MailboxMoveEnabled <$true | $false>]
- [-MailTipsAccessEnabled <$true | $false>]
- [-MailTipsAccessLevel <None | Limited | All>]
+ [-MailboxMoveEnabled <Boolean>]
+ [-MailTipsAccessEnabled <Boolean>]
+ [-MailTipsAccessLevel <MailTipsAccessLevel>]
  [-MailTipsAccessScope <GroupIdParameter>]
  [-OrganizationContact <SmtpAddress>]
- [-PhotosEnabled <$true | $false>]
+ [-PhotosEnabled <Boolean>]
  [-TargetApplicationUri <Uri>]
  [-TargetAutodiscoverEpr <Uri>]
  [-TargetOwaURL <Uri>]
@@ -122,7 +122,7 @@ The ArchiveAccessEnabled parameter specifies whether the organization relationsh
 - $false: The external organization doesn't provide remote access to mailbox archives. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -164,7 +164,7 @@ The DeliveryReportEnabled parameter specifies whether Delivery Reports should be
 For message tracking to work in a cross-premises Exchange scenario, this parameter must be set to $true on both sides of the organization relationship. If the value of this parameter is set to $false on one or both sides of the organization relationship, message tracking between the organizations won't work in either direction.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -202,7 +202,7 @@ The Enabled parameter specifies whether to enable the organization relationship.
 - $false: The organization relationship is disabled. This value completely stops sharing for the organization relationship.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -224,7 +224,7 @@ The FreeBusyAccessEnabled parameter specifies whether the organization relations
 You control the free/busy access level and scope by using the FreeBusyAccessLevel and FreeBusyAccessScope parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -248,7 +248,7 @@ The FreeBusyAccessLevel parameter specifies the maximum amount of detail returne
 This parameter is only meaningful when the FreeBusyAccessEnabled parameter value is $true.
 
 ```yaml
-Type: None | AvailabilityOnly | LimitedDetails
+Type: FreeBusyAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -294,7 +294,7 @@ The MailboxMoveEnabled parameter specifies whether the organization relationship
 - $false: Mailbox moves to or from the external organization aren't allowed. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -316,7 +316,7 @@ The MailTipsAccessEnabled parameter specifies whether MailTips for users in this
 You control the MailTips access level by using the MailTipsAccessLevel parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -340,7 +340,7 @@ The MailTipsAccessLevel parameter specifies the level of MailTips data that's ex
 This parameter is only meaningful when the MailTipsAccessEnabled parameter value is $true.
 
 ```yaml
-Type: None | Limited | All
+Type: MailTipsAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -414,7 +414,7 @@ The PhotosEnabled parameter specifies whether photos for users in the internal o
 - $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

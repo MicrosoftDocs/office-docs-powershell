@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OutlookProvider [-Identity] <OutlookProviderIdParameter> [-CertPrincipalName <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <None | ServerExclusiveConnect>]
+ [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <OutlookProviderFlags>]
  [-Server <String>] [-TTL <Int32>] [-WhatIf] [-RequiredClientVersions <String[]>] [<CommonParameters>]
 ```
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The OutlookProviderFlags parameter specifies how Outlook clients should connect to the Exchange server. The value can be set to ServerExclusiveConnect, ExternalClientsRequireSSL, InternalClientsRequireSSL or to None to clear the flags. The recommended value is None, which is also the default setting.
 
 ```yaml
-Type: None | ServerExclusiveConnect
+Type: OutlookProviderFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

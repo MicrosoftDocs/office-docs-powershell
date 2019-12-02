@@ -28,10 +28,10 @@ Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-ExternalMailExpiryInDays <Int32>]
  [-Image <Byte[]>]
  [-IntroductionText <String>]
- [-OTPEnabled <$true | $false>]
+ [-OTPEnabled <Boolean>]
  [-PortalText <String>]
  [-ReadButtonText <String>]
- [-SocialIdSignIn <$true | $false>]
+ [-SocialIdSignIn <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -193,7 +193,7 @@ The OTPEnabled parameter specifies whether to allow recipients to use a one-time
 - $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using an Office 365 work or school account.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -249,7 +249,7 @@ The SocialIdSignIn parameter specifies whether a user is allowed to view an encr
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Office 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

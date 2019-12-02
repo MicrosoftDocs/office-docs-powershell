@@ -22,20 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
- [-Action <AllowAccess | DenyAccess>]
+ [-Action <ClientAccessRulesAction>]
  [-AnyOfAuthenticationTypes <MultiValuedProperty>]
  [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-AnyOfProtocols <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Name <String>]
  [-Priority <Int32>]
- [-Scope <All | Users>]
+ [-Scope <ClientAccessRulesScope>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
  [-WhatIf] [<CommonParameters>]
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
 
 ```yaml
-Type: AllowAccess | DenyAccess
+Type: ClientAccessRulesAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the client access rule is enabled or disabled. Valid values for this parameter are $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
@@ -437,7 +437,7 @@ The Scope parameter specifies the scope of the client access rule. Valid values 
 - All: The rule applies to all connections (end-users and middle-tier apps).
 
 ```yaml
-Type: All | Users
+Type: ClientAccessRulesScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online

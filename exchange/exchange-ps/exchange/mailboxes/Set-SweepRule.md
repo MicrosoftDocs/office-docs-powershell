@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SweepRule [-Identity] <SweepRuleIdParameter> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptIfFlagged <$true | $false>]
- [-ExceptIfPinned <$true | $false>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
  [-Mailbox <MailboxIdParameter>] [-Name <String>] [-Provider <String>] [-Sender <RecipientIdParameter>]
  [-SourceFolder <MailboxFolderIdParameter>]
- [-SystemCategory <NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion>]
+ [-SystemCategory <SystemCategoryType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -172,7 +172,7 @@ The typical message flag values are:
 - Review
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -192,7 +192,7 @@ The PinMessage parameter specifies an exception for the Sweep rule that looks fo
 - $false: The exception isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -410,7 +410,7 @@ The SystemCategory parameter specifies a condition for the sweep rule that looks
 - Video
 
 ```yaml
-Type: NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion
+Type: SystemCategoryType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

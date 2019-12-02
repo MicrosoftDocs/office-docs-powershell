@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DataEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedProperty> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -137,7 +137,7 @@ The Enabled parameter enables or disable the data encryption policy. Valid value
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

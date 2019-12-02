@@ -22,8 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MigrationBatch [-Identity] <MigrationBatchIdParameter>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ApproveSkippedItems]
  [-AutoRetryCount <Int32>]
  [-BadItemLimit <Unlimited>]
  [-CSVData <Byte[]>]
@@ -37,7 +38,7 @@ Set-MigrationBatch [-Identity] <MigrationBatchIdParameter>
  [-ReportInterval <TimeSpan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
- [-SkipReports <$true | $false>]
+ [-SkipReports <Boolean>]
  [-SourcePublicFolderDatabase <DatabaseIdParameter>]
  [-StartAfter <DateTime>]
  [-SyncNow]
@@ -70,10 +71,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-MigrationBatch -Identity MigrationBatch01 -AutoRetryCount 5 -AllowIncrementalSyncs $true
+Set-MigrationBatch -Identity MigrationBatch01 -ApproveSkippedItems
 ```
 
-This example updates MigrationBatch01 with new AutoRetryCount and AllowIncrementalSyncs parameter settings.
+This example updates MigrationBatch01 by approving all of the skipped items for all of the users in the batch that were detected previously.
 
 ## PARAMETERS
 
@@ -107,7 +108,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -127,10 +128,32 @@ The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns 
 - $false: The migration fails if there are any unknown columns in the CSV file. This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApproveSkippedItems
+This parameter is available only in the cloud-based service.
+
+The ApproveSkippedItems switch marks all of the skipped items discovered prior to the current time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
+
+For more information about maximum message size values, see the following topic [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926).
+
+You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -161,6 +184,8 @@ Accept wildcard characters: False
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+
+This parameter is in the process of being deprecated in the cloud-based service.
 
 ```yaml
 Type: Unlimited
@@ -269,6 +294,8 @@ For more information about maximum message size values, see the following topics
 - Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+
+This parameter is in the process of being deprecated in the cloud-based service.
 
 ```yaml
 Type: Unlimited
@@ -399,7 +426,7 @@ Accept wildcard characters: False
 The SkipReports switch specifies that you want to skip automatic reporting for the migration. You don't need to specify a value with this switch.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

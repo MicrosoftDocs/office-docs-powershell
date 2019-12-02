@@ -27,12 +27,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-PublicFolderMigrationRequest
  [-BatchName <String>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Name <String>]
  [-RequestQueue <DatabaseIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
- [-Suspend <$true | $false>]
+ [-Suspend <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -109,7 +109,7 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -245,7 +245,7 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

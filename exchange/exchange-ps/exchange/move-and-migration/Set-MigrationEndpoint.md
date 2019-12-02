@@ -22,12 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-Credentials <PSCredential>]
  [-DomainController <Fqdn>]
  [-ExchangeServer <String>]
- [-MailboxPermission <Admin | FullAccess>]
+ [-MailboxPermission <MigrationMailboxPermission>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-NspiServer <String>]
@@ -36,7 +36,7 @@ Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-PublicFolderDatabaseServerLegacyDN <String>]
  [-RemoteServer <Fqdn>]
  [-RpcProxyServer <Fqdn>]
- [-Security <None | Ssl | Tls>]
+ [-Security <IMAPSecurityMechanism>]
  [-ServiceAccountKeyFileData <Byte[]>]
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
@@ -111,7 +111,7 @@ This parameter is available only in the cloud-based service.
 The Authentication parameter specifies the authentication method used by the remote mail server.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -209,7 +209,7 @@ The account specified must have the following permissions:
 - Admin permission. The account is a domain administrator who can access any mailbox they want to migrate.
 
 ```yaml
-Type: Admin | FullAccess
+Type: MigrationMailboxPermission
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -369,7 +369,7 @@ This parameter is available only in the cloud-based service.
 For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

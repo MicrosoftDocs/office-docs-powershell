@@ -26,7 +26,7 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Permane
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
@@ -38,7 +38,7 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -Permanen
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
@@ -50,7 +50,7 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Refresh
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -243,7 +243,7 @@ The Enabled parameter enables or disable the data encryption policy. Valid value
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

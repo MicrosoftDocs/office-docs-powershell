@@ -44,11 +44,11 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <WellKnownReci
  [-ConditionalDepartment <MultiValuedProperty>]
  [-ConditionalStateOrProvince <MultiValuedProperty>]
  [-Confirm]
- [-DirectMembershipOnly <$true | $false>]
+ [-DirectMembershipOnly <Boolean>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
@@ -62,11 +62,11 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
- [-DirectMembershipOnly <$true | $false>]
+ [-DirectMembershipOnly <Boolean>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
@@ -641,7 +641,7 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -731,7 +731,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

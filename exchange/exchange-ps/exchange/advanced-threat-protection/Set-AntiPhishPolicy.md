@@ -18,26 +18,29 @@ Use the Set-AntiPhishPolicy cmdlet to modify antiphishing policies in your cloud
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
+> [!NOTE]
+> Please take into account the [recommended settings](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp) for EOP and Office 365 ATP security.
+
 ## SYNTAX
 
 ```
 Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-AdminDisplayName <String>]
- [-AuthenticationFailAction <MoveToJmf | Quarantine>]
+ [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
- [-EnableAntispoofEnforcement <$true | $false>]
- [-EnableAuthenticationSafetyTip <$true | $false>]
- [-EnableAuthenticationSoftPassSafetyTip <$true | $false>]
- [-Enabled <$true | $false>]
- [-EnableMailboxIntelligence <$true | $false>]
- [-EnableMailboxIntelligenceProtection <$true | $false>]
- [-EnableOrganizationDomainsProtection <$true | $false>]
- [-EnableSimilarDomainsSafetyTips <$true | $false>]
- [-EnableSimilarUsersSafetyTips <$true | $false>]
- [-EnableTargetedDomainsProtection <$true | $false>]
- [-EnableTargetedUserProtection <$true | $false>]
- [-EnableUnauthenticatedSender <$true | $false>]
- [-EnableUnusualCharactersSafetyTips <$true | $false>]
+ [-EnableAntispoofEnforcement <Boolean>]
+ [-EnableAuthenticationSafetyTip <Boolean>]
+ [-EnableAuthenticationSoftPassSafetyTip <Boolean>]
+ [-Enabled <Boolean>]
+ [-EnableMailboxIntelligence <Boolean>]
+ [-EnableMailboxIntelligenceProtection <Boolean>]
+ [-EnableOrganizationDomainsProtection <Boolean>]
+ [-EnableSimilarDomainsSafetyTips <Boolean>]
+ [-EnableSimilarUsersSafetyTips <Boolean>]
+ [-EnableTargetedDomainsProtection <Boolean>]
+ [-EnableTargetedUserProtection <Boolean>]
+ [-EnableUnauthenticatedSender <Boolean>]
+ [-EnableUnusualCharactersSafetyTips <Boolean>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
@@ -46,12 +49,12 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-MakeDefault]
  [-PhishThresholdLevel <Int32>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
- [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedDomainProtectionAction <ImpersonationAction>]
  [-TargetedDomainsToProtect <MultiValuedProperty>]
  [-TargetedUserActionRecipients <MultiValuedProperty>]
- [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedUserProtectionAction <ImpersonationAction>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
- [-TreatSoftPassAsAuthenticated <$true | $false>]
+ [-TreatSoftPassAsAuthenticated <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -117,7 +120,7 @@ The AuthenticationFailAction parameter specifies the action to take when the mes
 - Quarantine: Move the message to the phishing quarantine.
 
 ```yaml
-Type: Delete | MoveToJmf | Quarantine
+Type: SpoofAuthenticationFailAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -157,7 +160,7 @@ The EnableAntispoofEnforcement parameter specifies whether to enable or disable 
 - $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -177,7 +180,7 @@ The EnableAuthenticationSafetyTip parameter specifies whether to enable safety t
 - $false: Safety tips are disabled for messages that fail composite authentication.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -197,7 +200,7 @@ The EnableAuthenticationSoftPassSafetyTip parameter specifies whether to enable 
 - $false: Safety tips are disabled for messages that fail composite authentication with low to medium confidence. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -217,7 +220,7 @@ $true: The policy is enabled.
 $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -237,7 +240,7 @@ The EnableMailboxIntelligence parameter specifies whether to enable or disable m
 - $false: Don't use mailbox intelligence in domain and user impersonation protection.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -257,7 +260,7 @@ The EnableMailboxIntelligenceProtection specifies whether to enable or disable i
 - $false: Don't enable intelligence based impersonation protection. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -277,7 +280,7 @@ The EnableOrganizationDomainsProtection parameter specifies whether to enable 
 - $false: Domain impersonation protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable domain impersonation protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -297,7 +300,7 @@ The EnableSimilarDomainsSafetyTips parameter specifies whether to enable saf
 - $false: Safety tips for similar domains are disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -317,7 +320,7 @@ The EnableSimilarUsersSafetyTips parameter specifies whether to enable safet
 - $false: Safety tips for similar users are disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -337,7 +340,7 @@ The EnableTargetedDomainsProtection parameter specifies whether to enable doma
 - $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -357,7 +360,7 @@ The EnableTargetedUserProtection parameter specifies whether to enable user im
 - $false: The TargetedUsersToProtect parameter isn't used. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -377,7 +380,7 @@ The EnableUnauthenticatedSender parameter specifies whether to apply a "?" s
 - $false: Do not apply the "?" symbol.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -397,7 +400,7 @@ The EnableUnusualCharactersSafetyTips parameter specifies whether to enable 
 - $false: Safety tips for unusual characters are disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -693,7 +696,7 @@ The TreatSoftPassAsAuthenticated parameter specifies whether or not to respect t
 Note: This parameter corresponds to the Strict filtering value in the Microsoft 365 admin center.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

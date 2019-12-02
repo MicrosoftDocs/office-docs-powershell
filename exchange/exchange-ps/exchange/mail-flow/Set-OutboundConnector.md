@@ -21,14 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter> [-AllAcceptedDomains <$true | $false>]
- [-CloudServicesMailEnabled <$true | $false>] [-Comment <String>] [-Confirm]
- [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>] [-ConnectorType <OnPremises | Partner>]
- [-Enabled <$true | $false>] [-IsTransportRuleScoped <$true | $false>] [-IsValidated <$true | $false>]
+Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter> [-AllAcceptedDomains <Boolean>]
+ [-CloudServicesMailEnabled <Boolean>] [-Comment <String>] [-Confirm]
+ [-ConnectorSource <TenantConnectorSource>] [-ConnectorType <TenantConnectorType>]
+ [-Enabled <Boolean>] [-IsTransportRuleScoped <Boolean>] [-IsValidated <Boolean>]
  [-LastValidationTimestamp <DateTime>] [-Name <String>] [-RecipientDomains <MultiValuedProperty>]
- [-RouteAllMessagesViaOnPremises <$true | $false>] [-SmartHosts <MultiValuedProperty>]
- [-TestMode <$true | $false>] [-TlsDomain <SmtpDomainWithSubdomains>]
- [-TlsSettings <EncryptionOnly | CertificateValidation | DomainValidation>] [-UseMXRecord <$true | $false>]
+ [-RouteAllMessagesViaOnPremises <Boolean>] [-SmartHosts <MultiValuedProperty>]
+ [-TestMode <Boolean>] [-TlsDomain <SmtpDomainWithSubdomains>]
+ [-TlsSettings <TlsAuthLevel>] [-UseMXRecord <Boolean>]
  [-ValidationRecipients <String[]>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ The AllAcceptedDomains parameter specifies whether the Outbound connector is use
 - $false: The Outbound connector isn't used in hybrid organizations. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -102,7 +102,7 @@ Valid values are:
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -160,7 +160,7 @@ The ConnectorSource parameter specifies how the connector is created. Valid valu
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
 ```yaml
-Type: Default | Migrated | HybridWizard | AdminUI
+Type: TenantConnectorSource
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -180,7 +180,7 @@ The ConnectorType parameter specifies a category for the domains that are servic
 - OnPremises: The connector services domains that are used by your on-premises organization.
 
 ```yaml
-Type: OnPremises | Partner
+Type: TenantConnectorType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -200,7 +200,7 @@ The Enabled parameter specifies whether to enable or disable the Outbound connec
 - $false: The connector is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -222,7 +222,7 @@ The IsTransportRuleScoped parameter specifies whether the Outbound connector is 
 You scope a transport rule to an Outbound connector by using the RouteMessageOutboundConnector parameter on the New-TransportRule or Set-TransportRule cmdlets. Messages that match the conditions of the transport rule are routed to their destinations by using the specified Outbound connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -242,7 +242,7 @@ The IsValidated parameter specifies whether the Outbound connector has been vali
 - $false: The connector hasn't been validated. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -318,7 +318,7 @@ The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced
 - $false: Messages aren't routed through the on-premises messaging system. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -354,7 +354,7 @@ The TestMode parameter specifies whether you want to enabled or disable test mod
 - $false: Test mode is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -394,7 +394,7 @@ The TlsSettings parameter specifies the TLS authentication level that's used for
 - $null (blank): This is the default value.
 
 ```yaml
-Type: EncryptionOnly | CertificateValidation | DomainValidation
+Type: TlsAuthLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -414,7 +414,7 @@ The UseMXRecord parameter enables or disables DNS routing for the connector. Val
 - $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

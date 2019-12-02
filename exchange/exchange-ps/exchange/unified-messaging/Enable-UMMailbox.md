@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity (Default)
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolicyIdParameter>
- [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Extensions <MultiValuedProperty>]
@@ -31,7 +31,7 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolic
  [-NotifyEmail <String>]
  [-PilotNumber <String>]
  [-PIN <String>]
- [-PINExpired <$true | $false>]
+ [-PINExpired <Boolean>]
  [-SIPResourceIdentifier <String>]
  [-ValidateOnly]
  [-WhatIf] [<CommonParameters>]
@@ -40,7 +40,7 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolic
 ### CloudVoiceMail
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
- [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Extensions <MultiValuedProperty>]
@@ -48,8 +48,8 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
  [-NotifyEmail <String>]
  [-PilotNumber <String>]
  [-Pin <String>]
- [-PinExpired <$true | $false>]
- [-SendWelcomeMail <$true | $false>]
+ [-PinExpired <Boolean>]
+ [-SendWelcomeMail <Boolean>]
  [-SIPResourceIdentifier <String>]
  [-UMMailboxPolicy <MailboxPolicyIdParameter>]
  [-ValidateOnly]
@@ -158,7 +158,7 @@ The AutomaticSpeechRecognitionEnabled parameter specifies whether to enable Auto
 - $false: ASR is disabled for the mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -324,7 +324,7 @@ The PINExpired parameter specifies whether the PIN is treated as expired. If the
 - $false: The user isn't required to reset their PIN the next time they log on.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -344,7 +344,7 @@ The SendWelcomeMail parameter specifies whether you want to send a welcome messa
 - $false: Don't send the welcome to UM message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: CloudVoiceMail
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online

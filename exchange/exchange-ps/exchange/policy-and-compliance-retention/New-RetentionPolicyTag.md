@@ -37,12 +37,12 @@ New-RetentionPolicyTag [-Name] <String>
  [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
  [-MessageClass <String>]
  [-MessageFormatForJournaling <JournalingFormat>]
- [-MustDisplayCommentEnabled <$true | $false>]
- [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>]
+ [-MustDisplayCommentEnabled <Boolean>]
+ [-RetentionAction <RetentionAction>]
+ [-RetentionEnabled <Boolean>]
  [-RetentionId <Guid>]
- [-SystemTag <$true | $false>]
- [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
+ [-SystemTag <Boolean>]
+ [-Type <ElcFolderType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -56,9 +56,9 @@ New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdPar
  [-IsDefaultModeratedRecipientsPolicyTag]
  [-LocalizedComment <MultiValuedProperty>]
  [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
- [-MustDisplayCommentEnabled <$true | $false>]
- [-SystemTag <$true | $false>]
- [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
+ [-MustDisplayCommentEnabled <Boolean>]
+ [-SystemTag <Boolean>]
+ [-Type <ElcFolderType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 The MustDisplayCommentEnabled parameter specifies whether the comment can be hidden. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -388,7 +388,7 @@ The MoveToDeletedItems and MoveToFolder actions are available, but don't work. T
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
+Type: RetentionAction
 Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -408,7 +408,7 @@ Messages with a disabled tag are still considered tagged, so any tags of the sam
 When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 The SystemTag parameter specifies that the tag is created for internal Exchange functionality.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -500,7 +500,7 @@ The Type parameter specifies the type of retention tag being created. Valid valu
 To create a default policy tag (DPT), specify type All. For tags of type RecoverableItems, the only valid retention action is MoveToArchive.
 
 ```yaml
-Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems
+Type: ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

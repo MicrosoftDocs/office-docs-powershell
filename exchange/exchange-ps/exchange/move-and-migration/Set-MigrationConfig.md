@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-MigrationConfig
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>]
+ [-Features <MigrationFeature>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-MaxNumberOfBatches <Int32>]
  [-Partition <MailboxIdParameter>]
@@ -104,7 +104,7 @@ The Features parameter specifies the set of features to enable for the migration
 - UpgradeBlock
 
 ```yaml
-Type: None | MultiBatch | Endpoints | UpgradeBlock | PAW
+Type: MigrationFeature
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

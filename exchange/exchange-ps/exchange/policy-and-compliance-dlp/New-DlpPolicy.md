@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpPolicy [[-Name] <String>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Mode <Audit | AuditAndNotify | Enforce>] [-Parameters <Hashtable>] [-State <Enabled | Disabled>]
+ [-Mode <RuleMode>] [-Parameters <Hashtable>] [-State <RuleState>]
  [-Template <String>] [-TemplateData <Byte[]>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -110,7 +110,7 @@ The Mode parameter specifies the action and notification level of the DLP policy
 By default, the value of this parameter is set to Audit when you create a new DLP policy. If the State parameter is set to Disabled, the value of the Mode parameter is irrelevant.
 
 ```yaml
-Type: Audit | AuditAndNotify | Enforce
+Type: RuleMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 The State parameter enables or disables the DLP policy. Valid input for this parameter is Enabled or Disabled. By default, a new DLP policy that you create is enabled. If you want to create a disabled DLP policy, specify the value Disabled for this parameter.
 
 ```yaml
-Type: Enabled | Disabled
+Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

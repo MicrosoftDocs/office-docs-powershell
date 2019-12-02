@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -147,7 +147,7 @@ The Disabled parameter specifies whether the case hold rule is enabled or disabl
 - $false: The rule is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

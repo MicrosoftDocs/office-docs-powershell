@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2>
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
  -StartDate <DateTime> [-DeliveryStatus <String>]
- [-Direction <All | Sent | Received>]
+ [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
  [-Locale <CultureInfo>]
  [-MessageID <MultiValuedProperty>]
@@ -36,7 +36,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <Me
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 50000 results or lines.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -127,7 +127,7 @@ The ReportType parameter specifies the type of historical search that you want t
 You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
+Type: HistoricalSearchReportType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -189,7 +189,7 @@ The Direction parameter filters the results by the direction of the message. Val
 - Sent: Outgoing messages only.
 
 ```yaml
-Type: All | Sent | Received
+Type: MessageDirection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

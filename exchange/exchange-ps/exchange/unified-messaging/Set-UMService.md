@@ -23,11 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DialPlans <MultiValuedProperty>]
  [-DomainController <Fqdn>] [-GrammarGenerationSchedule <ScheduleInterval[]>]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>] [-IPAddressFamilyConfigurable <$true | $false>]
- [-IrmLogEnabled <$true | $false>] [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IPAddressFamily <IPAddressFamily>] [-IPAddressFamilyConfigurable <Boolean>]
+ [-IrmLogEnabled <Boolean>] [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>] [-MaxCallsAllowed <Int32>]
- [-SIPAccessService <ProtocolConnectionSettings>] [-Status <Enabled | Disabled | NoNewCalls>]
- [-UMStartupMode <TCP | TLS | Dual>] [-WhatIf] [<CommonParameters>]
+ [-SIPAccessService <ProtocolConnectionSettings>] [-Status <ServerStatus>]
+ [-UMStartupMode <UMStartupMode>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -206,7 +206,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use IPv4,
 - Any: IPv6 is used first and if necessary, the UM IP gateway falls back to IPv4. This is the default value.
 
 ```yaml
-Type: IPv4Only | IPv6Only | Any
+Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 The IPAddressFamilyConfigurable parameter specifies whether you're able to set the IPAddressFamily parameter to IPv6Only or Any. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -242,7 +242,7 @@ The IrmLogEnabled parameter specifies whether to enable logging of Information R
 - $false: Disable IRM logging
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 This parameter has been deprecated and is no longer used.
 
 ```yaml
-Type: Enabled | Disabled | NoNewCalls
+Type: ServerStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -420,7 +420,7 @@ The UMStartupMode parameter specifies the startup mode for the Unified Messaging
 If you change the value of this parameter, you need to restart the Unified Messaging service.
 
 ```yaml
-Type: TCP | TLS | Dual
+Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

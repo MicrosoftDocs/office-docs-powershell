@@ -29,7 +29,7 @@ Remove-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipal
  [-Deny]
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-WhatIf] [<CommonParameters>]
@@ -53,7 +53,7 @@ Remove-ADPermission -Instance <ADAcePresentationObject>
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
  [[-Identity] <ADRawEntryIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-User <SecurityPrincipalIdParameter>]
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies whether permissions are inherited.
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

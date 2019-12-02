@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filters
 ```
-Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <$true | $false>]
+Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <Boolean>]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -97,7 +97,7 @@ The Enabled parameter filters the results by enabled or disabled cmdlet extensio
 If you don't use this parameter, enabled and disabled agents are included in the results.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filters
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

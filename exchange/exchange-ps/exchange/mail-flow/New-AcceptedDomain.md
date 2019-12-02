@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-DomainType <Authoritative | ExternalRelay | InternalRelay>]
+ [-DomainType <AcceptedDomainType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -122,7 +122,7 @@ In an authoritative domain, messages are delivered to a recipient that has a dom
 The default value is Authoritative.
 
 ```yaml
-Type: Authoritative | ExternalRelay | InternalRelay
+Type: AcceptedDomainType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

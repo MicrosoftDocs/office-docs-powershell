@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ServerMonitor [-Server] <ServerIdParameter> -Name <String> -Repairing <$true | $false>
+Set-ServerMonitor [-Server] <ServerIdParameter> -Name <String> -Repairing <Boolean>
  [-Confirm]
  [-TargetResource <String>]
  [-WhatIf] [<CommonParameters>]
@@ -63,7 +63,7 @@ The Repairing parameter specifies whether to set or clear the repairing property
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

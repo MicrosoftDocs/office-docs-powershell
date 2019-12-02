@@ -41,6 +41,13 @@ PS C:\> Grant-CsTeamsMessagingPolicy -identity "Ken Myer" -PolicyName StudentMes
 
 In this example, a user with identity "Ken Myer" is being assigned the StudentMessagingPolicy
 
+### Example 2
+```powershell
+PS C:\> Get-CsOnlineUser -Filter {Department -eq 'Executive Management'} | Grant-CsTeamsMessagingPolicy -PolicyName "ExecutivesPolicy"
+```
+
+In this example, the ExecutivesPolicy is being assigned to a whole department by piping the result of Get-CsOnlineUser cmdlet
+
 ## PARAMETERS
 
 ### -Confirm

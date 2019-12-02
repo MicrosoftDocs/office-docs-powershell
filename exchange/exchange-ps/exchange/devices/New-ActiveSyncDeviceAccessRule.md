@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ActiveSyncDeviceAccessRule -AccessLevel <Allow | Block | Quarantine>
- -Characteristic <DeviceType | DeviceModel | DeviceOS | UserAgent> -QueryString <String> [-Confirm]
+New-ActiveSyncDeviceAccessRule -AccessLevel <DeviceAccessLevel>
+ -Characteristic <DeviceAccessCharacteristic> -QueryString <String> [-Confirm]
  [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -53,7 +53,7 @@ This example creates a device access rule that uses the UserAgent characteristic
 The AccessLevel parameter specifies the access level of devices that are defined by the rule. Valid values for this parameter are Allow, Block and Quarantine.
 
 ```yaml
-Type: Allow | Block | Quarantine
+Type: DeviceAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -79,7 +79,7 @@ The Characteristic parameter specifies the device characteristic or category tha
 - XMSWLHeader
 
 ```yaml
-Type: DeviceType | DeviceModel | DeviceOS | UserAgent
+Type: DeviceAccessCharacteristic
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

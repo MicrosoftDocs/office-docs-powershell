@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-OrganizationApp]
- [-ProvidedTo <Everyone | SpecificUsers>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
+Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-OrganizationApp]
+ [-ProvidedTo <ClientExtensionProvidedTo>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
  [<CommonParameters>]
 ```
 
@@ -102,7 +102,7 @@ The DefaultStateForUser parameter specifies the default initial state of the org
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Enabled | Disabled | AlwaysEnabled
+Type: DefaultStateForUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -142,7 +142,7 @@ The Enabled parameter specifies whether the app is available to users in the org
 This setting overrides the ProvidedTo, UserList, and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -180,7 +180,7 @@ The ProvidedTo parameter specifies the availability of the app in your organizat
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Everyone | SpecificUsers
+Type: ClientExtensionProvidedTo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

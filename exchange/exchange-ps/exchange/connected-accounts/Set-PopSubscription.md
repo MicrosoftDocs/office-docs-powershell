@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SubscriptionModification
 ```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Spa>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <$true | $false>]
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <Boolean>] [-Force] [-IncomingAuth <AuthenticationMechanism>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <SecurityMechanism>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <Boolean>]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the POP subscription is enabled. This parameter accepts $true or $false values. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by POP clients to access the POP server. Valid values are Basic or Spa, which is secure password authentication. If you don't specify a value for the IncomingAuth parameter, the value Basic is used.
 
 ```yaml
-Type: Basic | Spa
+Type: AuthenticationMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by POP clients to connect to the POP server. Valid values are None, Ssl, or Tls. If you don't specify a value for the IncomingSecurity parameter, the value None is used.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: SecurityMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 The LeaveOnServer parameter configures the behavior of retrieved messages in the POP mailbox. When the LeaveOnServer parameter is set to the value $true, the retrieved messages are left in the POP mailbox. When it's set to the value $false, retrieved messages are removed from the POP mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online

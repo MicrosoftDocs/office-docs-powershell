@@ -32,8 +32,8 @@ Get-MigrationUser -MailboxGuid <Guid>
 ### StatusAndBatchId
 ```
 Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
- [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
- [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
+ [-Status <MigrationUserStatus>]
+ [-StatusSummary <MigrationUserStatusSummary>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
@@ -215,7 +215,7 @@ The Status parameter returns information about migration users that have the spe
 - Validating
 
 ```yaml
-Type: Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing
+Type: MigrationUserStatus
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -241,7 +241,7 @@ The StatusSummary parameter returns abbreviated information about migration user
 - Synced
 
 ```yaml
-Type: Active | Failed | Synced | Completed | Stopped
+Type: MigrationUserStatusSummary
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

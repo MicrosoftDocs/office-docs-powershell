@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-TransportRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>]
- [-State <Enabled | Disabled>] [-DlpPolicy <String>]
+ [-State <RuleState>] [-DlpPolicy <String>]
  [-Filter <String>] [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -117,7 +117,7 @@ The State parameter specifies filters the results by enabled or disabled rules. 
 If you don't use this parameter, the command returns all rules, both enabled and disabled.
 
 ```yaml
-Type: Enabled | Disabled
+Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

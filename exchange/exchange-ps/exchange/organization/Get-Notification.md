@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Settings
 ```
-Get-Notification [-Settings] -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>
+Get-Notification [-Settings] -ProcessType <AsyncOperationType>
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-Summary]
 
 ### Filter
 ```
-Get-Notification [-ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
+Get-Notification [-ProcessType <AsyncOperationType>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -136,7 +136,7 @@ The ProcessType parameter filters the results by the type of notification event.
 - Migration
 
 ```yaml
-Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
+Type: AsyncOperationType
 Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
+Type: AsyncOperationType
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -23,12 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AccessRights
 ```
 Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
- [-AutoMapping <$true | $false>]
+ [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -46,13 +46,13 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipal
 Add-MailboxPermission -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-User <SecurityPrincipalIdParameter>]
- [-AutoMapping <$true | $false>]
+ [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [[-Identity] <MailboxIdParameter>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -276,7 +276,7 @@ The AutoMapping parameter specifies whether to enable or disable the auto-mappin
 If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -376,7 +376,7 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 - SelfAndChildren
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### URL
 ```
 Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
- [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MailboxServer <ServerIdParameter>]
@@ -37,8 +37,8 @@ Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
 
 ### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
- [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MailboxServer <ServerIdParameter>]
@@ -149,7 +149,7 @@ The Authentication parameter specifies the type of authentication that's used to
 - Negotiate
 
 ```yaml
-Type: Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -291,7 +291,7 @@ The TestType parameter specifies whether the command tests internal or external 
 You can only use this parameter with the ClientAccessServer parameter.
 
 ```yaml
-Type: Internal | External
+Type: OwaConnectivityTestType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -25,12 +25,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -38,7 +38,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -46,9 +46,9 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -57,12 +57,12 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -71,7 +71,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-LargeItemLimit <Unlimited>]
  [-MRSServer <Fqdn>]
  [-Name <String>]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -79,23 +79,23 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
 ### MailboxLocationIDRemoteMailboxRestore
 ```
-New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <RemoteRestoreType> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -103,7 +103,7 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -111,9 +111,9 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -122,12 +122,12 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
 New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -135,7 +135,7 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-Suspend]
@@ -143,7 +143,7 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -152,12 +152,12 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
 New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -165,7 +165,7 @@ New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMai
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceIsArchive]
@@ -174,9 +174,9 @@ New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMai
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -282,7 +282,7 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient
+Type: RemoteRestoreType
 Parameter Sets: MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Online
@@ -435,7 +435,7 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 Content filtering doesn't apply to associated messages.
 
 ```yaml
-Type: DoNotCopy | MapByMessageClass | Copy
+Type: FAICopyOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -535,7 +535,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - UpdateFromSource
 
 ```yaml
-Type: KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem
+Type: ConflictResolutionOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -809,7 +809,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -979,7 +979,7 @@ The TargetType parameter specifies the type of mailbox that's the target for the
 - Primary (This is the default value)
 
 ```yaml
-Type: Primary | Archive | MailboxLocation
+Type: TargetTypeComponent
 Parameter Sets:  MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -1013,7 +1013,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Enable-MailPublicFolder [-Identity] <PublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HiddenFromAddressListsEnabled <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
+ [-HiddenFromAddressListsEnabled <Boolean>] [-Server <ServerIdParameter>] [-WhatIf]
  [-OverrideRecipientQuotas] [<CommonParameters>]
 ```
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether the folder is hidden from address lists. Valid values are $true and $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

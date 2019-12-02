@@ -25,7 +25,7 @@ New-RpcClientAccess -Server <ServerIdParameter>
  [-BlockedClientVersions <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-EncryptionRequired <$true | $false>]
+ [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 The EncryptionRequired parameter specifies whether to require Outlook connections to be encrypted. The Exchange RPC Client Access service rejects unencrypted Outlook connections if this parameter is set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

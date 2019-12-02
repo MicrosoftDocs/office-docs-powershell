@@ -31,7 +31,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ArchiveName <MultiValuedProperty>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-Confirm]
- [-CreateDTMFMap <$true | $false>]
+ [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
  [-CustomAttribute11 <String>]
@@ -50,7 +50,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
- [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EmailAddressPolicyEnabled <Boolean>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
@@ -62,21 +62,21 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-FederatedIdentity <String>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-IgnoreDefaultScope]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>]
- [-MessageFormat <Text | Mime>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Name <String>]
  [-Password <SecureString>]
  [-PrimarySmtpAddress <SmtpAddress>]
@@ -89,17 +89,17 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RemoveMailboxProvisioningConstraint]
  [-RemovePicture]
  [-RemoveSpokenName]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SimpleDisplayName <String>]
  [-SkipDualWrite]
  [-UMDtmfMap <MultiValuedProperty>]
- [-UseMapiRichTextFormat <Never | Always | UseDefaultSettings>]
- [-UsePreferMessageFormat <$true | $false>]
+ [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
+ [-UsePreferMessageFormat <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserPrincipalName <String>]
  [-UserSMimeCertificate <MultiValuedProperty>]
@@ -434,7 +434,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -798,7 +798,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1042,7 +1042,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1132,7 +1132,7 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
 ```yaml
-Type: BinHex | UuEncode | AppleSingle | AppleDouble
+Type: MacAttachmentFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1292,7 +1292,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 ```yaml
-Type: Text | Html | TextAndHtml
+Type: MessageBodyFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1320,7 +1320,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
 
 ```yaml
-Type: Text | Mime
+Type: MessageFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1392,7 +1392,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1742,7 +1742,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1766,7 +1766,7 @@ The ResetPasswordOnNextLogon parameter allows users to require themselves to cha
 You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePassword parameter on the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=614839).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -1840,7 +1840,7 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1936,7 +1936,7 @@ The UseMapiRichTextFormat parameter specifies what to do with messages that are 
 The default value is UseDefaultSettings.
 
 ```yaml
-Type: Never | Always | UseDefaultSettings
+Type: UseMapiRichTextFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -1956,7 +1956,7 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

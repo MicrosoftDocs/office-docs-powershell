@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-UMCallAnsweringRule -Name <String> [-CallerIds <MultiValuedProperty>]
- [-CallersCanInterruptGreeting <$true | $false>] [-CheckAutomaticReplies <$true | $false>] [-Confirm]
+ [-CallersCanInterruptGreeting <Boolean>] [-CheckAutomaticReplies <Boolean>] [-Confirm]
  [-DomainController <Fqdn>] [-ExtensionsDialed <MultiValuedProperty>] [-KeyMappings <MultiValuedProperty>]
  [-Mailbox <MailboxIdParameter>] [-Priority <Int32>] [-ScheduleStatus <Int32>] [-TimeOfDay <TimeOfDay>]
  [-WhatIf] [<CommonParameters>]
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 The CallersCanInterruptGreeting parameter specifies whether a caller can interrupt the voice mail greeting while it's being played. The default is $null.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 The CheckAutomaticReplies parameter specifies an entry for the "If My Automatic Replies are Enabled" condition. The default is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

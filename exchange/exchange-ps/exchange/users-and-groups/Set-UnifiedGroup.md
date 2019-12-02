@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
- [-AccessType <Public | Private>]
+ [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
@@ -59,7 +59,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-ExtensionCustomAttribute5 <MultiValuedProperty>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
@@ -68,11 +68,11 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Notes <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
  [-WhatIf] [<CommonParameters>]
@@ -181,7 +181,7 @@ The AccessType parameter specifies the privacy type for the Office 365 Group. Va
 Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
-Type: Public | Private
+Type: ModernGroupTypeInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -840,12 +840,12 @@ Accept wildcard characters: False
 ### -HiddenFromAddressListsEnabled
 The HiddenFromAddressListsEnabled parameter specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
-- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is enabled.
+- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
 
 - $false: The Office 365 Group is visible in the GAL and other address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1063,7 +1063,7 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1155,7 +1155,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

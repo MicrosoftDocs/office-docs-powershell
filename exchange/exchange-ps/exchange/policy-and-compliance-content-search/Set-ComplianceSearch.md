@@ -28,7 +28,7 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-AddOneDriveLocationExclusion <String[]>]
  [-AddSharePointLocation <String[]>]
  [-AddSharePointLocationExclusion <String[]>]
- [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-AllowNotFoundExchangeLocationsEnabled <Boolean>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-Description <String>]
@@ -36,7 +36,7 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
- [-IncludeUserAppContent <$true | $false>]
+ [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-Name <String>]
  [-OneDriveLocation <String[]>]
@@ -243,7 +243,7 @@ The mailbox types that are affected by the value of this parameter include:
 - On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
@@ -403,7 +403,7 @@ The IncludeUserAppContent parameter specifies that you want to search the cloud-
 - $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

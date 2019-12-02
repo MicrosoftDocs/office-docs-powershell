@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -52,8 +52,8 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
 ### LocalPublicFolder
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase <DatabaseIdParameter>
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -77,8 +77,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 ### PreexistingUserIds
 ```
 New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -100,7 +100,7 @@ New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
 ### Preexisting
 ```
 New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
- [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -122,8 +122,8 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
 ### Onboarding
 ```
 New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -157,8 +157,8 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -190,8 +190,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
 ### PublicFolderToUnifiedGroup
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -215,8 +215,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
 ### WorkflowTemplate
 ```
 New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
- [-AllowIncrementalSyncs <$true | $false>]
- [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
@@ -482,7 +482,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -502,7 +502,7 @@ The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns 
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -594,6 +594,8 @@ Accept wildcard characters: False
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
@@ -758,6 +760,8 @@ For more information about maximum message size values, see the following topics
 - Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
 ```yaml
 Type: Unlimited
