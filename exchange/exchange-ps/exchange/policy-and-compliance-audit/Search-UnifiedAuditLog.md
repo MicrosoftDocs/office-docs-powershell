@@ -241,15 +241,27 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - AeD
 
+- AirInvestigation 
+
+- ApplicationAudit
+
 - AzureActiveDirectory
 
 - AzureActiveDirectoryAccountLogon
 
 - AzureActiveDirectoryStsLogon
 
+- Campaign
+
 - ComplianceDLPExchange
 
 - ComplianceDLPSharePoint
+
+- ComplianceDLPSharePointClassification
+
+- ComplianceSupervisionExchange 
+
+- CustomerKeyServiceEncryption 
 
 - CRM
 
@@ -257,7 +269,11 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - DataGovernance
 
+- DataInsightsRestApiAudit
+
 - Discovery
+
+- DLPEndpoint 
 
 - ExchangeAdmin
 
@@ -269,17 +285,45 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ExchangeItemGroup
 
+- HRSignal
+
 - HygieneEvent
+
+- InformationWorkerProtection
+
+- InformationBarrierPolicyApplication 
+
+- Kaizala
 
 - LabelExplorer
 
+- MailSubmission
+
+- MicrosoftFlow 
+
+- MicrosoftForms
+
+- MicrosoftTeamsAnalytics
+
 - MicrosoftTeams
+
+- MicrosoftTeamsAdmin
+
+- MicrosoftTeamsDevice 
 
 - MicrosoftTeamsAddOns
 
 - MicrosoftStream
 
 - MicrosoftTeamsSettingsOperation
+
+- MipAutoLabelSharePointItem
+
+- MipAutoLabelSharePointPolicyLocation
+
+- MIPLabel
+
+- OfficeNative
 
 - OneDrive
 
@@ -291,6 +335,8 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - PowerAppsPlan
 
+- Quarantine 
+
 - SecurityComplianceAlerts
 
 - SecurityComplianceCenterEOPCmdlet
@@ -299,11 +345,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePoint
 
+- SharePointCommentOperation
+
+- SharePointContentTypeOperation 
+
 - SharePointFileOperation
 
 - SharePointFieldOperation
 
 - SharePointListOperation
+
+- SharePointListItemOperation 
 
 - SharePointSharingOperation
 
