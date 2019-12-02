@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2"
+title: Exchange Online PowerShell V2
 ms.author: chrisda
 author: chrisda
 manager: dansimp
