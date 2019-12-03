@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2"
+title: Exchange Online PowerShell V2
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -21,7 +21,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
 > [!TIP]
-> If you have any feedback/concern or facing any issues with EXO V2 module, please send an email to exocmdletpreview[at]service[dot]microsoft[dot]com.
+> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
 
 ## What's new in the EXO V2 module?
 
@@ -47,6 +47,9 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 ## Install and maintain the Exchange Online PowerShell V2 module
 
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
+
+> [!NOTE]
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon.
 
 ### What do you need to know before you begin?
 
