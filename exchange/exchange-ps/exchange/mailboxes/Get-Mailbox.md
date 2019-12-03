@@ -151,7 +151,7 @@ Get-Mailbox -Async -Properties <String[]>
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <>]
+ [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>] [<CommonParameters>]
 ```
