@@ -26,11 +26,11 @@ New-MapiVirtualDirectory
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalUrl <Uri>]
  [-IISAuthenticationMethods <MultiValuedProperty>]
  [-InternalUrl <Uri>]
- [-Role <ClientAccess | Mailbox>]
+ [-Role <VirtualDirectoryRole>]
  [-Server <ServerIdParameter>]
  [-WebSiteName <String>]
  [-WhatIf] [<CommonParameters>]
@@ -41,8 +41,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MapiVirtualDirectory -InternalUrl https://contoso.com/mapi -IISAuthenticationMethods NTLM,Negotiate,OAuth
 ```
 
@@ -66,6 +66,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +132,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -152,10 +156,11 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +180,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +208,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +228,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -240,10 +248,11 @@ The Role parameter species the configuration for the virtual directory. Valid va
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
 
 ```yaml
-Type: ClientAccess | Mailbox
+Type: VirtualDirectoryRole
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +276,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +292,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +308,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -321,4 +333,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/acb5be3d-f42b-4685-ba2a-680731281edf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-mapivirtualdirectory)

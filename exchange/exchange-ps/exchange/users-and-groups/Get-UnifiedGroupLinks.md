@@ -33,8 +33,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UnifiedGroupLinks -Identity "Human Resources Department" -LinkType Members
 ```
 
@@ -62,6 +62,7 @@ Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -87,6 +88,7 @@ Type: LinkType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -102,6 +104,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -124,4 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b7f00aad-61ae-4ca8-8a3d-9efd28bbbbd0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-unifiedgrouplinks)

@@ -31,15 +31,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SupervisoryReviewReport -StartDate 03/01/2018 -EndDate 03/31/2018
 ```
 
 This example returns the supervisory review events for the month of March, 2018.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SupervisoryReviewPolicyReport -Policies "US Brokers Policy"
 ```
 
@@ -57,6 +57,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +73,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +125,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +143,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -160,4 +166,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a871ed0a-30fe-4b53-9084-1d45d0d70b75.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewreport)

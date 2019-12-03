@@ -29,8 +29,8 @@ This cmdlet has been deprecated and no longer used.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-TenantAnalyticsConfig
 ```
 This cmdlet has been deprecated and no longer used.
@@ -52,4 +52,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9df5ec50-6b91-4801-9221-0a5985b8af3a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-tenantanalyticsconfig)

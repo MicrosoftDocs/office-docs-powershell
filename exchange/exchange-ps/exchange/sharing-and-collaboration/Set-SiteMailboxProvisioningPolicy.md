@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AliasPrefix <String>]
  [-Confirm]
- [-DefaultAliasPrefixEnabled <$true | $false>]
+ [-DefaultAliasPrefixEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-IsDefault]
  [-IssueWarningQuota <ByteQuantifiedSize>]
@@ -41,22 +41,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
 ```
 
 This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-SiteMailboxProvisioningPolicy -Identity Default -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB
 ```
 
 This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
 ```
 
@@ -78,6 +78,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -97,6 +98,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +118,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,10 +136,11 @@ The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes hav
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +208,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -231,6 +238,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +254,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -279,6 +288,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -294,6 +304,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -318,4 +329,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a53ae55-9f2c-4dbd-b476-19bacacad3bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-sitemailboxprovisioningpolicy)

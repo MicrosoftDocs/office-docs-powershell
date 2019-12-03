@@ -34,15 +34,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-EOPDistributionGroupMember -Identity "Security Team" -Members @("Kitty Petersen","Tyson Fawcett")
 ```
 
 This example replaces the current members of the Security Team distribution group with Kitty Petersen and Tyson Fawcett.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $CurrentMemberObjects = Get-DistributionGroupMember "Security Team"; $CurrentMemberNames = $CurrentMemberObjects | % {$_.name}; $CurrentMemberNames += "Tyson Fawcett"; Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
 ```
 
@@ -58,6 +58,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +86,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +124,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -144,4 +147,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a6d4f790-1b94-42f8-af6f-fa79c504d8ec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/update-eopdistributiongroupmember)

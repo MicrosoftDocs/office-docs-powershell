@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SweepRule [-Identity] <SweepRuleIdParameter> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptIfFlagged <$true | $false>]
- [-ExceptIfPinned <$true | $false>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
  [-Mailbox <MailboxIdParameter>] [-Name <String>] [-Provider <String>] [-Sender <RecipientIdParameter>]
  [-SourceFolder <MailboxFolderIdParameter>]
- [-SystemCategory <NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion>]
+ [-SystemCategory <SystemCategoryType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SweepRule -Identity x2hlsdpGmUifjFgxxGIOJw== -KeepForDays 15 -ExceptIfPinned $true
 ```
 
@@ -60,6 +60,7 @@ Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -79,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +98,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +128,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,10 +172,11 @@ The typical message flag values are:
 - Review
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -186,10 +192,11 @@ The PinMessage parameter specifies an exception for the Sweep rule that looks fo
 - $false: The exception isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +214,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +232,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +268,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +284,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +302,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -320,6 +332,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -337,6 +350,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -396,10 +410,11 @@ The SystemCategory parameter specifies a condition for the sweep rule that looks
 - Video
 
 ```yaml
-Type: NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion
+Type: SystemCategoryType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -415,6 +430,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -437,4 +453,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d8c929db-9ec4-4f75-b79d-f5297bf9e8e1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule)

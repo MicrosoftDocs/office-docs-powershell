@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Dsn
 ```
-New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Language <CultureInfo> -Text <String>
+New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -30,7 +30,7 @@ New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Lang
 
 ### Quota
 ```
-New-SystemMessage -Language <CultureInfo> -QuotaMessageType <WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox> -Text <String>
+New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -43,15 +43,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SystemMessage -DsnCode 5.3.5 -Language en -Internal $false -Text "The recipient email system can't process this email message. Please contact your system administrator for more information."
 ```
 
 This example creates a custom English NDR for the enhanced status code 5.3.5 for external senders.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-SystemMessage -QuotaMessageType WarningMailbox -Language en -Text "Your mailbox has exceeded the warning limit specified by your email administrator. Please reduce the size of your mailbox."
 ```
 
@@ -75,6 +75,7 @@ Type: EnhancedStatusCode
 Parameter Sets: Dsn
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -94,10 +95,11 @@ You need to use this parameter with the DsnCode and Language parameters.
 You can't use this parameter with the QuotaMessageType parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Dsn
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -178,10 +181,11 @@ You need to use this parameter with the Language parameter.
 You can't use this parameter with the DsnCode or Internal parameters.
 
 ```yaml
-Type: WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox
+Type: QuotaMessageType
 Parameter Sets: Quota
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -227,6 +231,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -246,6 +251,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -263,6 +269,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +285,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -302,4 +310,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/77b06405-076d-43cf-89b1-aa62b6565d8d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-systemmessage)

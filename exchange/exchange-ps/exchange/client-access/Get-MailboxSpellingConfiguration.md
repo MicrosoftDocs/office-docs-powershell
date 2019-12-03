@@ -40,22 +40,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxSpellingConfiguration -Identity Tony
 ```
 
 This example retrieves the Outlook on the web options of user Tony.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
 ```
 
 This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxSpellingConfiguration -Identity contoso\tony
 ```
 
@@ -91,6 +91,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -108,6 +109,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,4 +134,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7695cde3-71d2-4523-8300-ada77cb8e7d4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/get-mailboxspellingconfiguration)

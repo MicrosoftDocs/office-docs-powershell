@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <$true | $false> [-Confirm]
+Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <Boolean> [-Confirm]
  [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -30,8 +30,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ResubmitRequest 8 -Enabled $false
 ```
 
@@ -43,10 +43,11 @@ This example disables the resubmit request with the identity 8.
 The Enabled parameter enables or disables an active resubmit request. Valid input for this parameter is $true or $false. Setting the value to $false disables the resubmit request.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -62,6 +63,7 @@ Type: ResubmitRequestIdentityParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -81,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +109,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +125,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,4 +150,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/cbe44cb2-bde2-49d5-823c-9aa52360393e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-resubmitrequest)

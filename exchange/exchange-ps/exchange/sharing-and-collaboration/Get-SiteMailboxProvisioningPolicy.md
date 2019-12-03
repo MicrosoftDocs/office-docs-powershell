@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SiteMailboxProvisioningPolicy
 ```
 
 This example returns a summary list of all site mailbox provisioning policies in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
 ```
 
@@ -56,6 +56,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -101,4 +103,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/159f050b-c015-4fc5-b6b0-2aceaecb71ac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-sitemailboxprovisioningpolicy)

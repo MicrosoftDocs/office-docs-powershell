@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-MigrationConfig
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Features <None | MultiBatch | Endpoints | UpgradeBlock | PAW>]
+ [-Features <MigrationFeature>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-MaxNumberOfBatches <Int32>]
  [-Partition <MailboxIdParameter>]
@@ -36,15 +36,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MigrationConfig -MaxNumberOfBatches 50
 ```
 
 This example sets the migration system to have a maximum of 50 batches at any time.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MigrationConfig -MaxConcurrentMigrations 100
 ```
 
@@ -64,6 +64,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -102,10 +104,11 @@ The Features parameter specifies the set of features to enable for the migration
 - UpgradeBlock
 
 ```yaml
-Type: None | MultiBatch | Endpoints | UpgradeBlock | PAW
+Type: MigrationFeature
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +126,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +144,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +162,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +178,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,4 +203,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/641aaeb0-3a1b-4cc8-9092-07c9013d77e5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationconfig)

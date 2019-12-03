@@ -25,8 +25,8 @@ Search-AdminAuditLog
  [-Cmdlets <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
- [-ExternalAccess <$true | $false>]
- [-IsSuccess <$true | $false>]
+ [-ExternalAccess <Boolean>]
+ [-IsSuccess <Boolean>]
  [-ObjectIds <MultiValuedProperty>]
  [-Parameters <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -47,15 +47,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Search-AdminAuditLog -Cmdlets New-RoleGroup,New-ManagementRoleAssignment
 ```
 
 This example finds all the administrator audit log entries that contain either the New-RoleGroup or the New-ManagementRoleAssignment cmdlet.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults,ProhibitSendReceiveQuota,ProhibitSendQuota -StartDate 01/24/2018 -EndDate 02/12/2018 -IsSuccess $true
 ```
 
@@ -71,8 +71,8 @@ This example finds all the administrator audit log entries that match the follow
 
 The command completed successfully
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
 ```
 
@@ -80,8 +80,8 @@ This example displays all the comments written to the administrator audit log by
 
 First, store the audit log entries in a temporary variable. Then, iterate through all the audit log entries returned and display the Parameters property.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2018 -EndDate 10/02/2018
 ```
 
@@ -99,6 +99,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +117,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +137,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,10 +153,11 @@ The ExternalAccess parameter filters the results by changes that were made (cmdl
 - $false: Only return audit log entries where the change was made by an internal user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,10 +175,11 @@ The IsSuccess parameter filters the results by whether the changes were successf
 In the results of this cmdlet, this property is named **Succeeded**.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +205,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +223,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +241,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +261,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +277,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -289,6 +299,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -313,4 +324,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/87a0cd2d-dd59-4098-b740-75f0cc7bf8e7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-adminauditlog)

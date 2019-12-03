@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2"
+title: Exchange Online PowerShell V2
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -7,6 +7,7 @@ ms.date:
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
+ms.reviewer: navgupta
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
 ms.custom:
@@ -18,6 +19,9 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 # Use the Exchange Online PowerShell V2 module
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
+
+> [!TIP]
+> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
 
 ## What's new in the EXO V2 module?
 
@@ -43,6 +47,9 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 ## Install and maintain the Exchange Online PowerShell V2 module
 
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
+
+> [!NOTE]
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon.
 
 ### What do you need to know before you begin?
 
@@ -136,7 +143,7 @@ Remove-Module ExchangeOnlineManagement
 ## Connect to Exchange Online using the EXO V2 module
 
 > [!NOTE]
-> If your account uses multi-factor authentication (MFA), don't follow the instructions in this section; 
+> If your account uses multi-factor authentication (MFA), skip the first step (the **Get-Credential** cmdlet doesn't support MFA enabled accounts).
 
 1. On your local computer, open a Windows PowerShell window and run the following command:
 
@@ -146,15 +153,19 @@ Remove-Module ExchangeOnlineManagement
 
    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
 
-   **Note**:
+2. Run one of the following commands:
 
-   Get-Credential doesn't work for MFA enabled accounts. For using MFA enabled-accounts, remove the Credential parameter from below command instruction.
+   - **Accounts without MFA enabled**:
 
-2. Run the following command:
+     ```PowerShell
+     Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
+     ```
 
-   ```PowerShell
-   Connect-ExchangeOnline -Credential $UserCredential
-   ```
+   - **Accounts with MFA enabled**: Replace `<UPN>` with your account in user principal name format (for example, `navin@contoso.com`) and run the following command:
+
+     ```PowerShell
+     Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true
+     ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline).
 
@@ -213,3 +224,16 @@ Get-EXOMailbox -ResultSize 10
 In contrast, the same **Get-Mailbox** cmdlet would return at least 230 properties for the same ten mailboxes.
 
 For details about the property sets that are available in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md) or the individual EXO V2 module cmdlet reference topics.
+
+EXO cmdlets also provide a way to retreive all properties for an object by using the _ProperySets_ parameter with the value `All`.
+
+The following example returns all properties for the 10 mailboxes: 
+
+```PowerShell
+Get-EXOMailbox -ResultSize 10 -PropertySets All
+```
+
+> [!NOTE]
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
+
+

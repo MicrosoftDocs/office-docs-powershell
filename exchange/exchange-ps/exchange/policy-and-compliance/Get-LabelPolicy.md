@@ -29,15 +29,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-LabelPolicy | Format-Table Name
 ```
 
 This example returns a summary list of all policies in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-LabelPolicy -Identity "Engineering Group" | Format-List
 ```
 
@@ -59,6 +59,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None

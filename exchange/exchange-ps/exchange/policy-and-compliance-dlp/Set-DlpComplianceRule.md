@@ -22,21 +22,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
- [-AccessScope <InOrganization | NotInOrganization | None>]
+ [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
- [-BlockAccess <$true | $false>]
- [-BlockAccessScope <$true | $false>]
+ [-BlockAccess <Boolean>]
+ [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
- [-Disabled <$true | $false>]
- [-DocumentIsUnsupported <$true | $false>]
- [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
+ [-Disabled <Boolean>]
+ [-DocumentIsUnsupported <Boolean>]
+ [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
- [-ExceptIfDocumentIsUnsupported <$true | $false>]
- [-ExceptIfProcessingLimitExceeded <$true | $false>]
+ [-ExceptIfDocumentIsUnsupported <Boolean>]
+ [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExpiryDate <DateTime>]
  [-From <SmtpAddress[]>]
  [-FromMemberOf <SmtpAddress[]>]
@@ -48,9 +48,9 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
- [-ProcessingLimitExceeded <$true | $false>]
- [-ReportSeverityLevel <Low | Medium | High | None>]
- [-RuleErrorAction <Ignore | RetryThenBlock>]
+ [-ProcessingLimitExceeded <Boolean>]
+ [-ReportSeverityLevel <RuleSeverity>]
+ [-RuleErrorAction <PolicyRuleErrorAction>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -59,8 +59,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DlpComplianceRule -Identity 25bf67b6-3783-4f74-bde9-98dd40333082 -AccessScope NotInOrganization -BlockAccess $true
 ```
 
@@ -84,6 +84,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -101,10 +102,11 @@ The AccessScope parameter specifies a condition for the DLP rule that's based on
 - None: The condition isn't used.
 
 ```yaml
-Type: InOrganization | NotInOrganization | None
+Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +122,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -135,10 +138,11 @@ The BlockAccess parameter specifies an action for the DLP rule that blocks acces
 - $false: Allows access to the source item that matched the rule. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -154,10 +158,11 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - PerUser: Block access to external users.
 
 ```yaml
-Type: $true | $false
+Type: BlockAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +178,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +198,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -211,6 +218,7 @@ Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -228,6 +236,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -243,10 +252,11 @@ The Disabled parameter specifies whether the DLP rule is disabled. Valid values 
 - $false: The rule is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -258,10 +268,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -273,10 +284,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: InOrganization | NotInOrganization | None
+Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +304,7 @@ Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +320,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -318,10 +332,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -333,10 +348,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -352,6 +368,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -367,6 +384,7 @@ Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -382,6 +400,7 @@ Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -405,6 +424,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -426,6 +446,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -477,6 +498,7 @@ Type: ReportContentOption[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -500,6 +522,7 @@ Type: OverrideOption[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -523,6 +546,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -538,6 +562,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -553,6 +578,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -578,6 +604,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -589,10 +616,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -612,10 +640,11 @@ The ReportSeverityLevel parameter specifies the severity level of the incident r
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -633,10 +662,11 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 - Blank (the value $null): This is the default value.
 
 ```yaml
-Type: Ignore | RetryThenBlock
+Type: PolicyRuleErrorAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -652,6 +682,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -674,4 +705,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7c819665-e1cb-4097-90b7-2530bea69c1c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancerule)

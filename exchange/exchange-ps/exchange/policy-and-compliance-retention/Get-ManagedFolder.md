@@ -49,8 +49,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ManagedFolder MyManagedFolder | Format-List
 ```
 
@@ -66,6 +66,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -118,6 +120,7 @@ Type: MailboxIdParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +138,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -159,4 +163,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a30939b7-1291-48d8-b19a-512a0a031121.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-managedfolder)

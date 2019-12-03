@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AuthRedirect
 ```
 
 This example shows a summary list of all the OAuth redirection objects.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE | Format-List
 ```
 
@@ -55,6 +55,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -70,6 +71,7 @@ Type: AuthRedirectIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -94,4 +96,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/531fc365-3b67-4fd8-abd2-d9795c82decb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-authredirect)

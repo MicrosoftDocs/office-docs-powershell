@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DeviceTenantRule [-ApplyPolicyTo <None | ExchangeOnline | SharepointOnline | ExchangeAndSharepoint>]
- [-BlockUnsupportedDevices <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
+New-DeviceTenantRule [-ApplyPolicyTo <PolicyResourceScope>]
+ [-BlockUnsupportedDevices <Boolean>] [-Confirm] [-DomainController <Fqdn>]
  [-ExclusionList <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -41,8 +41,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DeviceTenantRule -ExclusionList "e10214c1-49b6-47d2-b5e6-466e918648b1","6e3931bd-a716-4bb9-9a2f-093aa2c967b4"
 ```
 
@@ -62,10 +62,11 @@ The ApplyPolicyTo parameter specifies where to apply the policy in your organiza
 - ExchangeAndSharePoint
 
 ```yaml
-Type: None | ExchangeOnline | SharepointOnline | ExchangeAndSharepoint
+Type: PolicyResourceScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -81,10 +82,11 @@ The BlockUnsupportedDevices parameter specifies whether to block access to your 
 - $false: Unsupported devices are allowed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +106,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +122,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +142,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +158,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -175,4 +181,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0d83cff9-087f-492e-8320-734257e72bce.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-devicetenantrule)

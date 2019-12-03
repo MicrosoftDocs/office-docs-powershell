@@ -29,15 +29,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActivityAlert | Format-List Disabled,Name,Description,Operation,UserId,NotifyUser
 ```
 
 This example returns a summary list of all activity alerts.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ActivityAlert -Identity "All Mailbox Activities"
 ```
 
@@ -59,6 +59,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -81,4 +82,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ae133df-cd0e-4782-b41a-973ca9578776.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-activityalert)

@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeSend <$true | $false>]
+Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeSend <Boolean>]
  [-Confirm]
- [-DictionaryLanguage <Spanish | Arabic | Danish | Dutch | EnglishAustralia | EnglishCanada | EnglishUnitedKingdom | EnglishUnitedStates | Finnish | French | GermanPostReform | GermanPreReform | Hebrew | Italian | Korean | NorwegianBokmal | NorwegianNynorsk | PortuguesePortugal | PortugueseBrasil | Swedish | Catalan>]
- [-DomainController <Fqdn>] [-IgnoreMixedDigits <$true | $false>] [-IgnoreUppercase <$true | $false>] [-WhatIf]
+ [-DictionaryLanguage <SpellCheckerSupportedLanguage>]
+ [-DomainController <Fqdn>] [-IgnoreMixedDigits <Boolean>] [-IgnoreUppercase <Boolean>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
 ```
 
 This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
 ```
 
@@ -77,6 +77,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -88,10 +89,11 @@ Accept wildcard characters: False
 The CheckBeforeSend parameter specifies whether Outlook on the web checks the spelling for every message when the user clicks Send in the new message form. Valid values are$true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,10 +167,11 @@ The DictionaryLanguage parameter specifies the dictionary language to use when t
 - Swedish
 
 ```yaml
-Type: Spanish | Arabic | Danish | Dutch | EnglishAustralia | EnglishCanada | EnglishUnitedKingdom | EnglishUnitedStates | Finnish | French | GermanPostReform | GermanPreReform | Hebrew | Italian | Korean | NorwegianBokmal | NorwegianNynorsk | PortuguesePortugal | PortugueseBrasil | Swedish | Catalan
+Type: SpellCheckerSupportedLanguage
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +189,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,10 +201,11 @@ Accept wildcard characters: False
 The IgnoreMixedDigits parameter specifies whether the spelling checker ignores words that contain numbers. Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -213,10 +219,11 @@ The IgnoreUppercase parameter specifies whether the spelling checker ignores wor
 Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +239,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -256,4 +264,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/63447637-44f7-4857-9606-f9c71287ca49.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxspellingconfiguration)

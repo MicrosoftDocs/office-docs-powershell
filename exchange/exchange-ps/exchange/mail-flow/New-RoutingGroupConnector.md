@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty>
- -TargetTransportServers <MultiValuedProperty> [-BiDirectional <$true | $false>] [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ -TargetTransportServers <MultiValuedProperty> [-BiDirectional <Boolean>] [-Confirm] [-Cost <Int32>]
+ [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RoutingGroupConnector -Name "Interop RGC" -SourceTransportServers "Hub2010.contoso.com" -TargetTransportServers "Bridgehead2003.contoso.com" -Cost 100 -Bidirectional $true
 ```
 
@@ -60,6 +60,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -75,6 +76,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -101,10 +104,11 @@ Accept wildcard characters: False
 The BiDirectional parameter specifies whether this is a one-way or two-way connector. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +128,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -139,6 +144,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +160,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -165,10 +172,11 @@ Accept wildcard characters: False
 The PublicFolderReferralsEnabled parameter specifies whether users can use this routing group connector to access a public folder replica located in the routing group of the target servers when an instance of that public folder isn't available in the same routing group as the user's mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +192,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -208,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6297510c-7022-4702-83e6-a213a93d46e1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-routinggroupconnector)

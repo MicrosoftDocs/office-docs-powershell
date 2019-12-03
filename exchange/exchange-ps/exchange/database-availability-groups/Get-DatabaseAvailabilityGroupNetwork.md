@@ -58,22 +58,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1
 ```
 
 This example gets basic configuration and status information for all networks in the DAG DAG1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1 | Format-List
 ```
 
 This example gets complete configuration and status information for all networks in the DAG DAG1.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -Server MBX1 | Format-List
 ```
 
@@ -89,6 +89,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +105,7 @@ Type: DatabaseAvailabilityGroupNetworkIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -127,6 +129,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,4 +154,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/43f57126-a685-4208-ac63-4e3aba4a3e00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/get-databaseavailabilitygroupnetwork)

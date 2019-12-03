@@ -22,10 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-Confirm]
- [-DetailLevel <AvailabilityOnly | LimitedDetails | FullDetails>] [-DomainController <Fqdn>]
- [-PublishDateRangeFrom <OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear>]
- [-PublishDateRangeTo <OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear>]
- [-PublishEnabled <$true | $false>] [-ResetUrl] [-SearchableUrlEnabled <$true | $false>] [-WhatIf]
+ [-DetailLevel <DetailLevelEnumType>] [-DomainController <Fqdn>]
+ [-PublishDateRangeFrom <DateRangeEnumType>]
+ [-PublishDateRangeTo <DateRangeEnumType>]
+ [-PublishEnabled <Boolean>] [-ResetUrl] [-SearchableUrlEnabled <Boolean>] [-WhatIf]
  [-SetAsSharingSource] [-UseHttps] [<CommonParameters>]
 ```
 
@@ -44,15 +44,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
 ```
 
 This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
 ```
 
@@ -84,6 +84,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -103,6 +104,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +126,11 @@ The DetailLevel parameter specifies the level of calendar detail that's publishe
 The default value is AvailabilityOnly.
 
 ```yaml
-Type: AvailabilityOnly | LimitedDetails | FullDetails
+Type: DetailLevelEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -172,10 +176,11 @@ The PublishDateRangeFrom parameter specifies the number of days of calendar info
 The default value is ThreeMonths.
 
 ```yaml
-Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
+Type: DateRangeEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,10 +208,11 @@ The PublishDateRangeTo parameter specifies the number of days of calendar inform
 The default value is ThreeMonths.
 
 ```yaml
-Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
+Type: DateRangeEnumType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,10 +224,11 @@ Accept wildcard characters: False
 The PublishEnabled parameter specifies whether the specified calendar should be enabled for publishing. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +244,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -248,10 +256,11 @@ Accept wildcard characters: False
 The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the web. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +276,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +292,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +308,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -321,4 +333,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8afa2ed8-43aa-4cb4-9907-93144c976427.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxcalendarfolder)

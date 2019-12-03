@@ -6,7 +6,7 @@ title: Get-EXOMailbox
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+ms.reviewer: navgupta
 monikerRange: "exchonline-ps"
 ---
 
@@ -62,23 +62,23 @@ By default, this cmdlet returns a summary list (a minimum set of properties) of 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-EXOMailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all mailboxes in the organization, and includes the default set of minimum output properties. To return additional properties, use the Properties and/or PropertySets parameters.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-EXOMailbox -PropertySets Archive
 ```
 
 This example returns the Properties that are defined in Archive property set. For a complete list of these properties, see [Get-EXOMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailbox-property-sets).
 
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-EXOMailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
 ```
 
@@ -88,8 +88,8 @@ This example returns a summary list of all mailboxes in the organization, and in
 
 - The Name and DistinguishedName properties.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-EXOMailbox -Identity John@contoso.com -Properties DisplayName,EmailAddresses,Alias
 ```
 
@@ -115,6 +115,7 @@ Type: String
 Parameter Sets: Anr
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +131,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +147,7 @@ Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,13 +168,14 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +203,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 0
 Default value: None
@@ -218,6 +223,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +243,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -264,6 +271,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +295,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +313,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -359,6 +369,7 @@ Type: PropertySet[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -398,6 +409,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -413,6 +425,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -430,6 +443,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -445,6 +459,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

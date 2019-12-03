@@ -22,26 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>]
- [-CertificateAuthentication <$true | $false>]
+ [-BasicAuthentication <Boolean>]
+ [-CertificateAuthentication <Boolean>]
  [-Confirm]
- [-DigestAuthentication <$true | $false>]
+ [-DigestAuthentication <Boolean>]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalUrl <Uri>]
  [-Force]
- [-GzipLevel <Off | Low | High | Error>]
+ [-GzipLevel <GzipLevel>]
  [-InternalNLBBypassUrl <Uri>]
  [-InternalUrl <Uri>]
- [-MRSProxyEnabled <$true | $false>]
+ [-MRSProxyEnabled <Boolean>]
  [-MRSProxyMaxConnections <Unlimited>]
- [-OAuthAuthentication <$true | $false>] [-OAuthAuthentication <$true | $false>]
+ [-OAuthAuthentication <Boolean>] [-OAuthAuthentication <Boolean>]
  [-UpdateManagementVirtualDirectory]
  [-WhatIf]
- [-WindowsAuthentication <$true | $false>]
- [-WSSecurityAuthentication <$true | $false>]
+ [-WindowsAuthentication <Boolean>]
+ [-WSSecurityAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -50,22 +50,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-WebServicesVirtualDirectory -Identity Contoso\EWS(Default Web Site) -ExternalUrl https://www.contoso.com/EWS/exchange.asmx -BasicAuthentication $true -InternalUrl https://contoso.internal.com/EWS/exchange.asmx
 ```
 
 This example sets the authentication method to Basic authentication for the virtual directory EWS on the server Contoso. This example also sets the external and internal URLs for this virtual directory.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-WebServicesVirtualDirectory -Identity Contoso\EWS* -ExternalUrl https://www.contoso.com/EWS/exchange.asmx
 ```
 
 This example uses a wildcard character instead of "Default Web site" as was used in Example 1.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-WebServicesVirtualDirectory -Identity "EWS (Default Web Site)" -MRSProxyEnabled $true
 ```
 
@@ -89,6 +89,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -104,10 +105,11 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,10 +121,11 @@ Accept wildcard characters: False
 The CertificateAuthentication parameter specifies whether certificate authentication is enabled. This parameter affects the \<Servername\>/ews/management/ virtual directory. It doesn't affect the \<Servername\>/ews/ virtual directory.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +145,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -157,10 +161,11 @@ The DigestAuthentication parameter specifies whether Digest authentication is en
 - $false: Digest authentication is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +181,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +207,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +227,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -241,10 +249,11 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -262,6 +271,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +287,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -296,10 +307,11 @@ The GzipLevel parameter sets the Gzip configuration for the Exchange Web Service
 - Error: Identifies errors in the Gzip compression configuration.
 
 ```yaml
-Type: Off | Low | High | Error
+Type: GzipLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -317,6 +329,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -334,6 +347,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -345,10 +359,11 @@ Accept wildcard characters: False
 The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Exchange Web Services virtual directory on Exchange servers that have the Client Access server role installed. MRSProxy helps to proxy mailbox moves between Active Directory forests. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -359,13 +374,14 @@ Accept wildcard characters: False
 ### -MRSProxyMaxConnections
 This parameter is available or functional only in Exchange Server 2010.
 
-The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see Understanding Move Requests.
+The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -381,10 +397,11 @@ The OAuthAuthentication parameter specifies whether OAuth authentication is enab
 - $false: OAuth authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -402,6 +419,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -417,6 +435,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -432,10 +451,11 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -451,10 +471,11 @@ The WSSecurityAuthentication parameter specifies whether WS-Security (Web Servic
 - $false: WS-Security authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -479,4 +500,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/35871cc3-6e8f-48bc-86ed-8703c0e178f3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-webservicesvirtualdirectory)

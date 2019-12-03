@@ -24,15 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
  [-AdminAuditLogAgeLimit <EnhancedTimeSpan>]
  [-AdminAuditLogCmdlets <MultiValuedProperty>]
- [-AdminAuditLogEnabled <$true | $false>]
+ [-AdminAuditLogEnabled <Boolean>]
  [-AdminAuditLogExcludedCmdlets <MultiValuedProperty>]
  [-AdminAuditLogParameters <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-LogLevel <None | Verbose>]
+ [-LogLevel <AuditLogLevel>]
  [-Name <String>]
- [-TestCmdletLoggingEnabled <$true | $false>]
- [-UnifiedAuditLogIngestionEnabled <$true | $false>]
+ [-TestCmdletLoggingEnabled <Boolean>]
+ [-UnifiedAuditLogIngestionEnabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -49,22 +49,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
 ```
 
 This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox, *Management*, *TransportRule* -AdminAuditLogParameters *
 ```
 
 This example enables administrator audit logging for specific cmdlets run in the organization. Any parameter used on the specified cmdlets is logged. Every time a specified cmdlet is run, a log entry is added to the audit log.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox* -AdminAuditLogParameters *Address*
 ```
 
@@ -90,6 +90,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +108,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -122,10 +124,11 @@ The AdminAuditLogEnabled parameter specifies whether administrator audit logging
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +150,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +168,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +188,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +206,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -215,6 +222,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +238,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -245,10 +254,11 @@ The LogLevel parameter specifies whether additional properties should be include
 By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
 
 ```yaml
-Type: None | Verbose
+Type: AuditLogLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +278,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -283,10 +294,11 @@ The TestCmdletLoggingEnabled parameter specifies whether the execution of test c
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -304,10 +316,11 @@ The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or dis
 - $false: User and admin activities aren't recorded in the Office 365 audit log, and you can't search the Office 365 audit log. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -323,6 +336,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -347,4 +361,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9d77294d-a501-4af6-8c3b-753235c741a7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/set-adminauditlogconfig)

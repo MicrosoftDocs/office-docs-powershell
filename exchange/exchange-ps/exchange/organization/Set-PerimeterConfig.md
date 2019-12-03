@@ -29,8 +29,8 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 ```
 
@@ -50,6 +50,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -65,6 +66,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -104,4 +107,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4f40a5fc-3275-42a0-b12f-a199bd42c8d5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-perimeterconfig)

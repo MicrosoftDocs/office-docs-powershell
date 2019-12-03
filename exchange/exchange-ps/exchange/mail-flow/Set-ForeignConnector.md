@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ForeignConnector [-Identity] <ForeignConnectorIdParameter> [-AddressSpaces <MultiValuedProperty>]
  [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-DropDirectory <String>]
- [-DropDirectoryQuota <Unlimited>] [-Enabled <$true | $false>] [-Force] [-IsScopedConnector <$true | $false>]
- [-MaxMessageSize <Unlimited>] [-Name <String>] [-RelayDsnRequired <$true | $false>]
+ [-DropDirectoryQuota <Unlimited>] [-Enabled <Boolean>] [-Force] [-IsScopedConnector <Boolean>]
+ [-MaxMessageSize <Unlimited>] [-Name <String>] [-RelayDsnRequired <Boolean>]
  [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ForeignConnector "Fax Connector" -MaxMessageSize 10MB
 ```
 
@@ -58,6 +58,7 @@ Type: ForeignConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +94,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +182,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +214,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -219,10 +226,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable the Foreign connector. The valid values are $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +246,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -249,10 +258,11 @@ Accept wildcard characters: False
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. When the value of this parameter is $false, the connector can be used by all Mailbox servers in the Exchange organization. When the value of this parameter is $true, the connector can be used only by Mailbox servers in the same Active Directory site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -284,6 +294,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -299,6 +310,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -310,10 +322,11 @@ Accept wildcard characters: False
 The RelayDsnRequired parameter specifies whether a Relay delivery status notification (DSN) is required by the Foreign connector when messages are written to the Drop directory. The valid input values for this parameter are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +346,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +362,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -372,4 +387,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/93d43160-f34a-418c-86b7-61c25fd9e847.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-foreignconnector)

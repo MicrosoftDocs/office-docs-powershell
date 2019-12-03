@@ -41,15 +41,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SCInsights
 ```
 
 This example returns all insights data.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SCInsights -EndDate (Get-Date "3/3/2018 9:30 AM").ToUniversalTime()
 ```
 
@@ -71,6 +71,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -93,4 +94,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e237daae-d2a7-4668-98a7-6c599f4a6545.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-scinsights)

@@ -6,7 +6,7 @@ title: Get-EXOMailboxPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+ms.reviewer: navgupta
 monikerRange: "exchonline-ps"
 ---
 
@@ -68,12 +68,12 @@ By default, other security groups and role groups inherit permissions to mailbox
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-{{ Add example code here }}
+### Example 1
+```powershell
+Get-EXOMailboxPermission -Identity john@contoso.com
 ```
 
-{{ Add example description here }}
+This example return the permission the user has on mailboxes
 
 ## PARAMETERS
 
@@ -85,6 +85,7 @@ Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +121,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +137,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +153,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +171,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +197,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

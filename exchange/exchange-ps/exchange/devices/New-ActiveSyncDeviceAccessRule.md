@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ActiveSyncDeviceAccessRule -AccessLevel <Allow | Block | Quarantine>
- -Characteristic <DeviceType | DeviceModel | DeviceOS | UserAgent> -QueryString <String> [-Confirm]
+New-ActiveSyncDeviceAccessRule -AccessLevel <DeviceAccessLevel>
+ -Characteristic <DeviceAccessCharacteristic> -QueryString <String> [-Confirm]
  [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ActiveSyncDeviceAccessRule -Characteristic DeviceOS -QueryString "iOS 6.1 10B145" -AccessLevel Block
 ```
 
 This example creates device access rules that blocks access for iPhones that are running iOS version 6.1.1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ActiveSyncDeviceAccessRule -Characteristic UserAgent -QueryString NokiaE521/2.00()MailforExchange -AccessLevel Allow
 ```
 
@@ -53,10 +53,11 @@ This example creates a device access rule that uses the UserAgent characteristic
 The AccessLevel parameter specifies the access level of devices that are defined by the rule. Valid values for this parameter are Allow, Block and Quarantine.
 
 ```yaml
-Type: Allow | Block | Quarantine
+Type: DeviceAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -78,10 +79,11 @@ The Characteristic parameter specifies the device characteristic or category tha
 - XMSWLHeader
 
 ```yaml
-Type: DeviceType | DeviceModel | DeviceOS | UserAgent
+Type: DeviceAccessCharacteristic
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +101,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +121,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +155,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -174,4 +180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a33c69d8-4d19-4e9d-b5cf-27727b7c4a8f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/new-activesyncdeviceaccessrule)

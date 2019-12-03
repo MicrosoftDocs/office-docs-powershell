@@ -20,6 +20,7 @@ Invoke-SPOSiteSwap
     -SourceUrl <string>
     -TargetUrl <string>
     -ArchiveUrl <string>
+    [-DisableRedirection]
     [<CommonParameters>]
 ```
 
@@ -27,9 +28,9 @@ Invoke-SPOSiteSwap
 ## DESCRIPTION
 Swaps the location of a source site with a target site while archiving the original target site.
 
-When the swap is initiated, the target site is moved to the archive location and the source site is moved to the target location. 
+When the swap is initiated, the target site is moved to the archive location and the source site is moved to the target location. By default, a site redirect is created at the source location that will redirect traffic to the target location.
 
-You must use the SharePoint Admin PowerShell version 16.0.8812.1200 or later.
+You must use the SharePoint Admin PowerShell version 16.0.19418.0 or later.
 
 Use of this cmdlet is subject to the rollout of this capability.
 
@@ -48,13 +49,19 @@ If a site is a hub site, unregister it as a hub site, swap the root site, and th
 ```powershell
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/CommunicationSite -TargetUrl https://contoso.sharepoint.com -ArchiveUrl https://contoso.sharepoint.com/sites/Archive
 ```
-Archives the existing site at https://contoso.sharepoint.com to https://contoso.sharepoint.com/sites/Archive and moves https://contoso.sharepoint.com/sites/CommunicationSite to https://contoso.sharepoint.com.
+Archives the existing site at https://contoso.sharepoint.com to https://contoso.sharepoint.com/sites/Archive and moves https://contoso.sharepoint.com/sites/CommunicationSite to https://contoso.sharepoint.com. A site redirect will be created at https://contoso.sharepoint.com/sites/CommunicationSite that will redirect any requests to https://contoso.sharepoint.com.
 
 ### EXAMPLE 2
 ```powershell
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/SearchSite -TargetUrl https://contoso.sharepoint.com/search -ArchiveUrl https://contoso.sharepoint.com/sites/Archive
 ```
-Archives the existing Search Center site at https://contoso.sharepoint.com/search to https://contoso.sharepoint.com/sites/Archive and moves the https://contoso.sharepoint.com/sites/SearchSite to https://contoso.sharepoint.com/search.
+Archives the existing Search Center site at https://contoso.sharepoint.com/search to https://contoso.sharepoint.com/sites/Archive and moves the https://contoso.sharepoint.com/sites/SearchSite to https://contoso.sharepoint.com/search. A site redirect be created at https://contoso.sharepoint.com/sites/SearchSite that will redirect any requests to https://contoso.sharepoint.com/search.
+
+### EXAMPLE 3
+```powershell
+Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/CommunicationSite -TargetUrl https://contoso.sharepoint.com -ArchiveUrl https://contoso.sharepoint.com/sites/Archive -DisableRedirection
+```
+Archives the existing site at https://contoso.sharepoint.com to https://contoso.sharepoint.com/sites/Archive and moves https://contoso.sharepoint.com/sites/CommunicationSite to https://contoso.sharepoint.com. A site redirect will not be created at https://contoso.sharepoint.com/sites/CommunicationSite.
 
 
 ## PARAMETERS
@@ -115,6 +122,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableRedirection
+Disables the site redirect from being created at the Source URL location.
+
+```yaml
+Type: Switch Parameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -124,4 +147,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 [Modernize your root site](https://docs.microsoft.com/en-us/sharepoint/modern-root-site)
+[Manage site redirects](https://docs.microsoft.com/en-us/sharepoint/manage-site-redirects)
+
 

@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-SiteMailboxProvisioningPolicy [-Name] <String>
  [-AliasPrefix <String>]
  [-Confirm]
- [-DefaultAliasPrefixEnabled <$true | $false>]
+ [-DefaultAliasPrefixEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-IsDefault]
  [-IssueWarningQuota <ByteQuantifiedSize>]
@@ -40,8 +40,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SiteMailboxProvisioningPolicy -Name SM_ProvisioningPolicy -IsDefault -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB -MaxReceiveSize 50MB
 ```
 
@@ -53,15 +53,15 @@ This example creates the default provisioning policy named SM\_ProvisioningPolic
 
 - The maximum size of email messages that can be sent to site mailboxes is 50 MB.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-SiteMailboxProvisioningPolicy -Name SM_DefaultPolicy -IsDefault
 ```
 
 This example creates the default provisioning policy named SM\_DefaultPolicy that uses the defaults for send and receive quotas.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-SiteMailboxProvisioningPolicy -Name SM_DefaultPolicy -IsDefault -AliasPrefix Project
 ```
 
@@ -77,6 +77,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -96,6 +97,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,10 +135,11 @@ The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes hav
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +155,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +173,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +207,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +237,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -263,6 +271,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +287,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -302,4 +312,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/56fed628-195d-48b3-86a0-5c780d320056.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-sitemailboxprovisioningpolicy)

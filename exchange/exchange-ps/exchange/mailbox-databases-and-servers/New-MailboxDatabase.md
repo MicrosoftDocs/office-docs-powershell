@@ -23,10 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### NonRecovery
 ```
 New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
- [-AutoDagExcludeFromMonitoring <$true | $false>]
- [-IsExcludedFromProvisioning <$true | $false>]
+ [-AutoDagExcludeFromMonitoring <Boolean>]
+ [-IsExcludedFromProvisioning <Boolean>]
  [-IsExcludedFromInitialProvisioning]
- [-IsSuspendedFromProvisioning <$true | $false>]
+ [-IsSuspendedFromProvisioning <Boolean>]
  [-OfflineAddressBook <OfflineAddressBookIdParameter>]
  [-PublicFolderDatabase <DatabaseIdParameter>]
  [-Confirm]
@@ -53,8 +53,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MailboxDatabase -Name "DB1" -EdbFilePath D:\ExchangeDatabases\DB1\DB1.edb
 ```
 
@@ -70,6 +70,7 @@ Type: String
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: String
 Parameter Sets: Recovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -97,6 +99,7 @@ Type: SwitchParameter
 Parameter Sets: Recovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -131,10 +135,11 @@ Accept wildcard characters: False
 The AutoDagExcludeFromMonitoring parameter specifies that the database being created should not be monitored by managed availability.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +159,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +175,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +191,7 @@ Type: EdbFilePath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +207,7 @@ Type: SwitchParameter
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -210,10 +219,11 @@ Accept wildcard characters: False
 The IsExcludedFromProvisioning parameter specifies whether this database is considered by the mailbox provisioning load balancer. If the IsExcludedFromProvisioning parameter is set to $true, no new mailboxes are automatically added to this database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -225,10 +235,11 @@ Accept wildcard characters: False
 The IsSuspendedFromProvisioning parameter specifies whether this database is temporarily considered by the mailbox provisioning load balancer.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +255,7 @@ Type: NonRootLocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +271,7 @@ Type: OfflineAddressBookIdParameter
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +293,7 @@ Type: DatabaseIdParameter
 Parameter Sets: NonRecovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +309,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -310,6 +325,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -334,4 +350,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5008090b-e776-4ff6-807c-208e00f4daab.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/new-mailboxdatabase)

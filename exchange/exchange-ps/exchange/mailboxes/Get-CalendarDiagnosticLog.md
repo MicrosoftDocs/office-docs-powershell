@@ -74,35 +74,35 @@ The output of this cmdlet contains the following information:
 
 - CleanGlobalObjectId: The identifier that's constant throughout the lifetime of the calendar item. For example, 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55.
 
-After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see Get-CalendarDiagnosticAnalysis.
+After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticanalysis).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-CalendarDiagnosticLog -Identity "Shannon Steele" -Subject "Weekly development meeting" -ExactMatch $true
 ```
 
 This example retrieves the Calendar Diagnostic log entries for Shannon Steele's mailbox by using the subject Weekly development meeting.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2018 6:00:00 AM" -EndDate "6/30/2018 5:00:00 PM"
 ```
 
 This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2018 to 6/30/2018.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-CalendarDiagnosticLog -Identity jkozma@contoso.com -Subject "Weekly development meeting" -Latest
 ```
 
 This example retrieves the Calendar Diagnostic log data only for the most recent calendar item in Jasen Kozma's mailbox with a message subject of "Weekly development meeting".
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -ExactMatch $true -LogLocation "C:\My Documents\Calendar Diagnostic Export"
 ```
 
@@ -144,6 +144,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -165,6 +166,7 @@ Type: String
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -177,6 +179,7 @@ Type: String
 Parameter Sets: MeetingId, MeetingSubject
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +199,7 @@ Type: String
 Parameter Sets: MeetingId
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -208,6 +212,7 @@ Type: String
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +230,7 @@ Type: String
 Parameter Sets: MeetingSubject
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -237,6 +243,7 @@ Type: String
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +263,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +281,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -290,6 +299,7 @@ Type: ExDateTime
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -305,6 +315,7 @@ Type: String
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -326,10 +337,11 @@ You only use this parameter with the Subject parameter.
 The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +359,7 @@ Type: String[]
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +375,7 @@ Type: String[]
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -377,6 +391,7 @@ Type: SwitchParameter
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -396,6 +411,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -411,6 +427,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -428,6 +445,7 @@ Type: ExDateTime
 Parameter Sets: ExportToMsg
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -452,4 +470,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/25b0fe23-6b15-4e02-b451-ea90442d54ed.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticlog)

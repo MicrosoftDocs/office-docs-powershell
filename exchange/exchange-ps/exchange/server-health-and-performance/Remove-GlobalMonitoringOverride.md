@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
+Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum>
  -PropertyName <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-BuildRange <String>]
  [-Roles <String>] [<CommonParameters>]
 ```
@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-GlobalMonitoringOverride -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
 ```
 
 This example removes a global monitoring override of the ActiveDirectoryConnectivityConfigDCServerReboot responder in the Exchange health set.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-GlobalMonitoringOverride -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
 ```
 
@@ -55,6 +55,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -72,10 +73,11 @@ The ItemType parameter specifies the item type that you want to remove. It can b
 - Responder
 
 ```yaml
-Type: Probe | Monitor | Responder | Maintenance
+Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -110,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +131,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +147,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +163,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +179,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,4 +204,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8f8f902a-a279-484f-a25a-1986706c9dc2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/remove-globalmonitoringoverride)

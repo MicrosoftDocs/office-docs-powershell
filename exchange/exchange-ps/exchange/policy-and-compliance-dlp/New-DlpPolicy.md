@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpPolicy [[-Name] <String>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Mode <Audit | AuditAndNotify | Enforce>] [-Parameters <Hashtable>] [-State <Enabled | Disabled>]
+ [-Mode <RuleMode>] [-Parameters <Hashtable>] [-State <RuleState>]
  [-Template <String>] [-TemplateData <Byte[]>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DlpPolicy -Name "Contoso PII" -Template "U.S. Personally Identifiable Information (PII) Data"
 ```
 
@@ -56,6 +56,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,10 +110,11 @@ The Mode parameter specifies the action and notification level of the DLP policy
 By default, the value of this parameter is set to Audit when you create a new DLP policy. If the State parameter is set to Disabled, the value of the Mode parameter is irrelevant.
 
 ```yaml
-Type: Audit | AuditAndNotify | Enforce
+Type: RuleMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +130,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -143,6 +148,7 @@ Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -154,10 +160,11 @@ Accept wildcard characters: False
 The State parameter enables or disables the DLP policy. Valid input for this parameter is Enabled or Disabled. By default, a new DLP policy that you create is enabled. If you want to create a disabled DLP policy, specify the value Disabled for this parameter.
 
 ```yaml
-Type: Enabled | Disabled
+Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +180,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +198,7 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +214,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -229,4 +239,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6fac5dca-be09-4296-aebf-b12bb55ce4d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlppolicy)

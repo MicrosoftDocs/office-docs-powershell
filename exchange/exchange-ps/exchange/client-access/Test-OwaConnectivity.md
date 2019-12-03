@@ -35,7 +35,7 @@ Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential>
 
 ### Identity
 ```
-Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
+Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
  [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -65,15 +65,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-OwaConnectivity -URL:https://mail.contoso.com/owa -MailboxCredential:(get-credential contoso\kweku)
 ```
 
 This example tests the connectivity for the URL https://mail.contoso.com/owa using the credentials for the user contoso\\kweku.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-OwaConnectivity -ClientAccessServer:Contoso12 -AllowUnsecureAccess
 ```
 
@@ -93,6 +93,7 @@ Type: PSCredential
 Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -112,6 +113,7 @@ Type: String
 Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -127,6 +129,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +147,7 @@ Type: ServerIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -163,6 +167,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +183,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +201,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -210,6 +217,7 @@ Type: ServerIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +233,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -240,6 +249,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +265,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -266,10 +277,11 @@ Accept wildcard characters: False
 The TestType parameter specifies whether the command tests internal or external URLs. Values are Internal and External. You can't use this parameter with the URL parameter. When neither the TestType parameter nor the URL parameter is specified, the default is TestType:Internal.
 
 ```yaml
-Type: Internal | External
+Type: OwaConnectivityTestType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +297,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +313,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +329,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +345,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -354,4 +370,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/44808bba-56b3-45bc-8cab-b45f52758636.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-owaconnectivity)

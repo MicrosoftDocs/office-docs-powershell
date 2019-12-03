@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OutlookProvider [-Identity] <OutlookProviderIdParameter> [-CertPrincipalName <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <None | ServerExclusiveConnect>]
+ [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <OutlookProviderFlags>]
  [-Server <String>] [-TTL <Int32>] [-WhatIf] [-RequiredClientVersions <String[]>] [<CommonParameters>]
 ```
 
@@ -33,8 +33,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OutlookProvider -Identity msExchAutoDiscoverConfig -TTL 2
 ```
 
@@ -50,6 +50,7 @@ Type: OutlookProviderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -67,6 +68,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +120,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,10 +132,11 @@ Accept wildcard characters: False
 The OutlookProviderFlags parameter specifies how Outlook clients should connect to the Exchange server. The value can be set to ServerExclusiveConnect, ExternalClientsRequireSSL, InternalClientsRequireSSL or to None to clear the flags. The recommended value is None, which is also the default setting.
 
 ```yaml
-Type: None | ServerExclusiveConnect
+Type: OutlookProviderFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +152,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +170,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +186,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +208,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,4 +233,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8a3d7245-528d-4501-9fc4-92ce0616cff9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-outlookprovider)

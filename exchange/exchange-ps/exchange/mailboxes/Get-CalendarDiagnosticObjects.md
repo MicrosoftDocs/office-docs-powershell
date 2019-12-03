@@ -26,14 +26,14 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-EntryId <String>]
- [-ExactMatch <$true | $false>]
+ [-ExactMatch <Boolean>]
  [-ItemClass <String[]>]
  [-ItemIds <String[]>]
  [-MeetingId <String>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-ShouldBindToItem <$true | $false>]
- [-ShouldFetchRecurrenceExceptions <$true | $false>]
+ [-ShouldBindToItem <Boolean>]
+ [-ShouldFetchRecurrenceExceptions <Boolean>]
  [-StartDate <ExDateTime>]
  [-Subject <String>]
  [<CommonParameters>]
@@ -60,29 +60,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
 ```
 
 This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox for all items where the Subject is an exact match for Team Meeting.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true; $A | Select-Object *,@{n='OLMT'; e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
 
 This is the same as the previous example, but now the results are sorted by original last modified time.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -MeetingID 40000008200E00074C5B7101A82E00800000000693ADAA3B5FCD201000000000000000010000000FF760A70460EAA4096B879872DF24F49
 ```
 
 This example retrieves the calendar diagnostic logs for Pedro Pizarro's mailbox for a meeting with the specified unique global object ID (GOID).
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2018 -EndDate 7/31/2018 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
 ```
 
@@ -118,6 +118,7 @@ Type: UnifiedGroupOrUserMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -133,6 +134,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +150,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +168,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +184,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -201,10 +206,11 @@ You only use this parameter with the Subject parameter.
 The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +226,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +242,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -250,6 +258,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +274,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +290,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -295,10 +306,11 @@ The ShouldBindToItem parameter specifies whether to truncate large streamable pr
 - $false: The values of large streamable properties are truncated. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -314,10 +326,11 @@ The ShouldFetchRecurrenceExceptions parameter specifies whether to include excep
 - $false: Don't Include exceptions to recurring meetings. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -335,6 +348,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -350,6 +364,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -372,4 +387,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0a867365-3c95-441a-96ce-c5a8413572a0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticobjects)

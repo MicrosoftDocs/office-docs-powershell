@@ -42,7 +42,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
  [-Force]
- [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
+ [-Mode <PolicyMode>]
  [-Priority <Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
@@ -59,15 +59,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DlpCompliancePolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
 ```
 
 This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the DLP policy named Main PII without affecting the existing URL values.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
 
@@ -91,6 +91,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -106,6 +107,7 @@ Type: SwitchParameter
 Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -121,6 +123,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +141,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +159,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +179,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -191,6 +197,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -206,6 +213,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +229,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -236,6 +245,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +265,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -302,6 +313,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -321,10 +333,11 @@ The Mode parameter specifies the action and notification level of the DLP policy
 - TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
 
 ```yaml
-Type: Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion
+Type: PolicyMode
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -340,6 +353,7 @@ Type: Int32
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -355,6 +369,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -372,6 +387,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -389,6 +405,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +423,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -423,6 +441,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -438,6 +457,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -453,6 +473,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -468,6 +489,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -490,4 +512,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d62d4466-5a16-4206-8105-aed442b6fa9e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancepolicy)

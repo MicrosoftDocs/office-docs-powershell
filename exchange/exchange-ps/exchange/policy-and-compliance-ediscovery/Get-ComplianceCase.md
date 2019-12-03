@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>] [-CaseType <eDiscovery | DSR>] [-DomainController <Fqdn>] [-RoleGroup <String>]
+Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>] [-CaseType <ComplianceCaseType>] [-DomainController <Fqdn>] [-RoleGroup <String>]
  [<CommonParameters>]
 ```
 
@@ -30,15 +30,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ComplianceCase
 ```
 
 This example returns a summary list of all eDiscovery cases in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ComplianceCase -Identity "Contoso Legal" | Format-List
 ```
 
@@ -54,10 +54,11 @@ The CaseType parameter specifies the type of eDiscovery case that you want to vi
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy \> DSR cases.
 
 ```yaml
-Type: eDiscovery | DSR
+Type: ComplianceCaseType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: eDiscovery
@@ -73,6 +74,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Type: ComplianceCaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -107,6 +110,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -129,4 +133,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/899cba6c-7709-4861-8f5f-e1c9d614d5c5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/get-compliancecase)

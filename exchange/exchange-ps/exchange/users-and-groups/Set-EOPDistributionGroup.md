@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-EOPDistributionGroup -Identity "Security Team" -PrimarySmtpAddress NewSecTeamId@Contoso.com
 ```
 
@@ -54,6 +54,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -69,6 +70,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -84,6 +86,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +154,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +170,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -187,4 +193,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/689a66c5-a524-4870-88f3-091fd6eae3b7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopdistributiongroup)

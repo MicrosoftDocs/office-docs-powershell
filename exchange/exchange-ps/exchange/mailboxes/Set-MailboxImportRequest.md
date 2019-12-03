@@ -44,7 +44,7 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-DomainController <Fqdn>]
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RemoteCredential <PSCredential>]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
@@ -59,15 +59,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxImportRequest -Identity "Kweku\Import" -BadItemLimit 5
 ```
 
 This example changes the import request Kweku\\Import to accept up to five corrupted mailbox items.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxImportRequest -Status Suspended | Set-MailboxImportRequest -BatchName April14
 ```
 
@@ -83,6 +83,7 @@ Type: MailboxImportRequestIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -98,6 +99,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +137,7 @@ Type: Unlimited
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +153,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: Unlimited
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +189,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +207,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +225,7 @@ Type: InternalMrsFlag[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -242,6 +251,7 @@ Type: Unlimited
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,10 +281,11 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +303,7 @@ Type: SwitchParameter
 Parameter Sets: Rehome
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -311,6 +323,7 @@ Type: PSCredential
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -328,6 +341,7 @@ Type: Fqdn
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -351,6 +365,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -366,6 +381,7 @@ Type: SkippableMergeComponent[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -381,6 +397,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -405,4 +422,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7802e75f-e7db-424f-b68f-751cdabb324b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboximportrequest)

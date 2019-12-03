@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
 ```
 
 This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
 ```
 
@@ -60,6 +60,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +98,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,4 +139,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7570aaf0-2cbe-46b6-92ea-cdd704f4eecc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-resourceconfig)

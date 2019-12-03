@@ -23,18 +23,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### DefaultSet
 ```
 Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
 ### LocationSet
 ```
 Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
@@ -79,8 +79,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
@@ -88,8 +88,8 @@ This example gets the specified calendar item from Oscar Evans' mailbox, stores 
 
 For basic analysis of the item, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
@@ -113,6 +113,7 @@ Type: CalendarLog[]
 Parameter Sets: DefaultSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +133,7 @@ Type: String[]
 Parameter Sets: LocationSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -147,10 +149,11 @@ The DetailLevel parameter specifies the level of detail you want to see in the a
 - Advanced: 37 additional calendar item properties are returned. You should use this value only for detailed debugging information.
 
 ```yaml
-Type: Basic | Advanced
+Type: AnalysisDetailLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +171,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,10 +189,11 @@ The OutputAs parameter specifies the output format of the command. Valid values 
 - XML
 
 ```yaml
-Type: HTML | CSV | XML
+Type: OutputType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -213,4 +218,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1ccb3442-1101-45c5-8508-599af6e56076.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticanalysis)
