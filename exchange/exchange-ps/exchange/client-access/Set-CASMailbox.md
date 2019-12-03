@@ -246,9 +246,9 @@ Accept wildcard characters: False
 ### -ActiveSyncSuppressReadReceipt
 The ActiveSyncSuppressReadReceipt parameter controls the behavior of read receipts for Exchange ActiveSync clients that access the mailbox. Valid values are:
 
-- $true: The user receives a read receipt when the recipient opens the message.
+- $true: Read and delivery receipt requests are suppressed. This is the default value.
 
-- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This is the default value.
+- $false: Read and delivery receipt requests are allowed.
 
 ```yaml
 Type: Boolean
