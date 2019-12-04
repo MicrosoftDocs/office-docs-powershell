@@ -91,7 +91,7 @@ To install the EXO V2 module for the first time, run the following commands:
 
    **Notes**:
 
-   - You need to configure this setting only once on your computer.
+   - You need to configure this setting only once on your computer. Read more about execution policy [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6)
 
    - If you don't do this step, you'll receive the following error when you try to connect:
 
