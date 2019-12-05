@@ -1,51 +1,54 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Add-SPOHubSiteAssociation
+title: Get-SPOSiteRenameState
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: 
+ms.author: 
 ms.reviewer:
 ---
 
-# Add-SPOHubSiteAssociation
+# Get-SPOSiteRenameState
 
 ## SYNOPSIS
 
-Associates a site with a hub site.
+.
 
 ## SYNTAX
 
 ```powershell
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
+Get-SPOSiteRenameState -Identity <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+```powershell
+Get-SPOSiteRenameState [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use this cmdlet to associate a site with a hub site.
+Use this cmdlet to .
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing
+Get-SPOSiteRenameState -Identity
 ```
 
-This example associates the research site with the marketing hub site.
+This example .
 
 ## PARAMETERS
 
-### -Site
+### -Identity
 
-URL of the site to join to the hub site.
+The urls of the site to be renamed.
 
 ```yaml
 Type: SpoSitePipeBind
-Parameter Sets: (All)
+Parameter Sets: 1
 Aliases: 
 Applicable: SharePoint Online
-
 Required: True
 Position: Named
 Default value: None
@@ -53,28 +56,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HubSite
+### -State
 
-URL of the hub site.
+The urls of the site to be renamed.
 
 ```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
+Type: RenameState
+Parameter Sets: 2
 Aliases: 
 Applicable: SharePoint Online
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
-
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
-
-If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
