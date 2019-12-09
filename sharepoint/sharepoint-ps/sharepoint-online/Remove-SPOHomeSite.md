@@ -11,43 +11,33 @@ ms.reviewer:
 # Remove-SPOHomeSite
 
 ## SYNOPSIS
-.
+
+Removes the current SharePoint Online Home site setting.
 
 ## SYNTAX
 
-```
-Remove-SPOHomeSite
+```powershell
+Remove-SPOHomeSite [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+Use this cmdlet to remove the current SharePoint Online Home Site setting.
 
 ## EXAMPLES
 
 ### Example 1
 
+```powershell
+Remove-SPOHomeSite
 ```
 
-```
-
-This example .
+This example removes the current SharerPoint Online Home Site setting.
 
 ## PARAMETERS
 
-### -
+### CommonParameters
 
-.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES

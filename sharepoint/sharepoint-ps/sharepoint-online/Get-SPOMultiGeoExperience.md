@@ -11,11 +11,12 @@ ms.reviewer:
 # Get-SPOMultiGeoExperience
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOMultiGeoExperience [<CommonParameters>]
 ```
 
@@ -27,7 +28,7 @@ Use this cmdlet to get the multi geo experience.
 
 ### Example 1
 
-```
+```powershell
 Get-SPOMultiGeoExperience
 ```
 

@@ -35,7 +35,7 @@ This example .
 
 ## PARAMETERS
 
-### -
+### -Site
 
 .
 
@@ -45,7 +45,23 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 Required: True
-Position: Named
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAddress
+
+.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

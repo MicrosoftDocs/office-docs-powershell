@@ -73,7 +73,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online

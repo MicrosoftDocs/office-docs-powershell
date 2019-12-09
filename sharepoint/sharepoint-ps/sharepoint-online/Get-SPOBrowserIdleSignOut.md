@@ -11,6 +11,7 @@ ms.reviewer:
 # Get-SPOBrowserIdleSignOut
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX

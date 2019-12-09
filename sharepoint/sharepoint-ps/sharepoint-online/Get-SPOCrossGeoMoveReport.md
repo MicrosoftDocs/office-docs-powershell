@@ -40,7 +40,7 @@ This example .
 .
 
 ```yaml
-Type: SpoSitePipeBind
+Type: JobType
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -51,7 +51,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -
+### -Limit
 
 .
 

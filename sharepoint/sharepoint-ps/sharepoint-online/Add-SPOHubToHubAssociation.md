@@ -29,7 +29,7 @@ Use this cmdlet to associate a hub site to a hub site.
 ### Example 1
 
 ```powershell
-Add-SPOHubToHubAssociation -Source https://contoso.sharepoint.com/sites/Research -Target https://contoso.sharepoint.com/sites/ResearchAndDevelopment 
+Add-SPOHubToHubAssociation -Source https://contoso.sharepoint.com/sites/Research -Target https://contoso.sharepoint.com/sites/ResearchAndDevelopment
 ```
 
 This example associates the source hub site 'Research' with the target hub site 'ResearchAndDevelopment'.
@@ -46,7 +46,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

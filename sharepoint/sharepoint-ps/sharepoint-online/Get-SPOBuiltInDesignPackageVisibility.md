@@ -11,6 +11,7 @@ ms.reviewer:
 # Get-SPOBuiltInDesignPackageVisibility
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
@@ -35,16 +36,16 @@ This example .
 
 ## PARAMETERS
 
-### -
+### -DesignPackage
 
 .
 
 ```yaml
-Type: SpoSitePipeBind
+Type: DesignPackageType
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

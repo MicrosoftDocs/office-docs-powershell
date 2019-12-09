@@ -16,10 +16,12 @@ ms.reviewer:
 
 ## SYNTAX
 
+### SourceSiteUrl
 ```powershell
 Get-SPOSiteRenameState -Identity <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### RenameReport
 ```powershell
 Get-SPOSiteRenameState [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -46,7 +48,7 @@ The urls of the site to be renamed.
 
 ```yaml
 Type: SpoSitePipeBind
-Parameter Sets: 1
+Parameter Sets: SourceSiteUrl
 Aliases: 
 Applicable: SharePoint Online
 Required: True
@@ -62,8 +64,42 @@ The urls of the site to be renamed.
 
 ```yaml
 Type: RenameState
-Parameter Sets: 2
+Parameter Sets: RenameReport, ParentId
 Aliases: 
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before executing the command.
+For more information, type the following command: `get-help about_commonparameters`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Displays a message that describes the effect of the command instead of executing the command.
+For more information, type the following command: `get-help about_commonparameters`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: SharePoint Online
 Required: False
 Position: Named
