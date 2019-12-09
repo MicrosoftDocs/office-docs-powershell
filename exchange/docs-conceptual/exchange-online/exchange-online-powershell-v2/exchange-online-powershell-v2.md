@@ -134,7 +134,7 @@ If the EXO V2 module is already installed on your computer, you can run the foll
 To uninstall the module, run the following command:
 
 ```PowerShell
-Remove-Module ExchangeOnlineManagement
+Uninstall-Module -Name ExchangeOnlineManagement
 ```
 
 > [!TIP]
