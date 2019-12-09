@@ -17,24 +17,15 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
- [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
- [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] 
- [-Identity] <XdsGlobalRelativeIdentity> [-BypassMode <String>] [-InMemory] [-Force]  [-WhatIf] [-Confirm] 
- [<CommonParameters>]
-```
-
-### ParentAndRelativeKey
-```
-New-CsOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
+New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Fqdn <String>] [-SipSignallingPort <Int32>]
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
- [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-InMemory] 
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
+ [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
+ [-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] 
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -334,7 +325,76 @@ Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always
 Type: String
 Parameter Sets: (All)
 Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
+### -GenerateRingingWhileLocatingUser
+This parameter is applicableis only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and the call might be canceled by some telecommunications providers. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundTeamsNumberTranslationRules
+This parameter assigns an ordered list of Teams translation rules, that apply to Teams numbers on inbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundPSTNNumberTranslationRules
+Creates an ordered list of Teams translation rules, that apply to PSTN number on inbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutbundTeamsNumberTranslationRulesList
+Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutboundPSTNNumberTranslationRulesList
+Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 Required: False
 Position: Named
 Default value: None
