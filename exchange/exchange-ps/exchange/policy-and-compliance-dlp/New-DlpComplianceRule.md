@@ -397,7 +397,11 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsUnsupported
-This parameter is reserved for internal Microsoft use.
+The DocumentIsUnsupported parameter specifies a condition for the DLP rule that looks for files that can't be scanned. Valid values are:
+
+- $true: Look for unsupported files that can't be scanned.
+
+- $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
 Type: $true | $false
@@ -615,7 +619,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsUnsupported
-This parameter is reserved for internal Microsoft use.
+The ExceptIfDocumentIsUnsupported parameter specifies an exception for the DLP rule that looks for files that can't be scanned. Valid values are:
+
+- $true: Look for unsupported files that can't be scanned.
+
+- $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
 Type: $true | $false
@@ -719,7 +727,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfProcessingLimitExceeded
-This parameter is reserved for internal Microsoft use.
+The ExceptIfProcessingLimitExceeded parameter specifies an exception for the DLP rule that looks for files where scanning couldn't complete. Valid values are:
+
+- $true: Look for files where scanning couldn't complete.
+
+- $false: Don't look for files where scanning couldn't complete.
 
 ```yaml
 Type: $true | $false
@@ -1169,15 +1181,15 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing withing the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+Valid values and the default value for this parameter depend on the number of existing rules in the policy. For example, if there are 8 existing rules:
 
 - Valid priority values for the existing 8 rules are from 0 through 7.
 
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
+- Valid priority values for a new 9th rule that you add to the policy are from 0 through 8.
 
-- The default value for a new rule (the 9th rule) is 8.
+- The default value for a new 9th rule that you add to the policy is 8.
 
 If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
@@ -1195,7 +1207,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessingLimitExceeded
-This parameter is reserved for internal Microsoft use.
+The ProcessingLimitExceeded parameter specifies a condition for the DLP rule that looks for files where scanning couldn't complete. You can use this condition to create rules that work together to identify and process messages where the content couldn't be fully scanned. Valid values are:
+
+- $true: Look for files where scanning couldn't complete.
+
+- $false: Don't look for files where scanning couldn't complete.
 
 ```yaml
 Type: Boolean
