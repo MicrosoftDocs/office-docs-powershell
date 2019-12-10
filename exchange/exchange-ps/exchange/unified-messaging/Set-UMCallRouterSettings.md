@@ -25,12 +25,12 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
  [-Confirm]
  [-DialPlans <MultiValuedProperty>]
  [-DomainController <Fqdn>]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
- [-IPAddressFamilyConfigurable <$true | $false>]
+ [-IPAddressFamily <IPAddressFamily>]
+ [-IPAddressFamilyConfigurable <Boolean>]
  [-MaxCallsAllowed <Int32>]
  [-SipTcpListeningPort <Int32>]
  [-SipTlsListeningPort <Int32>]
- [-UMStartupMode <TCP | TLS | Dual>]
+ [-UMStartupMode <UMStartupMode>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,8 +39,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UMCallRouterSettings -DialPlans MySIPDialPlan -IPAddressFamily Any -Server MyUMCallRouter.northwindtraders.com -UMStartupMode TLS
 ```
 
@@ -54,8 +54,8 @@ This example creates the following configuration on the Exchange server named My
 
 - Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-UMCallRouterSettings -DialPlans $null -Server UMCallRouter001.contoso.com
 ```
 
@@ -81,6 +81,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -101,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +122,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +138,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,10 +150,11 @@ Accept wildcard characters: False
 The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 is used first, and then if necessary, it falls back to IPv4. The default is Any.
 
 ```yaml
-Type: IPv4Only | IPv6Only | Any
+Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -161,10 +166,11 @@ Accept wildcard characters: False
 The IPAddressFamilyConfigurable parameter specifies whether you're able to set the IPAddressFamily parameter to IPv6Only or Any. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +186,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +202,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -210,6 +218,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,10 +230,11 @@ Accept wildcard characters: False
 The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging Call Router service starts up in TCP, TLS, or Dual mode. If the Exchange server isn't associated with any UM dial plans or is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Microsoft server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging Call Router service must be restarted.
 
 ```yaml
-Type: TCP | TLS | Dual
+Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -240,6 +250,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -264,4 +275,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d7436ccb-4efd-465f-981a-f487e158cbf3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umcallroutersettings)

@@ -24,15 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### TuiLogonSpecific
 ```
-Test-UMConnectivity -Phone <String> -PIN <String> -TUILogon <$true | $false> -UMDialPlan <UMDialPlanIdParameter>
+Test-UMConnectivity -Phone <String> -PIN <String> -TUILogon <Boolean> -UMDialPlan <UMDialPlanIdParameter>
  [-CertificateThumbprint <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ListenPort <Int32>]
- [-MediaSecured <$true | $false>]
- [-MonitoringContext <$true | $false>]
+ [-MediaSecured <Boolean>]
+ [-MonitoringContext <Boolean>]
  [-RemotePort <Int32>]
- [-Secured <$true | $false>]
+ [-Secured <Boolean>]
  [-Timeout <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -44,32 +44,32 @@ Test-UMConnectivity -Phone <String> -UMIPGateway <UMIPGatewayIdParameter> [-Diag
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ListenPort <Int32>]
- [-MediaSecured <$true | $false>]
- [-MonitoringContext <$true | $false>]
- [-Secured <$true | $false>]
+ [-MediaSecured <Boolean>]
+ [-MonitoringContext <Boolean>]
+ [-Secured <Boolean>]
  [-Timeout <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### PinReset
 ```
-Test-UMConnectivity -ResetPIN <$true | $false> [-Confirm]
+Test-UMConnectivity -ResetPIN <Boolean> [-Confirm]
  [-DomainController <Fqdn>]
- [-MonitoringContext <$true | $false>]
+ [-MonitoringContext <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### TuiLogonGeneral
 ```
-Test-UMConnectivity -TUILogonAll <$true | $false>
+Test-UMConnectivity -TUILogonAll <Boolean>
  [-CertificateThumbprint <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ListenPort <Int32>]
- [-MediaSecured <$true | $false>]
- [-MonitoringContext <$true | $false>]
+ [-MediaSecured <Boolean>]
+ [-MonitoringContext <Boolean>]
  [-RemotePort <Int32>]
- [-Secured <$true | $false>]
+ [-Secured <Boolean>]
  [-Timeout <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -81,10 +81,10 @@ Test-UMConnectivity [-CallRouter]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ListenPort <Int32>]
- [-MediaSecured <$true | $false>]
- [-MonitoringContext <$true | $false>]
+ [-MediaSecured <Boolean>]
+ [-MonitoringContext <Boolean>]
  [-RemotePort <Int32>]
- [-Secured <$true | $false>]
+ [-Secured <Boolean>]
  [-Timeout <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -102,22 +102,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-UMConnectivity
 ```
 
 This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
 ```
 
 This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through the UM IP gateway MyUMIPGateway by using the telephone number 56780.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
 ```
 
@@ -133,6 +133,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +149,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -159,10 +161,11 @@ Accept wildcard characters: False
 The ResetPIN parameter specifies whether to generate or regenerate a new PIN for all the test mailboxes in the current site.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: PinReset
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -174,10 +177,11 @@ Accept wildcard characters: False
 The TUILogon parameter specifies whether the cmdlet tries to log on to one or more UM-enabled mailboxes. The mailboxes must be UM-enabled and associated with the UM dial plan to which the Mailbox server running the Microsoft Exchange Unified Messaging service belongs. The default setting is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -189,10 +193,11 @@ Accept wildcard characters: False
 The TUILogonAll parameter specifies whether to try to connect to all test mailboxes in the current Active Directory site. The default setting is $false. The accounts that are tested must be generated by calling the New-TestCasConnectivityUser.ps1 script, and the corresponding mailboxes must be UM-enabled. Otherwise, no action is taken.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TuiLogonGeneral
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -208,6 +213,7 @@ Type: UMDialPlanIdParameter
 Parameter Sets: TuiLogonSpecific
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -238,6 +245,7 @@ Type: SwitchParameter
 Parameter Sets: LocalLoop
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +261,7 @@ Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -272,6 +281,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +297,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -302,6 +313,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -317,6 +329,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +345,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +361,7 @@ Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +377,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -377,6 +393,7 @@ Type: String
 Parameter Sets: EndToEnd
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -392,6 +409,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -403,10 +421,11 @@ Accept wildcard characters: False
 The MediaSecured parameter specifies whether to use Secure RTP or RTP (unsecured) mode.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -418,10 +437,11 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -437,6 +457,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -448,10 +469,11 @@ Accept wildcard characters: False
 The Secured parameter specifies whether the test is run in SIP Secured mode.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -467,6 +489,7 @@ Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +505,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -506,4 +530,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4e8f5561-a098-4bfe-94e1-baf7c24b01bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/test-umconnectivity)

@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
  [-Confirm]
- [-Resubmit <$true | $false>]
+ [-Resubmit <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
 ```
 Retry-Queue [-Identity] <QueueIdentity>
  [-Confirm]
- [-Resubmit <$true | $false>]
+ [-Resubmit <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -43,8 +43,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Retry-Queue -Filter "NextHopDomain -eq "contoso.com" -and Status -eq 'Retry'"
 ```
 
@@ -68,6 +68,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -83,6 +84,7 @@ Type: QueueIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -102,6 +104,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,10 +116,11 @@ Accept wildcard characters: False
 The Resubmit parameter specifies whether the queue contents should be resubmitted to the categorizer before a connection is established. Valid input for this parameter is $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +148,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +164,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -183,4 +189,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a75a524b-2491-47b2-83e6-922cd0887c6d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/retry-queue)

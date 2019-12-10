@@ -31,22 +31,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AddressBookPolicy | Format-List
 ```
 
 This example returns detailed information about all address book policies in your organization by pipelining the Format-List cmdlet.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AddressBookPolicy -Identity "All Fabrikam"
 ```
 
 This example returns default information about the address book policy All Fabrikam
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-AddressBookPolicy | where {$_.OfflineAddressBook eq "\Fabrikam All OAB"}
 ```
 
@@ -62,6 +62,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -79,6 +80,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,4 +105,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a5ec362f-a941-454f-ba93-cecada3411db.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy)

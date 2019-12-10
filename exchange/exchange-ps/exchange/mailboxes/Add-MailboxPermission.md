@@ -23,12 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AccessRights
 ```
 Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
- [-AutoMapping <$true | $false>]
+ [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -46,13 +46,13 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipal
 Add-MailboxPermission -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-User <SecurityPrincipalIdParameter>]
- [-AutoMapping <$true | $false>]
+ [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [[-Identity] <MailboxIdParameter>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -63,29 +63,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
 ```
 
 This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
 ```
 
 This example sets the user Tony Smith as the owner of the resource mailbox named Room 222.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Add-MailboxPermission -Identity "Jeroen Cool" -User "Mark Steele" -AccessRights FullAccess -InheritanceType All -AutoMapping $false
 ```
 
 This example assigns the user Mark Steele Full Access permission to Jeroen Cool's mailbox, prevents Outlook from opening Jeroen Cool's mailbox when Mark Steele opens Outlook.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-Mailbox -ResultSize unlimited -Filter "(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')" | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
 ```
 
@@ -121,6 +121,7 @@ Type: MailboxIdParameter
 Parameter Sets: AccessRights, Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -133,6 +134,7 @@ Type: MailboxIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -162,6 +164,7 @@ Type: MailboxRights[]
 Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -174,6 +177,7 @@ Type: MailboxRights[]
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +193,7 @@ Type: MailboxAcePresentationObject
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -214,6 +219,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -239,6 +245,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -251,6 +258,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -268,10 +276,11 @@ The AutoMapping parameter specifies whether to enable or disable the auto-mappin
 If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: $true
@@ -291,6 +300,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -306,6 +316,7 @@ Type: SwitchParameter
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -323,6 +334,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -344,6 +356,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -363,10 +376,11 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 - SelfAndChildren
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -382,6 +396,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -406,4 +421,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a9aacbf5-5e6c-47ef-95d6-e24547e95d01.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/add-mailboxpermission)

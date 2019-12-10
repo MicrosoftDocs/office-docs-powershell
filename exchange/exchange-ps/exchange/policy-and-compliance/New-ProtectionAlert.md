@@ -22,14 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ProtectionAlert
- -Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>
- -Name <String> -NotifyUser <MultiValuedProperty> -ThreatType <None | Malware | Phish | Activity>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>] [-AlertBy <MultiValuedProperty>]
+ -Category <AlertRuleCategory>
+ -Name <String> -NotifyUser <MultiValuedProperty> -ThreatType <ThreatAlertType>
+ [-AggregationType <AlertAggregationType>] [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>] [-Comment <String>] [-Confirm] [-Description <String>]
- [-Disabled <$true | $false>] [-Filter <String>] [-NotificationCulture <CultureInfo>]
- [-NotifyUserOnFilterMatch <$true | $false>] [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-Disabled <Boolean>] [-Filter <String>] [-NotificationCulture <CultureInfo>]
+ [-NotifyUserOnFilterMatch <Boolean>] [-NotifyUserSuppressionExpiryDate <DateTime>]
  [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
+ [-Severity <RuleSeverity>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -38,8 +38,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
@@ -63,10 +63,11 @@ The Category parameter specifies a category for the alert policy. Valid values a
 When an activity occurs that matches the conditions of the alert policy, the alert that's generated is tagged with the category that's specified by this parameter. This allows you to track and manage alerts that have the same category setting
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -97,6 +99,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -116,10 +119,11 @@ The value that you select for this parameter determines the values you can use f
 You can't change this value after you create the alert policy.
 
 ```yaml
-Type: None | Malware | Phish | Activity
+Type: ThreatAlertType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -137,10 +141,11 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 - AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
-Type: None | SimpleAggregation | AnomalousAggregation
+Type: AlertAggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +167,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +183,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +199,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -211,6 +219,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +235,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -241,10 +251,11 @@ The Disabled parameter enables or disables the alert policy. Valid values are:
 - $false: The alert policy is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +359,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -365,6 +377,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -382,10 +395,11 @@ The NotifyUserOnFilterMatch parameter specifies whether to trigger an alert for 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -403,6 +417,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -422,6 +437,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -441,6 +457,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -460,6 +477,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -477,10 +495,11 @@ The Severity parameter specifies the severity of the detection. Valid values are
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -498,6 +517,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -515,6 +535,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -530,6 +551,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -552,4 +574,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/48bd261f-8aa3-4f6a-9552-c94756025450.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-protectionalert)

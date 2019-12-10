@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController <String>
  [-Confirm]
- [-DeleteConfig <$true | $false>]
+ [-DeleteConfig <Boolean>]
  [-DomainController <Fqdn>]
- [-MultipleExchangeDeployments <$true | $false>]
+ [-MultipleExchangeDeployments <Boolean>]
  [-PreferredSourceFqdn <Fqdn>]
  [-SourceForestCredential <PSCredential>]
  [-TargetForestCredential <PSCredential>]
@@ -38,15 +38,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Export-AutoDiscoverConfig -TargetForestDomainController contoso.com
 ```
 
 This example creates a service connection point object to connect to contoso.com Active Directory forest so that Outlook clients can automatically connect to their mailbox without having to set up a profile.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Export-AutoDiscoverConfig -TargetForestDomainController dc.contoso.com -MultipleExchangeDeployments $true
 ```
 
@@ -64,6 +64,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -83,6 +84,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -94,10 +96,11 @@ Accept wildcard characters: False
 The DeleteConfig parameter causes the command to delete your configuration settings on the service connection point object.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +128,11 @@ Accept wildcard characters: False
 The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2016 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook 2010 clients use this object to select the most appropriate forest to search for the Autodiscover service.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +166,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +184,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +200,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -216,4 +225,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/70733d70-7e35-4c60-b0f8-47a00b894fd1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/export-autodiscoverconfig)

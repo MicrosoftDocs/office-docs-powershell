@@ -21,11 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SafeLinksPolicy [-Name] <String> [-AdminDisplayName <String>] [-AllowClickThrough <$true | $false>]
- [-Confirm] [-DoNotAllowClickThrough <$true | $false>] [-DoNotRewriteUrls <MultiValuedProperty>]
- [-DoNotTrackUserClicks <$true | $false>] [-Enabled <$true | $false>]
- [-EnableForInternalSenders <$true | $false>] [-ExcludedUrls <String[]>] [-IsEnabled <$true | $false>]
- [-ScanUrls <$true | $false>] [-TrackClicks <$true | $false>] [-WhatIf] [-WhiteListedUrls <String>]
+New-SafeLinksPolicy [-Name] <String> [-AdminDisplayName <String>] [-AllowClickThrough <Boolean>]
+ [-Confirm] [-DoNotAllowClickThrough <Boolean>] [-DoNotRewriteUrls <MultiValuedProperty>]
+ [-DoNotTrackUserClicks <Boolean>] [-Enabled <Boolean>]
+ [-EnableForInternalSenders <Boolean>] [-ExcludedUrls <String[]>] [-IsEnabled <Boolean>]
+ [-ScanUrls <Boolean>] [-TrackClicks <Boolean>] [-WhatIf] [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
@@ -36,8 +36,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
 ```
 
@@ -59,6 +59,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -74,6 +75,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -85,10 +87,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +111,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -123,10 +127,11 @@ The DoNotAllowClickThrough parameter specifies whether to allow users to click t
 - $false: The user is allowed to click through to the original URL.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +147,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -157,10 +163,11 @@ The DoNotTrackUserClicks parameter specifies whether to track user clicks relate
 - $false: User clicks are tracked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -176,10 +183,11 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The rule or policy is disabled. This is the default value
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -195,10 +203,11 @@ The EnableForInternalSenders parameter specifies whether the Safe Links policy i
 - $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +223,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -225,10 +235,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -244,10 +255,11 @@ The ScanUrls parameter specifies whether to enable or disable the scanning of li
 - $false: Scanning links in email messages is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -259,10 +271,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +291,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -293,6 +307,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -315,4 +330,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/663f218e-c19a-4e42-9861-b192255ea3eb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-safelinkspolicy)

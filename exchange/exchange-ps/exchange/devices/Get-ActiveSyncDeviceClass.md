@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActiveSyncDeviceClass -Filter "DeviceType -eq 'WP'"
 ```
 
 This example returns a list of all Windows Phones.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ActiveSyncDeviceClass | group-object -Property DeviceType
 ```
 
@@ -58,6 +58,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +116,7 @@ Type: ActiveSyncDeviceClassIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -139,6 +142,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -163,4 +167,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f87f0260-b1f3-4315-b71b-e381bd0ebc15.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-activesyncdeviceclass)

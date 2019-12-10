@@ -29,8 +29,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-UserAnalyticsConfig -Identity KathleenReiter@Contoso.com
 ```
 
@@ -58,6 +58,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -80,4 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c10fd535-627a-4e9e-be13-5dda9820979e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-useranalyticsconfig)

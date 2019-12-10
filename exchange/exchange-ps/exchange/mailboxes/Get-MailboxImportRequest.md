@@ -35,12 +35,12 @@ Get-MailboxImportRequest
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Mailbox <MailboxOrMailUserIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
  [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
@@ -50,12 +50,12 @@ Get-MailboxImportRequest
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Mailbox <MailboxLocationIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
  [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
@@ -66,29 +66,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxImportRequest -Identity "tony\Recovered"
 ```
 
 This example returns the default information regarding the status of the ongoing import request with the identity tony\\Recovered. The type of information returned by default includes name, mailbox, and status.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxImportRequest -Status InProgress -Database DB01
 ```
 
 In Exchange Server 2010, this example returns the status of in progress import requests for mailboxes or archives that reside on database DB01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxImportRequest -BatchName "ImportingDB1PSTs" -Status Completed
 ```
 
 This example returns the status of import requests in the ImportingDB1PSTs batch that completed.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-MailboxImportRequest -Name "Recovered" -Suspend $true
 ```
 
@@ -118,6 +118,7 @@ Type: MailboxImportRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -135,6 +136,7 @@ Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +162,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +180,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,10 +200,11 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +246,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: MailboxFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +259,7 @@ Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -272,6 +279,7 @@ Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +295,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -322,10 +331,11 @@ You can't use this parameter with the Identity parameter.
 CompletionInProgress and AutoSuspended don't apply to import requests and won't return any information.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
+Type: RequestStatus
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -339,10 +349,11 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,6 +379,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -392,4 +404,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7ee34d59-190e-45b4-80be-4479b1935ae4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboximportrequest)

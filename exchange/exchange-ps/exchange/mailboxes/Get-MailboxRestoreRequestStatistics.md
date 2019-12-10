@@ -65,36 +65,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxRestoreRequestStatistics -Identity "Tony\MailboxRestore1"
 ```
 
 This example returns the default statistics for the restore request with the identity Tony\\MailboxRestore1. The type of information returned by default includes name, mailbox, status and percent complete.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxRestoreRequestStatistics -Identity Tony\MailboxRestore | Export-CSV \\SERVER01\RestoreRequest_Reports\Tony_Restorestats.csv
 ```
 
 This example returns the statistics for Tony Smith's mailbox and exports the report to a CSV file.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxRestoreRequestStatistics -Identity Tony\MailboxRestore -IncludeReport | Format-List
 ```
 
 This example returns additional information about the restore request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-MailboxRestoreRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
 In Exchange Server 2010 and 2013, this example returns default statistics for a restore request being processed by the instance of MRS running on the server CAS01. This command only returns information for restore requests currently being processed by an instance of MRS. If the Client Access server is finished processing all restore requests, no information is returned. This command is for debugging purposes only and should only be performed if requested by support personnel.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-MailboxRestoreRequest -Status Failed | Get-MailboxRestoreRequestStatistics -IncludeReport | Format-List > C:\Reports\AllRestoreReports.txt
 ```
 
@@ -114,6 +114,7 @@ Type: MailboxRestoreRequestIdParameter
 Parameter Sets: IdentityOnPremises, IdentityCloud
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -133,6 +134,7 @@ Type: Fqdn
 Parameter Sets: MigrationMRSInstance
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -160,6 +162,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -175,6 +178,7 @@ Type: SwitchParameter
 Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +196,7 @@ Type: Guid
 Parameter Sets: MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +214,7 @@ Type: SwitchParameter
 Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +232,7 @@ Type: String
 Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +250,7 @@ Type: String
 Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +268,7 @@ Type: Fqdn
 Parameter Sets: IdentityOnPremises, MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -275,6 +284,7 @@ Type: SwitchParameter
 Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -299,4 +309,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b28d5835-1f8f-4cd9-8f72-9d592adef3d9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxrestorerequeststatistics)

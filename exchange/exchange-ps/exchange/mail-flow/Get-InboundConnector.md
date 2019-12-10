@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-InboundConnector "Inbound Connector for Contoso.com" | Format-List
 ```
 
 This example displays detailed configuration information for the Inbound connector named Inbound Connector for Contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-InboundConnector
 ```
 
@@ -55,6 +55,7 @@ Type: InboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -79,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ad72a9d6-4bac-4dd5-ae22-3246e05aac4e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-inboundconnector)

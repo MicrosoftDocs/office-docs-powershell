@@ -28,7 +28,7 @@ Set-TenantAnalyticsConfig -MinRecipients <Int32>
 
 ### TeamAnalytics
 ```
-Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <Boolean>
  [-MinRecipients <Int32>]
  [<CommonParameters>]
 ```
@@ -38,8 +38,8 @@ This cmdlet has been deprecated and no longer used.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TenantAnalyticsConfig
 ```
 
@@ -55,6 +55,7 @@ Type: Int32
 Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -67,6 +68,7 @@ Type: Int32
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Type: Int32
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -93,10 +96,11 @@ Accept wildcard characters: False
 This cmdlet has been deprecated and no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -119,4 +123,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3f34a5c1-350f-4f1f-92dd-d16587a0097b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/set-tenantanalyticsconfig)

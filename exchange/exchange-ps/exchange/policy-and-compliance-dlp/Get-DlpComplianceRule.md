@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>] [<CommonParameters>]
+Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-IncludeExecutionRuleGuids Boolean]
+ [-Policy <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,22 +32,22 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DlpComplianceRule
 ```
 
 This example displays summary information for all DLP rules in the Security & Compliance Center.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DlpComplianceRule -Identity "PII SS# Custom" | Format-List
 ```
 
 This example displays detailed information for the DLP rule named "PII SS# Custom".
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-DlpComplianceRule -Policy "PII Limited"
 ```
 
@@ -68,10 +71,27 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -IncludeExecutionRuleGuids
+{{ Fill IncludeExecutionRuleGuids Description }}
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -91,6 +111,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -113,4 +134,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fd3d6c2f-618b-4a01-9d52-344f7a89daac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpcompliancerule)

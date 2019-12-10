@@ -42,8 +42,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -RequestSecret <Request Secret value> -RequestToken <RequestToken value>
 ```
 
@@ -59,6 +59,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -74,6 +75,7 @@ Type: SwitchParameter
 Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -89,6 +91,7 @@ Type: String
 Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Type: String
 Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +123,7 @@ Type: String
 Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -134,6 +139,7 @@ Type: String
 Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +159,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +175,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,4 +200,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a13fdafb-1ad8-47ee-b57f-2377d67c01ae.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-connectsubscription)

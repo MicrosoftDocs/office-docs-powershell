@@ -141,7 +141,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
 
 ### AsyncParameterSet
 ```
-Get-Mailbox [-Async] -Properties <String[]>
+Get-Mailbox -Async -Properties <String[]>
  [-Archive]
  [-Filter <String>]
  [-GroupMailbox]
@@ -151,7 +151,7 @@ Get-Mailbox [-Async] -Properties <String[]>
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <>]
+ [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>] [<CommonParameters>]
 ```
@@ -163,36 +163,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Mailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all the mailboxes in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Mailbox -OrganizationalUnit Users
 ```
 
 This example returns a list of all the mailboxes in your organization in the Users OU.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Mailbox -Anr Chr
 ```
 
 This example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr". This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-Mailbox -Archive -Server Mailbox01
 ```
 
 This example returns a summary list of all archive mailboxes on the Mailbox server named Mailbox01.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-Mailbox -Identity ed@contoso.com -RemoteArchive
 ```
 
@@ -218,6 +218,7 @@ Type: String
 Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +240,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +256,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -264,13 +267,14 @@ Accept wildcard characters: False
 ### -Async
 This parameter is available only in the cloud-based service.
 
-{{Fill Async Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AsyncParameterSet
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -292,6 +296,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +318,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +338,7 @@ Type: PSCredential
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -357,6 +364,7 @@ Type: DatabaseIdParameter
 Parameter Sets: DatabaseSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -374,6 +382,7 @@ Type: Fqdn
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -401,6 +410,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -416,6 +426,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -453,6 +464,7 @@ Type: MailboxIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -476,6 +488,7 @@ Type: SwitchParameter
 Parameter Sets: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -497,6 +510,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -518,6 +532,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -549,6 +564,7 @@ Type: MailboxPlanIdParameter
 Parameter Sets: MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -564,6 +580,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -583,6 +600,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -606,6 +624,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -623,6 +642,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -642,6 +662,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -681,6 +702,7 @@ Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -700,6 +722,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -715,6 +738,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -746,6 +770,7 @@ Type: ServerIdParameter
 Parameter Sets: ServerSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -765,6 +790,7 @@ Type: SwitchParameter
 Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -794,6 +820,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -818,4 +845,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8a5a6eb9-4a75-47f9-ae3b-a3ba251cf9a8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)

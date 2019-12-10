@@ -25,12 +25,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-Message [-Filter <String>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-Server <ServerIdParameter>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
@@ -40,12 +40,12 @@ Get-Message [-Filter <String>]
 Get-Message [[-Identity] <MessageIdentity>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
@@ -54,12 +54,12 @@ Get-Message [[-Identity] <MessageIdentity>]
 Get-Message [-Queue <QueueIdentity>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
@@ -70,22 +70,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Message -Filter "FromAddress -like '*@contoso.com'" | Format-List
 ```
 
 This example displays detailed information about all messages queued on the local server and received from any sender at the contoso.com domain.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Message -Filter "FromAddress -like '*@contoso.com' -and SCL -gt 3"
 ```
 
 This example lists all messages queued on the local server, received from any sender at the contoso.com domain and that have an SCL value greater than 3.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Message -Server Server01.contoso.com -SortOrder: +FromAddress,-Size
 ```
 
@@ -101,6 +101,7 @@ Type: MessageIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -116,6 +117,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +133,7 @@ Type: ExtensibleMessageInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +151,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +163,11 @@ Accept wildcard characters: False
 The IncludeBookmark parameter specifies whether to include the bookmark object when the query results are displayed. The IncludeBookmark parameter is valid when it's used with the BookmarkObject or BookmarkIndex parameters. If you don't specify a value for the IncludeBookmark parameter, the default value of $true is used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +183,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +215,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +233,7 @@ Type: QueueIdentity
 Parameter Sets: Queue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +249,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -252,10 +261,11 @@ Accept wildcard characters: False
 The ReturnPageInfo parameter is a hidden parameter. Use it to return information about the total number of results and the index of the first object of the current page. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -267,10 +277,11 @@ Accept wildcard characters: False
 The SearchForward parameter specifies whether to search forward or backward in the result set. The default value is $true. This value causes the result page to be calculated forward from either the start of the result set or forward from a bookmark if specified.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +309,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +327,7 @@ Type: QueueViewerSortOrderEntry[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -339,4 +352,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d6020f77-c852-46f6-b7c5-5ca6feae0fdf.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-message)

@@ -6,7 +6,7 @@ title: Connect-ExchangeOnline
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+ms.reviewer: navgupta
 monikerRange: "exchonline-ps"
 ---
 
@@ -33,9 +33,9 @@ Connect-ExchangeOnline
  [-LogDirectoryPath <String>]
  [-PageSize <UInt32>]
  [[-PSSessionOption] <PSSessionOption>]
- [-ShowProgress <$true | $ false>]
- [-TrackPerformance <$true | $ false>]
- [-UseMultithreading <$true | $ false>]
+ [-ShowProgress <Boolean>]
+ [-TrackPerformance <Boolean>]
+ [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -45,15 +45,15 @@ This cmdlet allows you to create a remote PowerShell connection to your Exchange
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-UserCredential = Get-Credential
+### Example 1
+```powershell
+$UserCredential = Get-Credential
 Connect-ExchangeOnline -Credential $UserCredential
 ```
 
-The first command gets the user credentials and stores them in the $Credential variable.
+The first command gets the user credentials and stores them in the $UserCredential variable.
 
-The second command connects the current PowerShell session using the credentials in the $Credential. Note that after the second command is complete, the password key in the $Credential variable becomes empty.
+The second command connects the current PowerShell session using the credentials in the $UserCredential. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
@@ -67,6 +67,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 2
 Default value: None
@@ -82,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -97,6 +99,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -114,6 +117,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +133,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 5
 Default value: None
@@ -146,6 +151,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +177,7 @@ Type: ExchangeEnvironment
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 3
 Default value: O365Default
@@ -188,6 +195,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +211,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,6 +227,7 @@ Type: PSSessionOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 4
 Default value: None
@@ -233,10 +243,11 @@ The ShowProgress parameter shows a visual progress bar in the PowerShell client 
 - $false: The progress bar isn't displayed.
 
 ```yaml
-Type: $true | $ false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -248,10 +259,11 @@ Accept wildcard characters: False
 {{ Fill TrackPerformance Description }}
 
 ```yaml
-Type: $true | $ false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -267,10 +279,11 @@ The UseMultithreading parameter specifies whether to disable or enable multi-thr
 - $false: Disable multi-threading. Note this value will degrade performance of V2 cmdlets.
 
 ```yaml
-Type: $true | $ false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +299,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None

@@ -22,16 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-UMMailbox [-Identity] <MailboxIdParameter> [-AirSyncNumbers <MultiValuedProperty>]
- [-AllowUMCallsFromNonUsers <None | SearchEnabled>] [-AnonymousCallersCanLeaveMessages <$true | $false>]
- [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-CallAnsweringAudioCodec <G711 | Wma | Gsm | Mp3>]
- [-CallAnsweringRulesEnabled <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
- [-FaxEnabled <$true | $false>] [-IgnoreDefaultScope] [-MissedCallNotificationEnabled <$true | $false>]
+ [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>] [-AnonymousCallersCanLeaveMessages <Boolean>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringAudioCodec <AudioCodecEnum>]
+ [-CallAnsweringRulesEnabled <Boolean>] [-Confirm] [-DomainController <Fqdn>]
+ [-FaxEnabled <Boolean>] [-IgnoreDefaultScope] [-MissedCallNotificationEnabled <Boolean>]
  [-Name <String>] [-OperatorNumber <String>] [-PhoneNumber <String>] [-PhoneProviderId <String>]
- [-PinlessAccessToVoiceMailEnabled <$true | $false>] [-PlayOnPhoneEnabled <$true | $false>]
- [-SubscriberAccessEnabled <$true | $false>] [-TUIAccessToCalendarEnabled <$true | $false>]
- [-TUIAccessToEmailEnabled <$true | $false>] [-UMMailboxPolicy <MailboxPolicyIdParameter>]
- [-UMSMSNotificationOption <None | VoiceMail | VoiceMailAndMissedCalls>] [-VerifyGlobalRoutingEntry] [-WhatIf]
- [-ImListMigrationCompleted <$true | $false>] [-VoiceMailAnalysisEnabled <$true | $false>] [<CommonParameters>]
+ [-PinlessAccessToVoiceMailEnabled <Boolean>] [-PlayOnPhoneEnabled <Boolean>]
+ [-SubscriberAccessEnabled <Boolean>] [-TUIAccessToCalendarEnabled <Boolean>]
+ [-TUIAccessToEmailEnabled <Boolean>] [-UMMailboxPolicy <MailboxPolicyIdParameter>]
+ [-UMSMSNotificationOption <UMSMSNotificationOptions>] [-VerifyGlobalRoutingEntry] [-WhatIf]
+ [-ImListMigrationCompleted <Boolean>] [-VoiceMailAnalysisEnabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,8 +43,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
 ```
 
@@ -58,8 +58,8 @@ Prevents him from receiving incoming faxes
 
 Enables voice mail notifications but not missed call notifications using text messaging
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
 ```
 
@@ -95,6 +95,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -112,6 +113,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -123,10 +125,11 @@ Accept wildcard characters: False
 The AllowUMCallsFromNonUsers parameter specifies whether to exclude the mailbox from directory searches.
 
 ```yaml
-Type: None | SearchEnabled
+Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -138,10 +141,11 @@ Accept wildcard characters: False
 The AnonymousCallersCanLeaveMessages parameter specifies whether diverted calls without a caller ID are allowed to leave a message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,10 +157,11 @@ Accept wildcard characters: False
 The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use Automatic Speech Recognition (ASR) when they log on to their mailbox. This parameter can only be set to $true if there is ASR support for the language selected by the user in Microsoft Outlook on the web Options.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,10 +173,11 @@ Accept wildcard characters: False
 The CallAnsweringAudioCodec parameter specifies the audio codec used to encode voice mail messages left for the user. The audio codec used is the audio codec set on the UM dial plan. The default value is Mp3.
 
 ```yaml
-Type: G711 | Wma | Gsm | Mp3
+Type: AudioCodecEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,10 +189,11 @@ Accept wildcard characters: False
 The CallAnsweringRulesEnabled parameter specifies whether users can configure or set up Call Answering Rules for their accounts. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -206,6 +213,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +231,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -234,10 +243,11 @@ Accept wildcard characters: False
 The FaxEnabled parameter specifies whether a user is allowed to receive incoming faxes.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -261,6 +271,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -274,10 +285,11 @@ The MissedCallNotificationEnabled parameter specifies whether to send missed cal
 When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -293,6 +305,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -308,6 +321,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -325,6 +339,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -342,6 +357,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -353,10 +369,11 @@ Accept wildcard characters: False
 The PinlessAccessToVoiceMailEnabled parameter specifies whether UM-enabled users are required to use a PIN to access their voice mail. A PIN is still required to access email and the calendar. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,10 +385,11 @@ Accept wildcard characters: False
 The PlayOnPhoneEnabled parameter specifies whether a user can use the Play on Phone feature to listen to voice messages. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -383,10 +401,11 @@ Accept wildcard characters: False
 The SubscriberAccessEnabled parameter specifies whether the users are allowed subscriber access to their individual mailboxes. If it's set to $true, after users are authenticated, they're able to retrieve voice mail over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -398,10 +417,11 @@ Accept wildcard characters: False
 The TUIAccessToCalendarEnabled parameter specifies whether UM-enabled users can access and manage their individual calendar using the Microsoft Outlook Voice Access telephone user interface (TUI) or touchtone interface. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -413,10 +433,11 @@ Accept wildcard characters: False
 The TUIAccessToEmailEnabled parameter specifies whether users can access their individual email messages over the telephone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -432,6 +453,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -443,10 +465,11 @@ Accept wildcard characters: False
 The UMSMSNotificationOption parameter specifies whether a UM-enabled user gets SMS or text messaging notifications for voice mail only, voice mail and missed calls, or no notifications. The values for this parameter are: VoiceMail, VoiceMailAndMissedCalls, and None. The default value is None.
 
 ```yaml
-Type: None | VoiceMail | VoiceMailAndMissedCalls
+Type: UMSMSNotificationOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -464,6 +487,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -479,6 +503,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -500,10 +525,11 @@ Lync Server 2013 and Skype for Business Server 2015 support storing the user's c
 If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -515,10 +541,11 @@ Accept wildcard characters: False
 The VoiceMailAnalysisEnabled parameter specifies whether a copy of each voice mail left for a UM-enabled user will be forwarded to Microsoft for analysis and improvement of speech recognition features.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -543,4 +570,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/dd7b429d-53a8-46dd-b16b-3a8ca8424bbc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-ummailbox)

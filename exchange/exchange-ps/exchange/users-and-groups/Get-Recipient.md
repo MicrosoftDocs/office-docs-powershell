@@ -25,13 +25,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AnrSet
 ```
 Get-Recipient [-Anr <String>]
- [-AuthenticationType <Managed | Federated>]
+ [-AuthenticationType <AuthenticationType>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-PropertySet <PropertySet>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
@@ -46,15 +46,15 @@ Get-Recipient [-Anr <String>]
 ### Identity
 ```
 Get-Recipient [[-Identity] <RecipientIdParameter>]
- [-AuthenticationType <Managed | Federated>]
+ [-AuthenticationType <AuthenticationType>]
  [-BookmarkDisplayName <String>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
- [-IncludeBookmarkObject <$true | $false>]
+ [-IncludeBookmarkObject <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-PropertySet <PropertySet>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
@@ -110,22 +110,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Recipient -ResultSize unlimited
 ```
 
 This example retrieves as summary list of all recipients in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Recipient -Identity "Marketing Department" | Format-List
 ```
 
 This example returns detailed information for the recipient named Marketing Department.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Recipient -RecipientType MailContact -SortBy Office | Format-Table -Auto Office,Name
 ```
 
@@ -151,6 +151,7 @@ Type: String
 Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -168,10 +169,11 @@ The AuthenticationType parameter specifies the recipient by authentication type.
 - Managed
 
 ```yaml
-Type: Managed | Federated
+Type: AuthenticationType
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +189,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +205,7 @@ Type: MultiValuedProperty
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +225,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +249,7 @@ Type: DatabaseIdParameter
 Parameter Sets: DatabaseSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -261,6 +267,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +295,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +323,7 @@ Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -338,6 +347,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -349,10 +359,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -370,6 +381,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +405,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -408,6 +421,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -419,10 +433,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum
+Type: PropertySet
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -442,6 +457,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -471,6 +487,7 @@ Type: String
 Parameter Sets: RecipientPreviewFilterSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -504,6 +521,7 @@ Type: RecipientType[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -577,6 +595,7 @@ Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -592,6 +611,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -627,6 +647,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -651,4 +672,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)

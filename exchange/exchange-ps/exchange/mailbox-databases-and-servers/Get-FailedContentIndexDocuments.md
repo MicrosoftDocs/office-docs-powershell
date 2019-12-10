@@ -28,7 +28,7 @@ Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -41,7 +41,7 @@ Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -54,7 +54,7 @@ Get-FailedContentIndexDocuments -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EndDate <DateTime>]
  [-ErrorCode <Int32>]
- [-FailureMode <Transient | Permanent | All>]
+ [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
  [-WhatIf] [<CommonParameters>]
@@ -71,15 +71,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-FailedContentIndexDocuments -Identity "Terry Adams"
 ```
 
 This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
 ```
 
@@ -115,6 +115,7 @@ Type: MailboxIdParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -136,6 +137,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -157,6 +159,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -176,6 +179,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -191,6 +195,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -206,6 +211,7 @@ Type: SwitchParameter
 Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +245,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -255,10 +263,11 @@ The FailureMode parameter specifies the type of error. Use the following values.
 - All: Returns items that couldn't be indexed regardless of nature of failure.
 
 ```yaml
-Type: Transient | Permanent | All
+Type: FailureMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +283,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +301,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -306,6 +317,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,4 +342,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d128ec5f-f805-4bc0-982b-b9adceb8eca8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/get-failedcontentindexdocuments)

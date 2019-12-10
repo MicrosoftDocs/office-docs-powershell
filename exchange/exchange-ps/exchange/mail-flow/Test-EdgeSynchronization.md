@@ -30,7 +30,7 @@ Test-EdgeSynchronization -VerifyRecipient <ProxyAddress>
 
 ### Default
 ```
-Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <$true | $false>] [-TargetServer <String>]
+Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <Boolean>] [-TargetServer <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
@@ -45,15 +45,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-EdgeSynchronization -MaxReportSize 500 -MonitoringContext $true
 ```
 
 This example diagnoses the synchronization status of subscribed Edge Transport servers, outputs only the first 500 data inconsistencies, and generates events and performance counters for use by System Center Operations Manager 2007.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
 ```
 
@@ -69,6 +69,7 @@ Type: ProxyAddress
 Parameter Sets: SingleValidation
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -88,6 +89,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +121,7 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +137,7 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +153,7 @@ Type: Unlimited
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +165,11 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +187,7 @@ Type: String
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +203,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -219,4 +228,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2d6bc8d2-aa4c-497a-beaf-ec99b10a6a96.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/test-edgesynchronization)
