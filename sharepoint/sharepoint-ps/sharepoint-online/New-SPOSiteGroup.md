@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
 
 > [!NOTE] 
-> Permission levels are defined by SharePoint Online administrators in the SharePoint Online Administration Center.  
+> Permission Levels, are defined on the top-level site of the site collection, please see [How to create and edit permission levels](https://docs.microsoft.com/sharepoint/how-to-create-and-edit-permission-levels) for more information.
 
 
 ```yaml
