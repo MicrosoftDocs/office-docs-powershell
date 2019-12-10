@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxAutoReplyConfiguration
 schema: 2.0.0
+search.appverid: MET150
 author: chrisda
 ms.author: chrisda
 ms.reviewer:

@@ -91,9 +91,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOExternalUser](Get-SPOExternalUser.md)
 {{Manually Enter Get-SPOExternalUser Description Here}}
 
-### [Get-SPOfficeStoreAppsDefaultActivation](Get-SPOfficeStoreAppsDefaultActivation.md)
-{{Manually Enter Get-SPOfficeStoreAppsDefaultActivation Description Here}}
-
 ### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 {{Manually Enter Get-SPOGeoAdministrators Description Here}}
 
@@ -328,9 +325,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPODataConnectionSettingMetadata](Set-SPODataConnectionSettingMetadata.md)
 {{Manually Enter Set-SPODataConnectionSettingMetadata Description Here}}
 
-### [Set-SPOfficeStoreAppsDefaultActivation](Set-SPOfficeStoreAppsDefaultActivation.md)
-{{Manually Enter Set-SPOfficeStoreAppsDefaultActivation Description Here}}
-
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 {{Manually Enter Set-SPOGeoStorageQuota Description Here}}
 
@@ -399,6 +393,5 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Upgrade-SPOSite](Upgrade-SPOSite.md)
 {{Manually Enter Upgrade-SPOSite Description Here}}
-
 
 <!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->
