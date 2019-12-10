@@ -1,5 +1,5 @@
 ---
-external help file: sharepointonline.xml
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0

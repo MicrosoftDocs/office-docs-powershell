@@ -752,6 +752,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
 {{Manually Enter Get-CsTeamsCallingPolicy Description Here}}
 
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+{{Manually Enter Get-CsTeamsMobilityPolicy Description Here}}
+
 ### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
@@ -994,6 +997,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
 {{Manually Enter Grant-CsTeamsCallingPolicy Description Here}}
+
+### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
+{{Manually Enter Grant-CsTeamsMobilityPolicy Description Here}}
 
 ### [Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
 {{Manually Enter Grant-CsTeamsEmergencyCallingPolicy Description Here}}
@@ -2699,6 +2705,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
 {{Manually Enter Set-CsTeamsCallingPolicy Description Here}}
 
+### [Set-CsTeamsMobilityPolicy](Set-CsTeamsMobilityPolicy.md)
+{{Manually Enter Set-CsTeamsMobilityPolicy Description Here}}
+
 ### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
@@ -3170,6 +3179,12 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
 
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+
+### [Set-CsTeamsMobilityPolicy](Set-CsTeamsMobilityPolicy.md)
+
+### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
+
 ### [Set-CsTeamsMeetingBroadcastConfiguration](Set-CsTeamsMeetingBroadcastConfiguration.md)
 
 ### [Get-CsTeamsMeetingBroadcastConfiguration](Get-CsTeamsMeetingBroadcastConfiguration.md)
@@ -3195,6 +3210,8 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 
 ### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
 
 ### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
 
