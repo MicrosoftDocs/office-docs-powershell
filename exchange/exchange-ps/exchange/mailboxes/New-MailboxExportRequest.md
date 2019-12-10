@@ -147,7 +147,7 @@ This example exports the user Kweku's archive to a .pst file on the network shar
 
 ### Example 3
 ```powershell
-New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like "*profit*") -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
+New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like '*profit*') -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
 This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2018.
@@ -596,7 +596,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 - JunkEmail
 
-- CommunicationHistory
+- CommunicatorHistory
 
 - Voicemail
 

@@ -105,7 +105,7 @@ Multiple servers can be specified by separating the computer FQDNs using commas:
 
 `-Computers "atl-server-001.litwareinc.com","red-server-002.litwareinc.com"`
 
-If you do not include the Computers parameter or the Pools parameter, the `Stop-CsClsLogging` cmdlet will run the command against all pools in the topology.
+If you do not include the Computers parameter or the Pools parameter, the `Stop-CsClsLogging` cmdlet will automatically run against the server you are connected to.
 
 
 ```yaml

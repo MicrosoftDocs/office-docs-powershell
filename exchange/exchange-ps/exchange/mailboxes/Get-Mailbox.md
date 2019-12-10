@@ -141,7 +141,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
 
 ### AsyncParameterSet
 ```
-Get-Mailbox [-Async] -Properties <String[]>
+Get-Mailbox -Async -Properties <String[]>
  [-Archive]
  [-Filter <String>]
  [-GroupMailbox]
@@ -151,7 +151,7 @@ Get-Mailbox [-Async] -Properties <String[]>
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <>]
+ [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>] [<CommonParameters>]
 ```
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ### -Async
 This parameter is available only in the cloud-based service.
 
-{{Fill Async Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
