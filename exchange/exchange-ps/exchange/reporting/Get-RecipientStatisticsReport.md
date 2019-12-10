@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RecipientStatisticsReport
 ```
 
@@ -57,4 +57,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1c6f788c-349d-41aa-a0b0-b931e8588791.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-recipientstatisticsreport)

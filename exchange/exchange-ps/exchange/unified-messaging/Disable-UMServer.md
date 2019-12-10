@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Disable-UMServer [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,15 +42,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Disable-UMServer -Identity MyUMServer
 ```
 
 This example disables Unified Messaging on the Unified Messaging server named MyUMServer but doesn't disconnect calls that are being processed.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Disable-UMServer -Identity MyUMServer -Immediate $true
 ```
 
@@ -66,6 +66,7 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -85,6 +86,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -111,10 +114,11 @@ Accept wildcard characters: False
 The Immediate parameter specifies whether the Unified Messaging server drops all current calls or enables current calls to finish. If this parameter is set to $true, all calls that are currently connected are disconnected.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +134,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -154,4 +159,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f5d77b6c-7229-4ffb-a9e5-ec4ddf98f838.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-umserver)

@@ -29,7 +29,7 @@ Add-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipalIdP
  [-Deny]
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-WhatIf] [<CommonParameters>]
@@ -53,7 +53,7 @@ Add-ADPermission -Instance <ADAcePresentationObject>
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
  [[-Identity] <ADRawEntryIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-User <SecurityPrincipalIdParameter>]
@@ -61,21 +61,21 @@ Add-ADPermission -Instance <ADAcePresentationObject>
 ```
 
 ## DESCRIPTION
-The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange features may continue to use the ADPermission cmdlets to manage permissions (for example Send and Receive connectors) Exchange 2013 and later versions no longer use customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013 or later, you need to use Role Based Access Control (RBAC). For more information about RBAC, see Permissions.
+The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange features may continue to use the ADPermission cmdlets to manage permissions (for example Send and Receive connectors) Exchange 2013 and later versions no longer use customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013 or later, you need to use Role Based Access Control (RBAC). For more information about RBAC, see [Permissions in Exchange Server](https://docs.microsoft.com/Exchange/permissions/permissions).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-ADPermission -Identity "Terry Adams" -User AaronPainter -AccessRights ExtendedRight -ExtendedRights "Send As"
 ```
 
 This example grants Send As permissions for Aaron Painter to Terry Adams's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-AdPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
 ```
 
@@ -93,6 +93,7 @@ Type: ADRawEntryIdParameter
 Parameter Sets: AccessRights, Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -105,6 +106,7 @@ Type: ADRawEntryIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -120,6 +122,7 @@ Type: ADAcePresentationObject
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -137,6 +140,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +223,7 @@ Type: ActiveDirectoryRights[]
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +241,7 @@ Type: ADSchemaObjectIdParameter[]
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +261,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +277,7 @@ Type: SwitchParameter
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +295,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +311,7 @@ Type: ExtendedRightIdParameter[]
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -311,10 +323,11 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies whether permissions are inherited.
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +343,7 @@ Type: ADSchemaObjectIdParameter
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +361,7 @@ Type: ADSchemaObjectIdParameter[]
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +377,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -386,4 +402,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bef9f3db-84f6-4a40-81cb-c9cb9b9ee201.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/add-adpermission)

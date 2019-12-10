@@ -55,16 +55,16 @@ The Get-MigrationEndpoint cmdlet retrieves settings for different types of migra
 
 For more information about the different move and migration scenarios, see:
 
-- Mailbox moves (https://technet.microsoft.com/library/jj150543.aspx)
+- [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves)
 
-- Manage on-premises mailbox moves (https://technet.microsoft.com/library/jj150487.aspx)
+- [Manage on-premises mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/architecture/mailbox-servers/manage-mailbox-moves)
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MigrationEndpoint -Identity OnboardingME01
 ```
 
@@ -82,6 +82,7 @@ Type: ExchangeConnectionSettings
 Parameter Sets: ConnectionSettingsFilter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +100,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +118,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +136,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +154,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +170,7 @@ Type: MigrationEndpointIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -182,6 +188,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +212,7 @@ Type: MigrationType
 Parameter Sets: TypeFilter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -229,4 +237,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3576e65b-4b64-46a5-a95a-7045daf4893e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-migrationendpoint)

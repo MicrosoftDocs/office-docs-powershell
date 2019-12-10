@@ -90,9 +90,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## OUTPUTS
 
-### OperationId
-The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status propagation of the policy removal to the members of the group.
-
 ## NOTES
 
 ## RELATED LINKS

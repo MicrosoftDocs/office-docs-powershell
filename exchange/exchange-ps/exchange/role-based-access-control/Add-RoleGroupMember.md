@@ -38,16 +38,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-RoleGroupMember "Recipient Management" -Member David
 ```
 
 This example adds the user David to the role group Recipient Management.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
+### Example 2
+```powershell
+Get-User -Filter "Department -eq 'Sales' -and RecipientType -eq 'UserMailbox'" | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
 This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
@@ -60,8 +60,8 @@ For more information about pipelining and the WhatIf parameter, see the followin
 
 - WhatIf, Confirm and ValidateOnly switches
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
 ```
 
@@ -77,6 +77,7 @@ Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -92,6 +93,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +129,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +147,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +165,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -184,4 +190,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ed53e269-a855-4066-88a7-1ba36086bd72.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/add-rolegroupmember)

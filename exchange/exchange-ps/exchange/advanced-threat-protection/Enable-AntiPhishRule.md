@@ -29,8 +29,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-AntiPhishRule -Identity "Marketing Department Phishing Rule"
 ```
 
@@ -52,6 +52,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 0
 Default value: None
@@ -71,6 +72,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -108,4 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/5579e1ca-ed86-4bd6-8043-23bd405ccb1a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/enable-antiphishrule)

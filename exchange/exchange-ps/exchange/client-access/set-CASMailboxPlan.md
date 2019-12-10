@@ -22,11 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
- [-ActiveSyncEnabled <$true | $false>]
+ [-ActiveSyncEnabled <Boolean>]
  [-Confirm]
- [-ImapEnabled <$true | $false>]
+ [-ImapEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
- [-PopEnabled <$true | $false>]
+ [-PopEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -37,8 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CASMailboxPlan -Identity ExchangeOnlineEnterprise -ActiveSyncEnabled $false -PopEnabled $false
 ```
 
@@ -62,6 +62,7 @@ Type: MailboxPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -77,10 +78,11 @@ The ActiveSyncEnabled parameter enables or disables access to the mailbox by usi
 - $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,10 +118,11 @@ The ImapEnabled parameter enables or disables access to the mailbox by using IMA
 - $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +148,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +164,11 @@ The PopEnabled parameter enables or disables access to the mailbox by using POP3
 - $false: POP3 access to the mailbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,4 +191,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1f9070cd-cae6-4e16-93d7-301abac8cab5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailboxplan)

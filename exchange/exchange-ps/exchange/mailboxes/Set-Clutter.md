@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-Enable <$true | $false>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter> [-Enable <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,8 +29,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-Clutter -Identity "Alexander Martinez" -Enable $false
 ```
 
@@ -66,6 +66,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -81,10 +82,11 @@ The Enable parameter specifies whether to enable or disable Clutter for the mail
 - $false: Clutter is disabled for the mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -107,4 +109,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/0c91b858-5bbe-4d2f-abff-d1503bcd6864.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-clutter)

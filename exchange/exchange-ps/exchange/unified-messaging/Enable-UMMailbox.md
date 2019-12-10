@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity (Default)
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolicyIdParameter>
- [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Extensions <MultiValuedProperty>]
@@ -31,7 +31,7 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolic
  [-NotifyEmail <String>]
  [-PilotNumber <String>]
  [-PIN <String>]
- [-PINExpired <$true | $false>]
+ [-PINExpired <Boolean>]
  [-SIPResourceIdentifier <String>]
  [-ValidateOnly]
  [-WhatIf] [<CommonParameters>]
@@ -40,7 +40,7 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolic
 ### CloudVoiceMail
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
- [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Extensions <MultiValuedProperty>]
@@ -48,8 +48,8 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
  [-NotifyEmail <String>]
  [-PilotNumber <String>]
  [-Pin <String>]
- [-PinExpired <$true | $false>]
- [-SendWelcomeMail <$true | $false>]
+ [-PinExpired <Boolean>]
+ [-SendWelcomeMail <Boolean>]
  [-SIPResourceIdentifier <String>]
  [-UMMailboxPolicy <MailboxPolicyIdParameter>]
  [-ValidateOnly]
@@ -63,15 +63,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-UMMailbox -Identity tonysmith@contoso.com -UMMailboxPolicy MyUMMailboxPolicy -Extensions 51234 -PIN 5643892 -NotifyEmail administrator@contoso.com -PINExpired $true
 ```
 
 This example enables Unified Messaging on the mailbox for tonysmith@contoso.com, sets the extension and PIN for the user that must be changed when the user logs on to Outlook Voice Access, assigns the UM mailbox policy MyUMMailboxPolicy to the user's mailbox, and then sends an email message that contains the Unified Messaging welcome information to administrator@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-UMMailbox -Identity tonysmith@contoso.com -UMMailboxPolicy MyUMMailboxPolicy -Extensions 51234 -PIN 5643892 -SIPResourceIdentifier "tonysmith@contoso.com" -PINExpired $true
 ```
 
@@ -107,6 +107,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -128,6 +129,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +142,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: CloudVoiceMail
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -155,10 +158,11 @@ The AutomaticSpeechRecognitionEnabled parameter specifies whether to enable Auto
 - $false: ASR is disabled for the mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +182,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +200,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -210,6 +216,7 @@ Type: SwitchParameter
 Parameter Sets: CloudVoiceMail
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -227,6 +234,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -250,6 +258,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +274,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +290,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +308,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -312,10 +324,11 @@ The PINExpired parameter specifies whether the PIN is treated as expired. If the
 - $false: The user isn't required to reset their PIN the next time they log on.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -331,10 +344,11 @@ The SendWelcomeMail parameter specifies whether you want to send a welcome messa
 - $false: Don't send the welcome to UM message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: CloudVoiceMail
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -350,6 +364,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -365,6 +380,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -380,6 +396,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -404,4 +421,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5391a63c-ca60-498c-8358-5f0667140738.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/enable-ummailbox)

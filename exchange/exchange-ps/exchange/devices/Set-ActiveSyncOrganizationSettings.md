@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <Boolean>] [-AllowRMSSupportForUnenlightenedApps <Boolean>] [-Confirm] [-DefaultAccessLevel <DeviceAccessLevel>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,8 +29,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ActiveSyncOrganizationSettings -DefaultAccessLevel Quarantine -AdminMailRecipients will@contoso.com,roger@contoso.com
 ```
 
@@ -50,6 +50,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -61,10 +62,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -80,10 +82,11 @@ The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rig
 - $false (This is the default value)
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -122,10 +126,11 @@ The DefaultAccessLevel parameter specifies the access level for new and existing
 If you change this value from Allow to Block or Quarantine, all existing connected devices are immediately affected, unless the devices are subject to device access rules or individual allow or block list entries.
 
 ```yaml
-Type: Allow | Block | Quarantine
+Type: DeviceAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +164,7 @@ Type: ActiveSyncOrganizationSettingsIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -175,6 +182,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +200,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +216,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -231,4 +241,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a447bf51-fcdc-4f8d-8d06-533d299c11fe.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-activesyncorganizationsettings)

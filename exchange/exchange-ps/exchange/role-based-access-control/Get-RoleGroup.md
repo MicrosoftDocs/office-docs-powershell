@@ -37,30 +37,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RoleGroup
 ```
 
 This example retrieves a list of role groups.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RoleGroup "Recipient Administrators" | Format-List
 ```
 
 This example retrieves the details for the Recipient Administrators role group.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-RoleGroup -ReadFromDomainController
 ```
 
 This example retrieves a list of role groups as seen by the domain controller closest to the user.
 
-### -------------------------- Example 4 --------------------------
-```
-Get-RoleGroup -Filter { RoleGroupType -Eq "Linked" } | Format-Table Name, LinkedGroup
+### Example 4
+```powershell
+Get-RoleGroup -Filter "RoleGroupType -eq 'Linked'" | Format-Table Name, LinkedGroup
 ```
 
 This example retrieves a list of all linked role groups and the Active Directory security identifier (SID) of the foreign universal security groups (USG) that are linked to each of them. You can then use the SIDs to find the USGs so you can modify their members.
@@ -77,6 +77,7 @@ Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -94,6 +95,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -102,15 +104,40 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies the property to be used to filter the role groups. Only the role groups that match the criteria you specify are returned.
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-You can filter on the LinkedGroup, ManagedBy, Members, Name, RoleGroupType and DisplayName properties. If you create a filter using the RoleGroupType property, the only values you can use in the filter are Standard and Linked.
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can filter on the following properties:
+
+- LinkedGroup
+
+- ManagedBy
+
+- Members
+
+- Name
+
+- RoleGroupType (the available values are Standard and Linked)
+
+- DisplayName
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +157,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +173,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +191,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +215,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -209,4 +240,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/369800ff-fced-4d1c-adb0-1ddbe798670d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-rolegroup)

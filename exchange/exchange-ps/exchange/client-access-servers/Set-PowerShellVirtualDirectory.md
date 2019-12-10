@@ -22,15 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PowerShellVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
- [-BasicAuthentication <$true | $false>]
- [-CertificateAuthentication <$true | $false>]
+ [-BasicAuthentication <Boolean>]
+ [-CertificateAuthentication <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExternalUrl <Uri>]
  [-InternalUrl <Uri>]
- [-RequireSSL <$true | $false>]
+ [-RequireSSL <Boolean>]
  [-WhatIf]
- [-WindowsAuthentication <$true | $false>]
+ [-WindowsAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -41,8 +41,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "https://www.contoso.com/powershell"
 ```
 
@@ -66,6 +66,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -81,10 +82,11 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -96,10 +98,11 @@ Accept wildcard characters: False
 The CertificateAuthentication parameter specifies whether certificate authentication is enabled on the Windows PowerShell virtual directory. The valid values are $true and $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +138,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +154,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +170,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -175,10 +182,11 @@ Accept wildcard characters: False
 The RequireSSL parameter specifies whether the Windows PowerShell virtual directory should require that the client connection be made using Secure Sockets Layer (SSL). The valid values are $true and $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -194,6 +202,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,10 +218,11 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -237,4 +247,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8546bd54-892f-422e-9fc9-2c4293e2fd01.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-powershellvirtualdirectory)

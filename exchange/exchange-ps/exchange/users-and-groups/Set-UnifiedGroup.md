@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
-**IMPORTANT**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see How the proxyAddresses attribute is populated in Azure AD (https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
+**IMPORTANT**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
- [-AccessType <Public | Private>]
+ [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
@@ -59,7 +59,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-ExtensionCustomAttribute5 <MultiValuedProperty>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
- [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
@@ -68,11 +68,11 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-MaxReceiveSize <Unlimited>]
  [-MaxSendSize <Unlimited>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Notes <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
  [-WhatIf] [<CommonParameters>]
@@ -87,8 +87,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UnifiedGroup -Identity "Marketing Department" -PrimarySmtpAddress marketing@contoso.com -RequireSenderAuthenticationEnabled $false
 ```
 
@@ -98,8 +98,8 @@ This example makes the following changes to the Office 365 Group named Marketing
 
 - The Office 365 Group is allowed to receive mail from unauthenticated (external) senders.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-UnifiedGroup -Identity "Legal Department" -AccessType Private
 ```
 
@@ -127,6 +127,7 @@ Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -155,10 +156,6 @@ To specify senders for this parameter, you can use any value that uniquely ident
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
 
-To add or remove individual senders or groups without affecting other existing entries, use the AcceptMessagesOnlyFrom and AcceptMessageOnlyFromDLMembers parameters.
-
-The individual senders and groups you specify for this parameter are automatically copied to the AcceptMessagesOnlyFrom and AcceptMessagesOnlyFromDLMembers properties, respectively. Therefore, you can't use the AcceptMessagesOnlyFromSendersOrMembers parameter and the AcceptMessagesOnlyFrom or AcceptMessagesOnlyFromDLMembers parameters in the same command.
-
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
 ```yaml
@@ -166,6 +163,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,10 +181,11 @@ The AccessType parameter specifies the privacy type for the Office 365 Group. Va
 Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
-Type: Public | Private
+Type: ModernGroupTypeInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +203,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +227,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +247,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +267,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +289,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -294,13 +298,14 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see Azure Active Directory cmdlets for configuring group settings (https://go.microsoft.com/fwlink/p/?LinkId=827484).
+The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://go.microsoft.com/fwlink/p/?LinkId=827484).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -320,6 +325,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -336,13 +342,14 @@ The ConnectorsEnabled specifies whether to enable the ability to use connectors 
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
-For more information about connectors for Office 365 Groups, see Connect apps to your groups (https://go.microsoft.com/fwlink/p/?LinkId=787545).
+For more information about connectors for Office 365 Groups, see [Connect apps to your groups in Outlook](https://go.microsoft.com/fwlink/p/?LinkId=787545).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -358,6 +365,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -373,6 +381,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -388,6 +397,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -403,6 +413,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -418,6 +429,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -433,6 +445,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -448,6 +461,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +477,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -478,6 +493,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -493,6 +509,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -508,6 +525,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -523,6 +541,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -538,6 +557,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -553,6 +573,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -568,6 +589,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -591,6 +613,7 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -606,6 +629,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -645,6 +669,7 @@ Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -664,6 +689,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -683,6 +709,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -702,6 +729,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -721,6 +749,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -740,6 +769,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -755,6 +785,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -798,6 +829,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -808,15 +840,16 @@ Accept wildcard characters: False
 ### -HiddenFromAddressListsEnabled
 The HiddenFromAddressListsEnabled parameter specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
-- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is enabled.
+- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
 
 - $false: The Office 365 Group is visible in the GAL and other address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -836,6 +869,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -853,6 +887,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -868,6 +903,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -889,6 +925,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -912,6 +949,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -943,6 +981,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -974,6 +1013,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1005,6 +1045,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1022,10 +1063,11 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1041,6 +1083,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1056,6 +1099,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1095,6 +1139,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1110,10 +1155,11 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1133,6 +1179,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1154,6 +1201,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1169,6 +1217,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1191,4 +1240,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e120e5c5-8643-4623-a15d-f97811f58e99.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-unifiedgroup)

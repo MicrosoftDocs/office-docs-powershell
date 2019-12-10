@@ -31,14 +31,14 @@ New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-The new database must be mounted after it's created. For more information about mounting databases, see Mount a Database.
+The new database must be mounted after it's created. For more information about mounting databases, see [Mount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123587(v=exchg.141)).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-PublicFolderDatabase -Name "My Public Folder Database" -EdbFilePath "C:\Program Files\Microsoft\Exchange Server\V14\Mailbox\PFDB01.edb" -LogFolderPath "C:\Program Files\Microsoft\Exchange Server\V14\Mailbox\PFDB01"
 ```
 
@@ -54,6 +54,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -79,6 +80,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ Type: EdbFilePath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +148,7 @@ Type: NonRootLocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +164,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -197,4 +205,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/88e7257d-d219-44e6-a23e-ba78c84545ac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabase)

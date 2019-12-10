@@ -34,11 +34,11 @@ New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <Cultur
 New-MessageClassification [-Name] <String> -DisplayName <String> -SenderDescription <String>
  [-ClassificationID <Guid>]
  [-Confirm]
- [-DisplayPrecedence <Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest>]
+ [-DisplayPrecedence <ClassificationDisplayPrecedenceLevel>]
  [-DomainController <Fqdn>]
- [-PermissionMenuVisible <$true | $false>]
+ [-PermissionMenuVisible <Boolean>]
  [-RecipientDescription <String>]
- [-RetainClassificationEnabled <$true | $false>]
+ [-RetainClassificationEnabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,8 +51,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MessageClassification -Name "My Message Classification" -DisplayName "New Message Classification" -SenderDescription "This is the description text"
 ```
 
@@ -62,8 +62,8 @@ This example creates the message classification named My Message Classification 
 
 - The sender description is "This is the description text".
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MessageClassification -Name "My Message Classification" -Locale es-ES -DisplayName "España Example" -SenderDescription "Este es el texto de la descripción"
 ```
 
@@ -79,6 +79,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -98,6 +99,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +119,7 @@ Type: CultureInfo
 Parameter Sets: Localized
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -149,6 +153,7 @@ Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +173,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,10 +205,11 @@ The DisplayPrecedence parameter specifies the relative precedence of the message
 Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
 
 ```yaml
-Type: Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest
+Type: ClassificationDisplayPrecedenceLevel
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +229,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -237,10 +245,11 @@ The PermissionMenuVisible parameter specifies whether the values that you entere
 - $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -258,6 +267,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,10 +281,11 @@ The RetainClassificationEnabled parameter specifies whether the message classifi
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -290,6 +301,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -314,4 +326,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/be73fade-7071-41f0-aa51-458bc215f90e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-messageclassification)

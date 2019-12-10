@@ -30,7 +30,7 @@ Get-ServerHealth [-Identity] <ServerIdParameter>
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-The cmdlet returns health values that you can use to determine the state of the server. See Server health and performance (https://technet.microsoft.com/library/jj150551.aspx) for related information.
+The cmdlet returns health values that you can use to determine the state of the server. See [Server health and performance in Exchange Server](https://docs.microsoft.com/Exchange/server-health/server-health) for related information.
 
 The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
 
@@ -48,8 +48,8 @@ The cmdlet also returns an alert value that provides the specific state of your 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ServerHealth -Identity Server01
 ```
 
@@ -73,6 +73,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -88,6 +89,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca9cff3a-ecda-422d-abd7-b7d8da71a6c7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-serverhealth)

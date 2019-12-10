@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Enable-TransportRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-Mode <Audit | AuditAndNotify | Enforce>] [<CommonParameters>]
+ [-Mode <RuleMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-TransportRule -Identity "Disclaimer-Finance"
 ```
 
 This example enables the transport rule named Disclaimer Finance.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-TransportRule -Identity "Require approval of messages to contoso.com" -Mode Audit
 ```
 
@@ -62,6 +62,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -81,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +118,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -132,10 +136,11 @@ The Mode parameter specifies how the rule operates after it's enabled. Valid val
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
-Type: Audit | AuditAndNotify | Enforce
+Type: RuleMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -160,4 +165,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/203d2fa8-83fe-4643-bbc2-db746ffd76a7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/enable-transportrule)

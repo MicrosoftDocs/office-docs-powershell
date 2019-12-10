@@ -32,8 +32,8 @@ Get-MigrationUser -MailboxGuid <Guid>
 ### StatusAndBatchId
 ```
 Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
- [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
- [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
+ [-Status <MigrationUserStatus>]
+ [-StatusSummary <MigrationUserStatusSummary>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
@@ -53,15 +53,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MigrationUser -Identity TonySmith@contoso.com
 ```
 
 This example retrieves status information about the recently migrated user, Tony Smith.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-MigrationUserStatistics
 ```
 
@@ -77,6 +77,7 @@ Type: Guid
 Parameter Sets: MailboxGuid
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -92,6 +93,7 @@ Type: MigrationBatchIdParameter
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +111,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +127,7 @@ Type: MigrationUserIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -141,6 +145,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +161,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -209,10 +215,11 @@ The Status parameter returns information about migration users that have the spe
 - Validating
 
 ```yaml
-Type: Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing
+Type: MigrationUserStatus
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -234,10 +241,11 @@ The StatusSummary parameter returns abbreviated information about migration user
 - Synced
 
 ```yaml
-Type: Active | Failed | Synced | Completed | Stopped
+Type: MigrationUserStatusSummary
 Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -262,4 +270,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca5cbd36-fde3-41f4-8ddf-0b7c4d71fd31.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-migrationuser)

@@ -32,21 +32,21 @@ Changes in the Exchange server architecture that were introduced in Exchange Ser
 
 - Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions and RPC Client Access arrays only work with RPC over TCP.
 
-- Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see Load balancing in Exchange 2016 (https://technet.microsoft.com/library/jj898588.aspx).
+- Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see [Load balancing in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/load-balancing).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ClientAccessArray
 ```
 
 This example returns a summary list of all Client Access arrays that exist in the local Active Directory site.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ClientAccessArray -Identity CASArray01 | Format-List
 ```
 
@@ -62,6 +62,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +88,7 @@ Type: ClientAccessArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -110,6 +112,7 @@ Type: AdSiteIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -134,4 +137,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/4d366fb0-58b9-4730-9c67-8d4a0d47e19a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessarray)

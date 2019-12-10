@@ -29,7 +29,7 @@ Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-RetryDistrib
 
 ### Identity
 ```
-Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-Comment <String>] [-Enabled <$true | $false>] [-Force]
+Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-Comment <String>] [-Enabled <Boolean>] [-Force]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -49,8 +49,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DeviceConditionalAccessPolicy -Identity Executives -Enabled $false
 ```
 
@@ -72,6 +72,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -87,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -102,6 +104,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +124,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -136,10 +140,11 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +160,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +176,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,4 +199,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a4365cf4-8ac5-4cee-97ee-28232c191a51.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconditionalaccesspolicy)

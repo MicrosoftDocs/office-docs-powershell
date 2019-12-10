@@ -27,14 +27,14 @@ Update-ExchangeHelp [-Force] [<CommonParameters>]
 ## DESCRIPTION
 The Update-ExchangeHelp cmdlet is available in Exchange Server 2013 or later.
 
-You need to run the Update-ExchangeHelp cmdlet on each Exchange server. By default, the cmdlet requires an Internet connection, but you can configure an offline mode. For more information, see Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers (https://technet.microsoft.com/library/mt588490.aspx).
+You need to run the Update-ExchangeHelp cmdlet on each Exchange server. By default, the cmdlet requires an Internet connection, but you can configure an offline mode. For more information, see [Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers](https://docs.microsoft.com/powershell/exchange/exchange-server/use-update-exchangehelp).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-ExchangeHelp -Force
 ```
 
@@ -52,6 +52,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -76,4 +77,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ab76294-cde8-4a15-9949-eb744713dd65.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/update-exchangehelp)

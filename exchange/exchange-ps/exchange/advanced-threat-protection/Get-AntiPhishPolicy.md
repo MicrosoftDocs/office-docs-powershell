@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AntiPhishPolicy
 ```
 
 This example shows a summary list of all antiphish policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AntiPhishPolicy  -Identity Default | Format-List
 ```
 
@@ -53,6 +53,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +75,7 @@ Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 0
 Default value: None
@@ -89,6 +91,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -126,4 +130,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/b4aa4010-5c31-4a84-8465-9c9507f38715.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-antiphishpolicy)

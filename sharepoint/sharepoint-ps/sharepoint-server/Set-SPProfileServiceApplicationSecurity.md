@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### --------------------EXAMPLE 1---------------------
 ```
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 $security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
@@ -45,6 +45,16 @@ Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceAppli
 
 This example revokes the right 'Create Personal Site' from All Authenticated Users.
 
+### --------------------EXAMPLE 2---------------------
+```
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+$security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
+$everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
+Grant-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'All'
+Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
+```
+
+This example grants the right 'All' to All Authenticated Users.
 
 ## PARAMETERS
 

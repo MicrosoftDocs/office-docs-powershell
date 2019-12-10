@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-OutlookProtectionRule [-Identity] <RuleIdParameter>
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force]
  [-FromDepartment <String[]>] [-Name <String>] [-Priority <Int32>] [-SentTo <MultiValuedProperty>]
- [-SentToScope <All | InOrganization>] [-UserCanOverride <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-SentToScope <ToUserScope>] [-UserCanOverride <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,15 +36,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OutlookProtectionRule -Identity "OPR-DG-Finance" -SentTo "DG-Finance"
 ```
 
 This example modifies the Outlook protection rule OPR-DG-Finance to apply to messages sent to the DG-Finance distribution group.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-OutlookProtectionRule -Identity "OPR-DG-Finance" -Priority 2
 ```
 
@@ -60,6 +60,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -75,6 +76,7 @@ Type: RmsTemplateIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +96,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +130,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +146,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +162,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +180,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +210,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -219,10 +228,11 @@ The SentToScope parameter specifies the scope of messages to which the rule appl
 If not specified, the parameter defaults to All.
 
 ```yaml
-Type: All | InOrganization
+Type: ToUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,10 +248,11 @@ The UserCanOverride parameter specifies whether the Outlook user can override th
 - $false: User can't override rule action.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +268,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -281,4 +293,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/55878738-7045-4a38-87fe-2ecd01f8303a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-outlookprotectionrule)

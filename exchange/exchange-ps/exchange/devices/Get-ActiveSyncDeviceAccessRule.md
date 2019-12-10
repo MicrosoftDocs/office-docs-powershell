@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActiveSyncDeviceAccessRule | where {$_.AccessLevel -eq 'Block'}
 ```
 
 This example lists all the rules currently blocking mobile phones.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ActiveSyncDeviceAccessRule | Format-List Characteristic, QueryString, AccessLevel
 ```
 
@@ -57,6 +57,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +73,7 @@ Type: ActiveSyncDeviceAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -96,4 +98,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f9bcb8d8-1239-43b8-9885-b655cbe8b4bc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-activesyncdeviceaccessrule)

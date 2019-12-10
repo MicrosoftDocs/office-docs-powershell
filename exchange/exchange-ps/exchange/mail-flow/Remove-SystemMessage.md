@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-SystemMessage En\Internal\5.7.9
 ```
 
 This example removes the specified custom NDR (combination of language, audience, and enhanced status code values).
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-SystemMessage En\WarningMailbox
 ```
 
@@ -59,11 +59,11 @@ TheIdentity parameter specifies the custom system message that you want to remov
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes: \<Language\>\\\<Internal | External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
+- System messages for enhanced status codes: \<Language\>\\\<Internal \| External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
 
 - System messages for quotas: \<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
 
-\<Language\>: For the list of supported language codes, see Supported languages for system messages (https://technet.microsoft.com/library/bb124759.aspx).
+\<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
 \<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system code values that are currently used by custom system messages, run the command Get-SystemMessage.
 
@@ -122,6 +122,7 @@ Type: SystemMessageIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -141,6 +142,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +160,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +176,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -197,4 +201,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1566222b-407a-4e78-a0df-5190b23d53da.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-systemmessage)

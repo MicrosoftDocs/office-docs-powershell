@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Disable-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Disable-UMIPGateway -Identity MyUMIPGateway
 ```
 
 This example disables the UM IP gateway MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
 ```
 
@@ -56,6 +56,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -75,6 +76,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,10 +106,11 @@ Accept wildcard characters: False
 The Immediate parameter specifies whether the Mailbox server running the Microsoft Exchange Unified Messaging service drops incoming calls associated with this UM IP gateway immediately or waits for the current calls to finish processing.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,4 +151,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b6e0627a-0063-4e1d-bff0-0b35e8d146a2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-umipgateway)

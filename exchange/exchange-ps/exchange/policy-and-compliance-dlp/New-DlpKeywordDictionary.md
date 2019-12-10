@@ -32,16 +32,20 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-$Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
+### Example 1
+```powershell
+$Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo");
+$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::UTF8.GetBytes($_+"`r`n")};
+New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
 ```
 
 This example creates a DLP keyword dictionary named Diseases by using the specified values.
 
-### -------------------------- Example 2 --------------------------
-```
-$Terms = Get-Content "C:\My Documents\InappropriateTerms.txt"; $Keywords = $Terms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
+### Example 2
+```powershell
+$Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt";
+$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::UTF8.GetBytes($_+"`r`n")};
+New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
 ```
 
 This example creates a DLP keyword dictionary named Inappropriate Language from the file C:\\My Documents\\InappropriateTerms.txt. The file contains one term on each line.
@@ -56,6 +60,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -75,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +96,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +112,7 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +128,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -142,4 +151,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0d9a4cd6-f140-4ddb-90c8-bee1db2148e2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpkeyworddictionary)

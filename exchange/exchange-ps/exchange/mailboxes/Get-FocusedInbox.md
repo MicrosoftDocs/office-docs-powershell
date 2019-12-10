@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-FocusedInbox -Identity julia@contoso.com
 ```
 
@@ -68,6 +68,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -90,4 +91,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/752ea258-b6e7-41bd-89cc-88eb368d3838.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-focusedinbox)

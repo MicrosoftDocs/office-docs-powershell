@@ -45,22 +45,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ManagedContentSettings | Format-List
 ```
 
 This example uses the Get-ManagedContentSettings cmdlet without parameters to obtain all managed content settings. The output of the Get-ManagedContentSettings cmdlet is piped to the Format-List cmdlet so that all the available information is displayed in the result.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ManagedContentSettings -Identity "Inbox Settings"
 ```
 
 This example retrieves the managed content settings Inbox Settings.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagedContentSettings -FolderName "Inbox"
 ```
 
@@ -76,6 +76,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: FolderName
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +112,7 @@ Type: ELCContentSettingsIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -125,6 +128,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -149,4 +153,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08082cfe-b820-493e-bddd-a0befb465972.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-managedcontentsettings)

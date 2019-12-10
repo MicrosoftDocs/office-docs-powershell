@@ -23,13 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ACSTrustApplication
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-ApplicationIdentifier <String>] [-Realm <String>]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -39,13 +39,13 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-Application
 ### AuthMetadataUrl
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -55,13 +55,13 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadat
 ### RefreshAuthMetadata
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-RefreshAuthMetadata]
- [-AcceptSecurityIdentifierInformation <$true | $false>]
- [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
  [-AppOnlyPermissions <String[]>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
@@ -69,14 +69,14 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-RefreshAuth
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business (https://technet.microsoft.com/en-us/library/jj150480.aspx). We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
+You can configure partner applications such as SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see [Plan Exchange 2016 integration with SharePoint and Skype for Business](https://docs.microsoft.com/Exchange/plan-and-deploy/integration-with-sharepoint-and-skype/integration-with-sharepoint-and-skype). We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PartnerApplication HRApp -RefreshAuthMetadata
 ```
 
@@ -100,6 +100,7 @@ Type: PartnerApplicationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -111,10 +112,11 @@ Accept wildcard characters: False
 The AcceptSecurityIdentifierInformation parameter specifies whether Exchange should accept security identifiers (SIDs) from another trusted Active Directory forest for the partner application. By default, new partner applications are configured to not accept SIDs from another forest. If you're in deployment with a trusted forest, set the parameter to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,10 +132,11 @@ The AccountType parameter specifies the type of Microsoft account that's require
 - ConsumerAccount
 
 ```yaml
-Type: OrganizationalAccount | ConsumerAccount
+Type: SupportedAccountType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +152,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +168,7 @@ Type: String
 Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +186,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -198,6 +204,7 @@ Type: String
 Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +224,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +242,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -245,10 +254,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the partner application is enabled. By default, new partner applications are enabled. Set the parameter to $false to create the application configuration in a disabled state.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +276,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -281,6 +292,7 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +308,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +326,7 @@ Type: String
 Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +344,7 @@ Type: SwitchParameter
 Parameter Sets: RefreshAuthMetadata
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +362,7 @@ Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +378,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -386,4 +403,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/22550369-102f-424a-bfa3-98144695ecbe.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-partnerapplication)

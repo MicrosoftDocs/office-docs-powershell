@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AcceptedDomain
 ```
 
 This example lists all the accepted domains in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AcceptedDomain | Where{$_.DomainType -eq 'Authoritative'}
 ```
 
@@ -57,6 +57,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +73,7 @@ Type: AcceptedDomainIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -96,4 +98,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e0c2366a-eda9-4152-bd3e-3a2d1953562d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-accepteddomain)

@@ -46,8 +46,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DataRetentionReport -StartDate 04/01/2018 -EndDate 04/30/2018
 ```
 
@@ -65,6 +65,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +81,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +115,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -134,4 +138,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/69b3a80d-17ae-4d2c-9d71-5833a9013b17.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-dataretentionreport)

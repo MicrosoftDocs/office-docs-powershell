@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-New-UnifiedGroup [-AccessType <Public | Private>] [-MailboxRegion <String>]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-MailboxRegion <String>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -41,14 +41,14 @@ New-UnifiedGroup [-AccessType <Public | Private>] [-MailboxRegion <String>]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### ProvisioningOptions
 ```
-New-UnifiedGroup [-AccessType <Public | Private>]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -67,14 +67,14 @@ New-UnifiedGroup [-AccessType <Public | Private>]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SegmentationOption
 ```
-New-UnifiedGroup [-AccessType <Public | Private>] [-SubscriptionEnabled]
+New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-SubscriptionEnabled]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
@@ -93,7 +93,7 @@ New-UnifiedGroup [-AccessType <Public | Private>] [-SubscriptionEnabled]
  [-Notes <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -116,8 +116,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 ```
 
@@ -151,6 +151,7 @@ Type: DistributionGroupIdParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -170,10 +171,11 @@ You can change the privacy type at any point in the lifecycle of the group.
 Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
-Type: Public | Private
+Type: ModernGroupTypeInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +199,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +223,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +241,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +257,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +277,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +299,7 @@ Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +321,7 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +339,7 @@ Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +357,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -384,6 +395,7 @@ Type: ProxyAddressCollection
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -399,6 +411,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -416,6 +429,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -435,6 +449,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -452,6 +467,7 @@ Type: CultureInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -467,6 +483,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -482,6 +499,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +529,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -528,6 +547,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -543,6 +563,7 @@ Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -572,6 +593,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -587,6 +609,7 @@ Type: SmtpAddress
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -602,10 +625,11 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -621,6 +645,7 @@ Type: SwitchParameter
 Parameter Sets: SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -636,6 +661,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -651,6 +677,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -673,4 +700,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/187acc17-10de-4f38-8efc-7c95d2b3df00.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-unifiedgroup)

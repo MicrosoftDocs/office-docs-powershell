@@ -32,15 +32,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports journal rules in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet exports journal rules to the variable $file. In the second step, the Set-Content cmdlet saves the exported data to the XML file JournalRules.xml.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $file = Export-JournalRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\Ex2007-JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
@@ -60,6 +60,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +76,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +110,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -122,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,4 +151,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c6309ab0-77fe-4feb-b2ac-4844de841996.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/export-journalrulecollection)

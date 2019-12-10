@@ -27,7 +27,7 @@ Import-ExchangeCertificate -FileData <Byte[]>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -39,7 +39,7 @@ Import-ExchangeCertificate -Instance <String[]>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -51,7 +51,7 @@ Import-ExchangeCertificate -FileName <String>
  [-DomainController <Fqdn>]
  [-FriendlyName <String>]
  [-Password <SecureString>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -59,29 +59,29 @@ Import-ExchangeCertificate -FileName <String>
 ## DESCRIPTION
 You can use the Import-ExchangeCertificate cmdlet to import the following types of certificate files on an Exchange server:
 
-- APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see PKCS #7: Cryptographic Message Syntax Standard (https://go.microsoft.com/fwlink/p/?LinkID=510681).
+- APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see [PKCS #7: Cryptographic Message Syntax Standard](https://go.microsoft.com/fwlink/p/?LinkID=510681).
 
-- A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. The standard is specified by RSA Laboratories. For more information, see the PKCS #12: Personal Information Exchange Syntax Standard (https://go.microsoft.com/fwlink/p/?LinkID=90249) website.
+- A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. The standard is specified by RSA Laboratories. For more information, see the [PKCS #12: Personal Information Exchange Syntax Standard](https://go.microsoft.com/fwlink/p/?LinkID=90249) website.
 
 After you import a certificate on an Exchange server, you need to assign the certificate to one or more Exchange services by using the Enable-ExchangeCertificate cmdlet.
 
-There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see Digital certificates and encryption in Exchange 2016.
+There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see [Digital certificates and encryption in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/certificates).
 
-Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out Protecting you against the SSL 3.0 vulnerability (https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
+Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out [Protecting you against the SSL 3.0 vulnerability](https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Import-ExchangeCertificate -Server Mailbox01 -FileName" \\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
 This example imports the certificate from the PKCS #12 file from \\\\FileServer01\\Data\\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password P@ssw0rd1. This certificate could have been exported from another server, or issued by a certification authority.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Import-ExchangeCertificate -FileData ([Byte[]](Get-Content -Path "C:\Certificates\Fabrikam IssuedCert.p7b" -Encoding byte -ReadCount 0))
 ```
 
@@ -103,6 +103,7 @@ Type: Byte[]
 Parameter Sets: FileData
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +119,7 @@ Type: String[]
 Parameter Sets: FileName
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -137,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +157,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +175,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +193,7 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -203,10 +209,11 @@ The PrivateKeyExportable parameter specifies whether the certificate has an expo
 - $false: The private key isn't exportable, so you can't export the certificate from this server. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +239,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +255,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +275,7 @@ Type: String
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -290,4 +300,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c1a98e97-e58a-49c8-a44d-948b2fc07876.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/import-exchangecertificate)

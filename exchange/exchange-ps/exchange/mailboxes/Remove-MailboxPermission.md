@@ -27,7 +27,7 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
  [-Deny]
  [-DomainController <Fqdn>] [-IgnoreDefaultScope]
  [[-Identity] <MailboxIdParameter>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -62,7 +62,7 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -83,8 +83,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
 ```
 
@@ -114,6 +114,7 @@ Type: MailboxRights[]
 Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +127,7 @@ Type: MailboxRights[]
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +163,7 @@ Type: MailboxIdParameter
 Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -173,6 +176,7 @@ Type: MailboxIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -190,6 +194,7 @@ Type: MailboxAcePresentationObject
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -205,6 +210,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -217,6 +223,7 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -236,6 +243,7 @@ Type: SwitchParameter
 Parameter Sets: ClearAutoMapping
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -255,6 +263,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -270,6 +279,7 @@ Type: SwitchParameter
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +297,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -308,6 +319,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -319,10 +331,11 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies whether permissions are inherited to folders within the mailbox.
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
+Type: ActiveDirectorySecurityInheritance
 Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +361,7 @@ Type: SwitchParameter
 Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -363,6 +377,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -387,4 +402,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/eda30705-6070-413a-88c5-db262fbad8d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailboxpermission)

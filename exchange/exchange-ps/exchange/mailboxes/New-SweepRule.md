@@ -22,10 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-SweepRule [-Name] <String> -Provider <String> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptIfFlagged <$true | $false>]
- [-ExceptIfPinned <$true | $false>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
  [-Mailbox <MailboxIdParameter>] [-Sender <RecipientIdParameter>] [-SourceFolder <MailboxFolderIdParameter>]
- [-SystemCategory <NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion>]
+ [-SystemCategory <SystemCategoryType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,21 +34,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SweepRule -Name "From Michelle" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender michelle@fabrikam.com -KeepLatest 1
 ```
 
 This example creates a new Sweep rule named "From Michelle" in Felipe Apodaca's mailbox that keeps the latest message from michelle@fabrikam.com in the Inbox folder, and moves older messages to the Deleted Items folder.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender lila@fabrikam.com -KeepForDays 10
 ```
 
 This example creates a new Sweep rule named "From Lila" in Felipe Apodaca's mailbox that moves messages from lila@fabrikam.com in the Inbox folder that are older than 10 days to the Deleted Items folder.
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-SweepRule -Name "From Jeff" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender jeffm@fabrikam.com -SourceFolder "Felipe:\Sent Items" -KeepForDays 10
 ```
 
@@ -64,6 +64,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -81,6 +82,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +120,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +138,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,10 +156,11 @@ The Enabled parameter specifies whether the Sweep rule is enabled or disabled. V
 After you create the rule, you can enable or disable it by using the Enable-SweepRule and Disable-SweepRule cmdlets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -194,10 +200,11 @@ The typical message flag values are:
 - Review
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -213,10 +220,11 @@ The PinMessage parameter specifies an exception for the Sweep rule that looks fo
 - $false: The exception isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +242,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -251,6 +260,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +296,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +326,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +344,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -391,10 +404,11 @@ The SystemCategory parameter specifies a condition for the sweep rule that looks
 - Video
 
 ```yaml
-Type: NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion
+Type: SystemCategoryType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -410,6 +424,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -432,4 +447,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9e2053be-cf79-4b49-9e0a-af16c7f4e3dc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-sweeprule)

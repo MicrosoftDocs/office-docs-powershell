@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SPOSkyDriveProDeployedReport [-EndDate <DateTime>] [-ReportType <Daily | Weekly | Monthly | Yearly>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SPOSkyDriveProDeployedReport [-EndDate <DateTime>] [-ReportType <ReportType>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get- SPOSkyDriveProDeployedReport -ReportType Monthly -StartDate 11/01/2015 -EndDate 11/30/2015
 ```
 
@@ -50,6 +50,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -61,10 +62,11 @@ Accept wildcard characters: False
 The ReportType parameter aggregates the data in the report by the value you specify. Valid values for this parameter are Daily, Weekly, Monthly and Yearly. Use the value of ReportType with appropriate values for the StartDate and EndDate parameters to review the data from a specific time period.
 
 ```yaml
-Type: Daily | Weekly | Monthly | Yearly
+Type: ReportType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +100,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -121,4 +125,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf1569b0-51a1-4468-ba99-6cfaf18eab5d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-sposkydriveprodeployedreport)

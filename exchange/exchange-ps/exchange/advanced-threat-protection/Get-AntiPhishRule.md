@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AntiPhishRule [[-Identity] <RuleIdParameter>] [-State <Enabled | Disabled>] [<CommonParameters>]
+Get-AntiPhishRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AntiPhishRule
 ```
 
 This example returns a summary list of all antiphishing rules in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
 ```
 
@@ -59,6 +59,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 0
 Default value: None
@@ -70,10 +71,11 @@ Accept wildcard characters: False
 The State parameter filters the results by the state of the rule. Valid values are Enabled and Disabled.
 
 ```yaml
-Type: Enabled | Disabled
+Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -96,4 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/c546e813-d7d2-45d6-bb35-839d16e1f7ee.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-antiphishrule)
