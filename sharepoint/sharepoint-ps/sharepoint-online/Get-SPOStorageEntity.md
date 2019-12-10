@@ -1,49 +1,50 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Add-SPOHubSiteAssociation
+title: Get-SPOStorageEntity
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: 
+ms.author: 
 ms.reviewer:
 ---
 
-# Add-SPOHubSiteAssociation
+# Get-SPOStorageEntity
 
 ## SYNOPSIS
 
-Associates a site with a hub site.
+Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets.
+This cmdLet is used to get a value in the property bag.
 
 ## SYNTAX
 
 ```powershell
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
+Get-SPOStorageEntity [-Site] <SpoSitePipeBind> [-Key] <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use this cmdlet to associate a site with a hub site.
+Use this cmdlet to get a value in the property bag.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing
+Get-SPOStorageEntity -Site "https://tenant-name.sharepoint.com/sites/app-catalog" -Key "MyCustomValues"
 ```
 
-This example associates the research site with the marketing hub site.
+This example return the whole entry in the property bag.
 
 ## PARAMETERS
 
 ### -Site
 
-URL of the site to join to the hub site.
+URL to the tenant or site collection app catalog.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
@@ -52,17 +53,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HubSite
+### -Key
 
-URL of the hub site.
+The key in the property bag that should be removed.
 
 ```yaml
-Type: SpoSitePipeBind
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -73,7 +74,3 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
-
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
-
-If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
