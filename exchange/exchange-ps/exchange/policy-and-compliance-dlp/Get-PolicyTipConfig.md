@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Parameters
 ```
-Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-Locale <CultureInfo>] [-Original]
+Get-PolicyTipConfig [-Action <PolicyTipMessageConfigAction>] [-Locale <CultureInfo>] [-Original]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -37,22 +37,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PolicyTipConfig -Action NotifyOnly
 ```
 
 This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PolicyTipConfig -Original -Locale fr
 ```
 
 This example returns a summary list of all built-in French Policy Tips.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-PolicyTipConfig en\RejectOverride | Format-List
 ```
 
@@ -74,10 +74,11 @@ You can't use the value Url with the Action parameter. Instead, use command: Get
 You can't use the Action parameter with the Identity parameter.
 
 ```yaml
-Type: NotifyOnly | RejectOverride | Reject | Url
+Type: PolicyTipMessageConfigAction
 Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +96,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +122,7 @@ Type: PolicyTipConfigIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -139,6 +142,7 @@ Type: CultureInfo
 Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +158,7 @@ Type: SwitchParameter
 Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -178,4 +183,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/103ad92b-d56d-4568-9b30-35aea82cf0eb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-policytipconfig)

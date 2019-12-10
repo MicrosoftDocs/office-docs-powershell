@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <$true | $false>] [<CommonParameters>]
+Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-FocusedInbox -Identity laura@contoso.com -FocusedInboxOn $false
 ```
 
@@ -68,6 +68,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -83,10 +84,11 @@ The FocusedInboxOn parameter enables or disables Focused Inbox for the mailbox. 
 - $false: Focused Inbox is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -109,4 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/29f40631-f393-47ec-8081-464aacb1eb14.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-focusedinbox)

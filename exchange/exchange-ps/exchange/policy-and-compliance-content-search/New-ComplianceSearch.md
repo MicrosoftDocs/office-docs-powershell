@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ComplianceSearch [-Name] <String>
- [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
+ [-AllowNotFoundExchangeLocationsEnabled <Boolean>]
  [-Case <String>]
  [-Confirm]
  [-ContentMatchQuery <String>]
@@ -31,9 +31,9 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
- [-IncludeUserAppContent <$true | $false>]
+ [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
- [-LogLevel <Suppressed | Basic | Full>]
+ [-LogLevel <ComplianceJobLogLevel>]
  [-OneDriveLocation <String[]>]
  [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>]
@@ -59,22 +59,22 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ComplianceSearch -Name "Hold Project X" -ExchangeLocation "Finance Department"
 ```
 
 This example creates a new compliance search named Hold-Project X that searches all members of the distribution group named Finance Department. Because the search doesn't use the ContentMatchQuery parameter, all items in the mailboxes are searched.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ComplianceSearch -Name "Hold-Tailspin Toys" -ExchangeLocation "Research Department" -ContentMatchQuery "'Patent' AND 'Project Tailspin Toys'"
 ```
 
 This example creates a new compliance search named Hold-Tailspin Toys that searches all member of the distribution group named Research Department. Because the search uses the ContentMatchQuery parameter, only messages that match the query are searched.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ComplianceSearch -Name "AnnBeebe-InactiveMailbox" -ExchangeLocation .annb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true
 ```
 
@@ -92,6 +92,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -117,10 +118,11 @@ The mailbox types that are affected by the value of this parameter include:
 - On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +140,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +160,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +178,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +194,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +218,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -233,6 +240,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +256,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +274,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -282,10 +292,11 @@ The IncludeUserAppContent parameter specifies that you want to search the cloud-
 - $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +314,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -314,10 +326,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Suppressed | Basic | Full
+Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +346,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +362,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -363,6 +378,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -378,6 +394,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +410,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -408,6 +426,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -425,6 +444,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -442,6 +462,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -457,6 +478,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -472,6 +494,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -494,4 +517,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/433d1602-a026-4d63-be5e-605dd6b7b0d0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/new-compliancesearch)

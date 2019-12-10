@@ -30,22 +30,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -Name "CASArray"
 ```
 
 This example changes the names the name of the existing Client Access array named ContosoArray to CASArray.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -FQDN "casarrayeu.contoso.com"
 ```
 
 This example changes the fully qualified domain name of the existing Client Access array named ContosoArray to casarrayeu.contoso.com.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-ClientAccessArray -Identity "ContosoArray" -Site "SiteEU"
 ```
 
@@ -71,6 +71,7 @@ Type: ClientAccessArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -90,6 +91,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +107,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +163,7 @@ Type: AdSiteIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +179,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -197,4 +204,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d8682149-2822-4a6d-ac54-e4898f89a633.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessarray)

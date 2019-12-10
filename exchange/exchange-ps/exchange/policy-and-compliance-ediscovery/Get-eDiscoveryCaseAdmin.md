@@ -31,8 +31,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-eDiscoveryCaseAdmin
 ```
 
@@ -48,6 +48,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -63,6 +64,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -85,4 +87,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08a3674b-9f9d-4633-82bf-9b78d2a18ae6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/get-ediscoverycaseadmin)

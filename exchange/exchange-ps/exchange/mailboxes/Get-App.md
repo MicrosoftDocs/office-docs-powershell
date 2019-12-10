@@ -32,28 +32,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-App -Mailbox Tony
 ```
 
 This example returns the summary list of apps installed for user Tony. The command returns the name of the app, whether the app is enabled, and the app version number.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b | Format-List
 ```
 
 This example displays detailed information for the Bing Maps app for the currently logged on user.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-App -OrganizationApp
 ```
 
 This example displays the summary list of apps installed by administrators for the entire organization.
-
-For information about installing or removing apps for Outlook, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
 
 ## PARAMETERS
 
@@ -67,6 +65,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +81,7 @@ Type: AppIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -119,6 +119,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +135,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +153,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -175,4 +178,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/85dfb69d-d637-410e-931c-36685dda84c7.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-app)

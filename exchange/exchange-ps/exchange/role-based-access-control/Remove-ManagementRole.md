@@ -26,21 +26,21 @@ Remove-ManagementRole [-Identity] <RoleIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see Remove a role (https://technet.microsoft.com/library/dd335178.aspx).
+You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see [Remove a role](https://docs.microsoft.com/exchange/remove-a-role-exchange-2013-help).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-ManagementRole ExampleRole1
 ```
 
 This example removes the single role ExampleRole1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-ManagementRole ExampleRole2 -Recurse -WhatIf
 ```
 
@@ -48,15 +48,15 @@ This example runs the Remove-ManagementRole cmdlet with the WhatIf switch. The W
 
 If the results are as expected, remove the WhatIf switch and run the command again to remove the ExampleRole2 parent role and all its child roles.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagementRole *Example* | Remove-ManagementRole -WhatIf
 ```
 
 This example uses the Get-ManagementRole cmdlet to get a list of roles that contain the string "Example" in the role name, and then pipes the list to the Remove-ManagementRole cmdlet. The Remove-ManagementRole cmdlet, because the WhatIf switch is specified, displays the roles that would have been removed but doesn't commit any changes. If the results are as expected, the command can be run again without the WhatIf switch to remove the roles.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 ```
 
@@ -74,6 +74,7 @@ Type: RoleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +94,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +112,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +148,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +172,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +188,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -206,4 +213,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d67099bd-bb7e-4ad7-8d8a-9d4909d59dba.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-managementrole)

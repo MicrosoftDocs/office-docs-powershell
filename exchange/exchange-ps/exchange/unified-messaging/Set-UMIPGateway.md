@@ -21,11 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Address <UMSmartHost>] [-Confirm]
- [-DelayedSourcePartyInfoEnabled <$true | $false>] [-DomainController <Fqdn>] [-ForceUpgrade]
- [-MessageWaitingIndicatorAllowed <$true | $false>] [-Name <String>] [-OutcallsAllowed <$true | $false>]
- [-Port <Int32>] [-Simulator <$true | $false>] [-Status <Enabled | Disabled | NoNewCalls>] [-WhatIf]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>] [<CommonParameters>]
+Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
+ [-Address <UMSmartHost>]
+ [-Confirm]
+ [-DelayedSourcePartyInfoEnabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-ForceUpgrade]
+ [-IPAddressFamily <IPAddressFamily>]
+ [-MessageWaitingIndicatorAllowed <Boolean>]
+ [-Name <String>]
+ [-OutcallsAllowed <Boolean>]
+ [-Port <Int32>]
+ [-Simulator <Boolean>]
+ [-Status <GatewayStatus>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,29 +48,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
 ```
 
 This example modifies the IP address of the UM IP gateway MyUMIPGateway.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1 -Status Disabled -OutcallsAllowed $false
 ```
 
 This example prevents the UM IP gateway from accepting incoming calls and prevents outgoing calls.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
 ```
 
 This example prevents the UM IP gateway MyUMIPGateway from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPv6 addresses.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
 ```
 
@@ -77,6 +86,7 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -92,6 +102,7 @@ Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -122,10 +134,11 @@ Accept wildcard characters: False
 The DelayedSourcePartyInfoEnabled parameter specifies whether Unified Messaging should delay the process of accepting an inbound call from the Voice over IP (VoIP) gateway if the corresponding SIP INVITE of the call contains no calling party and diversion information.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +156,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +174,29 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPAddressFamily
+The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
+
+- IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
+
+- IPv6Only: The UM IP gateway will only use IPv6.
+
+- Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
+
+```yaml
+Type: IPAddressFamily
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,10 +208,11 @@ Accept wildcard characters: False
 The MessageWaitingIndicatorAllowed parameter specifies whether to enable the UM IP gateway to allow SIP NOTIFY messages to be sent to users associated with a UM dial plan and the UM IP gateway. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +228,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -201,10 +240,11 @@ Accept wildcard characters: False
 The OutcallsAllowed parameter specifies whether to allow this UM IP gateway to be used for outgoing calls. This doesn't govern call transfers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +260,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -231,10 +272,11 @@ Accept wildcard characters: False
 The Simulator parameter specifies the simulator used for the UM IP gateway being viewed. A simulator allows a client to connect to the Mailbox server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,13 +285,20 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter specifies whether to enable or disable the UM IP gateway.
+The Status parameter specifies whether to enable or disable the UM IP gateway. Valid values are:
+
+- Enabled
+
+- Disabled
+
+- NoNewCalls
 
 ```yaml
-Type: Enabled | Disabled | NoNewCalls
+Type: GatewayStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -265,21 +314,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -IPAddressFamily
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway will only use IPv4 to communicate. If set to IPv6Only, the UM IP gateway will only use IPv6. If set to Any, IPv6 will be used first, and then if necessary, it will fall back to IPv4. The default is IPv4Only.
-
-```yaml
-Type: IPv4Only | IPv6Only | Any
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -304,4 +339,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1c9ecde5-36ec-42af-be9e-10eacdc98458.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umipgateway)

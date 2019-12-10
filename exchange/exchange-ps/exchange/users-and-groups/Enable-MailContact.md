@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
  [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
+ [-MessageBodyFormat <MessageBodyFormat>] [-MessageFormat <MessageFormat>]
+ [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-MailContact -Identity Roland -ExternalEmailAddress "roland@tailspintoys.com"
 ```
 
@@ -54,6 +54,7 @@ Type: ProxyAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Type: ContactIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -106,6 +108,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +128,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +144,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +160,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,10 +186,11 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
 ```yaml
-Type: BinHex | UuEncode | AppleSingle | AppleDouble
+Type: MacAttachmentFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -207,10 +214,11 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 ```yaml
-Type: Text | Html | TextAndHtml
+Type: MessageBodyFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -234,10 +242,11 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
 
 ```yaml
-Type: Text | Mime
+Type: MessageFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +266,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -272,10 +282,11 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +302,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -315,4 +327,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0accff85-3a03-4068-81e2-0508a4df21ec.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/enable-mailcontact)

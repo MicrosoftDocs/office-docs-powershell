@@ -24,13 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ManagedDefaultFolder
 ```
-New-ManagedFolder [-Name] <String> -DefaultFolderType <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory>
- [-BaseFolderOnly <$true | $false>]
+New-ManagedFolder [-Name] <String> -DefaultFolderType <DefaultManagedFolderType>
+ [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
- [-MustDisplayCommentEnabled <$true | $false>]
+ [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -38,12 +38,12 @@ New-ManagedFolder [-Name] <String> -DefaultFolderType <Calendar | Contacts | Del
 ### ManagedCustomFolder
 ```
 New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <MultiValuedProperty>] [-StorageQuota <Unlimited>]
- [-BaseFolderOnly <$true | $false>]
+ [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
- [-MustDisplayCommentEnabled <$true | $false>]
+ [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -51,15 +51,15 @@ New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <M
 ## DESCRIPTION
 The New-ManagedFolder cmdlet creates a new managed folder in Active Directory. After a new managed folder object is created, the following steps need to be taken to use it for MRM:
 
-- Create managed content settings for the folder. For information, see Create Managed Content Settings.
+- Create managed content settings for the folder. For information, see [Create Managed Content Settings](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/aa997968(v=exchg.141)).
 
 - Link the managed folder to an existing managed folder mailbox policy or create a managed folder mailbox policy and link the managed folder to it.
 
 - Apply a managed folder mailbox policy to a user's mailbox. For information, seeApply a Managed Folder Mailbox Policy to Users.
 
-- Ensure the managed folder assistant is scheduled or run the managed folder assistant manually. For information about scheduling the managed folder assistant, see Configure the Managed Folder Assistant. When the managed folder assistant runs, it configures default folders as managed and creates any managed custom folders in the user's mailbox with the settings specified.
+- Ensure the managed folder assistant is scheduled or run the managed folder assistant manually. For information about scheduling the managed folder assistant, see [Configure the Managed Folder Assistant](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123958(v=exchg.141)). When the managed folder assistant runs, it configures default folders as managed and creates any managed custom folders in the user's mailbox with the settings specified.
 
-- For more information about the steps to implement MRM in Microsoft Exchange Server 2010, see Deploying Messaging Records Management.
+- For more information about the steps to implement MRM in Microsoft Exchange Server 2010, see [Deploying Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123548(v=exchg.141)).
 
 By default, managed custom folders are created with this cmdlet. However, you can also create additional copies of managed default folders using the DefaultFolderType parameter to specify which type of default folder to create (for example, an additional Inbox folder). When you create multiple copies of a managed default folder, you can assign different content settings to each one. For example, you could have two Inbox folders, one named InboxSixMonths and another named InboxOneYear. Then, you could assign a retention time of six months to the first folder and one year to the second folder with the New-ManagedContentSettings cmdlet (or using the New Managed Content Settings wizard in the Exchange Management Console). You must assign a unique name (using the Name parameter) to each of the managed default folders that you create. Users, however, always see the unaltered default folder name. In the example, whether users are assigned an InboxSixMonths folder or an InboxOneYear folder, the Inbox that they see in their mailbox is labeled Inbox. Although the folder names that users see in their mailboxes can be reassigned for managed custom folders (using the Set-ManagedFolder command FolderName parameter), the folder names seen by users for managed default folders can't be changed.
 
@@ -67,22 +67,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ManagedFolder -Name NewFolder -FolderName "New Folder" -StorageQuota "1 MB"
 ```
 
 This example creates a managed folder that has a maximum capacity of 1 MB.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ManagedFolder -Name MyFolder -FolderName "My Folder" -LocalizedFolderName Spanish:"Mi Carpeta", French:"Mon Dossier" -Comment "My comment" -LocalizedComment Spanish:"Mi comentario", French:"Mon annotation"
 ```
 
 This example creates a managed folder that has a default folder name and comment in English, localized folder name in Spanish and French, and localized comment in Spanish and French.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ManagedFolder -Name AnotherInbox -DefaultFolderType Inbox
 ```
 
@@ -134,10 +134,11 @@ The default folder types that you can specify are:
 - ConversationHistory
 
 ```yaml
-Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | RssSubscriptions | SyncIssues | ConversationHistory
+Type: DefaultManagedFolderType
 Parameter Sets: ManagedDefaultFolder
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -155,6 +156,7 @@ Type: String
 Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +174,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -183,10 +186,11 @@ Accept wildcard characters: False
 The BaseFolderOnly parameter specifies whether the managed content settings should be applied only to the managed folder or to the folder and all its subfolders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +206,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +226,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -236,6 +242,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -251,6 +258,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +274,7 @@ Type: MultiValuedProperty
 Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -277,10 +286,11 @@ Accept wildcard characters: False
 The MustDisplayCommentEnabled parameter specifies whether to set a flag used by Outlook 2007 to prevent users from minimizing a folder comment (that's visible in Outlook 2007 and Outlook Web App). If the MustDisplayCommentEnabled parameter is present and set to $true, the parameter sets a flag used by Outlook 2007 to prevent users from minimizing a folder comment. If the parameter isn't present or is set to $false, users can minimize the comment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +308,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -313,6 +324,7 @@ Type: Unlimited
 Parameter Sets: ManagedCustomFolder
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -328,6 +340,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -352,4 +365,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fcc46b8b-0ceb-495a-b9e7-264bb96dc050.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedfolder)

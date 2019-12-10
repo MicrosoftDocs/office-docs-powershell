@@ -22,13 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ExchangeAssistanceConfig [[-Identity] <OrganizationIdParameter>]
- [-CommunityLinkDisplayEnabled <$true | $false>] [-CommunityURL <Uri>] [-Confirm]
- [-ControlPanelFeedbackEnabled <$true | $false>] [-ControlPanelFeedbackURL <Uri>] [-ControlPanelHelpURL <Uri>]
- [-DomainController <Fqdn>] [-ExchangeHelpAppOnline <$true | $false>]
- [-ManagementConsoleFeedbackEnabled <$true | $false>] [-ManagementConsoleFeedbackURL <Uri>]
- [-ManagementConsoleHelpURL <Uri>] [-OWAFeedbackEnabled <$true | $false>] [-OWAFeedbackURL <Uri>]
- [-OWAHelpURL <Uri>] [-OWALightFeedbackEnabled <$true | $false>] [-OWALightFeedbackURL <Uri>]
- [-OWALightHelpURL <Uri>] [-PrivacyLinkDisplayEnabled <$true | $false>] [-PrivacyStatementURL <Uri>] [-WhatIf]
+ [-CommunityLinkDisplayEnabled <Boolean>] [-CommunityURL <Uri>] [-Confirm]
+ [-ControlPanelFeedbackEnabled <Boolean>] [-ControlPanelFeedbackURL <Uri>] [-ControlPanelHelpURL <Uri>]
+ [-DomainController <Fqdn>] [-ExchangeHelpAppOnline <Boolean>]
+ [-ManagementConsoleFeedbackEnabled <Boolean>] [-ManagementConsoleFeedbackURL <Uri>]
+ [-ManagementConsoleHelpURL <Uri>] [-OWAFeedbackEnabled <Boolean>] [-OWAFeedbackURL <Uri>]
+ [-OWAHelpURL <Uri>] [-OWALightFeedbackEnabled <Boolean>] [-OWALightFeedbackURL <Uri>]
+ [-OWALightHelpURL <Uri>] [-PrivacyLinkDisplayEnabled <Boolean>] [-PrivacyStatementURL <Uri>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -37,8 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'https://exhelponline'
 ```
 
@@ -50,10 +50,11 @@ This example changes the Help location for the Exchange admin center.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -69,6 +70,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -99,10 +102,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +122,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +138,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +156,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -165,10 +172,11 @@ The ExchangeHelpAppOnline specifies whether your organization uses the public he
 - $false: Your organization doesn't use the help that's hosted by Microsoft. You need to use the ControlPanelHelpURL, ManagementConsoleHelpURL, OWAHelpURL, and OWALightHelpURL parameters to configure the URLs where the help files are hosted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +192,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -195,10 +204,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +224,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +240,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -240,10 +252,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +272,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +288,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -285,10 +300,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +320,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -319,6 +336,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,10 +348,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +368,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -364,6 +384,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -388,4 +409,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/75a38090-d854-4138-9b78-c514f85eb76c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangeassistanceconfig)

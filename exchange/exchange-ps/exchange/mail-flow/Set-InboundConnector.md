@@ -22,13 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
- [-AssociatedAcceptedDomains <MultiValuedProperty>] [-CloudServicesMailEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>]
- [-ConnectorType <OnPremises | Partner>] [-Enabled <$true | $false>] [-Name <String>]
- [-RequireTls <$true | $false>] [-RestrictDomainsToCertificate <$true | $false>]
- [-RestrictDomainsToIPAddresses <$true | $false>] [-SenderDomains <MultiValuedProperty>]
+ [-AssociatedAcceptedDomains <MultiValuedProperty>] [-CloudServicesMailEnabled <Boolean>]
+ [-Comment <String>] [-Confirm] [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>] [-Enabled <Boolean>] [-Name <String>]
+ [-RequireTls <Boolean>] [-RestrictDomainsToCertificate <Boolean>]
+ [-RestrictDomainsToIPAddresses <Boolean>] [-SenderDomains <MultiValuedProperty>]
  [-SenderIPAddresses <MultiValuedProperty>] [-TlsSenderCertificateName <TlsCertificate>]
- [-TreatMessagesAsInternal <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-TreatMessagesAsInternal <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,8 +38,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-InboundConnector "Contoso Inbound Connector" -RequireTls $true -TlsSenderCertificateName contoso.com
 ```
 
@@ -59,6 +59,7 @@ Type: InboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -74,6 +75,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -93,10 +95,11 @@ Valid values are:
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +115,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +135,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -150,10 +155,11 @@ The ConnectorSource parameter specifies how the connector was created. Valid inp
 The default value for connectors you create is Default. It isn't recommended that you change this value.
 
 ```yaml
-Type: Default | Migrated | HybridWizard | AdminUI
+Type: TenantConnectorSource
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -169,10 +175,11 @@ The ConnectorType parameter specifies a category for the domains that are servic
 - OnPremises: The connector services domains that are used by your on-premises organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
 
 ```yaml
-Type: OnPremises | Partner
+Type: TenantConnectorType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -184,10 +191,11 @@ Accept wildcard characters: False
 The Enabled parameter enables or disables the connector. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +211,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -214,10 +223,11 @@ Accept wildcard characters: False
 The RequireTLS parameter specifies that all messages received by this connector require TLS transmission. Valid values for this parameter are $true or $false. The default value is $false. When the RequireTLS parameter is set to $true, all messages received by this connector require TLS transmission.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -229,10 +239,11 @@ Accept wildcard characters: False
 The RestrictDomainsToCertificate parameter specifies that Office 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -246,10 +257,11 @@ The RestrictDomainsToIPAddresses parameter, when set to $true, automatically rej
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +279,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +301,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -305,6 +319,7 @@ Type: TlsCertificate
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -322,10 +337,11 @@ The TreatMessagesAsInternal parameter specifies an alternative method to identif
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Office 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +357,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -365,4 +382,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d21f091-def4-49a8-ab44-d36b9a12499d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-inboundconnector)

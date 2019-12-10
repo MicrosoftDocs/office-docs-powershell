@@ -26,38 +26,38 @@ Set-TransportService [-Identity] <ServerIdParameter>
  [-ActiveUserStatisticsLogMaxDirectorySize <ByteQuantifiedSize>]
  [-ActiveUserStatisticsLogMaxFileSize <ByteQuantifiedSize>]
  [-ActiveUserStatisticsLogPath <LocalLongFullPath>]
- [-AgentLogEnabled <$true | $false>]
+ [-AgentLogEnabled <Boolean>]
  [-AgentLogMaxAge <EnhancedTimeSpan>]
  [-AgentLogMaxDirectorySize <Unlimited>]
  [-AgentLogMaxFileSize <Unlimited>]
  [-AgentLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>]
+ [-AntispamAgentsEnabled <Boolean>]
  [-Confirm]
- [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogEnabled <Boolean>]
  [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
  [-ConnectivityLogMaxDirectorySize <Unlimited>]
  [-ConnectivityLogMaxFileSize <Unlimited>]
  [-ConnectivityLogPath <LocalLongFullPath>]
- [-ContentConversionTracingEnabled <$true | $false>]
+ [-ContentConversionTracingEnabled <Boolean>]
  [-DelayNotificationTimeout <EnhancedTimeSpan>]
- [-DnsLogEnabled <$true | $false>]
+ [-DnsLogEnabled <Boolean>]
  [-DnsLogMaxAge <EnhancedTimeSpan>]
  [-DnsLogMaxDirectorySize <Unlimited>]
  [-DnsLogMaxFileSize <Unlimited>]
  [-DnsLogPath <LocalLongFullPath>]
  [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>]
+ [-ExternalDNSAdapterEnabled <Boolean>]
  [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-ExternalDNSProtocolOption <ProtocolOption>]
  [-ExternalDNSServers <MultiValuedProperty>]
  [-ExternalIPAddress <IPAddress>]
- [-InternalDNSAdapterEnabled <$true | $false>]
+ [-InternalDNSAdapterEnabled <Boolean>]
  [-InternalDNSAdapterGuid <Guid>]
- [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
+ [-InternalDNSProtocolOption <ProtocolOption>]
  [-InternalDNSServers <MultiValuedProperty>]
- [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
+ [-IntraOrgConnectorProtocolLoggingLevel <ProtocolLoggingLevel>]
  [-IntraOrgConnectorSmtpMaxMessagesPerConnection <Int32>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
@@ -69,21 +69,21 @@ Set-TransportService [-Identity] <ServerIdParameter>
  [-MaxPerDomainOutboundConnections <Unlimited>]
  [-MessageExpirationTimeout <EnhancedTimeSpan>]
  [-MessageRetryInterval <EnhancedTimeSpan>]
- [-MessageTrackingLogEnabled <$true | $false>]
+ [-MessageTrackingLogEnabled <Boolean>]
  [-MessageTrackingLogMaxAge <EnhancedTimeSpan>]
  [-MessageTrackingLogMaxDirectorySize <Unlimited>]
  [-MessageTrackingLogMaxFileSize <ByteQuantifiedSize>]
  [-MessageTrackingLogPath <LocalLongFullPath>]
- [-MessageTrackingLogSubjectLoggingEnabled <$true | $false>]
+ [-MessageTrackingLogSubjectLoggingEnabled <Boolean>]
  [-OutboundConnectionFailureRetryInterval <EnhancedTimeSpan>]
  [-PickupDirectoryMaxHeaderSize <ByteQuantifiedSize>]
  [-PickupDirectoryMaxMessagesPerMinute <Int32>]
  [-PickupDirectoryMaxRecipientsPerMessage <Int32>]
  [-PickupDirectoryPath <LocalLongFullPath>]
- [-PipelineTracingEnabled <$true | $false>]
+ [-PipelineTracingEnabled <Boolean>]
  [-PipelineTracingPath <LocalLongFullPath>]
  [-PipelineTracingSenderAddress <SmtpAddress>]
- [-PoisonMessageDetectionEnabled <$true | $false>]
+ [-PoisonMessageDetectionEnabled <Boolean>]
  [-PoisonThreshold <Int32>]
  [-QueueLogMaxAge <EnhancedTimeSpan>]
  [-QueueLogMaxDirectorySize <Unlimited>]
@@ -94,14 +94,14 @@ Set-TransportService [-Identity] <ServerIdParameter>
  [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
  [-ReceiveProtocolLogMaxFileSize <Unlimited>]
  [-ReceiveProtocolLogPath <LocalLongFullPath>]
- [-RecipientValidationCacheEnabled <$true | $false>]
+ [-RecipientValidationCacheEnabled <Boolean>]
  [-ReplayDirectoryPath <LocalLongFullPath>]
- [-RequestBrokerLogEnabled <$true | $false>]
+ [-RequestBrokerLogEnabled <Boolean>]
  [-RequestBrokerLogMaxAge <EnhancedTimeSpan>]
  [-RequestBrokerLogMaxDirectorySize <Unlimited>]
  [-RequestBrokerLogMaxFileSize <Unlimited>]
  [-RequestBrokerLogPath <LocalLongFullPath>]
- [-ResourceLogEnabled <$true | $false>]
+ [-ResourceLogEnabled <Boolean>]
  [-ResourceLogMaxAge <EnhancedTimeSpan>]
  [-ResourceLogMaxDirectorySize <Unlimited>]
  [-ResourceLogMaxFileSize <Unlimited>]
@@ -120,42 +120,42 @@ Set-TransportService [-Identity] <ServerIdParameter>
  [-ServerStatisticsLogPath <LocalLongFullPath>]
  [-TransientFailureRetryCount <Int32>]
  [-TransientFailureRetryInterval <EnhancedTimeSpan>]
- [-TransportHttpLogEnabled <$true | $false>]
+ [-TransportHttpLogEnabled <Boolean>]
  [-TransportHttpLogMaxAge <EnhancedTimeSpan>]
  [-TransportHttpLogMaxDirectorySize <Unlimited>]
  [-TransportHttpLogMaxFileSize <Unlimited>]
  [-TransportHttpLogPath <LocalLongFullPath>]
- [-TransportMaintenanceLogEnabled <$true | $false>]
+ [-TransportMaintenanceLogEnabled <Boolean>]
  [-TransportMaintenanceLogMaxAge <EnhancedTimeSpan>]
  [-TransportMaintenanceLogMaxDirectorySize <Unlimited>]
  [-TransportMaintenanceLogMaxFileSize <Unlimited>]
  [-TransportMaintenanceLogPath <LocalLongFullPath>]
  [-TransportSyncAccountsPoisonAccountThreshold <Int32>]
- [-TransportSyncAccountsPoisonDetectionEnabled <$true | $false>]
+ [-TransportSyncAccountsPoisonDetectionEnabled <Boolean>]
  [-TransportSyncAccountsPoisonItemThreshold <Int32>]
  [-TransportSyncAccountsSuccessivePoisonItemThreshold <Int32>]
- [-TransportSyncEnabled <$true | $false>]
- [-TransportSyncExchangeEnabled <$true | $false>]
- [-TransportSyncHubHealthLogEnabled <$true | $false>]
+ [-TransportSyncEnabled <Boolean>]
+ [-TransportSyncExchangeEnabled <Boolean>]
+ [-TransportSyncHubHealthLogEnabled <Boolean>]
  [-TransportSyncHubHealthLogFilePath <LocalLongFullPath>]
  [-TransportSyncHubHealthLogMaxAge <EnhancedTimeSpan>]
  [-TransportSyncHubHealthLogMaxDirectorySize <ByteQuantifiedSize>]
  [-TransportSyncHubHealthLogMaxFileSize <ByteQuantifiedSize>]
- [-TransportSyncImapEnabled <$true | $false>]
- [-TransportSyncLogEnabled <$true | $false>]
+ [-TransportSyncImapEnabled <Boolean>]
+ [-TransportSyncLogEnabled <Boolean>]
  [-TransportSyncLogFilePath <LocalLongFullPath>]
- [-TransportSyncLogLoggingLevel <None | Error | Information | Verbose | RawData | Debugging>]
+ [-TransportSyncLogLoggingLevel <SyncLogLoggingLevel>]
  [-TransportSyncLogMaxAge <EnhancedTimeSpan>]
  [-TransportSyncLogMaxDirectorySize <ByteQuantifiedSize>]
  [-TransportSyncLogMaxFileSize <ByteQuantifiedSize>]
  [-TransportSyncMaxDownloadItemsPerConnection <Int32>]
  [-TransportSyncMaxDownloadSizePerConnection <ByteQuantifiedSize>]
  [-TransportSyncMaxDownloadSizePerItem <ByteQuantifiedSize>]
- [-TransportSyncPopEnabled <$true | $false>]
+ [-TransportSyncPopEnabled <Boolean>]
  [-TransportSyncRemoteConnectionTimeout <EnhancedTimeSpan>]
- [-UseDowngradedExchangeServerAuth <$true | $false>]
+ [-UseDowngradedExchangeServerAuth <Boolean>]
  [-WhatIf]
- [-WindowsLiveHotmailTransportSyncEnabled <$true | $false>]
+ [-WindowsLiveHotmailTransportSyncEnabled <Boolean>]
  [-WlmLogMaxAge <EnhancedTimeSpan>]
  [-WlmLogMaxDirectorySize <Unlimited>]
  [-WlmLogMaxFileSize <Unlimited>]
@@ -168,22 +168,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TransportService Mailbox01 -DelayNotificationTimeout 13:00:00
 ```
 
 This example sets the DelayNotificationTimeout parameter to 13 hours for the Transport service on a Mailbox server named Mailbox01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-TransportService Mailbox01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
 ```
 
 This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Transport service on a Mailbox server named Mailbox01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-TransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
@@ -209,6 +209,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -228,6 +229,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +261,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -290,6 +293,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -305,6 +309,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -316,10 +321,11 @@ Accept wildcard characters: False
 The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -339,6 +345,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -370,6 +377,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -401,6 +409,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -416,6 +425,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -429,10 +439,11 @@ The AntispamAgentsEnabled parameter specifies whether anti-spam agents are insta
 You set this parameter by using a script. You shouldn't modify this parameter manually.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -452,6 +463,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -463,10 +475,11 @@ Accept wildcard characters: False
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -486,6 +499,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -517,6 +531,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -548,6 +563,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -563,6 +579,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -580,10 +597,11 @@ The ContentConversionTracingEnabled parameter specifies whether content conversi
 - System: Full Control
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -603,6 +621,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -614,10 +633,11 @@ Accept wildcard characters: False
 The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -637,6 +657,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -668,6 +689,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -699,6 +721,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -714,6 +737,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -731,6 +755,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -742,10 +767,11 @@ Accept wildcard characters: False
 The ExternalDNSAdapterEnabled parameter specifies one or more Domain Name System (DNS) servers that Exchange uses for external DNS lookups. When the ExternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations outside the Exchange organization are performed by using the DNS settings of the external network adapter specified by the value of the ExternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for external Exchange DNS lookups only, you must specify the DNS servers by using the ExternalDNSServers parameter, and you must also set the value of the ExternalDNSAdapterEnabled parameter to $false. The default value of the ExternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -763,6 +789,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -774,10 +801,11 @@ Accept wildcard characters: False
 The ExternalDNSProtocolOption parameter specifies which protocol to use when querying external DNS servers. The valid options for this parameter are Any, UseTcpOnly, and UseUdpOnly. The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -799,6 +827,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -814,6 +843,7 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -825,10 +855,11 @@ Accept wildcard characters: False
 The InternalDNSAdapterEnabled parameter specifies one or more DNS servers that Exchange uses for internal DNS lookups. When the InternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations inside the Exchange organization are performed by using the DNS settings of the internal network adapter specified by the value of the InternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for internal Exchange DNS lookups only, you must specify the DNS servers by using the InternalDNSServers parameter, and you must also set the value of the InternalDNSAdapterEnabled parameter to $false. The default value of the InternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -846,6 +877,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -857,10 +889,11 @@ Accept wildcard characters: False
 The InternalDNSProtocolOption parameter specifies which protocol to use when you query internal DNS servers. Valid options for this parameter are Any, UseTcpOnly, or UseUdpOnly.The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -882,6 +915,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -903,10 +937,11 @@ Valid values are:
 - Verbose: Protocol logging is enabled for the intra-organization Send connector in the Transport service and in the Mailbox Transport Submission service. The location of the log files is controlled by the SendProtocolLogPath parameter.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -924,6 +959,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -939,10 +975,11 @@ The IrmLogEnabled parameter enables logging of Information Rights Management (IR
 - $false: Disable IRM logging
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -962,6 +999,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -993,6 +1031,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1024,6 +1063,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1039,6 +1079,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1054,6 +1095,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1069,6 +1111,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1084,6 +1127,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1099,6 +1143,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1114,6 +1159,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1133,6 +1179,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1152,6 +1199,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1163,10 +1211,11 @@ Accept wildcard characters: False
 The MessageTrackingLogEnabled parameter specifies whether message tracking is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1186,6 +1235,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1223,6 +1273,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1252,6 +1303,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1267,6 +1319,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1278,10 +1331,11 @@ Accept wildcard characters: False
 The MessageTrackingLogSubjectLoggingEnabled parameter specifies whether the message subject should be included in the message tracking log. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1301,6 +1355,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1330,6 +1385,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1345,6 +1401,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1360,6 +1417,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1375,6 +1433,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1386,10 +1445,11 @@ Accept wildcard characters: False
 The PipelineTracingEnabled parameter specifies whether to enable pipeline tracing. Pipeline tracing captures message snapshot files that record the changes made to the message by each transport agent configured in the transport service on the server. Pipeline tracing creates verbose log files that accumulate quickly. Pipeline tracing should only be enabled for a short time to provide in-depth diagnostic information that enables you to troubleshoot problems. In addition to troubleshooting, you can use pipeline tracing to validate changes that you make to the configuration of the transport service where you enable pipeline tracing. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1411,6 +1471,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1426,6 +1487,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1437,10 +1499,11 @@ Accept wildcard characters: False
 The PoisonMessageDetectionEnabled parameter specifies whether poison messages should be detected. The default value is $true. Poison messages are messages determined to be potentially harmful to the Exchange system after a server failure. Poison messages are put in the poison message queue. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1456,6 +1519,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1475,6 +1539,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1506,6 +1571,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1537,6 +1603,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1552,6 +1619,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1571,6 +1639,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1592,6 +1661,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1627,6 +1697,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1662,6 +1733,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1679,6 +1751,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1690,10 +1763,11 @@ Accept wildcard characters: False
 The RecipientValidationCacheEnabled parameter specifies whether the recipient addresses used by transport agents, such as the Recipient Filtering agent, are cached. The default value is $true on Edge Transport servers and $false for the Transport service on Mailbox servers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1709,6 +1783,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1720,10 +1795,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1739,6 +1815,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1754,6 +1831,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1769,6 +1847,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1784,6 +1863,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1795,10 +1875,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1814,6 +1895,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1829,6 +1911,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1844,6 +1927,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1859,6 +1943,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1874,6 +1959,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1893,6 +1979,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1924,6 +2011,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1939,6 +2027,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1960,6 +2049,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1995,6 +2085,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2030,6 +2121,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2051,6 +2143,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2074,6 +2167,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2109,6 +2203,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2144,6 +2239,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2163,6 +2259,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2178,6 +2275,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2197,6 +2295,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2208,10 +2307,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2227,6 +2327,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2242,6 +2343,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2257,6 +2359,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2272,6 +2375,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2283,10 +2387,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2302,6 +2407,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2317,6 +2423,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2332,6 +2439,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2347,6 +2455,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2362,6 +2471,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2373,10 +2483,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2392,6 +2503,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2407,6 +2519,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2418,10 +2531,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2433,10 +2547,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2448,10 +2563,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2467,6 +2583,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2482,6 +2599,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2497,6 +2615,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2512,6 +2631,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2523,10 +2643,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2538,10 +2659,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2557,6 +2679,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2568,10 +2691,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Error | Information | Verbose | RawData | Debugging
+Type: SyncLogLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2587,6 +2711,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2602,6 +2727,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2617,6 +2743,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2632,6 +2759,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2647,6 +2775,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2662,6 +2791,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2673,10 +2803,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2692,6 +2823,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2707,10 +2839,11 @@ Normally, TLS is required for connections between the Transport services on Mail
 If you set this parameter to $true, you also need to create a specific Receive connector to service the non-TLS connections. This Receive connector must have remote IP address ranges specified to ensure that it's only used for non-TLS connections. You also must set the SuppressXAnonymousTls attribute of the Receive connector to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2726,6 +2859,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2737,10 +2871,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2756,6 +2891,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2771,6 +2907,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2786,6 +2923,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2801,6 +2939,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2825,4 +2964,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/42fb2dce-2300-45c6-ac8f-d7647ecf6d2c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-transportservice)

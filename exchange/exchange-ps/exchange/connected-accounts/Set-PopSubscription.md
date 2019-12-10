@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SubscriptionModification
 ```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Spa>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <$true | $false>]
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <Boolean>] [-Force] [-IncomingAuth <AuthenticationMechanism>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <SecurityMechanism>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <Boolean>]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -51,8 +51,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PopSubscription "Ayla Contoso" -Mailbox "Ayla Kol" -LeaveOnServer $false
 ```
 
@@ -74,6 +74,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +94,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +126,7 @@ Type: SmtpAddress
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,10 +138,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the POP subscription is enabled. This parameter accepts $true or $false values. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +158,7 @@ Type: SwitchParameter
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,10 +170,11 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by POP clients to access the POP server. Valid values are Basic or Spa, which is secure password authentication. If you don't specify a value for the IncomingAuth parameter, the value Basic is used.
 
 ```yaml
-Type: Basic | Spa
+Type: AuthenticationMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +192,7 @@ Type: SecureString
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +208,7 @@ Type: Int32
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -211,10 +220,11 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by POP clients to connect to the POP server. Valid values are None, Ssl, or Tls. If you don't specify a value for the IncomingSecurity parameter, the value None is used.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: SecurityMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +240,7 @@ Type: Fqdn
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +256,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -256,10 +268,11 @@ Accept wildcard characters: False
 The LeaveOnServer parameter configures the behavior of retrieved messages in the POP mailbox. When the LeaveOnServer parameter is set to the value $true, the retrieved messages are left in the POP mailbox. When it's set to the value $false, retrieved messages are removed from the POP mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +308,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -312,6 +326,7 @@ Type: SwitchParameter
 Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +344,7 @@ Type: String
 Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -344,6 +360,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,4 +385,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ec02987-7404-47fa-a6b0-43239344b6c8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-popsubscription)

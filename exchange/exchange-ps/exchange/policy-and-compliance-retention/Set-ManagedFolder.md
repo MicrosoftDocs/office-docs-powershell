@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ManagedFolder [-Identity] <ELCFolderIdParameter> [-BaseFolderOnly <$true | $false>] [-Comment <String>]
+Set-ManagedFolder [-Identity] <ELCFolderIdParameter> [-BaseFolderOnly <Boolean>] [-Comment <String>]
  [-Confirm] [-DomainController <Fqdn>] [-FolderName <String>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>] [-Name <String>]
+ [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <Boolean>] [-Name <String>]
  [-StorageQuota <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -36,8 +36,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ManagedFolder MyManagedFolder -StorageQuota 100KB
 ```
 
@@ -53,6 +53,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -64,10 +65,11 @@ Accept wildcard characters: False
 The BaseFolderOnly parameter specifies whether the managed content settings should be applied only to the managed folder or to the folder and all its subfolders.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +85,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +121,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +137,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +153,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +169,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -173,10 +181,11 @@ Accept wildcard characters: False
 The MustDisplayCommentEnabled parameter specifies whether to set a flag that's used by any client that displays comments and accepts this setting. If this parameter is set to $true, a flag is set that prevents users from minimizing a folder comment, which is visible in Outlook 2007 only. If the parameter isn't present or is set to $false, users can minimize the comment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +201,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +217,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +233,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -246,4 +258,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/88a3c359-acf0-4757-915f-28e0dfc22605.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-managedfolder)

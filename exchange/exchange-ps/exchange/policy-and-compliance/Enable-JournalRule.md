@@ -28,14 +28,14 @@ Enable-JournalRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-You can enable or disable specific journal rules in your organization at any time using the Enable-JournalRule and Disable-JournalRule cmdlets. For more information, see Journaling (https://technet.microsoft.com/library/aa998649.aspx).
+You can enable or disable specific journal rules in your organization at any time using the Enable-JournalRule and Disable-JournalRule cmdlets. For more information, see [Journaling in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/journaling/journaling).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-JournalRule "Brokerage Communications"
 ```
 
@@ -51,6 +51,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -70,6 +71,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9a4b01b9-27d4-41e6-9573-86e27e82de2d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/enable-journalrule)

@@ -40,26 +40,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-RoleGroupMember "Recipient Administrators" -Members "Mark", "Jane", "Mary", "Fred"
 ```
 
 This example sets the Recipient Administrators role group membership list to Mark, Jane, Mary and Fred.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Update-RoleGroupMember "Recipient Administrators" -Members "Mark", "Jane", "Mary", "Fred" -BypassSecurityGroupManagerCheck
 ```
 
 This example sets the Recipient Administrators role group membership list to Mark, Jane, Mary and Fred. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity; Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 
-This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
+This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
 
 Mailbox: If you want to add or remove a mailbox, use the syntax (Get-Mailbox "\<Alias or Name\>").Identity
 
@@ -75,6 +75,7 @@ Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -96,6 +97,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +155,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +173,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -192,4 +198,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/37f82792-aaf1-4306-a563-37d6de3a8ee8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/update-rolegroupmember)

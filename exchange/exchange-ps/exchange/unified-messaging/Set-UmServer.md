@@ -27,7 +27,7 @@ Set-UMServer [-Identity] <UMServerIdParameter>
  [-DomainController <Fqdn>]
  [-ExternalServiceFqdn <UMSmartHost>]
  [-GrammarGenerationSchedule <ScheduleInterval[]>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
@@ -36,8 +36,8 @@ Set-UMServer [-Identity] <UMServerIdParameter>
  [-SIPAccessService <ProtocolConnectionSettings>]
  [-SipTcpListeningPort <Int32>]
  [-SipTlsListeningPort <Int32>]
- [-Status <Enabled | Disabled | NoNewCalls>]
- [-UMStartupMode <TCP | TLS | Dual>]
+ [-Status <ServerStatus>]
+ [-UMStartupMode <UMStartupMode>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,29 +50,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-UMServer -Identity MyUMServer -Status NoNewCalls
 ```
 
 This example prevents the Unified Messaging server MyUMServer from accepting new calls.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-UMServer -Identity MyUMServer -DialPlans $null
 ```
 
 This example removes the Unified Messaging server MyUMServer from all UM dial plans.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-UMServer -Identity MyUMServer -DialPlans MyUMDialPlanName -MaxCallsAllowed 50
 ```
 
 This example adds the Unified Messaging server MyUMServer to the UM dial plan MyUMDialPlanName and also sets the maximum number of incoming voice calls to 50.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-UMServer -Identity MyUMServer -GrammarGenerationSchedule 0.02:30-1.03:00,1.02:30-1.03:00,2.02:30-2.03:00,3.02:30-3.03:00,4.02:30-4.03:00,5.02:30-5.03:00,6.02:30-6.03:00
 ```
 
@@ -96,6 +96,7 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -115,6 +116,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +132,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +164,7 @@ Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +206,7 @@ Type: ScheduleInterval[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -216,10 +222,11 @@ The IrmLogEnabled parameter specifies whether to enable logging of Information R
 - $false Disable IRM logging
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +242,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -262,6 +270,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -289,6 +298,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +314,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -319,6 +330,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -338,6 +350,7 @@ Type: ProtocolConnectionSettings
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -353,6 +366,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -368,6 +382,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -379,10 +394,11 @@ Accept wildcard characters: False
 The Status parameter specifies the Unified Messaging server status. The available options are Enabled, Disabled, and NoNewCalls.
 
 ```yaml
-Type: Enabled | Disabled | NoNewCalls
+Type: ServerStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -394,10 +410,11 @@ Accept wildcard characters: False
 The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging service on a Unified Messaging server will start up in TCP, TLS, or Dual mode. If the Unified Messaging server is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Unified Messaging server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging service must be restarted.
 
 ```yaml
-Type: TCP | TLS | Dual
+Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -413,6 +430,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -437,4 +455,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/11faf772-d000-4cf3-8c01-47a3d4196237.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umserver)

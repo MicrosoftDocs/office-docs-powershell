@@ -26,7 +26,7 @@ Remove-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the Remove-PartnerApplication cmdlet to remove a partner application configuration if the application no longer needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business (https://technet.microsoft.com/en-us/library/jj150480.aspx).
+You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the Remove-PartnerApplication cmdlet to remove a partner application configuration if the application no longer needs to access Exchange resources. For details, see [Plan Exchange 2016 integration with SharePoint and Skype for Business](https://docs.microsoft.com/Exchange/plan-and-deploy/integration-with-sharepoint-and-skype/integration-with-sharepoint-and-skype).
 
 We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 
@@ -34,8 +34,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-PartnerApplication HRApp
 ```
 
@@ -51,6 +51,7 @@ Type: PartnerApplicationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -70,6 +71,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,4 +130,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1ab9c702-0547-46da-8c4d-a10b5ab91339.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/remove-partnerapplication)

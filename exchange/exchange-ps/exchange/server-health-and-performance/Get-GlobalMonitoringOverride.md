@@ -29,15 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-GlobalMonitoringOverride
 ```
 
 This example returns a summary list of all global monitoring overrides that are configured in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-GlobalMonitoringOverride | Format-List
 ```
 
@@ -55,6 +55,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -79,4 +80,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34e6e29d-e10b-4ed0-8393-d9f89c78fd9c.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-globalmonitoringoverride)

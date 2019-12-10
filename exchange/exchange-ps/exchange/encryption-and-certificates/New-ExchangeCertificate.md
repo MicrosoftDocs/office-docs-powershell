@@ -34,7 +34,7 @@ New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <Strin
  [-IncludeServerNetBIOSName]
  [-Instance <X509Certificate2>]
  [-KeySize <Int32>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
@@ -43,7 +43,7 @@ New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <Strin
 
 ### Certificate
 ```
-New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federation>]
+New-ExchangeCertificate [-Services <AllowedServices>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainName <MultiValuedProperty>]
@@ -55,7 +55,7 @@ New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federa
  [-IncludeServerNetBIOSName]
  [-Instance <X509Certificate2>]
  [-KeySize <Int32>]
- [-PrivateKeyExportable <$true | $false>]
+ [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
@@ -65,16 +65,16 @@ New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federa
 ## DESCRIPTION
 Exchange uses certificates for SSL and TLS encryption.
 
-There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see Digital certificates and encryption in Exchange 2016.
+There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see [Digital certificates and encryption in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/certificates).
 
-Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out Protecting you against the SSL 3.0 vulnerability (https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
+Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out [Protecting you against the SSL 3.0 vulnerability](https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ExchangeCertificate
 ```
 
@@ -92,8 +92,8 @@ The Services value SMTP and the Subject value that contains the server name publ
 
 If you don't want this certificate to replace the existing self-signed certificate that was created during Exchange setup, be sure to select "No" in the prompt that asks you overwrite the existing default SMTP certificate.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\woodgrovebank.req" -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
 ```
 
@@ -111,15 +111,15 @@ After you create the certificate request, you send the output to the CA. After y
 
 If the CA requires the certificate request in a file that's encoded by DER, use the BinaryEncoding switch.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate -PrivateKeyExportable $true
 ```
 
 This example renewsthe existing self-signed certificate that has the thumbprint value c4248cd7065c87cb942d60f7293feb7d533a4afc. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet. Setting the PrivateKeyExportable parameter to the value $true allows the renewed self-signed certificate to be exported from the server (and imported on other servers).
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\fabrikam_renewal.req"
 ```
 
@@ -133,8 +133,8 @@ The output is displayed onscreen and is also written to the text file C:\\Cert R
 
 After you create the certificate renewal request, you send the output to the CA. After you receive the renewed certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate
 ```
 
@@ -160,6 +160,7 @@ Type: SwitchParameter
 Parameter Sets: Request
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +198,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +224,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +242,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +260,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -276,6 +282,7 @@ Type: SwitchParameter
 Parameter Sets: Request
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +304,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +332,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +350,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -358,6 +368,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -373,6 +384,7 @@ Type: X509Certificate2
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -394,6 +406,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -411,10 +424,11 @@ The PrivateKeyExportable parameter specifies whether the new self-signed certifi
 This parameter is only meaningful for new self-signed certificates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -434,6 +448,7 @@ Type: String
 Parameter Sets: Request
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -459,6 +474,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -492,10 +508,11 @@ You can't use this parameter with the GenerateRequest switch.
 Once you enable a certificate for a service, you can't remove the service from the certificate.
 
 ```yaml
-Type: None | IMAP | POP | UM | IIS | SMTP | Federation
+Type: AllowedServices
 Parameter Sets: Certificate
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +528,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -544,6 +562,7 @@ Type: X500DistinguishedName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -559,6 +578,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -583,4 +603,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5e0b61b0-ece6-4d9b-949a-f6a032dd0fb9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/new-exchangecertificate)

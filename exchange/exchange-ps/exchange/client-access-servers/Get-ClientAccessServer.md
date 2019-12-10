@@ -33,15 +33,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ClientAccessServer
 ```
 
 This example returns a summary list of all Exchange servers in your organization that have the Client Access server role installed.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ClientAccessServer -Identity mail.contoso.com | Format-List
 ```
 
@@ -57,6 +57,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -99,6 +101,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +119,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,4 +144,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/db492f66-cd67-420d-9479-a9499e9301b2.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessserver)

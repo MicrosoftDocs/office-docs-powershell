@@ -52,22 +52,22 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive
 ```
 
 This example creates an inactive policy named *Sales-Research* for a segment named *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in the segment named *Research*.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive
 ```
 
 This example creates an inactive policy named *Manufacturing-HR* for a segment named *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in the segment named *HR*. (In this example, Manufacturing can't communicate with users who aren't in HR.)
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing" -State Inactive
 ```
 
@@ -83,6 +83,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 0
 Default value: None
@@ -98,6 +99,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -113,6 +115,7 @@ Type: String
 Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -151,6 +155,7 @@ Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -166,6 +171,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +191,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +212,7 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +228,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

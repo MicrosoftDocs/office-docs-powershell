@@ -25,17 +25,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <$true | $false>] [-TrustAnySSLCertificate]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <Boolean>] [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -45,7 +45,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [
 Set-AuthServer [-Identity] <AuthServerIdParameter> [-RefreshAuthMetadata]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -59,8 +59,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AuthServer ACS -Enabled $false
 ```
 
@@ -82,6 +82,7 @@ Type: AuthServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -97,6 +98,7 @@ Type: String
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +118,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +134,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,10 +152,11 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 - $false: The authorization server does not issue or accept authorization tokens.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -167,10 +172,11 @@ $true: The authorization server's URL is advertised to calling partner applicati
 $false: The authorization server's URL is not advertised. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +192,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +208,7 @@ Type: SwitchParameter
 Parameter Sets: RefreshAuthMetadata
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -218,6 +226,7 @@ Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -233,6 +242,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -257,4 +267,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0f0c328e-0316-4040-a54a-5efe2071edb5.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-authserver)

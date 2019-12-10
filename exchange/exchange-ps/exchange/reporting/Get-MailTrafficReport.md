@@ -68,7 +68,7 @@ Spam analysis - content-filtered spam
 
 - Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 
-- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
+- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see [What's the difference between junk email and bulk email?](https://docs.microsoft.com/microsoft-365/security/office-365-security/what-s-the-difference-between-junk-email-and-bulk-email).
 
 - Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
 
@@ -96,7 +96,7 @@ Spam analysis - non-spam messages
 
 Bulk mail
 
-- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see Use transport rules to configure bulk email filtering (https://technet.microsoft.com/library/dn720438.aspx).
+- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see [Use mail flow rules to configure bulk email filtering in Exchange Online Protection](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-transport-rules-to-configure-bulk-email-filtering).
 
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
 
@@ -104,22 +104,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailTrafficReport -Direction Inbound -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
 This example retrieves details for incoming messages between June 13, 2015 and June 15, 2015.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example retrieves the statistics for outgoing messages on December 12, 2015, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
@@ -137,6 +137,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +153,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +169,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +193,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +211,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +229,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +245,7 @@ Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +261,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +277,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -284,6 +293,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -301,6 +311,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -318,6 +329,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -342,4 +354,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/28988896-893c-46c9-a174-8ab6f834d0c9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtrafficreport)

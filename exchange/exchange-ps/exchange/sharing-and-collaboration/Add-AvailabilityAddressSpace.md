@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-AvailabilityAddressSpace -AccessMethod <PerUserFB | OrgWideFB | PublicFolder | InternalProxy>
+Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod>
  -ForestName <String> [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>] [-ProxyUrl <Uri>]
- [-UseServiceAccount <$true | $false>] [-WhatIf] [-TargetAutodiscoverEpr <Uri>] [<CommonParameters>]
+ [-UseServiceAccount <Boolean>] [-WhatIf] [-TargetAutodiscoverEpr <Uri>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,22 +35,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
 ```
 
 This example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -Credentials (Get-Credential)
 ```
 
 This example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest, and the specified account connects to the contoso.com forest. The specified account must be an existing account in the contoso.com forest.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -UseServiceAccount $true
 ```
 
@@ -72,10 +72,11 @@ The AccessMethod parameter specifies how the free/busy data is accessed. Valid v
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
 ```yaml
-Type: PerUserFB | OrgWideFB | PublicFolder | InternalProxy
+Type: AvailabilityAccessMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -91,6 +92,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -110,6 +112,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +148,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -156,13 +161,14 @@ This parameter is available only in on-premises Exchange.
 
 The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy its free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the value of the AccessMethod parameter to InternalProxy.
 
-This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see New-FederationTrust.
+This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/new-federationtrust).
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,10 +186,11 @@ The UseServiceAccount parameter specifies whether to use the local Availability 
 - $false: The local Availability service account isn't used for authorization. You need to use the Credentials parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +206,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +222,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,4 +247,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/abbd48f3-adf6-40ed-9a52-36800d8429ef.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/add-availabilityaddressspace)

@@ -30,22 +30,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SweepRule
 ```
 
 This example returns a summary list of all Sweep rules.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SweepRule -Mailbox julia@contoso.com
 ```
 
 This example returns a summary list of all Sweep rules in the specified mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 
@@ -61,6 +61,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +79,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +101,7 @@ Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -134,6 +137,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +153,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -171,4 +176,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3893ff38-931d-49f8-b34d-d7666b629d54.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-sweeprule)

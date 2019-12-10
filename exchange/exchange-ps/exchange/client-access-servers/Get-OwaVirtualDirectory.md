@@ -45,22 +45,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-OwaVirtualDirectory -Server Contoso
 ```
 
 This example returns a summary list of all Outlook on the web virtual directories on the server named Contoso.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-OwaVirtualDirectory -Identity "Contoso\owa*" | Format-List
 ```
 
 This example returns detailed information for the Outlook on the web virtual directory named "owa (Default Web site)" on the server named Contoso.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-OwaVirtualDirectory
 ```
 
@@ -86,6 +86,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -111,6 +112,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +128,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +144,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +164,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,4 +189,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/63c48908-1116-4bab-8e5a-6c4dccbf3574.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-owavirtualdirectory)

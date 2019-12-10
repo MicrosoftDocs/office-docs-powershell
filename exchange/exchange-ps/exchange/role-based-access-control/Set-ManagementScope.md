@@ -51,7 +51,7 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-RecipientRestrict
 ```
 
 ## DESCRIPTION
-If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see Change a role scope (https://technet.microsoft.com/library/dd298145.aspx).
+If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see [Change a role scope](https://docs.microsoft.com/exchange/change-a-role-scope-exchange-2013-help).
 
 For more information about regular and exclusive scopes, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 
@@ -59,23 +59,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
+### Example 1
+```powershell
+Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter "City -eq 'Seattle' -and RecipientType -eq 'UserMailbox'"
 ```
 
 This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
 ```
 
 This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
 
-### -------------------------- Example 3 --------------------------
-```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
+### Example 3
+```powershell
+Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter "ServerSite -eq 'NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}'"
 ```
 
 This example changes the Active Directory site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
@@ -85,13 +85,28 @@ This example changes the Active Directory site used in the server restriction fi
 ### -DatabaseRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. When the DatabaseRestrictionFilter parameter is specified, only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the ServerRestrictionFilter, RecipientRestrictionFilter or RecipientRoot parameters. For a list of filterable database properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+The DatabaseRestrictionFilter parameter uses OPath filter syntax to specify the databases that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For a list of filterable database properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can't use this parameter with the RecipientRestrictionFilter, ServerRestrictionFilter, RecipientRoot, DatabaseList, or ServerList parameters.
 
 ```yaml
 Type: String
 Parameter Sets: DatabaseFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +122,7 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -117,13 +133,28 @@ Accept wildcard characters: False
 ### -ServerRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The ServerRestrictionFilter parameter specifies the filter to apply to server objects. When the ServerRestrictionFilter parameter is specified, only recipient objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter, RecipientRestrictionFilter, or RecipientRoot parameters. For a list of filterable server properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+The ServerRestrictionFilter parameter uses OPath filter syntax to specify the servers that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For a list of filterable server properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can't use this parameter wit the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerList parameters.
 
 ```yaml
 Type: String
 Parameter Sets: ServerFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +192,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +208,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +224,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -198,13 +233,28 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRestrictionFilter
-The RecipientRestrictionFilter parameter specifies the filter to apply to recipient objects. When the RecipientRestrictionFilter parameter is specified, only server objects that match the filter are included in the scope. If you use the RecipientRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter or ServerRestrictionFilter parameters.
+The RecipientRestrictionFilter parameter uses OPath filter syntax to specify the recipients that are included in the scope. The syntax is `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable recipient property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can't use this parameter with the DatabaseRestrictionFilter, DatabaseList, ServerList, or ServerRestrictionFilter parameters.
 
 ```yaml
 Type: String
 Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -213,13 +263,24 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRoot
-The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. If you use the RecipientRoot parameter, you can't use the ServerRestrictionFilter or DatabaseRestrictionFilter parameters.
+The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. Valid input for this parameter is an OU or domain that's visibor domain that's returned bylUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+
+- Name
+
+- Canonical name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the ServerRestrictionFilter or DatabaseRestrictionFilter parameters.
 
 ```yaml
 Type: OrganizationalUnitIdParameter
 Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +296,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -259,4 +321,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/568aa7c5-4b59-4e10-9139-782d49cd0969.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/set-managementscope)

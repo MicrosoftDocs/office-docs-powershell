@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AdSite [-Identity] <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HubSiteEnabled <$true | $false>] [-PartnerId <Int32>]
- [-WhatIf] [-InboundMailEnabled <$true | $false>] [<CommonParameters>]
+ [-HubSiteEnabled <Boolean>] [-PartnerId <Int32>]
+ [-WhatIf] [-InboundMailEnabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,8 +31,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AdSite Default-First-Site-Name -HubSiteEnabled $true
 ```
 
@@ -48,6 +48,7 @@ Type: AdSiteIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -67,6 +68,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -93,10 +96,11 @@ Accept wildcard characters: False
 The HubSiteEnabled parameter specifies whether this site acts as a hub site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +116,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +132,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,10 +146,11 @@ The InboundMailEnabled parameter enables or disables receiving incoming messages
 Valid input for this parameter is $true or $false. The default value is $true. If you set the value to $false, none of the Exchange servers in the Active Directory site will be able to receive incoming messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -168,4 +175,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c9bb1fab-4d0f-43e3-ad4a-36643baa6553.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adsite)

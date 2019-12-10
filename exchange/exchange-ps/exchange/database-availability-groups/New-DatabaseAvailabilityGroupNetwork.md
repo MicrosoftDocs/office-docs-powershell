@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-DatabaseAvailabilityGroupNetwork [-Name] <String>
  [-DatabaseAvailabilityGroup] <DatabaseAvailabilityGroupIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-IgnoreNetwork <$true | $false>] [-ReplicationEnabled <$true | $false>]
+ [-DomainController <Fqdn>] [-IgnoreNetwork <Boolean>] [-ReplicationEnabled <Boolean>]
  [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -32,8 +32,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name DAG1Repl -Subnets 10.0.0.0/8 -ReplicationEnabled:$true
 ```
 
@@ -49,6 +49,7 @@ Type: DatabaseAvailabilityGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 2
 Default value: None
@@ -64,6 +65,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -83,6 +85,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +101,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +117,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +129,11 @@ Accept wildcard characters: False
 The IgnoreNetwork parameter excludes the DAG network from use by the DAG.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,10 +145,11 @@ Accept wildcard characters: False
 The ReplicationEnabled parameter specifies whether the DAG network being created is enabled for continuous replication.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +165,7 @@ Type: DatabaseAvailabilityGroupSubnetId[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +181,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -197,4 +206,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ef8d42f-9da0-456a-b4e8-6f7d99a1fa0f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/new-databaseavailabilitygroupnetwork)

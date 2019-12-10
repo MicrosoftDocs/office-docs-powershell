@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filters
 ```
-Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <$true | $false>]
+Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <Boolean>]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -39,15 +39,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-CmdletExtensionAgent | Format-Table -Auto Name,Enabled,Priority
 ```
 
 This example displays a summary list of all the cmdlet extension agents in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-CmdletExtensionAgent "Mailbox Creation Time Agent"
 ```
 
@@ -63,6 +63,7 @@ Type: String
 Parameter Sets: Filters
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +79,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -95,10 +97,11 @@ The Enabled parameter filters the results by enabled or disabled cmdlet extensio
 If you don't use this parameter, enabled and disabled agents are included in the results.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filters
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: CmdletExtensionAgentIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -144,4 +148,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/46cc31dd-3799-45e4-bcce-0d0699a61dd6.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-cmdletextensionagent)

@@ -67,29 +67,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RoleGroup -Name "Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members Kim, Martin
 ```
 
 This example creates a role group. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users Kim and Martin are added as members. Because no scopes were provided, Kim and Martin can manage any recipient and reset passwords for any users in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-RoleGroup -Name "Seattle Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members John, Carol -CustomRecipientWriteScope "Seattle Recipients"
 ```
 
 This example creates a role group with a custom recipient scope. The custom recipient scope, Seattle Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Seattle. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users John and Carol are added as members.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-RoleGroup -Name "Transport Rules Management" -Roles "Transport Rules" -Members "Compliance Group" -ManagedBy Isabel
 ```
 
 This example creates a role group and enables Isabel to add or remove members to or from the role group by adding her to the ManagedBy property. The Transport Rules role is assigned to the role group, and the Compliance Group USG is added as a member.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 $Credentials = Get-Credential; New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
@@ -97,8 +97,8 @@ This example creates a linked role group that enables the members of the Toronto
 
 The first command retrieves the credentials using the Get-Credential cmdlet and stores them in the $Credentials variable. Then the linked role group is created using the second command.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 $RoleGroup = Get-RoleGroup "Recipient Management"; New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 
@@ -106,10 +106,10 @@ This example takes an existing role group and copies the roles from that role gr
 
 The first command stores the existing role group in a variable, and the second command creates the custom role group.
 
-This example uses variables to store information. For more information about variables, see User-defined variables (https://technet.microsoft.com/library/bb123690.aspx).
+This example uses variables to store information. For more information about variables, see [About Variables](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables).
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Remove-ManagementRoleAssignment "Distribution Groups-Limited Recipient Management"
 ```
 
@@ -129,6 +129,7 @@ Type: String
 Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +149,7 @@ Type: UniversalSecurityGroupIdParameter
 Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -165,6 +167,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -184,6 +187,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +205,7 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +225,7 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +241,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -250,6 +257,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +275,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +291,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -301,6 +311,7 @@ Type: PSCredential
 Parameter Sets: CrossForest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -320,6 +331,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -337,6 +349,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -354,6 +367,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -364,13 +378,14 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role group when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see Built-in management roles (https://technet.microsoft.com/library/dd638077.aspx).
+For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://docs.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
 
 ```yaml
 Type: RoleIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -388,6 +403,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -405,6 +421,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -429,4 +446,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c59f596d-cbdd-459e-b31f-99d03e684299.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-rolegroup)

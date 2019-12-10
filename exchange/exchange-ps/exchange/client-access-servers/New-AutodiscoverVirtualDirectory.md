@@ -22,12 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AutodiscoverVirtualDirectory [-ApplicationRoot <String>] [-AppPoolId <String>]
- [-BasicAuthentication <$true | $false>] [-Confirm] [-DigestAuthentication <$true | $false>]
+ [-BasicAuthentication <Boolean>] [-Confirm] [-DigestAuthentication <Boolean>]
  [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-Path <String>] [-WebSiteName <String>] [-WhatIf]
- [-WindowsAuthentication <$true | $false>] [-WSSecurityAuthentication <$true | $false>]
- [-OAuthAuthentication <$true | $false>] [-Role <ClientAccess | Mailbox>] [-Server <ServerIdParameter>]
+ [-WindowsAuthentication <Boolean>] [-WSSecurityAuthentication <Boolean>]
+ [-OAuthAuthentication <Boolean>] [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -40,8 +40,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-AutodiscoverVirtualDirectory -WebSiteName "autodiscover.contoso.com" -WindowsAuthentication $true -DigestAuthentication $true
 ```
 
@@ -57,6 +57,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +73,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -87,10 +89,11 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -125,10 +129,11 @@ The DigestAuthentication parameter specifies whether Digest authentication is en
 - $false: Digest authentication is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +149,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +175,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +195,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,10 +217,11 @@ Note:
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +239,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +257,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -262,6 +273,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +289,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +305,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -307,10 +321,11 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -326,10 +341,11 @@ The WSSecurityAuthentication parameter specifies whether WS-Security (Web Servic
 - $false: WS-Security authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -345,10 +361,11 @@ The OAuthAuthentication parameter specifies whether OAuth authentication is enab
 - $false: OAuth authentication is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -366,10 +383,11 @@ The Role parameter species the configuration for the virtual directory. Valid va
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
 
 ```yaml
-Type: ClientAccess | Mailbox
+Type: VirtualDirectoryRole
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +411,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -417,4 +436,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a0e22a98-2cc1-460b-870e-bf492cda54b4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-autodiscovervirtualdirectory)

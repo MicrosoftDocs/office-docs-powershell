@@ -899,7 +899,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFederatedParticipantJoinAsSameEnterprise
-PARAMVALUE: $true | $false
+Indicates whether a federated user will be directly admitted into conference bypassing the lobby. The default value is False.
+
+If set to False and AllowAnonymousParticipantsInMeetings parameter is also set to False, federated users will be treated as anonymous users and put into lobby.
+If set to True and conference admission policy is set to "Anyone from my organization" or openAuthenticated, federated users are treated as company users and admitted into conference directly.
+If set to True and conference admission policy is set to "People I Invite" or closedAuthenticated, federated users will be put into the lobby if they were not present in the pre-set invitee list.
+
 
 ```yaml
 Type: Boolean
@@ -909,7 +914,7 @@ Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

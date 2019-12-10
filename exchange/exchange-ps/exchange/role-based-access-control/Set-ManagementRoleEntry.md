@@ -35,29 +35,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters "Anr","Database" -RemoveParameter
 ```
 
 This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
 ```
 
 This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters "DisplayName","ForwardingAddress"
 ```
 
 This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
 ```
 
@@ -77,6 +77,7 @@ Type: RoleEntryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -92,6 +93,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +131,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +157,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +173,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +188,7 @@ By default, this parameter is only available in the UnScoped Role Management rol
 
 The UnScopedTopLevel switch specifies the role entry that you want to modify is on an unscoped top-level role. You don't need to specify a value with this switch.
 
-Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 You must use this switch to modify role entries on unscoped top level roles.
 
@@ -191,6 +197,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -206,6 +213,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +231,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -247,4 +256,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d4438459-d8b6-4214-b0d0-e374ef75c29e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/set-managementroleentry)

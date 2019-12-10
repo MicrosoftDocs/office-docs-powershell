@@ -39,7 +39,7 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in Clear or Remove Move Requests (https://technet.microsoft.com/library/dd351276.aspx). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
+In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in [Clear or Remove Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd351276(v=exchg.141)). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
 
 In Exchange 2010, you need to use the Remove-MoveRequest cmdlet on completed move requests to clear the InTransit flag from the mailbox. This step isn't required for mailbox moves in newer versions of Exchange where the Remove-MoveRequest is only used to cancel existing move requests.
 
@@ -49,15 +49,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
 ```
 
 This example removes the mailbox move request for Ayla Kol's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 
@@ -91,6 +91,7 @@ Type: MoveRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -110,6 +111,7 @@ Type: Guid
 Parameter Sets: MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -135,6 +137,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -154,6 +157,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +175,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +191,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +245,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -262,4 +270,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/25e0eaf2-6cc2-4353-b83e-5cb7b72d441f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-moverequest)

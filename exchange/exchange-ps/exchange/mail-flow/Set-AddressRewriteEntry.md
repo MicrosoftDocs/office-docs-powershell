@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AddressRewriteEntry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-ExceptionList <MultiValuedProperty>] [-ExternalAddress <String>] [-InternalAddress <String>]
- [-Name <String>] [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Name <String>] [-OutboundOnly <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,8 +31,8 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for contoso.com" -Name "Address rewrite entry for northwindtraders.com" -InternalAddress northwindtraders.com
 ```
 
@@ -42,8 +42,8 @@ Changes the original email addresses that are affected by the address rewrite en
 
 Changes the Name value to "Address rewrite entry for northwindtraders.com".
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for all contoso.com email addresses" -OutboundOnly $true
 ```
 
@@ -59,6 +59,7 @@ Type: AddressRewriteEntryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -78,6 +79,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,13 +106,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptionList
-The ExceptionList parameter specifies the domain names that should be excluded from address rewriting when the InternalAddress parameter contains a value that specifies multiple domain names. You can separate multiple domain names included with the ExceptionList parameter with commas. For more information about how to add values to or remove values from multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+The ExceptionList parameter specifies the domain names that should be excluded from address rewriting when the InternalAddress parameter contains a value that specifies multiple domain names. You can separate multiple domain names included with the ExceptionList parameter with commas. For more information about how to add values to or remove values from multivalued properties, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +131,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +153,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +169,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,10 +185,11 @@ You must set this parameter to $true if the InternalAddress parameter contains t
 Also, when you configure outbound-only address rewriting, you need to configure the rewritten email address as a proxy address on the affected recipients. For example, if laura@sales.contoso.com is rewritten to laura@contoso.com, the proxy address laura@contoso.com must be configured on Laura's mailbox. This allows replies and inbound messages to be delivered correctly.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +205,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,4 +230,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2390ee56-7d46-4584-aae8-fba8455e9e04.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-addressrewriteentry)

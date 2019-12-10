@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PowerShellVirtualDirectory [-Name] <String> [-BasicAuthentication <$true | $false>] [-Confirm]
- [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-RequireSSL <$true | $false>]
- [-Role <ClientAccess | Mailbox>] [-Server <ServerIdParameter>] [-WhatIf]
- [-WindowsAuthentication <$true | $false>] [<CommonParameters>]
+New-PowerShellVirtualDirectory [-Name] <String> [-BasicAuthentication <Boolean>] [-Confirm]
+ [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-RequireSSL <Boolean>]
+ [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>] [-WhatIf]
+ [-WindowsAuthentication <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,8 +34,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-PowerShellVirtualDirectory -Name "Contoso Certificates Required" -BasicAuthentication $false -WindowsAuthentication $false -CertificateAuthentication $true
 ```
 
@@ -51,6 +51,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -62,10 +63,11 @@ Accept wildcard characters: False
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the PowerShell virtual directory. The valid values are $true and $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +87,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +103,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +119,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +135,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -141,10 +147,11 @@ Accept wildcard characters: False
 The RequireSSL parameter specifies whether the PowerShell virtual directory should require that the client connection be made using Secure Sockets Layer (SSL). The valid values are $true and $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,10 +169,11 @@ The Role parameter species the configuration for the virtual directory. Valid va
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
 
 ```yaml
-Type: ClientAccess | Mailbox
+Type: VirtualDirectoryRole
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +197,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +213,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -215,10 +225,11 @@ Accept wildcard characters: False
 The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the PowerShell virtual directory. The valid values are $true and $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -243,4 +254,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0310d606-eb30-45b0-ae4b-14fa9ab19cc0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-powershellvirtualdirectory)

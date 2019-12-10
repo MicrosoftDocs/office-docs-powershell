@@ -39,16 +39,16 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
 ## DESCRIPTION
 The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the ResultIndex (hits in the current iteration) and ResultCount (hits for all iterations) properties of the data returned by the cmdlet.
 
-The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Office 365 Security & Compliance Center. For more information, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=708432).
+The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Office 365 Security & Compliance Center. For more information, see [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=708432).
 
-If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see Office 365 Management Activity API reference (https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference).
+If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Office 365 Management Activity API reference](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
 ```
 
@@ -56,8 +56,8 @@ This example searches the unified audit log for all events from May 1, 201812:00
 
 Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM" -RecordType ExchangeAdmin
 ```
 
@@ -66,8 +66,8 @@ This example searches the unified audit log for all Exchange admin events from 8
 >[!NOTE]
 > If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
 ```
 
@@ -76,15 +76,15 @@ This example searches the unified audit log for all events from May 1, 2018 to M
 > [!NOTE]
 > If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
 ```
 
 This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
 ```
 
@@ -104,6 +104,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -123,6 +124,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +142,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +158,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +174,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +194,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operations
-The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=708432).
+The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=708432).
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -206,6 +212,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,21 +225,39 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - AeD
 
+- AirInvestigation 
+
+- ApplicationAudit
+
 - AzureActiveDirectory
 
 - AzureActiveDirectoryAccountLogon
 
 - AzureActiveDirectoryStsLogon
 
+- Campaign
+
 - ComplianceDLPExchange
 
 - ComplianceDLPSharePoint
+
+- ComplianceDLPSharePointClassification
+
+- ComplianceSupervisionExchange 
+
+- CustomerKeyServiceEncryption 
 
 - CRM
 
 - DataCenterSecurityCmdlet
 
+- DataGovernance
+
+- DataInsightsRestApiAudit
+
 - Discovery
+
+- DLPEndpoint 
 
 - ExchangeAdmin
 
@@ -240,13 +265,61 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ExchangeItem
 
+- ExchangeItemAggregated
+
 - ExchangeItemGroup
 
+- HRSignal
+
+- HygieneEvent
+
+- InformationWorkerProtection
+
+- InformationBarrierPolicyApplication 
+
+- Kaizala
+
+- LabelExplorer
+
+- MailSubmission
+
+- MicrosoftFlow 
+
+- MicrosoftForms
+
+- MicrosoftTeamsAnalytics
+
 - MicrosoftTeams
+
+- MicrosoftTeamsAdmin
+
+- MicrosoftTeamsDevice 
+
+- MicrosoftTeamsAddOns
+
+- MicrosoftStream
+
+- MicrosoftTeamsSettingsOperation
+
+- MipAutoLabelSharePointItem
+
+- MipAutoLabelSharePointPolicyLocation
+
+- MIPLabel
+
+- OfficeNative
 
 - OneDrive
 
 - PowerBIAudit
+
+- Project
+
+- PowerAppsApp
+
+- PowerAppsPlan
+
+- Quarantine 
 
 - SecurityComplianceAlerts
 
@@ -256,9 +329,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePoint
 
+- SharePointCommentOperation
+
+- SharePointContentTypeOperation 
+
 - SharePointFileOperation
 
+- SharePointFieldOperation
+
 - SharePointListOperation
+
+- SharePointListItemOperation 
 
 - SharePointSharingOperation
 
@@ -270,11 +351,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Sway
 
+- SyntheticProbe
+
+- ThreatFinder
+
 - ThreatIntelligence
 
 - ThreatIntelligenceAtpContent
 
 - ThreatIntelligenceUrl
+
+- TeamsHealthcare
 
 - WorkplaceAnalytics
 
@@ -285,6 +372,7 @@ Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +388,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +410,7 @@ Type: UnifiedAuditSessionCommand
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -340,6 +430,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -355,6 +446,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -372,6 +464,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -398,4 +491,4 @@ Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData |
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/08cb17bb-0fcd-4664-b6f5-000b7f668336.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog)

@@ -22,26 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CustomIdentity
 ```
-Enable-OutlookAnywhere -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-IISAuthenticationMethods <MultiValuedProperty>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod>
+ -ExternalHostname <Hostname> -SSLOffloading <Boolean> [-IISAuthenticationMethods <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### DefaultIdentity
 ```
-Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false>
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod>
+ -ExternalHostname <Hostname> -SSLOffloading <Boolean>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -57,22 +57,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-OutlookAnywhere -Server:Server01 -ExternalHostname:mail.contoso.com -ClientAuthenticationMethod:Ntlm -SSLOffloading:$true
 ```
 
 This example enables the server Server01 for Outlook Anywhere. The external host name is set to mail.contoso.com, both Basic and NTLM authentication are used, and SSL offloading is set to $true.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-OutlookAnywhere -DefaultAuthenticationMethod:Ntlm -ExternalHostname:mail.contoso.com -SSLOffloading:$false
 ```
 
 This example enables Outlook Anywhere on the server that has the Client Access role installed. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is specified as mail.contoso.com, and the DefaultAuthenticationMethod parameter is set to NTLM.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
 ```
 
@@ -92,10 +92,11 @@ This parameter must be specified if you don't use the DefaultAuthenticationMetho
 Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -115,10 +116,11 @@ When you set an authentication value by using the DefaultAuthenticationMethod pa
 If the DefaultAuthenticationMethod parameter is specified, neither the ClientAuthenticationMethod nor the IISAuthenticationMethods parameter can be used.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: DefaultIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -134,6 +136,7 @@ Type: Hostname
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -145,10 +148,11 @@ Accept wildcard characters: False
 The SSLOffloading parameter specifies whether the Client Access server requires Secure Sockets Layer (SSL). This value should be set only to $true when an SSL hardware solution is running in front of the Client Access server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -168,6 +172,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +188,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +214,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +236,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -249,13 +257,14 @@ If you have a proxy server between the client and the Client Access server that'
 
 If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
 
-To learn more about Extended Protection for Authentication, see Understanding Extended Protection for Authentication.
+To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +286,7 @@ Type: MultiValuedProperty
 Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +310,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +326,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -339,4 +351,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/e5e30ed6-cc78-4e0c-b200-3160ccb77deb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/enable-outlookanywhere)

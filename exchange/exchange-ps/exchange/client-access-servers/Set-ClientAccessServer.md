@@ -29,12 +29,12 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-CleanUpInvalidAlternateServiceAccountCredentials]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-IsOutOfService <$true | $false>]
+ [-IsOutOfService <Boolean>]
  [-RemoveAlternateServiceAccountCredentials]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -47,12 +47,12 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-AutoDiscoverSiteScope <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>]
+ [-IrmLogEnabled <Boolean>]
  [-IrmLogMaxAge <EnhancedTimeSpan>]
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-IsOutOfService <$true | $false>]
+ [-IsOutOfService <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -61,8 +61,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ClientAccessServer -Identity "MBX-01" -AutoDiscoverServiceInternalUri "https://mbx01.contoso.com/autodiscover/autodiscover.xml" -AutoDiscoverSiteScope "Mail"
 ```
 
@@ -86,6 +86,7 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -103,6 +104,7 @@ Type: PSCredential[]
 Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +120,7 @@ Type: ClientAccessArrayIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +136,7 @@ Type: Uri
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +158,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +194,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +210,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -216,10 +224,11 @@ This parameter is available or functional only in Exchange Server 2010.
 The IrmLogEnabled parameter specifies whether logging is enabled for Information Rights Management (IRM). Valid values are $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +250,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +284,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +318,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +336,7 @@ Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +354,7 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -356,6 +370,7 @@ Type: SwitchParameter
 Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -371,6 +386,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -395,4 +411,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ee636e80-7111-4d99-8d48-db200d1f78d3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessserver)

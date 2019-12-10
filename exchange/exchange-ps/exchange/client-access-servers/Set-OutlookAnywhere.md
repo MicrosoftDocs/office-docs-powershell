@@ -22,22 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
- [-ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
+ [-ClientAuthenticationMethod <AuthenticationMethod>]
  [-Confirm]
- [-DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
+ [-DefaultAuthenticationMethod <AuthenticationMethod>]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-ExternalClientsRequireSsl <$true | $false>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalClientAuthenticationMethod <AuthenticationMethod>]
+ [-ExternalClientsRequireSsl <Boolean>]
  [-ExternalHostname <Hostname>]
  [-IISAuthenticationMethods <MultiValuedProperty>]
- [-InternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-InternalClientsRequireSsl <$true | $false>]
+ [-InternalClientAuthenticationMethod <AuthenticationMethod>]
+ [-InternalClientsRequireSsl <Boolean>]
  [-InternalHostname <String>]
  [-Name <String>]
- [-SSLOffloading <$true | $false>]
+ [-SSLOffloading <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -46,36 +46,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OutlookAnywhere -Identity:CAS01\Rpc (Default Web Site) -ClientAuthenticationMethod:Ntlm
 ```
 
 In Exchange 2010, this example sets the client authentication method to NTLM for the /rpc virtual directory on the Client Access server CAS01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-OutlookAnywhere -Identity: "EXCH1\rpc (Default Web Site)" -ExternalClientAuthenticationMethod NTLM
 ```
 
 This example sets the client authentication method to NTLM for the Outlook Anywhere virtual directory on the server named EXCH1.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -SSLOffloading $false -InternalClientsRequireSsl $true -ExternalClientsRequireSsl $true
 ```
 
 This example sets the SSLOffloading parameter to $false for the Outlook Anywhere virtual directory on the server named EXCH1. This setting informs Outlook Anywhere to expect no SSL decryption between clients and the server, and enables the Require SSL value on the virtual directory. Because SSL is now required for Outlook Anywhere connections, we need to configure internal and external clients to use SSL.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods NTLM
 ```
 
 This example sets the authentication method for the Outlook Anywhere virtual directory setting in IIS to NTLM.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods Basic,NTLM
 ```
 
@@ -99,6 +99,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -118,10 +119,11 @@ The ClientAuthenticationMethod parameter specifies the authentication method tha
 Although you can use this parameter to set only one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +143,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,10 +163,11 @@ The DefaultAuthenticationMethod parameter specifies the default authentication m
 You can't use this parameter with the ExternalClientAuthenticationMethod, InternalClientAuthenticationMethod and IISAuthenticationMethods parameters.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +183,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +209,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +229,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,10 +251,11 @@ Note:
 If you use the value Allow or Require and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -267,10 +275,11 @@ The ExternalClientAuthenticationMethod parameter specifies the authentication me
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -288,10 +297,11 @@ The ExternalClientsRequireSsl parameter specifies whether external Outlook Anywh
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +317,7 @@ Type: Hostname
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +343,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -351,10 +363,11 @@ The InternalClientAuthenticationMethod parameter specifies the authentication me
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -372,10 +385,11 @@ The InternalClientsRequireSsl parameter specifies whether internal Outlook Anywh
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -391,6 +405,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +421,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -427,10 +443,11 @@ You need to use the value $true for this parameter if you don't require SSL conn
 The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -446,6 +463,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -470,4 +488,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/85806a0c-0e98-4aba-b103-8ec128dd4222.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-outlookanywhere)

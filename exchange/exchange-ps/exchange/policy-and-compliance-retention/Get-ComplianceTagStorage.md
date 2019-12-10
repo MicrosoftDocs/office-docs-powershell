@@ -29,8 +29,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ComplianceTagStorage
 ```
 
@@ -54,6 +54,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -76,4 +77,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/18d8ecc1-8084-4905-bc6a-a1f5199d280b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-compliancetagstorage)

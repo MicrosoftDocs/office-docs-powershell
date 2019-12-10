@@ -30,15 +30,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PolicyTipConfig en\NotifyOnly "This message contains content that is restricted by Contoso company policy."
 ```
 
 This example modifies the custom English Policy Tip with the action value NotifyOnly. The text of this custom Policy Tip is changed to the following value: "This message contains content that is restricted by Contoso company policy."
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PolicyTipConfig -Locale es | Set-PolicyTipConfig -Value "Este mensaje contiene contenido que está restringida por la política de Contoso."
 ```
 
@@ -62,6 +62,7 @@ Type: PolicyTipConfigIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -81,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -152,4 +157,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1c643de6-e485-4f42-a202-40960764faeb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-policytipconfig)

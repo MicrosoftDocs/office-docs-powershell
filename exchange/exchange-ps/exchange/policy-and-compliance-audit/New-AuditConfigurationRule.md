@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AuditConfigurationRule -AuditOperation <MultiValuedProperty>
- -Workload <None | Exchange | SharePoint | Intune | OneDriveForBusiness | PublicFolder | SharePointOnPremises | ExchangeOnPremises | AuditAlerting | Skype | ModernGroup>
+ -Workload <Workload>
  [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -31,8 +31,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-AuditConfigurationRule -Workload SharePoint -AuditOperation Delete
 ```
 
@@ -80,6 +80,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -99,10 +100,11 @@ The Workload parameter specifies where the audit configuration policy applies. V
 - SharePoint
 
 ```yaml
-Type: None | Exchange | SharePoint | Intune | OneDriveForBusiness | PublicFolder | SharePointOnPremises | ExchangeOnPremises | AuditAlerting | Skype | ModernGroup
+Type: Workload
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -122,6 +124,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +140,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -174,4 +179,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b9184a6b-6a5e-400f-926e-96f6e0a166fa.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/new-auditconfigurationrule)

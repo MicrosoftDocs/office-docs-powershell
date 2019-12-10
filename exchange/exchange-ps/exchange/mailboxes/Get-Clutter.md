@@ -29,8 +29,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Clutter -Identity "Constancia Pena"
 ```
 
@@ -66,6 +66,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -88,4 +89,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/e9dbe496-f4f5-4632-893a-2a6b83aaf2dc.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-clutter)
