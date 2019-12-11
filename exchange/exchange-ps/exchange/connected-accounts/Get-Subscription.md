@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-Subscription [[-Identity] <AggregationSubscriptionIdParameter>]
- [-AggregationType <Aggregation | Mirrored | Migration | PeopleConnection | All>] [-Confirm] [-IncludeReport]
+ [-AggregationType <AggregationType>] [-Confirm] [-IncludeReport]
  [-Mailbox <MailboxIdParameter>] [-ResultSize <Unlimited>]
- [-SubscriptionType <Unknown | Pop | DeltaSyncMail | IMAP | AllEMail | Facebook | LinkedIn | SinaWeibo | Google | Yahoo | Twitter | Skype | AbchType | AllThatSupportSendAs | AllThatSupportPolicyInducedDeletion | AllThatSupportSendAsAndPeopleConnect | All>]
+ [-SubscriptionType <AggregationSubscriptionType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,8 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Subscription -Mailbox "Ayla Kol"
 ```
 
@@ -58,10 +58,11 @@ The AggregationType parameter filters the results by type. The acceptable values
 - PeopleConnection
 
 ```yaml
-Type: Aggregation | Mirrored | Migration | PeopleConnection | All
+Type: AggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +104,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -117,6 +120,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +172,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,10 +206,11 @@ The SubscriptionType parameter filters the results based on the type of subscrip
 - Unknown
 
 ```yaml
-Type: Unknown | Pop | DeltaSyncMail | IMAP | AllEMail | Facebook | LinkedIn | SinaWeibo | Google | Yahoo | Twitter | Skype | AbchType | AllThatSupportSendAs | AllThatSupportPolicyInducedDeletion | AllThatSupportSendAsAndPeopleConnect | All
+Type: AggregationSubscriptionType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -219,6 +226,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,4 +251,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a9c74996-557b-4437-9aeb-658449d4d012.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-subscription)

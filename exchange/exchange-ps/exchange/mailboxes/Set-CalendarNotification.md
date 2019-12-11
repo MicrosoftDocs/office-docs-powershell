@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-CalendarNotification [-Identity] <MailboxIdParameter> [-CalendarUpdateNotification <$true | $false>]
- [-CalendarUpdateSendDuringWorkHour <$true | $false>] [-Confirm] [-DailyAgendaNotification <$true | $false>]
+Set-CalendarNotification [-Identity] <MailboxIdParameter> [-CalendarUpdateNotification <Boolean>]
+ [-CalendarUpdateSendDuringWorkHour <Boolean>] [-Confirm] [-DailyAgendaNotification <Boolean>]
  [-DailyAgendaNotificationSendTime <TimeSpan>] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-MeetingReminderNotification <$true | $false>] [-MeetingReminderSendDuringWorkHour <$true | $false>]
+ [-MeetingReminderNotification <Boolean>] [-MeetingReminderSendDuringWorkHour <Boolean>]
  [-NextDays <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,22 +35,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CalendarNotification -Identity "tony@contoso.com" -CalendarUpdateNotification $true
 ```
 
 This example enables calendar updates to be sent in text messages to the user Tony Smith.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-CalendarNotification -Identity "TonySmith" -CalendarUpdateNotification $true -MeetingReminderNotification $true -MeetingReminderSendDuringWorkHour $true
 ```
 
 This example enables calendar updates and meeting reminders to be sent in text messages to the user Tony Smith.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-CalendarNotification -Identity contoso\tonysmith -DailyAgendaNotification $true
 ```
 
@@ -86,6 +86,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -97,10 +98,11 @@ Accept wildcard characters: False
 The CalendarUpdateNotification parameter specifies whether calendar notifications are enabled for the user.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -112,10 +114,11 @@ Accept wildcard characters: False
 The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar notifications are sent during working hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +138,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,10 +150,11 @@ Accept wildcard characters: False
 The DailyAgendaNotification parameter specifies whether a daily agenda should be sent to the user's mobile phone.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +174,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +192,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +208,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -212,10 +220,11 @@ Accept wildcard characters: False
 The MeetingReminderNotification parameter specifies whether meeting reminders are sent to the user's mobile phone.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -227,10 +236,11 @@ Accept wildcard characters: False
 The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminders are only sent during working hours.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +256,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -261,6 +272,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -285,4 +297,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fc595e4d-abaa-450e-8803-6982b8a039ac.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarnotification)

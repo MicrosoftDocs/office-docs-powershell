@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Settings
 ```
-Get-Notification [-Settings] -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>
+Get-Notification [-Settings] -ProcessType <AsyncOperationType>
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-Summary]
 
 ### Filter
 ```
-Get-Notification [-ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
+Get-Notification [-ProcessType <AsyncOperationType>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -43,22 +43,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Notification
 ```
 
 This example displays a summary list of all notification events.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Notification -ProcessType Migration
 ```
 
 This example displays a summary list of all mailbox move and migration notification events.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf | Format-List
 ```
 
@@ -80,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -97,6 +98,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +114,7 @@ Type: EwsStoreObjectIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -133,10 +136,11 @@ The ProcessType parameter filters the results by the type of notification event.
 - Migration
 
 ```yaml
-Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
+Type: AsyncOperationType
 Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -145,10 +149,11 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
+Type: AsyncOperationType
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: Unlimited
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +187,7 @@ Type: ExDateTime
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -198,6 +205,7 @@ Type: SwitchParameter
 Parameter Sets: Identity, Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -222,4 +230,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/702ee419-4521-4c89-a3ff-75b1f01dd037.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-notification)

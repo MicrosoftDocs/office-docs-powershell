@@ -1,7 +1,7 @@
 ﻿---
 external help file: Microsoft.Exchange.UM.TroubleshootingTool.dll-Help.xml
 Module Name: Microsoft.Exchange.UM.TroubleshootingTool.dll
-online version: https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx
+online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/Test-ExchangeUMCallFlow
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 schema: 2.0.0
 author: chrisda
@@ -13,7 +13,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 # Test-UMConnectivity
 
 ## SYNOPSIS
-**Note**: The Test-ExchangeUMCallFlow cmdlet (the Exchange UM Troubleshooting Tool) isn't included in Microsoft Exchange. You need to download the Exchange UM Troubleshooting Tool from the Microsoft Download Center. For more information, see [Unified Messaging Troubleshooting Tool](https://go.microsoft.com/fwlink/p/?linkId=182625).
+**Note**: The Test-ExchangeUMCallFlow cmdlet (the Exchange UM Troubleshooting Tool) isn't included in Microsoft Exchange. You need to download the tool from the Microsoft Download Center. For more information, see [Unified Messaging Troubleshooting Tool](https://go.microsoft.com/fwlink/p/?linkId=182625).
 
 Use the Test-ExchangeUMCallFlow cmdlet to test call flow between the Microsoft Exchange Unified Messaging Call Router service (frontend), the Microsoft Exchange Unified Messaging service (backend), VoIP gateways, IP PBXs, Session Initiation Protocol (SIP) servers and Lync Server or Skype for Business servers. The Test-ExchangeUMCallFlow cmdlet can be used to diagnose configuration errors found in telephony components, Unified Messaging settings in Exchange 2010 SP1 or later, and connectivity issues between on-premises and hybrid Unified Messaging deployments.
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Set1
 ```
-Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <Unsecured | SIPSecured | Secured>
+Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <UMVoIPSecurityType>
  <CommonParameters>]
 ```
 
@@ -50,22 +50,22 @@ When you run the cmdlet, it states the reason and possible solutions for issues 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
 ```
 
 This example uses Gateway mode and tests the call flow in a non-Skype for Business environment. This example sets the VoIP security mode to Unsecured, uses the IP address 10.1.1.1 as the next hop, and includes an extension number in the diversion information.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tony@contoso.com -CalledParty david@contoso.com -Credential $get
 ```
 
 This example uses SIPClient mode and tests the call flow with a Secured UM dial plan in an environment that contains servers running Skype for Business. By default, when you run the cmdlet, the cmdlet uses the credentials of the user currently logged onto the computer.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Secured -CertificateThumbprint a909502dd82ae41433e6f83886b00d4277a32a7b -NextHop gateway.contoso.com -HuntGroup 10000 -Diversion "History-Info: <sip:10001@10.176.10.194;user=phone?Reason=SIP%3Bcause%3D487%3Btext%3DTimeout>;index=1,<sip:10000@10.176.10.194;user=phone?Reason=SIP>;index=1.1"
 ```
 
@@ -85,6 +85,7 @@ Type: Gateway | SIPClient
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +101,7 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +141,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -161,6 +165,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -178,6 +183,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +201,7 @@ Type: PSCredential
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -210,6 +217,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -227,10 +235,11 @@ The VoIPSecurity parameter specifies the security mode when using the cmdlet in 
 - Secured (TLS/SRTP)
 
 ```yaml
-Type: Unsecured | SIPSecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -252,5 +261,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx)

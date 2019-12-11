@@ -23,25 +23,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ManagedContentSettings [-Identity] <ELCContentSettingsIdParameter>
  [-AddressForJournaling <RecipientIdParameter>] [-AgeLimitForRetention <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-JournalingEnabled <$true | $false>] [-LabelForJournaling <String>]
- [-MessageFormatForJournaling <UseMsg | UseTnef>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>] [-JournalingEnabled <Boolean>] [-LabelForJournaling <String>]
+ [-MessageFormatForJournaling <JournalingFormat>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
  [-Name <String>]
- [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-TriggerForRetention <WhenDelivered | WhenMoved>] [-WhatIf]
+ [-RetentionAction <RetentionAction>]
+ [-RetentionEnabled <Boolean>] [-TriggerForRetention <RetentionDateType>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Managed content settings are settings that you apply to managed folders to control the lifespan of items in users' mailboxes. For more information about managed content settings, see Messaging Records Management.
+Managed content settings are settings that you apply to managed folders to control the lifespan of items in users' mailboxes. For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see New-ManagedContentSettings.
+Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see [New-ManagedContentSettings](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedcontentsettings).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ManagedContentSettings -Identity MyManagedContentSettings -AddressForJournaling MySmtpAddress@contoso.com
 ```
 
@@ -57,6 +57,7 @@ Type: ELCContentSettingsIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -84,6 +85,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +103,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -146,10 +151,11 @@ Accept wildcard characters: False
 The JournalingEnabled parameter specifies that journaling is enabled when it's set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +171,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -180,10 +187,11 @@ The MessageFormatForJournaling parameter specifies the format in which an item s
 - UseTnef Outlook MAPI format
 
 ```yaml
-Type: UseMsg | UseTnef
+Type: JournalingFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +207,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +223,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -237,10 +247,11 @@ The RetentionAction parameter specifies one of the following actions to take whe
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
+Type: RetentionAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -252,10 +263,11 @@ Accept wildcard characters: False
 The RetentionEnabled parameter specifies that retention is enabled when it's set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -275,10 +287,11 @@ Valid values include:
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: WhenDelivered | WhenMoved
+Type: RetentionDateType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -294,6 +307,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -318,4 +332,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/25a7d9d2-97f1-41aa-b24e-0c95cb0aded1.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-managedcontentsettings)

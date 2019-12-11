@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
- [-Action <Block | Replace | Allow | DynamicDelivery>] [-ActionOnError <$true | $false>]
- [-AdminDisplayName <String>] [-Confirm] [-Enable <$true | $false>] [-Redirect <$true | $false>]
+ [-Action <SafeAttachmentAction>] [-ActionOnError <Boolean>]
+ [-AdminDisplayName <String>] [-Confirm] [-Enable <Boolean>] [-Redirect <Boolean>]
  [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,8 +34,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
@@ -59,6 +59,7 @@ Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -78,10 +79,11 @@ The Action parameter specifies the action for the Safe Attachments policy. Valid
 The results of all actions are available in message trace.
 
 ```yaml
-Type: Block | Replace | Allow | DynamicDelivery
+Type: SafeAttachmentAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -97,10 +99,11 @@ The ActionOnError parameter specifies the error handling option for Safe Attachm
 - $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +119,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -150,10 +155,11 @@ The Enable parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -169,10 +175,11 @@ The Redirect parameter specifies whether to send detected malware attachments to
 - $false: Malware attachments aren't sent to another email address. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +195,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +211,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -225,4 +234,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/8f116c29-438d-45f7-bc43-d73e9d16057b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-safeattachmentpolicy)

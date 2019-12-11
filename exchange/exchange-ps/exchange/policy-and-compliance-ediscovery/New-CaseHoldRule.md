@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,15 +31,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-CaseHoldRule -Name "2016 Budget Spreadsheets" -Policy "Internal Company Policy" -ContentMatchQuery "filename:2016 budget filetype:xlsx"
 ```
 
 This example creates a new case hold rule named 2016 Budget Spreadsheets and adds it to the existing case hold policy named "Internal Company Policy". The rule applies to Excel worksheets that contain the phrase 2016 budget, such as "2016 budget planning.xlsx" and "2016 budget review.xlsx"
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
 ```
 
@@ -55,6 +55,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -76,6 +77,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +131,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -142,10 +147,11 @@ The Disabled parameter specifies whether the case hold rule is enabled or disabl
 - $false: The rule is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +167,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -183,4 +190,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/f477b3fe-a293-4803-9af5-ae451b24057f.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/new-caseholdrule)

@@ -29,7 +29,7 @@ Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
  [-Overwrite]
  [-Parameters <String[]>]
  [-PSSnapinName <String>]
- [-Type <Cmdlet | Script | ApplicationPermission | All>]
+ [-Type <ManagementRoleEntryType>]
  [-UnScopedTopLevel]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -55,29 +55,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters "Identity","Anr","Server","Filter"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server and Filter parameters are added to the new role entry.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
 ```
 
 This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters "Department","Location" -UnScopedTopLevel
 ```
 
@@ -97,6 +97,7 @@ Type: RoleEntryIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -112,6 +113,7 @@ Type: RoleEntryIdParameter
 Parameter Sets: ParentRoleEntry
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -127,6 +129,7 @@ Type: RoleIdParameter
 Parameter Sets: ParentRoleEntry
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +167,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +185,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +201,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -210,6 +217,7 @@ Type: String[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +235,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -238,10 +247,11 @@ Accept wildcard characters: False
 The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
 
 ```yaml
-Type: Cmdlet | Script | ApplicationPermission | All
+Type: ManagementRoleEntryType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -265,6 +275,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +291,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -304,4 +316,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ece406f2-a6d6-4b5d-94f0-2819a7672088.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/add-managementroleentry)

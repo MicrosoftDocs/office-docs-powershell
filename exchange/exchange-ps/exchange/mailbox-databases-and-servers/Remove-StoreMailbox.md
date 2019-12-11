@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <Disabled | SoftDeleted>
+Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <MailboxStateParameter>
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -39,22 +39,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-StoreMailbox -Database MBD01 -Identity Ayla -MailboxState SoftDeleted
 ```
 
 This example purges the soft-deleted mailbox for Ayla Kol from mailbox database MBD01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
 ```
 
 This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -match "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
 ```
 
@@ -76,6 +76,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -108,10 +110,11 @@ The MailboxState parameter specifies the mailbox state on the source mailbox dat
 - SoftDeleted
 
 ```yaml
-Type: Disabled | SoftDeleted
+Type: MailboxStateParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +134,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +150,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -170,4 +175,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d5cb00f2-f475-45cf-b72e-0962e5eed070.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/remove-storemailbox)

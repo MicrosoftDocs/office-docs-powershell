@@ -133,29 +133,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Connect-Mailbox -Database "Mailbox Database" -Identity "John Evans"
 ```
 
 This example connects John Evans' disconnected mailbox. The example doesn't specify a user to connect the mailbox to, so the command attempts to find a uniquely matched user object.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Connect-Mailbox -Identity "John Evans" -Database "MBXDB02" -LinkedDomainController FabrikamDC01 -LinkedMasterAccount john@fabrikam.com
 ```
 
 This example connects a linked mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Connect-Mailbox -Identity "CAR001" -Database "MBXResourceDB" -Equipment -User "CAR001"
 ```
 
 This example connects an equipment mailbox.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Connect-Mailbox -Identity "ConfRm212" -Database "MBXResourceDB" -Room -User "Conference Room 212"
 ```
 
@@ -179,6 +179,7 @@ Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -202,6 +203,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 2
 Default value: None
@@ -219,6 +221,7 @@ Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -236,6 +239,7 @@ Type: Fqdn
 Parameter Sets: Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -261,6 +265,7 @@ Type: UserIdParameter
 Parameter Sets: Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -278,6 +283,7 @@ Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -295,6 +301,7 @@ Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -310,6 +317,7 @@ Type: SwitchParameter
 Parameter Sets: ValidateOnly
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -333,6 +341,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -356,6 +365,7 @@ Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -385,6 +395,7 @@ Type: String
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -400,6 +411,7 @@ Type: SwitchParameter
 Parameter Sets: User
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -415,6 +427,7 @@ Type: SwitchParameter
 Parameter Sets: User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -434,6 +447,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -449,6 +463,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -464,6 +479,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -481,6 +497,7 @@ Type: PSCredential
 Parameter Sets: Linked
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -496,6 +513,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +529,7 @@ Type: SwitchParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -534,6 +553,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -559,6 +579,7 @@ Type: UserIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -574,6 +595,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -598,4 +620,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/48757062-abe5-4c61-acc5-5884569c1d8b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/connect-mailbox)

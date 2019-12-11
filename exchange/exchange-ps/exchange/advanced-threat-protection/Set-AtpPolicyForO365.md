@@ -26,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
- [-AllowClickThrough <$true | $false>]
+ [-AllowClickThrough <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
- [-EnableATPForSPOTeamsODB <$true | $false>]
- [-EnableSafeLinksForClients <$true | $false>]
- [-TrackClicks <$true | $false>]
+ [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeLinksForClients <Boolean>]
+ [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -44,8 +44,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
 ```
 
@@ -61,6 +61,7 @@ Type: AtpPolicyForO365IdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: 1
 Default value: None
@@ -76,10 +77,11 @@ The AllowClickThrough parameter specifies whether to allow users to click throug
 - $false: Users aren't allowed to click through to the original URL.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -129,10 +133,11 @@ The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for Share
 - $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -140,18 +145,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForClients
-The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 ProPlus clients. Valid values are:
+### -EnableSafeLinksForO365Clients
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
-- $true: Safe Links are enabled for Office clients.
+- $true: Safe Links are enabled for Office 365 apps. This is the default value.
 
-- $false: Safe Links are disabled for Office clients. This is the default value.
+- $false: Safe Links are disabled for Office 365 apps.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -167,10 +173,11 @@ The TrackClicks parameter specifies whether to track user clicks related to bloc
 - $false: User clicks aren't tracked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +193,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -208,4 +216,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/60b0d121-2060-4f29-be3f-e1e4ad7805b8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-atppolicyforo365)

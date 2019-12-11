@@ -22,6 +22,9 @@ New-TeamChannel -GroupId <String> -DisplayName <String> [-Description <String>] 
 
 ## DESCRIPTION
 
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+
 ## EXAMPLES
 
 ### Example 1
@@ -55,8 +58,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 Channel display name.
-Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ?
-+ | ' "
+Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ? + | ' "
 
 ```yaml
 Type: String

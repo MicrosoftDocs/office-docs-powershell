@@ -12,7 +12,7 @@ ms.reviewer:
 # Reset-CsPoolRegistrarState
 
 ## SYNOPSIS
-Resets the Registrar and Windows fabric services for the specified Registrar pool.
+Resets the Registrar and Windows Fabric services for the specified Registrar pool.
 This cmdlet was introduced in Lync Server 2013.
 
 
@@ -64,7 +64,7 @@ Reset-CsPoolRegistrarState -PoolFqdn "atl-cs-001.litwareinc.com" -ResetType Quor
 In Example 3, a quorum loss recovery reset is carried on the pool `atl-cs-001.litwareinc.com`.
 A quorum loss recovery is reset is typically used when the number of active Front End servers in a pool falls below the quorum state (that is, when fewer than 85% of the Front End servers in a pool are currently active).
 Note that only those services that are in a quorum loss will have to reload user data from the backup store.
-Other services will be unaffected by this command/
+Other services will be unaffected by this command.
 
 
 ### -------------------------- Example 4 --------------------------
@@ -81,7 +81,7 @@ Because of that, it is recommended that you first try to restart the pool using 
 If that fails, please consult Microsoft support personnel before using the FullReset option.
 
 
-### -------------------------- Example 4 --------------------------
+### -------------------------- Example 5 --------------------------
 ```
 Reset-CsPoolRegistrarState -PoolFqdn "atl-cs-001.litwareinc.com" -ResetType FullReset -NoReStart
 ```
@@ -201,14 +201,14 @@ Accept wildcard characters: False
 ### -ResetType
 Type of reset to be performed.
 Allowed values are:
+<ul>
+<li>ServiceReset. The RtcSrv and FabricHostSvc services are stopped and restarted.
+A service reset will be performed if the ResetType is not specified.</li>
 
-ServiceReset - The RtcSrv and FabricHostSvc services are stopped and restarted.
-A service reset will be performed if the ResetType is not specified.
+<li>QuorumLossRecovery. Reloads user data from the backup store for any routing groups currently in quorum loss.
+(A quorum loss occurs when neither a database nor its replicas are available.) Data not yet written to the database could be lost when you do this type of reset.</li>
 
-QuorumLossRecovery - Reloads user data from the backup store for any routing groups currently in quorum loss.
-(A quorum loss occurs when neither a database nor its replicas are available.) Data not yet written to the database could be lost when you do this type of reset.
-
-FullReset - performs the same type of reset as QuorumLossRecovery but, in addition, rebuilds the local Skype for Business Server databases.
+<li> FullReset. Performs the same type of reset as QuorumLossRecovery but, in addition, rebuilds the local Skype for Business Server databases.
 This type of reset can be potentially long and resource-intensive.
 
 Using the FullReset value can cause previously disabled nodes to be reenabled.
@@ -217,11 +217,11 @@ For example, if you use the FullReset value while one of the Front End Servers i
 Using the FullReset value when attempting to restart a pool will sometimes result in failure and the pool will not actually restart.
 Because of that, it is recommended that you first try to restart the pool using one of the other ResetType options.
 If that fails, please consult Microsoft support personnel before using the FullReset option.
-Typically FullReset is only used when changing a topology from a pool with a single Front End server to a pool with multiple Front End servers.
+Typically FullReset is only used when changing a topology from a pool with a single Front End server to a pool with multiple Front End servers.</li>
 
-MachineStateRemoved -- Removes the specified server from the pool.
-This type of reset should be used only when the server in question (or its databases) have been permanently lost.
-
+<li>MachineStateRemoved. Removes the specified server from the pool.
+This type of reset should be used only when the server in question (or its databases) have been permanently lost.</li>
+</ul>
 
 ```yaml
 Type: PoolResetType
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

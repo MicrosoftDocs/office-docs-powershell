@@ -22,34 +22,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
- [-AddressBookPolicyRoutingEnabled <$true | $false>]
- [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <$true | $false>]
- [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <$true | $false>]
- [-ClearCategories <$true | $false>]
+ [-AddressBookPolicyRoutingEnabled <Boolean>]
+ [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <Boolean>]
+ [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <Boolean>]
+ [-ClearCategories <Boolean>]
  [-Confirm]
- [-ConvertDisclaimerWrapperToEml <$true | $false>]
+ [-ConvertDisclaimerWrapperToEml <Boolean>]
  [-DiagnosticsAggregationServicePort <Int32>]
  [-DomainController <Fqdn>]
- [-DSNConversionMode <UseExchangeDSNs | PreserveDSNBody | DoNotConvert>]
- [-ExternalDelayDsnEnabled <$true | $false>]
+ [-DSNConversionMode <DSNConversionOption>]
+ [-ExternalDelayDsnEnabled <Boolean>]
  [-ExternalDsnDefaultLanguage <CultureInfo>]
- [-ExternalDsnLanguageDetectionEnabled <$true | $false>]
+ [-ExternalDsnLanguageDetectionEnabled <Boolean>]
  [-ExternalDsnMaxMessageAttachSize <ByteQuantifiedSize>]
  [-ExternalDsnReportingAuthority <SmtpDomain>]
- [-ExternalDsnSendHtml <$true | $false>]
+ [-ExternalDsnSendHtml <Boolean>]
  [-ExternalPostmasterAddress <SmtpAddress>]
  [-Force]
  [-GenerateCopyOfDSNFor <MultiValuedProperty>]
- [-HeaderPromotionModeSetting <NoCreate | MayCreate | MustCreate>]
- [-InternalDelayDsnEnabled <$true | $false>]
+ [-HeaderPromotionModeSetting <HeaderPromotionMode>]
+ [-InternalDelayDsnEnabled <Boolean>]
  [-InternalDsnDefaultLanguage <CultureInfo>]
- [-InternalDsnLanguageDetectionEnabled <$true | $false>]
+ [-InternalDsnLanguageDetectionEnabled <Boolean>]
  [-InternalDsnMaxMessageAttachSize <ByteQuantifiedSize>]
  [-InternalDsnReportingAuthority <SmtpDomain>]
- [-InternalDsnSendHtml <$true | $false>]
+ [-InternalDsnSendHtml <Boolean>]
  [-InternalSMTPServers <MultiValuedProperty>]
  [-JournalingReportNdrTo <SmtpAddress>]
- [-LegacyJournalingMigrationEnabled <$true | $false>]
+ [-LegacyJournalingMigrationEnabled <Boolean>]
  [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
  [-MaxAllowedAgentGeneratedMessageDepthPerAgent <UInt32>]
  [-MaxDumpsterSizePerDatabase <ByteQuantifiedSize>]
@@ -61,25 +61,25 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxSendSize <Unlimited>]
  [-OrganizationFederatedMailbox <SmtpAddress>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
- [-RejectMessageOnShadowFailure <$true | $false>]
- [-Rfc2231EncodingEnabled <$true | $false>]
+ [-RejectMessageOnShadowFailure <Boolean>]
+ [-Rfc2231EncodingEnabled <Boolean>]
  [-SafetyNetHoldTime <EnhancedTimeSpan>]
  [-ShadowHeartbeatFrequency <EnhancedTimeSpan>]
  [-ShadowHeartbeatRetryCount <Int32>]
  [-ShadowHeartbeatTimeoutInterval <EnhancedTimeSpan>]
  [-ShadowMessageAutoDiscardInterval <EnhancedTimeSpan>]
- [-ShadowMessagePreferenceSetting <PreferRemote | LocalOnly | RemoteOnly>]
- [-ShadowRedundancyEnabled <$true | $false>]
+ [-ShadowMessagePreferenceSetting <ShadowMessagePreference>]
+ [-ShadowRedundancyEnabled <Boolean>]
  [-ShadowResubmitTimeSpan <EnhancedTimeSpan>]
- [-SmtpClientAuthenticationDisabled <$true | $false>]
+ [-SmtpClientAuthenticationDisabled <Boolean>]
  [-SupervisionTags <MultiValuedProperty>]
  [-TLSReceiveDomainSecureList <MultiValuedProperty>]
  [-TLSSendDomainSecureList <MultiValuedProperty>]
  [-TransportRuleAttachmentTextScanLimit <ByteQuantifiedSize>]
- [-VerifySecureSubmitEnabled <$true | $false>]
- [-VoicemailJournalingEnabled <$true | $false>]
+ [-VerifySecureSubmitEnabled <Boolean>]
+ [-VoicemailJournalingEnabled <Boolean>]
  [-WhatIf]
- [-Xexch50Enabled <$true | $false>]
+ [-Xexch50Enabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -88,15 +88,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
 ```
 
 This example configures the Exchange organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the postmaster email account.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 ```
 
@@ -114,6 +114,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -127,10 +128,11 @@ The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolv
 The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -148,10 +150,11 @@ Valid input for this parameter is $true or $false. The default value is $false.
 When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $true, the loop is logged in the message tracking log. When this parameter is set to $false, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepthPerAgent and MaxAllowedAgentGeneratedMessageDepth parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,10 +172,11 @@ Valid input for this parameter is $true or $false. The default value is $false.
 When Exchange detects an agent-generated message loop, the loop is stopped. When this parameter is set to $false, the loop is logged in the message tracking log. When this parameter is set to $true, the message is rejected with an NDR when the loop generates the number of messages specified by the MaxAllowedAgentGeneratedMessageDepth and MaxAllowedAgentGeneratedMessageDepthPerAgent parameters.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,10 +188,11 @@ Accept wildcard characters: False
 The ClearCategories parameter keeps or removes Microsoft Outlook message categories during content conversion. Valid input for this parameter is $true or $false. The default value is $true. This means that by default, Outlook message categories are removed during content conversion.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +212,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -228,10 +234,11 @@ When a Transport rule that adds disclaimers to outbound messages encounters a me
 Valid input for this parameter is $true or $false. The default value is $false. If you set this parameter to $true, the original message is sent as an EML attachment. Otherwise, it is sent as a TNEF attachment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -249,6 +256,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +276,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -285,10 +294,11 @@ The DSNConversionMode parameter controls how Exchange handles delivery status no
 - UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten.
 
 ```yaml
-Type: UseExchangeDSNs | PreserveDSNBody | DoNotConvert
+Type: DSNConversionOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -300,10 +310,11 @@ Accept wildcard characters: False
 The ExternalDelayDsnEnabled parameter specifies whether a delay delivery status notification (DSN) message should be created for external messages that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -319,6 +330,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,10 +342,11 @@ Accept wildcard characters: False
 The ExternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an external DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false.The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -367,6 +380,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -382,6 +396,7 @@ Type: SmtpDomain
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -393,10 +408,11 @@ Accept wildcard characters: False
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false.The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -412,6 +428,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -427,6 +444,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -468,6 +486,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -485,10 +504,11 @@ The HeaderPromotionModeSetting parameter specifies whether named properties are 
 - NoCreate: Exchange won't create any named properties based on custom X-headers on incoming messages.
 
 ```yaml
-Type: NoCreate | MayCreate | MustCreate
+Type: HeaderPromotionMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -500,10 +520,11 @@ Accept wildcard characters: False
 The InternalDelayDsnEnabled parameter specifies whether a delay DSN message should be created for messages sent to or from recipients or senders in the same Exchange organization that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -519,6 +540,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -530,10 +552,11 @@ Accept wildcard characters: False
 The InternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an internal DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -565,6 +588,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -580,6 +604,7 @@ Type: SmtpDomain
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -591,10 +616,11 @@ Accept wildcard characters: False
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -616,6 +642,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -631,6 +658,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -646,10 +674,11 @@ The LegacyJournalingMigrationEnabled parameter specifies whether journal message
 The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -667,6 +696,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -686,6 +716,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -723,6 +754,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -750,6 +782,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -785,6 +818,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -802,6 +836,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -827,6 +862,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -852,6 +888,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -887,6 +924,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -904,6 +942,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -923,6 +962,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -942,10 +982,11 @@ The RejectMessageOnShadowFailure parameter specifies whether to accept or reject
 The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -957,10 +998,11 @@ Accept wildcard characters: False
 The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization. Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -982,6 +1024,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1003,6 +1046,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1024,6 +1068,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1049,6 +1094,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1070,6 +1116,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1091,10 +1138,11 @@ The ShadowMessagePreferenceSetting parameter specifies the preferred location fo
 The default value is PreferRemote.
 
 ```yaml
-Type: PreferRemote | LocalOnly | RemoteOnly
+Type: ShadowMessagePreference
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1108,10 +1156,11 @@ This parameter is available only in on-premises Exchange.
 The ShadowRedundancyEnabled parameter specifies whether shadow redundancy is enabled in the organization. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1135,6 +1184,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1166,10 +1216,11 @@ The corresponding parameter that controls authenticated SMTP on individual mailb
 To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Exchange Online
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1189,6 +1240,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1218,6 +1270,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1247,6 +1300,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1278,6 +1332,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1295,10 +1350,11 @@ If the VerifySecureSubmitEnabled parameter is set to $true, and Outlook 2010 or 
 If the VerifySecureSubmitEnabled parameter is set to $false, all MAPI message submissions are marked as secure. Messages submitted from mailboxes on the Mailbox server by using any MAPI client aren't checked for encrypted MAPI submission. If you use previous Outlook versions in your Exchange organization, you should set the VerifySecureSubmitEnabled parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1312,10 +1368,11 @@ This parameter is available only in on-premises Exchange.
 The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1331,6 +1388,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1344,10 +1402,11 @@ This parameter is available only in on-premises Exchange.
 The Xexch50Enabled parameter specifies whether Xexch50 authentication should be enabled for backward compatibility with computers running Exchange 2003. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1372,4 +1431,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ad3910a5-2227-47a2-8ccc-a208ce6210bb.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-transportconfig)

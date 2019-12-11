@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-Message -Filter <String> [-Server <ServerIdParameter>]
  [-Confirm]
  [-WhatIf]
- [-WithNDR <$true | $false>] [<CommonParameters>]
+ [-WithNDR <Boolean>] [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +33,7 @@ Remove-Message -Filter <String> [-Server <ServerIdParameter>]
 Remove-Message [-Identity] <MessageIdentity>
  [-Confirm]
  [-WhatIf]
- [-WithNDR <$true | $false>] [<CommonParameters>]
+ [-WithNDR <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,9 +43,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Remove-Message -Server Server1 -Filter {FromAddress -eq "Kweku@contoso.com"} -WithNDR $false
+### Example 1
+```powershell
+Remove-Message -Server Server1 -Filter "FromAddress -eq 'Kweku@contoso.com'" -WithNDR $false
 ```
 
 This example removes all messages that meet the following criteria without generating NDRs:
@@ -57,7 +57,7 @@ This example removes all messages that meet the following criteria without gener
 ## PARAMETERS
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value, for example, {FromAddress -like "\*@contoso.com"}. For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -66,6 +66,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: MessageIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -100,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +146,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -153,10 +158,11 @@ Accept wildcard characters: False
 The WithNDR parameter specifies whether a non-delivery report (NDR) is returned to the sender of a message. The default value is $true. This parameter can be used with both the Identity parameter and Filter parameter sets.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/15d5987b-bedd-437e-b86a-6b0e80619fde.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-message)

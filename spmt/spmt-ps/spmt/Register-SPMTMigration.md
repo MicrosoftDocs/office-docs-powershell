@@ -295,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -SPOCredential
-The credentials are used to connect the SharePoint Online tenant. If no credentials are passed in, use ADAL OAuth2.
+The credentials are used to connect the SharePoint Online tenant. If no credentials are passed in, use ADAL OAuth2. Important: If you are using multifactor authentication on your tenant, do not use the -SPOCredential parameter.  The ADAL dialog will prompt for authentication and MFA.
 
 ```yaml
 Type: PSCredential

@@ -21,9 +21,11 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - Estimated time to complete each procedure: less than 5 minutes
 
-- Office 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://technet.microsoft.com/library/15073ce1-0917-403b-8839-02a2ebc96e16.aspx).
+- Office 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
 
 - You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+
+- For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](../exchange-server/recipient-filters/recipient-filters.md#additional-opath-syntax-information).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
@@ -65,7 +67,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
 ```PowerShell
-$DSA = Get-User -ResultSize unlimited -Filter {(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')}
+$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
 ```PowerShell
@@ -121,11 +123,11 @@ Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePower
 To display only those users who don't have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter {RemotePowerShellEnabled -eq $false}
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to Exchange Online PowerShell, run the following command:
 
 ```PowerShell
-Get-User -ResultSize unlimited -Filter {RemotePowerShellEnabled -eq $true}
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```

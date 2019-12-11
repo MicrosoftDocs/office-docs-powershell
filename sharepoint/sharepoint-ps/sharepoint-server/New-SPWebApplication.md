@@ -37,19 +37,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### ------------------EXAMPLE 1-----------------------
 ```
-New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "http://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\jdoe")
+New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "http://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
 This example creates a new Web application by using an internal host header of sharepoint.contoso.com and a public URL of http://www.contoso.com.
 
-### ------------------EXAMPLE-----------------------
+### ------------------EXAMPLE 2-----------------------
 ```
-New-SPWebApplication -Name "Contoso Internet Site" -Port 443 -SecureSocketsLayer -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com:443" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\jdoe")
+New-SPWebApplication -Name "Contoso Internet Site" -Port 443 -SecureSocketsLayer -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com:443" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
 This example creates a new SSL enabled Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
+
+### ------------------EXAMPLE 3-----------------------
+```
+$ap = New-SPAuthenticationProvider
+New-SPWebApplication -Name "Contoso Internet Site" -URL "https://www.contoso.com"  -Port 443 
+-ApplicationPool "ContosoAppPool" 
+-ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa") 
+-AuthenticationProvider $ap -SecureSocketsLayer
+```
+
+Creates a Windows Claims web application at the URL https://www.contoso.com using the domain account domain\wa.
 
 ## PARAMETERS
 

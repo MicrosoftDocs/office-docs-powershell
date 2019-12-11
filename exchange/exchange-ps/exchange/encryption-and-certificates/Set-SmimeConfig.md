@@ -23,30 +23,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
  [-Confirm]
- [-OWAAllowUserChoiceOfSigningCertificate <$true | $false>]
- [-OWAAlwaysEncrypt <$true | $false>]
- [-OWAAlwaysSign <$true | $false>]
+ [-OWAAllowUserChoiceOfSigningCertificate <Boolean>]
+ [-OWAAlwaysEncrypt <Boolean>]
+ [-OWAAlwaysSign <Boolean>]
  [-OWABCCEncryptedEmailForking <UInt32>]
- [-OWACheckCRLOnSend <$true | $false>]
- [-OWAClearSign <$true | $false>]
- [-OWACopyRecipientHeaders <$true | $false>]
+ [-OWACheckCRLOnSend <Boolean>]
+ [-OWAClearSign <Boolean>]
+ [-OWACopyRecipientHeaders <Boolean>]
  [-OWACRLConnectionTimeout <UInt32>]
  [-OWACRLRetrievalTimeout <UInt32>]
- [-OWADisableCRLCheck <$true | $false>]
+ [-OWADisableCRLCheck <Boolean>]
  [-OWADLExpansionTimeout <UInt32>]
  [-OWAEncryptionAlgorithms <String>]
- [-OWAEncryptTemporaryBuffers <$true | $false>]
- [-OWAForceSMIMEClientUpgrade <$true | $false>]
- [-OWAIncludeCertificateChainAndRootCertificate <$true | $false>]
- [-OWAIncludeCertificateChainWithoutRootCertificate <$true | $false>]
- [-OWAIncludeSMIMECapabilitiesInMessage <$true | $false>]
- [-OWAOnlyUseSmartCard <$true | $false>]
+ [-OWAEncryptTemporaryBuffers <Boolean>]
+ [-OWAForceSMIMEClientUpgrade <Boolean>]
+ [-OWAIncludeCertificateChainAndRootCertificate <Boolean>]
+ [-OWAIncludeCertificateChainWithoutRootCertificate <Boolean>]
+ [-OWAIncludeSMIMECapabilitiesInMessage <Boolean>]
+ [-OWAOnlyUseSmartCard <Boolean>]
  [-OWASenderCertificateAttributesToDisplay <String>]
- [-OWASignedEmailCertificateInclusion <$true | $false>]
+ [-OWASignedEmailCertificateInclusion <Boolean>]
  [-OWASigningAlgorithms <String>]
- [-OWATripleWrapSignedEncryptedMail <$true | $false>]
- [-OWAUseKeyIdentifier <$true | $false>]
- [-OWAUseSecondaryProxiesWhenFindingCertificates <$true | $false>]
+ [-OWATripleWrapSignedEncryptedMail <Boolean>]
+ [-OWAUseKeyIdentifier <Boolean>]
+ [-OWAUseSecondaryProxiesWhenFindingCertificates <Boolean>]
  [-SMIMECertificateIssuingCA <Byte[]>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -58,8 +58,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SmimeConfig -OWAAllowUserChoiceOfSigningCertificate $true -OWACRLRetrievalTimeout 10000 -OWAEncryptionAlgorithms 6602:128
 ```
 
@@ -75,6 +75,7 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -90,6 +91,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -103,10 +105,11 @@ The OWAAllowUserChoiceOfSigningCertificate parameter specifies whether to allow 
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,10 +123,11 @@ The OWAAlwaysEncrypt parameter specifies whether all outgoing messages are autom
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -137,10 +141,11 @@ The OWAAlwaysSign parameter specifies whether all outgoing messages are automati
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -179,10 +185,11 @@ The OWACheckCRLOnSend parameter specifies how the certificate revocation list (C
 - $false: When the CRL distribution point is inaccessible, Outlook on the web allows signed or encrypted messages to be sent. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,10 +207,11 @@ The OWAClearSign parameter specifies how email messages are signed in Outlook on
 Clear-signed messages are larger than opaque-signed messages, but clear-signed messages can be read in most email clients, including clients that don't support S/MIME.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -215,10 +223,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +247,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +267,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,10 +285,11 @@ The OWADisableCRLCheck parameter enables or disables CRL checking in Outlook on 
 Disabling CRL checking can decrease the time that's required to validate the signatures of signed email messages, but it also validates email messages that are signed with revoked certificates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -299,6 +311,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +345,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -349,10 +363,11 @@ The OWAEncryptTemporaryBuffers parameter specifies whether the Outlook on the we
 Disabling encryption of the buffers can increase performance of the Outlook on the web client but also leaves information unencrypted in the client's buffer. Consult your organization's security policy before you disable this feature.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,10 +383,11 @@ The OWAForceSMIMEClientUpgrade parameter specifies whether or not users are forc
 - $false: Users receive a warning if the S/MIME control on their computer is not current, but they can still use S/MIME without updating the control.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -385,10 +401,11 @@ The OWAIncludeCertificateChainAndRootCertificate parameter specifies whether the
 Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -404,10 +421,11 @@ The OWAIncludeCertificateChainWithoutRootCertificate parameter specifies whether
 - $false: Signed or encrypted messages include only the signing and encrypting certificates, not their corresponding certificate chains. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -423,10 +441,11 @@ Valid input for this parameter is $true or $false. The default is $false.
 Enabling this option increases the size of messages, but may make it easier for some email clients to interact with encrypted messages in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -442,10 +461,11 @@ $true: Smartcard-based certificates for signing and decryption are required when
 $false: Smartcard-based certificates for signing and decryption aren't required when you use Outlook on the web and the S/MIME control. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +483,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -480,10 +501,11 @@ The OWASignedEmailCertificateInclusion parameter specifies whether the sender's 
 When you don't include the certificates with signed email messages, the size of encrypted messages is reduced. However, recipients don't have access to the sender's encryption certificate in the message. Recipients need to retrieve the certificate from a directory, or from the sender.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -517,6 +539,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -534,10 +557,11 @@ The OWATripleWrapSignedEncryptedMail parameter specifies whether signed and encr
 Triple-wrapped messages offer the highest level of security for messages under the S/MIME standard, but are larger in size.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -555,10 +579,11 @@ By default, Outlook on the web encodes the asymmetrically encrypted token (somet
 This parameter causes the use of a certificate's key identifier when encoding the asymmetrically encrypted token. Because a key pair can be reused in new certificates, using the key identifier for encrypted email messages means that users need to keep only the most recent certificate and associated private key, rather than all old certificates. Because some email clients do not support finding certificates with a key identifier, Outlook on the web uses the issuer and serial number of each recipient's certificate by default.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -574,10 +599,11 @@ Valid input for this parameter is $true or $false. The default is $true.
 Outlook on the web attempts to find the correct certificate for a recipient when sending encrypted messages. The certificate subject or subject alternative name values can each contain an email address. Because a recipient can have multiple proxy addresses, the certificate's subject or subject alternative name values may not match the recipient's primary SMTP address. When this parameter is set to $true, and the certificate subject or subject alternative name values do not match the recipient's primary SMTP address, Outlook on the web tries to match the certificate's subject to one of the recipient's proxy addresses.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -597,6 +623,7 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -612,6 +639,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -636,4 +664,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/de357ce0-8143-4c36-8032-026292fc63f0.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-smimeconfig)

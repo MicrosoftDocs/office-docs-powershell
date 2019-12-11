@@ -43,7 +43,7 @@ New-MoveRequest [-Identity]
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteArchiveTargetDatabase <String>]
@@ -57,7 +57,7 @@ New-MoveRequest [-Identity]
  [-SuspendWhenReadyToComplete]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -84,7 +84,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteOrganizationName <String>]
@@ -97,7 +97,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-TargetDatabase <DatabaseIdParameter>]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -121,7 +121,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-MoveOptions <MultiValuedProperty>]
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteTargetDatabase <String>]
@@ -134,7 +134,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-TargetDatabase <DatabaseIdParameter>]
  [-TargetDeliveryDomain <Fqdn>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -163,7 +163,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-MRSServer <Fqdn>]
  [-PreventCompletion]
  [-PrimaryOnly]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -174,7 +174,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -195,7 +195,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTe
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
  [-PreventCompletion]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -205,7 +205,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTe
  [-SuspendComment <String>]
  [-SuspendWhenReadyToComplete]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -227,7 +227,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTena
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
  [-PreventCompletion]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-Protect]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
@@ -237,7 +237,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTena
  [-SuspendComment <String>]
  [-SuspendWhenReadyToComplete]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -246,22 +246,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01" -WhatIf
 ```
 
 This example tests a mailbox's readiness to move to the new database DB01 within the same forest and for completeness of the command by using the WhatIf switch. When you use the WhatIf switch, the system performs checks on the mailbox, and if the mailbox isn't ready, you receive an error.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
 ```
 
 This example moves Tony Smith's mailbox to the new database DB01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Mailbox -Database DB01 | New-MoveRequest -TargetDatabase DB02 -BatchName "DB01toDB02"
 ```
 
@@ -291,6 +291,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -308,6 +309,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationOutbound, MigrationOutboundCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -325,6 +327,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationRemote, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -342,6 +345,7 @@ Type: PSCredential
 Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -354,6 +358,7 @@ Type: PSCredential
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -369,6 +374,7 @@ Type: Fqdn
 Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -381,6 +387,7 @@ Type: Fqdn
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -396,6 +403,7 @@ Type: Fqdn
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -413,6 +421,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -430,6 +439,7 @@ Type: SmtpDomain
 Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -445,6 +455,7 @@ Type: Fqdn
 Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -457,6 +468,7 @@ Type: Fqdn
 Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -472,6 +484,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -491,6 +504,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -506,6 +520,7 @@ Type: String
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -523,6 +538,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationOutbound, MigrationRemote, MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -549,6 +565,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationRemote, MigrationLocal, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -563,11 +580,14 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -583,6 +603,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -608,6 +629,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -623,6 +645,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -642,6 +665,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -659,6 +683,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -678,6 +703,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -695,6 +721,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -714,6 +741,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -733,6 +761,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -750,6 +779,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -769,6 +799,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -786,6 +817,7 @@ Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -806,11 +838,14 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -828,6 +863,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -845,6 +881,7 @@ Type: Fqdn
 Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -860,6 +897,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -879,6 +917,7 @@ Type: SwitchParameter
 Parameter Sets: MigrationOutbound, MigrationRemote, MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -908,10 +947,11 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -927,6 +967,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -964,6 +1005,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -981,6 +1023,7 @@ Type: String
 Parameter Sets: MigrationOutbound
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -996,6 +1039,7 @@ Type: String
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -1013,6 +1057,7 @@ Type: String
 Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1036,6 +1081,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1053,6 +1099,7 @@ Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1078,6 +1125,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1093,6 +1141,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1108,6 +1157,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1123,6 +1173,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1148,6 +1199,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationRemote, MigrationRemoteLegacy, MigrationLocal, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1165,6 +1217,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1178,10 +1231,11 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1206,4 +1260,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c28ca2ce-963f-4676-81c3-cef3c290ee7b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-moverequest)
