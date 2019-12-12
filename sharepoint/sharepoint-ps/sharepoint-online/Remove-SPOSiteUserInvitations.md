@@ -1,49 +1,47 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Add-SPOHubSiteAssociation
+title: Remove-SPOSiteUserInvitations
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: 
+ms.author: 
 ms.reviewer:
 ---
 
-# Add-SPOHubSiteAssociation
+# Remove-SPOSiteUserInvitations
 
 ## SYNOPSIS
-
-Associates a site with a hub site.
+.
 
 ## SYNTAX
 
 ```powershell
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
+Remove-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [-CountOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-Use this cmdlet to associate a site with a hub site.
+Use this cmdlet to .
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing
+Remove-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/Research -EmailAddress "someone@contoso.com"
 ```
 
-This example associates the research site with the marketing hub site.
+This example removes the user with the mail address "someone@contoso.com" from the site with the url https://contoso.sharepoint.com/sites/Research.
 
 ## PARAMETERS
 
 ### -Site
 
-URL of the site to join to the hub site.
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
@@ -52,17 +50,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HubSite
+### -EmailAddress
 
-URL of the hub site.
+Email Address of the user.
 
 ```yaml
-Type: SpoSitePipeBind
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CountOnly
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
-Position: Named
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -73,7 +85,3 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
-
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
-
-If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
