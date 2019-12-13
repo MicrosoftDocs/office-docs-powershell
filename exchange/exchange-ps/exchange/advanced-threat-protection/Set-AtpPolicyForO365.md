@@ -18,6 +18,8 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
 
+- Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
+
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
