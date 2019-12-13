@@ -44,7 +44,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer:
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+  1. In Internet Explorer or Edge (chromium-based version is not supported yet), open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
      **Note**: A browser that uses ClickOnce to download (like Internet Explorer or Edge) is needed to complete the next step.
 
