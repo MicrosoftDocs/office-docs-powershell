@@ -37,6 +37,12 @@ Get-MessageTraceDetail
 ```
 
 ## DESCRIPTION
+You can use this cmdlet to search message data for the last 30 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+
+If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results. To search for message data that's between 30 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
+
+This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
