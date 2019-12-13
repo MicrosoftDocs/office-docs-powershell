@@ -57,6 +57,22 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
     ```
 
     You need to configure this setting only once on your computer, not every time you connect.
+    
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If basic authentication is disabled, you'll get this error when you try to connect:
+
+  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 ## Connect to the Security & Compliance Center
 

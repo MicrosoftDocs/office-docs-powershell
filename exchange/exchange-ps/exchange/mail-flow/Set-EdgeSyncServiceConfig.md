@@ -22,12 +22,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-EdgeSyncServiceConfig [-Identity] <EdgeSyncServiceConfigIdParameter>
- [-ConfigurationSyncInterval <EnhancedTimeSpan>] [-Confirm] [-CookieValidDuration <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-FailoverDCInterval <EnhancedTimeSpan>] [-LockDuration <EnhancedTimeSpan>]
- [-LockRenewalDuration <EnhancedTimeSpan>] [-LogEnabled <Boolean>]
- [-LogLevel <None | Low | Medium | High>] [-LogMaxAge <EnhancedTimeSpan>] [-LogMaxDirectorySize <Unlimited>]
- [-LogMaxFileSize <Unlimited>] [-LogPath <String>] [-Name <String>] [-OptionDuration <EnhancedTimeSpan>]
- [-RecipientSyncInterval <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+ [-ConfigurationSyncInterval <EnhancedTimeSpan>]
+ [-Confirm]
+ [-CookieValidDuration <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-FailoverDCInterval <EnhancedTimeSpan>]
+ [-LockDuration <EnhancedTimeSpan>]
+ [-LockRenewalDuration <EnhancedTimeSpan>]
+ [-LogEnabled <Boolean>]
+ [-LogLevel <EdgeSyncLoggingLevel>]
+ [-LogMaxAge <EnhancedTimeSpan>]
+ [-LogMaxDirectorySize <Unlimited>]
+ [-LogMaxFileSize <Unlimited>]
+ [-LogPath <String>]
+ [-Name <String>]
+ [-OptionDuration <EnhancedTimeSpan>]
+ [-RecipientSyncInterval <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -211,10 +222,18 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-The LogLevel parameter specifies the EdgeSync logging level. Valid values for this parameter are None, Low, Medium and High. The default value is None.
+The LogLevel parameter specifies the EdgeSync logging level. Valid values are:
+
+- None (This is the default value)
+
+- Low
+
+- Medium
+
+- High
 
 ```yaml
-Type: None | Low | Medium | High
+Type: EdgeSyncLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019

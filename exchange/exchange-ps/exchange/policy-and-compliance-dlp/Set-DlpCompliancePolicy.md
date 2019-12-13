@@ -346,7 +346,17 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 5 existing policies:
+
+- Valid priority values for the existing 5 policies are from 0 through 4.
+
+- Valid priority values for a new 6th policy are from 0 through 5.
+
+- The default value for a new 6th policy is 5.
+
+If you modify the priority value of a policy, the position of the policy in the list changes to match the priority value you specify. In other words, if you set the priority value of a policy to the same value as an existing policy, the priority value of the existing policy and all other lower priority policies after it is increased by 1.
 
 ```yaml
 Type: Int32
