@@ -39,8 +39,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ExchangeServerAccessLicense
 ```
 
@@ -65,4 +65,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fbe3cf4a-167c-47b4-9074-a4561711be6e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangeserveraccesslicense)

@@ -31,8 +31,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"
 ```
 
@@ -54,6 +54,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 0
 Default value: None
@@ -62,23 +63,24 @@ Accept wildcard characters: False
 ```
 
 ### -UserGroupFilter
-The UserGroupFilter parameter specifies the members of the organization segment based on user attributes in an OPATH filter. The OPATH filter uses the syntax "\<Property\> -\<Comparison operator\> '\<Value\>'".
+The UserGroupFilter parameter uses OPath filter syntax to specify the members of the organization segment. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"MemberOf -eq 'Engineering Department'"` or `"ExtensionAttribute1 -eq 'DayTrader'"`).
 
-- \<Property\> is a filterable attribute. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see [About Comparison Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- Property is a filterable property. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes).
 
-- \<Value\> is the attribute value.
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-For example, "MemberOf -eq 'Engineering Department'" or "ExtensionAttribute1 -eq 'DayTrader'".
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
-Use the same attribute for all of your segments, and verify that your segments don't overlap (a user must be assigned to only one segment).
+Use the same property for all of your segments, and verify that your segments don't overlap (a user must be assigned to only one segment).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None

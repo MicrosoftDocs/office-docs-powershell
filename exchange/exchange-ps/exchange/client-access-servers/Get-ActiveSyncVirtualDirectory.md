@@ -43,22 +43,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ActiveSyncVirtualDirectory -Server "MBX01"
 ```
 
 This example returns a summary list of all Exchange ActiveSync virtual directories on the server named MBX01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ActiveSyncVirtualDirectory -Identity "MBX01\Microsoft-Server-ActiveSync*" | Format-List
 ```
 
 This example returns detailed information for the Exchange ActiveSync virtual directory named "Microsoft-Server-ActiveSync (Default Web Site)" on the server named MBX01.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ActiveSyncVirtualDirectory
 ```
 
@@ -84,6 +84,7 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -109,6 +110,7 @@ Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,6 +142,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +162,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -182,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0e3f22ce-75d2-4e15-90ef-061dcc1ac7c9.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-activesyncvirtualdirectory)

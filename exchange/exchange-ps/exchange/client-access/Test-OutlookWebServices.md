@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-ClientAccessServer <ClientAccessServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <$true | $false>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+ [-MonitoringContext <Boolean>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,8 +33,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-OutlookWebServices -Identity:holly@contoso.com
 ```
 
@@ -62,6 +62,7 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +98,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -122,10 +126,11 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether the results of the command include monitoring events and performance counters. The two possible values for this parameter are $true or $false. If you specify $true, the results include monitoring events and performance counters, in addition to information about the MAPI transaction.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +146,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +162,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -180,4 +187,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c41152b0-b304-4b13-b8ea-a24e2c2c3ea8.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookwebservices)

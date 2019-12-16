@@ -22,20 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
- [-Action <AllowAccess | DenyAccess>]
+ [-Action <ClientAccessRulesAction>]
  [-AnyOfAuthenticationTypes <MultiValuedProperty>]
  [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-AnyOfProtocols <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Name <String>]
  [-Priority <Int32>]
- [-Scope <All | Users>]
+ [-Scope <ClientAccessRulesScope>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
  [-WhatIf] [<CommonParameters>]
@@ -58,8 +58,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ClientAccessRule "Allow IMAP4" -AnyOfClientIPAddressesOrRanges @{Add="172.17.17.27/16"}
 ```
 
@@ -81,6 +81,7 @@ Type: ClientAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -92,10 +93,11 @@ Accept wildcard characters: False
 The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
 
 ```yaml
-Type: AllowAccess | DenyAccess
+Type: ClientAccessRulesAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +131,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +157,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +205,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +225,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +243,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -248,10 +255,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the client access rule is enabled or disabled. Valid values for this parameter are $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +293,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -310,6 +319,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -357,6 +367,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -378,6 +389,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +405,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -408,6 +421,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -423,10 +437,11 @@ The Scope parameter specifies the scope of the client access rule. Valid values 
 - All: The rule applies to all connections (end-users and middle-tier apps).
 
 ```yaml
-Type: All | Users
+Type: ClientAccessRulesScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -448,6 +463,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -458,7 +474,21 @@ Accept wildcard characters: False
 ### -UserRecipientFilter
 This parameter is available only in the cloud-based service.
 
-The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. For example, {City -eq "Redmond"}. The filterable attributes that you can use with this parameter are:
+The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+The filterable properties that you can use with this parameter are:
 
 - City
 
@@ -483,6 +513,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -498,6 +529,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -522,4 +554,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/a4ba8627-b774-460f-9793-3d741c115b2e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-clientaccessrule)

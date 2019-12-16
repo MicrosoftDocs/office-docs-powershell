@@ -22,12 +22,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-EdgeSyncServiceConfig [-Identity] <EdgeSyncServiceConfigIdParameter>
- [-ConfigurationSyncInterval <EnhancedTimeSpan>] [-Confirm] [-CookieValidDuration <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-FailoverDCInterval <EnhancedTimeSpan>] [-LockDuration <EnhancedTimeSpan>]
- [-LockRenewalDuration <EnhancedTimeSpan>] [-LogEnabled <$true | $false>]
- [-LogLevel <None | Low | Medium | High>] [-LogMaxAge <EnhancedTimeSpan>] [-LogMaxDirectorySize <Unlimited>]
- [-LogMaxFileSize <Unlimited>] [-LogPath <String>] [-Name <String>] [-OptionDuration <EnhancedTimeSpan>]
- [-RecipientSyncInterval <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+ [-ConfigurationSyncInterval <EnhancedTimeSpan>]
+ [-Confirm]
+ [-CookieValidDuration <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-FailoverDCInterval <EnhancedTimeSpan>]
+ [-LockDuration <EnhancedTimeSpan>]
+ [-LockRenewalDuration <EnhancedTimeSpan>]
+ [-LogEnabled <Boolean>]
+ [-LogLevel <EdgeSyncLoggingLevel>]
+ [-LogMaxAge <EnhancedTimeSpan>]
+ [-LogMaxDirectorySize <Unlimited>]
+ [-LogMaxFileSize <Unlimited>]
+ [-LogPath <String>]
+ [-Name <String>]
+ [-OptionDuration <EnhancedTimeSpan>]
+ [-RecipientSyncInterval <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,8 +46,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-EdgeSyncServiceConfig "Primary EdgeSync Settings" -LogEnabled $true -LogLevel Medium -LogPath "\\Server01\EdgeSyncLog" -LogMaxFileSize 5MB -LogMaxAge 3
 ```
 
@@ -60,6 +71,7 @@ Type: EdgeSyncServiceConfigIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -77,6 +89,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +109,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +127,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +143,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +161,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +179,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +197,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -190,10 +209,11 @@ Accept wildcard characters: False
 The LogEnabled parameter specifies enables or disables the EdgeSyncLog. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -202,13 +222,22 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-The LogLevel parameter specifies the EdgeSync logging level. Valid values for this parameter are None, Low, Medium and High. The default value is None.
+The LogLevel parameter specifies the EdgeSync logging level. Valid values are:
+
+- None (This is the default value)
+
+- Low
+
+- Medium
+
+- High
 
 ```yaml
-Type: None | Low | Medium | High
+Type: EdgeSyncLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +255,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +287,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +319,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +335,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -318,6 +351,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -335,6 +369,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -352,6 +387,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -367,6 +403,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -391,4 +428,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1cc5a98c-d828-4122-84b3-2c4eefb3d475.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-edgesyncserviceconfig)

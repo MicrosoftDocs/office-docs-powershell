@@ -31,15 +31,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-SearchDocumentFormat
 ```
 
 This example retrieves a list of all file formats supported by Exchange Search.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SearchDocumentFormat docx | Format-List *
 ```
 
@@ -55,6 +55,7 @@ Type: SearchDocumentFormatId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -106,4 +108,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7e966dba-82ea-416f-b859-1ffb7bd7c713.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/get-searchdocumentformat)

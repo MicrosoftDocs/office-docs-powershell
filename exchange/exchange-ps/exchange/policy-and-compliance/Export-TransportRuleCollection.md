@@ -37,8 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $file = Export-TransportRuleCollection; Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
@@ -46,8 +46,8 @@ This example exports transport rules. Rule data is first exported to the variabl
 
 **Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
@@ -67,6 +67,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -135,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -159,4 +164,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bfdb6ced-cd81-49f1-a929-4d76dbaf5590.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/export-transportrulecollection)

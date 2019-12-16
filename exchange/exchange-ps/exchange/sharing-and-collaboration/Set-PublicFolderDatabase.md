@@ -22,9 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
- [-AllowFileRestore <$true | $false>]
- [-BackgroundDatabaseMaintenance <$true | $false>]
- [-CircularLoggingEnabled <$true | $false>]
+ [-AllowFileRestore <Boolean>]
+ [-BackgroundDatabaseMaintenance <Boolean>]
+ [-CircularLoggingEnabled <Boolean>]
  [-Confirm]
  [-CustomReferralServerList <MultiValuedProperty>]
  [-DeletedItemRetention <EnhancedTimeSpan>]
@@ -34,15 +34,15 @@ Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
  [-ItemRetentionPeriod <Unlimited>]
  [-MaintenanceSchedule <Schedule>]
  [-MaxItemSize <Unlimited>]
- [-MountAtStartup <$true | $false>]
+ [-MountAtStartup <Boolean>]
  [-Name <String>]
  [-ProhibitPostQuota <Unlimited>]
  [-QuotaNotificationSchedule <Schedule>]
  [-ReplicationMessageSize <ByteQuantifiedSize>]
  [-ReplicationPeriod <UInt32>]
  [-ReplicationSchedule <Schedule>]
- [-RetainDeletedItemsUntilBackup <$true | $false>]
- [-UseCustomReferralServerList <$true | $false>]
+ [-RetainDeletedItemsUntilBackup <Boolean>]
+ [-UseCustomReferralServerList <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,22 +51,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PublicFolderDatabase -Identity 'PFDB01' -DeletedItemRetention '10.00:00:00'
 ```
 
 This example sets the deleted items retention on the public folder database PFDB01 to 10 days.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-PublicFolderDatabase -Identity 'PFDB01'-MaintenanceSchedule 'Sun.2:00 AM-Sun.6:00 AM, Mon.2:00 AM-Mon.6:00 AM, Tue.2:00 AM-Tue.6:00 AM, Wed.2:00 AM-Wed.6:00 AM, Thu.2:00 AM-Thu.6:00 AM, Fri.2:00 AM-Fri.6:00 AM, Sat.2:00 AM-Sat.6:00 AM'
 ```
 
 This example sets the database maintenance schedule on PFDB01 to run daily from 02:00 (2:00 A.M.) until 06:00 (6:00 A.M.).
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-PublicFolderDatabase -RetainDeletedItemsUntilBackup $true -Identity 'PFDB01'
 ```
 
@@ -88,6 +88,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -99,10 +100,11 @@ Accept wildcard characters: False
 The AllowFileRestore parameter specifies that the public folder database can be overwritten if the public folder database is restored. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -114,10 +116,11 @@ Accept wildcard characters: False
 The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Storage Engine (ESE) performs database maintenance. The two possible values are $true or $false. If you specify $true, the public folder database reads the object during database mount and initializes the database to perform the background database maintenance. If you specify $false, the public folder database reads the object during database mount and initializes the database without the option to perform the background database maintenance.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -129,10 +132,11 @@ Accept wildcard characters: False
 The CircularLoggingEnabled parameter specifies whether to enable circular logging. If you specify a value of $true, circular logging is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +156,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +174,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +190,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +206,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +222,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +238,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +254,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +293,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +309,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -308,10 +321,11 @@ Accept wildcard characters: False
 The MountAtStartup parameter specifies whether the database should be mounted when the store starts. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -327,6 +341,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -342,6 +357,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -380,6 +396,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -409,6 +426,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -424,6 +442,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +482,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -474,10 +494,11 @@ Accept wildcard characters: False
 The RetainDeletedItemsUntilBackup parameter specifies that deleted items aren't removed until a backup of the public folder database is performed. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -491,10 +512,11 @@ The UseCustomReferralServerList parameter specifies whether to use the server co
 Setting this parameter to $false also clears the PublicFolderReferralServerList parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -510,6 +532,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -534,4 +557,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/34ec3385-778a-43b8-9bf2-707fbf60ac23.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-publicfolderdatabase)

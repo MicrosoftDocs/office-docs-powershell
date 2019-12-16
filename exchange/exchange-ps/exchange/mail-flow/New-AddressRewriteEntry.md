@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AddressRewriteEntry [-Name] <String> -ExternalAddress <String> -InternalAddress <String> [-Confirm]
- [-DomainController <Fqdn>] [-ExceptionList <MultiValuedProperty>] [-OutboundOnly <$true | $false>] [-WhatIf]
+ [-DomainController <Fqdn>] [-ExceptionList <MultiValuedProperty>] [-OutboundOnly <Boolean>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -31,22 +31,22 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-AddressRewriteEntry -Name "Address rewrite entry for david@contoso.com" -InternalAddress david@contoso.com -ExternalAddress david@northwindtraders.com
 ```
 
 This example creates an address rewrite entry that rewrites the email address david@contoso.com to david@northwindtraders.com in outbound mail. Because the OutboundOnly parameter is not set to $true, inbound mail sent to david@northwindtraders.com is rewritten back to david@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-AddressRewriteEntry -Name "Address rewrite entry for all contoso.com email addresses" -InternalAddress contoso.com -ExternalAddress northwindtraders.com
 ```
 
 This example creates an address rewrite entry that rewrites all email addresses in the contoso.com domain to northwindtraders.com in outbound mail. Because the OutboundOnly parameter is not set to $true, inbound mail sent to northwindtraders.com recipients is rewritten back to contoso.com.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-AddressRewriteEntry -Name "Address rewrite entry for contoso.com and all subdomain email addresses" -InternalAddress *.contoso.com -ExternalAddress northwindtraders.com -ExceptionList research.contoso.com,corp.contoso.com -OutboundOnly $true
 ```
 
@@ -62,6 +62,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -79,6 +80,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +140,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +156,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -166,10 +172,11 @@ You must set this parameter to $true if the InternalAddress parameter contains t
 Also, when you configure outbound-only address rewriting, you need to configure the rewritten email address as a proxy address on the affected recipients. For example, if laura@sales.contoso.com is rewritten to laura@contoso.com, the proxy address laura@contoso.com must be configured on Laura's mailbox. This allows replies and inbound messages to be delivered correctly.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +192,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,4 +217,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b75fa347-ae84-4fe8-90be-2fe1bc6bc8d4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-addressrewriteentry)

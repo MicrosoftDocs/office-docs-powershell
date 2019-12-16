@@ -30,22 +30,23 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IgnoreRuleLimitErrors <$true | $false>]
+ [-IgnoreRuleLimitErrors <Boolean>]
  [-IncrementalSyncInterval <TimeSpan>]
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-MoveOptions <MultiValuedProperty>]
- [-PreventCompletion <$true | $false>]
- [-Priority <Normal | High>]
- [-Protect <$true | $false>]
+ [-PreventCompletion <Boolean>]
+ [-Priority <RequestPriority>]
+ [-Protect <Boolean>]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RemoteCredential <PSCredential>]
  [-RemoteGlobalCatalog <Fqdn>]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SkippedItemApprovalTime <DateTime>]
  [-StartAfter <DateTime>]
- [-SuspendWhenReadyToComplete <$true | $false>]
+ [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -57,12 +58,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MoveRequest -Identity Ayla@humongousinsurance.com -BadItemLimit 5
 ```
 
 This example changes the move request for Ayla to accept up to five corrupt mailbox items.
+
+### Example 2
+```powershell
+Set-MoveRequest -Identity Sruthi@contoso.com -SkippedItemApprovalTime $(Get-Date).ToUniversalTime()
+```
+
+This example changes the move request for Sruthi to approve all skipped items encountered before the current time.
 
 ## PARAMETERS
 
@@ -88,6 +96,7 @@ Type: MoveRequestIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -103,6 +112,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +139,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -143,11 +154,14 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
+This parameter is in the process of being deprecated in the cloud-based service.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +177,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +203,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +219,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +239,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +257,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -250,10 +269,11 @@ Accept wildcard characters: False
 The IgnoreRuleLimitErrors parameter specifies that the command won't move the user's rules to the target server running Microsoft Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +293,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -290,6 +311,7 @@ Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -310,11 +332,14 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
+This parameter is in the process of being deprecated in the cloud-based service.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -332,6 +357,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -347,10 +373,11 @@ The PreventCompletion parameter specifies whether to run the move request, but n
 - $false: This is the default value. The move request is run and allowed to complete. If you created the move request with the SuspendWhenReadyToComplete or PreventCompletion switches, set this parameter to $false before you run the Resume-MoveRequest cmdlet to complete the move request.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -380,10 +407,11 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -397,10 +425,11 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -438,6 +467,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -455,6 +485,7 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -470,6 +501,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -485,6 +517,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -508,6 +541,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -525,6 +559,7 @@ Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -550,6 +585,33 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkippedItemApprovalTime
+This parameter is available only in the cloud-based service.
+
+The SkippedItemApprovalTime parameter marks all of the skipped items discovered prior to the specified time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
+
+For more information about maximum message size values, see the following topic [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -561,10 +623,11 @@ Accept wildcard characters: False
 The SuspendWhenReadyToComplete parameter specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this parameter, we recommend using CompleteAfter parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -590,6 +653,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -605,6 +669,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -629,4 +694,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/1a668f96-e924-4698-9387-ee71f8d9b136.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-moverequest)

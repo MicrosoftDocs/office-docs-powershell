@@ -32,16 +32,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ArchiveConnectivity -UserSmtp gsingh@contoso.com
 ```
 
 This example tests archive connectivity to Gurinder Singh's archive.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-Mailbox -Filter {ArchiveGuid -ne $null -and ArchiveDomain -ne $null} -ResultSize Unlimited | Test-ArchiveConnectivity
+### Example 2
+```powershell
+Get-Mailbox -Filter 'ArchiveGuid -ne $null -and ArchiveDomain -ne $null' -ResultSize Unlimited | Test-ArchiveConnectivity
 ```
 
 This command retrieves mailboxes that have a cloud-based archive provisioned and tests archive connectivity for each mailbox.
@@ -56,6 +56,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -75,6 +76,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +108,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +124,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,4 +149,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0db98a12-8cbb-4e9a-add4-c1847b057a44.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/test-archiveconnectivity)

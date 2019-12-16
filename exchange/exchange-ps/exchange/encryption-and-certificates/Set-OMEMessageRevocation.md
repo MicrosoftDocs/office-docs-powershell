@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-OMEMessageRevocation -MessageId "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>" -Revoke $true
 ```
 
@@ -52,6 +52,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None

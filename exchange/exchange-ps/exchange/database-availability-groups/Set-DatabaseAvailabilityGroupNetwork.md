@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter> [-Confirm]
- [-Description <String>] [-DomainController <Fqdn>] [-IgnoreNetwork <$true | $false>] [-Name <String>]
- [-ReplicationEnabled <$true | $false>] [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf]
+ [-Description <String>] [-DomainController <Fqdn>] [-IgnoreNetwork <Boolean>] [-Name <String>]
+ [-ReplicationEnabled <Boolean>] [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -34,15 +34,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\DAGNetwork01 -ReplicationEnabled:$true
 ```
 
 This example enables the DAG network DAGNetwork01 in the DAG DAG1 for replication.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
 ```
 
@@ -58,6 +58,7 @@ Type: DatabaseAvailabilityGroupNetworkIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -77,6 +78,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +110,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -118,10 +122,11 @@ Accept wildcard characters: False
 The IgnoreNetwork parameter indicates that the specified network should be ignored and not used by the DAG.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +142,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,10 +154,11 @@ Accept wildcard characters: False
 The ReplicationEnabled parameter specifies whether the network can be used for replication activity. If this parameter isn't specified, the default behavior is to enable the network for replication.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +174,7 @@ Type: DatabaseAvailabilityGroupSubnetId[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +190,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -206,4 +215,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/5c6add57-eef9-4af5-9cf3-54fd910dfe93.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/set-databaseavailabilitygroupnetwork)

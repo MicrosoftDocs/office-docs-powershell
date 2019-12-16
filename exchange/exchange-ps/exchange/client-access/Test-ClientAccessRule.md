@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ClientAccessRule
- -AuthenticationType <BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication>
- -Protocol <ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
+ -AuthenticationType <ClientAccessAuthenticationMethod>
+ -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
  [-OAuthClaims <Hashtable>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -44,8 +44,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ClientAccessRule -AuthenticationType BasicAuthentication -Protocol OutlookWebApp -RemoteAddress 172.17.17.26 -RemotePort 443 -User julia@contoso.com
 ```
 
@@ -81,10 +81,11 @@ Valid values for this parameter are:
 In client access rules, authentication types are defined by the AnyOfAuthenticationTypes and ExceptAnyOfAuthenticationTypes parameters.
 
 ```yaml
-Type: BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication
+Type: ClientAccessAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -122,10 +123,11 @@ Valid values for this parameter are:
 In client access rules, protocol types are defined by the AnyOfProtocols and ExceptAnyOfProtocols parameters.
 
 ```yaml
-Type: ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST
+Type: ClientAccessProtocol
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +145,7 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -158,6 +161,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -195,6 +199,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -214,6 +219,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +235,7 @@ Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +251,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -266,4 +274,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/d17ee6d8-e5f4-4b5d-977c-85e8dadeaf48.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule)

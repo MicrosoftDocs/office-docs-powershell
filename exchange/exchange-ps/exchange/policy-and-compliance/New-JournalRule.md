@@ -22,22 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>]
  [-Recipient <SmtpAddress>]
- [-Scope <Internal | External | Global>] [-WhatIf] [<CommonParameters>]
+ [-Scope <JournalRuleScope>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-JournalRule cmdlet creates a journal rule in your organization.
 
-By default, new journal rules are disabled unless the Enabled parameter is set to $true. For more information about how to enable a new journal rule that was created in a disabled state, see Enable-JournalRule.
+By default, new journal rules are disabled unless the Enabled parameter is set to $true. For more information about how to enable a new journal rule that was created in a disabled state, see [Enable-JournalRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/enable-journalrule).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-JournalRule -Name "Brokerage Communications" -JournalEmailAddress "Brokers Journal Mailbox" -Scope Global -Recipient brokers@contoso.com -Enabled $true
 ```
 
@@ -53,6 +53,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -80,6 +81,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +101,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +119,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -127,10 +131,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the journal rule is enabled or disabled. If the rule is disabled, it isn't applied to any email messages. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +151,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -163,10 +169,11 @@ The Scope parameter specifies the scope of email messages to which the journal r
 - External: External rules process email messages sent to recipients or from senders outside your organization.
 
 ```yaml
-Type: Internal | External | Global
+Type: JournalRuleScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +189,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -206,4 +214,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/fcad9ef1-b3f2-442d-a1a7-cd1bbe442054.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-journalrule)

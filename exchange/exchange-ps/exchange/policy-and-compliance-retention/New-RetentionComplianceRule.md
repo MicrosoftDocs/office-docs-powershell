@@ -32,7 +32,7 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
 
 ### Default
 ```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <Days | Months | Years>]
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <HoldDurationHint>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
@@ -55,8 +55,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration Unlimited
 ```
 
@@ -76,6 +76,7 @@ Type: String
 Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Type: String
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -108,6 +110,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: String
 Parameter Sets: PublishComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -142,6 +146,7 @@ Type: String
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +166,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +188,7 @@ Type: PswsHashtable[]
 Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +206,7 @@ Type: String
 Parameter Sets: ComplianceTag, Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +240,7 @@ Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -251,6 +260,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -272,6 +282,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +302,7 @@ Type: Unlimited
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -310,10 +322,11 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
+Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +342,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -351,4 +365,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/9ad613ff-dbb4-4a86-9f4c-ab212e68603a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancerule)

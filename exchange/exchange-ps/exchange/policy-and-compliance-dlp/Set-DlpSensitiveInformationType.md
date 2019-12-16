@@ -33,29 +33,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DlpSensitiveInformationType "Contoso Confidential" -Locale fr -Name "Contoso Confidentiel" -Description "Ce message contient des informations confidentielles." -IsDefault
 ```
 
 This example adds a French translation to the existing sensitive information type rule named "Contoso Confidential", and sets this French translation as the default.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-DlpSensitiveInformationType "Contoso Confidential" -Locale es -Name $null -Description $null
 ```
 
 This example removes the existing Spanish translation from the sensitive information type rule named "Contoso Confidential".
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte -ReadCount 0; $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint[0]); Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
 This example modifies the existing sensitive information type rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 $cc = Get-DlpSensitiveInformationType "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
 ```
 
@@ -79,6 +79,7 @@ Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -98,6 +99,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +115,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -121,13 +124,14 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see New-DlpFingerprint or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
+The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +169,7 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +189,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -198,6 +205,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -220,4 +228,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/6d40df36-18c7-46f5-b373-69c840a5599b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtype)

@@ -85,10 +85,10 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 
 ### -----------------------EXAMPLE 3-----------------------------
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400000
+Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
 ```
 
-This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400000 megabytes. 
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes. 
 
 
 ### -----------------------EXAMPLE 4-----------------------------

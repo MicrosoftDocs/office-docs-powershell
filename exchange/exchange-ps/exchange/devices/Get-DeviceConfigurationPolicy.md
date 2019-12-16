@@ -39,15 +39,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-DeviceConfigurationPolicy | Format-Table Name,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device configuration policies.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-DeviceConfigurationPolicy -Identity "Engineering Group"
 ```
 
@@ -69,6 +69,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -91,4 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/821cd39f-5bd5-4568-b154-eaff712fa658.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/get-deviceconfigurationpolicy)

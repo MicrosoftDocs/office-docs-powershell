@@ -31,7 +31,7 @@ New-InboxRule [-Name] <String>
  [-BodyContainsWords <MultiValuedProperty>]
  [-Confirm]
  [-CopyToFolder <MailboxFolderIdParameter>]
- [-DeleteMessage <$true | $false>]
+ [-DeleteMessage <Boolean>]
  [-DeleteSystemCategory <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-ExceptIfBodyContainsWords <MultiValuedProperty>]
@@ -39,25 +39,25 @@ New-InboxRule [-Name] <String>
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
- [-ExceptIfHasAttachment <$true | $false>]
+ [-ExceptIfHasAttachment <Boolean>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
- [-ExceptIfMessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
- [-ExceptIfMyNameInCcBox <$true | $false>]
- [-ExceptIfMyNameInToBox <$true | $false>]
- [-ExceptIfMyNameInToOrCcBox <$true | $false>]
- [-ExceptIfMyNameNotInToBox <$true | $false>]
+ [-ExceptIfMessageTypeMatches <InboxRuleMessageType>]
+ [-ExceptIfMyNameInCcBox <Boolean>]
+ [-ExceptIfMyNameInToBox <Boolean>]
+ [-ExceptIfMyNameInToOrCcBox <Boolean>]
+ [-ExceptIfMyNameNotInToBox <Boolean>]
  [-ExceptIfReceivedAfterDate <ExDateTime>]
  [-ExceptIfReceivedBeforeDate <ExDateTime>]
  [-ExceptIfRecipientAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfSentOnlyToMe <$true | $false>]
+ [-ExceptIfSentOnlyToMe <Boolean>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
- [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExceptIfWithImportance <Importance>]
  [-ExceptIfWithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-ExceptIfWithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-ExceptIfWithSensitivity <Sensitivity>]
  [-FlaggedForAction <String>]
  [-Force]
  [-ForwardAsAttachmentTo <RecipientIdParameter[]>]
@@ -65,35 +65,35 @@ New-InboxRule [-Name] <String>
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
  [-FromSubscription <AggregationSubscriptionIdentity[]>]
- [-HasAttachment <$true | $false>]
+ [-HasAttachment <Boolean>]
  [-HasClassification <MessageClassificationIdParameter[]>]
  [-HeaderContainsWords <MultiValuedProperty>]
  [-Mailbox <MailboxIdParameter>]
- [-MarkAsRead <$true | $false>]
- [-MarkImportance <Low | Normal | High>]
- [-MessageTypeMatches <AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport>]
+ [-MarkAsRead <Boolean>]
+ [-MarkImportance <Importance>]
+ [-MessageTypeMatches <InboxRuleMessageType>]
  [-MoveToFolder <MailboxFolderIdParameter>]
- [-MyNameInCcBox <$true | $false>]
- [-MyNameInToBox <$true | $false>]
- [-MyNameInToOrCcBox <$true | $false>]
- [-MyNameNotInToBox <$true | $false>]
- [-PinMessage <$true | $false>]
+ [-MyNameInCcBox <Boolean>]
+ [-MyNameInToBox <Boolean>]
+ [-MyNameInToOrCcBox <Boolean>]
+ [-MyNameNotInToBox <Boolean>]
+ [-PinMessage <Boolean>]
  [-Priority <Int32>]
  [-ReceivedAfterDate <ExDateTime>]
  [-ReceivedBeforeDate <ExDateTime>]
  [-RecipientAddressContainsWords <MultiValuedProperty>]
  [-RedirectTo <RecipientIdParameter[]>]
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
- [-SentOnlyToMe <$true | $false>]
+ [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
- [-StopProcessingRules <$true | $false>]
+ [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-WhatIf]
- [-WithImportance <Low | Normal | High>]
+ [-WithImportance <Importance>]
  [-WithinSizeRangeMaximum <ByteQuantifiedSize>]
  [-WithinSizeRangeMinimum <ByteQuantifiedSize>]
- [-WithSensitivity <Normal | Personal | Private | CompanyConfidential>]
+ [-WithSensitivity <Sensitivity>]
  [<CommonParameters>]
 ```
 
@@ -120,8 +120,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-InboxRule "CheckActionRequired" -MyNameInToBox $true -FlaggedForAction Any -MarkImportance "High"
 ```
 
@@ -137,6 +137,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -164,6 +165,7 @@ Type: MailboxStoreObjectIdParameter
 Parameter Sets: FromMessage
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -179,6 +181,7 @@ Type: SwitchParameter
 Parameter Sets: FromMessage
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -194,6 +197,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -211,6 +215,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -276,6 +281,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +301,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -314,6 +321,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +337,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -344,10 +353,11 @@ The DeleteMessage parameter specifies an action for the Inbox rule that sends me
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -413,6 +423,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -430,6 +441,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -449,6 +461,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -488,6 +501,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -519,6 +533,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -538,6 +553,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -557,6 +573,7 @@ Type: AggregationSubscriptionIdentity[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -574,10 +591,11 @@ The ExceptIfHasAttachment parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is HasAttachment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -595,6 +613,7 @@ Type: MessageClassificationIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -614,6 +633,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -649,10 +669,11 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the Inbox ru
 The corresponding condition parameter to this exception is MessageTypeMatches.
 
 ```yaml
-Type: AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport
+Type: InboxRuleMessageType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -670,10 +691,11 @@ The ExceptIfMyNameInCcBox parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is MyNameInCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -691,10 +713,11 @@ The ExceptIfMyNameInToBox parameter specifies an exception for the Inbox rule th
 The corresponding condition parameter to this exception is MyNameInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -712,10 +735,11 @@ The ExceptIfMyNameInToOrCcBox parameter specifies an exception for the Inbox rul
 The corresponding condition parameter to this exception is MyNameInToOrCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -733,10 +757,11 @@ The ExceptIfMyNameNotInToBox parameter specifies an exception for the Inbox rule
 The corresponding condition parameter to this exception is MyNameNotInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -756,6 +781,7 @@ Type: ExDateTime
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -775,6 +801,7 @@ Type: ExDateTime
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -794,6 +821,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -811,10 +839,11 @@ The ExceptIfSentOnlyToMe parameter specifies an exception for the Inbox rule tha
 The corresponding condition parameter to this exception is SentOnlyToMe.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -846,6 +875,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -865,6 +895,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -884,6 +915,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -903,10 +935,11 @@ The ExceptIfWithImportance parameter specifies an exception for the Inbox rule t
 The corresponding condition parameter to this exception is WithImportance.
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -940,6 +973,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -973,6 +1007,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -994,10 +1029,11 @@ The ExceptIfWithSensitivity parameter specifies an exception for the Inbox rule 
 The corresponding condition parameter to this exception is WithSensitivity.
 
 ```yaml
-Type: Normal | Personal | Private | CompanyConfidential
+Type: Sensitivity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1035,6 +1071,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1052,6 +1089,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1081,6 +1119,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1110,6 +1149,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1141,6 +1181,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1160,6 +1201,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1179,6 +1221,7 @@ Type: AggregationSubscriptionIdentity[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1196,10 +1239,11 @@ The HasAttachment parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfHasAttachment.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1217,6 +1261,7 @@ Type: MessageClassificationIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1236,6 +1281,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1271,6 +1317,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1286,10 +1333,11 @@ The MarkAsRead parameter specifies an action for the Inbox rule that marks messa
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1307,10 +1355,11 @@ The MarkImportance parameter specifies an action for the Inbox rule that marks m
 - High
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1346,10 +1395,11 @@ The MessageTypeMatches parameter specifies a condition for the Inbox rule that l
 The corresponding exception parameter to this condition is ExceptIfMessageTypeMatches.
 
 ```yaml
-Type: AutomaticReply | AutomaticForward | Encrypted | Calendaring | CalendaringResponse | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt | NonDeliveryReport
+Type: InboxRuleMessageType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1365,6 +1415,7 @@ Type: MailboxFolderIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1382,10 +1433,11 @@ The MyNameInCcBox parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfMyNameInCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1403,10 +1455,11 @@ The MyNameInToBox parameter specifies a condition for the Inbox rule that looks 
 The corresponding exception parameter to this condition is ExceptIfMyNameInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1424,10 +1477,11 @@ The MyNameInToOrCcBox parameter specifies a condition for the Inbox rule that lo
 The corresponding exception parameter to this condition is ExceptIfMyNameInToOrCcBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1445,10 +1499,11 @@ The MyNameNotInToBox parameter specifies a condition for the Inbox rule that loo
 The corresponding exception parameter to this condition is ExceptIfMyNameNotInToBox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1464,10 +1519,11 @@ The PinMessage parameter specifies an action for the Inbox rule that pins messag
 - $false: The action isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1483,6 +1539,7 @@ Type: Int32
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1502,6 +1559,7 @@ Type: ExDateTime
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1521,6 +1579,7 @@ Type: ExDateTime
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1540,6 +1599,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1569,6 +1629,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1586,6 +1647,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1603,10 +1665,11 @@ The SentOnlyToMe parameter specifies a condition for the Inbox rule that looks f
 The corresponding exception parameter to this condition is ExceptIfSentOnlyToMe.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1638,6 +1701,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1653,10 +1717,11 @@ The StopProcessingRules parameter specifies an action for the Inbox rule that st
 - $false: The action isn't used (continue processing more rules after this one).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1676,6 +1741,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1695,6 +1761,7 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1710,6 +1777,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1729,10 +1797,11 @@ The WithImportance parameter specifies a condition for the Inbox rule that looks
 The corresponding exception parameter to this condition is ExceptIfWithImportance.
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1766,6 +1835,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1799,6 +1869,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1820,10 +1891,11 @@ The WithSensitivity parameter specifies a condition for the Inbox rule that look
 The corresponding exception parameter to this condition is ExceptIfWithSensitivity.
 
 ```yaml
-Type: Normal | Personal | Private | CompanyConfidential
+Type: Sensitivity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1848,4 +1920,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2c6b8ee8-1ff0-4353-845c-f3ea9778abc3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule)

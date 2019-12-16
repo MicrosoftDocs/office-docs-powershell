@@ -22,22 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-OutboundConnector [-Name] <String>
- [-AllAcceptedDomains <$true | $false>]
- [-CloudServicesMailEnabled <$true | $false>]
+ [-AllAcceptedDomains <Boolean>]
+ [-CloudServicesMailEnabled <Boolean>]
  [-Comment <String>]
  [-Confirm]
- [-ConnectorSource <Default | Migrated | HybridWizard | AdminUI>]
- [-ConnectorType <OnPremises | Partner>]
- [-Enabled <$true | $false>]
- [-IsTransportRuleScoped <$true | $false>]
+ [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>]
+ [-Enabled <Boolean>]
+ [-IsTransportRuleScoped <Boolean>]
  [-LinkForModifiedConnector <Guid>]
  [-RecipientDomains <MultiValuedProperty>]
- [-RouteAllMessagesViaOnPremises <$true | $false>]
+ [-RouteAllMessagesViaOnPremises <Boolean>]
  [-SmartHosts <MultiValuedProperty>]
- [-TestMode <$true | $false>]
+ [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
- [-TlsSettings <EncryptionOnly | CertificateValidation | DomainValidation>]
- [-UseMXRecord <$true | $false>]
+ [-TlsSettings <TlsAuthLevel>]
+ [-UseMXRecord <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -48,8 +48,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-OutboundConnector -Name "Contoso Outbound Connector" -RecipientDomains *.contoso.com -TlsSettings DomainValidation -TlsDomain *.contoso.com
 ```
 
@@ -69,6 +69,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -84,10 +85,11 @@ The AllAcceptedDomains parameter specifies whether the Outbound connector is use
 - $false: The Outbound connector isn't used in hybrid organizations. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -107,10 +109,11 @@ Valid values are:
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +129,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -162,10 +167,11 @@ The ConnectorSource parameter specifies how the connector is created. Valid valu
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
 ```yaml
-Type: Default | Migrated | HybridWizard | AdminUI
+Type: TenantConnectorSource
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -181,10 +187,11 @@ The ConnectorType parameter specifies a category for the domains that are servic
 - OnPremises: The connector services domains that are used by your on-premises organization.
 
 ```yaml
-Type: OnPremises | Partner
+Type: TenantConnectorType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -200,10 +207,11 @@ The Enabled parameter specifies whether to enable or disable the Outbound connec
 - $false: The connector is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -221,10 +229,11 @@ The IsTransportRuleScoped parameter specifies whether the Outbound connector is 
 You scope a transport rule to an Outbound connector by using the RouteMessageOutboundConnector parameter on the New-TransportRule or Set-TransportRule cmdlets. Messages that match the conditions of the transport rule are routed to their destinations by using the specified Outbound connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -240,6 +249,7 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +267,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -272,10 +283,11 @@ The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced
 - $false: Messages aren't routed through the on-premises messaging system. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +303,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -306,10 +319,11 @@ The TestMode parameter specifies whether you want to enabled or disable test mod
 - $false: Test mode is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -325,6 +339,7 @@ Type: SmtpDomainWithSubdomains
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -344,10 +359,11 @@ The TlsSettings parameter specifies the TLS authentication level that's used for
 - $null (blank): This is the default value.
 
 ```yaml
-Type: EncryptionOnly | CertificateValidation | DomainValidation
+Type: TlsAuthLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -363,10 +379,11 @@ The UseMXRecord parameter enables or disables DNS routing for the connector. Val
 - $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -382,6 +399,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -406,4 +424,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/ca73d195-542f-4acf-b2ff-84275e26a79a.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-outboundconnector)

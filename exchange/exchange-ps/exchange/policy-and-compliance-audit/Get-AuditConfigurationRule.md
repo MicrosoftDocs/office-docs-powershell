@@ -30,15 +30,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-AuditConfigurationRule | Format-List Name,Workload,AuditOperation,Policy
 ```
 
 This example lists summary information about all audit configuration rules.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-AuditConfigurationRule 989a3a6c-dc40-4fa4-8307-beb3ece992e9
 ```
 
@@ -54,6 +54,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -69,6 +70,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: 1
 Default value: None
@@ -91,4 +93,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/7a1cdf79-8e70-41c8-85fd-7c359c9e8f91.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/get-auditconfigurationrule)

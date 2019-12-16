@@ -43,15 +43,15 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -82,15 +82,15 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -117,8 +117,8 @@ New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPri
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -147,8 +147,8 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-LastName <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -176,8 +176,8 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-LastName <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -209,16 +209,16 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
  [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -247,8 +247,8 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-ManagedFolderMailboxPolicyAllowed]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -260,7 +260,7 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
 
 ### EnableRoomMailboxAccount
 ```
-New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <$true | $false> [-MicrosoftOnlineServicesID <WindowsLiveId> [-Room] [-RoomMailboxPassword <SecureString>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnlineServicesID <WindowsLiveId> [-Room] [-RoomMailboxPassword <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -278,8 +278,8 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <$true | $false> [-Micros
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -309,15 +309,15 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -344,8 +344,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-Password <SecureString>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
  [-WhatIf] [<CommonParameters>]
@@ -373,16 +373,16 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
  [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -411,16 +411,16 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
  [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -449,16 +449,16 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-ResourceCapacity <Int32>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -484,8 +484,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-ManagedFolderMailboxPolicyAllowed]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
  [-WhatIf] [<CommonParameters>]
@@ -511,8 +511,8 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -524,7 +524,7 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
 
 ### PublicFolder
 ```
-New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFromServingHierarchy <$true | $false>]
+New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFromServingHierarchy <Boolean>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -542,8 +542,8 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -576,16 +576,16 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
  [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -615,15 +615,15 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -652,17 +652,17 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-Office <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-Phone <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -689,8 +689,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <Str
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
@@ -720,15 +720,15 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-LastName <String>]
  [-MailboxRegion <String>]
  [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
@@ -740,29 +740,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $password = Read-Host "Enter password" -AsSecureString; New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user Chris Ashton in Active Directory and creates a mailbox for the user. The mailbox is located on Mailbox Database 1. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-Mailbox -UserPrincipalName confmbx@contoso.com -Alias confmbx -Name ConfRoomMailbox -Database "Mailbox Database 1" -OrganizationalUnit Users -Room -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user in Active Directory and a resource mailbox for a conference room. The resource mailbox is located in Mailbox Database 1. The password must be reset at the next logon. You are prompted for the value of the initial password because it's not specified.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-Mailbox -UserPrincipalName confroom1010@contoso.com -Alias confroom1010 -Name "Conference Room 1010" -Room -EnableRoomMailboxAccount $true -RoomMailboxPassword (ConvertTo-SecureString -String P@ssw0rd -AsPlainText -Force)
 ```
 
 This example creates an enabled user account in Active Directory and a room mailbox for a conference room in an on-premises Exchange organization. The RoomMailboxPassword parameter specifies the password for the user account.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales; Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG; Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
@@ -780,6 +780,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -799,6 +800,7 @@ Type: SwitchParameter
 Parameter Sets: DisabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -820,6 +822,7 @@ Type: SwitchParameter
 Parameter Sets: Arbitration
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -832,6 +835,7 @@ Type: SwitchParameter
 Parameter Sets: Migration
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -851,6 +855,7 @@ Type: SmtpDomain
 Parameter Sets: RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -868,6 +873,7 @@ Type: SwitchParameter
 Parameter Sets: Discovery
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -889,10 +895,11 @@ Typically, the account that's associated with a room mailbox is disabled. Howeve
 In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: EnableRoomMailboxAccount
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -910,6 +917,7 @@ Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -927,6 +935,7 @@ Type: String
 Parameter Sets: FederatedUser, MicrosoftOnlineServicesFederatedUser
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -944,6 +953,7 @@ Type: MailboxIdParameter
 Parameter Sets: InactiveMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -956,6 +966,7 @@ Type: MailboxIdParameter
 Parameter Sets: User
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -975,6 +986,7 @@ Type: String
 Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -998,6 +1010,7 @@ Type: UserIdParameter
 Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1017,6 +1030,7 @@ Type: SwitchParameter
 Parameter Sets: LinkedRoomMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -1034,6 +1048,7 @@ Type: WindowsLiveId
 Parameter Sets: MicrosoftOnlineServicesFederatedUser, MicrosoftOnlineServicesFederatedUser
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1046,6 +1061,7 @@ Type: WindowsLiveId
 Parameter Sets: EnableRoomMailboxAccount
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1061,6 +1077,7 @@ Type: SwitchParameter
 Parameter Sets: Migration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1078,6 +1095,7 @@ Type: SecureString
 Parameter Sets: User, MicrosoftOnlineServicesID, RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1090,6 +1108,7 @@ Type: SecureString
 Parameter Sets: Arbitration, DisabledUser, Discovery, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1109,6 +1128,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1126,6 +1146,7 @@ Type: RemovedMailboxIdParameter
 Parameter Sets: RemovedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1138,6 +1159,7 @@ Type: RemovedMailboxIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, FederatedUser, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1157,6 +1179,7 @@ Type: SwitchParameter
 Parameter Sets: EnableRoomMailboxAccount, Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1174,6 +1197,7 @@ Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -1191,6 +1215,7 @@ Type: String
 Parameter Sets: User, Arbitration, AuditLog, RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -1203,6 +1228,7 @@ Type: String
 Parameter Sets: AuxAuditLog, DisabledUser,Discovery, EnableRoomMailboxAccount, Equipment, Linked, LinkedRoomMailbox, Migration, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1226,6 +1252,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1251,6 +1278,7 @@ Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1280,6 +1308,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1317,6 +1346,7 @@ Type: MailboxIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1332,6 +1362,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1355,6 +1386,7 @@ Type: DatabaseIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1376,6 +1408,7 @@ Type: SwitchParameter
 Parameter Sets: AuditLog
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -1397,6 +1430,7 @@ Type: SwitchParameter
 Parameter Sets: AuxAuditLog
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -1416,6 +1450,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1441,6 +1476,7 @@ Type: DatabaseIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1458,6 +1494,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1475,6 +1512,7 @@ Type: Fqdn
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1490,6 +1528,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1505,6 +1544,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1524,6 +1564,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1541,6 +1582,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1556,6 +1598,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1567,10 +1610,11 @@ Accept wildcard characters: False
 The IsExcludedFromServingHierarchy parameter prevents users from accessing the public folder hierarchy on this public folder mailbox. For load-balancing purposes, users are equally distributed across public folder mailboxes by default. When this parameter is set on a public folder mailbox, that mailbox isn't included in this automatic load-balancing and won't be accessed by users to retrieve the public folder hierarchy. However, if an administrator has set the DefaultPublicFolderMailbox property on a user mailbox to a specific public folder mailbox, the user will still access the specified public folder mailbox even if the IsExcludedFromServingHierarchy parameter is set for that public folder mailbox.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1586,6 +1630,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1605,6 +1650,7 @@ Type: PSCredential
 Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1636,6 +1682,7 @@ Type: MailboxPlanIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, DisabledUser, FederatedUser, InactiveMailbox, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1653,6 +1700,7 @@ Type: String
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1670,6 +1718,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1689,6 +1738,7 @@ Type: SwitchParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1720,6 +1770,7 @@ Type: MultiValuedProperty
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1737,10 +1788,11 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1756,6 +1808,7 @@ Type: String
 Parameter Sets: LinkedRoomMailbox, Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1766,7 +1819,7 @@ Accept wildcard characters: False
 ### -OrganizationalUnit
 The OrganizationalUnit parameter specifies the location in Active Directory where the new mailbox is created.
 
-Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -1781,6 +1834,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1796,6 +1850,7 @@ Type: String
 Parameter Sets: LinkedRoomMailbox, Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1813,6 +1868,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1830,6 +1886,7 @@ Type: SwitchParameter
 Parameter Sets: RemoteArchive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1849,10 +1906,11 @@ Access to remote PowerShell is required even if you're trying to open the Exchan
 A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1868,10 +1926,11 @@ The ResetPasswordOnNextLogon parameter specifies whether the user is required to
 - $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1887,6 +1946,7 @@ Type: Int32
 Parameter Sets: Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1916,6 +1976,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1941,6 +2002,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1964,6 +2026,7 @@ Type: SecureString
 Parameter Sets: EnableRoomMailboxAccount
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1981,6 +2044,7 @@ Type: String
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1998,6 +2062,7 @@ Type: SwitchParameter
 Parameter Sets: Scheduling
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -2017,10 +2082,11 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2048,6 +2114,7 @@ Type: SharingPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2065,6 +2132,7 @@ Type: SwitchParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2092,6 +2160,7 @@ Type: ThrottlingPolicyIdParameter
 Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2107,6 +2176,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2131,4 +2201,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/42dbb25a-0b23-4775-ae15-7af62c089565.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailbox)

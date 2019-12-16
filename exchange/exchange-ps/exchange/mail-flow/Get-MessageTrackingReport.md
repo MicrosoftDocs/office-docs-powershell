@@ -24,28 +24,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MessageTrackingReport [-Identity] <MessageTrackingReportId> [-BypassDelegateChecking]
- [-DetailLevel <Basic | Verbose>] [-DomainController <Fqdn>] [-DoNotResolve]
- [-RecipientPathFilter <SmtpAddress>] [-Recipients <String[]>] [-ReportTemplate <Summary | RecipientPath>]
- [-ResultSize <Unlimited>] [-Status <Unsuccessful | Pending | Delivered | Transferred | Read>]
- [-TraceLevel <Low | Medium | High>] [<CommonParameters>]
+ [-DetailLevel <MessageTrackingDetailLevel>] [-DomainController <Fqdn>] [-DoNotResolve]
+ [-RecipientPathFilter <SmtpAddress>] [-Recipients <String[]>] [-ReportTemplate <ReportTemplate>]
+ [-ResultSize <Unlimited>] [-Status <_DeliveryStatus>]
+ [-TraceLevel <TraceLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see Search-MessageTrackingReport.
+This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see [Search-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/mail-flow/search-messagetrackingreport).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $Temp = Search-MessageTrackingReport -Identity "David Jones" -Recipients "wendy@contoso.com"; Get-MessageTrackingReport -Identity $Temp.MessageTrackingReportID -ReportTemplate Summary
 ```
 
 This example gets the message tracking report for messages sent from one user to another. This example returns the summary of the message tracking report for a message that David Jones sent to Wendy Richardson.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Search-MessageTrackingReport -Identity "Cigdem Akin" -Sender "joe@contoso.com" -ByPassDelegateChecking -DoNotResolve | ForEach-Object { Get-MessageTrackingReport -Identity $_.MessageTrackingReportID -DetailLevel Verbose -BypassDelegateChecking -DoNotResolve -RecipientPathFilter "cigdem@fabrikam.com" -ReportTemplate RecipientPath }
 ```
 
@@ -65,6 +65,7 @@ Type: MessageTrackingReportId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -82,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -97,10 +99,11 @@ The DetailLevel parameter specifies the amount of detail to return in the result
 - Verbose: Full report information is returned, including server names and physical topology information.
 
 ```yaml
-Type: Basic | Verbose
+Type: MessageTrackingDetailLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +121,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +155,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +171,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -180,10 +187,11 @@ The ReportTemplate parameter specifies a predefined format for the output. Valid
 - Summary: Returns a summary for all recipients of the message. You specify the recipients by using the Recipients parameter.
 
 ```yaml
-Type: Summary | RecipientPath
+Type: ReportTemplate
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +207,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,10 +229,11 @@ The Status parameter filters the results by the specified delivery status codes.
 - Unsuccessful
 
 ```yaml
-Type: Unsuccessful | Pending | Delivered | Transferred | Read
+Type: _DeliveryStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,10 +253,11 @@ The TraceLevel parameter specifies the details to include in the results. Valid 
 You only need to use this parameter for troubleshooting message tracking issues.
 
 ```yaml
-Type: Low | Medium | High
+Type: TraceLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -271,4 +282,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b949297c-843b-4eb6-9e5e-378c84b841a3.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrackingreport)

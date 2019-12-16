@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### URL
 ```
 Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
- [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MailboxServer <ServerIdParameter>]
@@ -37,8 +37,8 @@ Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
 
 ### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
- [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MailboxServer <ServerIdParameter>]
@@ -77,15 +77,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-PowerShellConnectivity -ClientAccessServer MBX2 -VirtualDirectoryName "PowerShell (Default Web Site)" -TrustAnySSLCertificate
 ```
 
 This example tests the PowerShell (Default Web Site) virtual directory on the MBX2 server. The TrustAnySSLCertificate switch is used to skip the certificate check during connection.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $UserCredentials = Get-Credential; Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
 ```
 
@@ -105,6 +105,7 @@ Type: Uri
 Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +125,7 @@ Type: PSCredential
 Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -147,10 +149,11 @@ The Authentication parameter specifies the type of authentication that's used to
 - Negotiate
 
 ```yaml
-Type: Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos
+Type: AuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +181,7 @@ Type: ServerIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -197,6 +201,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +217,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +245,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +261,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +277,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -282,10 +291,11 @@ The TestType parameter specifies whether the command tests internal or external 
 You can only use this parameter with the ClientAccessServer parameter.
 
 ```yaml
-Type: Internal | External
+Type: OwaConnectivityTestType
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +313,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -320,6 +331,7 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -335,6 +347,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -359,4 +372,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2a876f48-9431-47fa-b65a-f3ea57c7f220.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-powershellconnectivity)

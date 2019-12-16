@@ -25,7 +25,7 @@ New-RpcClientAccess -Server <ServerIdParameter>
  [-BlockedClientVersions <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-EncryptionRequired <$true | $false>]
+ [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -37,8 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RpcClientAccess -Server CAS01
 ```
 
@@ -62,6 +62,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -79,6 +80,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +128,11 @@ Accept wildcard characters: False
 The EncryptionRequired parameter specifies whether to require Outlook connections to be encrypted. The Exchange RPC Client Access service rejects unencrypted Outlook connections if this parameter is set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +152,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +168,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -186,4 +193,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/c235645b-3361-404d-bf0d-3d8920aeb4e4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-rpcclientaccess)

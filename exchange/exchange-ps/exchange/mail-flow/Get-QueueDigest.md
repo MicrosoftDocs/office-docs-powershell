@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-QueueDigest cmdlet to view information about message delivery queues across database availability groups (DAGs) Active Directory sites, or Active Directory forests in your organization.
 
-By default, the Get-QueueDigest cmdlet displays delivery queues that contain ten or more messages, and the results are between one and two minutes old. For instructions on how to change these default values, see Configure Get-QueueDigest.
+By default, the Get-QueueDigest cmdlet displays delivery queues that contain ten or more messages, and the results are between one and two minutes old. For instructions on how to change these default values, see [Configure Get-QueueDigest](https://docs.microsoft.com/exchange/configure-get-queuedigest-exchange-2013-help).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -25,9 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Dag
 ```
 Get-QueueDigest -Dag <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
@@ -35,9 +35,9 @@ Get-QueueDigest -Dag <MultiValuedProperty>
 ### Forest
 ```
 Get-QueueDigest [-Forest]
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
@@ -45,9 +45,9 @@ Get-QueueDigest [-Forest]
 ### Server
 ```
 Get-QueueDigest -Server <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
@@ -56,9 +56,9 @@ Get-QueueDigest -Server <MultiValuedProperty>
 ### Site
 ```
 Get-QueueDigest -Site <MultiValuedProperty>
- [-DetailsLevel <None | Normal | Verbose>]
+ [-DetailsLevel <DetailsLevel>]
  [-Filter <String>]
- [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
+ [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
  [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
@@ -69,15 +69,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-QueueDigest -Forest
 ```
 
 This example returns information about all queues in the Active Directory forest.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-QueueDigest -Dag DAG01
 ```
 
@@ -95,6 +95,7 @@ Type: MultiValuedProperty
 Parameter Sets: Dag
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -112,6 +113,7 @@ Type: SwitchParameter
 Parameter Sets: Forest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +131,7 @@ Type: MultiValuedProperty
 Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +149,7 @@ Type: MultiValuedProperty
 Parameter Sets: Site
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -157,10 +161,11 @@ Accept wildcard characters: False
 The DetailsLevel parameter specifies the level of detail to display in the results. Valid values for this parameter are None, Normal and Verbose. The default value is Normal.
 
 ```yaml
-Type: None | Normal | Verbose
+Type: DetailsLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value, for example, {NextHopDomain -eq "contoso.com"}. For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -178,6 +183,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupBy
-The GroupedBy parameter sorts the messages in the delivery queue results. Valid values for this parameter are:
+The GroupedBy parameter sorts the messages in the delivery queue results. Valid values are:
 
 - DeliveryType
 
@@ -194,7 +200,7 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 
 - NextHopCategory
 
-- NextHopDomain
+- NextHopDomain (this is the default value)
 
 - NextHopKey
 
@@ -206,13 +212,12 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 
 - OutboundIPPool
 
-The default value is NextHopDomain.
-
 ```yaml
-Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool
+Type: QueueDigestGroupBy
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -228,6 +233,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +251,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -269,4 +276,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/64a6d710-0297-453b-aa35-3ae0a65bd81e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-queuedigest)

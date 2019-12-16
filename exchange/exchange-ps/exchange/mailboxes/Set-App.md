@@ -21,9 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-OrganizationApp]
- [-ProvidedTo <Everyone | SpecificUsers>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
+Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-OrganizationApp]
+ [-ProvidedTo <ClientExtensionProvidedTo>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
  [<CommonParameters>]
 ```
 
@@ -38,15 +38,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
 ```
 
 This example changes the organization app named FinanceTestApp, which was installed to everyone in the organization, to be provided to members of the Finance Team group and to be enabled by default.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -Enabled $false
 ```
 
@@ -62,6 +62,7 @@ Type: AppIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -81,6 +82,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -100,10 +102,11 @@ The DefaultStateForUser parameter specifies the default initial state of the org
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Enabled | Disabled | AlwaysEnabled
+Type: DefaultStateForUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +124,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -138,10 +142,11 @@ The Enabled parameter specifies whether the app is available to users in the org
 This setting overrides the ProvidedTo, UserList, and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +162,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -174,10 +180,11 @@ The ProvidedTo parameter specifies the availability of the app in your organizat
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Everyone | SpecificUsers
+Type: ClientExtensionProvidedTo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -219,6 +226,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +242,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -249,6 +258,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -273,4 +283,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3506b2b9-dc23-4ed9-84f5-8839c4c3c974.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-app)

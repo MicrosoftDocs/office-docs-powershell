@@ -25,9 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
- [-ExternalAccess <$true | $false>]
+ [-ExternalAccess <Boolean>]
  [-GroupMailbox]
- [-HasAttachments <$true | $false>]
+ [-HasAttachments <Boolean>]
  [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
@@ -41,9 +41,9 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
 Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
- [-ExternalAccess <$true | $false>]
+ [-ExternalAccess <Boolean>]
  [-GroupMailbox]
- [-HasAttachments <$true | $false>]
+ [-HasAttachments <Boolean>]
  [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
@@ -59,22 +59,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Search-MailboxAuditLog -Identity kwok -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
 This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Search-MailboxAuditLog -Mailboxes kwok,bsmith -LogonTypes Admin,Delegate -StartDate 1/1/2018 -EndDate 12/31/2018 -ResultSize 2000
 ```
 
 This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's mailboxes for actions performed by Admin and Delegate logon types between 1/1/2018 and 12/31/2018. A maximum of 2,000 log entries are returned.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2016 -EndDate 3/1/2016 | Where-Object {$_.Operation -eq "HardDelete"}
 ```
 
@@ -110,6 +110,7 @@ Type: MailboxIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -127,6 +128,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +146,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +162,11 @@ $true: Audit log entries for mailbox access by external users or Microsoft datac
 $false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +184,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,10 +200,11 @@ The HasAttachments parameter filters the search by messages that have attachment
 - $false: Messages with and without attachments are included in the search.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,6 +224,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +248,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +268,7 @@ Type: MultiValuedProperty
 Parameter Sets: MultipleMailboxesSearch
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +316,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -322,6 +332,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +352,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -358,6 +370,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -382,4 +395,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2cc4598a-8a8c-45a0-901c-73e1079d193e.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog)

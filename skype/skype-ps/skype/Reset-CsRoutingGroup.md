@@ -12,7 +12,7 @@ ms.reviewer:
 # Reset-CsRoutingGroup
 
 ## SYNOPSIS
-Enables administrators to reset a Windows fabric routing group that is not working correctly.
+Enables administrators to reset a Windows Fabric routing group that is not working correctly.
 
 ## SYNTAX
 
@@ -141,11 +141,11 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Permanent, takes everything back from Back End Servers and recreates the whole Routing Group.
+- Permanent. Takes everything back from Back End Servers and recreates the whole routing group.
 
-Transient, resets the Windows Fabric service and fix any issues. Then syncs up any missing data from the RTCLocal Database.
+- Transient. Resets the Windows Fabric service and fixes any issues, then syncs up any missing data from the RTCLocal Database.
 
-Recreate, deletes existing data from Windows Fabric service about the Routing Group and reloads them from RTCLocal Database.
+- Recreate. Deletes existing data from Windows Fabric service about the routing group and reloads them from the RTCLocal Database.
 
 ```yaml
 Type: RgResetType
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

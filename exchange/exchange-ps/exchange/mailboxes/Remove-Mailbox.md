@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <Boolean>]
  [-Arbitration]
  [-AuditLog]
  [-AuxAuditLog]
@@ -78,29 +78,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-Mailbox -Identity "John Rodman"
 ```
 
 This example removes the mailbox and the user account for the user named John Rodman. The mailbox remains in the mailbox database for the deleted mailbox retention period that's configured for the database.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-Mailbox -Identity "John Rodman" -Permanent $true
 ```
 
 This example removes the mailbox and the user account for the user named John Rodman. The mailbox is immediately and permanently removed from the mailbox database.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 ```
 
@@ -138,6 +138,7 @@ Type: MailboxIdParameter
 Parameter Sets: Identity, Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -165,6 +166,7 @@ Type: DatabaseIdParameter
 Parameter Sets: StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -186,6 +188,7 @@ Type: StoreMailboxIdParameter
 Parameter Sets: StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -207,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -228,6 +232,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -249,6 +254,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +274,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +292,7 @@ Type: Fqdn
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +308,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +330,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -338,6 +348,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -353,6 +364,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -370,10 +382,11 @@ The Permanent parameter specifies whether to permanently delete the mailbox from
 - $false: The mailbox disabled and retained until the deleted mailbox retention period expires. You can reconnect or restore the mailbox until the deleted mailbox retention period expires. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -397,6 +410,7 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -414,6 +428,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -431,6 +446,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -448,6 +464,7 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +480,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -487,4 +505,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/0477708c-768c-4040-bad2-8f980606fcf4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailbox)

@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-HoldComplianceRule [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
  [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-Disabled <$true | $false>] [-HoldContent <Unlimited>] [-HoldDurationDisplayHint <Days | Months | Years>]
+ [-Disabled <Boolean>] [-HoldContent <Unlimited>] [-HoldDurationDisplayHint <HoldDurationHint>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,8 +34,8 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-HoldComplianceRule -Identity "Internal Company Rule" -HoldContent 180
 ```
 
@@ -57,6 +57,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -72,6 +73,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +111,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +129,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +147,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -153,10 +159,11 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the preservation rule is enabled or disabled. Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +183,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -195,10 +203,11 @@ The HoldDurationDisplayHint parameter specifies the units that are used to displ
 For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
+Type: HoldDurationHint
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +223,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -236,4 +246,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/12a4397c-3369-43d2-9c52-a6e39956e7e4.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-holdcompliancerule)

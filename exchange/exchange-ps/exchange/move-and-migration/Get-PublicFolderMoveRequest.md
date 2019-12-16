@@ -24,12 +24,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PublicFolderMoveRequest [-BatchName <String>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Name <String>]
  [-RequestQueue <DatabaseIdParameter>]
  [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -48,15 +48,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
 This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderMoveRequest -RequestQueue MBD01
 ```
 
@@ -74,6 +74,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +90,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -106,10 +108,11 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,6 +142,7 @@ Type: PublicFolderMoveRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -156,6 +160,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +184,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -194,6 +200,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -227,10 +234,11 @@ The Status parameter filters the results based on status. You can use the follow
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed
+Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,10 +252,11 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -272,4 +281,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/2bcadd33-e520-498b-8551-9ef38d6d5f54.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermoverequest)

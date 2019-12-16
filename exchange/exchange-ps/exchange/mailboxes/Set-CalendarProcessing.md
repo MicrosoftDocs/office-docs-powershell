@@ -22,42 +22,42 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-CalendarProcessing [-Identity] <MailboxIdParameter>
- [-AddAdditionalResponse <$true | $false>]
+ [-AddAdditionalResponse <Boolean>]
  [-AdditionalResponse <String>]
- [-AddNewRequestsTentatively <$true | $false>]
- [-AddOrganizerToSubject <$true | $false>]
- [-AllBookInPolicy <$true | $false>]
- [-AllowConflicts <$true | $false>]
- [-AllowRecurringMeetings <$true | $false>]
- [-AllRequestInPolicy <$true | $false>]
- [-AllRequestOutOfPolicy <$true | $false>]
- [-AutomateProcessing <None | AutoUpdate | AutoAccept>]
- [-BookingType <Standard | Reserved>]
+ [-AddNewRequestsTentatively <Boolean>]
+ [-AddOrganizerToSubject <Boolean>]
+ [-AllBookInPolicy <Boolean>]
+ [-AllowConflicts <Boolean>]
+ [-AllowRecurringMeetings <Boolean>]
+ [-AllRequestInPolicy <Boolean>]
+ [-AllRequestOutOfPolicy <Boolean>]
+ [-AutomateProcessing <CalendarProcessingFlags>]
+ [-BookingType <ResourceBookingType>]
  [-BookingWindowInDays <Int32>]
  [-BookInPolicy <RecipientIdParameter[]>]
  [-Confirm]
  [-ConflictPercentageAllowed <Int32>]
- [-DeleteAttachments <$true | $false>]
- [-DeleteComments <$true | $false>]
- [-DeleteNonCalendarItems <$true | $false>]
- [-DeleteSubject <$true | $false>]
+ [-DeleteAttachments <Boolean>]
+ [-DeleteComments <Boolean>]
+ [-DeleteNonCalendarItems <Boolean>]
+ [-DeleteSubject <Boolean>]
  [-DomainController <Fqdn>]
- [-EnableResponseDetails <$true | $false>]
- [-EnforceSchedulingHorizon <$true | $false>]
- [-ForwardRequestsToDelegates <$true | $false>]
+ [-EnableResponseDetails <Boolean>]
+ [-EnforceSchedulingHorizon <Boolean>]
+ [-ForwardRequestsToDelegates <Boolean>]
  [-IgnoreDefaultScope]
  [-MaximumConflictInstances <Int32>]
  [-MaximumDurationInMinutes <Int32>]
- [-OrganizerInfo <$true | $false>]
- [-ProcessExternalMeetingMessages <$true | $false>]
- [-RemoveForwardedMeetingNotifications <$true | $false>]
- [-RemoveOldMeetingMessages <$true | $false>]
- [-RemovePrivateProperty <$true | $false>]
+ [-OrganizerInfo <Boolean>]
+ [-ProcessExternalMeetingMessages <Boolean>]
+ [-RemoveForwardedMeetingNotifications <Boolean>]
+ [-RemoveOldMeetingMessages <Boolean>]
+ [-RemovePrivateProperty <Boolean>]
  [-RequestInPolicy <RecipientIdParameter[]>]
  [-RequestOutOfPolicy <RecipientIdParameter[]>]
  [-ResourceDelegates <RecipientIdParameter[]>]
- [-ScheduleOnlyDuringWorkHours <$true | $false>]
- [-TentativePendingApproval <$true | $false>]
+ [-ScheduleOnlyDuringWorkHours <Boolean>]
+ [-TentativePendingApproval <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -66,50 +66,62 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CalendarProcessing -Identity "Conf 212" -AutomateProcessing AutoAccept -DeleteComments $true -AddOrganizerToSubject $true -AllowConflicts $false
 ```
 
 This example automates the processing of calendar requests to the resource mailbox Conf 212.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing None
 ```
 
 This example disables automatic processing for the resource mailbox Car 53.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllBookInPolicy $true
 ```
 
 This example allows the Calendar Attendant to approve in-policy requests from all users.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllRequestInPolicy $true -AllBookInPolicy $false -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows all users to submit in-policy requests, but the request is still subject to approval by one of the specified delegates.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -RequestOutOfPolicy DavidPelton@contoso.com -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows the Calendar Attendant to accept out-of-policy requests from David Pelton. The request is still subject to approval by one of the specified delegates.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing AutoAccept -BookInPolicy "ayla@contoso.com","tony@contoso.com" -AllBookInPolicy $false
 ```
 
 This example allows a list of users to submit in-policy meeting requests to the equipment mailbox for Car 53.
 
-### -------------------------- Example 7 --------------------------
+### Example 7
+```powershell
+$group = New-DistributionGroup "Room 221 Booking Allowed"
+$members = @()
+$members += "karina@contoso.com","tony@contoso.com"
+$members = $members | Get-Mailbox
+Add-DistributionGroupMember -Identity $group -Members $members -BypassSecurityGroupManagerCheck:$true
+Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group -AllBookInPolicy $false
 ```
+
+This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
+
+### Example 8
+```powershell
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
 
@@ -145,6 +157,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -162,10 +175,11 @@ The AddAdditionalResponse parameter specifies whether additional information (th
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -174,13 +188,14 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalResponse
-The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
+The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AddAdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -196,10 +211,11 @@ The AddNewRequestsTentatively parameter specifies whether new meeting requests a
 - $false: Only existing calendar items are updated by the Calendar Attendant.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -217,10 +233,11 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -236,10 +253,11 @@ The AllBookInPolicy parameter specifies whether to automatically approve in-poli
 - $false: In-policy requests from all users aren't automatically approved (approval by a delegate is required).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -255,10 +273,11 @@ The AllowConflicts parameter specifies whether to allow conflicting meeting requ
 - $false: Conflicts aren't allowed. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,10 +293,11 @@ The AllowRecurringMeetings parameter specifies whether to allow recurring meetin
 - $false: Recurring meetings aren't allowed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -293,10 +313,11 @@ The AllRequestInPolicy parameter specifies whether to allow all users to submit 
 - $false: All users can't submit in-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -312,10 +333,11 @@ The AllRequestOutOfPolicy parameter specifies whether to allow all users to subm
 - $false: All users can't submit out-of-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -339,10 +361,11 @@ In Exchange Online, resource mailbox created in the EAC and resource mailboxes c
 The default value for user mailboxes is AutoUpdate, but you can't change the value on a user mailbox.
 
 ```yaml
-Type: None | AutoUpdate | AutoAccept
+Type: CalendarProcessingFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -360,10 +383,11 @@ The BookingType parameter specifies how reservations work on the resource mailbo
 - Reserved: The resource can't be reserved.
 
 ```yaml
-Type: <Standard | Reserved>
+Type: <ResourceBookingType>
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +403,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -387,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the users. For example:
+The BookInPolicy parameter specifies users or groups who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely Exchange Online object. For example:
 
 - Name
 
@@ -408,6 +433,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -427,6 +453,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -444,6 +471,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -461,10 +489,11 @@ The DeleteAttachments parameter specifies whether to remove attachments from all
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -482,10 +511,11 @@ The DeleteComments parameter specifies whether to remove or keep any text in the
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -501,10 +531,11 @@ The DeleteNonCalendarItems parameter specifies whether to remove or keep all non
 - $false: Non-calendar messages are preserved.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -522,10 +553,11 @@ The DeleteSubject parameter specifies whether to remove or keep the subject of i
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -543,6 +575,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -558,10 +591,11 @@ The EnableResponseDetails parameter specifies whether to include the reasons for
 - $false: The reasons for accepting or declining a meeting aren't included in the response message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -577,10 +611,11 @@ The EnforceSchedulingHorizon parameter controls the behavior of recurring meetin
 - $false: A recurring meeting request is automatically accepted if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date. However, the number of meetings is automatically reduced so meetings won't occur after the specified date.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -596,10 +631,11 @@ The ForwardRequestsToDelegates parameter specifies whether to forward incoming m
 - $false: Don't forward incoming meeting requests to the delegates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -621,6 +657,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -638,6 +675,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -655,6 +693,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -670,10 +709,11 @@ The OrganizerInfo parameter specifies whether the resource mailbox sends organiz
 - $false: Organizer information isn't sent when a meeting request is declined because of conflicts.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -689,10 +729,11 @@ The ProcessExternalMeetingMessages parameter specifies whether to process meetin
 - $false: Meeting requests from external senders are rejected. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -708,10 +749,11 @@ The RemoveForwardedMeetingNotifications parameter specifies whether forwarded me
 - $false: Processed forwarded meeting notifications aren't deleted. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -727,10 +769,11 @@ The RemoveOldMeetingMessages parameter specifies whether the Calendar Attendant 
 - $false: Outdated and redundant meeting messages aren't deleted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -746,10 +789,11 @@ The RemovePrivateProperty parameter specifies whether to clear the private flag 
 - $false: The private flag for incoming meeting requests is preserved (private meetings stay private).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -779,6 +823,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -808,6 +853,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -837,6 +883,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -854,10 +901,11 @@ The ScheduleOnlyDuringWorkHours parameter specifies whether to allow meetings to
 You configure the working hours of the resource mailbox by using the WorkDays, WorkingHoursStartTime, WorkingHoursEndTime and WorkingHoursTimeZone parameters on the Set-MailboxCalendarConfiguration cmdlet.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -873,10 +921,11 @@ The TentativePendingApproval parameter specifies whether to mark pending request
 - $false: Meeting requests that are awaiting approval appear in the calendar as free.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -892,6 +941,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -916,4 +966,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/000bc90f-1d00-4384-ab59-d6cf6f674825.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing)

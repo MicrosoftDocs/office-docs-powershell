@@ -57,21 +57,21 @@ In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter s
 
 If you use these parameters in scheduled commands or scripts, we recommend that you review them and make any necessary changes.
 
-For more information, see Messaging Records Management (MRM) and Retention Policies in Office 365 (https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
+For more information, see [KB4032361](https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Start-ManagedFolderAssistant -Identity "Chris"
 ```
 
 This example processes the mailbox for a user with the alias Chris.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Mailbox -Anr Chr -DomainController DC01 | Start-ManagedFolderAssistant
 ```
 
@@ -107,6 +107,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -124,6 +125,7 @@ Type: SwitchParameter
 Parameter Sets: HoldCleanup
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -136,6 +138,7 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +154,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +192,7 @@ Type: Fqdn
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +232,7 @@ Type: SwitchParameter
 Parameter Sets: HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +252,7 @@ Type: SwitchParameter
 Parameter Sets: StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -259,6 +268,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None

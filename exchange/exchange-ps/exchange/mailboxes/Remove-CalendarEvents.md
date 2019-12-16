@@ -37,22 +37,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings
 ```
 
 This example cancels every meeting in the mailbox chris@contoso.com that occurs on or after today's date. After you cancel the meetings, you can remove the mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Remove-CalendarEvents -Identity "Angela Gruber" -CancelOrganizedMeetings -QueryStartDate 11-1-2018 -QueryWindowInDays 120
 ```
 
 This example cancels the meetings in Angela Gruber's calendar for the specified date range. Angela is taking a temporary leave of absence from the company, so cancelling these meetings removes them from the user and resource calendars during her absence.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Remove-CalendarEvents -Identity "Jacob Berger" -CancelOrganizedMeetings -QueryStartDate 9-1-2018 -QueryWindowInDays 90 -PreviewOnly -Verbose
 ```
 
@@ -88,6 +88,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -105,6 +106,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +144,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +157,7 @@ The QueryStartDate parameter specifies the start date to look for meetings that 
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-If you don't use this parameter, today's date is used.
+**Note**: If you don't use this parameter, today's date is used.
 
 You use the QueryWindowInDays parameter to specify the end date.
 
@@ -162,6 +166,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -176,11 +181,14 @@ If you don't use this parameter, all future meetings on or after the specified s
 
 If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
 
+**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +204,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,4 +227,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/bf188d1c-d6e5-4c82-9508-35f9b788ff82.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-calendarevents)
