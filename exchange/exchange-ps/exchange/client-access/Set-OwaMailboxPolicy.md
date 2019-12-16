@@ -1470,11 +1470,11 @@ Accept wildcard characters: False
 ### -PersonalAccountCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
-The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Gmail calendars in Outlook on the web. Valid values are:
+The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Google Calendar in Outlook on the web. Valid values are:
 
-- $true: Users can connect to their Outlook.com or Gmail calendars to see those events in their Outlook on the web calendar. This is the default value.
+- $true: Users can connect to their Outlook.com or Google Calendar to see those events in their Outlook on the web calendar. This is the default value.
 
-- $false: Users can't connect to their Outlook.com or Gmail calendars in Outlook on the web.
+- $false: Users can't connect to their Outlook.com or Google Calendar in Outlook on the web.
 
 ```yaml
 Type: Boolean
