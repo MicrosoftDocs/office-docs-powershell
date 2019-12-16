@@ -1212,11 +1212,7 @@ Accept wildcard characters: False
 ### -LinkedInEnabled
 This parameter is available only in the cloud-based service.
 
-The LinkedInEnabled parameter specifies whether users can synchronize their LinkedIn contacts to their Contacts folder. Valid values are:
-
-- $true: LinkedIn integration is enabled. This is the default value.
-
-- $false: LinkedIn integration is disabled.
+LinkedIn integration is no longer supported.
 
 ```yaml
 Type: Boolean
