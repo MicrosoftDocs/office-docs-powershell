@@ -67,7 +67,7 @@ This example performs the following actions:
 
 - It disables out-of-office notifications to the remote domain.
 
-- It suppresses read receipts sent from clients in your organization to the remote domain.
+- It suppresses delivery receipts sent from clients in your organization to the remote domain.
 
 - It enables TNEF message data on messages sent to the remote domain.
 
