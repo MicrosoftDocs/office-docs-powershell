@@ -1,44 +1,44 @@
 ---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
-title: Add-SPOHubSiteAssociation
+title: Add-SPOHubToHubAssociation
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: 
+ms.author: 
 ms.reviewer:
 ---
 
-# Add-SPOHubSiteAssociation
+# Add-SPOHubToHubAssociation
 
 ## SYNOPSIS
 
-Associates a site with a hub site.
+Associates a hub site to a hub site.
 
 ## SYNTAX
 
 ```powershell
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
+Add-SPOHubToHubAssociation [-Source] <SpoHubSitePipeBind> -Target <SpoHubSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use this cmdlet to associate a site with a hub site.
+Use this cmdlet to associate a hub site to a hub site.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing
+Add-SPOHubToHubAssociation -Source https://contoso.sharepoint.com/sites/Research -Target https://contoso.sharepoint.com/sites/ResearchAndDevelopment
 ```
 
-This example associates the research site with the marketing hub site.
+This example associates the source hub site 'Research' with the target hub site 'ResearchAndDevelopment'.
 
 ## PARAMETERS
 
-### -Site
+### -Source
 
-URL of the site to join to the hub site.
+Source Hub site to be assicated with the Target Hub Site.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -52,9 +52,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HubSite
+### -Target
 
-URL of the hub site.
+Target Hub to associate the source Hub to.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -73,7 +73,3 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
-
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
-
-If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
