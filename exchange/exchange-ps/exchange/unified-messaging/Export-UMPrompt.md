@@ -54,7 +54,7 @@ This example exports the welcome greeting for the UM dial plan MyUMDialPlan and 
 
 ### Example 2
 ```powershell
-Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; Set-Content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
+$prompt = Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; Set-Content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
 This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
