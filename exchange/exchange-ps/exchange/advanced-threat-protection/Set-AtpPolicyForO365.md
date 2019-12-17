@@ -152,6 +152,8 @@ The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled 
 
 - $false: Safe Links are disabled for Office 365 apps.
 
+This parameter is being replaced by EnableSafeLinksForO365Clients with the same functionality. Use which ever one is currently available in your tenant.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
