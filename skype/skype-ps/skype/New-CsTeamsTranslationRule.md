@@ -184,13 +184,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-
-## OUTPUTS
-The output will be the status of the command completion – success or fail with reason. 
-Message: The  rule created successfully
-
-## NOTES
-
-## RELATED LINKS
