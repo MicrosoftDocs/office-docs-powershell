@@ -1584,7 +1584,7 @@ To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Ty
 ## OUTPUTS
 
 ###  
-To see the return types (also known as "output types") that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

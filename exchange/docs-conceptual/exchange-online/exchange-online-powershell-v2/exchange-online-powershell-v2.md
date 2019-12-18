@@ -72,6 +72,22 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
   <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If basic authentication is disabled, you'll get this error when you try to connect:
+
+  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 ### Install the EXO V2 module
 
@@ -134,7 +150,7 @@ If the EXO V2 module is already installed on your computer, you can run the foll
 To uninstall the module, run the following command:
 
 ```PowerShell
-Remove-Module ExchangeOnlineManagement
+Uninstall-Module -Name ExchangeOnlineManagement
 ```
 
 > [!TIP]

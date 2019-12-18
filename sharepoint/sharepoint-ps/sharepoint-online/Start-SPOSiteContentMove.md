@@ -44,21 +44,21 @@ This command starts the information and the status of a move request of a user b
 
 ### EXAMPLE 1
 ```powershell
-Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
+Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
 ```
-Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
+Starts the movement of the content on https://contosoenergy.sharepoint.com/sites/hr to the EUR destination preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
 ### EXAMPLE 2
 ```powershell
-Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation  $destlocation
+Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation JPN
 ```
-Starts the movement of a group of users called group@contoso.com to the destination location called $destlocation
+Starts the movement of a group of users called group@contoso.com to the JPN location
 
 ### EXAMPLE 3
 ```powershell
-Start-SPOSiteContentMove -Url $url -DestinationUrl $destlocation
+Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hr
 ```
-Starts the movement from a $url and set it to the location defined on $destlocation
+Starts the movement from https://contosoenergy.sharepoint.com/sites/hr and set it to the location https://contosoenergyEUR.sharepoint.com/sites/hr
 
 
 ## PARAMETERS
