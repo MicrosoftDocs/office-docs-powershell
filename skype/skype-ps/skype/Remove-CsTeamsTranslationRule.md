@@ -101,15 +101,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-## OUTPUTS
-The output will be the status of the command completion – success or fail with reason.
-
-Message: The  rule deleted  successfully.
-
-Message: The rule $ cannot be deleted as it is in use on SBC(s): SBC FQDN (s).
-
-## NOTES
-
-## RELATED LINKS
