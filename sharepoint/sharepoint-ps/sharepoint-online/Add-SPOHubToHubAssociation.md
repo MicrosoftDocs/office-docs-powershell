@@ -38,7 +38,7 @@ This example associates the source hub site 'Research' with the target hub site 
 
 ### -Source
 
-Source Hub site to be assicated with the Target Hub Site.
+Source Hub site to be associated with the Target Hub Site.
 
 ```yaml
 Type: SpoSitePipeBind
