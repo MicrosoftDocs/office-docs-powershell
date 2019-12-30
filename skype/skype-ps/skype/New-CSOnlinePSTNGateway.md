@@ -15,7 +15,7 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 
 ### Identity (Default)
 ```
-New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
+New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignalingPort <Int32> [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
@@ -24,7 +24,7 @@ New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-Cod
 
 ### ParentAndRelativeKey
 ```
-New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
+New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignalingPort <Int32>
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-InMemory] [-Force]
@@ -38,14 +38,14 @@ Use this cmdlet to create a new Session Border Controller (SBC) configuration. E
 
 ### Example 1
 ```powershell
-PS C:\> New-CSOnlinePSTNGateway - FQDN sbc.contoso.com -SIPSignallingPort 5061
+PS C:\> New-CSOnlinePSTNGateway - FQDN sbc.contoso.com -SIPSignalingPort 5061
 ```
 
 This example creates an SBC with FQDN sbc.contoso.com and signaling port 5061. All others parameters will stay default. Note the SBC will be in the disabled state.
 
 ### Example 2
 ```powershell
-PS C:\> New-CSOnlinePSTNGateway - FQDN sbc.contoso.com -SIPSignallingPort 5061 -ForwardPAI $true -Enabled $true
+PS C:\> New-CSOnlinePSTNGateway - FQDN sbc.contoso.com -SIPSignalingPort 5061 -ForwardPAI $true -Enabled $true
 ```
 
 This example creates an SBC with FQDN sbc.contoso.com and signaling port 5061. For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
@@ -275,7 +275,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SipSignallingPort
+### -SipSignalingPort
 Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. Must be value between 1 and 65535.
 
 ```yaml
