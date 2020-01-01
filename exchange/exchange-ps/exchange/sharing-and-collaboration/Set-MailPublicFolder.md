@@ -96,10 +96,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-MailPublicFolder -Identity MyPublicFolder@contoso.com -PrimarySmtpAddress MyPublicFolder@fabrikam.com
+Set-MailPublicFolder -Identity MyPublicFolder@contoso.onmicrosoft.com -EmailAddresses @{add="MyPublicFolder@contoso.com","MyPublicFolder@fabrikam.com"}
 ```
 
-This example sets the primary SMTP address of the mail-enabled public folder MyPublicFolder@contoso.com to MyPublicFolder@fabrikam.com.
+This example adds secondary email addresses MyPublicFolder@contoso.com & MyPublicFolder@fabrikam.com to the mail enabled public folder
+
+Ensure the accepted domain is present in the organization before adding email addresses 
+
+### Example 2
+```powershell
+Set-MailPublicFolder -Identity MyPublicFolder -PrimarySmtpAddress MyPublicFolder@contoso.com -EmailAddressPolicyEnabled $false
+```
+
+This example sets the primary SMTP address of the mail-enabled public folder MyPublicFolder@contoso.onmicrosoft.com to MyPublicFolder@contoso.com
+
+### Example 3
+```powershell
+Set-MailPublicFolder -Identity MyPublicFolder -EmailAddresses @{remove="MyPublicFolder@fabrikam.com"}
+```
+
+This example removes secondary email address MyPublicFolder@fabrikam.com from the mail enabled public folder
 
 ## PARAMETERS
 
