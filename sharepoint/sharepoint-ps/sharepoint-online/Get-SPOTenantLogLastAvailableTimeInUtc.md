@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 
-```
+```powershell
 Get-SPOTenantLogLastAvailableTimeInUtc
 ```
 
