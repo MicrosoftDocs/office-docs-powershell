@@ -56,7 +56,7 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet is used to control a variety o
 
 * Controls whether users can continue to sync OneDrive for Business libraries with the old OneDrive for Business sync client.
 
-### Restrict non-domain joined machines from syncing
+**Restrict non-domain joined machines from syncing**
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to enable the feature for tenancy and set the domain GUIDs in the safe recipients list. When this feature is enabled it can take up to 24 hours for the change to take effect. However, any changes to the safe domains list are reflected within five minutes.
 
@@ -95,7 +95,7 @@ When the feature is enabled the following will occur:
 
 For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](https://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
 
-### Block specific file extensions from syncing
+**Block specific file extensions from syncing**
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure a list of file extensions that should not be synced by the OneDrive sync client, such as .PST files.
 
