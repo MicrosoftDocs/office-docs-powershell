@@ -22,7 +22,7 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ Url of the site to add the app catalog to.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named

@@ -13,7 +13,6 @@ ms.reviewer:
 
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal.
 
-
 ## SYNTAX
 
 ### Default
@@ -45,7 +44,7 @@ Resource of the permission request to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -62,7 +61,7 @@ Scope of the permission request to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

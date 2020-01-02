@@ -16,11 +16,13 @@ Denies a permission request for the current tenant's "SharePoint Online Client" 
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Deny-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>
 ```
 
 ## DESCRIPTION
+
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
 Denying a permission request removes that request from the list of permission requests.
@@ -28,6 +30,7 @@ Denying a permission request removes that request from the list of permission re
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 $requests = Get-SPOTenantServicePrincipalPermissionRequests
 $requestToDeny = $requests | ? { $_.Resource -eq 'Office 365 SharePoint Online' -and $_.Scope -eq 'MyFiles.Read' } | Select-Object -First 1
@@ -44,6 +47,7 @@ If there is no request with those properties, then no deny action will be taken.
 ## PARAMETERS
 
 ### -RequestId
+
 The ID of the permission request to deny
 
 ```yaml

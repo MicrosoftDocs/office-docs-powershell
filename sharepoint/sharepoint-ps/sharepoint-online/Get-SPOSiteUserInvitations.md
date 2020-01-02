@@ -21,7 +21,8 @@ Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
@@ -31,7 +32,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -42,7 +43,7 @@ This example .
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
@@ -58,7 +59,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 2

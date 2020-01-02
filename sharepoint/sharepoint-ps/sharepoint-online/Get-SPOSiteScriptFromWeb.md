@@ -22,7 +22,7 @@ Get-SPOSiteScriptFromWeb [-WebUrl] <string> [-IncludedLists <string[]>] [-Includ
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Use this cmdlet to .
 Get-SPOSiteScriptFromWeb -WebUrl
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ This example .
 ```yaml
 Type: string
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```yaml
 Type: string[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

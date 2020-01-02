@@ -11,8 +11,8 @@ ms.reviewer:
 # New-SPOPublicCdnOrigin
 
 ## SYNOPSIS
-Creates a new public CDN on a document library in your Sharepoint Online Tenant
 
+Creates a new public CDN on a document library in your Sharepoint Online Tenant
 
 ## SYNTAX
 
@@ -20,25 +20,24 @@ Creates a new public CDN on a document library in your Sharepoint Online Tenant
 New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
-This Cmdlet creates a new Public CDN Origin in your SPO Tenant
 
+This Cmdlet creates a new Public CDN Origin in your SPO Tenant
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 New-SPOPublicCdnOrigin –URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
 ```
 
 This example shows how to you can setup a new Public CDN on a document library in your SharePoint online tenant.
 
-
-
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -55,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
 Specify the URL that will be enabled for Public CDN in your tenant
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -71,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -88,9 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 
@@ -105,8 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOPublicCdnOrigins](Get-SPOPublicCdnOrigins.md)
 
 [Remove-SPOPublicCdnOrigin](Remove-SPOPublicCdnOrigin.md)
-
-
-
-
-

@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection. The supported site templates you can apply a site design to include: “modern” team site (with O365 group), “modern” team site (without an O365 group); communication site; classic team site; and classic publishing site. 
+Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection. The supported site templates you can apply a site design to include: “modern” team site (with O365 group), “modern” team site (without an O365 group); communication site; classic team site; and classic publishing site.
 
 ## SYNTAX
 
@@ -55,14 +55,15 @@ Add to Hub Site                                   Success
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to apply.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -70,17 +71,17 @@ Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False  
 ```
-

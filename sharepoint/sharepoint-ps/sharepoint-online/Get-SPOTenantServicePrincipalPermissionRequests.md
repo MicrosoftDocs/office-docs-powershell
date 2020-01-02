@@ -22,6 +22,7 @@ Get-SPOTenantServicePrincipalPermissionRequests
 ```
 
 ## DESCRIPTION
+
 Gets the collection of permission requests for the "SharePoint Online Client" service principal.
 
 Permission request object
@@ -37,9 +38,9 @@ A permission request contains the following properties:
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionRequests
 ```
 
 Gets the collection of permission requests for the "SharePoint Online Client" service principal.
-

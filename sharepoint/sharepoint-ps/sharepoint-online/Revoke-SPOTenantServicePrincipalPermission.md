@@ -38,7 +38,7 @@ if ($grantToRemove -ne $null)
 }
 ```
 
-Revokes the permission associated with the 'Office 365 SharePoint Online' resource and with scope claim 'MyFiles.Read'. 
+Revokes the permission associated with the 'Office 365 SharePoint Online' resource and with scope claim 'MyFiles.Read'.
 If there is no permission with those properties, then no revoke action will be taken.
 
 ## PARAMETERS

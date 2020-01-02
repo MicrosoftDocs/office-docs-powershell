@@ -22,7 +22,7 @@ Get-SPOSiteDataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Use this cmdlet to .
 Get-SPOSiteDataEncryptionPolicy https://contoso.sharepoint.com/sites/Research
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ This example .
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 1

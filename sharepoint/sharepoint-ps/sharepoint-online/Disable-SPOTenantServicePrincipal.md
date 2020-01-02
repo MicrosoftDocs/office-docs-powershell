@@ -20,6 +20,7 @@ Disable-SPOTenantServicePrincipal
 ```
 
 ## DESCRIPTION
+
 Disables the current tenant's "SharePoint Online Client" service principal.
 
 When the service principal's account is disabled, clients and components that use this service principal
@@ -28,6 +29,7 @@ will not be able to request an access token for this service principal.
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Disable-SPOTenantServicePrincipal
 ```

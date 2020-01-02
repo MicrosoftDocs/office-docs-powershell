@@ -11,6 +11,7 @@ ms.reviewer:
 # Get-SPOUnifiedGroupMoveState
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
@@ -21,7 +22,7 @@ Get-SPOUnifiedGroupMoveState [-GroupAlias] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -31,7 +32,7 @@ Use this cmdlet to .
 Get-SPOUnifiedGroupMoveState -GroupAlias <string>
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -42,7 +43,7 @@ This example .
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1

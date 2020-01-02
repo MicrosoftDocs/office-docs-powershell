@@ -14,9 +14,15 @@ ms.reviewer:
 
 Removes a theme from the theme gallery.
 
+## SYNTAX
+
+```powershell
+Remove-SPOTheme [-Identity] <SpoThemePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
-The **Remove-SPOTheme** cmdlet removes a theme from your tenant store. 
+The **Remove-SPOTheme** cmdlet removes a theme from your tenant store.
 
 ## EXAMPLES
 
@@ -24,11 +30,10 @@ The **Remove-SPOTheme** cmdlet removes a theme from your tenant store.
 
 This example removes the `"Custom Cyan"` theme that was used in the previous examples for the **Add-SPOTheme** and **Get-SPOTheme** cmdlets.
 
-```
+```powershell
 Remove-SPOTheme -Name "Custom Cyan"
 ```
 
 ## INPUTS
 
 ## OUTPUTS
-

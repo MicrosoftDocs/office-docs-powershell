@@ -21,7 +21,8 @@ Get-SPOUnifiedGroup [-GroupAlias] <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
@@ -31,7 +32,7 @@ Use this cmdlet to .
 Get-SPOUnifiedGroup -GroupAlias <string>
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -42,7 +43,7 @@ This example .
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1

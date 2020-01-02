@@ -11,17 +11,17 @@ ms.reviewer:
 # Unregister-SPOHubSite
 
 ## SYNOPSIS
+
 Disables the hub site feature on a site.
 
 ## SYNTAX
 
-```
-Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind>
-[-WhatIf] [-Confirm]
-[<CommonParameters>]
+```powershell
+Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Disables the hub site feature on a site so that it is no longer a hub site. Associated sites may still appear associated for up to an hour. If you want to speed up the process, use the Remove-SPOHubSiteAssociation cmdlet to remove the associates sites first.
 
 > [!NOTE]
@@ -31,7 +31,7 @@ Disables the hub site feature on a site so that it is no longer a hub site. Asso
 
 ### Example 1
 
-```
+```powershell
 Unregister-SPOHubSite -Identity <guid>
 ```
 
@@ -39,7 +39,7 @@ This example removes a site from the hub site list based on unique hub identifie
 
 ### Example 2
 
-```
+```powershell
 Unregister-SPOHubSite -Identity https://contoso.sharepoint.com/sites/Marketing
 ```
 
@@ -97,3 +97,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

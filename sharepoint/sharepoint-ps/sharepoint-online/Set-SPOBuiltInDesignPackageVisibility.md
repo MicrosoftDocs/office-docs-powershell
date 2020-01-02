@@ -11,37 +11,39 @@ ms.reviewer:
 # Set-SPOBuiltInDesignPackageVisibility
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
 
-```
-Set-SPOBuiltInDesignPackageVisibility
+```powershell
+Set-SPOBuiltInDesignPackageVisibility -IsVisible <bool> -DesignPackage <DesignPackageType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
-### -
+### -IsVisible
 
 .
 
 ```yaml
-Type: SpoSitePipeBind
+Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -49,5 +51,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DesignPackage
+
+.
+
+```yaml
+Type: DesignPackageType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES

@@ -20,11 +20,13 @@ Enable-SPOTenantServicePrincipal
 ```
 
 ## DESCRIPTION
+
 Enables the current tenant's "SharePoint Online Client" service principal.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Enable-SPOTenantServicePrincipal
 ```

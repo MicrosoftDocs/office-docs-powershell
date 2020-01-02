@@ -11,21 +11,22 @@ ms.reviewer:
 # Get-SPOSiteDesignRun
 
 ## SYNOPSIS
-Retrieves a list of site designs applied to a specified site collection. 
 
+Retrieves a list of site designs applied to a specified site collection.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOSiteDesignRun [-WebUrl] <String> [[-SiteDesignId] <SPOSiteDesignPipeBind>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Retrieves a list of site designs applied to a specified site collection. The WebUrl is required to know which site collection to query. The returned output includes the ID of the scheduled job, the web and site IDs, and the site design ID, version, and title.
 
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
+### ------------ Example 1 --------------------
 
 This example would return a list of the site designs applied to the specified site. Providing a specific site design ID will return the details for just that applied site design.
 
@@ -43,6 +44,7 @@ SiteDesignTitle: | Contoso Project Playbook
 ## PARAMETERS
 
 ### -SiteDesignId
+
 The ID of a specific site design. Use this optional parameter if you wish to only return details on a specific site design run.
 
 ```yaml
@@ -58,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
 The Url of the site collection.
 
 ```yaml
@@ -73,8 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,4 +93,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## RELATED LINKS
 
 [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
-

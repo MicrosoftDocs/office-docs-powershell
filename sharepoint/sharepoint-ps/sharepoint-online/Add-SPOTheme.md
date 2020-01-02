@@ -16,13 +16,8 @@ Creates a new custom theme, or overwrites an existing theme to modify its settin
 
 ## SYNTAX
 
-```
-Add-SPOTheme
-  -Identity <SpoThemePipeBind>
-  -IsInverted <bool>
-  -Overwrite
-  -Palette <SpoThemePalettePipeBind>
-  [<CommonParameters>]
+```powershell
+Add-SPOTheme -Identity <SpoThemePipeBind> -IsInverted <bool> -Overwrite -Palette <SpoThemePalettePipeBind>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,6 +74,7 @@ If you want to update an existing theme (to modify some of its color settings, f
 ```powershell
 Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
 ```
+
 ## PARAMETERS
 
 ### -Identity
@@ -92,13 +88,13 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -IsInverted
 
 ```yaml
-Type: Boolean 
+Type: Boolean
 Parameter Sets: (All)
 Aliases: None
 Applicable: SharePoint Online
@@ -106,10 +102,10 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
-### -Overwrite 
+### -Overwrite
 
 ```yaml
 Type: SwitchParameter
@@ -120,7 +116,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -Palette
@@ -134,10 +130,9 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ## INPUTS
 
 ## OUTPUTS
-

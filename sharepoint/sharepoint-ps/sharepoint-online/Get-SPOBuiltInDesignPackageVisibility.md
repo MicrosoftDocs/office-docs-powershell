@@ -22,7 +22,7 @@ Get-SPOBuiltInDesignPackageVisibility [-DesignPackage <DesignPackageType>] [<Com
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ This example .
 ```yaml
 Type: DesignPackageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

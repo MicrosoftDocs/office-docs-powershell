@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Command to remove a scheduled site design script. 
+Command to remove a scheduled site design script.
 
 ## SYNTAX
 
@@ -36,20 +36,21 @@ Removes a scheduled site design by providing the site design ID. If the executio
 This example removes a previously scheduled site design.
 
 ```powershell
-Remove-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 
+Remove-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82
 ```
 
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to apply.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -11,42 +11,43 @@ ms.reviewer:
 # Remove-SPOSiteGroup
 
 ## SYNOPSIS
-Removes a SharePoint Online group from a site collection.
 
+Removes a SharePoint Online group from a site collection.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOSiteGroup -Identity <String> -Site <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use the `Remove-SPOSiteGroup` cmdlet to remove a group from a site collection by specifying the name of the group in the Identity parameter.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the `Remove-SPOSiteGroup` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
+
+```powershell
 Remove-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/marketing -Identity GroupToRemove
 ```
-This example removes a group named GroupToRemove from the site collection https://contoso.sharepoint.com/sites/marketing.
 
+This example removes a group named GroupToRemove from the site collection <https://contoso.sharepoint.com/sites/marketing.>
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the name of the group to remove.
 
+Specifies the name of the group to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -57,13 +58,13 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the site collection to remove the group from.
 
+Specifies the site collection to remove the group from.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -74,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

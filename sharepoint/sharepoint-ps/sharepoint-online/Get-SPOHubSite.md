@@ -11,16 +11,18 @@ ms.reviewer:
 # Get-SPOHubSite
 
 ## SYNOPSIS
+
 Lists hub sites or hub site information.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub. You can find which hub a site is associated with by providing the site's identity with this cmdlet.
 
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
@@ -32,7 +34,7 @@ If the hub site doesn’t exist, this cmdlet returns a “File not found” erro
 
 ### Example 1
 
-```
+```powershell
 Get-SPOHubSite
 ```
 
@@ -40,7 +42,7 @@ This example lists all hub sites in the tenant.
 
 ### Example 2
 
-```
+```powershell
 Get-SPOHubSite -Identity https://contoso.sharepoint.com/sites/online-marketing
 
 ID                   : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
@@ -66,7 +68,7 @@ URL of the hub site. If not specified, the cmdlet lists all hub sites in the ten
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

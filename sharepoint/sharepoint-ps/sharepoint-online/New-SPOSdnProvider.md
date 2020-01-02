@@ -11,8 +11,8 @@ ms.reviewer:
 # New-SPOSdnProvider
 
 ## SYNOPSIS
-Adds a new Software-Defined Networking (SDN) provider
 
+Adds a new Software-Defined Networking (SDN) provider
 
 ## SYNTAX
 
@@ -20,8 +20,8 @@ Adds a new Software-Defined Networking (SDN) provider
 New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
+
 This Cmdlet creates a new Software-Defined Networking, and it receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
 
 ## EXAMPLES
@@ -34,10 +34,10 @@ New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
 
 This example creates the Hive for a SDN Provider.
 
-
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -54,13 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -71,13 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -License
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -88,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -105,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
@@ -115,6 +116,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
-
 
 [Remove-SPOSdnProvider](Remove-SPOSdnProvider.md)

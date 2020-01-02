@@ -16,11 +16,13 @@ Gets the collection of permission grants for the "SharePoint Online Client" serv
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionGrants
 ```
 
 ## DESCRIPTION
+
 Gets the collection of permission grants for the "SharePoint Online Client" service principal.
 
 A permission grant contains the following properties:
@@ -40,6 +42,7 @@ A permission grant contains the following properties:
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionGrants
 ```

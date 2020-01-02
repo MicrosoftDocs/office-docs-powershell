@@ -11,20 +11,20 @@ ms.reviewer:
 # New-SPOMigrationPackage
 
 ## SYNOPSIS
-Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
+Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
 ## SYNTAX
 
-```
+```powershell
 New-SPOMigrationPackage [-SourceFilesPath] <String> [-OutputPackagePath] <String> [[-TargetWebUrl] <String>]
  [[-TargetDocumentLibraryPath] <String>] [[-TargetDocumentLibrarySubFolderPath] <String>] [-IgnoreHidden]
  [-IncludeFileSharePermissions] [-NoAzureADLookup] [-NoLogFile] [-ReplaceInvalidCharacters]
  [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
+
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
 >[!NOTE]
@@ -35,49 +35,44 @@ Cmdlet to create a new migration package based on source files in a local or net
 >| Package Size   | 2-4      | The whole package can't exceed 4Gb    |
 >| File Size     | 2        | A single file inside the source folder can't exceed 2 Gb.      |
 >| Target Size | -| target site should remain non-accessible to end user until migration is complete|
-
-
 >[!NOTE]
->Limits on HTTP Get 
+>Limits on HTTP Get
 >
 >| Limit | API Get (chars)  | Description |
 >| :---:         |     :---:      |          :---: |
 >| Action GET on API    | 260 chars      | The size of the API GET request can't exceed 260 chars|
 >
 
-
-
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg
 
 New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents" -TargetDocumentLibrarySubFolderPath "Sub Folder/Target Folder"
 ```
+
 This example creates a new set of migration source package metadata files, using default URL values, in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location.
 
-
 ### -----------------------EXAMPLE 2-----------------------------
-```
+
+```powershell
 New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
 ```
-This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path “https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents”.
 
+This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path “https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents”.
 
 ## PARAMETERS
 
-
-
-
 ### -IgnoreHidden
-Switch to ignore hidden files and folders.
 
+Switch to ignore hidden files and folders.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -88,13 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeFileSharePermissions
-Used to include permissions and sharing information into the generated manifest files in the package metadata. 
 
+Used to include permissions and sharing information into the generated manifest files in the package metadata.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -105,13 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoAzureADLookup
-Switch to not lookup local user accounts in Azure Active Directory.
 
+Switch to not lookup local user accounts in Azure Active Directory.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -122,13 +117,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-Used to not create a log file. The default is to create a new CreateMigrationPackage log file within the directory specified within the OutputPackagePath parameter.
 
+Used to not create a log file. The default is to create a new CreateMigrationPackage log file within the directory specified within the OutputPackagePath parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -139,13 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPackagePath
-The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created. 
 
+The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -156,13 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -ReplaceInvalidCharacters
-Switch to replace characters in file and folder names that would be invalid in SharePoint Online.
 
+Switch to replace characters in file and folder names that would be invalid in SharePoint Online.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -173,13 +168,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-The directory location where the source content files exist. This directory will be enumerated to create the package metadata files. 
 
+The directory location where the source content files exist. This directory will be enumerated to create the package metadata files.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -190,13 +185,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibraryPath
-The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, “Documents” will be used within the package metadata instead.
 
+The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, “Documents” will be used within the package metadata instead.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -207,13 +202,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibrarySubFolderPath
-Specifies the document library relative subfolder to use as the folder path part of the base URL in the package metadata. If this is not provided, no value will be used within the package metadata. The files will be homed under the document library root.
 
+Specifies the document library relative subfolder to use as the folder path part of the base URL in the package metadata. If this is not provided, no value will be used within the package metadata. The files will be homed under the document library root.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -224,13 +219,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, “http://fileserver/sites/user” will be used instead within the package metadata.
 
+The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, “<http://fileserver/sites/user”> will be used instead within the package metadata.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -241,7 +236,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

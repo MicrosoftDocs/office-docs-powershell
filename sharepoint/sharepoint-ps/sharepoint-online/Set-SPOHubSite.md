@@ -11,21 +11,17 @@ ms.reviewer:
 # Set-SPOHubSite
 
 ## SYNOPSIS
+
 Sets the hub site information such as name, logo, and description.
 
 ## SYNTAX
 
-```
-Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
-  [-Title <string>]
-  [-LogoUrl <string>]
-  [-Description <string>]
-  [-SiteDesignId <guid>]
-  [-RequiresJoinApproval <bool>]
-  [<CommonParameters>]
+```powershell
+Set-SPOHubSite [-Identity] <SpoHubSitePipeBind> [-Title <string>] [-LogoUrl <string>] [-Description <string>] [-SiteDesignId <guid>] [-RequiresJoinApproval <bool>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use this cmdlet to set properties such as name, logo, and description. These properties appear for the hub in the SharePoint user interface.
 
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
@@ -34,7 +30,7 @@ If the hub site doesn’t exist, this cmdlet returns a “File not found” erro
 
 ### Example 1
 
-```
+```powershell
 Set-SPOHubSite https://contoso.sharepoint.com/sites/Marketing `
 -Title "Marketing Hub" `
 -LogoUrl https://contoso.sharepoint.com/sites/Marketing/SiteAssets/hublogo.png `
@@ -69,7 +65,7 @@ The display name of the hub.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -86,7 +82,7 @@ The URL of a logo to use in the hub navigation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -103,7 +99,7 @@ A description of the hub site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -120,7 +116,7 @@ Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -137,7 +133,7 @@ Determines if joining a Hub site requires approval.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -146,3 +142,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

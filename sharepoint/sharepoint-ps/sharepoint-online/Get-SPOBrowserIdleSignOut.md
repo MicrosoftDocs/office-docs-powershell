@@ -22,7 +22,7 @@ Get-SPOBrowserIdleSignOut [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

@@ -43,7 +43,7 @@ Source Hub site to be assicated with the Target Hub Site.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
@@ -59,7 +59,7 @@ Target Hub to associate the source Hub to.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named

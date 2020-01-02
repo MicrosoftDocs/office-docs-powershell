@@ -21,6 +21,7 @@ Get-SPOCrossGeoMoveReport -MoveJobType <JobType> [-Limit <uint32>] [-MoveStartTi
 ```
 
 ## DESCRIPTION
+
 Use this cmdlet to .
 
 ## EXAMPLES
@@ -42,7 +43,7 @@ This example .
 ```yaml
 Type: JobType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -56,9 +57,73 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: SpoSitePipeBind
+Type: uint32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveStartTime
+
+.
+
+```yaml
+Type: datetime
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveEndTime
+
+.
+
+```yaml
+Type: datetime
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveState
+
+.
+
+```yaml
+Type: MoveState
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveDirection
+
+.
+
+```yaml
+Type: MoveDirection
+Parameter Sets: (All)
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
