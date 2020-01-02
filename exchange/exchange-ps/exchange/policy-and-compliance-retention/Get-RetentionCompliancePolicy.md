@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeTeamsPolicy
-The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies in the results. You don't need to specify a value with this switch.
+The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
