@@ -104,7 +104,7 @@ Any file extension may be blocked using this feature, but note that it may take 
 > [!IMPORTANT]
 > This feature is only supported by the new OneDrive for Business sync client. To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
-### Control whether users can use the old OneDrive for Business sync client
+**Control whether users can use the old OneDrive for Business sync client**
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure your tenant to allow or disallow users from using the old OneDrive for Business sync client to sync OneDrive for Business libraries.
 
@@ -180,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: Blocking
 Aliases:
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -194,6 +195,7 @@ Type: Boolean
 Parameter Sets: ReportProblemDialogFeature
 Aliases:
 Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -210,6 +212,7 @@ Type: String
 Parameter Sets: Blocking
 Aliases:
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +229,7 @@ Type: SwitchParameter
 Parameter Sets: Blocking
 Aliases:
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +249,7 @@ Type: String
 Parameter Sets: FileExclusion
 Aliases:
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -263,6 +268,7 @@ Parameter Sets: GrooveBlockOptions
 Aliases:
 Accepted values: OptOut, HardOptIn, SoftOptIn
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -281,3 +287,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
+
+## RELATED LINKS

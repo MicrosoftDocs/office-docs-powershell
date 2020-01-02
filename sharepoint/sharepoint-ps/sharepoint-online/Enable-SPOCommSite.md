@@ -61,7 +61,7 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 Enable-SPOCommSite -SiteUrl $rootSiteURL
 ```
 
-#### STEP BY STEP INSTRUCTIONS
+**STEP BY STEP INSTRUCTIONS**
 
 1. Install latest SharePoint Online Management Shell (version 8715.1200 or greater) from [here](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you have an older version installed, please uninstall it from Windows Add/Remove programs and then install the latest version. Alternatively, if you have used Install-Module Microsoft.Online.SharePoint.PowerShell to install the SharePoint Online Management Shell, you can run Update-Module Microsoft.Online.SharePoint.PowerShell to update the PowerShell module to the latest available version.
 2. Make sure you have the SharePoint admin credentials for the tenant
@@ -70,33 +70,33 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 5. Open SharePoint Online Management Shell from your computer
 6. Execute the PowerShell commands from your notepad
 
-#### TROUBLESHOOTING
+**TROUBLESHOOTING**
 
-##### Error case 1: Wrong credentials
+**Error case 1: Wrong credentials**
 
 If the SharePoint admin user credentials is wrong or invalid, you will see this error:
 
 >*Connect-SPOService : The sign-in name or password does not match one in the Microsoft account system.*
 
-##### Error case 2: Feature is not yet enabled for your tenant
+**Error case 2: Feature is not yet enabled for your tenant**
 
 The use of this cmdlet is subject to the feature rollout. If the feature is not yet available for your tenant, the cmdlet will not execute and will show this error:
 
 >*Enable-SPOCommSite : The requested operation is part of an experimental feature that is not supported in the current environment.*
 
-##### Error case 3: Site URL input is not of root site
+**Error case 3: Site URL input is not of root site**
 
 Currently only the root site of a tenant is supported for this cmdlet. IF the site URL input is wrong, you will see this error:
 
 >*Enable-SPOCommSite : The site provided is not the root site collection. Please provide a valid root site URL.*
 
-##### Error case 4: Site URL input is invalid
+**Error case 4: Site URL input is invalid**
 
 If the site URL input points to a site that does not exist, you will see the following error message:
 
 >*Enable-SPOCommSite : File Not Found.*
 
-##### Error case 5: Classic publishing feature is currently enabled
+**Error case 5: Classic publishing feature is currently enabled**
 
 We do not support root site that currently have or have had in the past enabled the classic publishing features. If you see this error, your root site is not eligible for this feature enablement
 
@@ -113,6 +113,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -139,3 +140,19 @@ Default value: 96c933ac-3698-44c7-9f4a-5fd17d71af9e
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+
+## RELATED LINKS

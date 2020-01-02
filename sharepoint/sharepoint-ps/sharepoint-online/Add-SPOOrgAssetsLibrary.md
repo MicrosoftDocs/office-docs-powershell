@@ -49,6 +49,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Accepted values: Public, Private
+
 Required: False
 Position: Named
 Default value: Private
@@ -65,6 +66,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Accepted values: ImageDocumentLibrary
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +101,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
