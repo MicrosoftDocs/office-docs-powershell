@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Export-SPOUserInfo -LoginName joe.healy@contoso.com -site https://contoso.sharepoint.com/sites/sc1 -OutputFolder "C:\users\admin\exportfolder"
 ```
-Example 1 exports a user data who has the e-mail address joe.healy@contoso.com from the site collection https://contoso.sharepoint.com/sites/sc1 to folder C:\users\admin\exportfolder.
+Example 1 exports user data who has the e-mail address joe.healy@contoso.com from the site collection https://contoso.sharepoint.com/sites/sc1 to folder C:\users\admin\exportfolder.
 
 
 ###   ------------ Example 2 --------------------
