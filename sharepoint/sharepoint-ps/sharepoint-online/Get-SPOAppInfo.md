@@ -49,7 +49,7 @@ Example 2 returns the installed application that has the GUID 6751729b-e017-409d
 ```
 Get-SPOAppInfo -Name " " | Sort Name
 ```
-Example 3 returns the installed application that have a space in the name and sorts the in ascending order. 
+Example 3 returns all the installed applications that have a space in the name and sorts them in ascending order. 
 
 ## PARAMETERS
 
