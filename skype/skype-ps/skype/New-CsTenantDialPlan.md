@@ -202,7 +202,7 @@ Accept wildcard characters: False
 The SimpleName parameter is a display name for the tenant dial plan.
 This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
 
-This string can be up to 256 characters long.
+This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 This parameter must contain a value.
