@@ -2266,7 +2266,7 @@ The WeatherEnabled parameter specifies whether to enable or disable weather info
 
 - $true: Weather is enabled. This is the default value.
 
-- $false: Weather is disabled. This is the default value.
+- $false: Weather is disabled.
 
 ```yaml
 Type: Boolean

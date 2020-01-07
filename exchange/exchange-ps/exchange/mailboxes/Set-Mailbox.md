@@ -1096,7 +1096,14 @@ This example removes the message tracking organization capability from the arbit
 Set-Mailbox -Identity "John Woods" -EmailAddresses @{add="Jwoods@contoso.com"}
 ```
 
-This example add's a secondary email address to John's mailbox.
+This example adds a secondary email address to John's mailbox.
+
+### Example 8
+```powershell
+Set-Mailbox -Identity asraf@contoso.com -RemoveDelayReleaseHoldApplied
+```
+
+In Exchange Online, this example removes the delay hold that's applied to Asraf's mailbox so an offboarding migration (that is, a mailbox migration from Exchange Online back to on-premises Exchange) can continue successfully. For more information about delay holds, see [Managing mailboxes on delay hold](https://docs.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
 ## PARAMETERS
 
