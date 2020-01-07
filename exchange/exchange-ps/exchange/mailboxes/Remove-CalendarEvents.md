@@ -189,7 +189,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

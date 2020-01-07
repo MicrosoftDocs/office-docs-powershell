@@ -59,11 +59,11 @@ This example sets the Recipient Administrators role group membership list to Mar
 Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity; Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 
-This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
+This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or mail-enabled security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
 
 Mailbox: If you want to add or remove a mailbox, use the syntax (Get-Mailbox "\<Alias or Name\>").Identity
 
-Security Group: If you want to add or remove a security group, use the syntax (Get-Group "\<Name\>").Identity
+Mail-enabled security group: If you want to add or remove a mail-enabled security group, use the syntax (Get-Group "\<Name\>").Identity
 
 ## PARAMETERS
 
@@ -144,11 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the mailboxes or USG that should be members of a security group. If the member name contains spaces, enclose the name in quotation marks ("). Separate multiple members using commas.
+The Members parameter specifies the mailboxes or mail-enabled USGs to add as a member of the role group. You can identify the user or group by the name, DN, or primary SMTP address value. You can specify multiple members separated by commas (`Value1,Value2,...ValueN`). If the value contains spaces, enclose the value in quotation marks (`"Value 1","Value 2",..."Value N"`).
 
-The list that you specify using the Members parameter overwrites the existing membership list of the role group. If you want to add or remove individual members to or from a role group, use the Add-RoleGroupMember or Remove-RoleGroupMember cmdlets.
-
-If you want to add or remove multiple members without replacing the entire membership list, see the Examples section.
+By default, the values that you specify overwrite the existing membership list of the role group. To add or remove multiple members without replacing the entire membership list, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
