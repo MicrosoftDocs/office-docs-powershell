@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantScopeOnly
-{{Fill TenantScopeOnly Description}}
+Runs the test only against Tenant-level dial plans (does not take into account Service Level Dial Plans).
 
 ```yaml
 Type: SwitchParameter
