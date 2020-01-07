@@ -499,7 +499,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: DisabledUserOveride
+Default value: DisabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
