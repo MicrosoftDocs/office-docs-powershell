@@ -46,7 +46,7 @@ As you read these resources, consider that the following concepts and cmdlets ar
 * [Get-Member](https://go.microsoft.com/fwlink/p/?LinkId=171070)
 * [Get-Help](https://go.microsoft.com/fwlink/p/?LinkId=171068)
 * [Aliasing](https://go.microsoft.com/fwlink/p/?LinkId=113207)
-* [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/en-us/library/ee176927.aspx)
+* [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx)
 * [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx)
 * [Foreach-Object](https://technet.microsoft.com/library/ee176828.aspx)
 * [Where-Object](https://technet.microsoft.com/library/ee177028.aspx)
