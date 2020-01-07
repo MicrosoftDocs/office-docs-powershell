@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-CsEffectiveTenantDialPlan
 
 ## SYNOPSIS
-Use the `Test-CsEffectiveTenantDialPlan` cmdlet to test a tenant dial plan.
+Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
 
 ## SYNTAX
 
