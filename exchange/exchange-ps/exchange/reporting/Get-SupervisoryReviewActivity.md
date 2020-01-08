@@ -114,4 +114,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.compowershell/module/exchange/reporting/get-supervisoryreviewactivity)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewactivity)
