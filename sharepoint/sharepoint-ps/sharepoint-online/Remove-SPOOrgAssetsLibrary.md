@@ -39,14 +39,6 @@ This example removes https://contoso.sharepoint.com/sites/branding/Assets as a d
 Remove-SPOOrgAssetsLibrary -ListId 58454454-6546-6466-9769-646464623988
 ```
 
-### Example 2
-
-This example removes https://contoso.sharepoint.com/sites/branding/Assets as a designated library using the library URL. Assets within this library will no longer be accessible from the "Your organization" tab in the file picker.
-
-```powershell
-Remove-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ShouldRemoveFromCdn $true
-```
-
 ## PARAMETERS
 
 ### -LibraryUrl
