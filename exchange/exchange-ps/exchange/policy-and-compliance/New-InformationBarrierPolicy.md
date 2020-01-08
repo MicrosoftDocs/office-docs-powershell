@@ -46,7 +46,7 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 ```
 
 ## DESCRIPTION
-For more information, see [Information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies).
+For more information, see [Information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies).
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
@@ -253,4 +253,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy)
 
-[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+[Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)

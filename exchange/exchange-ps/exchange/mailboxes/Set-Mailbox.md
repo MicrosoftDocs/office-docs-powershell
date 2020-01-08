@@ -1722,7 +1722,7 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 
 - $false: Mailbox audit logging is disabled. This is the default value.
 
-**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
 
 ```yaml
 Type: Boolean
@@ -2336,7 +2336,7 @@ The DefaultAuditSet parameter specifies whether to revert the mailbox operations
 
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
 
-With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://docs.microsoft.com/office365/securitycompliance/enable-mailbox-auditing).
+With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://docs.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
 
 ```yaml
 Type: MultiValuedProperty
