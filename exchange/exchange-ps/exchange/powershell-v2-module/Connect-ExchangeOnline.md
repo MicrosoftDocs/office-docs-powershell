@@ -135,8 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-Use this parameter to pass the customer organization which you want to manage. The customer tenant should have already consented for delegation using CSP Program for this parameter to work successfully. Once authenticated successfully, the cmdlets imported in the session will be mapped to customer tenant and all the operations performed by cmdlets in this delegated session will be done on customer tenant. 
-Complete customer domain should be passed i.e. contosoelectronics.onmicrosoft.com
+The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
+
+After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
 ```yaml
 Type: String
