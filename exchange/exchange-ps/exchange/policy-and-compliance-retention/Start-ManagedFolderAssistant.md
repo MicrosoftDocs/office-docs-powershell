@@ -292,4 +292,7 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/start-managedfolderassistant)
+
 [Export-MailboxDiagnosticLogs](https://docs.microsoft.com/powershell/module/exchange/mailboxes/Export-MailboxDiagnosticLogs)
