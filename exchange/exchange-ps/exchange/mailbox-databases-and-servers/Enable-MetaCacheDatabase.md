@@ -115,4 +115,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version][Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/enable-metacachedatabase)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/enable-metacachedatabase)
