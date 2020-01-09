@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Creates site script syntax from an existing SharePoint site.
 
 ## SYNTAX
 
@@ -22,23 +22,34 @@ Get-SPOSiteScriptFromWeb [-WebUrl] <string> [-IncludedLists <string[]>] [-Includ
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Uses an existing SharePoint site to output a JSON blob that can be used to create a site script for use in a site design.
 
 ## EXAMPLES
 
 ### Example 1
 
-```powershell
-Get-SPOSiteScriptFromWeb -WebUrl
-```
+This example creates the site script output from an existing site - and writes it to a variable. This variable is then referenced to create a site script.
 
-This example .
+```powershell
+C:\> $extracted = Get-SPOSiteScriptFromWeb `
+    -WebUrl https://contoso.sharepoint.com/sites/template `
+    -IncludeBranding `
+    -IncludeTheme `
+    -IncludeRegionalSettings ` 
+    -IncludeSiteExternalSharingCapability ` 
+    -IncludeLinksToExportedItems ` 
+    -IncludedLists ("Shared Documents", "Lists/Project Activities")
+C:\> Add-SPOSiteScript `
+    -Title "Contoso template site" `
+    -Description "This is a copy of a site collection." `
+    -Content $extracted
+```
 
 ## PARAMETERS
 
 ### -WebUrl
 
-.
+The url that starts with HTTPS of the site to retrieve the site script.
 
 ```yaml
 Type: string
@@ -54,7 +65,7 @@ Accept wildcard characters: False
 
 ### -IncludedLists
 
-.
+An array of one or more lists. Each is identified by the list url.
 
 ```yaml
 Type: string[]
@@ -70,7 +81,7 @@ Accept wildcard characters: False
 
 ### -IncludeBranding
 
-.
+A switch that if provided, extracts the configuration of the site's branding.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +97,7 @@ Accept wildcard characters: False
 
 ### -IncludeTheme
 
-.
+A switch that if provided, extracts the site's custom theme by using the themeJson property.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +113,7 @@ Accept wildcard characters: False
 
 ### -IncludeRegionalSettings
 
-.
+A switch that if provided, extracts the site's regional settings.
 
 ```yaml
 Type: SwitchParameter
@@ -118,7 +129,7 @@ Accept wildcard characters: False
 
 ### -IncludeSiteExternalSharingCapability
 
-.
+A switch that if provided, extracts the site's external sharing capability.
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +145,7 @@ Accept wildcard characters: False
 
 ### -IncludeLinksToExportedItems
 
-.
+A switch that if provided, extracts navigation links. In order to export navigation links pointing to lists, the list needs to be included in the request as well.
 
 ```yaml
 Type: SwitchParameter
@@ -151,5 +162,3 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
-
-## NOTES
