@@ -2566,10 +2566,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-owamailboxpolicy)
 
-[New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)
+[New-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/new-owamailboxpolicy)
 
-[Get-OwaMailboxPolicy](Get-OwaMailboxPolicy.md)
+[Get-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/get-owamailboxpolicy)
 
-[Set-CASMailbox](Set-CASMailbox.md)
+[Set-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox)
 
 [Outlook on the web mailbox policy procedures in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policy-procedures)

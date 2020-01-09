@@ -852,4 +852,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-mailuser)

@@ -3267,3 +3267,11 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsTeamsUpgradeStatus](Get-CsTeamsUpgradeStatus.md)
 {{Manually Enter Get-CsTeamsUpgradeStatus Description Here}}
+
+### [New-CsTeamsTranslationRule](New-CsTeamsTranslationRuley.md)
+
+### [Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRuley.md)
+
+### [Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRuley.md)
+
+### [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRuley.md)
