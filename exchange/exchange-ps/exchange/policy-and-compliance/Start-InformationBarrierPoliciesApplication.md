@@ -109,6 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/stop-informationbarrierpoliciesapplication)
 
-[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
+[Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)
 
-[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
+[New-InformationBarrierPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy)
