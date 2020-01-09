@@ -3,8 +3,8 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOStorageEntity
 schema: 2.0.0
-author: 
-ms.author: 
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -12,9 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-
 Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets.
-This cmdLet is used to set a value in the property bag.
 
 ## SYNTAX
 
@@ -23,7 +21,8 @@ Set-SPOStorageEntity -Site <SpoSitePipeBind> -Key <string> -Value <string> -Comm
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+This cmdLet is used to set a value in the property bag.
 
 ## EXAMPLES
 
@@ -44,7 +43,7 @@ URL to the tenant or site collection app catalog.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -76,7 +75,7 @@ Value to be set.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -92,7 +91,7 @@ Comment for this property bag entry.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -108,7 +107,7 @@ Description of the property.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -155,6 +154,14 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
+## INPUTS
 
+### None
+
+## OUTPUTS
+
+### System.Object
 
 ## NOTES
+
+## RELATED LINKS
