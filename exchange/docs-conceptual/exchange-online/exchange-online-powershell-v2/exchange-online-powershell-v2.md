@@ -252,4 +252,28 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
 
+## Release notes
 
+### Version 0.3527.1
+
+Released in the [PowerShell Gallery](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.1) on January 9, 2020:
+
+- Added support for managing Exchange for a different tenant using delegation flow.
+
+- Works in tandem with other PowerShell modules in a single PS window.
+
+- Added support for positional parameters.
+
+- Date Time field now supports client locale.
+
+- Bug fix: PSCredential empty when passed during Connect-ExchangeOnline.
+
+- Bug fix: Client module error when filter contained $null.
+
+- Sessions created internal to EXO V2 Module now have names (naming pattern: ExchangeOnlineInternalSession_%SomeNumber%).
+
+- Bug fix: Remote PowerShell cmdlets intermittently failing due to time the difference between token expiry and the PSSession going idle.
+
+- Major security update.
+
+- Bug fixes and enhancements.

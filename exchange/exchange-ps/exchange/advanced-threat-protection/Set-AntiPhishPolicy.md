@@ -19,7 +19,7 @@ Use the Set-AntiPhishPolicy cmdlet to modify antiphishing policies in your cloud
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 > [!NOTE]
-> Please take into account the [recommended settings](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp) for EOP and Office 365 ATP security.
+> Please take into account the [recommended settings](https://docs.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp) for EOP and Office 365 ATP security.
 
 ## SYNTAX
 
