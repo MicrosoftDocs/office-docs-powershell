@@ -30,7 +30,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess] [<CommonParameters>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
 ```
 ### ParamSet2
@@ -707,6 +707,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkToExistingAccess
+
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultLinkPermission
 
