@@ -6,22 +6,24 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-AuthenticationPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Remove-AuthenticationPolicy cmdlet to remove authentication policies from Exchange Online.
+Use the Remove-AuthenticationPolicy cmdlet to remove authentication policies from your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AuthenticationPolicy -Identity "Engineering Group"
 ```
 
-This example remove the authentication policy named "Engineering Group"
+This example removes the authentication policy named "Engineering Group".
 
 ## PARAMETERS
 
@@ -51,7 +53,7 @@ The Identity parameter specifies the authentication policy you want to remove. Y
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 0
@@ -71,7 +73,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -87,7 +89,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

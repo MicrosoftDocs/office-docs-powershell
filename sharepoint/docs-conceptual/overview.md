@@ -21,7 +21,7 @@ For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets](sharepoin
 Verify that you have the following administrative permissions:
 
 * You must be assigned SharePoint administrator role.
-  For more information, see [Default administrative roles and user groups](https://support.office.com/en-us/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US) and [About the SharePoint admin role in Microsoft 365](https://docs.microsoft.com/sharepoint/sharepoint-admin-role).
+  For more information, see [Default administrative roles and user groups](https://support.office.com/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US) and [About the SharePoint admin role in Microsoft 365](https://docs.microsoft.com/sharepoint/sharepoint-admin-role).
 
 **IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/library/fp161362(v=office.16).aspx).
 
@@ -35,10 +35,10 @@ The TechNet Scripting Center includes many resources to help you learn the basic
 
 |**Page**|**Description**|
 |------------------|------------------|
-|[Windows PowerShell Documentation on TechNet](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-5.1)|This section of the TechNet Library contains web copies of the core PowerShell Get-Help topics. The section also has web copies of the PowerShell Getting Started document, the PowerShell.exe help, and a PowerShell primer.|
-|[Scripting With Windows PowerShell](https://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx)| The home page for PowerShell scripting learning resources.|
-|[Windows PowerShell Owner's Manual](https://technet.microsoft.com/en-us/library/ee221100.aspx)|Web-based guide for getting started with PowerShell.|
-|[Windows PowerShell Quick Reference](https://www.microsoft.com/en-us/download/details.aspx?id=30002)|Downloadable copy of the Quick Reference document that is installed with PowerShell.|
+|[Windows PowerShell Documentation on TechNet](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-5.1)|This section of the TechNet Library contains web copies of the core PowerShell Get-Help topics. The section also has web copies of the PowerShell Getting Started document, the PowerShell.exe help, and a PowerShell primer.|
+|[Scripting With Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419.aspx)| The home page for PowerShell scripting learning resources.|
+|[Windows PowerShell Owner's Manual](https://technet.microsoft.com/library/ee221100.aspx)|Web-based guide for getting started with PowerShell.|
+|[Windows PowerShell Quick Reference](https://www.microsoft.com/download/details.aspx?id=30002)|Downloadable copy of the Quick Reference document that is installed with PowerShell.|
 
 As you read these resources, consider that the following concepts and cmdlets are useful ones to learn before you use PowerShell for SharePoint Server:
 
@@ -46,7 +46,7 @@ As you read these resources, consider that the following concepts and cmdlets ar
 * [Get-Member](https://go.microsoft.com/fwlink/p/?LinkId=171070)
 * [Get-Help](https://go.microsoft.com/fwlink/p/?LinkId=171068)
 * [Aliasing](https://go.microsoft.com/fwlink/p/?LinkId=113207)
-* [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/en-us/library/ee176927.aspx)
+* [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx)
 * [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx)
-* [Foreach-Object](https://technet.microsoft.com/en-us/library/ee176828.aspx)
-* [Where-Object](https://technet.microsoft.com/en-us/library/ee177028.aspx)
+* [Foreach-Object](https://technet.microsoft.com/library/ee176828.aspx)
+* [Where-Object](https://technet.microsoft.com/library/ee177028.aspx)
