@@ -53,7 +53,16 @@ Connect-ExchangeOnline -Credential $UserCredential
 
 The first command gets the user credentials and stores them in the $UserCredential variable.
 
-The second command connects the current PowerShell session using the credentials in the $UserCredential. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
+The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
+
+After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
+
+### Example 2
+```powershell
+Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
+```
+
+This command connects the current PowerShell session using chris@contoso.com account, which is MFA enabled.
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
@@ -126,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the domain name of the organization to connect to as a delegated admin (for example, contoso.onmicrosoft.com).
+The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
+
+After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
 ```yaml
 Type: String
