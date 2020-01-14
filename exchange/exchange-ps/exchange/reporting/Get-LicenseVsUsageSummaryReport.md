@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-licensevsusagesummaryreport
 applicable: Exchange Online
 title: Get-LicenseVsUsageSummaryReport
 schema: 2.0.0
@@ -68,5 +69,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-licensevsusagesummaryreport)

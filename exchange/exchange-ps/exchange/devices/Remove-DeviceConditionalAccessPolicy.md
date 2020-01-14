@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/devices/remove-deviceconditionalaccesspolicy
 applicable: Office 365 Security & Compliance Center
 title: Remove-DeviceConditionalAccessPolicy
 schema: 2.0.0
@@ -120,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/devices/remove-deviceconditionalaccesspolicy)

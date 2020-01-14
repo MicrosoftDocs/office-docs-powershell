@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderadministrativepermission
 applicable: Exchange Server 2010
 title: Remove-PublicFolderAdministrativePermission
 schema: 2.0.0
@@ -320,5 +321,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderadministrativepermission)
