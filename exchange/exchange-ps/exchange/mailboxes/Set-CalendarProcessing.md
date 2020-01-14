@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CalendarProcessing
 schema: 2.0.0
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalResponse
-The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
+The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AddAdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -965,5 +966,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing)

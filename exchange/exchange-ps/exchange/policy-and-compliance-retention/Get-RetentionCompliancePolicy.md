@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-retentioncompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Get-RetentionCompliancePolicy
 schema: 2.0.0
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeTeamsPolicy
-{{Fill ExcludeTeamsPolicy Description}}
+The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsPolicyOnly
-{{Fill TeamsPolicyOnly Description}}
+The TeamsPolicyOnly switch specifies whether to show only Teams policies in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -160,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-retentioncompliancepolicy)

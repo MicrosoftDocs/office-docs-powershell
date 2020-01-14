@@ -4,17 +4,18 @@ title: SharePoint PnP Cmdlets
 
 # PnP PowerShell overview
 
-SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
+SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and REST APIs. They do work against both SharePoint Online as SharePoint on-premises.
 
-![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
+![SharePoint Patterns and Practices](https://raw.githubusercontent.com/pnp/media/master/pnp-logos-sp/png/1x/SharePoint_PnP_logo_fullcolor.png)
 
 _**Applies to:** SharePoint Online | Sharepoint 2019 | SharePoint 2016 | SharePoint 2013_
 
-## Installation #
+## Installation
 
 There are 3 ways to install the cmdlets. We recommend, where possible, to install them from the [PowerShell Gallery](https://www.powershellgallery.com). Alternatively you can download the setup files or run a PowerShell script to download the PowerShellGet module and install the cmdlets subsequently.
 
-### PowerShell Gallery ###
+### PowerShell Gallery
+
 If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
 
 |**SharePoint Version**|**Command to install**|
@@ -29,10 +30,12 @@ If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/
 
 In order to install the cmdlets when you get this error specify the -SkipPublisherCheck switch with the Install-Module cmdlet, e.g. ```Install-Module SharePointPnPPowerShellOnline -SkipPublisherCheck -AllowClobber```
 
-### Setup files ##
+### Setup files
+
 You can download setup files from the [releases](https://github.com/sharepoint/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
 
-### Installation script ##
+### Installation script
+
 This is an alternative for installation on machines that have at least PowerShell v3 installed. You can find the version of PowerShell  by opening PowerShell and running ```$PSVersionTable.PSVersion```. The value for ```Major``` should be above 3.
 
 To install the cmdlets you can run the below command which will install PowerShell Package Management and then install the PowerShell Modules from the PowerShell Gallery.
@@ -41,7 +44,8 @@ To install the cmdlets you can run the below command which will install PowerShe
 Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/sharepoint/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
 ```
 
-## Updating ##
+## Updating
+
 Every month a new release will be made available of the PnP PowerShell Cmdlets. If you earlier installed the cmdlets using the setup file, simply download the [latest version](https://github.com/SharePoint/PnP-PowerShell/releases/latest) and run the setup. This will update your existing installation.
 
 If you have installed the cmdlets using PowerShellGet with ```Install-Module``` from the PowerShell Gallery then you will be able to use the following command to install the latest updated version:
@@ -58,7 +62,7 @@ You can check the installed PnP-PowerShell versions with the following command:
 Get-Module SharePointPnPPowerShell* -ListAvailable | Select-Object Name,Version | Sort-Object Version -Descending
 ```
 
-## Getting Started #
+## Getting Started 
 
 To use the library you first need to connect to your tenant:
 
@@ -84,13 +88,14 @@ At the following links you will find a few videos on how to get started with the
 * https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-PnP-PowerShell-Cmdlets
 * https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Webcast-PnP-PowerShell-Getting-started-with-latest-updates
 
-### Setting up credentials ##
+### Setting up credentials
+
 See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
 
 ## Cmdlet overview
 
-
 ### Apps 
+
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Online, SharePoint 2019
@@ -108,7 +113,8 @@ Cmdlet|Description|Platform
 **[Grant&#45;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitly grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
 
 
-### Base Cmdlets 
+### Base Cmdlets
+
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPAppAuthAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppAuthAccessToken.md)** |Returns the access token|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -131,8 +137,8 @@ Cmdlet|Description|Platform
 **[Remove&#45;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStoredCredential.md)** |Removes a credential|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPTraceLog](../../sharepoint-ps/sharepoint-pnp/Set-PnPTraceLog.md)** |Turn log tracing on or off|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
-
 ### Branding 
+
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Add-PnPCustomAction.md)** |Adds a custom action|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -156,8 +162,8 @@ Cmdlet|Description|Platform
 **[Set&#45;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Set-PnPTheme.md)** |Sets the theme of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPWebTheme](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebTheme.md)** |Sets the theme of the current web.|SharePoint Online
 
+### Client-Side Pages
 
-### Client-Side Pages 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPAvailableClientSideComponents](../../sharepoint-ps/sharepoint-pnp/Get-PnPAvailableClientSideComponents.md)** |Gets the available client side components on a particular page|SharePoint Online, SharePoint 2019
@@ -173,8 +179,8 @@ Cmdlet|Description|Platform
 **[Add&#45;PnPClientSideText](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideText.md)** |Adds a text element to a client-side page.|SharePoint Online, SharePoint 2019
 **[Add&#45;PnPClientSideWebPart](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideWebPart.md)** |Adds a Client-Side Web Part to a client-side page|SharePoint Online
 
+### Content Types
 
-### Content Types 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPContentType](../../sharepoint-ps/sharepoint-pnp/Add-PnPContentType.md)** |Adds a new content type|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -187,16 +193,16 @@ Cmdlet|Description|Platform
 **[Remove&#45;PnPFieldFromContentType](../../sharepoint-ps/sharepoint-pnp/Remove-PnPFieldFromContentType.md)** |Removes a site column from a content type|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#45;PnPFieldToContentType](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldToContentType.md)** |Adds an existing site column to a content type|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Diagnostic utilities
 
-### Diagnostic utilities 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Measure&#45;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object|SharePoint Online, SharePoint 2016, SharePoint 2019
 **[Measure&#45;PnPResponseTime](../../sharepoint-ps/sharepoint-pnp/Measure-PnPResponseTime.md)** |Gets statistics on response time for the specified endpoint by sending probe requests|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Measure&#45;PnPWeb](../../sharepoint-ps/sharepoint-pnp/Measure-PnPWeb.md)** |Returns statistics on the web object|SharePoint Online, SharePoint 2016, SharePoint 2019
 
+### Document Sets
 
-### Document Sets 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Remove&#45;PnPContentTypeFromDocumentSet](../../sharepoint-ps/sharepoint-pnp/Remove-PnPContentTypeFromDocumentSet.md)** |Removes a content type from a document set|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -205,16 +211,16 @@ Cmdlet|Description|Platform
 **[Set&#45;PnPDocumentSetField](../../sharepoint-ps/sharepoint-pnp/Set-PnPDocumentSetField.md)** |Sets a site column from the available content types to a document set|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPDocumentSetTemplate](../../sharepoint-ps/sharepoint-pnp/Get-PnPDocumentSetTemplate.md)** |Retrieves a document set template|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Event Receivers
 
-### Event Receivers 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Add-PnPEventReceiver.md)** |Adds a new remote event receiver|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Get-PnPEventReceiver.md)** |Return registered eventreceivers|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#45;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Remove-PnPEventReceiver.md)** |Remove an eventreceiver|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Features
 
-### Features 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[New&#45;PnPExtensibilityHandlerObject](../../sharepoint-ps/sharepoint-pnp/New-PnPExtensibilityHandlerObject.md)** |Creates an ExtensibilityHandler Object, to be used by the Get-SPOProvisioningTemplate cmdlet|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -222,8 +228,8 @@ Cmdlet|Description|Platform
 **[Enable&#45;PnPFeature](../../sharepoint-ps/sharepoint-pnp/Enable-PnPFeature.md)** |Enables a feature|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPFeature](../../sharepoint-ps/sharepoint-pnp/Get-PnPFeature.md)** |Returns all activated or a specific activated feature|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Fields
 
-### Fields 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPField](../../sharepoint-ps/sharepoint-pnp/Add-PnPField.md)** |Add a field|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -234,8 +240,8 @@ Cmdlet|Description|Platform
 **[Add&#45;PnPTaxonomyField](../../sharepoint-ps/sharepoint-pnp/Add-PnPTaxonomyField.md)** |Add a taxonomy field|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Files and Folders
 
-### Files and Folders 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPFile](../../sharepoint-ps/sharepoint-pnp/Add-PnPFile.md)** |Uploads a file to Web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -258,8 +264,8 @@ Cmdlet|Description|Platform
 **[Copy&#45;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Copy-PnPItemProxy.md)** |Proxy cmdlet for using Copy-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Move&#45;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Move-PnPItemProxy.md)** |Proxy cmdlet for using Move-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Information Management
 
-### Information Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the label/tag of the specified list or library (if applicable)|SharePoint Online
@@ -271,8 +277,8 @@ Cmdlet|Description|Platform
 **[Set&#45;PnPSitePolicy](../../sharepoint-ps/sharepoint-pnp/Set-PnPSitePolicy.md)** |Sets a site policy|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPSitePolicy](../../sharepoint-ps/sharepoint-pnp/Get-PnPSitePolicy.md)** |Retrieves all or a specific site policy|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Lists
 
-### Lists 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Clear&#45;PnPDefaultColumnValues](../../sharepoint-ps/sharepoint-pnp/Clear-PnPDefaultColumnValues.md)** |Clear default column values for a document library|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -294,8 +300,8 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPView](../../sharepoint-ps/sharepoint-pnp/Get-PnPView.md)** |Returns one or all views from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#45;PnPView](../../sharepoint-ps/sharepoint-pnp/Remove-PnPView.md)** |Deletes a view from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Microsoft Graph
 
-### Microsoft Graph 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Connect&#45;PnPMicrosoftGraph](../../sharepoint-ps/sharepoint-pnp/Connect-PnPMicrosoftGraph.md)** |Connect to the Microsoft Graph|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -312,8 +318,8 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a particular Office 365 Group (aka Unified Group)|SharePoint Online
 **[Get&#45;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a particular Office 365 Group (aka Unified Group)|SharePoint Online
 
+### Provisioning
 
-### Provisioning 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Export&#45;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Export-PnPClientSidePage.md)** |Exports a Client Side Page to a PnP Provisioning Template|SharePoint Online
@@ -347,8 +353,8 @@ Cmdlet|Description|Platform
 **[Save&#45;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Save-PnPTenantTemplate.md)** |Saves a PnP provisioning hierarchy to the file system|SharePoint Online
 **[Test&#45;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Test-PnPTenantTemplate.md)** |Tests a tenant template for invalid references|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Publishing
 
-### Publishing 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Set&#45;PnPAvailablePageLayouts](../../sharepoint-ps/sharepoint-pnp/Set-PnPAvailablePageLayouts.md)** |Sets the available page layouts for the current site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -365,8 +371,8 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPWikiPageContent](../../sharepoint-ps/sharepoint-pnp/Get-PnPWikiPageContent.md)** |Gets the contents/source of a wiki page|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPWikiPageContent](../../sharepoint-ps/sharepoint-pnp/Set-PnPWikiPageContent.md)** |Sets the contents of a wikipage|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Records Management
 
-### Records Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPInPlaceRecordsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPInPlaceRecordsManagement.md)** |Returns if the place records management feature is enabled.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -379,8 +385,8 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Get-PnPListRecordDeclaration.md)** |Returns the manual record declaration settings for a list|SharePoint Online
 **[Set&#45;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Set-PnPListRecordDeclaration.md)** |The RecordDeclaration parameter supports 4 values:  AlwaysAllowManualDeclaration NeverAllowManualDeclaration UseSiteCollectionDefaults |SharePoint Online
 
+### Search
 
-### Search 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPSearchConfiguration](../../sharepoint-ps/sharepoint-pnp/Get-PnPSearchConfiguration.md)** |Returns the search configuration|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -390,8 +396,8 @@ Cmdlet|Description|Platform
 **[Submit&#45;PnPSearchQuery](../../sharepoint-ps/sharepoint-pnp/Submit-PnPSearchQuery.md)** |Executes an arbitrary search query against the SharePoint search index|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPSiteSearchQueryResults](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteSearchQueryResults.md)** |Executes a search query to retrieve indexed site collections|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### SharePoint Recycle Bin
 
-### SharePoint Recycle Bin 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Clear&#45;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Clear-PnPRecycleBinItem.md)** |Permanently deletes all or a specific recycle bin item|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -400,8 +406,8 @@ Cmdlet|Description|Platform
 **[Restore&#45;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Restore-PnPRecycleBinItem.md)** |Restores the provided recycle bin item to its original location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantRecycleBinItem.md)** |Returns all modern and classic site collections in the tenant scoped recycle bin|SharePoint Online
 
+### SharePoint WebHooks
 
-### SharePoint WebHooks 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Add-PnPWebhookSubscription.md)** |Adds a new Webhook subscription|SharePoint Online
@@ -409,8 +415,8 @@ Cmdlet|Description|Platform
 **[Set&#45;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebhookSubscription.md)** |Updates a Webhook subscription|SharePoint Online
 **[Get&#45;PnPWebhookSubscriptions](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebhookSubscriptions.md)** |Gets all the Webhook subscriptions of the resource|SharePoint Online
 
+### Sites
 
-### Sites 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Set&#45;PnPAppSideLoading](../../sharepoint-ps/sharepoint-pnp/Set-PnPAppSideLoading.md)** |Enables the App SideLoading Feature on a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -428,8 +434,8 @@ Cmdlet|Description|Platform
 **[Install&#45;PnPSolution](../../sharepoint-ps/sharepoint-pnp/Install-PnPSolution.md)** |Installs a sandboxed solution to a site collection. WARNING! This method can delete your composed look gallery due to the method used to activate the solution. We recommend you to only to use this cmdlet if you are okay with that.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Uninstall&#45;PnPSolution](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPSolution.md)** |Uninstalls a sandboxed solution from a site collection|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Taxonomy
 
-### Taxonomy 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPSiteCollectionTermStore](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteCollectionTermStore.md)** |Returns the site collection term store|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -450,8 +456,8 @@ Cmdlet|Description|Platform
 **[Import&#45;PnPTermSet](../../sharepoint-ps/sharepoint-pnp/Import-PnPTermSet.md)** |Imports a taxonomy term set from a file in the standard format.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[New&#45;PnPTermSet](../../sharepoint-ps/sharepoint-pnp/New-PnPTermSet.md)** |Creates a taxonomy term set|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Tenant Administration
 
-### Tenant Administration 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -525,8 +531,8 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPTimeZoneId](../../sharepoint-ps/sharepoint-pnp/Get-PnPTimeZoneId.md)** |Returns a time zone ID|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPWebTemplates](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebTemplates.md)** |Returns the available web templates.|SharePoint Online
 
+### User and group management
 
-### User and group management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPAlert](../../sharepoint-ps/sharepoint-pnp/Add-PnPAlert.md)** |Adds an alert for a user to a list|SharePoint Online, SharePoint 2019
@@ -545,8 +551,8 @@ Cmdlet|Description|Platform
 **[Remove&#45;PnPUserFromGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUserFromGroup.md)** |Removes a user from a group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#45;PnPUserToGroup](../../sharepoint-ps/sharepoint-pnp/Add-PnPUserToGroup.md)** |Adds a user to a group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### User Profiles
 
-### User Profiles 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[New&#45;PnPPersonalSite](../../sharepoint-ps/sharepoint-pnp/New-PnPPersonalSite.md)** |Office365 only: Creates a personal / OneDrive For Business site|SharePoint Online
@@ -555,14 +561,14 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPUserProfileProperty.md)** |You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.  |SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Set-PnPUserProfileProperty.md)** |Office365 only: Uses the tenant API to retrieve site information.  You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.  |SharePoint Online
 
+### Utilities
 
-### Utilities 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Send&#45;PnPMail](../../sharepoint-ps/sharepoint-pnp/Send-PnPMail.md)** |Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Web Parts
 
-### Web Parts 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#45;PnPClientSideComponent](../../sharepoint-ps/sharepoint-pnp/Get-PnPClientSideComponent.md)** |Retrieve one or more Client-Side components from a page|SharePoint Online, SharePoint 2019
@@ -577,8 +583,8 @@ Cmdlet|Description|Platform
 **[Add&#45;PnPWebPartToWikiPage](../../sharepoint-ps/sharepoint-pnp/Add-PnPWebPartToWikiPage.md)** |Adds a web part to a wiki page in a specified table row and column|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#45;PnPWebPartXml](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebPartXml.md)** |Returns the web part XML of a web part registered on a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Webs
 
-### Webs 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Set&#45;PnPIndexedProperties](../../sharepoint-ps/sharepoint-pnp/Set-PnPIndexedProperties.md)** |Marks values of the propertybag to be indexed by search. Notice that this will overwrite the existing flags, i.e. only the properties you define with the cmdlet will be indexed.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -599,8 +605,8 @@ Cmdlet|Description|Platform
 **[Invoke&#45;PnPWebAction](../../sharepoint-ps/sharepoint-pnp/Invoke-PnPWebAction.md)** |Executes operations on web, lists and list items.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#45;PnPWebPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebPermission.md)** |Set permissions|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
+### Workflows
 
-### Workflows 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#45;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowDefinition.md)** |Adds a workflow definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -614,8 +620,7 @@ Cmdlet|Description|Platform
 **[Get&#45;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowSubscription.md)** |Return a workflow subscription|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#45;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Remove workflow subscription|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
-
 ## Additional resources
 <a name="bk_addresources"> </a>
 
--  [SharePoint PnP PowerShell on GitHub](https://github.com/SharePoint/PnP-PowerShell)
+* [SharePoint PnP PowerShell on GitHub](https://github.com/SharePoint/PnP-PowerShell)

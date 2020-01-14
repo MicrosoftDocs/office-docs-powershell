@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxpermission
 applicable: Exchange Online
 title: Get-EXOMailboxPermission
 schema: 2.0.0
@@ -70,10 +71,10 @@ By default, other security groups and role groups inherit permissions to mailbox
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-EXOMailboxPermission -Identity john@contoso.com
 ```
 
-{{ Add example description here }}
+This example return the permission the user has on mailboxes
 
 ## PARAMETERS
 
@@ -235,5 +236,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxpermission)

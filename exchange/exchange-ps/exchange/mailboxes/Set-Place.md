@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-place
 applicable: Exchange Online
 title: Set-Place
 schema: 2.0.0
@@ -30,6 +31,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-CountryOrRegion <CountryInfo>]
  [-DisplayDeviceName <String>]
  [-Floor <System.Int32>]
+ [-FloorLabel <String>]
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
@@ -209,6 +211,22 @@ The Floor parameter specifies the floor number that the room is on.
 
 ```yaml
 Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FloorLabel
+The FloorLabel parameter specifies a descriptive label for the floor that the room is on. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -406,5 +424,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-place)

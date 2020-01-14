@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-antiphishpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AntiPhishPolicy
 schema: 2.0.0
@@ -17,6 +18,9 @@ This cmdlet is available only in the cloud-based service.
 Use the Set-AntiPhishPolicy cmdlet to modify antiphishing policies in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+
+> [!NOTE]
+> Please take into account the [recommended settings](https://docs.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp) for EOP and Office 365 ATP security.
 
 ## SYNTAX
 
@@ -190,11 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAuthenticationSoftPassSafetyTip
-The EnableAuthenticationSoftPassSafetyTip parameter specifies whether to enable safety tips that are shown to recipients when a message fails composite authentication with low to medium confidence. Valid values are:
-
-- $true: Safety tips are enabled for messages that fail composite authentication with low to medium confidence. If you use this value, you might want to restrict the policy to a smaller number of users to avoid displaying too many of these types of safety tips to users.
-
-- $false: Safety tips are disabled for messages that fail composite authentication with low to medium confidence. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -735,5 +735,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-antiphishpolicy)

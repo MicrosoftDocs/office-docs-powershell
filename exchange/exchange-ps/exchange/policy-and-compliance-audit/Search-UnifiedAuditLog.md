@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
@@ -225,21 +226,39 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - AeD
 
+- AirInvestigation 
+
+- ApplicationAudit
+
 - AzureActiveDirectory
 
 - AzureActiveDirectoryAccountLogon
 
 - AzureActiveDirectoryStsLogon
 
+- Campaign
+
 - ComplianceDLPExchange
 
 - ComplianceDLPSharePoint
+
+- ComplianceDLPSharePointClassification
+
+- ComplianceSupervisionExchange 
+
+- CustomerKeyServiceEncryption 
 
 - CRM
 
 - DataCenterSecurityCmdlet
 
+- DataGovernance
+
+- DataInsightsRestApiAudit
+
 - Discovery
+
+- DLPEndpoint 
 
 - ExchangeAdmin
 
@@ -247,13 +266,61 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ExchangeItem
 
+- ExchangeItemAggregated
+
 - ExchangeItemGroup
 
+- HRSignal
+
+- HygieneEvent
+
+- InformationWorkerProtection
+
+- InformationBarrierPolicyApplication 
+
+- Kaizala
+
+- LabelExplorer
+
+- MailSubmission
+
+- MicrosoftFlow 
+
+- MicrosoftForms
+
+- MicrosoftTeamsAnalytics
+
 - MicrosoftTeams
+
+- MicrosoftTeamsAdmin
+
+- MicrosoftTeamsDevice 
+
+- MicrosoftTeamsAddOns
+
+- MicrosoftStream
+
+- MicrosoftTeamsSettingsOperation
+
+- MipAutoLabelSharePointItem
+
+- MipAutoLabelSharePointPolicyLocation
+
+- MIPLabel
+
+- OfficeNative
 
 - OneDrive
 
 - PowerBIAudit
+
+- Project
+
+- PowerAppsApp
+
+- PowerAppsPlan
+
+- Quarantine 
 
 - SecurityComplianceAlerts
 
@@ -263,9 +330,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePoint
 
+- SharePointCommentOperation
+
+- SharePointContentTypeOperation 
+
 - SharePointFileOperation
 
+- SharePointFieldOperation
+
 - SharePointListOperation
+
+- SharePointListItemOperation 
 
 - SharePointSharingOperation
 
@@ -277,11 +352,17 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Sway
 
+- SyntheticProbe
+
+- ThreatFinder
+
 - ThreatIntelligence
 
 - ThreatIntelligenceAtpContent
 
 - ThreatIntelligenceUrl
+
+- TeamsHealthcare
 
 - WorkplaceAnalytics
 
@@ -410,5 +491,3 @@ Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData |
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog)

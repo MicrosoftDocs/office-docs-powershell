@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-organizationsegment
 applicable: Office 365 Security & Compliance Center
 title: Get-OrganizationSegment
 schema: 2.0.0
@@ -31,7 +32,7 @@ Get-OrganizationSegment [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Segments are defined by using certain [attributes](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes) in Azure Active Directory.
+Segments are defined by using certain [attributes](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes) in Azure Active Directory.
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
@@ -90,10 +91,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-organizationsegment)
+[Attributes for information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes)
 
-[Attributes for information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-attributes)
+[Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)
 
-[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
-
-[New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
+[New-InformationBarrierPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy)

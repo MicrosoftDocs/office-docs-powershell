@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox
 applicable: Exchange Online
 title: Get-EXOCasMailbox
 schema: 2.0.0
@@ -359,6 +360,3 @@ The following properties are removed by design from Get-EXOCasMailbox output:
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox)
-
