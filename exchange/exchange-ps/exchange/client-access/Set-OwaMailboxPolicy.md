@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-owamailboxpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OwaMailboxPolicy
 schema: 2.0.0
@@ -1212,11 +1213,7 @@ Accept wildcard characters: False
 ### -LinkedInEnabled
 This parameter is available only in the cloud-based service.
 
-The LinkedInEnabled parameter specifies whether users can synchronize their LinkedIn contacts to their Contacts folder. Valid values are:
-
-- $true: LinkedIn integration is enabled. This is the default value.
-
-- $false: LinkedIn integration is disabled.
+LinkedIn integration is no longer supported.
 
 ```yaml
 Type: Boolean
@@ -1474,11 +1471,11 @@ Accept wildcard characters: False
 ### -PersonalAccountCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
-The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Gmail calendars in Outlook on the web. Valid values are:
+The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Google Calendar in Outlook on the web. Valid values are:
 
-- $true: Users can connect to their Outlook.com or Gmail calendars to see those events in their Outlook on the web calendar. This is the default value.
+- $true: Users can connect to their Outlook.com or Google Calendar to see those events in their Outlook on the web calendar. This is the default value.
 
-- $false: Users can't connect to their Outlook.com or Gmail calendars in Outlook on the web.
+- $false: Users can't connect to their Outlook.com or Google Calendar in Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -2270,7 +2267,7 @@ The WeatherEnabled parameter specifies whether to enable or disable weather info
 
 - $true: Weather is enabled. This is the default value.
 
-- $false: Weather is disabled. This is the default value.
+- $false: Weather is disabled.
 
 ```yaml
 Type: Boolean
@@ -2568,12 +2565,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-owamailboxpolicy)
+[New-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/new-owamailboxpolicy)
 
-[New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)
+[Get-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/get-owamailboxpolicy)
 
-[Get-OwaMailboxPolicy](Get-OwaMailboxPolicy.md)
-
-[Set-CASMailbox](Set-CASMailbox.md)
+[Set-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox)
 
 [Outlook on the web mailbox policy procedures in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policy-procedures)

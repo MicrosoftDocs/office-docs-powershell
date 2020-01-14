@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-organizationconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OrganizationConfig
 schema: 2.0.0
@@ -890,8 +891,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAuthenticationPolicy
-This parameter is available only in the cloud-based service.
-
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -900,13 +899,15 @@ The DefaultAuthenticationPolicy parameter specifies the authentication policy th
 
 - GUID
 
-You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+To remove the default policy assignment for the organization, use the value $null.
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication or (in Exchange 2019 CU2 or later) other legacy authentication methods.
 
 ```yaml
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2512,5 +2513,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-organizationconfig)

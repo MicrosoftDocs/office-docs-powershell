@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationBatch
 schema: 2.0.0
@@ -224,7 +225,7 @@ New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Locale <CultureInfo>]
- [-NotificationEmails <>]
+ [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-ReportInterval <Timespan>]
  [-SkipReports]
@@ -1228,5 +1229,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch)

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-remotedomain
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
@@ -67,7 +68,7 @@ This example performs the following actions:
 
 - It disables out-of-office notifications to the remote domain.
 
-- It suppresses read receipts sent from clients in your organization to the remote domain.
+- It suppresses delivery receipts sent from clients in your organization to the remote domain.
 
 - It enables TNEF message data on messages sent to the remote domain.
 
@@ -668,5 +669,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-remotedomain)
