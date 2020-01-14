@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessservice
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Get-ClientAccessService
 schema: 2.0.0
@@ -139,5 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-clientaccessservice)

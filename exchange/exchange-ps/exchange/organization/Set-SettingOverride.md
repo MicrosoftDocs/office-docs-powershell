@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-settingoverride
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SettingOverride
 schema: 2.0.0
@@ -250,5 +251,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-settingoverride)

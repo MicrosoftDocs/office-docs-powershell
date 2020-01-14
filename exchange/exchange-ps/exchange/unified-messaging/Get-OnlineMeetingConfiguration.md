@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-onlinemeetingconfiguration
 applicable: Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
@@ -104,5 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-onlinemeetingconfiguration)

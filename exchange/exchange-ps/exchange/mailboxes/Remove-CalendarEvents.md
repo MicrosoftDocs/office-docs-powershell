@@ -189,7 +189,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -226,5 +226,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-calendarevents)

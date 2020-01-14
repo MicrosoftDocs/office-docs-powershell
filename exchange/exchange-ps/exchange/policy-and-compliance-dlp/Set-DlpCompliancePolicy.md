@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-DlpCompliancePolicy
 schema: 2.0.0
@@ -19,13 +20,6 @@ Use the Set-DlpCompliancePolicy cmdlet to modify Data Loss Prevention (DLP) poli
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
-
-### RetryDistribution
-```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
- [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
 
 ### Identity
 ```
@@ -51,6 +45,13 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
  [-RemoveTeamsLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RetryDistribution
+```
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -206,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocation
-{{ Fill AddTeamsLocation Description }}
+The AddTeamsLocation parameter specifies the Teams accounts to add to the list of included accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -222,7 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocationException
-{{ Fill AddTeamsLocationException Description }}
+The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -274,7 +279,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-{{ Fill ExchangeSenderMemberOf Description }}
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+
+You can't use this parameter to specify Office 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -290,7 +299,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-{{ Fill ExchangeSenderMemberOfException Description }}
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+
+You can't use this parameter to specify Office 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -460,7 +473,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-{{ Fill RemoveTeamsLocation Description }}
+The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of included accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -476,7 +491,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocationException
-{{ Fill RemoveTeamsLocationException Description }}
+The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -521,5 +538,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancepolicy)

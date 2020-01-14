@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
@@ -490,5 +491,3 @@ Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData |
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog)

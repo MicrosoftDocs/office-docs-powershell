@@ -291,6 +291,6 @@ You might experience an error if the Identity Provider (IDP) only allows the use
 Which in turn, isn't expected to work because the cmdlet expects either OAUTH2 (which is used when doing just connect-microsofteams), or SAML 2.0.  
 
 **2. Confirm you have the latest version of the cmdlet.**\
-You can find the version by running: \`get-module -listavailable\` and then looking for the MicrosoftTeams name and the version to the left of it.  
+You can find the version by running: \`get-module -listavailable\` and then looking for the MicrosoftTeams name and the version to the left of it. For more information and how to download the module, see [Teams PowerShell Overview](https://docs.microsoft.com/microsoftteams/teams-powershell-overview) 
 
 ## RELATED LINKS
