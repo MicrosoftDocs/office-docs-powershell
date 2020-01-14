@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-outboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: Remove-OutboundConnector
 schema: 2.0.0
@@ -108,5 +109,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-outboundconnector)
