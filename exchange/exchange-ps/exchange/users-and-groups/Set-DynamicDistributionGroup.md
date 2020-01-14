@@ -1510,15 +1510,11 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter specifies an owner for the group. A group must have at least one owner. If you don't use this parameter to specify the owner when you create the group, the user account that created the group is the owner. The group owner is able to:
+The ManagedBy parameter specifies an owner for the group. A dynamic group can only have one owner. The group owner is able to:
 
 - Modify the properties of the group
 
-- Add or remove group members
-
 - Delete the group
-
-- Approve member depart or join requests (if available)
 
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
@@ -1543,12 +1539,6 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-To enter multiple owners and overwrite all existing entries, use the following syntax: \<owner1\>,\<owner2\>,...\<ownerN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<owner1\>","\<owner2\>",..."\<ownerN\>".
-
-To add or remove owners without affecting other existing entries, use the following syntax: @{Add="\<owner1\>","\<owner2\>"...; Remove="\<owner3\>","\<owner4\>"...}.
-
-An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
 
 ```yaml
 Type: GeneralRecipientIdParameter
