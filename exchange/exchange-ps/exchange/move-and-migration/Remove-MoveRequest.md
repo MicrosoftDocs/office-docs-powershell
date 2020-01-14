@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-moverequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MoveRequest
 schema: 2.0.0
@@ -39,7 +40,7 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in [Clear or Remove Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd351276(v=exchg.141)). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
+In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run a newer version of Remove-MoveRequest to clear completed mailbox move requests between Exchange 2010 databases as documented in [Clear or Remove Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd351276(v=exchg.141)). Otherwise, you might delete the mailbox that you just moved. In coexistence environments, only use the Remove-MoveRequest cmdlet on Exchange 2010 servers to clear completed Exchange 2010 move requests. For mailbox moves from an Exchange 2010 database to an Exchange 2016 database, you can safely run Remove-MoveRequest on the Exchange 2016 server.
 
 In Exchange 2010, you need to use the Remove-MoveRequest cmdlet on completed move requests to clear the InTransit flag from the mailbox. This step isn't required for mailbox moves in newer versions of Exchange where the Remove-MoveRequest is only used to cancel existing move requests.
 
@@ -269,5 +270,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-moverequest)

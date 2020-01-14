@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-rpcclientaccess
 applicable: Exchange Server 2010
 title: New-RpcClientAccess
 schema: 2.0.0
@@ -192,5 +193,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-rpcclientaccess)

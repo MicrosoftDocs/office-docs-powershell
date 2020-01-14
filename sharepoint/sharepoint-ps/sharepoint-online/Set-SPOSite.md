@@ -30,7 +30,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess] [<CommonParameters>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
 ```
 ### ParamSet2
@@ -85,10 +85,10 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 
 ### -----------------------EXAMPLE 3-----------------------------
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400000
+Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
 ```
 
-This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400000 megabytes. 
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes. 
 
 
 ### -----------------------EXAMPLE 4-----------------------------
@@ -707,6 +707,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkToExistingAccess
+
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultLinkPermission
 

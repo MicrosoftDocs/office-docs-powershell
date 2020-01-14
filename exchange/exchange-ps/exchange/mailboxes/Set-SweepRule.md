@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-SweepRule
 schema: 2.0.0
@@ -452,5 +453,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule)

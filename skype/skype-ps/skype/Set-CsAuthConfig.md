@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-applicable: Skype for Business Server 2019
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0
 manager: rogupta
@@ -49,10 +49,12 @@ This example forces all external clients to use MA but allows NTLM or Kerberos (
 
 ### Example 2
 ```powershell
-PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternallyAndModernAuthInternally
+PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternalyAndModernAuthInternally
 ```
 
-This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
+This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients). 
+>[!NOTE]
+>Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is misspelled and to be able to use it, only one l for Externally should be used.
 
 
 ## PARAMETERS

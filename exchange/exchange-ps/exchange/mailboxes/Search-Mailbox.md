@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/search-mailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-Mailbox
 schema: 2.0.0
@@ -340,6 +341,8 @@ The LogLevel parameter specifies the logging level for the search. It can have o
 
 The default log level is Basic.
 
+When you included this parameter, an email message is created and sent to the mailbox specified by the TargetMailbox parameter. The log file (which is a CSV-formatted file named Search Results.csv) is attached to this email message, and will be located in the folder specified by the TargetFolder parameter. The log file contains a row for each message that's included in the search results when you run the Search-Mailbox cmdlet.
+
 ```yaml
 Type: LoggingLevel
 Parameter Sets: Mailbox
@@ -453,5 +456,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/search-mailbox)

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationuser
 applicable: Exchange Online
 title: Set-MigrationUser
 schema: 2.0.0
@@ -22,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MigrationUser [-Identity] <MigrationUserIdParameter>
+ [-ApproveSkippedItems]
  [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-Confirm]
@@ -46,6 +48,13 @@ Set-MigrationUser -Identity laura@contoso.com -LargeItemLimit 15 -BadItemLimit 1
 
 This example changes the large item limit and bad item limit for the user laura@contoso.com in an existing migration batch.
 
+### Example 2
+```powershell
+Set-MigrationUser -Identity laura@contoso.com -ApproveSkippedItems
+```
+
+This example approves all of the skipped items encountered for the user laura@contoso.com in an existing migration batch.
+
 ## PARAMETERS
 
 ### -Identity
@@ -66,10 +75,34 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ApproveSkippedItems
+This parameter is available only in the cloud-based service.
+
+The ApproveSkippedItems switch marks all of the skipped items discovered prior to the current time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
+
+For more information about maximum message size values, see the following topic [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926).
+
+You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BadItemLimit
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+
+This parameter is in the process of being deprecated in the cloud-based service.
 
 ```yaml
 Type: Unlimited
@@ -140,6 +173,8 @@ For more information about maximum message size values, see the following topics
 - Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+
+This parameter is in the process of being deprecated in the cloud-based service.
 
 ```yaml
 Type: Unlimited
@@ -244,5 +279,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationuser)

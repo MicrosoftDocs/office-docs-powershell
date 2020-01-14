@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-place
 applicable: Exchange Online
 title: Get-Place
 schema: 2.0.0
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
@@ -103,5 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-place)

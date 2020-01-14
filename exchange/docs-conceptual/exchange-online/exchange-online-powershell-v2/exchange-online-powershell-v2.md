@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2"
+title: Exchange Online PowerShell V2
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -21,7 +21,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
 > [!TIP]
-> If you have any feedback/concern or facing any issues with EXO V2 module, please send an email to exocmdletpreview[at]service[dot]microsoft[dot]com.
+> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
 
 ## What's new in the EXO V2 module?
 
@@ -48,6 +48,9 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
+> [!NOTE]
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon.
+
 ### What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
@@ -69,6 +72,22 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
   <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  
+- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If basic authentication is disabled, you'll get this error when you try to connect:
+
+  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 ### Install the EXO V2 module
 
@@ -88,7 +107,7 @@ To install the EXO V2 module for the first time, run the following commands:
 
    **Notes**:
 
-   - You need to configure this setting only once on your computer.
+   - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
 
    - If you don't do this step, you'll receive the following error when you try to connect:
 
@@ -131,7 +150,7 @@ If the EXO V2 module is already installed on your computer, you can run the foll
 To uninstall the module, run the following command:
 
 ```PowerShell
-Remove-Module ExchangeOnlineManagement
+Uninstall-Module -Name ExchangeOnlineManagement
 ```
 
 > [!TIP]
@@ -233,4 +252,28 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
 
+## Release notes
 
+### Version 0.3527.1
+
+Released in the [PowerShell Gallery](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.1) on January 9, 2020:
+
+- Added support for managing Exchange for a different tenant using delegation flow.
+
+- Works in tandem with other PowerShell modules in a single PS window.
+
+- Added support for positional parameters.
+
+- Date Time field now supports client locale.
+
+- Bug fix: PSCredential empty when passed during Connect-ExchangeOnline.
+
+- Bug fix: Client module error when filter contained $null.
+
+- Sessions created internal to EXO V2 Module now have names (naming pattern: ExchangeOnlineInternalSession_%SomeNumber%).
+
+- Bug fix: Remote PowerShell cmdlets intermittently failing due to time the difference between token expiry and the PSSession going idle.
+
+- Major security update.
+
+- Bug fixes and enhancements.
