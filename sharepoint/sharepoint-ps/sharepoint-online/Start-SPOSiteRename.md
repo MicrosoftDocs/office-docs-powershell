@@ -43,7 +43,7 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" without mo
 $url="https://<tenant>.sharepoint.com/site/samplesite"
 $NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
 $newTitle="New Title"
-Start-SPOSiteRename-Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
+Start-SPOSiteRename -Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
 ```
 Starts the rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title"
 
