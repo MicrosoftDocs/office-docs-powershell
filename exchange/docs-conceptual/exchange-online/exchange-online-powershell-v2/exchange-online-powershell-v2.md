@@ -254,7 +254,7 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Version 0.3527.1
+### Version 0.3527.3 (Planned Release Date : 20th January, 2020)
 
 Released in the [PowerShell Gallery](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.1) on January 9, 2020:
 
