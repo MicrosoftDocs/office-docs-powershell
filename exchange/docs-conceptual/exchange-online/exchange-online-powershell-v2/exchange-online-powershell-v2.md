@@ -254,9 +254,9 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Version 0.3527.1
+### Version 0.3527.3 (planned release date: January 20, 2020)
 
-Released in the [PowerShell Gallery](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.1) on January 9, 2020:
+[Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
 
 - Added support for managing Exchange for a different tenant using delegation flow.
 
