@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderstatistics
 applicable: Exchange Online
 title: Get-EXOMailboxFolderStatistics
 schema: 2.0.0
@@ -254,5 +255,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderstatistics)

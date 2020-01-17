@@ -20,8 +20,17 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
-> [!TIP]
-> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+## Report bugs and issues
+
+The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+
+When you report an issue, be sure to include the log files in your email message.
+
+To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+
+   ```PowerShell
+   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <Path to store log file> -LogLevel All
+   ```
 
 ## What's new in the EXO V2 module?
 
@@ -254,9 +263,9 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Version 0.3527.1
+### Version 0.3527.3 (planned release date: January 20, 2020)
 
-Released in the [PowerShell Gallery](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.1) on January 9, 2020:
+[Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
 
 - Added support for managing Exchange for a different tenant using delegation flow.
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-place
 applicable: Exchange Online
 title: Get-Place
 schema: 2.0.0
@@ -103,5 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-place)
