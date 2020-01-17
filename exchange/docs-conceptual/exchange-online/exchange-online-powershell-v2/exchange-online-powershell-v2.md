@@ -23,6 +23,14 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enab
 > [!TIP]
 > The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
 
+## How to report bugs and issues if you face any error
+1. Enable client side telemetry to generate log files
+   ```PowerShell
+   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <% Path to store log file%> -LogLevel All
+   ```
+2. Above cmdlet generates 2 log files in above path. Please share above log files while reporting issues to the email in above tip
+
+
 ## What's new in the EXO V2 module?
 
 The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). It also contains the 700 or more older remote PowerShell cmdlets baked into the same module. Note that after you install the EXO V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the EXO V2 module.
