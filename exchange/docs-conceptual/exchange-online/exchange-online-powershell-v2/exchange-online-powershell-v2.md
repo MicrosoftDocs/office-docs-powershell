@@ -20,16 +20,17 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
-> [!TIP]
-> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+## Report bugs and issues
 
-## How to report bugs and issues if you face any error
-1. Enable client side telemetry to generate log files
+The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+
+When you report an issue, be sure to include the log files in your email message.
+
+To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+
    ```PowerShell
-   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <% Path to store log file%> -LogLevel All
+   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <Path to store log file> -LogLevel All
    ```
-2. Above cmdlet generates 2 log files in above path. Please share above log files while reporting issues to the email in above tip
-
 
 ## What's new in the EXO V2 module?
 
