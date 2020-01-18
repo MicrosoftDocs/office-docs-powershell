@@ -36,7 +36,7 @@ You must be a SharePoint Online global Administrator to run this cmdlet.
 ```powershell
 Add-SPOGeoAdministrator -UserPrincipalName admin@contoso.onmicrosoft.com
 ```
-Adds the user **admin@contoso.onmicrosoft.com**  as administrator to the SharePoint Online multi-geo tenant.
+Adds the user **admin\@contoso.onmicrosoft.com**  as administrator to the SharePoint Online multi-geo tenant.
 
 
 ## PARAMETERS
