@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Gets the visibility of the available built-in Design Packages.
 
 ## SYNTAX
 
@@ -22,23 +22,35 @@ Get-SPOBuiltInDesignPackageVisibility [-DesignPackage <DesignPackageType>] [<Com
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use this cmdlet to retrieve the current visibility state of each built-in design package.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Get-SPOBuiltInDesignPackageVisibility -DesignPackage Showcase
 ```
 
-This example .
+This example retrieves the current visibility state of Showcase built-in design package.
+
+### Example 2
+
+```powershell
+Get-SPOBuiltInDesignPackageVisibility
+```
+
+This example retrieves the current visibility state of each built-in design package.
 
 ## PARAMETERS
 
 ### -DesignPackage
 
-.
+Name of the design package, available names are
+- Topic
+- Showcase
+- Blank
+- TeamSite
 
 ```yaml
 Type: DesignPackageType

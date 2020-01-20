@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Sets the visibility of the available built-in Design Packages at moment of site creation.
 
 ## SYNTAX
 
@@ -22,23 +22,27 @@ Set-SPOBuiltInDesignPackageVisibility [-IsVisible] <Boolean> [-DesignPackage] <D
 
 ## DESCRIPTION
 
-.
+Sets the visibility of the available built-in Design Packages. For more information, see [Moving from Publishing sites to Communication sites](https://docs.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Set-SPOBuiltInDesignPackageVisibility -DesignPackage Showcase -IsVisible:$false
 ```
 
-This example .
+This example sets the visibility of Showcase design package to false.
 
 ## PARAMETERS
 
 ### -DesignPackage
 
-{{ Fill DesignPackage Description }}
+Name of the design package, available names are
+- Topic
+- Showcase
+- Blank
+- TeamSite
 
 ```yaml
 Type: DesignPackageType
@@ -55,7 +59,7 @@ Accept wildcard characters: False
 
 ### -IsVisible
 
-{{ Fill IsVisible Description }}
+Determines if the design package is visible
 
 ```yaml
 Type: Boolean
