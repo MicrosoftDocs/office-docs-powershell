@@ -12,8 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Use the Get-DataEncryptionPolicy cmdlet to view customer encryption status for your geo tenant.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
+.
 
 ## SYNTAX
 
@@ -22,7 +21,8 @@ Get-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+Use the Get-DataEncryptionPolicy cmdlet to view customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
