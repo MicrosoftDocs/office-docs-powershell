@@ -12,7 +12,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Cmdlet to register customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
@@ -22,23 +23,25 @@ Register-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultN
 
 ## DESCRIPTION
 
-.
+Use the Update-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
+Register-SPODataEncryptionPolicy -Identity https://contoso.sharepoint.com -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <KeyVersion>
 
 ```
 
-This example...
+This example registers the DEP used with SharePoint Online and OneDrive for Business to start using the given primary key
 
 ## PARAMETERS
 
 ### -Identity
 
-.
+Specifies the URL of the admin site collection.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -54,7 +57,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVaultName
 
-.
+The name of the primary key vault
 
 ```yaml
 Type: String
@@ -70,7 +73,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyName
 
-.
+The name of the primary key
 
 ```yaml
 Type: String
@@ -86,7 +89,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
-.
+The version of the primary key
 
 ```yaml
 Type: Guid
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
-.
+The name of the secondary key vault
 
 ```yaml
 Type: String
@@ -118,7 +121,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
-.
+The name of the secondary key
 
 ```yaml
 Type: String
@@ -134,7 +137,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
-.
+The version of the secondary key
 
 ```yaml
 Type: Guid
