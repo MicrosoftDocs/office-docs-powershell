@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Sets the theme for a SharePoint site.
 
 ## SYNTAX
 
@@ -22,17 +22,17 @@ Set-SPOWebTheme [-Theme] <SpoThemePipeBind> [-Web] <SpoSitePipeBind> [-WhatIf] [
 
 ## DESCRIPTION
 
-.
+Use this cmdlet to set the custom theme for a Site
 
 ## EXAMPLES
 
 ### Example 1
 
 ```
-
+ Set-SPOWebTheme -Theme "Custom cyan" -Web https://contoso.sharepoint.com/sites/Contoso1
 ```
 
-This example .
+This example sets the "Custom Cyan" theme to the https://contoso.sharepoint.com/sites/Contoso1 site
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Theme
-{{ Fill Theme Description }}
+Name of the theme or SPOTheme object
 
 ```yaml
 Type: SpoThemePipeBind
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-{{ Fill Web Description }}
+Url of the site
 
 ```yaml
 Type: SpoSitePipeBind
