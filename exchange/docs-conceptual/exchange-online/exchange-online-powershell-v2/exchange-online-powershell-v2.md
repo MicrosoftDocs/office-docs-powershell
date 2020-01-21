@@ -29,7 +29,7 @@ When you report an issue, be sure to include the log files in your email message
 To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
    ```PowerShell
-   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <Path to store log file> -LogLevel All
+   Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
    ```
 
 ## What's new in the EXO V2 module?
