@@ -22,7 +22,7 @@ Get-SPOMultiGeoExperience [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to get the multi geo experience.
+Use this cmdlet to get the multi geo experience mode.  For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Use this cmdlet to get the multi geo experience.
 Get-SPOMultiGeoExperience
 ```
 
-This example .
+This example will show you whether the geo location is in SPO or ODB mode.
 
 ## PARAMETERS
 
