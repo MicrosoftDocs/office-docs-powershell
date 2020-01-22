@@ -29,8 +29,8 @@ Adds a shift to the specified member in a team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Add-StaffHubShift -Title "Title" -StartDateTime $startTime -EndDateTime $endTime -ShiftType Working -MemberId "MBER_1234" -TeamId "TEAM_1234"

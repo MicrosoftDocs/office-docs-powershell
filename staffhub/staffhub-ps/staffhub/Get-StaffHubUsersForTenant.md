@@ -30,7 +30,7 @@ Here is an example of the next call that can be made: Get-StaffHubUsersForTenant
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-StaffHubUsersForTenant -Top 10
 ```
 
@@ -40,7 +40,7 @@ This returns a continuation token stored in $nextToken variable which can be use
 Eg: Get-StaffHubUsersForTenant -Top 10 -ContinuationToken $nextToken
 
 ### Example 2
-```
+```powershell
 Get-StaffHubUsersForTenant
 ```
 

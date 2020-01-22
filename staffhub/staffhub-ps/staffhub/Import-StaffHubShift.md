@@ -32,8 +32,8 @@ Failure in adding one shift does not stop the other shifts from getting added.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Import-StaffHubShift -Path "C:\shift.txt"
 ```
 
@@ -48,7 +48,7 @@ https://msdn.microsoft.com/en-us/library/system.text.encoding(v=vs.110).aspx - E
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 1
@@ -63,7 +63,7 @@ Location of the file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: True
 Position: 0

@@ -24,12 +24,12 @@ Remove-StaffHubUser [-UserId] <String>
 
 ## DESCRIPTION
 Removes the specified user from StaffHub.
-Pre-requisite is to delete the user from AAD. 
+Pre-requisite is to delete the user from AAD.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-StaffHubUser -UserId "USER_1234"
 ```
 

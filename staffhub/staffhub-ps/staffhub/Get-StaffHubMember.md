@@ -29,14 +29,14 @@ Get details of team members.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-StaffHubMember -TeamId "TEAM_1234" -MemberId MBER_1234
 ```
 
 Get the details of MBER_1234 in team TEAM_1234.
 
 ### Example 2
-```
+```powershell
 Get-StaffHubMember -TeamId "TEAM_1234"
 ```
 
@@ -50,7 +50,7 @@ MemberId for the specified member in the team.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 1
@@ -65,7 +65,7 @@ TeamId for which all the members are to be fetched.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: True
 Position: 0

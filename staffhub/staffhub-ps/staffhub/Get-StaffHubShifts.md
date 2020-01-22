@@ -29,7 +29,7 @@ Get details of the shifts for all team members or for a specified team member
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime -MemberId MBER_1234
@@ -37,7 +37,7 @@ Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $e
 Get the details of the shifts for MBER_1234 in the team TEAM_1234 between start time and end time
 
 ### Example 2
-```
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime

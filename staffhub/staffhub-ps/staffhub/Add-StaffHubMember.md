@@ -29,8 +29,8 @@ Adds a member or manager to the specified team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-StaffHubMember -TeamId "TEAM_1234" -FirstName "Abc" -LastName "123" -Email "abc@contoso.com" -IsManager $false
 ```
 
