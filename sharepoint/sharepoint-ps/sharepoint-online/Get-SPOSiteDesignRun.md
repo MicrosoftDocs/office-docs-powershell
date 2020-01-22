@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+applicable: SharePoint Online
 online version:
 schema: 2.0.0
 author: trent-green
