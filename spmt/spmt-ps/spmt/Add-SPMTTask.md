@@ -21,6 +21,7 @@ Add a new migration task to the registered migration session. Currently there ar
 ```
 Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String> [-TargetListRelativePath <String>]
 ```
+
 ### SharePointMigrateAll
 ```
 Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl <string> -TargetSiteUrl <string> -MigrateAll
@@ -31,8 +32,9 @@ Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl
  Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <PSCredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
 ```
 
-### DESCRIPTION
+## DESCRIPTION
 Add a new migration task to the registered migration session.
+
 Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
 
 ## EXAMPLES
