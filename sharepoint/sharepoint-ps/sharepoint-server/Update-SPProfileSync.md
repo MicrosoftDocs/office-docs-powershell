@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: microsoft.sharepoint.powershell
+applicable: 
 online version:
 schema: 2.0.0
 ---

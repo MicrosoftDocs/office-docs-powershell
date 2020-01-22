@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftWhiteboard
+online version: https://docs.microsoft.com/powershell/module/whiteboard/get-whiteboard
 applicable: Microsoft Whiteboard
 title: Get-Whiteboard
-online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
