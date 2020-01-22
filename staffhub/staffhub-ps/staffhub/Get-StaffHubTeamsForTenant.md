@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubteamsfortenant
 applicable: Microsoft StaffHub
 title: Get-StaffHubTeamsForTenant
-online version: 
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
