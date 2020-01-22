@@ -43,8 +43,6 @@ Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 ```
 
-Create a migration session.
-
 ## PARAMETERS
 
 ### -AzureActiveDirectoryLookup
