@@ -15,6 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet will create a migration session and initialize it. The initialization will configure migration settings at session level. If no specific setting parameters are defined, default settings will be used. 
 After a session is registered, the user can add a migration task to the migration session and start migration.
+
 ## SYNTAX
 
 ```
@@ -48,6 +49,7 @@ Create a migration session.
 
 ### -AzureActiveDirectoryLookup
 By default, this is set to On. If no user mapping file is provided by the user, then Azure Active Directory is used as the default for user mapping. 
+
 ```yaml
 Type: Boolean
 Parameter Sets: 
@@ -62,6 +64,7 @@ Accept wildcard characters: False
 
 ### -CustomAzureAccessKey
 If you use your own Azure storage, you need to set Azure storage account to On, enter your account and key. You also need to select if you want to enable or disable encryption, and whether temporary files are deleted when migration is completed.
+
 ```yaml
 Type: String
 Parameter Sets: 
@@ -78,6 +81,7 @@ Accept wildcard characters: False
 The default is Off.  If you wish to use your own Azure storage, set this value to On. 
 If you choose to turn it On, additional fields will appear for you to enter your account and key, and settings to select if you want to enable or disable encryption. You also need to decide whether temporary files are deleted when migration is completed. 
 Note: This feature is supported only for General Purpose storage accounts as General-Purpose accounts support Azure blobs and queues. This feature is not available for blob storage accounts.
+
 ```yaml
 Type: String
 Parameter Sets: 
@@ -92,6 +96,7 @@ Accept wildcard characters: False
 
 ### -DeleteTempFilesWhenMigrationDone
 By default, this is set to Off. If you set this value to On, those temporary files in Custom Azure storage generated during migration will be deleted when the migration is completed. Otherwise, those temporary files will not be deleted. 
+
 ```yaml
 Type: Boolean
 Parameter Sets: 
@@ -106,6 +111,7 @@ Accept wildcard characters: False
 
 ### -EnableEncryption
 The default is set to On. If you use your own Azure storage, you will set and define your account and key, and decide and configure enable or disable encryption in settings, and whether temporary files are deleted when migration is completed.
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -124,6 +130,7 @@ If you have never run “Register-SPMTMigration”, with or without the Force pa
 If you have a registered SPMT migration session already, the Force parameter will register a new session anyway.   
 The force parameter performs the function of Stop-SMPTMigration and Unregister-SPMTMigration together.
 If you have an active migration and didn’t use the Force parameter, you need to run Stop-SPMTMigration, and then run Unregister-SPMTMigration to unregister the exiting migration session first.  
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets:  
@@ -139,6 +146,7 @@ Accept wildcard characters: False
 ### -Incremental
 The default setting is On. This lets you rerun the migration with same source and target at a later date, migrating only the changes or additions since the previous run. 
 Important: If you wish to be able to submit the same job again for incremental migration, this setting must be set to On * before* the initial migration job is submitted.
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -153,6 +161,7 @@ Accept wildcard characters: False
 
 ### -KeepAllVersions
 The default is set to On.  If set to On, all version numbers of the file will be migrated.
+
 ```yaml
 Type: Boolean
 Parameter Sets: 
@@ -182,6 +191,7 @@ Accept wildcard characters: False
 
 ### -MigrateFilesAndFoldersWithInvalidChars
 The default is On. Files and folders with invalid characters (for example:<, >, :, ", |, ?, *, /, \,\u007f) in the names will be migrated by default. If set to Off, files and folders with invalid characters in names will not be migrated.
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -196,6 +206,7 @@ Accept wildcard characters: False
 
 ### -MigrateFilesCreatedAfter
 If you choose to limit which files are to be migrated based on creation dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
+
 ```yaml
 Type: DateTime
 Parameter Sets:  
@@ -210,6 +221,7 @@ Accept wildcard characters: False
 
 ### -MigrateFilesModifiedAfter
 If you choose to limit what files are to be migrated based on modified dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
+
 ```yaml
 Type: DateTime
 Parameter Sets:  
@@ -224,6 +236,7 @@ Accept wildcard characters: False
 
 ### -MigrateHiddenFiles
 If set to On, hidden system files will be migrated. By default, it is set to On.
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -239,6 +252,7 @@ Accept wildcard characters: False
 ### -MigrateOneNoteFolderAsOneNoteNoteBook
 By default, MigrateOneNoteFolderAsOneNoteNoteBook is set to Off. OneNote notebooks comprise of folders containing OneNote files and potentially nested subfolders with these files. The root folder of such a hierarchy is a OneNote notebook and it must contain a .onetoc2 file. 
 The current implementation is to mark the folders as notebooks at the end of the migration. If a folder contains any non-OneNote files, it won’t be marked as a notebook.
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -253,6 +267,7 @@ Accept wildcard characters: False
 
 ### -NumberOfVersionToMigrate
 You can choose a specific version number for the files to be migrated. By default, the number of versions kept is 10.
+
 ```yaml
 Type: Int32
 Parameter Sets: 
@@ -267,6 +282,7 @@ Accept wildcard characters: False
 
 ### -PreserveUserPermissionsForFileShare
 By default, this is set to Off. If set to On, permissions will be preserved.
+
 ```yaml
 Type: Boolean
 Parameter Sets: 
@@ -397,8 +413,10 @@ Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -MigrateAllSiteFieldsAndContentTypes
 By default, MigrateAllSiteFieldsAndContentTypes is Off. If it is set to On, all the site fields and content types will be migrated. Otherwise, only those fields and content types used by lists to be migrated will be migrated. 
+
 ```yaml
 Type: Boolean
 Parameter Sets:  
@@ -410,6 +428,7 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -WorkingFolder
 By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. If you wish to specify your own specific working folder, create it first, then use it as -WorkingFolder parameter. The changed working folder will take effect till you close the PowerShell window. 
 Notes:
@@ -426,8 +445,10 @@ Default value: %appdata%\Microsoft\MigrationToolStorage
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SkipSitesWithName
-To prevent certain sites from migrating, list each site name, separating it with a semicolon. The default value is null. 
+To prevent certain sites from migrating, list each site name, separating it with a semicolon. The default value is null.
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -439,8 +460,10 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SkipListsWithName
 To prevent certain list from migrating, list each list name, separating it with a semicolon. The default value is null. 
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -452,8 +475,10 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SkipContentTypesWithName 
 To prevent certain content types from migrating, list each content type name, separating it with a semicolon. The default value is null. 
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -465,8 +490,10 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SkipContentTypesWithName 
-To prevent certain list from migrating, list each site name, separating it with a semicolon. The default value is null. 
+To prevent certain list from migrating, list each site name, separating it with a semicolon. The default value is null.
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -478,6 +505,7 @@ Default value:"RENAME"
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -DuplicatePageBehavior 
 Determine the behavior of the page file migration when encountering a page file with the same name or same id on the target.
 By default, DuplicatePageBehavior is set to RENAME.
@@ -498,8 +526,10 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -MigrateNavigation 
 By default this is set to On. We will migrate the site and web navigation nodes when doing the migration.
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -511,8 +541,10 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -MigrateTermGroups 
 By default this is set to On. We will migrate the term groups when doing the migration.
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -524,6 +556,7 @@ Default value:null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ## INPUTS
 
 ### None
