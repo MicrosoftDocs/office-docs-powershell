@@ -32,15 +32,8 @@ Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl
  Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <PSCredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
 ```
 
-## DESCRIPTION
-Add a new migration task to the registered migration session.
-
-Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
-
-## EXAMPLES
-
 ### Json
-```powershell
+```
 Add-SPMTTask [-JsonDefinition <string>] # This cmdlet is for File Share migration
 
 Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>] # This cmdlet is for SharePoint migration
@@ -143,9 +136,10 @@ Json sample with task level setting:
 
 Note: Datetime format is "yyyy-MM-dd"
 ```
+## EXAMPLES
 
 ### Example 1
-```powershell
+```
 #Define SharePoint 2013 data source#
 
 $Global:SourceSiteUrl = "https://YourOnPremSite/"
@@ -175,37 +169,41 @@ Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
 ```
-
 Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session.
 
+### DESCRIPTION
+Add a new migration task to the registered migration session.
+Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
+
+### Example 2
+Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv:
+
 ### Load CSV
-```powershell
     $csvItems = import-csv "C:\spmt.csv" -Header c1,c2,c3,c4,c5,c6
     ForEach ($item in $csvItems)
     {
         Write-Host $item.c1
         Add-SPMTTask -FileShareSource $item.c1 -TargetSiteUrl $item.c4 -TargetList $item.c5 -TargetListRelativePath $item.c6
     }
-```
-
-Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv
 
 Two migration tasks are defined in the file of spmt.csv.
 
 D:\MigrationTest\Files\Average_1M\c,,,https://SPOSite.sharepoint.com,Documents,Test
 C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibrary_SubfolderName
 
+Code snippets for bulk migration by loading one JSON file:
+
 ### Load JSON
-```powershell
     $jsonItems = Get-Content -Raw -Path  "C:\spmt.json" | ConvertFrom-Json
     ForEach ($taskItem in $jsonItems.Tasks)
     {
         $jsonString = ConvertTo-Json $taskItem -Depth 100
         Add-SPMTTask -JsonDefinition $jsonString -SharePointSourceCredential $onpremCredential
     }
-```
 
-```powershell
+Three migration tasks are defined in the file of spmt.json.
+
+```
 {
    "Tasks":[
       {
@@ -257,10 +255,6 @@ C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibra
 }
 ```
 
-Code snippets for bulk migration by loading one JSON file.
-
-Three migration tasks are defined in the file of spmt.json.
-
 ## PARAMETERS
 
 ### -FileShareSource
@@ -270,7 +264,7 @@ This parameter is mandatory for File Share migration. Please specify the source 
 Type: String
 Parameter Sets: FileShare
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -285,7 +279,7 @@ Define one File share task or SharePoint task in JSON format.
 Type: String
 Parameter Sets: Json
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -300,7 +294,7 @@ This is a switch parameter. If set to True, all lists will be migrated. If set t
 Type: SwitchParameter
 Parameter Sets: SharePointMigrateAll
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: False
@@ -315,7 +309,7 @@ Use this parameter to define SharePoint 2013 sign-in credentials.
 Type: PSCredential
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -327,7 +321,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: Json
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +336,7 @@ Use this parameter to define SharePoint data source site URL.
 Type: String
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -357,7 +351,7 @@ This parameter is mandatory and is to define source document library name or lis
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -372,7 +366,7 @@ This parameter is optional and is to define data source relative path.
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: Empty
@@ -387,7 +381,7 @@ This parameter is mandatory and is to define target library name or list name.
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -401,7 +395,7 @@ This parameter is optional and is to define target relative path.
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: Empty
@@ -416,7 +410,7 @@ This parameter is mandatory for both File Share and SharePoint migration and is 
 Type: String
 Parameter Sets: FileShare, SharePointMigrateAll, SharePointMigrateSelected
 Aliases:
-Applicable: SharePoint Migration Tool
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: Empty
@@ -427,7 +421,6 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
