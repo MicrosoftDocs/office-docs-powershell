@@ -54,9 +54,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS 
+## INPUTS
 
-### None 
+### None
 
 
 ## OUTPUTS
