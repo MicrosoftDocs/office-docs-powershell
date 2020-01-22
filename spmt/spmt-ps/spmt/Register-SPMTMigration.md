@@ -50,20 +50,13 @@ By default, this is set to On. If no user mapping file is provided by the user, 
 
 ```yaml
 Type: Boolean
-Parameter Sets: 
-Aliases: 
-applicable: SharePoint Migration Tool
-Required: False
-Position: Named
-Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+## INPUTS 
 
-## INPUTS
-
-### None
+### None 
 
 
 ## OUTPUTS
