@@ -18,7 +18,7 @@ The New-CsAutoAttendantMenu cmdlet creates a new menu.
 ## SYNTAX
 
 ```
-New-CsAutoAttendantMenu -Name <String> [-MenuOptions <List>] [-Prompts <List>] [-EnableDialByName] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantMenu -Name <String> [-MenuOptions <List>] [-Prompts <List>] [-EnableDialByName] [-Tenant <Guid>] [-DirectorySearchMethod] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,19 +30,19 @@ The New-CsAutoAttendantMenu cmdlet creates a new menu for the Auto Attendant (AA
 ### -------------------------- Example 1 --------------------------
 ```
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
-$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -EnableDialByName
+$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -EnableDialByName -DirectorySearchMethod ByExtension
 ```
 
-This example creates a new menu that allows the caller to reach a target by name.
+This example creates a new menu that allows the caller to reach a target by name, and also defines the Directory Search Method to Dial By Extension.
 
 ### -------------------------- Example 2 --------------------------
 ```
 $menuOptionZero = New-CsAutoAttendantMenuOption -Action TransferCallToOperator -DtmfResponse Tone0
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign. For operator, press zero."
-$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -MenuOptions @($menuOptionZero) -EnableDialByName
+$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -MenuOptions @($menuOptionZero) -EnableDialByName -DirectorySearchMethod ByName
 ```
 
-This example creates a new menu that allows the caller to reach a target by name or the operator by pressing the 0 key.
+This example creates a new menu that allows the caller to reach a target by name or the operator by pressing the 0 key, and also defines the Directory Search Method to Dial By Name.
 
 
 ## PARAMETERS
@@ -112,6 +112,28 @@ Aliases:
 Applicable: Skype for Business Online
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DirectorySearchMethod
+The DirectorySearchMethod parameter lets you define the type of Directory Search Method for the Auto Attendant menu, for more information, see [Set up a Cloud auto attendant](https://docs.microsoft.com/MicrosoftTeams/create-a-phone-system-auto-attendant?WT.mc_id=TeamsAdminCenterCSH)
+
+Possible values are
+
+- None
+- ByName
+- ByExtension
+
+```yaml
+Type: Microsoft.Rtc.Management.Hosted.OAA.Models.DirectorySearchMethod
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
