@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositegroup
 applicable: SharePoint Online
 title: Get-SPOSiteGroup
 schema: 2.0.0
@@ -45,7 +47,7 @@ Specifies the group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -62,7 +64,7 @@ Specifies the maximum number of site collections to return. To retrieve all of t
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -79,7 +81,7 @@ Specifies the site collection scope.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

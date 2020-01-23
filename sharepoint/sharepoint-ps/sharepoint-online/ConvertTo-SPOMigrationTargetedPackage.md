@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/convertto-spomigrationtargetedpackage
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationTargetedPackage
 schema: 2.0.0
@@ -40,7 +42,7 @@ Use this cmdlet to create a migration package from one Library to Another Librar
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the '-ParallelImport' parameter to boost file share migration performance.
 ```Powershell
 $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFilesPath $sourceFiles -SourcePackagePath $sourcePackage -OutputPackagePath $targetPackage -Credentials $cred -TargetWebUrl $targetWeb -TargetDocumentLibraryPath $targetDocLib
@@ -55,7 +57,7 @@ Receives Azure Active Directory User Credentials
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -71,7 +73,7 @@ Fill out the Regular Credentials (Get-Credential)
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -87,7 +89,7 @@ Switch parameter that says if the command should or should not look up for Azure
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -103,7 +105,7 @@ Switch Parameter to determine if you should get or not a log file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -119,7 +121,7 @@ Output package path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -135,7 +137,7 @@ Switch parameter to boost file share migration performance.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -151,7 +153,7 @@ Define the partition size in Bytes where it will be located the target package.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -167,7 +169,7 @@ Defines the temporary Path where are located the XML source files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -183,7 +185,7 @@ Defines the source package path location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -199,7 +201,7 @@ Defines the target document library path.
 ```yaml
 Type: String
 Parameter Sets: DocumentLibraryImport
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -215,7 +217,7 @@ Defines the target document library subfolder path.
 ```yaml
 Type: String
 Parameter Sets: DocumentLibraryImport
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -231,7 +233,7 @@ Defines the Target environment: Production, ProductionChina, None or OnPremises.
 ```yaml
 Type: TargetEnvironment
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Production, ProductionChina, None, OnPremises
 Applicable: SharePoint Online
 
@@ -248,7 +250,7 @@ Defines the Target list path
 ```yaml
 Type: String
 Parameter Sets: ListImport
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -264,7 +266,7 @@ Defines the Target Web URL of the package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -280,7 +282,7 @@ Defines the file mapping of the user.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

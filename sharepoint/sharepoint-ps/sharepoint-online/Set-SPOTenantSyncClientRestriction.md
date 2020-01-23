@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantsyncclientrestriction
 applicable: SharePoint Online
 title: Set-SPOTenantSyncClientRestriction
 schema: 2.0.0
@@ -55,9 +57,9 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet is used to control a variety o
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to enable the feature for tenancy and set the domain GUIDs in the safe recipients list. When this feature is enabled it can take up to 24 hours for the change to take effect. However, any changes to the safe domains list are reflected within five minutes.
 
-The **Set-SPOTenantSyncClientRestriction** cmdlet applies both to existing Microsoft OneDrive for Business sync client (Groove.exe) and the Microsoft OneDrive for Business Next Generation Sync Client (OneDrive.exe).   OneDrive.exe is the new sync client that will sync both consumer and business accounts. 
+The **Set-SPOTenantSyncClientRestriction** cmdlet applies both to existing Microsoft OneDrive for Business sync client (Groove.exe) and the Microsoft OneDrive for Business Next Generation Sync Client (OneDrive.exe).   OneDrive.exe is the new sync client that will sync both consumer and business accounts.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > The new OneDrive for Business Next Generation Sync Client lets you connect and sync files from your OneDrive for Business. You can add a work or school account to the new OneDrive for Business sync client and sync all your files in OneDrive to your computer.  For more information, see [Improve your OneDrive sync experience](https://go.microsoft.com/fwlink/p/?LinkId=717436).
 
 When the feature is enabled the following will occur:
@@ -66,29 +68,29 @@ When the feature is enabled the following will occur:
 * All Microsoft OneDrive Mac Sync client and Mac Beta client requests will not be blocked by default.
 * Microsoft OneDrive mobile apps  are not blocked when this feature is enabled.
 * Regardless whether a computer is managed by a device management solution, a sync relationship will not be established unless they are   joined to a domain in the Safe Recipient List.
-* Any files that have been previously been synced down to your computer will not be deleted. 
-* When this feature is enabled, please be aware the following upload behavior: 
+* Any files that have been previously been synced down to your computer will not be deleted.
+* When this feature is enabled, please be aware the following upload behavior:
 
-     * New or existing files added to the client will still be uploaded to the server and will not be blocked. 
-     * Regardless if the computer is joined to a domain which is set in the Safe Recipient List. 
-     * Regardless if the computer is joined to  a domain which is not set in the Safe Recipient List. 
-     * And for all non-domain joined computers. 
+     * New or existing files added to the client will still be uploaded to the server and will not be blocked.
+     * Regardless if the computer is joined to a domain which is set in the Safe Recipient List.
+     * Regardless if the computer is joined to  a domain which is not set in the Safe Recipient List.
+     * And for all non-domain joined computers.
 
-          
-* Microsoft  OneDrive for Business sync client prior to version 15.0.4693.1000 will stop syncing existing libraries.          
 
-> [!IMPORTANT] 
+* Microsoft  OneDrive for Business sync client prior to version 15.0.4693.1000 will stop syncing existing libraries.
+
+> [!IMPORTANT]
 > In order to explicitly block Microsoft OneDrive client for Mac or OneDrive for Business Next Generation Sync Client on Mac OS X, please run the **Set-SPOTenantSyncClientRestriction** cmdlet with the **BlockMacSync** parameter set to true.  For more information about the Next Generation Sync Client for Mac OS X, see [Get started with the new OneDrive sync client on Mac OS X](https://go.microsoft.com/fwlink/?LinkID=717727).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > There is a known OneDrive for Business sync client issue where syncing is being  blocked even if a computer is joined to a domain which is  set in the Safe Recipient List. To resolve this behavior, obtain the 15.0.4719.1000 version or higher of the sync client, see [May 12, 2015, update for OneDrive for Business](https://support.microsoft.com/en-us/kb/2986244/).
 
-> [!NOTE] 
+> [!NOTE]
 > To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
 * The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](https://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](https://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > This capability doesn’t support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
 
 For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](https://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
@@ -99,7 +101,7 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure a lis
 
 Any file extension may be blocked using this feature, but note that it may take up to 24 hours for a change to take affect across all user devices. When this feature is enabled, users syncing any file that is in the exclusion list will see an error message informing them of the block.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > This feature is only supported by the new OneDrive for Business sync client. To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
 **Control whether users can use the old OneDrive for Business sync client**
@@ -113,7 +115,7 @@ When this feature is enabled, the old OneDrive for Business sync client will sto
 If you opt out, users will be able to resume syncing with the old OneDrive for Business Sync client.
 Note that it may take up to an hour for this change to be reflected.
 
-> [!NOTE] 
+> [!NOTE]
 > This feature only applies to syncing a user’s own OneDrive for Business sites. Team Sites and shared content from other people’s OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
 
 
@@ -177,7 +179,7 @@ The values for this parameter are True and False. The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Blocking
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -193,7 +195,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ReportProblemDialogFeature
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -209,7 +211,7 @@ Sets the domain GUID to add to the safe recipient list. Requires a minimum of 1 
 ```yaml
 Type: String
 Parameter Sets: Blocking
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -225,7 +227,7 @@ Enables the feature to block sync originating from domains that are not present 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Blocking
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -238,13 +240,13 @@ Accept wildcard characters: False
 ### -ExcludedFileExtensions
 Blocks certain file types from syncing with the new sync client (OneDrive.exe).
 
-> [!NOTE] 
+> [!NOTE]
 > It may take up to one hour for changes to take effect.
 
 ```yaml
 Type: String
 Parameter Sets: FileExclusion
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -261,7 +263,7 @@ The valid values are **OptOut, HardOptin, and SoftOptin**.
 ```yaml
 Type: String
 Parameter Sets: GrooveBlockOptions
-Aliases: 
+Aliases:
 Accepted values: OptOut, HardOptIn, SoftOptIn
 Applicable: SharePoint Online
 

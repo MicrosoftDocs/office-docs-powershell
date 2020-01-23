@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeousers
 applicable: SharePoint Online
 title: Get-SPOCrossGeoUsers
 schema: 2.0.0
@@ -33,7 +35,7 @@ Returns all of the SharePoint Online users in a multi-geo tenant and validates t
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```Powershell
-Get-SPOCrossGeoUsers 
+Get-SPOCrossGeoUsers
 ```
 Returns all of the SharePoint Online users in a multi-geo tenant without validating data location.
 
@@ -47,7 +49,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

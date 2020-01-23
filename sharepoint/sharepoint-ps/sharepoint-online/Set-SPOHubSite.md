@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spohubsite
 applicable: SharePoint Online
 title: Set-SPOHubSite
 schema: 2.0.0
@@ -69,7 +71,7 @@ The display name of the hub.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -86,7 +88,7 @@ The URL of a logo to use in the hub navigation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -103,7 +105,7 @@ A description of the hub site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -120,7 +122,7 @@ Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -137,7 +139,7 @@ Determines if joining a Hub site requires approval.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

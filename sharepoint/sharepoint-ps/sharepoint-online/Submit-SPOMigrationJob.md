@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/submit-spomigrationjob
 applicable: SharePoint Online
 title: Submit-SPOMigrationJob
 schema: 2.0.0
@@ -11,7 +13,7 @@ ms.reviewer:
 # Submit-SPOMigrationJob
 
 ## SYNOPSIS
-Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection. 
+Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
 
 
 ## SYNTAX
@@ -31,7 +33,7 @@ Submit-SPOMigrationJob [-TargetWebUrl] <String>
 ```
 
 ## DESCRIPTION
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets. 
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
 
 This cmdlet returns a GUID value which represents the MigrationJobId, or returns an empty GUID if the job was not successfully created.
 
@@ -61,7 +63,7 @@ An optional fully qualified URL and SAS token representing the Azure Storage Rep
 ```yaml
 Type: String
 Parameter Sets: AzureLocationsInline
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -78,7 +80,7 @@ Optional credentials of a site collection administrator to use to connect to the
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -95,7 +97,7 @@ PARAMVALUE: EncryptionParameters
 ```yaml
 Type: EncryptionParameters
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -112,7 +114,7 @@ A fully qualified URL and SAS token representing the Azure Blob Storage containe
 ```yaml
 Type: String
 Parameter Sets: AzureLocationsInline
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -129,7 +131,7 @@ A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage
 ```yaml
 Type: MigrationPackageAzureLocations
 Parameter Sets: AzureLocationsPipebind
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -146,7 +148,7 @@ Indicates to not create a log file. The default is to create a new CreateMigrati
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -163,7 +165,7 @@ A fully qualified URL and SAS token representing the Azure Blob Storage containe
 ```yaml
 Type: String
 Parameter Sets: AzureLocationsInline
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -174,13 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`. 
+The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

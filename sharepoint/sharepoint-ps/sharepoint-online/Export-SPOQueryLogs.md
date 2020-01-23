@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
-Module Name: microsoft.online.sharepoint.powershell
-online version:
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/export-spoquerylogs
 applicable: SharePoint Online
 title: Export-SPOQueryLogs
 schema: 2.0.0

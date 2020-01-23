@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantcontenttypereplicationparameters
 applicable: SharePoint Online
 title: Get-SPOTenantContentTypeReplicationParameters
 schema: 2.0.0
@@ -25,7 +27,7 @@ This Cmdlets gets the content types that are being replicated from primary locat
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
 Get-SPOTenantContentTypeReplicationParameters
 ```

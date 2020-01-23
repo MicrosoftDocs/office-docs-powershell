@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spomigrationjobprogress
 applicable: SharePoint Online
 title: Get-SPOMigrationJobProgress
 schema: 2.0.0
@@ -11,7 +13,7 @@ ms.reviewer:
 # Get-SPOMigrationJobProgress
 
 ## SYNOPSIS
-This cmdlet lets you report on SPO migration jobs that are in progress. 
+This cmdlet lets you report on SPO migration jobs that are in progress.
 
 
 ## SYNTAX
@@ -32,7 +34,7 @@ Get-SPOMigrationJobProgress -Credentials <CredentialCmdletPipeBind> [-DontWaitFo
 ```
 
 ## DESCRIPTION
-This cmdlet lets you report on SPO migration jobs that are in progress. 
+This cmdlet lets you report on SPO migration jobs that are in progress.
 
 
 ## EXAMPLES
@@ -62,7 +64,7 @@ $creds = <my site credentials>
 
 Get-SPOMigrationJobProgress - AzureQueueUri $myQueueUri - TargetWebUrl $targetWebUrl  -Credentials $creds
 ```
-This will report on any currently queued or in progress jobs and wait for all jobs to complete 
+This will report on any currently queued or in progress jobs and wait for all jobs to complete
 
 
 ### -----------------------EXAMPLE 4-----------------------------
@@ -84,7 +86,7 @@ An optional fully qualified URL and SAS token representing the Azure Storage Rep
 ```yaml
 Type: String
 Parameter Sets: AzureLocationsInline
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -95,13 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection. 
+Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
 
 
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -118,7 +120,7 @@ Tells the cmdlet to not wait for the job to end. It will only process as many me
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -135,7 +137,7 @@ PARAMVALUE: EncryptionParameters
 ```yaml
 Type: EncryptionParameters
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -152,7 +154,7 @@ Id of a previously created migration job that exists on the target site collecti
 ```yaml
 Type: Guid[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -169,7 +171,7 @@ A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage
 ```yaml
 Type: MigrationPackageAzureLocations
 Parameter Sets: AzureLocationsImplicit
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -180,13 +182,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter. 
+Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -197,13 +199,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`. 
+The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

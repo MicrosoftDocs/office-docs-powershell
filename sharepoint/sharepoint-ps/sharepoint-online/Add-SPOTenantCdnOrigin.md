@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spotenantcdnorigin
 applicable: SharePoint Online
 title: Add-SPOTenantCdnOrigin
 schema: 2.0.0
@@ -23,13 +25,13 @@ Add-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String
 
 ## DESCRIPTION
 
-Configures a new origin to public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library and requests that content in that library should be retrievable by using a CDN. 
+Configures a new origin to public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library and requests that content in that library should be retrievable by using a CDN.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 
 ```
 Add-SPOTenantCdnOrigin -CdnType public -OriginUrl /sites/site/subfolder
@@ -48,7 +50,7 @@ Specifies the CDN type. The valid values are:  public or private.
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private
 Applicable: SharePoint Online
 
@@ -77,15 +79,15 @@ Accept wildcard characters: False
 
 ### -OriginUrl
 
-Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask. 
+Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask.
 
-Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder within a document library. 
+Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder within a document library.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedesignrun
 applicable: SharePoint Online
-online version:
 schema: 2.0.0
 author: trent-green
 ms.author: trgreen
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SPOSiteDesignRun
 
 ## SYNOPSIS
-Retrieves a list of site designs applied to a specified site collection. 
+Retrieves a list of site designs applied to a specified site collection.
 
 
 ## SYNTAX

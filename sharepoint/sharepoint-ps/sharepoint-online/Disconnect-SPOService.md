@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/disconnect-sposervice
 applicable: SharePoint Online
 title: Disconnect-SPOService
 schema: 2.0.0
@@ -40,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Disconnect-SPOService
 ```
-This example disconnects the service for the tenant. 
+This example disconnects the service for the tenant.
 
 
 ## PARAMETERS
