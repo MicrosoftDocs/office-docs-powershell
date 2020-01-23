@@ -22,18 +22,17 @@ Enable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameters
 ```
 
 ## DESCRIPTION
-This cmdlet enables online provisioning of users in the specified SIP domain. In conjunction with Disable-CsOnlineSipDomain, this cmdlet allows organizations to consolidate *multiple on-premises deployments of Skype for Business Server (or Lync Server)* into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, provided the following key requirements are met: 
- - There must be at most 1 O365 tenant involved. Consolidation for scenarios with > 1 O365 tenant is not supported. 
- - At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
- - If 1 deployment is in hybrid mode, all online SIP domains from any other SfB forests must be disabled before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises. 
- - Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
+This cmdlet enables online provisioning of users in the specified SIP domain. In conjunction with Disable-CsOnlineSipDomain, this cmdlet allows organizations to consolidate *multiple on-premises deployments of Skype for Business Server (or Lync Server)* into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, provided the following key requirements are met:
+
+- There must be at most 1 O365 tenant involved. Consolidation for scenarios with > 1 O365 tenant is not supported. 
+- At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
+- If 1 deployment is in hybrid mode, all online SIP domains from any other SfB forests must be disabled before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises. 
+- Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
 
 Before running this cmdlet for any SIP domain in a Skype for Business Server deployment, you must complete migration of any other existing hybrid SfB deployment that is in progress. All users in an existing hybrid deployment must be moved to the cloud, and that existing hybrid deployment must be detached from Office 365, as described in this article: [Disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid).
 
 **IMPORTANT**
 If you have more than one on-premises deployment of Skype for Business Server, you *must* ensure SharedSipAddressSpace is disabled in all other Skype for Business Server deployments except the deployment containing the SIP domain that is being enabled. 
-
-
 
 ## EXAMPLES
 
@@ -53,8 +52,7 @@ The SIP domain to be enabled for online provisioning in Skype for Business Onlin
 Type: String
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: True
 Position: Named
 Default value: None
@@ -69,15 +67,13 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Force
 Suppresses all confirmation prompts that might occur when running the command.
@@ -86,15 +82,13 @@ Suppresses all confirmation prompts that might occur when running the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -113,4 +107,5 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 ## RELATED LINKS
 
 [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+
 [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)

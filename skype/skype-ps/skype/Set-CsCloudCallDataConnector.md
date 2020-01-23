@@ -49,8 +49,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -65,8 +64,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -81,8 +79,7 @@ Allows you to pass a reference to an object to the cmdlet, rather than set indiv
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -97,8 +94,7 @@ Office 365 TenantID of your tenant.
 Type: String
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,8 +109,7 @@ Data ingestion token for CloudCallDataConnector telemetry endpoint.
 Type: String
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -130,8 +125,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None

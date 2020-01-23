@@ -54,9 +54,9 @@ PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternalyAndModernAuthInterna
 ```
 
 This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients). 
->[!NOTE]
->Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is misspelled and to be able to use it, only one l for Externally should be used.
 
+> [!NOTE]
+> Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is misspelled and to be able to use it, only one l for Externally should be used.
 
 ## PARAMETERS
 
@@ -67,8 +67,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -83,8 +82,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: 0
 Default value: None
@@ -100,8 +98,7 @@ Type: AuthConfigScenario
 Parameter Sets: (All)
 Aliases:
 Accepted values: Custom, AllowAllExternallyAndInternally, BlockWindowsAuthExternally, BlockWindowsAuthExternallyAndInternally, BlockWindowsAuthExternalyAndModernAuthInternally, BlockModernAuthInternally
-online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -117,8 +114,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
