@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spodeletedsite
 applicable: SharePoint Online
 title: Get-SPODeletedSite
 schema: 2.0.0
@@ -62,7 +64,7 @@ Use this switch parameter to only include Personal Sites in the returned results
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParameterSetPersonalSitesOnly
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -78,7 +80,7 @@ Specifies the URL of the deleted site collection to be returned.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -94,7 +96,7 @@ Use this switch parameter to include Personal Sites with the returned results.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParameterSetAllSites
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -113,7 +115,7 @@ The default value is 200.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-CsEffectiveTenantDialPlan
 
 ## SYNOPSIS
-Use the `Test-CsEffectiveTenantDialPlan` cmdlet to test a tenant dial plan.
+Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
 
 ## SYNTAX
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantScopeOnly
-{{Fill TenantScopeOnly Description}}
+Runs the test only against Tenant-level dial plans (does not take into account Service Level Dial Plans).
 
 ```yaml
 Type: SwitchParameter

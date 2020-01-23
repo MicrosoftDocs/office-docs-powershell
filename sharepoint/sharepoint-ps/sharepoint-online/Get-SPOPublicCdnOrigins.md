@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spopubliccdnorigins
 applicable: SharePoint Online
 title: Get-SPOPublicCdnOrigins
 schema: 2.0.0
@@ -24,7 +26,7 @@ List CDN Origins in your Tenant by id or url.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
 PS C:\WINDOWS\system32> Get-SPOPublicCdnOrigins | Fl
 

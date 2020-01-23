@@ -165,7 +165,7 @@ Although this list and these rules can be created directly by using this cmdlet,
 
 Each time a new tenant dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user tenant dial plan.
 By default, the Identity of the new voice normalization rule is the tenant dial plan Identity followed by a slash and then followed by the name Prefix All.
-(For example, TAG:Redmond/Prefix All.) The number of normalization rules cannot exceed 25 per TenantDialPlan.
+(For example, TAG:Redmond/Prefix All.) The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
 You can create a new normalization rule by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 The SimpleName parameter is a display name for the tenant dial plan.
 This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
 
-This string can be up to 256 characters long.
+This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 This parameter must contain a value.

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap
 applicable: SharePoint Online
 title: Invoke-SPOSiteSwap
 schema: 2.0.0
@@ -35,13 +37,13 @@ You must use the SharePoint Admin PowerShell version 16.0.19418.0 or later.
 Use of this cmdlet is subject to the rollout of this capability.
 
 If the target is the root site at https://tenant-name.sharepoint.com, then the following preparation activities should be performed prior to performing the swap:
-1. Any Featured links defined in SharePoint Start Page at https://tenant-name.sharepoint.com/_layouts/15/sharepoint.aspx will not be displayed after performing the swap. If required, the Featured links should be documented so they can be manually recreated after the swap. 
+1. Any Featured links defined in SharePoint Start Page at https://tenant-name.sharepoint.com/_layouts/15/sharepoint.aspx will not be displayed after performing the swap. If required, the Featured links should be documented so they can be manually recreated after the swap.
 2. Functionality such as external sharing and application interfaces are dependent on the policies and permissions defined at the root site. Review the source site to ensure that it has the required policies and permissions as per the existing root site. This includes external sharing settings as well as site permissions.
 
 The source and target sites can't be connected to an Office 365 group. They also can't be hub sites or associated with a hub.
 If a site is a hub site, unregister it as a hub site, swap the root site, and then register the site as a hub site. If a site is associated with a hub, disassociate the site, swap the root site, and then reassociate the site.
 
-    
+
 
 ## EXAMPLES
 
@@ -76,7 +78,7 @@ If the target is the search center site at https://tenant-name.sharepoint.com/se
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -96,7 +98,7 @@ The target site must be the either:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -112,7 +114,7 @@ URL that the target site will be archived to. There should be no existing site, 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -128,7 +130,7 @@ Disables the site redirect from being created at the Source URL location.
 ```yaml
 Type: Switch Parameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

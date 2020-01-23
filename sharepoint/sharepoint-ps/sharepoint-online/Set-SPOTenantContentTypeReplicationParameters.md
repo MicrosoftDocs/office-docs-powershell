@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantcontenttypereplicationparameters
 applicable: SharePoint Online
 title: Set-SPOTenantContentTypeReplicationParameters
 schema: 2.0.0
@@ -28,7 +30,7 @@ Set-SPOTenantContentTypeReplicationParameters -ReplicatedContentTypes <String[]>
 
 ## DESCRIPTION
 Before you run the cmdlets, please use �Connect-SPOService� to connect to SharePoint Online first.
-By default, all published content types in primary location will be replicated to satellite. 
+By default, all published content types in primary location will be replicated to satellite.
 
 
 ## EXAMPLES
@@ -55,7 +57,7 @@ Tenant admin can  also reset to replicate all the content types.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ReplicateAllContentTypes
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -71,7 +73,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String[]
 Parameter Sets: ReplicateSelectedContentTypes
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

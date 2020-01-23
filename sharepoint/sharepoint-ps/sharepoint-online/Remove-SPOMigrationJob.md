@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spomigrationjob
 applicable: SharePoint Online
 title: Remove-SPOMigrationJob
 schema: 2.0.0
@@ -44,7 +46,7 @@ Optional credentials of a site collection administrator to use to connect to the
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -61,7 +63,7 @@ Id of a previously created migration job that exists on the target site collecti
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -78,7 +80,7 @@ Indicates to not create a log file. The default is to create a new DeleteMigrati
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -95,7 +97,7 @@ The fully qualified URL of the site collection where the job will be deleted if 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

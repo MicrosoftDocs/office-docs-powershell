@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantserviceprincipalpermissionrequests
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
 Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantServicePrincipalPermissionRequests [-Connection <SPOnlineConnection>]

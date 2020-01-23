@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spositerename
 applicable: SharePoint Online
 title: Start-SPOSiteRename
 schema: 2.0.0
@@ -12,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 > [!NOTE]
-> This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet. 
+> This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet.
 
 Starts a job to rename a site. You can change the title, the URL or both of a particular site on a SharePoint Online collection
 
@@ -50,7 +52,7 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" modifying 
 ### EXAMPLE 3
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
-$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed" 
+$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
 $newTitle="New Title"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
 ```
@@ -67,7 +69,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -99,7 +101,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -116,7 +118,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -133,7 +135,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -150,7 +152,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -166,7 +168,7 @@ Simulation of what would happend if you run the script without modifying anythin
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationDataLocation, UrlAndDestinationUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -183,7 +185,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

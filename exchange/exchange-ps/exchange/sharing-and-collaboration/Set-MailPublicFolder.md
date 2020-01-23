@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-mailpublicfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailPublicFolder
 schema: 2.0.0
@@ -96,10 +97,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-MailPublicFolder -Identity MyPublicFolder@contoso.com -PrimarySmtpAddress MyPublicFolder@fabrikam.com
+Set-MailPublicFolder -Identity MyPublicFolder@contoso.onmicrosoft.com -EmailAddresses @{add="MyPublicFolder@contoso.com","MyPublicFolder@fabrikam.com"}
 ```
 
-This example sets the primary SMTP address of the mail-enabled public folder MyPublicFolder@contoso.com to MyPublicFolder@fabrikam.com.
+This example adds the specified secondary email addresses to the mail enabled public folder MyPublicFolder@contoso.onmicrosoft.com.
+
+Verify the accepted domains are present in the organization before adding email addresses in those domains.
+
+### Example 2
+```powershell
+Set-MailPublicFolder -Identity MyPublicFolder -PrimarySmtpAddress MyPublicFolder@contoso.com -EmailAddressPolicyEnabled $false
+```
+
+This example sets the primary email address of the specified mail-enabled public folder to MyPublicFolder@contoso.com
+
+### Example 3
+```powershell
+Set-MailPublicFolder -Identity MyPublicFolder -EmailAddresses @{remove="MyPublicFolder@fabrikam.com"}
+```
+
+This example removes the secondary email address MyPublicFolder@fabrikam.com from the specified mail-enabled public folder.
 
 ## PARAMETERS
 
@@ -1589,5 +1606,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-mailpublicfolder)

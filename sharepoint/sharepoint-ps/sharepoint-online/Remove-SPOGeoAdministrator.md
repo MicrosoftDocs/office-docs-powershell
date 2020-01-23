@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spogeoadministrator
 applicable: SharePoint Online
 title: Remove-SPOGeoAdministrator
 schema: 2.0.0
@@ -36,9 +38,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
-Remove-SPOGeoAdministrator contosoadmin 
+Remove-SPOGeoAdministrator contosoadmin
 ```
 Remove the GeoAdministrator privileges to the user contosoadmin of the SharePoint Online multi-geo tenant.
 
@@ -56,7 +58,7 @@ It's the user Principal Name or UPN of a user. Typically the username that he us
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

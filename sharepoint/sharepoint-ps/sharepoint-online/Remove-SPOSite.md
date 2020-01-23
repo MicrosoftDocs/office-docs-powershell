@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-sposite
 applicable: SharePoint Online
 title: Remove-SPOSite
 schema: 2.0.0
@@ -38,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Remove-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -NoWait
 ```
 
-This example immediately removes the site collection named https://contoso.sharepoint.com/sites/site1 from the site collections list and moves it to the Recycle Bin. 
+This example immediately removes the site collection named https://contoso.sharepoint.com/sites/site1 from the site collections list and moves it to the Recycle Bin.
 
 
 ## PARAMETERS
@@ -67,7 +69,7 @@ Specifies the URL of the site collection to remove.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -84,7 +86,7 @@ Specifies to continue executing script immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

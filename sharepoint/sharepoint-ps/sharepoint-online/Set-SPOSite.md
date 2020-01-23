@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
@@ -29,8 +31,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess] [<CommonParameters>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
 ```
 ### ParamSet2
@@ -80,7 +82,7 @@ Example 1 updates the owner of site collection https://contoso.sharepoint.com/si
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 1024
 ```
 
-Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes. 
+Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes.
 
 
 ### -----------------------EXAMPLE 3-----------------------------
@@ -88,7 +90,7 @@ Example 2 updates the settings of site collection https://contoso.sharepoint.com
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
 ```
 
-This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes. 
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
@@ -108,8 +110,8 @@ This example sets the quota for the site.
 
 
 
-> [!NOTE] 
-> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> [!NOTE]
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
 
 
 ### -----------------------EXAMPLE 6-----------------------------
@@ -129,7 +131,7 @@ For more information about Project Web App, see Plan SharePoint groups in Projec
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -146,7 +148,7 @@ Specifies the URL of the site collection to update.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -163,7 +165,7 @@ Determines whether site collection administrators can upgrade their site collect
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -198,7 +200,7 @@ For more information about permission levels, see User permissions and permissio
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -217,7 +219,7 @@ This parameter is available only in SharePoint Online Management Shell Version 1
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet3
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -235,7 +237,7 @@ For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft
 ```yaml
 Type: UInt32
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -257,7 +259,7 @@ It isn't possible to set the lock state on the root site collection.
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -274,7 +276,7 @@ Specifies to continue executing script immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -291,7 +293,7 @@ Specifies the owner of the site collection.
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -310,7 +312,7 @@ For more information, see Resource Usage Limits on Sandboxed Solutions in ShareP
 ```yaml
 Type: Double
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -327,7 +329,7 @@ Specifies the warning level in megabytes of the site collection to warn the site
 ```yaml
 Type: Double
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -344,7 +346,7 @@ PARAMVALUE: Unknown | Check | Disabled | Enabled
 ```yaml
 Type: SandboxedCodeActivationCapabilities
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -364,7 +366,7 @@ For more information about sharing, see Turn external sharing on or off for Shar
 ```yaml
 Type: SharingCapabilities
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -381,7 +383,7 @@ Specifies the storage quota in megabytes of the site collection.
 ```yaml
 Type: Int64
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -398,7 +400,7 @@ Specifies the warning level in megabytes of the site collection to warn the site
 ```yaml
 Type: Int64
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -415,7 +417,7 @@ Specifies the title of the site collection.
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -448,7 +450,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -464,7 +466,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -481,7 +483,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -503,7 +505,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -520,7 +522,7 @@ PARAMVALUE: Unknown | Disabled | NotDisabled
 ```yaml
 Type: AppViewsPolicy
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -537,7 +539,7 @@ PARAMVALUE: Unknown | Disabled | NotDisabled
 ```yaml
 Type: CompanyWideSharingLinksPolicy
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -554,7 +556,7 @@ PARAMVALUE: Unknown | Disabled | NotDisabled
 ```yaml
 Type: FlowsPolicy
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -571,7 +573,7 @@ PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
 ```yaml
 Type: RestrictedToRegion
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -582,7 +584,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
 
 For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
 
@@ -590,7 +592,7 @@ For additional information about how to restrict a domain sharing, see Restricte
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -601,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
 
 For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
 
@@ -609,7 +611,7 @@ For additional information about how to restrict a domain sharing, see Restricte
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -636,7 +638,7 @@ For additional information about how to restrict a domain sharing, see Restricte
 ```yaml
 Type: SharingDomainRestrictionModes
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -653,7 +655,7 @@ To enable the option to search for existing guest users at Site Collection Level
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -664,13 +666,13 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaReset
-Resets the OneDrive for Business storage quota to the tenant’s new default storage space. 
+Resets the OneDrive for Business storage quota to the tenant’s new default storage space.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -682,7 +684,7 @@ Accept wildcard characters: False
 
 
 
-### -DefaultSharingLinkType 
+### -DefaultSharingLinkType
 
 The default link type for the site collection
 
@@ -697,7 +699,7 @@ Direct - Sets the default sharing link for this site to the “Specific people�
 ```yaml
 Type: SharingLinkType
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -707,6 +709,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkToExistingAccess
+
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultLinkPermission
 
@@ -721,7 +742,7 @@ Edit - Sets the default link permission for the site to “edit” permissions
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -744,7 +765,7 @@ True - Override the organization-level policy for anonymous or anyone link expir
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -756,14 +777,14 @@ Accept wildcard characters: False
 
 ### -AnonymousLinkExpirationInDays
 
-Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true. 
+Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
-To remove the expiration requirement, set the value to zero (0). 
+To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -782,7 +803,7 @@ PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 ```yaml
 Type: SPOConditionalAccessPolicyType
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -792,16 +813,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowEditing  
+### -AllowEditing
 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
-PARAMVALUE: $true | $false 
+PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -811,9 +832,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LimitedAccessFileType 
+### -LimitedAccessFileType
 
-The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting. 
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.
 -OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
 -LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
 -LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
@@ -823,7 +844,7 @@ PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
 ```yaml
 Type: SPOLimitedAccessFileType
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

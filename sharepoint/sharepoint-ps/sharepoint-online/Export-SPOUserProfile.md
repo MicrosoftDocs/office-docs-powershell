@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/export-spouserprofile
 applicable: SharePoint Online
 title: Export-SPOUserProfile
 schema: 2.0.0
@@ -40,7 +42,7 @@ Specifies the login name of the user who's data is exported.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -56,7 +58,7 @@ Specifies the output folder location where the CSV file is created.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

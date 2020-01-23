@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spopubliccdnorigin
 applicable: SharePoint Online
 title: New-SPOPublicCdnOrigin
 schema: 2.0.0
@@ -60,7 +62,7 @@ Specify the URL that will be enabled for Public CDN in your tenant
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

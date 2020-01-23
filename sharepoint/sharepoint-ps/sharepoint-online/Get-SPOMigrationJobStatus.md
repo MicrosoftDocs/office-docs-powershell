@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spomigrationjobstatus
 applicable: SharePoint Online
 title: Get-SPOMigrationJobStatus
 schema: 2.0.0
@@ -34,7 +36,7 @@ $credentials = Get-Credential
 Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
 ```
 
-Get the status of your SPO Migration Job. 
+Get the status of your SPO Migration Job.
 You can obtain the Job id when submit package data to create new SPO migration job via the Invoke-SPOMigrationEncryptUploadSubmit cmdlet
 
 ## PARAMETERS
@@ -46,7 +48,7 @@ The credentials of a site collection administrator to use to connect to the site
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -80,7 +82,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -97,7 +99,7 @@ The fully qualified target web URL where the package will be imported. This must
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

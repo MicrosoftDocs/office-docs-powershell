@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
@@ -87,7 +89,7 @@ Location for AAD Cross-Tenant Authentication service. Can be optionally used if 
 ```yaml
 Type: String
 Parameter Sets: AuthenticationUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -104,7 +106,7 @@ Permits appending a client tag to existing client tag. Used optionally in the CS
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -122,7 +124,7 @@ Specifies the credentials to use to connect. If no credentials are presented, a 
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -138,14 +140,14 @@ The valid values are: Default | ITAR | Germany | China
 
 The default value is "default".
 
-> [!NOTE] 
-> The ITAR value is for United States Government cloud tenancies only.  
+> [!NOTE]
+> The ITAR value is for United States Government cloud tenancies only.
 
 
 ```yaml
 Type: AADCrossTenantAuthenticationLocation
 Parameter Sets: AuthenticationLocation
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -162,7 +164,7 @@ Specifies the URL of the SharePoint Online Administration Center site.
 ```yaml
 Type: UrlCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

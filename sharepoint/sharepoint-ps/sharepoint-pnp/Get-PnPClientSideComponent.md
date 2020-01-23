@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpclientsidecomponent
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Get-PnPClientSideComponent
 
 ## SYNOPSIS
 Retrieve one or more Client-Side components from a page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPClientSideComponent -Page <ClientSidePagePipeBind>

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-focusedinbox
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0
@@ -90,5 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-focusedinbox)

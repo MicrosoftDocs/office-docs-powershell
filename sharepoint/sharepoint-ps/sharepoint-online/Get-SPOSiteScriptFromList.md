@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromlist
 applicable: SharePoint Online
 title: Get-SPOSiteScriptFromList
 schema: 2.0.0
@@ -24,7 +26,7 @@ Get-SPOSiteScriptFromList
 
 ## DESCRIPTION
 
-Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design. 
+Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design.
 
 ## EXAMPLES
 
@@ -48,11 +50,11 @@ The url of the list to be referenced for the JSON output.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```

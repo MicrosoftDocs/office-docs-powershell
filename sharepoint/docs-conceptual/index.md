@@ -119,7 +119,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
                         <h3>SharePoint Online</h3>
                         <p><a href="/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps">Connect to SharePoint Online</a></p>
                         <p><a href="/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=share">Introduction to the SharePoint Online Management Shell</a></p>
-                        <p><a href="https://technet.microsoft.com/en-us/library/fp161362(v=office.16).aspx">Office 365 PowerShell for SharePoint Online</a></p>
+                        <p><a href="https://technet.microsoft.com/library/fp161362(v=office.16).aspx">Office 365 PowerShell for SharePoint Online</a></p>
                      </div>
                 </div>
             </div>

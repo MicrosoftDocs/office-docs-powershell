@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/request-spoupgradeevaluationsite
 applicable: SharePoint Online
 title: Request-SPOUpgradeEvaluationSite
 schema: 2.0.0
@@ -73,7 +75,7 @@ Specifies the SharePoint Online site collection for which you want to request a 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -90,7 +92,7 @@ Specifies that the system not send the requester and site collection administrat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -107,7 +109,7 @@ Specifies that the system not perform an upgrade as part of the evaluation site 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

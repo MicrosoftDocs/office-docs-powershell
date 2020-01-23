@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnppowershelltelemetryenabled
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPPowerShellTelemetryEnabled
 
 ## SYNOPSIS
 Returns true if the PnP PowerShell Telemetry has been enabled.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPPowerShellTelemetryEnabled [-Connection <SPOnlineConnection>]
