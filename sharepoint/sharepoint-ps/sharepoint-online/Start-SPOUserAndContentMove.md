@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spouserandcontentmove
 applicable: SharePoint Online
 title: Start-SPOUserAndContentMove
 schema: 2.0.0
@@ -58,7 +60,7 @@ Defines the new destination of the user that you want to move.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -74,7 +76,7 @@ Makes a SPO notification that the user is being move
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -85,12 +87,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverwriteOdb
-Switch parameter to Overwrite the information into the DB 
+Switch parameter to Overwrite the information into the DB
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -106,7 +108,7 @@ Specifies what is the preferred Date and time to start the job
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -122,7 +124,7 @@ Specifies what is the preferred Date and time to stop the job
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -138,7 +140,7 @@ This parameter will only check for reserved users to be moved near to their site
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -154,7 +156,7 @@ UserPrincipalName or UPN defined for the specific user on the SPO tenant
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -170,7 +172,7 @@ This parameter will force the cmdlet to execute only validation
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

@@ -29,7 +29,7 @@ When you report an issue, be sure to include the log files in your email message
 To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
    ```PowerShell
-   Connect-ExchangeOnline -EnableEXoTelemetry -LogDirectoryPath <Path to store log file> -LogLevel All
+   Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
    ```
 
 ## What's new in the EXO V2 module?
@@ -58,7 +58,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 > [!NOTE]
-> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon.
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux/Mac is a work in progress and will be announced soon.
 
 ### What do you need to know before you begin?
 

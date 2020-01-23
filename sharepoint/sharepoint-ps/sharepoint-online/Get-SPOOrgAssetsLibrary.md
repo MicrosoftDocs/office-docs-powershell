@@ -1,13 +1,13 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary
 applicable: SharePoint Online
 title: Get-SPOOrgAssetsLibrary
 author: Maralesfahanpoor
 ms.author: maesfaha
-ms.reviewer: 
+ms.reviewer:
 manager: paulac
-online version:
 schema: 2.0.0
 ---
 

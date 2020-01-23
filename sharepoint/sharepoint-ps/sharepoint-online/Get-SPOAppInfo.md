@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoappinfo
 applicable: SharePoint Online
 title: Get-SPOAppInfo
 schema: 2.0.0
@@ -22,7 +24,7 @@ Get-SPOAppInfo [[-ProductId] <Guid>] [[-Name] <String>] [<CommonParameters>]
 ## DESCRIPTION
 The `Get-SPOAppInfo` cmdlet gets all the installed applications from an external marketplace or from the App Catalog that contain Name in their application names or the installed application with mentioned ProductId. ProductId takes precedence if not empty.
 
-Either ProductId or Name must be given. Name is ignored if ProductId is specified. 
+Either ProductId or Name must be given. Name is ignored if ProductId is specified.
 
 The returned collection of installed applications contains Product ID (GUID), Product name and Source. Values for source type are as follows: 0 = App Catalog and 1 = Marketplace.
 
@@ -43,13 +45,13 @@ Example 1 returns all the installed applications from the external marketplace o
 ```
 Get-SPOAppInfo -ProductId 6751729b-e017-409d-681a-66f1dd18f0ff
 ```
-Example 2 returns the installed application that has the GUID 6751729b-e017-409d-681a-66f1dd18f0ff. 
+Example 2 returns the installed application that has the GUID 6751729b-e017-409d-681a-66f1dd18f0ff.
 
 ###   ------------ Example 3 --------------------
 ```
 Get-SPOAppInfo -Name " " | Sort Name
 ```
-Example 3 returns the installed application that have a space in the name and sorts the in ascending order. 
+Example 3 returns the installed application that have a space in the name and sorts the in ascending order.
 
 ## PARAMETERS
 
@@ -59,7 +61,7 @@ Specifies the application’s name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -75,7 +77,7 @@ Specifies the application’s GUID.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

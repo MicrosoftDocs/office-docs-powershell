@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spohubsite
 applicable: SharePoint Online
 title: Get-SPOHubSite
 schema: 2.0.0
@@ -66,7 +68,7 @@ URL of the hub site. If not specified, the cmdlet lists all hub sites in the ten
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

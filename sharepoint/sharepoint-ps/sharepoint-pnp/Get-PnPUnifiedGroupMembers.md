@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpunifiedgroupmembers
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPUnifiedGroupMembers
 
 ## SYNOPSIS
 Gets members of a particular Office 365 Group (aka Unified Group)
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPUnifiedGroupMembers -Identity <UnifiedGroupPipeBind>

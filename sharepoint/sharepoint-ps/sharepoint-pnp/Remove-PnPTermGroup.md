@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptermgroup
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPTermGroup
 
 ## SYNOPSIS
 Removes a taxonomy term group and all its containing termsets
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPTermGroup -GroupName <String>

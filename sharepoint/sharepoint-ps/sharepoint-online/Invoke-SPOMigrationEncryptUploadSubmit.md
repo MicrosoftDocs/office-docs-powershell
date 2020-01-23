@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spomigrationencryptuploadsubmit
 applicable: SharePoint Online
 title: Invoke-SPOMigrationEncryptUploadSubmit
 schema: 2.0.0
@@ -32,23 +34,23 @@ Creates a new migration job in the target site collection, and then returns a GU
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 This example shows how to submit package data to create a new migration job
 
 ```powershell
 $job = Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $cred -TargetWebUrl $targetWebUrl
 ```
 
-### Example 2 
+### Example 2
 ```Powershell
 $sourceFiles = "sourceFiles"
 $spoPackagePath = "packagePath"
 $credentials = Get-Credential
-$targetweburl = "https://contoso.sharepoint.com" 
+$targetweburl = "https://contoso.sharepoint.com"
 Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $credentials -TargetWebUrl $targetweburl
 ```
 
-This example shows how to submit package data to create a new migration job. 
+This example shows how to submit package data to create a new migration job.
 
 This article contains the steps on how to create this package: https://support.office.com/en-us/article/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets-555049c6-15ef-45a6-9a1f-a1ef673b867c
 
@@ -59,7 +61,7 @@ This example shows how to submit package data to create new migration jobs for p
 ```Powershell
 $jobs = $finalPackages | % {Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $_.FilesDirectory.FullName -SourcePackagePath $_.PackageDirectory.FullName -Credentials $cred -TargetWebUrl $targetWeb}
 ```
- 
+
 ## PARAMETERS
 
 ### -Credentials
@@ -68,7 +70,7 @@ Parameter to fill out credentials of the SPO tenant.
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -84,7 +86,7 @@ Migration Location where the package lies.
 ```yaml
 Type: MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -100,7 +102,7 @@ Controls if a log will be created or not
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -116,7 +118,7 @@ Source files Path, string
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -132,7 +134,7 @@ Source Package Path.
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -148,7 +150,7 @@ Target web URL
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

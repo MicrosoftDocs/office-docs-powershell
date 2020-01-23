@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/convertto-spomigrationencryptedpackage
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationEncryptedPackage
 schema: 2.0.0
@@ -34,7 +36,7 @@ This command convert the XML file on your temporary XML folder files into a new 
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
 PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA256
  -MigrationSourceLocations $MigrationPackageLocation -NoLogFile -TargetFilesPath $TargetFilesPath
@@ -43,7 +45,7 @@ PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA256
 
 Changes a migration package to a migration encrypted package on the "migrationSourceLocations" , with log file on the current tenant
 
-### Example 2 
+### Example 2
 ```powershell
 PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA384
  -MigrationSourceLocations $MigrationPackageLocation  -TargetFilesPath $TargetFilesPath
@@ -61,7 +63,7 @@ It accepts parameters like SHA384, SHA256, etc.
 ```yaml
 Type: EncryptionParameters
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -77,7 +79,7 @@ Possible Source locations to migrate
 ```yaml
 Type: MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -93,7 +95,7 @@ Switch Parameter to determine if you should get or not a log file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -109,7 +111,7 @@ Defines the temporary Path where are located the XML source files.
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -125,7 +127,7 @@ Defines the source package path location.
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceParameterSet
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -141,7 +143,7 @@ Defines the temporary Path where are located the XML source files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -157,7 +159,7 @@ Defines the source package path location of the package to be encrypted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

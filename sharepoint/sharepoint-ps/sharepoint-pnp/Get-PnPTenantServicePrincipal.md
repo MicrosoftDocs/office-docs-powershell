@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantserviceprincipal
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTenantServicePrincipal
 
 ## SYNOPSIS
 Returns the current tenant's "SharePoint Online Client" service principal.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantServicePrincipal [-Connection <SPOnlineConnection>]

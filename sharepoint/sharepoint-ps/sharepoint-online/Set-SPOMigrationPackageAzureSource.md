@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spomigrationpackageazuresource
 applicable: SharePoint Online
 title: Set-SPOMigrationPackageAzureSource
 schema: 2.0.0
@@ -51,7 +53,7 @@ Set-SPOMigrationPackageAzureSource [-EncryptionMetaInfo <MigrationFileEncryption
 
 
 ## DESCRIPTION
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets. 
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
 
 This cmdlet returns a Microsoft.Online.SharePoint.Migration. MigrationPackageAzureLocations object, which can be used as a source for this cmdlet or, more commonly, as a source for the `Submit-SPOMigrationJob` cmdlet.
 
@@ -60,7 +62,7 @@ This cmdlet returns a Microsoft.Online.SharePoint.Migration. MigrationPackageAzu
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-$azurelocations = Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -FileContainerUri migration-files -PackageContainerUri migration-package -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA==" 
+$azurelocations = Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -FileContainerUri migration-files -PackageContainerUri migration-package -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA=="
 ```
 This example creates migration package containers in Azure storage using the supplied account credentials, uploads the package files into them, snapshots the files and lastly returns the connection strings to a PowerShell variable.
 
@@ -81,7 +83,7 @@ The account key for the Azure Storage account.
 ```yaml
 Type: String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -92,13 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -AccountName
-The account name for the Azure Storage account. 
+The account name for the Azure Storage account.
 
 
 ```yaml
 Type: String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -109,13 +111,13 @@ Accept wildcard characters: False
 ```
 
 ### -AzureQueueName
-An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure’s queue naming rules. 
+An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure’s queue naming rules.
 
 
 ```yaml
 Type: String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -132,7 +134,7 @@ PARAMVALUE: MigrationFileEncryptionInfo[]
 ```yaml
 Type: MigrationFileEncryptionInfo[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -149,7 +151,7 @@ PARAMVALUE: EncryptionParameters
 ```yaml
 Type: EncryptionParameters
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -166,7 +168,7 @@ The optional name of the Azure Blob Storage container that will be created if it
 ```yaml
 Type: String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -183,7 +185,7 @@ A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage
 ```yaml
 Type: MigrationPackageAzureLocations
 Parameter Sets: ImplicitSourceImplicitAzure, ExplicitSourceImplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -200,7 +202,7 @@ PARAMVALUE: MigrationPackageLocation
 ```yaml
 Type: MigrationPackageLocation
 Parameter Sets: ImplicitSourceExplicitAzure, ImplicitSourceImplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -217,7 +219,7 @@ Indicates to not create a log file. The default is to create a new CopyMigration
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -234,7 +236,7 @@ Indicates to not perform snapshots on the content in the containers. The default
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -251,7 +253,7 @@ Indicates to not upload the package files. The default is to upload all the pack
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -268,7 +270,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -279,13 +281,13 @@ Accept wildcard characters: False
 ```
 
 ### -PackageContainerName
-The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure’s container naming rules. If this not supplied a name will be generated using the format <GUID>-package. 
+The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure’s container naming rules. If this not supplied a name will be generated using the format <GUID>-package.
 
 
 ```yaml
 Type: String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -296,13 +298,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-The directory location where the package’s source content files exist. 
+The directory location where the package’s source content files exist.
 
 
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceExplicitAzure, ExplicitSourceImplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -313,13 +315,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePackagePath
-The directory location where the package’s metadata files exist. 
+The directory location where the package’s metadata files exist.
 
 
 ```yaml
 Type: String
 Parameter Sets: ExplicitSourceExplicitAzure, ExplicitSourceImplicitAzure
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

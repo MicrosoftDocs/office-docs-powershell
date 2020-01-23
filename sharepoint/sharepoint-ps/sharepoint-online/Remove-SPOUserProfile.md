@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spouserprofile
 applicable: SharePoint Online
 title: Remove-SPOUserProfile
 schema: 2.0.0
@@ -42,7 +44,7 @@ Specifies the login name of the user which user profile is deleted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnorigin
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTenantCdnOrigin
 
 ## SYNOPSIS
 Returns the current registered origins from the public or private content delivery network (CDN).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantCdnOrigin -CdnType <SPOTenantCdnType>

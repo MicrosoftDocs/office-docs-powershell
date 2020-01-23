@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spositecontentmove
 applicable: SharePoint Online
 title: Start-SPOSiteContentMove
 schema: 2.0.0
@@ -70,7 +72,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationDataLocation, GroupNameAndDestinationDataLocation
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -87,7 +89,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -104,7 +106,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: GroupNameAndDestinationDataLocation
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -121,7 +123,7 @@ PARAMVALUE: DateTime
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -138,7 +140,7 @@ PARAMVALUE: DateTime
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -155,7 +157,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -172,7 +174,7 @@ Destination URL where the move will take place
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationDataLocation, UrlAndDestinationUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -189,7 +191,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

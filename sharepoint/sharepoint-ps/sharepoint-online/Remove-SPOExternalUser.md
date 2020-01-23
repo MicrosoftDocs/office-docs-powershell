@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spoexternaluser
 applicable: SharePoint Online
 title: Remove-SPOExternalUser
 schema: 2.0.0
@@ -64,7 +66,7 @@ Specifies an ID that can be used to identify an external user based on their Win
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

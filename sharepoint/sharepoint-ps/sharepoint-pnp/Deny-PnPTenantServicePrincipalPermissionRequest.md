@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/deny-pnptenantserviceprincipalpermissionrequest
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Deny-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>
