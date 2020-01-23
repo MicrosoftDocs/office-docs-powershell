@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Use this cmdlet to get the Site Collection App Catalog.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ ms.reviewer:
 
 ## DESCRIPTION
 
-Use this cmdlet to get the Site Collection App Catalogs.
+Use this cmdlet to get the Site Collection App Catalog. For more information, see [Use the App Catalog to make custom business apps available for your SharePoint environment](https://docs.microsoft.com/sharepoint/use-app-catalog)
 
 ## EXAMPLES
 
@@ -36,26 +36,18 @@ Use this cmdlet to get the Site Collection App Catalogs.
 
 This example returns the Site Collection App Catalog for the site <https://contoso.sharepoint.com/sites/Research.>
 
-### Example 2
-
-```powershell
- Get-SPOSiteCollectionAppCatalogs
-```
-
-This example returns all Site Collection App Catalogs.
-
 ## PARAMETERS
 
 ### -Site
 
-.
+Url of the site
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

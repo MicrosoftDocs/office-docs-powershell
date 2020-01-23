@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Returns the current rename job state of a SharePoint Online Site.
 
 ## SYNTAX
 
@@ -32,17 +32,25 @@ Get-SPOSiteRenameState [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParam
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use this cmdlet to return the current rename job state of a SharePoint Online Site.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Get-SPOSiteRenameState -Identity
+Get-SPOSiteRenameState -Identity https://contoso.sharepoint.com/sites/ContosoWeb1
 ```
 
-This example .
+This example returns the rename job state of ContosoWeb1 Site.
+
+### Example 2
+
+```powershell
+Get-SPOSiteRenameState -State InProgress
+```
+
+This example returns rename jobs that are in InProgress state.
 
 ## PARAMETERS
 
@@ -64,7 +72,13 @@ Accept wildcard characters: False
 
 ### -State
 
-The urls of the site to be renamed.
+The state of the rename job, possible values are
+
+- Success
+
+- InProgress
+
+- Fail
 
 ```yaml
 Type: RenameState
