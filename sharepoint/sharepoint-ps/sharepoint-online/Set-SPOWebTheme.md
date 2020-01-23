@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Sets the theme for a SharePoint site.
 
 ## SYNTAX
 
@@ -24,23 +24,23 @@ Set-SPOWebTheme [-Theme] <SpoThemePipeBind> [-Web] <SpoSitePipeBind> [-WhatIf] [
 
 ## DESCRIPTION
 
-Use this cmdlet.
+Use this cmdlet to set the custom theme for a Site
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+ Set-SPOWebTheme -Theme "Custom cyan" -Web https://contoso.sharepoint.com/sites/Contoso1
 ```
 
-.
+This example sets the "Custom Cyan" theme to the https://contoso.sharepoint.com/sites/Contoso1 site.
 
 ## PARAMETERS
 
 ### -Theme
 
-.
+Name of the theme or SPOTheme object
 
 ```yaml
 Type: SpoThemePipeBind
@@ -55,36 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Theme
-{{ Fill Theme Description }}
-
-```yaml
-Type: SpoThemePipeBind
-Parameter Sets: (All)
-Aliases: Identity, Name
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Web
-{{ Fill Web Description }}
+Url of the site
 
 ```yaml
 Type: SpoSitePipeBind
@@ -93,22 +64,6 @@ Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

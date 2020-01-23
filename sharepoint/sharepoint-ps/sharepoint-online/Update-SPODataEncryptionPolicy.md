@@ -24,17 +24,18 @@ Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [-KeyVaultName] <St
 
 ## DESCRIPTION
 
-.
+Use the Update-DataEncryptionPolicy cmdlet to update customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Update-SPODataEncryptionPolicy -Identity https://contoso-admin.sharepoint.com -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType Primary
 ```
 
-.
+This example updates the DEP used with SharePoint Online and OneDrive for Business to start using the new key
 
 ## PARAMETERS
 
@@ -56,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-{{ Fill Identity Description }}
+Specifies the URL of the admin site collection.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 
 ### -KeyName
 
-{{ Fill KeyName Description }}
+The name of the key
 
 ```yaml
 Type: String
@@ -88,7 +89,10 @@ Accept wildcard characters: False
 
 ### -KeyType
 
-{{ Fill KeyType Description }}
+The type of the key, possible values are
+
+- Primary
+- Secondary
 
 ```yaml
 Type: CustomerKeyVaultKeyType
@@ -105,7 +109,7 @@ Accept wildcard characters: False
 
 ### -KeyVaultName
 
-{{ Fill KeyVaultName Description }}
+The name of the Azure Key Vault Name
 
 ```yaml
 Type: String
@@ -121,7 +125,7 @@ Accept wildcard characters: False
 
 ### -KeyVersion
 
-{{ Fill KeyVersion Description }}
+The version of the key
 
 ```yaml
 Type: Guid
