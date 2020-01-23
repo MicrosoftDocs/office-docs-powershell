@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantmenuoption
 applicable: Skype for Business Online
 title: New-CsAutoAttendantMenuOption
 schema: 2.0.0

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
@@ -48,6 +49,7 @@ A specific domain to get the status of.
 Type: String
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain
 applicable: Skype for Business Online
 Required: False
 Position: Named
@@ -65,6 +67,7 @@ Type: DomainStatus
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, Enabled, Disabled
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain
 applicable: Skype for Business Online
 Required: False
 Position: Named

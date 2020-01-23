@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0
@@ -66,6 +67,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -81,6 +83,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2019
 Required: False
 Position: 0
@@ -97,6 +100,7 @@ Type: AuthConfigScenario
 Parameter Sets: (All)
 Aliases:
 Accepted values: Custom, AllowAllExternallyAndInternally, BlockWindowsAuthExternally, BlockWindowsAuthExternallyAndInternally, BlockWindowsAuthExternalyAndModernAuthInternally, BlockModernAuthInternally
+online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2019
 Required: True
 Position: 1
@@ -113,6 +117,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named

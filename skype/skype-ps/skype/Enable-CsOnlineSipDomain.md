@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
 applicable: Skype for Business Online
 title: Enable-CsOnlineSipDomain
 schema: 2.0.0
@@ -52,6 +53,7 @@ The SIP domain to be enabled for online provisioning in Skype for Business Onlin
 Type: String
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
 applicable: Skype for Business Online
 Required: True
 Position: Named
@@ -67,6 +69,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
 applicable: Skype for Business Online
 Required: False
 Position: Named
@@ -83,6 +86,7 @@ Suppresses all confirmation prompts that might occur when running the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
 applicable: Skype for Business Online
 Required: False
 Position: Named

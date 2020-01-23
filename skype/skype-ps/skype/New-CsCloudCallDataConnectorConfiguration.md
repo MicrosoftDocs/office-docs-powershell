@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: New-CsCloudCallDataConnectorConfiguration
 schema: 2.0.0
@@ -61,6 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -76,6 +78,7 @@ Enables upload of call data (CDR and QoE).
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -91,6 +94,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -106,6 +110,7 @@ Represents the unique identifier to be assigned to the new collection of CloudCa
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: True
 Position: 1
@@ -121,6 +126,7 @@ Creates an object reference without actually committing the object as a permanen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -137,6 +143,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named

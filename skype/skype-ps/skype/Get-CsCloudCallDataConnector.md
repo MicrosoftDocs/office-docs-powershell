@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnector
 applicable: Skype for Business Server 2019
 title: Get-CsCloudCallDataConnector
 schema: 2.0.0
@@ -43,6 +44,7 @@ Retrieves the Call Data Connector data from the local replica of the Central Man
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnector
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named

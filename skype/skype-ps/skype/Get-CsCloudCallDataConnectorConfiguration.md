@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: Get-CsCloudCallDataConnectorConfiguration
 schema: 2.0.0
@@ -76,6 +77,7 @@ To return a collection of all the settings that have the string value "Western" 
 Type: String
 Parameter Sets: Filter
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named
@@ -97,6 +99,7 @@ If this parameter is not specified, the Get-CsCloudCallDataConnectorConfiguratio
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: 1
@@ -112,6 +115,7 @@ Retrieves the CloudCallDataConnector configuration data from the local replica o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 Required: False
 Position: Named

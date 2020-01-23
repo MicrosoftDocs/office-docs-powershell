@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendantholidays
 applicable: Skype for Business Online
 title: Get-CsAutoAttendantHolidays
 schema: 2.0.0

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradestatus
 applicable: Skype for Business Online
 title: Get-CsTeamsUpgradeStatus
 schema: 2.0.0
