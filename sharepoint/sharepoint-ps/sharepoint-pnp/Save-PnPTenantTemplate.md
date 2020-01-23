@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/save-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Save-PnPTenantTemplate
 
 ## SYNOPSIS
 Saves a PnP provisioning hierarchy to the file system
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Save-PnPTenantTemplate -Template <ProvisioningHierarchy>

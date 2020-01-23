@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpcontenttypefromdocumentset
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPContentTypeFromDocumentSet
 
 ## SYNOPSIS
 Removes a content type from a document set
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPContentTypeFromDocumentSet -ContentType <ContentTypePipeBind>

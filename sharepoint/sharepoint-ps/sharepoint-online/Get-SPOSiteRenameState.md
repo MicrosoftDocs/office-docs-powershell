@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositerenamestate
 applicable: SharePoint Online
 title: Get-SPOSiteRenameState
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -17,11 +19,13 @@ ms.reviewer:
 ## SYNTAX
 
 ### SourceSiteUrl
+
 ```powershell
 Get-SPOSiteRenameState -Identity <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RenameReport
+
 ```powershell
 Get-SPOSiteRenameState [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -49,7 +53,7 @@ The urls of the site to be renamed.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: SourceSiteUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -65,7 +69,7 @@ The urls of the site to be renamed.
 ```yaml
 Type: RenameState
 Parameter Sets: RenameReport, ParentId
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

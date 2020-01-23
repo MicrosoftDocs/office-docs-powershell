@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spprofileserviceapplication
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPProfileServiceApplication
 schema: 2.0.0

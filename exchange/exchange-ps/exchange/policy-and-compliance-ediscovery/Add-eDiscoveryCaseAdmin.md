@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/add-ediscoverycaseadmin
 applicable: Office 365 Security & Compliance Center
 title: Add-eDiscoveryCaseAdmin
 schema: 2.0.0
@@ -116,5 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/add-ediscoverycaseadmin)

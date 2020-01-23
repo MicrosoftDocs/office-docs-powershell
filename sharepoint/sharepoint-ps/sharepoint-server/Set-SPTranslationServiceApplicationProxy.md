@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptranslationserviceapplicationproxy
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTranslationServiceApplicationProxy
 schema: 2.0.0

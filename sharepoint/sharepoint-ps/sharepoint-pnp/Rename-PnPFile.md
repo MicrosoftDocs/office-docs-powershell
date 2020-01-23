@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/rename-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Rename-PnPFile
 
 ## SYNOPSIS
 Renames a file in its current location
 
-## SYNTAX 
+## SYNTAX
 
 ### SERVER
 ```powershell

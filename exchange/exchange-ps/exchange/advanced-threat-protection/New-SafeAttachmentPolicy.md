@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-safeattachmentpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-SafeAttachmentPolicy
 schema: 2.0.0
@@ -234,5 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-safeattachmentpolicy)

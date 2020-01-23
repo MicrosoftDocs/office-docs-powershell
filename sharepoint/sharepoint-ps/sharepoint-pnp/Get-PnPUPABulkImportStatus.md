@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPUPABulkImportStatus
 
 ## SYNOPSIS
 Get user profile bulk import status.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]

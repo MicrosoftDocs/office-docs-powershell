@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplistrecorddeclaration
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPListRecordDeclaration
 
 ## SYNOPSIS
@@ -13,7 +15,7 @@ NeverAllowManualDeclaration
 UseSiteCollectionDefaults
 
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPListRecordDeclaration -List <ListPipeBind>

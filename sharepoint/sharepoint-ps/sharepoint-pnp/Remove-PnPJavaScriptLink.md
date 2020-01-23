@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpjavascriptlink
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPJavaScriptLink
 
 ## SYNOPSIS
 Removes a JavaScript link or block from a web or sitecollection
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPJavaScriptLink [-Identity <UserCustomActionPipeBind>]
