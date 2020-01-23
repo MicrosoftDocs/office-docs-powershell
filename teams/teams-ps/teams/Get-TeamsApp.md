@@ -6,7 +6,7 @@ author: joeyglocke
 ms.author: joglocke
 ms.reviewer: ken.withee
 manager: islubin
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/get-teamsapp
 schema: 2.0.0
 ---
 

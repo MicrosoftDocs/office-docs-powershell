@@ -46,6 +46,7 @@ Grant-SPOSiteDesignRights `
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to get scoping information.
 
 ```yaml
@@ -61,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Principals
+
 One or more principles to add permissions for.
 
 ```yaml
@@ -76,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
+
 Always set to the value **View**. Any user or group with view permissions can view and use the site design.
 
 ```yaml
@@ -89,4 +92,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-

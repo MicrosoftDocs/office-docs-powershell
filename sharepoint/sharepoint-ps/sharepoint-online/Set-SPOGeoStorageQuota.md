@@ -13,8 +13,8 @@ ms.reviewer:
 # Set-SPOGeoStorageQuota
 
 ## SYNOPSIS
-This Cmdlet sets the Storage quota on a multi-geo tenant.
 
+This Cmdlet sets the Storage quota on a multi-geo tenant.
 
 ## SYNTAX
 
@@ -23,12 +23,13 @@ Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonPar
 ```
 
 ## DESCRIPTION
-This Cmdlet sets the storage quota, in megabytes, on a particular geo-location. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator.
 
+This Cmdlet sets the storage quota, in megabytes, on a particular geo-location. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512
 ```
@@ -36,18 +37,18 @@ Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512
 Sets the SharePoint Online Storage Quota on the EAST US location to 512 MB.
 
 ### EXAMPLE 2
+
 ```powershell
 Set-SPOGeoStorageQuota -GeoLocation NORTHCENTRALUS -StorageQuotaMB 1024
 ```
 
 Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to 1 TeraBytes (1Tb).
 
-
 ## PARAMETERS
 
 ### -GeoLocation
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -63,8 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaMB
-PARAMVALUE: Int64
 
+PARAMVALUE: Int64
 
 ```yaml
 Type: Int64
@@ -80,10 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
+
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)

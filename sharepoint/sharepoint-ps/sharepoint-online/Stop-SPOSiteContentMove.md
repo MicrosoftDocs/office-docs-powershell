@@ -46,7 +46,6 @@ This example stops the move job for the specified site.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: 0
 Default value: None

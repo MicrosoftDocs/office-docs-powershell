@@ -13,28 +13,31 @@ ms.reviewer:
 # Remove-SPODataConnectionSetting
 
 ## SYNOPSIS
-Removes a Business Connectivity Services connection.
 
+Removes a Business Connectivity Services connection.
 
 ## SYNTAX
 
 ### Identity
-```
+
+```powershell
 Remove-SPODataConnectionSetting [-Identity] <ODataConnectionSettings>
  -ServiceContext <SPServiceContextPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Name
-```
+
+```powershell
 Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (<https://go.microsoft.com/fwlink/?LinkID=187810).>
 
 Use the `Remove-SPODataConnectionSetting` cmdlet to remove a Business Connectivity Services connection for a particular Business Connectivity Services service application in the farm.
 
@@ -43,22 +46,22 @@ The metadata object associated with the Business Connectivity Services connectio
 This cmdlet applies to an on-premises environment only.
 You cannot use this command in the SharePoint Online Management Shell.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251831> (<https://go.microsoft.com/fwlink/p/?LinkId=251831).>
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example removes the Business Connectivity Services connection named ContosoServiceApp.
 Metadata properties are also removed.
 
-
 ### -----------------------EXAMPLE 2-----------------------------
-```
+
+```powershell
 Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
 ```
 
@@ -66,9 +69,9 @@ This example removes the Business Connectivity Services connection metadata name
 
 The associated Business Connectivity Services connection object is also removed.
 
-
 ### -----------------------EXAMPLE 3-----------------------------
-```
+
+```powershell
 $ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
 
 Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "http://contoso"
@@ -76,10 +79,10 @@ Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "h
 
 This example removes the Business Connectivity Services and its associated metadata connection named ContosoServiceApp.
 
-
 ## PARAMETERS
 
 ### -Identity
+
 Specifies the OData Connection Settings object.
 
 ```yaml
@@ -96,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
+
 Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object.
 An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
 
@@ -113,6 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the existing Business Connectivity Services connection.
 
 ```yaml
@@ -129,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -151,6 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -168,6 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -185,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

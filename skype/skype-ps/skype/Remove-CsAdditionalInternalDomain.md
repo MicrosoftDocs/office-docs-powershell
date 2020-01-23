@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csadditionalinternaldomain
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAdditionalInternalDomain
 schema: 2.0.0
@@ -12,7 +13,7 @@ ms.reviewer:
 # Remove-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-Removes an additional internal domain previously configured for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
+Removes an additional internal domain previously configured for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 - December 2017.
 
 ## SYNTAX
 

@@ -46,6 +46,7 @@ Update-UserType [-LoginName] <String> [<CommonParameters>]
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: SharePoint Online
 
 Required: True
 Position: 1

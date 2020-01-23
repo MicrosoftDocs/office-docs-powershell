@@ -23,7 +23,8 @@ Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
@@ -33,7 +34,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

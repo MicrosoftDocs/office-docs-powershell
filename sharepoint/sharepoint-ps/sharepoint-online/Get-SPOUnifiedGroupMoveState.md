@@ -13,6 +13,7 @@ ms.reviewer:
 # Get-SPOUnifiedGroupMoveState
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
@@ -23,7 +24,7 @@ Get-SPOUnifiedGroupMoveState [-GroupAlias] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -33,7 +34,7 @@ Use this cmdlet to .
 Get-SPOUnifiedGroupMoveState -GroupAlias <string>
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

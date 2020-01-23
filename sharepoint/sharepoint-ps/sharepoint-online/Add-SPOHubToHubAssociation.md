@@ -40,7 +40,7 @@ This example associates the source hub site 'Research' with the target hub site 
 
 ### -Source
 
-Source Hub site to be assicated with the Target Hub Site.
+Source Hub site to be associated with the Target Hub Site.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -48,9 +48,9 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

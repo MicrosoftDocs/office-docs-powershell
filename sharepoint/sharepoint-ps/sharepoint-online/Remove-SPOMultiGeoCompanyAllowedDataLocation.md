@@ -24,17 +24,17 @@ Remove-SPOMultiGeoCompanyAllowedDataLocation [-Location] <string> [-WhatIf] [-Co
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

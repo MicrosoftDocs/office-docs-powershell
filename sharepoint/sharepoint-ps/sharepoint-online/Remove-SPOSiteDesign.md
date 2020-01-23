@@ -38,10 +38,10 @@ This example shows how to remove a site design.
 Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to remove.
 
 ```yaml
@@ -55,4 +55,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-

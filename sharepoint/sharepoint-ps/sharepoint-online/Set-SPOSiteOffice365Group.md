@@ -13,11 +13,12 @@ ms.reviewer:
 # Set-SPOSiteOffice365Group
 
 ## SYNOPSIS
+
 Connects a top-level SPO site collection to a new Office 365 Group.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOSiteOffice365Group
   -Site <string>
   -DisplayName  <string>
@@ -30,39 +31,31 @@ Set-SPOSiteOffice365Group
 ```
 
 ## DESCRIPTION
+
 Connects a top-level SPO site collection to a new Office 365 Group.  You must be a SharePoint Online global administrator to run the cmdlet.
 
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example creates a new Office 365 Group named "site1group" and connects site collection https://contoso.sharepoint.com/sites/site1 to it.  The group will privacy set to "Private" and Classification set to "Highly Confidential".
+This example creates a new Office 365 Group named "site1group" and connects site collection <https://contoso.sharepoint.com/sites/site1> to it.  The group will privacy set to "Private" and Classification set to "Highly Confidential".
 
-```
-Set-SPOSiteOffice365Group `
-  -Site https://contoso.sharepoint.com/sites/site1 `
-  -DisplayName "site1group" `
-  -Alias "site1group" `
-  -Classification "Highly Confidential" `
+```powershell
+Set-SPOSiteOffice365Group -Site https://contoso.sharepoint.com/sites/site1 -DisplayName "site1group" -Alias "site1group" -Classification "Highly Confidential"
 ```
 
 ### Example 2
 
-This example creates a new Office 365 Group named "classicsite" and connects site collection https://contoso.sharepoint.com/sites/classicsite to it. It will keep the old home page from the classic site.
+This example creates a new Office 365 Group named "classicsite" and connects site collection <https://contoso.sharepoint.com/sites/classicsite> to it. It will keep the old home page from the classic site.
 
+```powershell
+Set-SPOSiteOffice365Group -Site https://contoso.sharepoint.com/sites/classicsite -DisplayName "Classic Site" -Alias "classicsite" -KeepOldHomepage
 ```
-Set-SPOSiteOffice365Group `
-  -Site https://contoso.sharepoint.com/sites/classicsite `
-  -DisplayName "Classic Site" `
-  -Alias "classicsite" `
-  -KeepOldHomepage `
-```
-
 
 ## PARAMETERS
 
@@ -73,14 +66,14 @@ The site collection being connected to new Office 365 Group.
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
-Aliases:
+Aliases:  
 Applicable: SharePoint Online
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: False  
 ```
 
 ### -DisplayName
@@ -119,7 +112,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Specifies the group’s description.
+Specifies the group's description.
 
 ```yaml
 Type: String
@@ -136,7 +129,7 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
-Determines the Office 365 Group’s privacy setting.  If switch is included, the group will be public, otherwise it will be private.
+Determines the Office 365 Group's privacy setting.  If switch is included, the group will be public, otherwise it will be private.
 
 ```yaml
 Type: SwitchParameter

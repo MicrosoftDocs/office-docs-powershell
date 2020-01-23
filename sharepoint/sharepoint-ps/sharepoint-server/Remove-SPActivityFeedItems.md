@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ### -SearchText
 Limits events deleted to those which contain SearchText in the string. 
 
-Note that the SearchText will apply to *all* of the XML text saved in SQL representing this activity. The text seen in a browser window may be saved in a different representation in SQL. For example, a ">" feed symbol may be represented as "&gt" text in SQL, so the SearchText should reference “&gt” instead of “>”.
+Note that the SearchText will apply to *all* of the XML text saved in SQL representing this activity. The text seen in a browser window may be saved in a different representation in SQL. For example, a ">" feed symbol may be represented as "&gt" text in SQL, so the SearchText should reference "&gt" instead of ">".
 
 ```yaml
 Type: String

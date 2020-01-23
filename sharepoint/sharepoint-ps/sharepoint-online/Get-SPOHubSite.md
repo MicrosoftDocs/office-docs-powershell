@@ -13,19 +13,21 @@ ms.reviewer:
 # Get-SPOHubSite
 
 ## SYNOPSIS
+
 Lists hub sites or hub site information.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub. You can find which hub a site is associated with by providing the site's identity with this cmdlet.
 
-If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
+If the hub site doesn't exist, this cmdlet returns a "File not found" error.
 
 > [!NOTE]
 > If a deleted hub site appears in the output of this cmdlet you may not have run [Unregister-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/unregister-spohubsite) on the deleted hub site.
@@ -34,7 +36,7 @@ If the hub site doesn’t exist, this cmdlet returns a “File not found” erro
 
 ### Example 1
 
-```
+```powershell
 Get-SPOHubSite
 ```
 
@@ -42,7 +44,7 @@ This example lists all hub sites in the tenant.
 
 ### Example 2
 
-```
+```powershell
 Get-SPOHubSite -Identity https://contoso.sharepoint.com/sites/online-marketing
 
 ID                   : 44252d09-62c4-4913-9eb0-a2a8b8d7f863

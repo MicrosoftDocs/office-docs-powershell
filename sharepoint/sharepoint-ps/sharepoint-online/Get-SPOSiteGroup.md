@@ -13,16 +13,17 @@ ms.reviewer:
 # Get-SPOSiteGroup
 
 ## SYNOPSIS
-Gets all the groups on the specified site collection.
 
+Gets all the groups on the specified site collection.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOSiteGroup [-Group <String>] [-Limit <Int32>] -Site <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use the `Get-SPOSiteGroup` cmdlet to get all the groups on the specified site collection by using the Site parameter.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
@@ -32,17 +33,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 Get-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA
 ```
-This example returns all the groups on the specified site collection https://contoso.sharepoint.com/sites/siteA.
 
+This example returns all the groups on the specified site collection <https://contoso.sharepoint.com/sites/siteA.>
 
 ## PARAMETERS
 
 ### -Group
-Specifies the group name.
 
+Specifies the group name.
 
 ```yaml
 Type: String
@@ -58,8 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
-Specifies the maximum number of site collections to return. To retrieve all of the site collections, use Limit ALL. The default value is 200.
 
+Specifies the maximum number of site collections to return. To retrieve all of the site collections, use Limit ALL. The default value is 200.
 
 ```yaml
 Type: Int32
@@ -75,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the site collection scope.
 
+Specifies the site collection scope.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -92,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
