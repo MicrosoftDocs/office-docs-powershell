@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Get-SPODataEncryptionPolicy
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -21,7 +23,9 @@ Get-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use the Get-DataEncryptionPolicy cmdlet to view customer encryption status for your geo tenant.
+
 For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
@@ -48,7 +52,6 @@ The output from this cmdlet includes:
 
   - **Rolling:** A key roll is in progress. If your geo is in this state, you'll also be shown information on what percentage of sites have completed the key roll operation so that you can monitor progress.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -58,7 +61,7 @@ Specifies the URL of the admin site collection.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 1

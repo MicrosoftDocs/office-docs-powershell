@@ -1,10 +1,10 @@
 ---
 External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-Applicable: SharePoint Migration Tool
-Title: Stop-SPMTMigration
-Online version: 
-Schema: 2.0.0
+online version: https://docs.microsoft.com/powershell/module/spmt/stop-spmtmigration
+applicable: SharePoint Migration Tool
+title: Stop-SPMTMigration
+schema: 2.0.0
 author: kenwith
 ms.author: kenwith
 ms.reviewer:
@@ -13,7 +13,7 @@ ms.reviewer:
 # Stop-SPMTMigration
 
 ## SYNOPSIS
-Cancel the current migration session. 
+Cancel the current migration session.
 
 ## SYNTAX
 
@@ -22,12 +22,12 @@ Stop-SPMTMigration
 ```
 
 ## DESCRIPTION
-Cancel the current migration session. 
+Cancel the current migration session.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 #Define SharePoint 2013 data source#
 
 $Global:SourceSiteUrl = "https://YourOnPremSite/"
@@ -63,6 +63,7 @@ Start-SPMTMigration -NoShow
 #cancel the started migration.#
 Stop-SPMTMigration
 ```
+
 Start a migration first, then run "Stop-SPMTMigration" to cancel the migration.
 
 ## PARAMETERS
@@ -71,7 +72,6 @@ Start a migration first, then run "Stop-SPMTMigration" to cancel the migration.
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -79,4 +79,3 @@ Start a migration first, then run "Stop-SPMTMigration" to cancel the migration.
 ## NOTES
 
 ## RELATED LINKS
-

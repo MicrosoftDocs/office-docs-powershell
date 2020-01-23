@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitescript
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPSiteScript
 
 ## SYNOPSIS
 Removes a Site Script
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPSiteScript -Identity <TenantSiteScriptPipeBind>

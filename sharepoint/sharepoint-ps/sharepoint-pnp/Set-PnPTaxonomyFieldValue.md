@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptaxonomyfieldvalue
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPTaxonomyFieldValue
 
 ## SYNOPSIS
 Sets a taxonomy term value in a listitem field
 
-## SYNTAX 
+## SYNTAX
 
 ### ITEMS
 ```powershell

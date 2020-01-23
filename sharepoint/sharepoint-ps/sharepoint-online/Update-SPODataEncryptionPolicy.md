@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/update-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Update-SPODataEncryptionPolicy
 schema: 2.0.0
@@ -31,7 +33,6 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 
 ```powershell
 Update-SPODataEncryptionPolicy -Identity https://contoso-admin.sharepoint.com -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType Primary
-
 ```
 
 This example updates the DEP used with SharePoint Online and OneDrive for Business to start using the new key
