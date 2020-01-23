@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnprequestaccessemails
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPRequestAccessEmails
 
 ## SYNOPSIS
 Sets Request Access Emails on a web
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPRequestAccessEmails -Emails <String[]>
@@ -20,7 +22,7 @@ Set-PnPRequestAccessEmails -Emails <String[]>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPRequestAccessEmails -Emails someone@example.com 
+Set-PnPRequestAccessEmails -Emails someone@example.com
 ```
 
 This will update the request access e-mail address

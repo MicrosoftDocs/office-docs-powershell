@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesignrun
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPSiteDesignRun
 
 ## SYNOPSIS
 Retrieves a list of site designs applied to a specified site collection. If the WebUrl parameter is not specified we show the list of designs applied to the current site. The returned output includes the ID of the scheduled job, the web and site IDs, and the site design ID, version, and title.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSiteDesignRun [-SiteDesignId <GuidPipeBind>]

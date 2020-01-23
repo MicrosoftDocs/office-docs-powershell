@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spositecollectionappcatalog
 applicable: SharePoint Online
 title: Add-SPOSiteCollectionAppCatalog
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -22,7 +24,7 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -43,8 +45,9 @@ Url of the site to add the app catalog to.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -62,6 +65,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -79,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientbrowserdetailreport
 applicable: Exchange Online
 title: Get-O365ClientBrowserDetailReport
 schema: 2.0.0
@@ -193,5 +194,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientbrowserdetailreport)

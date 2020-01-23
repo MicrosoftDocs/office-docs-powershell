@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfolder
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPFolder
 
 ## SYNOPSIS
 Creates a folder within a parent folder
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPFolder -Name <String>

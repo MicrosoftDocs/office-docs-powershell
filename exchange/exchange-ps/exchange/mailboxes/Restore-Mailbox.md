@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/restore-mailbox
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0
@@ -477,5 +478,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/restore-mailbox)

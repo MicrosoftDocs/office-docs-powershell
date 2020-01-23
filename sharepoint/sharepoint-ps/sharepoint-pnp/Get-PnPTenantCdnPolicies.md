@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTenantCdnPolicies
 
 ## SYNOPSIS
 Returns the CDN Policies for the specified CDN (Public | Private).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <SPOTenantCdnType>

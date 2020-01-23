@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/send-pnpmail
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Send-PnPMail
 
 ## SYNOPSIS
 Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Send-PnPMail -To <String[]>

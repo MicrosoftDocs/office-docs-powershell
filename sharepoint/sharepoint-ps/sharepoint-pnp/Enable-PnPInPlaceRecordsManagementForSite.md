@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpinplacerecordsmanagementforsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Enable-PnPInPlaceRecordsManagementForSite
 
 ## SYNOPSIS
 Enables in place records management for a site.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Enable-PnPInPlaceRecordsManagementForSite [-Connection <SPOnlineConnection>]

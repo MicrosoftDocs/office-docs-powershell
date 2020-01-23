@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/convert-pnpfoldertoprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Convert-PnPFolderToProvisioningTemplate
 
 ## SYNOPSIS
 Creates a pnp package file of an existing template xml, and includes all files in the current folder
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Convert-PnPFolderToProvisioningTemplate -Out <String>

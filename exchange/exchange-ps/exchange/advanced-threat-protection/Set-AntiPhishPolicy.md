@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-antiphishpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AntiPhishPolicy
 schema: 2.0.0
@@ -193,11 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAuthenticationSoftPassSafetyTip
-The EnableAuthenticationSoftPassSafetyTip parameter specifies whether to enable safety tips that are shown to recipients when a message fails composite authentication with low to medium confidence. Valid values are:
-
-- $true: Safety tips are enabled for messages that fail composite authentication with low to medium confidence. If you use this value, you might want to restrict the policy to a smaller number of users to avoid displaying too many of these types of safety tips to users.
-
-- $false: Safety tips are disabled for messages that fail composite authentication with low to medium confidence. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -738,5 +735,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-antiphishpolicy)

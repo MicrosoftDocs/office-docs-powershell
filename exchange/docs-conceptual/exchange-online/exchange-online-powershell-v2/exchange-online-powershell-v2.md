@@ -20,8 +20,17 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
 
-> [!TIP]
-> The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+## Report bugs and issues
+
+The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
+
+When you report an issue, be sure to include the log files in your email message.
+
+To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+
+   ```PowerShell
+   Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
+   ```
 
 ## What's new in the EXO V2 module?
 
@@ -49,7 +58,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 > [!NOTE]
-> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon.
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux/Mac is a work in progress and will be announced soon.
 
 ### What do you need to know before you begin?
 
@@ -252,4 +261,28 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retreive only the requires properties.
 
+## Release notes
 
+### Version 0.3527.3 (planned release date: January 20, 2020)
+
+[Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
+
+- Added support for managing Exchange for a different tenant using delegation flow.
+
+- Works in tandem with other PowerShell modules in a single PS window.
+
+- Added support for positional parameters.
+
+- Date Time field now supports client locale.
+
+- Bug fix: PSCredential empty when passed during Connect-ExchangeOnline.
+
+- Bug fix: Client module error when filter contained $null.
+
+- Sessions created internal to EXO V2 Module now have names (naming pattern: ExchangeOnlineInternalSession_%SomeNumber%).
+
+- Bug fix: Remote PowerShell cmdlets intermittently failing due to time the difference between token expiry and the PSSession going idle.
+
+- Major security update.
+
+- Bug fixes and enhancements.

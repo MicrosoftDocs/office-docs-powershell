@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphidedefaultthemes
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPHideDefaultThemes
 
 ## SYNOPSIS
 Returns if the default / OOTB themes should be visible to users or not.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPHideDefaultThemes [-Connection <SPOnlineConnection>]

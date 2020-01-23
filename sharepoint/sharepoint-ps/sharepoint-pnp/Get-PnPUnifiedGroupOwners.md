@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpunifiedgroupowners
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPUnifiedGroupOwners
 
 ## SYNOPSIS
 Gets owners of a particular Office 365 Group (aka Unified Group)
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPUnifiedGroupOwners -Identity <UnifiedGroupPipeBind>

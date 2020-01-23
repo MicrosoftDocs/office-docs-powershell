@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-urltrace
 applicable: Exchange Online, Exchange Online Protection
 title: Get-UrlTrace
 schema: 2.0.0
@@ -222,5 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-urltrace)
