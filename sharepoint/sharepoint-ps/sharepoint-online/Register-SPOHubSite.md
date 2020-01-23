@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ## NOTES
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
 

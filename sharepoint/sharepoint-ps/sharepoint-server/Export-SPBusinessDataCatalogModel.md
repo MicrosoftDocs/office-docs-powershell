@@ -69,7 +69,7 @@ The type must be a valid path in either of the following forms:
 
 - C:\folder_name \file.bdcm
 - \\\\server_name\folder_name \file.bdcm
-- …\folder_name\file.bdcm
+- ...\folder_name\file.bdcm
 
 ```yaml
 Type: String

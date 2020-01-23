@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -AzureQueueName
 
-An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure’s queue naming rules.
+An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure's queue naming rules.
 
 ```yaml
 Type: String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -FileContainerName
 
-The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure’s container naming rules. If this not supplied a name will be generated using the format <GUID>-files.
+The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-files.
 
 ```yaml
 Type: String
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -PackageContainerName
 
-The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure’s container naming rules. If this not supplied a name will be generated using the format <GUID>-package.
+The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-package.
 
 ```yaml
 Type: String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
-The directory location where the package’s source content files exist.
+The directory location where the package's source content files exist.
 
 ```yaml
 Type: String

@@ -64,7 +64,7 @@ Example 3 returns all the installed applications that have a space in the name a
 
 ### -Name
 
-Specifies the application’s name.
+Specifies the application's name.
 
 ```yaml
 Type: String
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -ProductId
 
-Specifies the application’s GUID.
+Specifies the application's GUID.
 
 ```yaml
 Type: Guid

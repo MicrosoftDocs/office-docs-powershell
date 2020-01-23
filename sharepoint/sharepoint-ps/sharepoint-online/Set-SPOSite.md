@@ -564,7 +564,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
 
@@ -582,7 +582,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
+Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
 
@@ -642,7 +642,7 @@ Accept wildcard characters: False
 
 ### -StorageQuotaReset
 
-Resets the OneDrive for Business storage quota to the tenant’s new default storage space.
+Resets the OneDrive for Business storage quota to the tenant's new default storage space.
 
 ```yaml
 Type: SwitchParameter
@@ -664,8 +664,8 @@ PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
 None - Respect the organization default sharing link type
 AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
-Internal - Sets the default sharing link for this site to the “organization” link or company shareable link
-Direct - Sets the default sharing link for this site to the “Specific people” link
+Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
+Direct - Sets the default sharing link for this site to the "Specific people" link
 
 ```yaml
 Type: SharingLinkType
@@ -706,8 +706,8 @@ The default link permission for the site collection
 PARAMVALUE: None | View | Edit
 
 None - Respect the organization default link permission
-View - Sets the default link permission for the site to “view” permissions
-Edit - Sets the default link permission for the site to “edit” permissions
+View - Sets the default link permission for the site to "view" permissions
+Edit - Sets the default link permission for the site to "edit" permissions
 
 ```yaml
 Type: SharingPermissionType

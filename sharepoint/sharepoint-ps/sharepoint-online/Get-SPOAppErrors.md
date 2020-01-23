@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -ProductId
 
-Specifies the application’s GUID.
+Specifies the application's GUID.
 
 ```yaml
 Type: Guid
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -StartTimeInUtc
 
-Specifies the start time in UTC to search for monitoring errors — for example, 01032011:12:00. If no start time is given, the default value 72 hours before the current time is used.
+Specifies the start time in UTC to search for monitoring errors (for example, 01032011:12:00). If no start time is given, the default value 72 hours before the current time is used.
 
 ```yaml
 Type: DateTime

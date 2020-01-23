@@ -35,7 +35,7 @@ The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueu
 
 ```powershell
 $emails = "user1@contoso.com", "user2@contoso.com"
-Request-SPOPersonalSite –UserEmails $emails
+Request-SPOPersonalSite -UserEmails $emails
 ```
 
 This example requests that two users to be enqueued for the creation of a Personal Site.
@@ -43,7 +43,7 @@ This example requests that two users to be enqueued for the creation of a Person
 ### ----------------------EXAMPLE 2-----------------------
 
 ```powershell
-Request-SPOPersonalSite –UserEmails $emails
+Request-SPOPersonalSite -UserEmails $emails
 ```
 
 This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails.
@@ -52,7 +52,7 @@ This example requests that many users to be queued for the creation of a Persona
 
 ### -NoWait
 
-Continues without the status being polled. Polling the action can slow it’s progress if lots of user emails are specified.
+Continues without the status being polled. Polling the action can slow it's progress if lots of user emails are specified.
 
 ```yaml
 Type: SwitchParameter

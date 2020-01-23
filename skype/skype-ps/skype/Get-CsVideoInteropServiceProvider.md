@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csvideointeropserviceprovider
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Get-CsVideoInteropServiceProvider

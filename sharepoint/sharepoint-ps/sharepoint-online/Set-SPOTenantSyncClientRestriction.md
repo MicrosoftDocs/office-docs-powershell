@@ -93,7 +93,7 @@ When the feature is enabled the following will occur:
 * The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](https://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](https://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
 
 > [!IMPORTANT]
-> This capability doesn’t support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
+> This capability doesn't support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
 
 For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](https://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
 
@@ -112,20 +112,20 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure your 
 
 This feature is controlled on an opt-out model which lets users to continue syncing with the old sync client, you may choose to opt out of the Groove block.
 
-When this feature is enabled, the old OneDrive for Business sync client will stop syncing the user’s OneDrive contents. OneDrive for Business users who are still using the old OneDrive for Business sync client will see an error message and will be prompted to launch and configure the new OneDrive for Business sync client. If they do not yet have the new client installed, they will have the opportunity to download and install it.
+When this feature is enabled, the old OneDrive for Business sync client will stop syncing the user's OneDrive contents. OneDrive for Business users who are still using the old OneDrive for Business sync client will see an error message and will be prompted to launch and configure the new OneDrive for Business sync client. If they do not yet have the new client installed, they will have the opportunity to download and install it.
 
 If you opt out, users will be able to resume syncing with the old OneDrive for Business Sync client.
 Note that it may take up to an hour for this change to be reflected.
 
 > [!NOTE]
-> This feature only applies to syncing a user’s own OneDrive for Business sites. Team Sites and shared content from other people’s OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
+> This feature only applies to syncing a user's own OneDrive for Business sites. Team Sites and shared content from other people's OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 
 ```powershell
-Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A"
+Set-SPOTenantSyncClientRestriction  -Enable -DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A"
 ```
 
 This example enables the feature for the  tenancy and adds the domains GUIDs to the safe recipient list.
@@ -133,7 +133,7 @@ This example enables the feature for the  tenancy and adds the domains GUIDs to 
 ### --------------------EXAMPLE 2------------------
 
 ```powershell
-Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A" -BlockMacSync:$true
+Set-SPOTenantSyncClientRestriction  -Enable -DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A" -BlockMacSync:$true
 ```
 
 This example turns on the Block Mac sync functionality.
@@ -141,7 +141,7 @@ This example turns on the Block Mac sync functionality.
 ### --------------------EXAMPLE 3------------------
 
 ```powershell
-Set-SPOTenantSyncClientRestriction  –ExcludedFileExtensions "pptx;docx;xlsx"
+Set-SPOTenantSyncClientRestriction  -ExcludedFileExtensions "pptx;docx;xlsx"
 ```
 
 This example blocks syncing of PowerPoint, Word, and Excel file types using the new sync client (OneDrive.exe).
@@ -149,7 +149,7 @@ This example blocks syncing of PowerPoint, Word, and Excel file types using the 
 ### --------------------EXAMPLE 4------------------
 
 ```powershell
-Set-SPOTenantSyncClientRestriction  –ExcludedFileExtensions ""
+Set-SPOTenantSyncClientRestriction  -ExcludedFileExtensions ""
 ```
 
 This example clears the ExcludedFileExtension list and lets all file types synced with the new client (OneDrive.exe).
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -GrooveBlockOption
 
-Controls whether or not a tenant’s users can sync OneDrive for Business libraries with the old OneDrive for Business sync client.
+Controls whether or not a tenant's users can sync OneDrive for Business libraries with the old OneDrive for Business sync client.
 The valid values are **OptOut, HardOptin, and SoftOptin**.
 
 ```yaml

@@ -27,7 +27,7 @@ Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind> [-WhatIf] [-Confirm] [<Co
 Disables the hub site feature on a site so that it is no longer a hub site. Associated sites may still appear associated for up to an hour. If you want to speed up the process, use the Remove-SPOHubSiteAssociation cmdlet to remove the associates sites first.
 
 > [!NOTE]
-> If the site doesn’t exist, this cmdlet returns a “File not found” error.
+> If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
 

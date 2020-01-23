@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Owner
 
-Specifies the user name of the site collection’s primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
+Specifies the user name of the site collection's primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -ResourceQuota
 
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company’s aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (<https://msdn.microsoft.com/en-us/library/gg615462.aspx).> Note that this parameter is now obsolete and has been deprecated.
+Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (<https://msdn.microsoft.com/en-us/library/gg615462.aspx).> Note that this parameter is now obsolete and has been deprecated.
 
 ```yaml
 Type: Double
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -StorageQuota
 
-Specifies the storage quota for this site collection in megabytes. This value must not exceed the company’s available quota.
+Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
 ```yaml
 Type: Int64
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 ### -Url
 
-Specifies the full URL of the new site collection. It must be in a valid managed path in the company’s site. For example, for company contoso, valid managed paths are <https://contoso.sharepoint.com/sites> and <https://contoso.sharepoint.com/teams.>
+Specifies the full URL of the new site collection. It must be in a valid managed path in the company's site. For example, for company contoso, valid managed paths are <https://contoso.sharepoint.com/sites> and <https://contoso.sharepoint.com/teams.>
 
 ```yaml
 Type: UrlCmdletPipeBind

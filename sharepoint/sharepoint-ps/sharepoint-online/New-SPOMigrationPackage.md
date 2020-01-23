@@ -62,7 +62,7 @@ This example creates a new set of migration source package metadata files, using
 New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
 ```
 
-This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path “https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents”.
+This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path "https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents".
 
 ## PARAMETERS
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -TargetDocumentLibraryPath
 
-The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, “Documents” will be used within the package metadata instead.
+The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, "Documents" will be used within the package metadata instead.
 
 ```yaml
 Type: String
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
-The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, “<http://fileserver/sites/user”> will be used instead within the package metadata.
+The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "<http://fileserver/sites/user"> will be used instead within the package metadata.
 
 ```yaml
 Type: String

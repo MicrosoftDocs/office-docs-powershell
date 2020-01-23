@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Site
 
-Specifies the full URL of the site collection. It must be in a valid managed path in the company’s site.
+Specifies the full URL of the site collection. It must be in a valid managed path in the company's site.
 
 ```yaml
 Type: SpoSitePipeBind

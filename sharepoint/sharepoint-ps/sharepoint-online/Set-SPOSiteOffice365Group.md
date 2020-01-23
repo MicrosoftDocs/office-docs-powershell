@@ -37,7 +37,7 @@ Connects a top-level SPO site collection to a new Office 365 Group.  You must be
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Specifies the group’s description.
+Specifies the group's description.
 
 ```yaml
 Type: String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
-Determines the Office 365 Group’s privacy setting.  If switch is included, the group will be public, otherwise it will be private.
+Determines the Office 365 Group's privacy setting.  If switch is included, the group will be public, otherwise it will be private.
 
 ```yaml
 Type: SwitchParameter

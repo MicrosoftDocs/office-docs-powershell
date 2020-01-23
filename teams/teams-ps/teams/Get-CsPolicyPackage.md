@@ -7,7 +7,7 @@ author: etgottli
 ms.author: etgottli
 ms.reviewer: icchan
 manager: amitar
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage
 schema: 2.0.0
 ---
 
