@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenant
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
@@ -439,7 +441,7 @@ Determines what level of sharing is available for the site.
 The valid values are:  
 
 - ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
-- Disabled - External user sharing (share by email) and guest link sharing are both disabled.  
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
 For more information about sharing, see Manage external sharing for your SharePoint online environment (<https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).>
@@ -533,7 +535,7 @@ Accept wildcard characters: False
 
 Specifies the home realm discovery value to be sent to Azure Active Directory (AAD) during the user sign-in process.
 
-When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.  
+When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.
 This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
 
 Acceleration will not occur on site collections that are shared externally.
@@ -584,7 +586,7 @@ Accept wildcard characters: False
 
 Lets SharePoint issue a special cookie that will allow this feature to work even when "Keep Me Signed In" is not selected.
 
-"Open with Explorer" requires persisted cookies to operate correctly.  
+"Open with Explorer" requires persisted cookies to operate correctly.
 When the user does not select "Keep Me Signed in" at the time of sign-in, "Open with Explorer" will fail.
 
 This special cookie expires after 30 minutes and cannot be cleared by closing the browser or signing out of SharePoint Online.
@@ -855,10 +857,7 @@ Setting this parameter to $False prevents Office clients using non-modern authen
 - False - Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 > [!NOTE]
-> This may also prevent third-party apps from accessing SharePoint Online resources.
-Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
-> [!NOTE]
-> The change is not instant. It might take up to 24 hours to be applied.
+> • This may also prevent third-party apps from accessing SharePoint Online resources. <br/> Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class. <br/><br/>• The change is not instant. It might take up to 24 hours to be applied.
 
 ```yaml
 Type: Boolean
@@ -1325,19 +1324,12 @@ Accept wildcard characters: False
 ### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
 
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites).
-In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:
 
-```powershell
-Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
-```
+In case you want the Content Type Hub to push content types to OneDrive for Business sites, use: `Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites`.
 
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
-Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
-
-```powershell
-Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
-```
+Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using: `Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate`.
 
 ### -ConditionalAccessPolicy
 
@@ -1427,8 +1419,8 @@ Specifies whether to enable the external user expiration policy, where external 
 > [!NOTE]
 > Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
-he valid values are:  
-True - Enables the Policy.  
+he valid values are:
+True - Enables the Policy.
 False (default) - Disables the policy.
 
 ```yaml

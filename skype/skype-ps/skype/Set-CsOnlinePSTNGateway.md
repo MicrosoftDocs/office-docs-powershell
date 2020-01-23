@@ -18,7 +18,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 ## SYNTAX
 
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
 [-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
 [-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
 [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [-Identity <XdsGlobalRelativeIdentity>] 
@@ -42,10 +42,10 @@ This example enables previously created SBC with Identity (and FQDN) sbc.contoso
 
 ### Example 2
 ```powershell
-PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignallingPort 5064 -ForwardPAI $true -Enabled $true
+PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignalingPort 5064 -ForwardPAI $true -Enabled $true
 ```
 
-This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignallingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
+This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignalingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
 
 ## PARAMETERS
 
@@ -274,7 +274,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SipSignallingPort
+### -SipSignalingPort
 Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. The value must be between 1 and 65535.
 
 ```yaml

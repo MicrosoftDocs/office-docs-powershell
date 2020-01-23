@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpwebparttowebpartpage
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPWebPartToWebPartPage
 
 ## SYNOPSIS
 Adds a web part to a web part page in a specified zone
 
-## SYNTAX 
+## SYNTAX
 
 ### XML
 ```powershell
@@ -34,14 +36,14 @@ Add-PnPWebPartToWebPartPage -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -ZoneId "Header" -ZoneIndex 1 
+Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -ZoneId "Header" -ZoneIndex 1
 ```
 
 This will add the web part as defined by the XML in the listview.webpart file to the specified page in the specified zone and with the order index of 1
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -ZoneId "Header" -ZoneIndex 1 
+Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -ZoneId "Header" -ZoneIndex 1
 ```
 
 This will add the web part as defined by the XML in the $webpart variable to the specified page in the specified zone and with the order index of 1

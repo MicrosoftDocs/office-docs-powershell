@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/convertto-spomigrationtargetedpackage
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationTargetedPackage
 schema: 2.0.0
@@ -29,15 +31,13 @@ ConvertTo-SPOMigrationTargetedPackage [-SourceFilesPath] <String> [-SourcePackag
 ```
 
 ## DESCRIPTION
-
-Use this Cmdlets to create a migration package from one Library to Another Library in form of a package. It converts the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
+Use this cmdlet to create a migration package from one Library to Another Library in form of a package. It converts the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the �ParallelImport parameter to boost file share migration performance.
-
+This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the '-ParallelImport' parameter to boost file share migration performance.
 ```Powershell
 $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFilesPath $sourceFiles -SourcePackagePath $sourcePackage -OutputPackagePath $targetPackage -Credentials $cred -TargetWebUrl $targetWeb -TargetDocumentLibraryPath $targetDocLib
 ```

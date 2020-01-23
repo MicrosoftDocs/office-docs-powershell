@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedesigntask
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -53,7 +55,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -WebUrl
@@ -69,7 +71,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### CommonParameters

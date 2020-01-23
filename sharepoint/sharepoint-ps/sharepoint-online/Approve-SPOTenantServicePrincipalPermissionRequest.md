@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissionrequest
 applicable: SharePoint Online
 schema: 2.0.0
 author: trent-green
@@ -48,7 +50,7 @@ if ($requestToApprove -ne $null)
 }
 ```
 
-Approves the permission request for the 'Office 365 SharePoint Online' resource with scope claim 'MyFiles.Read'.  
+Approves the permission request for the 'Office 365 SharePoint Online' resource with scope claim 'MyFiles.Read'.
 If there is no request with those properties, then no approve action will be taken.
 
 ## PARAMETERS

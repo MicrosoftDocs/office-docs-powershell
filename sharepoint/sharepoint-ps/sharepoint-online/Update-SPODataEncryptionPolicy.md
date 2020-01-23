@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/update-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Update-SPODataEncryptionPolicy
 schema: 2.0.0
-author: 
-ms.author: 
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -17,7 +19,7 @@ ms.reviewer:
 ## SYNTAX
 
 ```powershell
-Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -KeyVaultName <string> -KeyName <string> -KeyVersion <guid> -KeyType <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [-KeyVaultName] <String> [-KeyName] <String> [-KeyVersion] <Guid> [-KeyType] <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,66 +38,46 @@ Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -KeyVaultName <stri
 
 ## PARAMETERS
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 
-.
+{{ Fill Identity Description }}
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -KeyVaultName
-
-.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -KeyName
 
-.
+{{ Fill KeyName Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -KeyVersion
-
-.
-
-```yaml
-Type: guid
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
 
 Required: True
 Position: Named
@@ -106,13 +88,13 @@ Accept wildcard characters: False
 
 ### -KeyType
 
-.
+{{ Fill KeyType Description }}
 
 ```yaml
 Type: CustomerKeyVaultKeyType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Accepted values: Primary, Secondary
 
 Required: True
 Position: Named
@@ -121,18 +103,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -KeyVaultName
 
-Prompts you for confirmation before executing the command.
-For more information, type the following command: `get-help about_commonparameters`
+{{ Fill KeyVaultName Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
+Aliases:
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyVersion
+
+{{ Fill KeyVersion Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -141,14 +137,13 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: `get-help about_commonparameters`
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
 
 Required: False
 Position: Named
@@ -159,6 +154,16 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
+
+## OUTPUTS
+
+### System.Object
 
 ## NOTES
+
+## RELATED LINKS

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spodataconnectionsetting
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPODataConnectionSetting
 schema: 2.0.0

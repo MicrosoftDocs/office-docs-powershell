@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-availabilityconfig
 applicable: Exchange Online
 title: Remove-AvailabilityConfig
 schema: 2.0.0
@@ -107,5 +108,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-availabilityconfig)

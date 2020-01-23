@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/new-clientaccessrule
 applicable: Exchange Server 2019, Exchange Online
 title: New-ClientAccessRule
 schema: 2.0.0
@@ -529,5 +530,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/new-clientaccessrule)

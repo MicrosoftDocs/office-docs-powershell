@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spositedesigntask
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -24,7 +26,7 @@ Add-SPOSiteDesignTask -SiteDesignId <guid> -WebUrl <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-SPOSiteDesign is limited to 30 actions and subactions).  
+This command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-SPOSiteDesign is limited to 30 actions and subactions).
 
 This command is intended to replace Invoke-SPOSiteDesign and is useful when you need to apply a large number of actions or multiple site scripts.
 
@@ -56,7 +58,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -WebUrl
@@ -72,7 +74,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### CommonParameters

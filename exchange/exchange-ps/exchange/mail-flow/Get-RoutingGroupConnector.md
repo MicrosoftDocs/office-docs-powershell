@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-routinggroupconnector
 applicable: Exchange Server 2010
 title: Get-RoutingGroupConnector
 schema: 2.0.0
@@ -89,5 +90,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-routinggroupconnector)

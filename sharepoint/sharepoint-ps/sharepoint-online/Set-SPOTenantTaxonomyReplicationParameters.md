@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenanttaxonomyreplicationparameters
 applicable: SharePoint Online
 title: Set-SPOTenantTaxonomyReplicationParameters
 schema: 2.0.0
@@ -48,7 +50,7 @@ Tenant admin can use this cmdlet to select some groups only for replicating to o
 ### EXAMPLE 2
 
 ```powershell
-Set-SPOTenantTaxonomyReplicationParameters �ReplicateAllGroups
+Set-SPOTenantTaxonomyReplicationParameters -ReplicateAllGroups
 ```
 
 Tenant admin can also reset to replicate all the groups.

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/request-pnpreindexweb
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Request-PnPReIndexWeb
 
 ## SYNOPSIS
 Marks the web for full indexing during the next incremental crawl
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Request-PnPReIndexWeb [-Web <WebPipeBind>]

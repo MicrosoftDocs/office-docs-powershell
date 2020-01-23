@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spouser
 applicable: SharePoint Online
 title: Get-SPOUser
 schema: 2.0.0
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Limit
 
-Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value “All”.
+Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value "All".
 
 ```yaml
 Type: String

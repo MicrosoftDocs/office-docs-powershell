@@ -1,13 +1,13 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
 author: Maralesfahanpoor
 ms.author: maesfaha
-ms.reviewer: 
+ms.reviewer:
 manager: paulac
-online version:
 schema: 2.0.0
 ---
 
@@ -20,7 +20,8 @@ Designates a library to be used as a central location for organization assets ac
 ## SYNTAX
 
 ```powershell
-Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>] [<CommonParameters>]
+Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION

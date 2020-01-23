@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spohidedefaultthemes
 applicable: SharePoint Online
 title: Set-SPOHideDefaultThemes
 schema: 2.0.0
@@ -17,7 +19,7 @@ Specifies whether the default themes should be available.
 ## SYNTAX
 
 ```powershell
-Set-SPOHideDefaultThemes [-HideDefaultThemes] <bool> [<CommonParameters>]
+Set-SPOHideDefaultThemes [-HideDefaultThemes] <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,23 +59,31 @@ Set-SPOHideDefaultThemes $false
 
 ### -HideDefaultThemes
 
-.
+{{ Fill HideDefaultThemes Description }}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

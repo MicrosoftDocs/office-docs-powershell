@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpwebtheme
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPWebTheme
 
 ## SYNOPSIS
 Sets the theme of the current web.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPWebTheme [-Theme <ThemePipeBind>]

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spomigrationjobprogress
 applicable: SharePoint Online
 title: Get-SPOMigrationJobProgress
 schema: 2.0.0
@@ -68,7 +70,7 @@ $creds = <my site credentials>
 Get-SPOMigrationJobProgress - AzureQueueUri $myQueueUri - TargetWebUrl $targetWebUrl  -Credentials $creds
 ```
 
-This will report on any currently queued or in progress jobs and wait for all jobs to complete
+This will report on any currently queued or in progress jobs and wait for all jobs to complete.
 
 ### -----------------------EXAMPLE 4-----------------------------
 
@@ -79,7 +81,7 @@ $creds = <my site credentials>
 Get-SPOMigrationJobProgress - AzureQueueUri $myQueueUri - TargetWebUrl  $targetWebUrl -Credentials $creds  -DontWaitForJobEnd
 ```
 
-This will report on any currently queued or in progress jobs and not wait for all jobs to complete
+This will report on any currently queued or in progress jobs and not wait for all jobs to complete.
 
 ## PARAMETERS
 

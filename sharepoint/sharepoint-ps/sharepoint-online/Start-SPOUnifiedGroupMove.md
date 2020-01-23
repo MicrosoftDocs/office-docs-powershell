@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spounifiedgroupmove
 applicable: SharePoint Online
 title: Start-SPOUnifiedGroupMove
 schema: 2.0.0
-author: 
-ms.author: 
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -17,7 +19,7 @@ ms.reviewer:
 ## SYNTAX
 
 ```powershell
-Start-SPOUnifiedGroupMove [-GroupAlias] <string> [-DestinationDataLocation] <string> [[-PreferredMoveBeginDate] <datetime>] [[-PreferredMoveEndDate] <datetime>] [[-Reserved] <string>] [-ValidationOnly] [-Force] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] [-SuppressAllWarnings] [-SuppressBcsCheck] [<CommonParameters>]
+Start-SPOUnifiedGroupMove [-GroupAlias] <String> [-DestinationDataLocation] <String> [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [-Force] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] [-SuppressAllWarnings] [-SuppressBcsCheck] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,97 +38,17 @@ Start-SPOUnifiedGroupMove [-GroupAlias] <string> [-DestinationDataLocation] <str
 
 ## PARAMETERS
 
-### -GroupAlias
-
-.
-
-```yaml
-Type: String
-Parameter Sets: (All), GroupAliasAndDestinationDataLocation
-Aliases:
-Applicable: SharePoint Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DestinationDataLocation
 
-.
+{{ Fill DestinationDataLocation Description }}
 
 ```yaml
 Type: String
-Parameter Sets: (All), GroupAliasAndDestinationDataLocation
+Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreferredMoveEndDate
-
-.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreferredMoveBeginDate
-
-.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Reserved
-
-.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ValidationOnly
-
-.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -134,47 +56,79 @@ Accept wildcard characters: False
 
 ### -Force
 
-.
+{{ Fill Force Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SuppressMarketplaceAppCheck
+### -GroupAlias
 
-.
+{{ Fill GroupAlias Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SuppressWorkflow2013Check
+### -PreferredMoveBeginDate
 
-.
+{{ Fill PreferredMoveBeginDate Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
-Position: Named
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferredMoveEndDate
+
+{{ Fill PreferredMoveEndDate Description }}
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reserved
+
+{{ Fill Reserved Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -182,15 +136,15 @@ Accept wildcard characters: False
 
 ### -SuppressAllWarnings
 
-.
+{{ Fill SuppressAllWarnings Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
-Position: Named
+Position: 9
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -198,15 +152,63 @@ Accept wildcard characters: False
 
 ### -SuppressBcsCheck
 
-.
+{{ Fill SuppressBcsCheck Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
-Position: Named
+Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressMarketplaceAppCheck
+
+{{ Fill SuppressMarketplaceAppCheck Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressWorkflow2013Check
+
+{{ Fill SuppressWorkflow2013Check Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidationOnly
+
+{{ Fill ValidationOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -214,6 +216,16 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
 
 ## NOTES
+
+## RELATED LINKS

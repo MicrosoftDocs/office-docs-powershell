@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
@@ -31,8 +33,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -677,6 +679,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkToExistingAccess
+
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultLinkPermission
 
 The default link permission for the site collection
@@ -757,7 +779,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowEditing  
+### -AllowEditing
 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 

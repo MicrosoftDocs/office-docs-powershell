@@ -1,11 +1,13 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/enable-spocommsite
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
 author: trent-green
 ms.author: trgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Enable-SPOCommSite

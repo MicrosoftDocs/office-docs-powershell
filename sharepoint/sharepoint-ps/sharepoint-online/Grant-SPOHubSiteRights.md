@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/grant-spohubsiterights
 applicable: SharePoint Online
 title: Grant-SPOHubSiteRights
 schema: 2.0.0

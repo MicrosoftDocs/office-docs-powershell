@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spomigrationpackageazuresource
 applicable: SharePoint Online
 title: Set-SPOMigrationPackageAzureSource
 schema: 2.0.0
@@ -304,7 +306,7 @@ Accept wildcard characters: False
 
 ### -SourcePackagePath
 
-The directory location where the package’s metadata files exist.
+The directory location where the package's metadata files exist.
 
 ```yaml
 Type: String

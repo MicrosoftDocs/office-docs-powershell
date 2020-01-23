@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spobuiltindesignpackagevisibility
 applicable: SharePoint Online
 title: Set-SPOBuiltInDesignPackageVisibility
 schema: 2.0.0
-author: 
-ms.author: 
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
@@ -17,7 +19,7 @@ ms.reviewer:
 ## SYNTAX
 
 ```powershell
-Set-SPOBuiltInDesignPackageVisibility -IsVisible <bool> -DesignPackage <DesignPackageType> [<CommonParameters>]
+Set-SPOBuiltInDesignPackageVisibility [-IsVisible] <Boolean> [-DesignPackage] <DesignPackageType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,15 +38,16 @@ Set-SPOBuiltInDesignPackageVisibility -IsVisible <bool> -DesignPackage <DesignPa
 
 ## PARAMETERS
 
-### -IsVisible
+### -DesignPackage
 
-.
+{{ Fill DesignPackage Description }}
 
 ```yaml
-Type: Boolean
+Type: DesignPackageType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Accepted values: None, Topic, Showcase, Blank, TeamSite
+
 Required: True
 Position: Named
 Default value: None
@@ -52,15 +55,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DesignPackage
+### -IsVisible
 
-.
+{{ Fill IsVisible Description }}
 
 ```yaml
-Type: DesignPackageType
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
@@ -70,6 +72,16 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
 
 ## NOTES
+
+## RELATED LINKS

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-syncmailpublicfolder
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Remove-SyncMailPublicFolder
 schema: 2.0.0
@@ -133,5 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-syncmailpublicfolder)

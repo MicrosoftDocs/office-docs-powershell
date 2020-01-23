@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationpackage
 applicable: SharePoint Online
 title: New-SPOMigrationPackage
 schema: 2.0.0
@@ -27,21 +29,20 @@ New-SPOMigrationPackage [-SourceFilesPath] <String> [-OutputPackagePath] <String
 
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
->[!NOTE]
+> [!NOTE]
 > Limits on the SPO package size and file size
 >
->| Limit | Max Size (Gb) | Description |
->| :---:         |     :---:      |          :---: |
->| Package Size   | 2-4      | The whole package can't exceed 4Gb    |
->| File Size     | 2        | A single file inside the source folder can't exceed 2 Gb.      |
->| Target Size | -| target site should remain non-accessible to end user until migration is complete|
->[!NOTE]
->Limits on HTTP Get
+> | Limit | Max Size (Gb) | Description |
+> | :---:         |     :---:      |          :---: |
+> | Package Size   | 2-4      | The whole package can't exceed 4Gb    |
+> | File Size     | 2        | A single file inside the source folder can't exceed 2 Gb.      |
+> | Target Size | -| target site should remain non-accessible to end user until migration is complete|
+> [!NOTE]
+> Limits on HTTP Get
 >
->| Limit | API Get (chars)  | Description |
->| :---:         |     :---:      |          :---: |
->| Action GET on API    | 260 chars      | The size of the API GET request can't exceed 260 chars|
->
+> | Limit | API Get (chars)  | Description |
+> | :---:         |     :---:      |          :---: |
+> | Action GET on API    | 260 chars      | The size of the API GET request can't exceed 260 chars|
 
 ## EXAMPLES
 

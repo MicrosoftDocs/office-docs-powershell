@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spomigrationencryptuploadsubmit
 applicable: SharePoint Online
 title: Invoke-SPOMigrationEncryptUploadSubmit
 schema: 2.0.0
@@ -38,11 +40,11 @@ Creates a new migration job in the target site collection, and then returns a GU
 
 ### Example 1
 
-This example shows how to submit package data to create a new migration job
-
 ```powershell
 $job = Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $cred -TargetWebUrl $targetWebUrl
 ```
+
+This example shows how to submit package data to create a new migration job
 
 ### Example 2
 

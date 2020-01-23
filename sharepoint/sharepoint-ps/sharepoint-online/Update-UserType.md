@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/update-usertype
 applicable: SharePoint Online
 title: Update-UserType
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -17,7 +19,7 @@ ms.reviewer:
 ## SYNTAX
 
 ```powershell
-Update-UserType [-LoginName] <string> [<CommonParameters>]
+Update-UserType [-LoginName] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +40,7 @@ Update-UserType [-LoginName] <string> [<CommonParameters>]
 
 ### -LoginName
 
-.
+{{ Fill LoginName Description }}
 
 ```yaml
 Type: String
@@ -47,7 +49,7 @@ Aliases:
 Applicable: SharePoint Online
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -55,6 +57,16 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
 
 ## NOTES
+
+## RELATED LINKS
