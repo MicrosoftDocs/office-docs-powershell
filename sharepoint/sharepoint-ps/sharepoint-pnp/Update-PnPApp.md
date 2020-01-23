@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/update-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Update-PnPApp
 
 ## SYNOPSIS
 Updates an available app from the app catalog
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Update-PnPApp -Identity <AppMetadataPipeBind>

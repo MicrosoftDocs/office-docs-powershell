@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnphomesite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPHomeSite
 
 ## SYNOPSIS
 Sets the home site for your tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPHomeSite -Url <String>

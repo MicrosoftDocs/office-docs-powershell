@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/update-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Update-SPODataEncryptionPolicy
 schema: 2.0.0
@@ -32,7 +34,7 @@ Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [-KeyVaultName] <St
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

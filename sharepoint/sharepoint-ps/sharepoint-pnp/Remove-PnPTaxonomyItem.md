@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptaxonomyitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPTaxonomyItem
 
 ## SYNOPSIS
 Removes a taxonomy item
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPTaxonomyItem -TermPath <String>

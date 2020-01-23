@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnptenantserviceprincipalpermission
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Grant-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
 Explicitly grants a specified permission to the "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Grant-PnPTenantServicePrincipalPermission -Scope <String>

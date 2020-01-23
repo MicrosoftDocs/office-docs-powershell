@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpindexedproperties
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPIndexedProperties
 
 ## SYNOPSIS
 Marks values of the propertybag to be indexed by search. Notice that this will overwrite the existing flags, i.e. only the properties you define with the cmdlet will be indexed.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPIndexedProperties -Keys <String>

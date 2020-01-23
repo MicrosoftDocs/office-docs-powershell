@@ -1,16 +1,17 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptermset
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTermSet
 
 ## SYNOPSIS
 Returns a taxonomy term set
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
 Get-PnPTermSet -TermGroup <Id, Title or TermGroup>
                [-Includes <String[]>]

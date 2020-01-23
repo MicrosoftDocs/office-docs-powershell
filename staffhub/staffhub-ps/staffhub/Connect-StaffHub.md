@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/connect-staffhub
 applicable: Microsoft StaffHub
 title: Connect-StaffHub
-online version: 
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -30,15 +30,15 @@ You can use this authenticated account only with Microsoft StaffHub cmdlets.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Connect-StaffHub -Credentials $mycreds
 ```
 
 LogIn the session with the specified credential.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Connect-StaffHub
 ```
 
@@ -54,7 +54,7 @@ $mycreds = New-Object System.Management.Automation.PSCredential ("username", $se
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 0
@@ -69,7 +69,7 @@ CultureInfo in which the message is to be displayed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 3
@@ -85,7 +85,7 @@ Default value is 10 days.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 2
@@ -100,7 +100,7 @@ Location where the logs are to be persisted in user's box.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 1

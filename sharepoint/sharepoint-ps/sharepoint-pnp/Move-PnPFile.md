@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/move-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Move-PnPFile
 
 ## SYNOPSIS
 Moves a file to a different location
 
-## SYNTAX 
+## SYNTAX
 
 ### Server Relative
 ```powershell

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPTenantCdnOrigin
 
 ## SYNOPSIS
 Removes an origin from the Public or Private content delivery network (CDN).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPTenantCdnOrigin -OriginUrl <String>

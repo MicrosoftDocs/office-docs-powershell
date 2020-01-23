@@ -1,16 +1,19 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spositeuserinvitations
 applicable: SharePoint Online
 title: Remove-SPOSiteUserInvitations
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
 # Remove-SPOSiteUserInvitations
 
 ## SYNOPSIS
+
 .
 
 ## SYNTAX
@@ -20,7 +23,8 @@ Remove-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string>
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
@@ -30,7 +34,7 @@ Use this cmdlet to .
 Remove-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/Research -EmailAddress "someone@contoso.com"
 ```
 
-This example removes the user with the mail address "someone@contoso.com" from the site with the url https://contoso.sharepoint.com/sites/Research.
+This example removes the user with the mail address "someone@contoso.com" from the site with the url <https://contoso.sharepoint.com/sites/Research.>
 
 ## PARAMETERS
 
@@ -71,7 +75,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 3

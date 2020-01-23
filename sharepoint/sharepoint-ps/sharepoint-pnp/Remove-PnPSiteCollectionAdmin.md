@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitecollectionadmin
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
 Removes one or more users as site collection administrators from the site collection in the current context
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPSiteCollectionAdmin -Owners <UserPipeBind>
