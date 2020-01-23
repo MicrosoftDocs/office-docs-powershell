@@ -21,7 +21,7 @@ Grant-CsTeamsEmergencyCallRoutingPolicy [-PolicyName] <String> [-Tenant <System.
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a Teams Emergency Call Routing policy with one user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration.
+This cmdlet assigns a Teams Emergency Call Routing policy with one user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
 ## EXAMPLES
 

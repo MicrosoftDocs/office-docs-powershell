@@ -62,7 +62,7 @@ That information is then piped to the `Set-CsUser` cmdlet, which enables Enterpr
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-CsUser -Identity "Pilar Ackerman" –LineUri "tel:+123456789"
+Set-CsUser -Identity "Pilar Ackerman" -LineUri "tel:+123456789"
 ```
 
 In Example 3, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.

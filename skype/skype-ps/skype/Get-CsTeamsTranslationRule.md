@@ -37,7 +37,7 @@ This command will show all translation rules that exist in the tenant. Identity,
 PS C:\> Get-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
-This command will show Identity, Description, Pattern and Translation parameters for “AddPlus1” rule
+This command will show Identity, Description, Pattern and Translation parameters for "AddPlus1" rule
 
 
 ## PARAMETERS

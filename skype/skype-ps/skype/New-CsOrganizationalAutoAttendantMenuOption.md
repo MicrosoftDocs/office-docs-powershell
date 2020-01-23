@@ -51,7 +51,7 @@ The Action parameter represents the action to be taken when the menu option is a
 
 - DisconnectCall - The call is disconnected.
 - TransferCallToOperator - the call is transferred to the operator.
-- TransferCallToTarget - The call is transferred to the menu option’s call target.
+- TransferCallToTarget - The call is transferred to the menu option's call target.
 
 ```yaml
 Type: ActionType

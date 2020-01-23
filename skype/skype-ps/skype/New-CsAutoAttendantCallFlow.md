@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
+If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
 You can create prompts by using the [`New-CsAutoAttendantPrompt`](New-CsAutoAttendantPrompt.md) cmdlet.
 

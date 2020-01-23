@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version:
 applicable: Skype for Business Online
 title: Get-CsOnlinePSTNGateway
 schema: 2.0.0

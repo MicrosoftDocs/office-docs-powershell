@@ -28,7 +28,7 @@ The Export-CsOrganizationalAutoAttendantHolidays cmdlet returns the holiday sche
 **NOTE**
 - Each line in the CSV file used by Export-CsOrganizationalAutoAttendantHolidays and Import-CsOrganizationalAutoAttendantHolidays cmdlet should be of the following format:
 
-   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,…,StartDateTime10,EndDateTime10`
+   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 
     where 
     - HolidayName is the name of the holiday to be imported.

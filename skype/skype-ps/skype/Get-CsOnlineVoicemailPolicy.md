@@ -51,7 +51,7 @@ Example 3 uses the Filter parameter to return all the voicemail policies that ha
 ## PARAMETERS
 
 ### -Filter
-This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default “Global”) available to use by the tenant admins.
+This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default "Global") available to use by the tenant admins.
 
 ```yaml
 Type: String

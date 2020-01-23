@@ -500,16 +500,8 @@ The New-CsDeviceUpdateConfiguration cmdlet creates instances of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/EN-US/library/2a06450d-291e-40f9-a780-45e2c4b28494(OCS.14).aspx)
-
 [Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
 
 [Remove-CsDeviceUpdateConfiguration](Remove-CsDeviceUpdateConfiguration.md)
 
 [Set-CsDeviceUpdateConfiguration](Set-CsDeviceUpdateConfiguration.md)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/2a06450d-291e-40f9-a780-45e2c4b28494(OCS.15).aspx)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/2a06450d-291e-40f9-a780-45e2c4b28494(OCS.16).aspx)
-
-

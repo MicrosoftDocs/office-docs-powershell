@@ -52,7 +52,7 @@ The command shown in Example 1 returns information about the scenarios currently
 Show-CsClsLogging -Pools "atl-cs-001.litwareinc.com"
 ```
 
-In Example 2, logging information is returned for all the servers in the pool `atl-cs-001…litwareinc.com…`
+In Example 2, logging information is returned for all the servers in the pool `atl-cs-001...litwareinc.com...`
 
 
 ## PARAMETERS

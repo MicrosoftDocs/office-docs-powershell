@@ -38,14 +38,14 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSlaConfiguration"}
 Get-CsSlaConfiguration -Identity sip:emergency@contosohealth.com
 ```
 
-This example command returns information about the shared number with the Identity of “emergency@contosohealth.com”.
+This example command returns information about the shared number with the Identity of "emergency@contosohealth.com".
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsSlaConfiguration emergency@contosohealth.com
 ```
 
-This example command returns information about the shared number with the Identity of “emergency@contosohealth.com”. This example specifies Identity by its position.
+This example command returns information about the shared number with the Identity of "emergency@contosohealth.com". This example specifies Identity by its position.
 
 ### -------------------------- Example 3 --------------------------
 ```

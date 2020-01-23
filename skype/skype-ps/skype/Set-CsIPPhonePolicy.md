@@ -66,8 +66,8 @@ This example sets the EnablePowerSaveMode, EnableOneTouchVoicemail and EnableDev
 
 ### -BetterTogetherOverEthernetPairingMode
 Valid values are:
-Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
-Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
+Auto - The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
+Manual - The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
 Type: String

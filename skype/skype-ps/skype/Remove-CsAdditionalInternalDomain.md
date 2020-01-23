@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-Removes an additional internal domain previously configured for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
+Removes an additional internal domain previously configured for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 - December 2017.
 
 ## SYNTAX
 

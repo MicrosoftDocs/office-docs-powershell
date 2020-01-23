@@ -12,7 +12,7 @@ ms.reviewer:
 # New-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-Creates a new additional internal domain for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
+Creates a new additional internal domain for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 - December 2017.
 
 ## SYNTAX
 

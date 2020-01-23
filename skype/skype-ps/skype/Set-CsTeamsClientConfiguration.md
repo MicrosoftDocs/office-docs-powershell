@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowResourceAccountSendMessage
-Surface Hub uses a device account to provide email and collaboration services (IM, video, voice). This device account is used as the originating identity (the “from” party) when sending email, IM, and placing calls. As this account is not coming from an individual, identifiable user, it is deemed “anonymous” because it originated from the Surface Hub's device account. If set to $true, these device accounts will be able to send chat messages in Skype for Business Online (does not apply to Microsoft Teams).
+Surface Hub uses a device account to provide email and collaboration services (IM, video, voice). This device account is used as the originating identity (the "from" party) when sending email, IM, and placing calls. As this account is not coming from an individual, identifiable user, it is deemed "anonymous" because it originated from the Surface Hub's device account. If set to $true, these device accounts will be able to send chat messages in Skype for Business Online (does not apply to Microsoft Teams).
 
 ```yaml
 Type: Boolean

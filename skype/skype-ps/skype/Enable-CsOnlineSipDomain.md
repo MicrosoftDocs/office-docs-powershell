@@ -25,7 +25,7 @@ This cmdlet enables online provisioning of users in the specified SIP domain. In
  - There must be at most 1 O365 tenant involved. Consolidation for scenarios with > 1 O365 tenant is not supported. 
  - At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
  - If 1 deployment is in hybrid mode, all online SIP domains from any other SfB forests must be disabled before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises. 
- - Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the “hybrid” deployment, *before* moving on to migrate the next on-premises SfB deployment. 
+ - Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
 
 Before running this cmdlet for any SIP domain in a Skype for Business Server deployment, you must complete migration of any other existing hybrid SfB deployment that is in progress. All users in an existing hybrid deployment must be moved to the cloud, and that existing hybrid deployment must be detached from Office 365, as described in this article: [Disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid).
 

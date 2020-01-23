@@ -30,11 +30,11 @@ Get-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ## DESCRIPTION
 A network region interconnects various parts of a network across multiple geographic areas. 
 
-A network region contains a collection of network sites. For example, if your organization has many sites located in India, then you may choose to designate “India” as a network region.
+A network region contains a collection of network sites. For example, if your organization has many sites located in India, then you may choose to designate "India" as a network region.
 
-Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user’s geographic location at the time of an incoming or outgoing PSTN call. 
+Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
 
-Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user’s location is determined by the IP subnet which the user’s Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client’s routing separately depending on the location of its endpoint.
+Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
 
 ## EXAMPLES
 

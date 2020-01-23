@@ -262,16 +262,8 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.Xds.DisplayExtern
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.14).aspx)
-
 [New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
 [Remove-CsTrustedApplicationPool](Remove-CsTrustedApplicationPool.md)
 
 [Set-CsTrustedApplicationPool](Set-CsTrustedApplicationPool.md)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.15).aspx)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.16).aspx)
-
-

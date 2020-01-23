@@ -45,7 +45,7 @@ Debug-CsLisConfiguration | Format-Table -Wrap
 ```
 
 Running this command will display the entire LIS configuration to the Skype for Business Server Management Shell window in XML format.
-By default, the output of the Debug-CsLisConfiguration cmdlet is displayed on one line, with an ellipsis (…) at the end of the line indicating that there's more than one line of data.
+By default, the output of the Debug-CsLisConfiguration cmdlet is displayed on one line, with an ellipsis (...) at the end of the line indicating that there's more than one line of data.
 Therefore, in this example we pipe the output to the Format-Table cmdlet, specifying the Wrap parameter, to display the full output wrapped to fit in the display window.
 
 

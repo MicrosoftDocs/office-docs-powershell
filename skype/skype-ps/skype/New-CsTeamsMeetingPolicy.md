@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPowerPointSharing
-Determines whether Powerpoint sharing is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether Powerpoint sharing is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWhiteboard
-Determines whether whiteboard is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether whiteboard is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean

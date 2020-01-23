@@ -2,7 +2,6 @@
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Server 2019
 title: New-CsCloudCallDataConnectorConfiguration
-online version:
 schema: 2.0.0
 manager: rogupta
 author: hirenshah1

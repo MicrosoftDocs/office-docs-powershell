@@ -38,7 +38,7 @@ The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Au
 - A fixed schedule can be created without any date-time ranges. In this case, it would never be in effect.
 - For a fixed schedule, at most 10 date-time ranges can be specified.
 - You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
-- The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday’s time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
+- The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday's time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
 
 ## EXAMPLES
 

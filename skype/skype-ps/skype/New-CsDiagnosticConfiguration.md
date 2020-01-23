@@ -413,8 +413,6 @@ The New-CsDiagnosticConfiguration cmdlet creates new instances of the Microsoft.
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.14).aspx)
-
 [Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
 [New-CsDiagnosticsFilter](New-CsDiagnosticsFilter.md)
@@ -422,9 +420,3 @@ The New-CsDiagnosticConfiguration cmdlet creates new instances of the Microsoft.
 [Remove-CsDiagnosticConfiguration](Remove-CsDiagnosticConfiguration.md)
 
 [Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.15).aspx)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.16).aspx)
-
-
