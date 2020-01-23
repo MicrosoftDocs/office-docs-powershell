@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromweb
 applicable: SharePoint Online
 title: Get-SPOSiteScriptFromWeb
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -35,9 +37,9 @@ C:\> $extracted = Get-SPOSiteScriptFromWeb `
     -WebUrl https://contoso.sharepoint.com/sites/template `
     -IncludeBranding `
     -IncludeTheme `
-    -IncludeRegionalSettings ` 
-    -IncludeSiteExternalSharingCapability ` 
-    -IncludeLinksToExportedItems ` 
+    -IncludeRegionalSettings `
+    -IncludeSiteExternalSharingCapability `
+    -IncludeLinksToExportedItems `
     -IncludedLists ("Shared Documents", "Lists/Project Activities")
 C:\> Add-SPOSiteScript `
     -Title "Contoso template site" `
@@ -54,7 +56,7 @@ The url that starts with HTTPS of the site to retrieve the site script.
 ```yaml
 Type: string
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -70,7 +72,7 @@ An array of one or more lists. Each is identified by the list url.
 ```yaml
 Type: string[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -86,7 +88,7 @@ A switch that if provided, extracts the configuration of the site's branding.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -102,7 +104,7 @@ A switch that if provided, extracts the site's custom theme by using the themeJs
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -118,7 +120,7 @@ A switch that if provided, extracts the site's regional settings.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -134,7 +136,7 @@ A switch that if provided, extracts the site's external sharing capability.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -150,7 +152,7 @@ A switch that if provided, extracts navigation links. In order to export navigat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

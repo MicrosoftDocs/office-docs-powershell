@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/repair-sposite
 applicable: SharePoint Online
 title: Repair-SPOSite
 schema: 2.0.0
@@ -77,7 +79,7 @@ Specifies the SharePoint Online site collection on which to run the repairs.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -94,7 +96,7 @@ Specifies a health check rule to run.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -111,7 +113,7 @@ Displays a message that explains the effect of the command instead of executing 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

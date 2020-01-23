@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spositegroup
 applicable: SharePoint Online
 title: New-SPOSiteGroup
 schema: 2.0.0
@@ -54,7 +56,7 @@ Specifies the name of the group to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -67,14 +69,14 @@ Accept wildcard characters: False
 ### -PermissionLevels
 Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
 
-> [!NOTE] 
+> [!NOTE]
 > Permission Levels, are defined on the top-level site of the site collection, please see [How to create and edit permission levels](https://docs.microsoft.com/sharepoint/how-to-create-and-edit-permission-levels) for more information.
 
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -91,7 +93,7 @@ Specifies the site collection to add the group to.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

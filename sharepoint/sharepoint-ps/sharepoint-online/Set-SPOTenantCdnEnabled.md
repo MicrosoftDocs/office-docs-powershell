@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantcdnenabled
 applicable: SharePoint Online
 title: Set-SPOTenantCdnEnabled
 schema: 2.0.0
@@ -22,7 +24,7 @@ Set-SPOTenantCdnEnabled [-CdnType <SPOTenantCdnTypeClient>] [-Confirm] [-Enable 
 ```
 
 ## DESCRIPTION
-Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. 
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level.
 
 
 ## EXAMPLES
@@ -44,7 +46,7 @@ Specifies the CDN type. The valid values are: public or private.
 ```yaml
 Type: SPOTenantCdnTypeClient
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private, Both
 Applicable: SharePoint Online
 
@@ -80,7 +82,7 @@ The valid values are: $True and $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -97,7 +99,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

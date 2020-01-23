@@ -1,5 +1,7 @@
 ---
 external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatamanagedproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40

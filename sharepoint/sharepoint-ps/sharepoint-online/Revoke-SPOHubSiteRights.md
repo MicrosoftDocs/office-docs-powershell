@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spohubsiterights
 applicable: SharePoint Online
 title: Revoke-SPOHubSiteRights
 schema: 2.0.0
@@ -63,7 +65,7 @@ One or more principles to revoke the permissions for.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenanttaxonomyreplicationparameters
 applicable: SharePoint Online
 title: Set-SPOTenantTaxonomyReplicationParameters
 schema: 2.0.0
@@ -30,7 +32,7 @@ Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups <String[]> [<Common
 Before using this cmdlet, make sure you connect to Sharepoint Online using [Connect-SPOService](Connect-SPOService.md) and the desirable satellite location URL as the -Url parameter.
 
 By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
-satellite. 
+satellite.
 
 
 ## EXAMPLES
@@ -39,7 +41,7 @@ satellite.
 ```powershell
 Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups "group1","group2"
 ```
-Tenant admin can use this cmdlet to select some groups only for replicating to overwrite default settings. 
+Tenant admin can use this cmdlet to select some groups only for replicating to overwrite default settings.
 
 ### EXAMPLE 2
 ```powershell
@@ -58,7 +60,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ReplicateAllGroups
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -75,7 +77,7 @@ PARAMVALUE: String[]
 ```yaml
 Type: String[]
 Parameter Sets: ReplicateSelectedGroups
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

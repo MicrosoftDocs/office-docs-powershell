@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotheme
 applicable: SharePoint Online
 title: Get-SPOTheme
 schema: 2.0.0
@@ -71,7 +73,7 @@ To return all uploaded themes, use the **Get-SPOTheme** command with no argument
 Get-SPOTheme
 ```
 
-<!--(Commenting out this image because I don't see a way to have images in this location) 
+<!--(Commenting out this image because I don't see a way to have images in this location)
 
 This is an example of the output from this command.
 

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsettingmetadata
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPODataConnectionSettingMetadata
 schema: 2.0.0

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spouser
 applicable: SharePoint Online
 title: Add-SPOUser
 schema: 2.0.0
@@ -47,7 +49,7 @@ Specifies the name of the SharePoint group to add the user or the security group
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -63,7 +65,7 @@ Specifies the login name of the user to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -79,7 +81,7 @@ Specifies the URL of the site collection to which you want to add the user.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

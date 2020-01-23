@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpusertogroup
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPUserToGroup
 
 ## SYNOPSIS
 Adds a user to a group
 
-## SYNTAX 
+## SYNTAX
 
 ### Internal
 ```powershell

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoexternaluser
 applicable: SharePoint Online
 title: Get-SPOExternalUser
 schema: 2.0.0
@@ -59,7 +61,7 @@ Limits the results to only those users whose first name, last name, or email add
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -78,7 +80,7 @@ The value must be less than or equal to 50.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -95,7 +97,7 @@ Use to specify the zero-based index of the position in the sorted collection of 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -114,7 +116,7 @@ If no site is specified, the external users for all sites are returned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -131,7 +133,7 @@ Specifies the sort results in Ascending or Descending order on the SPOUser.Email
 ```yaml
 Type: SortOrder
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -148,7 +150,7 @@ Shows users who have accepted an invite but not using the account the invite was
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

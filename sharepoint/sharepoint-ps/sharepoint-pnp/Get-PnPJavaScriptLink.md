@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpjavascriptlink
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPJavaScriptLink
 
 ## SYNOPSIS
 Returns all or a specific custom action(s) with location type ScriptLink
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPJavaScriptLink [-Name <String>]

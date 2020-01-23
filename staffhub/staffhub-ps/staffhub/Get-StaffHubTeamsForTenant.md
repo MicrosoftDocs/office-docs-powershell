@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubteamsfortenant
 applicable: Microsoft StaffHub
 title: Get-StaffHubTeamsForTenant
-online version: 
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -25,13 +25,13 @@ Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>] [[-M
 
 ## DESCRIPTION
 Get all the teams in the tenant of the logged in user.
-ContinuationToken from the call is stored in $nextToken Variable. 
+ContinuationToken from the call is stored in $nextToken Variable.
 So the next call can be made like Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-StaffHubTeamsForTenant -Top 10
 ```
 
@@ -40,15 +40,15 @@ If 'Top' parameter is not specified, then it defaults it to 1000.
 This returns a continuation token stored in $nextToken variable which can be used by the following call.
 Eg: Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-StaffHubTeamsForTenant
 ```
 
 Get all teams in the tenant with page size restricted to 1000 by default.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-StaffHubTeamsForTenant -ManagedBy Teams
 ```
 
@@ -62,7 +62,7 @@ Continuation Token returned by the previous call.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 1
@@ -77,7 +77,7 @@ Top 'n' items to be fetched sorted by ascending creation time order.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 2
@@ -94,7 +94,7 @@ Get Teams of a specific type. Valid values are:
 ```yaml
 Type: StaffHub | Teams
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 3

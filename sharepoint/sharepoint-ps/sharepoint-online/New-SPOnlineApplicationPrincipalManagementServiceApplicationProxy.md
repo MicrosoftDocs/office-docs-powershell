@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-sponlineapplicationprincipalmanagementserviceapplicationproxy
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 schema: 2.0.0
@@ -44,7 +46,7 @@ After the creation of the new Principal Management Service Application proxy ass
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -76,7 +78,7 @@ Search Proxies on the default Proxy Group
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -92,7 +94,7 @@ SPO Management AppProxy Name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
@@ -108,7 +110,7 @@ Define the online Tenant URI.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True

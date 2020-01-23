@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplabel
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPLabel
 
 ## SYNOPSIS
 Sets a label/tag on the specified list or library
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPLabel -List <ListPipeBind>
@@ -27,7 +29,7 @@ Set-PnPLabel -List <ListPipeBind>
 Set-PnPLabel  -List "Demo List" -Label "Project Documentation"
 ```
 
-This sets an O365 label on the specified list or library. 
+This sets an O365 label on the specified list or library.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
@@ -41,7 +43,7 @@ This sets an O365 label on the specified list or library and sets the label to a
 Set-PnPLabel  -List "Demo List" -Label "Project Documentation" -BlockDelete $true -BlockEdit $true
 ```
 
-This sets an O365 label on the specified list or library. Next, it also blocks the ability to either edit or delete the item. 
+This sets an O365 label on the specified list or library. Next, it also blocks the ability to either edit or delete the item.
 
 ## PARAMETERS
 

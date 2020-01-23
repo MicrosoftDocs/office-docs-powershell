@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationpackage
 applicable: SharePoint Online
 title: New-SPOMigrationPackage
 schema: 2.0.0
@@ -38,7 +40,7 @@ Cmdlet to create a new migration package based on source files in a local or net
 
 
 >[!NOTE]
->Limits on HTTP Get 
+>Limits on HTTP Get
 >
 >| Limit | API Get (chars)  | Description |
 >| :---:         |     :---:      |          :---: |
@@ -77,7 +79,7 @@ Switch to ignore hidden files and folders.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -88,13 +90,13 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeFileSharePermissions
-Used to include permissions and sharing information into the generated manifest files in the package metadata. 
+Used to include permissions and sharing information into the generated manifest files in the package metadata.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -111,7 +113,7 @@ Switch to not lookup local user accounts in Azure Active Directory.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -128,7 +130,7 @@ Used to not create a log file. The default is to create a new CreateMigrationPac
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -139,13 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPackagePath
-The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created. 
+The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -162,7 +164,7 @@ Switch to replace characters in file and folder names that would be invalid in S
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -173,13 +175,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-The directory location where the source content files exist. This directory will be enumerated to create the package metadata files. 
+The directory location where the source content files exist. This directory will be enumerated to create the package metadata files.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -196,7 +198,7 @@ The web relative document library to use as the document library part of the bas
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -213,7 +215,7 @@ Specifies the document library relative subfolder to use as the folder path part
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -230,7 +232,7 @@ The fully qualified web URL to use as the web address part of the base URL in th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

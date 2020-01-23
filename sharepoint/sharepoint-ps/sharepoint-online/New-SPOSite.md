@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-sposite
 applicable: SharePoint Online
 title: New-SPOSite
 schema: 2.0.0
@@ -61,14 +63,14 @@ Example 3 creates a new site collection for the current company with specified s
 ### -CompatibilityLevel
 Specifies the version of templates to use when you are creating a new site collection. This value sets the initial CompatibilityLevel value for the site collection. The values for this parameter can be SharePoint Server. When this parameter is not specified, the CompatibilityLevel will be by default the highest possible version for the Web application.
 
-> [!NOTE] 
+> [!NOTE]
 > For SharePoint Online Preview, it can only be set to "14" or "15". "14" indicates SharePoint 2010 Products, "15" indicates SharePoint 2013. Other values are not valid and will cause error.
 
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -85,7 +87,7 @@ Specifies the language of this site collection. For more information, see Locale
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -102,7 +104,7 @@ Specifies to continue executing script immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -119,7 +121,7 @@ Specifies the user name of the site collection’s primary owner. The owner must
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -136,7 +138,7 @@ Specifies the quota for this site collection in Sandboxed Solutions units. This 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -153,7 +155,7 @@ Specifies the storage quota for this site collection in megabytes. This value mu
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -170,7 +172,7 @@ Specifies the site collection template type. Use the `Get-SPOWebTemplate` cmdlet
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -187,7 +189,7 @@ Specifies the time zone of the site collection. For more information, see SPRegi
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -204,7 +206,7 @@ Specifies the title of the site collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -221,7 +223,7 @@ Specifies the full URL of the new site collection. It must be in a valid managed
 ```yaml
 Type: UrlCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

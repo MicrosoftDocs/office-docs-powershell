@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spogeostoragequota
 applicable: SharePoint Online
 title: Set-SPOGeoStorageQuota
 schema: 2.0.0
@@ -28,14 +30,14 @@ This Cmdlet sets the storage quota, in megabytes, on a particular geo-location. 
 
 ### EXAMPLE 1
 ```powershell
-Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512 
+Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512
 ```
 
 Sets the SharePoint Online Storage Quota on the EAST US location to 512 MB.
 
 ### EXAMPLE 2
 ```powershell
-Set-SPOGeoStorageQuota -GeoLocation NORTHCENTRALUS -StorageQuotaMB 1024 
+Set-SPOGeoStorageQuota -GeoLocation NORTHCENTRALUS -StorageQuotaMB 1024
 ```
 
 Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to 1 TeraBytes (1Tb).
@@ -50,7 +52,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -67,7 +69,7 @@ PARAMVALUE: Int64
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

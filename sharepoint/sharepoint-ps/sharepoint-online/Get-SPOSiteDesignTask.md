@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedesigntask
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -25,7 +27,7 @@ Get-SPOSiteDesignTask
 
 ## DESCRIPTION
 
-Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL fo the SPWeb where the site design is scheduled to be applied. 
+Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL fo the SPWeb where the site design is scheduled to be applied.
 
 
 > [!NOTE]
@@ -50,13 +52,13 @@ The ID of the scheduled site design to apply.
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -WebUrl
@@ -65,13 +67,13 @@ The URL of the site collection where the site design will be applied.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 ## RELATED LINKS
 

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositecontentmovestate
 applicable: SharePoint Online
 title: Get-SPOSiteContentMoveState
 schema: 2.0.0
@@ -56,7 +58,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: GroupName
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -73,7 +75,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: SourceSiteUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

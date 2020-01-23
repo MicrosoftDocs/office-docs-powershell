@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spodataconnectionsetting
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPODataConnectionSetting
 schema: 2.0.0
@@ -81,7 +83,7 @@ Specifies the OData Connection Settings object.
 ```yaml
 Type: ODataConnectionSettings
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
@@ -97,7 +99,7 @@ Specifies the service context which is in the form of an instance of an SPServic
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
@@ -113,7 +115,7 @@ Specifies the name of the existing Business Connectivity Services connection.
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
@@ -135,7 +137,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -161,7 +163,7 @@ The value for the authentication mode is any one of the following options:
 ```yaml
 Type: ODataAuthenticationMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -195,7 +197,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -219,7 +221,7 @@ The value for the SecureStoreTargetApplicationId parameter is any one of the fol
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
@@ -237,7 +239,7 @@ This is the final destination from which data is retrieved.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False

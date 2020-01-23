@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spopubliccdnorigin
 applicable: SharePoint Online
 title: Remove-SPOPublicCdnOrigin
 schema: 2.0.0
@@ -66,7 +68,7 @@ It's the unique identifier of the Public CDN path, it can be queried using the C
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

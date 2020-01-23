@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/restore-spodeletedsite
 applicable: SharePoint Online
 title: Restore-SPODeletedSite
 schema: 2.0.0
@@ -44,7 +46,7 @@ Specifies the URL of the site collection to restore.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -61,7 +63,7 @@ Specifies to continue executing script immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequenceteamnogroupsubsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPTenantSequenceTeamNoGroupSubSite
 
 ## SYNOPSIS
 Creates a team site subsite with no Office 365 group object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPTenantSequenceTeamNoGroupSubSite -Url <String>

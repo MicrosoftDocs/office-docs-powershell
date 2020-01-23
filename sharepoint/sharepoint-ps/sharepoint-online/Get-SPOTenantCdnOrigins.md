@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnorigins
 applicable: SharePoint Online
 title: Get-SPOTenantCdnOrigins
 schema: 2.0.0
@@ -28,7 +30,7 @@ Lists all the configured origins under the tenancy or under a given site.
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOTenantCdnOrigins -CdnType Public 
+Get-SPOTenantCdnOrigins -CdnType Public
 ```
 
 The example returns a list of origins from the Tenant.
@@ -43,7 +45,7 @@ Specifies the CDN type. The valid values are: Public or Private.
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private
 Applicable: SharePoint Online
 

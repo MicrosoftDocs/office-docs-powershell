@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spotheme
 applicable: SharePoint Online
 title: Add-SPOTheme
 schema: 2.0.0
@@ -92,13 +94,13 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -IsInverted
 
 ```yaml
-Type: Boolean 
+Type: Boolean
 Parameter Sets: (All)
 Aliases: None
 Applicable: SharePoint Online
@@ -106,10 +108,10 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
-### -Overwrite 
+### -Overwrite
 
 ```yaml
 Type: SwitchParameter
@@ -120,7 +122,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -Palette
@@ -134,7 +136,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ## INPUTS

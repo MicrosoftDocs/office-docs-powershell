@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnpolicies
 applicable: SharePoint Online
 title: Get-SPOTenantCdnPolicies
 schema: 2.0.0
@@ -24,14 +26,14 @@ This cmdlet gets the public or private policies applied to a SharePoint Online o
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
 Get-SPOTenantCdnPolicies -CdnType Public
 ```
 
 This example returns public CDN policies of your tenant.
 
-### Example 2 
+### Example 2
 ```powershell
 Get-SPOTenantCdnPolicies -CdnType Private
 ```
@@ -46,7 +48,7 @@ Type of CDN on the current SPO Tenant (Public,Private)
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private
 Applicable: SharePoint Online
 
