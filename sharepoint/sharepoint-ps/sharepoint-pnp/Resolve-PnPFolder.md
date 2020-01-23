@@ -4,6 +4,7 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/reso
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Resolve-PnPFolder
 
 ## SYNOPSIS
@@ -11,7 +12,6 @@ Returns a folder from a given site relative path, and will create it if it does 
 
 ## SYNTAX
 
-###
 ```powershell
 Resolve-PnPFolder -SiteRelativePath <String>
                   [-Includes <String[]>]

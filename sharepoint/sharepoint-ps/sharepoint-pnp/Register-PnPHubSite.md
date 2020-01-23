@@ -4,6 +4,7 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/regi
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Register-PnPHubSite
 
 ## SYNOPSIS
