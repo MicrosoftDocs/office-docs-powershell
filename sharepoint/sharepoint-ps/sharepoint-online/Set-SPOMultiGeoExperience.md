@@ -24,17 +24,17 @@ ms.reviewer:
 
 ## DESCRIPTION
 
-.
+Use this cmdlet to set a get location into SPO mode. This upgrade action is not reversible. For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
- Set-SPOMultiGeoExperience -AllInstances
+Set-SPOMultiGeoExperience
 ```
 
-.
+This example will upgrade your instance's multi-geo experience to include SharePoint Online Multi-Geo. This operation usually takes about an hour while we perform various publish backs in the service and re-stamp your tenant.
 
 ## PARAMETERS
 

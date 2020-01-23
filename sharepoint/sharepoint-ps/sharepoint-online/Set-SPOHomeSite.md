@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets the SharePoint Online Home Site.
+Sets a SharePoint Site as a Home Site.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-SPOHomeSite [-HomeSiteUrl] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to set the SharePoint Online Home Site.
+Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a communication site that you create and set as the top landing page for all users in your intranet. For more information, see [Set up a home site for your organization](https://docs.microsoft.com/SharePoint/home-site)
 
 ## EXAMPLES
 
