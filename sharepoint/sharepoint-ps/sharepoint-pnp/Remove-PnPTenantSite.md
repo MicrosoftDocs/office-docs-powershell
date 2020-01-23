@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a site collection
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPTenantSite -Url <String>

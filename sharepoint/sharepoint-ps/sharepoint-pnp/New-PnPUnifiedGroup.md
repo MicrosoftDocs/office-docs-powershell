@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Office 365 Group (aka Unified Group)
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPUnifiedGroup -DisplayName <String>

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set site information.
 
-## SYNTAX 
+## SYNTAX
 
 ### Set Properties
 ```powershell

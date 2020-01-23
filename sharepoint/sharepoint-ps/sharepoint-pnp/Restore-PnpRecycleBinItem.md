@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores the provided recycle bin item to its original location
 
-## SYNTAX 
+## SYNTAX
 
 ### Identity
 ```powershell
@@ -43,7 +44,7 @@ Restores all the items in the first and second stage recycle bins to their origi
 ## PARAMETERS
 
 ### -All
-If provided all items will be stored 
+If provided all items will be stored
 
 ```yaml
 Type: SwitchParameter

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/clear-pnplistitemasrecord
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Undeclares a list item as a record
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Clear-PnPListItemAsRecord -List <ListPipeBind>

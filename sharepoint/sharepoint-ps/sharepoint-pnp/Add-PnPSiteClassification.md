@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds one ore more site classification values to the list of possible values. Requires a connection to the Microsoft Graph.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPSiteClassification -Classifications <String>

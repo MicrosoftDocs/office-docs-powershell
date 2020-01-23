@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnppersonalsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Office365 only: Creates a personal / OneDrive For Business site
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPPersonalSite -Email <String[]>

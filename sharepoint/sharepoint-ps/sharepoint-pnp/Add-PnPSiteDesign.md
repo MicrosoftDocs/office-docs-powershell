@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Site Design on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPSiteDesign -Title <String>

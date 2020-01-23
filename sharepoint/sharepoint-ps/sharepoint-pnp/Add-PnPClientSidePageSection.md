@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpclientsidepagesection
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new section to a Client-Side page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPClientSidePageSection -Page <ClientSidePagePipeBind>

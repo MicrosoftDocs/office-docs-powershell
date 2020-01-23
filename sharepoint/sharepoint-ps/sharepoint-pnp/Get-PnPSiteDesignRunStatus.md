@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesignrunstatus
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSiteDesignRunStatus -Run <TenantSiteDesignRun>
@@ -23,7 +24,7 @@ $myrun = Get-PnPSiteDesignRun -WebUrl "https://contoso.sharepoint.com/sites/proj
 Get-PnPSiteDesignRunStatus -Run $myrun
 ```
 
-This example gets the run for a specific site design applied to a site and sets it to a variable. This variable is then passed into the command -Run parameter. The result is a display of all the site script actions applied for that site design run, including the script action title and outcome. 
+This example gets the run for a specific site design applied to a site and sets it to a variable. This variable is then passed into the command -Run parameter. The result is a display of all the site script actions applied for that site design run, including the script action title and outcome.
 
 ## PARAMETERS
 

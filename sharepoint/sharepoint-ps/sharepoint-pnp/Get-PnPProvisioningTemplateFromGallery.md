@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplatefromgallery
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves or searches provisioning templates from the PnP Template Gallery
 
-## SYNTAX 
+## SYNTAX
 
 ### Identity
 ```powershell

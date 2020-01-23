@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/test-pnplistitemisrecord
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks if a list item is a record
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Test-PnPListItemIsRecord -List <ListPipeBind>

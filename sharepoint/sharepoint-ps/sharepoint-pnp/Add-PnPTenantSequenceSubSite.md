@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantsequencesubsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a tenant sequence sub site object to a tenant sequence site object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPTenantSequenceSubSite -SubSite <TeamNoGroupSubSite>

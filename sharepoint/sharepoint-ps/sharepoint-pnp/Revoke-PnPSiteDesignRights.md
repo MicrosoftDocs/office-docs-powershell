@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/revoke-pnpsitedesignrights
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Revokes the specified principals rights to use the site design.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Revoke-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/connect-pnponline
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Connect to a SharePoint site
 
-## SYNTAX 
+## SYNTAX
 
 ### Main
 ```powershell
@@ -276,7 +277,7 @@ This will prompt for username and password and creates a context for the other P
 Connect-PnPOnline -Url https://contoso.sharepoint.com -Credentials (Get-Credential)
 ```
 
-This will prompt for username and password and creates a context for the other PowerShell commands to use. 
+This will prompt for username and password and creates a context for the other PowerShell commands to use.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell

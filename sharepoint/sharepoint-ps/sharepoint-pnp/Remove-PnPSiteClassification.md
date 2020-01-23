@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes one or more existing site classification values from the list of available values. Requires a connection to the Microsoft Graph
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPSiteClassification -Classifications <String>

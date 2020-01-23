@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsearchcrawllog
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns entries from the SharePoint search crawl log
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSearchCrawlLog [-LogLevel <LogLevel>]
@@ -39,7 +40,7 @@ Returns the last 100 crawl log entries for OneDrive content.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPSearchCrawlLog -ContentSource UserProfiles 
+Get-PnPSearchCrawlLog -ContentSource UserProfiles
 ```
 
 Returns the last 100 crawl log entries for user profiles.

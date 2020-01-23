@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpclientsidewebpart
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Client-Side Web Part properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPClientSideWebPart -Page <ClientSidePagePipeBind>

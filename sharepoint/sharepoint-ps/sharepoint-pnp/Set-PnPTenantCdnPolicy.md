@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the CDN Policies for the specified CDN (Public | Private).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPTenantCdnPolicy -CdnType <SPOTenantCdnType>

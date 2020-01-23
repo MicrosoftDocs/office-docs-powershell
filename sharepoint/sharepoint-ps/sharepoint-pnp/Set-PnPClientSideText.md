@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpclientsidetext
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Client-Side Text Component properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPClientSideText -Page <ClientSidePagePipeBind>

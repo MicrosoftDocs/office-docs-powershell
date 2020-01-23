@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/import-pnptermset
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Imports a taxonomy term set from a file in the standard format.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Import-PnPTermSet -GroupName <String>
@@ -29,7 +30,7 @@ This is a CSV file, with the following headings:
 
   Term Set Name,Term Set Description,LCID,Available for Tagging,Term Description,Level 1 Term,Level 2 Term,Level 3 Term,Level 4 Term,Level 5 Term,Level 6 Term,Level 7 Term
 
-The first data row must contain the Term Set Name, Term Set Description, and LCID, and should also contain the first term. 
+The first data row must contain the Term Set Name, Term Set Description, and LCID, and should also contain the first term.
 
 It is recommended that a fixed GUID be used as the termSetId, to allow the term set to be easily updated (so do not pass Guid.Empty).
 
@@ -48,7 +49,7 @@ Creates (or updates) the term set specified in the import file, in the group spe
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
+Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}'
 ```
 
 Creates (or updates) the term set specified in the import file, in the term store and group specified, using the specified ID.

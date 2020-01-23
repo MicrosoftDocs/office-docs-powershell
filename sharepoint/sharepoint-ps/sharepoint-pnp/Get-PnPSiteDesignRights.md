@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesignrights
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the principals with design rights on a specific Site Design
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/clear-pnpdefaultcolumnvalues
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Clear default column values for a document library
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Clear-PnPDefaultColumnValues -List <ListPipeBind>

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/unregister-pnphubsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Unregisters a site as a hubsite
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Unregister-PnPHubSite -Site <SitePipeBind>

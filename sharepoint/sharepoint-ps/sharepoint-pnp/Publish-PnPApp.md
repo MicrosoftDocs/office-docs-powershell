@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/publish-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Publishes/Deploys/Trusts an available app in the app catalog
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Publish-PnPApp -Identity <AppMetadataPipeBind>

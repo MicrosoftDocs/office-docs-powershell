@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/disable-pnptenantserviceprincipal
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables the current tenant's "SharePoint Online Client" service principal.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Disable-PnPTenantServicePrincipal [-Force [<SwitchParameter>]]

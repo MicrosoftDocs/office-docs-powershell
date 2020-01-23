@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnproledefinition
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Role Defintion (Permission Level) to the site collection in the current context
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPRoleDefinition -RoleName <String>

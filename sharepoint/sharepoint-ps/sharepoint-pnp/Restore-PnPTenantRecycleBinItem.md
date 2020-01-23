@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnptenantrecyclebinitem
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores a site collection from the tenant scoped recycle bin
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Restore-PnPTenantRecycleBinItem -Url <String>

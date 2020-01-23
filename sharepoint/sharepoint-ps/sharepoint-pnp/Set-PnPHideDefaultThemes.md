@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnphidedefaultthemes
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Defines if the default / OOTB themes should be visible to users or not.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPHideDefaultThemes -HideDefaultThemes <Boolean>

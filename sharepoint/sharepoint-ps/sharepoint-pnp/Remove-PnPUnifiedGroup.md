@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes one Office 365 Group (aka Unified Group)
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>

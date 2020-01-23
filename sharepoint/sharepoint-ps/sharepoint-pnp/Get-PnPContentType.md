@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpcontenttype
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves a content type
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPContentType [-Identity <ContentTypePipeBind>]
@@ -22,7 +23,7 @@ Get-PnPContentType [-Identity <ContentTypePipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPContentType 
+Get-PnPContentType
 ```
 
 This will get a listing of all available content types within the current web

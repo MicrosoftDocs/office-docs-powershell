@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpavailableclientsidecomponents
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the available client side components on a particular page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPAvailableClientSideComponents -Page <ClientSidePagePipeBind>

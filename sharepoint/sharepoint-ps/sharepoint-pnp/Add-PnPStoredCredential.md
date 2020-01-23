@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpstoredcredential
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a credential to the Windows Credential Manager
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPStoredCredential -Name <String>
@@ -60,7 +61,7 @@ Accept pipeline input: False
 ```
 
 ### -Password
-If not specified you will be prompted to enter your password. 
+If not specified you will be prompted to enter your password.
 If you want to specify this value use ConvertTo-SecureString -String 'YourPassword' -AsPlainText -Force
 
 ```yaml

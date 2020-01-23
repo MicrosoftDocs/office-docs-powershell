@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpdefaultcolumnvalues
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the default column values for all folders in document library
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPDefaultColumnValues -List <ListPipeBind>

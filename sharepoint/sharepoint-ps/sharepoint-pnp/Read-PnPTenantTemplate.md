@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/read-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Read-PnPTenantTemplate -Path <String>

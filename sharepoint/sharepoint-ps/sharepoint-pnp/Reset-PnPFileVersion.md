@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/reset-pnpfileversion
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Resets a file to its previous version
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Reset-PnPFileVersion -ServerRelativeUrl <String>

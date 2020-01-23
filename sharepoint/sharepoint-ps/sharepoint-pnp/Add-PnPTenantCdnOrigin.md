@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new origin to the public or private content delivery network (CDN).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPTenantCdnOrigin -OriginUrl <String>

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpuserprofileproperty
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,10 +9,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Office365 only: Uses the tenant API to retrieve site information.
 
-You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command. 
+You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
 
 
-## SYNTAX 
+## SYNTAX
 
 ### Single
 ```powershell

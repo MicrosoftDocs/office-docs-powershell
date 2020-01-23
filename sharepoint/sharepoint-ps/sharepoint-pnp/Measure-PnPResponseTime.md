@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/measure-pnpresponsetime
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets statistics on response time for the specified endpoint by sending probe requests
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Measure-PnPResponseTime [-Url <DiagnosticEndpointPipeBind>]

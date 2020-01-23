@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpwebhooksubscription
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a Webhook subscription
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPWebhookSubscription -Subscription <WebhookSubscriptionPipeBind>

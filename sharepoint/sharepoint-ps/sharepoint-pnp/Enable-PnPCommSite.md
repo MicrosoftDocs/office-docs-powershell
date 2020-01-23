@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpcommsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enable communication site on the root site of a tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Enable-PnPCommSite [-SiteUrl <String>]

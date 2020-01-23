@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphealthscore
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 schema: 2.0.0
 ---

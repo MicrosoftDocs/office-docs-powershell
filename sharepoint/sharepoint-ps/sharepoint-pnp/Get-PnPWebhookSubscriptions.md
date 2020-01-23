@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpwebhooksubscriptions
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets all the Webhook subscriptions of the resource
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPWebhookSubscriptions [-List <ListPipeBind>]

@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplabel
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the label/tag of the specified list or library (if applicable)
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPLabel -List <ListPipeBind>

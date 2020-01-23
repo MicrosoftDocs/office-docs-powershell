@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the available apps from the app catalog
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPApp [-Identity <AppMetadataPipeBind>]

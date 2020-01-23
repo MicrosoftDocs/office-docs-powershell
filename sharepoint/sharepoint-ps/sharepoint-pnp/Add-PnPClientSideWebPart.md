@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpclientsidewebpart
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Client-Side Web Part to a client-side page
 
-## SYNTAX 
+## SYNTAX
 
 ### Default with built-in web part
 ```powershell

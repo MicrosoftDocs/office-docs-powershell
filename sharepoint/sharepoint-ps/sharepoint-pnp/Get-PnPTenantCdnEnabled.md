@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnenabled
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves if the Office 365 Content Delivery Network has been enabled.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantCdnEnabled -CdnType <SPOTenantCdnType>

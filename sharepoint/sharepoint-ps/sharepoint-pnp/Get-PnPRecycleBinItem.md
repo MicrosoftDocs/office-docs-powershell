@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the items in the recycle bin from the context
 
-## SYNTAX 
+## SYNTAX
 
 ### Identity
 ```powershell
@@ -28,7 +29,7 @@ Get-PnPRecycleBinItem [-SecondStage [<SwitchParameter>]]
                       [-Connection <SPOnlineConnection>]
 ```
 
-### 
+###
 ```powershell
 Get-PnPRecycleBinItem [-Includes <String[]>]
                       [-Connection <SPOnlineConnection>]

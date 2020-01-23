@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/export-pnptermgrouptoxml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Exports a taxonomy TermGroup to either the output or to an XML file.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Export-PnPTermGroupToXml [-Identity <Id, Title or TermGroup>]

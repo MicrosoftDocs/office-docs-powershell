@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitedesigntask
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Site Design Task. If the execution of the associated site script has already started the execution will not be terminated.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPSiteDesignTask -Identity <TenantSiteDesignTaskPipeBind>

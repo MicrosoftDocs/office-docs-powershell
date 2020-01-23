@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Client-Side Page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPClientSidePage -Identity <ClientSidePagePipeBind>

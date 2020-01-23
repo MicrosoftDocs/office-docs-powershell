@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantsequence
 applicable: SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a tenant sequence object to a tenant template
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPTenantSequence -Template <ProvisioningHierarchy>

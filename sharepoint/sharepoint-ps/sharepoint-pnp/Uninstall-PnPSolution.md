@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/uninstall-pnpsolution
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Uninstalls a sandboxed solution from a site collection
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Uninstall-PnPSolution -PackageId <GuidPipeBind>

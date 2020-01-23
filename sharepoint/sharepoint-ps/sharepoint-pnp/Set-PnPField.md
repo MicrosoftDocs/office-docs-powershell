@@ -1,5 +1,6 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfield
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
@@ -8,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes one or more properties of a field in a specific list or for the whole web
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPField -Identity <FieldPipeBind>
