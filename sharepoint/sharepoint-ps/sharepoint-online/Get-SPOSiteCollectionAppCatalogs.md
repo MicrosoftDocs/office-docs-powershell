@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositecollectionappcatalogs
 applicable: SharePoint Online
 title: Get-SPOSiteCollectionAppCatalogs
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -32,7 +34,7 @@ Use this cmdlet to get the Site Collection App Catalogs.
  Get-SPOSiteCollectionAppCatalogs -Site https://contoso.sharepoint.com/sites/Research
 ```
 
-This example returns the Site Collection App Catalog for the site https://contoso.sharepoint.com/sites/Research.
+This example returns the Site Collection App Catalog for the site <https://contoso.sharepoint.com/sites/Research.>
 
 ### Example 2
 
@@ -51,7 +53,7 @@ This example returns all Site Collection App Catalogs.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 1

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Get-PnPClientSidePage
 
 ## SYNOPSIS
 Gets a Client-Side Page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPClientSidePage -Identity <ClientSidePagePipeBind>

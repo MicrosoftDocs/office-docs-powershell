@@ -32,6 +32,7 @@ Connect-ExchangeOnline
  [-EnableErrorReporting]
  [[-ExchangeEnvironmentName] <ExchangeEnvironment>]
  [-LogDirectoryPath <String>]
+ [-LogLevel <String>]
  [-PageSize <UInt32>]
  [[-PSSessionOption] <PSSessionOption>]
  [-ShowProgress <Boolean>]
@@ -198,9 +199,25 @@ Accept wildcard characters: False
 ```
 
 ### -LogDirectoryPath
-The LogDirectoryPath parameter specifies the location of telemetry data. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
+The LogDirectoryPath parameter specifies the location of the log files. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
 
 If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LogLevel
+The LogLevel parameter specifies the logging level. Possible values are Default and All.
 
 ```yaml
 Type: String

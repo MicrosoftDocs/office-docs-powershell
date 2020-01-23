@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnproledefinition
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPRoleDefinition
 
 ## SYNOPSIS
 Retrieves a Role Definitions of a site
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPRoleDefinition [-Identity <RoleDefinitionPipeBind>]

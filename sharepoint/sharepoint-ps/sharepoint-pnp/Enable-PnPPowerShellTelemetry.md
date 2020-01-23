@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnppowershelltelemetry
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Enable-PnPPowerShellTelemetry
 
 ## SYNOPSIS
 Enables PnP PowerShell telemetry tracking.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Enable-PnPPowerShellTelemetry [-Force [<SwitchParameter>]]

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfilecheckedin
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPFileCheckedIn
 
 ## SYNOPSIS
 Checks in a file
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPFileCheckedIn -Url <String>

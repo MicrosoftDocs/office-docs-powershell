@@ -1,5 +1,7 @@
 ---
 external help file: microsoft.office.access.server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/reset-spaccessservicesdatabasepassword
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Reset-SPAccessServicesDatabasePassword
 schema: 2.0.0

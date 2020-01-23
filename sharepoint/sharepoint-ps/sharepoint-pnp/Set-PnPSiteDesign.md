@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPSiteDesign
 
 ## SYNOPSIS
 Updates a Site Design on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/dismount-spsitemapdatabase
 applicable: SharePoint Server 2016
 title: Dismount-SPSiteMapDatabase
 schema: 2.0.0

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpgroup
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPGroup
 
 ## SYNOPSIS
 Removes a group from a web.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPGroup [-Identity <GroupPipeBind>]

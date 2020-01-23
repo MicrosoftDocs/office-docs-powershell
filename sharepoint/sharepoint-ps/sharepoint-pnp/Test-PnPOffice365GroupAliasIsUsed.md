@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/test-pnpoffice365groupaliasisused
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Test-PnPOffice365GroupAliasIsUsed
 
 ## SYNOPSIS
 Tests if a given alias is already used used
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Test-PnPOffice365GroupAliasIsUsed -Alias <String>

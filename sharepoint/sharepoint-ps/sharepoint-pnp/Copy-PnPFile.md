@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/copy-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Copy-PnPFile
 
 ## SYNOPSIS
 Copies a file or folder to a different location, currently there is a 200MB file size limit for the file to be copied.
 
-## SYNTAX 
+## SYNTAX
 
 ### SOURCEURL
 ```powershell
@@ -42,7 +44,7 @@ Copies a file named company.docx located in a document library called Documents 
 PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl Documents2/company.docx
 ```
 
-Copies a file named company.docx located in a document library called Documents to a document library called Documents2 in the same site. 
+Copies a file named company.docx located in a document library called Documents to a document library called Documents2 in the same site.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell

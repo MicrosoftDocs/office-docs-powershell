@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spdatabase
 applicable: SharePoint Server 2016
 title: Migrate-SPDatabase
 schema: 2.0.0
