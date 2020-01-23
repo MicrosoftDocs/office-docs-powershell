@@ -21,10 +21,7 @@ The supported site templates you can apply a site design to include: â€œmodernâ€
 ## SYNTAX
 
 ```powershell
-Add-SPOSiteDesignTask
-  -SiteDesignId <guid>
-  -WebUrl <string>
-  [<CommonParameters>]
+Add-SPOSiteDesignTask -SiteDesignId <guid> -WebUrl <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
@@ -78,6 +76,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

@@ -23,6 +23,7 @@ Remove-SPOSiteCollectionAppCatalogById -SiteId <guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use this cmdlet to remove the site collection app catalog by the id of the site collection.
 
 ## EXAMPLES

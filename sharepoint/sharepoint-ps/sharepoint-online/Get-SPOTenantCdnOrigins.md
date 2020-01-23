@@ -13,34 +13,34 @@ ms.reviewer:
 # Get-SPOTenantCdnOrigins
 
 ## SYNOPSIS
-Lists all the configured origins under the tenancy or under a given site. Requires Tenant administrator permissions.
 
+Lists all the configured origins under the tenancy or under a given site. Requires Tenant administrator permissions.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOTenantCdnOrigins -CdnType <SPOTenantCdnType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Lists all the configured origins under the tenancy or under a given site.
 
+Lists all the configured origins under the tenancy or under a given site.
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 Get-SPOTenantCdnOrigins -CdnType Public
 ```
 
 The example returns a list of origins from the Tenant.
 
-
 ## PARAMETERS
 
 ### -CdnType
-Specifies the CDN type. The valid values are: Public or Private.
 
+Specifies the CDN type. The valid values are: Public or Private.
 
 ```yaml
 Type: SPOTenantCdnType
@@ -57,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

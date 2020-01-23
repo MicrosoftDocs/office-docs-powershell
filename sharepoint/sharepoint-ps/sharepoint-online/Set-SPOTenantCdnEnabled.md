@@ -13,35 +13,35 @@ ms.reviewer:
 # Set-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. Requires Tenant administrator permissions.
 
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. Requires Tenant administrator permissions.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOTenantCdnEnabled [-CdnType <SPOTenantCdnTypeClient>] [-Confirm] [-Enable <Boolean>] [-NoDefaultOrigins]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level.
 
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level.
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 Set-SPOTenantCdnEnabled -CdnType public -Enable $true
 ```
 
 The example enables a CDN.
 
-
 ## PARAMETERS
 
 ### -CdnType
-Specifies the CDN type. The valid values are: public or private.
 
+Specifies the CDN type. The valid values are: public or private.
 
 ```yaml
 Type: SPOTenantCdnTypeClient
@@ -49,7 +49,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private, Both
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -58,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -65,7 +65,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -74,17 +73,16 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
 Specifies if the CDN is enabled.
 
 The valid values are: $True and $False.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -93,15 +91,14 @@ Accept wildcard characters: False
 ```
 
 ### -NoDefaultOrigins
-PARAMVALUE: SwitchParameter
 
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -118,7 +116,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

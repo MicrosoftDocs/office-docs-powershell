@@ -13,23 +13,25 @@ ms.reviewer:
 # Get-SPODeletedSite
 
 ## SYNOPSIS
+
 Returns all deleted site collections from the Recycle Bin.
 
 ## SYNTAX
 
 ### ParameterSetPersonalSitesOnly
-```
-Get-SPODeletedSite [[-Identity] <SpoSitePipeBind>] [-IncludeOnlyPersonalSite] [-Limit <String>]
- [<CommonParameters>]
+
+```powershell
+Get-SPODeletedSite [[-Identity] <SpoSitePipeBind>] [-IncludeOnlyPersonalSite] [-Limit <String>] [<CommonParameters>]
 ```
 
 ### ParameterSetAllSites
-```
-Get-SPODeletedSite [[-Identity] <SpoSitePipeBind>] [-IncludePersonalSite] [-Limit <String>]
- [<CommonParameters>]
+
+```powershell
+Get-SPODeletedSite [[-Identity] <SpoSitePipeBind>] [-IncludePersonalSite] [-Limit <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Get-SPODeletedSite` cmdlet returns all deleted site collections that match the given criteria from the Recycle Bin.
 
 By default the cmdlet only returns site and site collections that are not Personal Sites (My Sites).
@@ -44,21 +46,22 @@ To restore the site or site collections, forward the results to the `Restore-SPO
 
 You must be a SharePoint Online global administrator and a site collection administrator for the deleted site collections to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
-```
+### ------------ Example 1 --------------------
+
+```powershell
 Get-SPODeletedSite -IncludePersonalSite
 ```
-The command in this example returns all deleted site collections from the Recycle Bin including Personal Sites.
 
+The command in this example returns all deleted site collections from the Recycle Bin including Personal Sites.
 
 ## PARAMETERS
 
 ### -IncludeOnlyPersonalSite
+
 Use this switch parameter to only include Personal Sites in the returned results.
 
 ```yaml
@@ -75,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
 Specifies the URL of the deleted site collection to be returned.
 
 ```yaml
@@ -91,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePersonalSite
+
 Use this switch parameter to include Personal Sites with the returned results.
 
 ```yaml
@@ -107,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
+
 Specifies the maximum number of site collections to return.
 It can be any number.
 To retrieve all site collections, use ALL.
@@ -126,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

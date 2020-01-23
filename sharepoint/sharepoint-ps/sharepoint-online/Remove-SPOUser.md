@@ -13,12 +13,12 @@ ms.reviewer:
 # Remove-SPOUser
 
 ## SYNOPSIS
-Removes a user or a security group from a site collection or a group.
 
+Removes a user or a security group from a site collection or a group.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOUser [-Group <String>] -LoginName <String> -Site <SpoSitePipeBind> [<CommonParameters>]
 ```
 
@@ -26,23 +26,23 @@ Remove-SPOUser [-Group <String>] -LoginName <String> -Site <SpoSitePipeBind> [<C
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the `Remove-SPOUser` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
+
+```powershell
 Remove-SPOUser -Site https://contoso.sharepoint.com/sites/sc1 -LoginName joe.healy@contoso.com -Group "SC1 Owners"
 ```
-This example removes a user who has the email address joe.healy@contoso.com from the group SC1 Owners in the site collection https://contoso.sharepoint.com/sites/sc1.
 
+This example removes a user who has the email address joe.healy@contoso.com from the group SC1 Owners in the site collection <https://contoso.sharepoint.com/sites/sc1.>
 
 ## PARAMETERS
 
 ### -Group
-Specifies the group to remove the user from. If not specified, the cmdlet removes the user from all groups.
 
+Specifies the group to remove the user from. If not specified, the cmdlet removes the user from all groups.
 
 ```yaml
 Type: String
@@ -58,8 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-Specifies the user name.
 
+Specifies the user name.
 
 ```yaml
 Type: String
@@ -75,8 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the site collection to remove the user from.
 
+Specifies the site collection to remove the user from.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -92,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

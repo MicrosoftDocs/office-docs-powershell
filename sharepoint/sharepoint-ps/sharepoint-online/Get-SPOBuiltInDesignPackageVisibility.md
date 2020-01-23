@@ -24,7 +24,7 @@ Get-SPOBuiltInDesignPackageVisibility [-DesignPackage <DesignPackageType>] [<Com
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

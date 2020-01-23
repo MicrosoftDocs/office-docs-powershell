@@ -34,7 +34,7 @@ Use this cmdlet to get the Site Collection App Catalogs.
  Get-SPOSiteCollectionAppCatalogs -Site https://contoso.sharepoint.com/sites/Research
 ```
 
-This example returns the Site Collection App Catalog for the site https://contoso.sharepoint.com/sites/Research.
+This example returns the Site Collection App Catalog for the site <https://contoso.sharepoint.com/sites/Research.>
 
 ### Example 2
 

@@ -34,7 +34,7 @@ Register-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultN
 
 ```
 
-This example...
+.
 
 ## PARAMETERS
 
@@ -150,7 +150,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -WhatIf
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
@@ -168,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.

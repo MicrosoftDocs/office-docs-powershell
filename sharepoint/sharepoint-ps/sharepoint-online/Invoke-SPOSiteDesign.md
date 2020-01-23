@@ -57,6 +57,7 @@ Add to Hub Site                                   Success
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to apply.
 
 ```yaml
@@ -72,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
@@ -85,4 +87,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-

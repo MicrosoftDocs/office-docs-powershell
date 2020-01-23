@@ -13,16 +13,17 @@ ms.reviewer:
 # Revoke-SPOHubSiteRights
 
 ## SYNOPSIS
+
 Revokes rights for specified principals to a hub.
 
 ## SYNTAX
 
-```
-Revoke-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals
-    <string[]>  [<CommonParameters>]
+```powershell
+Revoke-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals <string[]>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Revokes rights for specified principals to the given hub site. The specified principals will no longer be able to associate sites with the hub. To find which principals have access to a hub site, use the [Get-SPOHubSite](Get-SPOHubSite.md) cmdlet.
 
 > [!NOTE]
@@ -32,7 +33,7 @@ Revokes rights for specified principals to the given hub site. The specified pri
 
 ### Example 1
 
-```
+```powershell
 Revoke-SPOHubSiteRights https://contoso.sharepoint.com/sites/Marketing `
 -Principals "nestorw@contoso.onmicrosoft.com"
 ```
@@ -74,3 +75,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

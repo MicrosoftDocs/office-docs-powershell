@@ -13,6 +13,7 @@ ms.reviewer:
 # Start-SPOUserAndContentMove
 
 ## SYNOPSIS
+
 Starts the ability to move a user closer to their sites.
 
 ## SYNTAX
@@ -24,11 +25,13 @@ Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocat
 ```
 
 ## DESCRIPTION
+
 In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and enables the ability to move a user closer to their sites
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
@@ -36,25 +39,25 @@ Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -Destination
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 ### EXAMPLE 2
+
 ```powershell
 Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
-
 
 ### EXAMPLE 3
+
 ```powershell
 Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
-
-
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
+
 Defines the new destination of the user that you want to move.
 
 ```yaml
@@ -71,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notify
+
 Makes a SPO notification that the user is being move
 
 ```yaml
@@ -87,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverwriteOdb
+
 Switch parameter to Overwrite the information into the DB
 
 ```yaml
@@ -103,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveBeginDate
+
 Specifies what is the preferred Date and time to start the job
 
 ```yaml
@@ -119,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveEndDate
+
 Specifies what is the preferred Date and time to stop the job
 
 ```yaml
@@ -135,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
+
 This parameter will only check for reserved users to be moved near to their sites
 
 ```yaml
@@ -151,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
+
 UserPrincipalName or UPN defined for the specific user on the SPO tenant
 
 ```yaml
@@ -167,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationOnly
+
 This parameter will force the cmdlet to execute only validation
 
 ```yaml
@@ -183,9 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
@@ -200,7 +209,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
 [Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
-
-
-
-

@@ -17,19 +17,18 @@ ms.reviewer:
 Connects a SharePoint Online global administrator to a SharePoint Online connection (the SharePoint Online Administration Center).
 This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
-
 ## SYNTAX
 
 ### AuthenticationUrl
 
-```
+```powershell
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
  -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
 
 ### AuthenticationLocation
 
-```
+```powershell
 Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
  [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
@@ -47,34 +46,32 @@ A delegated partner administrator has to swap connections for different organiza
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 
-```
+```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
 ```
 
-Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL https://contoso-admin.sharepoint.com.
-
+Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL <https://contoso-admin.sharepoint.com.>
 
 ### -----------------------EXAMPLE 2-----------------------------
 
-```
+```powershell
 $username = "admin@contoso.sharepoint.com"
 $password = "password"
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credential $cred
 ```
 
-Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL https://contoso-admin.sharepoint.com.
+Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL <https://contoso-admin.sharepoint.com.>
 
 ### -----------------------EXAMPLE 3-----------------------------
 
-```
+```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
 
@@ -120,7 +117,6 @@ Accept wildcard characters: False
 
 Specifies the credentials to use to connect. If no credentials are presented, a dialog will prompt for the credentials. The credentials must be those of a SharePoint Online global administrator who can access the SharePoint Online Administration Center site.
 
-
 ```yaml
 Type: CredentialCmdletPipeBind
 Parameter Sets: (All)
@@ -141,8 +137,7 @@ The valid values are: Default | ITAR | Germany | China
 The default value is "default".
 
 > [!NOTE]
-> The ITAR value is for United States Government cloud tenancies only.
-
+> The ITAR value is for United States Government cloud tenancies only.  
 
 ```yaml
 Type: AADCrossTenantAuthenticationLocation
@@ -158,8 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-Specifies the URL of the SharePoint Online Administration Center site.
 
+Specifies the URL of the SharePoint Online Administration Center site.
 
 ```yaml
 Type: UrlCmdletPipeBind

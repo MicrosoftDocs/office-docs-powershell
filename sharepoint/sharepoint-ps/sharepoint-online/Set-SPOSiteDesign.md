@@ -54,6 +54,7 @@ Updates a previously uploaded site design.
 ## PARAMETERS
 
 ### -Identity
+
 The site design Id.
 
 ```yaml
@@ -69,6 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
+
 The display name of the site design.
 
 ```yaml
@@ -84,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebTemplate
+
 Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
 
 ```yaml
@@ -99,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteScripts
+
 An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed.
 
 ```yaml
@@ -114,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 The display description of the site design.
 
 ```yaml
@@ -129,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviewImageUrl
+
 The URL of a preview image. If none is specified, SharePoint uses a generic image.
 
 ```yaml
@@ -144,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviewImageAltText
+
 The alt text description of the image for accessibility.
 
 ```yaml
@@ -159,6 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
+
 A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
 
 ```yaml
@@ -173,3 +181,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS

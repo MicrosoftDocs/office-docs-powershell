@@ -13,15 +13,17 @@ ms.reviewer:
 # Remove-SPOUserProfile
 
 ## SYNOPSIS
+
 Remove user profile from the tenant.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOUserProfile -LoginName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Can be used to remove the SharePoint user profile from the tenant.
 
 > [!NOTE]
@@ -29,16 +31,18 @@ Can be used to remove the SharePoint user profile from the tenant.
 
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
-```
+### ------------ Example 1 --------------------
+
+```powershell
 Remove-SPOUserProfile -LoginName joe.healy@contoso.com
 ```
-Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the SharePoint Online User Profiles of the particular tenant.
 
+Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the SharePoint Online User Profiles of the particular tenant.
 
 ## PARAMETERS
 
 ### -LoginName
+
 Specifies the login name of the user which user profile is deleted.
 
 ```yaml
@@ -55,7 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

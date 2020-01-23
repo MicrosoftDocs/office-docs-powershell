@@ -34,7 +34,7 @@ Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [-KeyVaultName] <St
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

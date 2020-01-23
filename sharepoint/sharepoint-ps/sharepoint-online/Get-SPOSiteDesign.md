@@ -19,9 +19,7 @@ Gets details about site designs that are on the SharePoint tenant. You can speci
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteDesign
-  [[-Identity] <SPOSiteDesignPipeBind>]
-  [<CommonParameters>]
+Get-SPOSiteDesign [[-Identity] <SPOSiteDesignPipeBind>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,10 +43,10 @@ Description         : Use this design to apply Contoso theme and create
                       custom lists and add to nav
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to retrieve.
 
 ```yaml
@@ -62,4 +60,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-

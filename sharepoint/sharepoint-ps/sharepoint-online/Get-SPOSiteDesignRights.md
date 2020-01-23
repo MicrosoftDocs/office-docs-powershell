@@ -19,9 +19,7 @@ Displays a list of principals and their rights for usage of the site design. Thi
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteDesignRights
-  [-Identity] <SPOSiteDesignPipeBind>
-  [<CommonParameters>]
+Get-SPOSiteDesignRights  [-Identity] <SPOSiteDesignPipeBind>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,10 +40,10 @@ DisplayName  PrincipalName                                      Rights
 Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to get scoping information.
 
 ```yaml
@@ -59,4 +57,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
