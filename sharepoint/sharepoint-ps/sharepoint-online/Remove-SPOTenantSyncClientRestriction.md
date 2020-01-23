@@ -13,12 +13,12 @@ ms.reviewer:
 # Remove-SPOTenantSyncClientRestriction
 
 ## SYNOPSIS
-Disables the feature for the tenancy.
 
+Disables the feature for the tenancy.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOTenantSyncClientRestriction [<CommonParameters>]
 ```
 
@@ -35,16 +35,18 @@ The `Remove-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
+
+```powershell
 Remove-SPOTenantSyncClientRestriction
 ```
-This example returns  the value of False for the TenantRestrictionEnabled property.
 
+This example returns  the value of False for the TenantRestrictionEnabled property.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

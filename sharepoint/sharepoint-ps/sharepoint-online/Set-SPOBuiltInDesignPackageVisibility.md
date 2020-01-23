@@ -34,7 +34,7 @@ Set-SPOBuiltInDesignPackageVisibility [-IsVisible] <Boolean> [-DesignPackage] <D
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -63,7 +63,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: Named
 Default value: None

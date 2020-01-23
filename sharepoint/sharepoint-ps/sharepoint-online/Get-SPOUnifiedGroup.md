@@ -23,7 +23,8 @@ Get-SPOUnifiedGroup [-GroupAlias] <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to .
+
+.
 
 ## EXAMPLES
 
@@ -33,7 +34,7 @@ Use this cmdlet to .
 Get-SPOUnifiedGroup -GroupAlias <string>
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

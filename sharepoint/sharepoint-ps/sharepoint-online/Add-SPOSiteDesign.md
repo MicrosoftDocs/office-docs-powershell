@@ -53,6 +53,7 @@ Add-SPOSiteDesign `
 ## PARAMETERS
 
 ### -Title
+
 The display name of the site design.
 
 ```yaml
@@ -68,6 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebTemplate
+
 Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
 
 ```yaml
@@ -83,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteScripts
+
 An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed.
 
 ```yaml
@@ -98,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 The display description of the site design.
 
 ```yaml
@@ -113,6 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviewImageUrl
+
 The URL of a preview image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 421 pixels.
 
 ```yaml
@@ -128,6 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreviewImageAltText
+
 The alt text description of the image for accessibility.
 
 ```yaml
@@ -143,6 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
+
 A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
 
 ```yaml

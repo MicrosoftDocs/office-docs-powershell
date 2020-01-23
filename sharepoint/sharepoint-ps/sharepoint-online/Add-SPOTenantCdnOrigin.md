@@ -18,9 +18,8 @@ Configures a new origin to public or private content delivery network (CDN). Req
 
 ## SYNTAX
 
-```
-Add-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String> [-WhatIf]
- [<CommonParameters>]
+```powershell
+Add-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String> [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,8 +37,6 @@ Add-SPOTenantCdnOrigin -CdnType public -OriginUrl /sites/site/subfolder
 ```
 
 This example configures a public CDN on a site level.
-
-
 
 ## PARAMETERS
 
@@ -83,7 +80,6 @@ Specifies a path to the doc library to be configured. It can be provided in two 
 
 Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder within a document library.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -117,7 +113,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](<https://go.microsoft.com/fwlink/?LinkID=113216).>
 
 ## INPUTS
 

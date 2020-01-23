@@ -19,9 +19,7 @@ Removes a site script.
 ## SYNTAX
 
 ```powershell
-Remove-SPOSiteScript
-  [-Identity] <SPOSiteScriptPipeBind>
-  [<CommonParameters>]
+Remove-SPOSiteScript  [-Identity] <SPOSiteScriptPipeBind>  [<CommonParameters>]
 ```
 
 ## EXAMPLES
@@ -41,6 +39,7 @@ Removes a site script.
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site script to remove.
 
 ```yaml
@@ -55,3 +54,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

@@ -13,16 +13,18 @@ ms.reviewer:
 # Remove-SPOHubSiteAssociation
 
 ## SYNOPSIS
+
 Removes a site from its associated hub site.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOHubSiteAssociation [-Site] <SpoSitePipeBind>
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Use this cmdlet to remove an association between a site and a hub site.
 
 > [!IMPORTANT]
@@ -34,7 +36,7 @@ If the site or hub site doesn’t exist, this cmdlet returns a “File not found
 
 ### Example 1
 
-```
+```powershell
 Remove-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research
 ```
 

@@ -15,7 +15,6 @@ ms.reviewer:
 
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal.
 
-
 ## SYNTAX
 
 ### Default

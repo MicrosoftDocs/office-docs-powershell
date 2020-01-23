@@ -34,7 +34,7 @@ Use this cmdlet to remove the selected hub site from its parent hub.
 Remove-SPOHubToHubAssociation -HubSite https://contoso.sharepoint.com/sites/Research
 ```
 
-This example removes https://contoso.sharepoint.com/sites/Research from its parent Hub.
+This example removes <https://contoso.sharepoint.com/sites/Research> from its parent Hub.
 
 ## PARAMETERS
 

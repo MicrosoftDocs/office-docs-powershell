@@ -19,11 +19,13 @@ ms.reviewer:
 ## SYNTAX
 
 ### SourceSiteUrl
+
 ```powershell
 Get-SPOSiteRenameState -Identity <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RenameReport
+
 ```powershell
 Get-SPOSiteRenameState [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

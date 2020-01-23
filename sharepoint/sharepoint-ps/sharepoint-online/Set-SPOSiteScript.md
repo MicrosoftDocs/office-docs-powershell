@@ -18,7 +18,7 @@ Updates a previously uploaded site script.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOSiteScript
   -Identity <SPOSiteScriptPipeBind>
   -Title <string>
@@ -38,7 +38,7 @@ Updates a previously uploaded site script.
 
 This example updates a previously created site script. Any site designs referencing it execute the updated script.
 
-```
+```powershell
 $newnavscript = @'
 {
     "$schema": "schema.json",
@@ -134,6 +134,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Version
 
 A version number of the script.
@@ -150,11 +151,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
-
-

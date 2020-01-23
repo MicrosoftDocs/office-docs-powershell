@@ -13,16 +13,18 @@ ms.reviewer:
 # Grant-SPOHubSiteRights
 
 ## SYNOPSIS
+
 Grants rights to users or mail-enabled security groups to associate their site with a hub site.
 
 ## SYNTAX
 
-```
+```powershell
 Grant-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals
     <string[]> -Rights {Join}  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Applies permissions to a set of users or mail-enabled security groups. Use this cmdlet to scope visibility of who can associate their site with the hub site when using the SharePoint user interface. Hub sites are public by default. Once you set permissions, only those groups or users you specified can associate their site with the hub site.
 
 To view which users or groups have permissions to a site, use the [Get-SPOHubSite](Get-SPOHubSite.md) cmdlet.
@@ -31,7 +33,7 @@ To view which users or groups have permissions to a site, use the [Get-SPOHubSit
 
 ### Example 1
 
-```
+```powershell
 Grant-SPOHubSiteRights https://contoso.sharepoint.com/sites/Marketing
 -Principals nestorw@contoso.onmicrosoft.com
 -Rights Join

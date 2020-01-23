@@ -31,7 +31,6 @@ The **Get-SPOHideDefaultThemes** cmdlet retrieves the current **Set-SPOHideDefau
 Get-SPOHideDefaultThemes
 ```
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -43,9 +42,3 @@ Get-SPOHideDefaultThemes
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOHideDefaultThemes](Set-SPOHideDefaultThemes.md)
-
-
-
-
-
-

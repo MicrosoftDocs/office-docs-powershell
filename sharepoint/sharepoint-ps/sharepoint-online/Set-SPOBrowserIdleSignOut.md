@@ -34,7 +34,7 @@ Use this cmdlet to .
 
 ```
 
-This example .
+.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ This example .
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None

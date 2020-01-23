@@ -24,7 +24,7 @@ Get-SPOSiteDataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Use this cmdlet to .
 Get-SPOSiteDataEncryptionPolicy https://contoso.sharepoint.com/sites/Research
 ```
 
-This example .
+.
 
 ## PARAMETERS
 

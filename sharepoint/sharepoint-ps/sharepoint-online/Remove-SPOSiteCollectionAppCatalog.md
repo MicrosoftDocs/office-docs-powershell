@@ -34,7 +34,7 @@ Use this cmdlet to remove the site collection app catalog.
 Remove-SPOSiteCollectionAppCatalog -Site https://contoso.sharepoint.com/sites/Research
 ```
 
-This example removes the site collection app catalog from the site https://contoso.sharepoint.com/sites/Research.
+This example removes the site collection app catalog from the site <https://contoso.sharepoint.com/sites/Research.>
 
 ## PARAMETERS
 

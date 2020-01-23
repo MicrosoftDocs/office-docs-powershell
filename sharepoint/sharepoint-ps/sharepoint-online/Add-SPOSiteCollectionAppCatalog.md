@@ -24,7 +24,7 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+.
 
 ## EXAMPLES
 
@@ -47,6 +47,7 @@ Type: SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -64,6 +65,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

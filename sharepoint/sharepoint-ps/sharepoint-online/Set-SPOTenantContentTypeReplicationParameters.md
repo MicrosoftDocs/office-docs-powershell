@@ -13,45 +13,50 @@ ms.reviewer:
 # Set-SPOTenantContentTypeReplicationParameters
 
 ## SYNOPSIS
-Select content types for replication
 
+Select content types for replication
 
 ## SYNTAX
 
 ### ReplicateAllContentTypes
-```
+
+```powershell
 Set-SPOTenantContentTypeReplicationParameters [-ReplicateAllContentTypes] [<CommonParameters>]
 ```
 
 ### ReplicateSelectedContentTypes
-```
+
+```powershell
 Set-SPOTenantContentTypeReplicationParameters -ReplicatedContentTypes <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use �Connect-SPOService� to connect to SharePoint Online first.
-By default, all published content types in primary location will be replicated to satellite.
 
+Before you run the cmdlets, please use 'Connect-SPOService' to connect to SharePoint Online first.
+By default, all published content types in primary location will be replicated to satellite.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 Set-SPOTenantContentTypeReplicationParameters -ReplicatedContentTypes "ct1","ct2"
 ```
+
 Tenant admin can use this cmdlet to select only some content types only for replicating to overwrite default settings
 
-
 ### EXAMPLE 2
+
 ```powershell
 Set-SPOTenantContentTypeReplicationParameters -ReplicateAllContentTypes
 ```
-Tenant admin can  also reset to replicate all the content types.
 
+Tenant admin can  also reset to replicate all the content types.
 
 ## PARAMETERS
 
 ### -ReplicateAllContentTypes
+
 {{Fill ReplicateAllContentTypes Description}}
 
 ```yaml
@@ -59,7 +64,6 @@ Type: SwitchParameter
 Parameter Sets: ReplicateAllContentTypes
 Aliases:
 Applicable: SharePoint Online
-
 Required: True
 Position: Named
 Default value: None
@@ -68,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicatedContentTypes
+
 {{Fill ReplicatedContentTypes Description}}
 
 ```yaml
@@ -75,7 +80,6 @@ Type: String[]
 Parameter Sets: ReplicateSelectedContentTypes
 Aliases:
 Applicable: SharePoint Online
-
 Required: True
 Position: Named
 Default value: None
@@ -84,8 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
@@ -100,4 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md)
 
 [Get-SPOTenantContentTypeReplicationParameters](Get-SPOTenantContentTypeReplicationParameters.md)
-

@@ -18,13 +18,8 @@ Creates a new custom theme, or overwrites an existing theme to modify its settin
 
 ## SYNTAX
 
-```
-Add-SPOTheme
-  -Identity <SpoThemePipeBind>
-  -IsInverted <bool>
-  -Overwrite
-  -Palette <SpoThemePalettePipeBind>
-  [<CommonParameters>]
+```powershell
+Add-SPOTheme -Identity <SpoThemePipeBind> -IsInverted <bool> -Overwrite -Palette <SpoThemePalettePipeBind>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,6 +76,7 @@ If you want to update an existing theme (to modify some of its color settings, f
 ```powershell
 Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
 ```
+
 ## PARAMETERS
 
 ### -Identity
@@ -142,4 +138,3 @@ Accept wildcard characters: False
 ## INPUTS
 
 ## OUTPUTS
-
