@@ -90,7 +90,7 @@ $startTimeinUTC = $endTimeinUTC.AddDays(-14)
 $tenantlogs = Get-SPOTenantLogEntry -StartTimeinUtc $startTimeinUTC -EndTimeinUTC $endTimeinUTC -CorrelationId e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 
-This example retrieves log entries recorded over that previous 14 days that have the CorrelationId of “e2c2be70-6382-4ce7-8a44-ae7dadff5597”.
+This example retrieves log entries recorded over that previous 14 days that have the CorrelationId of "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -StartTimeInUtc
 
-Specifies the start time in Coordinated Universal Time (UTC) to search for the logs — for example, 01032011:12:00.
+Specifies the start time in Coordinated Universal Time (UTC) to search for the logs (for example, 01032011:12:00).
 
 ```yaml
 Type: DateTime

@@ -48,7 +48,7 @@ This cmdlet returns a GUID value which represents the MigrationJobId, or returns
 Submit-SPOMigrationJob -TargetUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -FileContainerUri "https://migrationstore.blob.core.windows.net/migration-files?sv=2014-02-14&sr=c&sig=THTTJoeGHysxRLgv22j473XYS2blH1YAVIdsfWrPhq8=&se=2015-04-06T05:09:36Z&sp=rl" -PackageContainerUri "https://migrationstore.blob.core.windows.net/migration-package?sv=2014-02-14&sr=c&sig=2PCBJtiXsVWiK5GrY7jBEdyEAwtunQNJLH8uo6I0+Ew=&se=2015-04-06T05:09:37Z&sp=rwl"
 ```
 
-This example creates a new migration job in the target site collection for the web at the URL ‘<https://contoso.sharepoint.com/sites/TargetSite/TargetWeb’.> The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
+This example creates a new migration job in the target site collection for the web at the URL '<https://contoso.sharepoint.com/sites/TargetSite/TargetWeb'.> The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -56,7 +56,7 @@ This example creates a new migration job in the target site collection for the w
 Submit-SPOMigrationJob -TargetUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -MigrationPackageAzureLocations $azurelocations
 ```
 
-This example creates a new migration job in the target site collection for the web at the URL ‘<https://contoso.sharepoint.com/sites/TargetSite/TargetWeb’.> The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
+This example creates a new migration job in the target site collection for the web at the URL '<https://contoso.sharepoint.com/sites/TargetSite/TargetWeb'.> The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
 
 ## PARAMETERS
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Credentials
 
-Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
+Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session's previous call to `Connect-SPOService` will be used to connect to the site collection.
 
 ```yaml
 Type: CredentialCmdletPipeBind

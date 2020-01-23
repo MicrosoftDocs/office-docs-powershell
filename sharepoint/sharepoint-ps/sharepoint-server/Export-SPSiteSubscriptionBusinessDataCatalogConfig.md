@@ -50,7 +50,7 @@ The type must be a valid path in either of the following forms:
 
 - C:\folder_name\file.xml
 - \\\\server_name\folder_name\file.xml
-- …\folder_name\file.xml
+- ...\folder_name\file.xml
 
 ```yaml
 Type: String

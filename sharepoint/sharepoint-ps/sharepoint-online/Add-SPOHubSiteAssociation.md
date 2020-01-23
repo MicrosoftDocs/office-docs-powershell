@@ -78,6 +78,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site or hub site doesn't exist, this cmdlet returns a "File not found" error.
 
 If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.

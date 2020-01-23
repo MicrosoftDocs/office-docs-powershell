@@ -665,12 +665,12 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-Lets administrators choose what type of link appears is selected in the “Get a link” sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
 > [!NOTE]
-> Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
+> Setting this value to "none" will default "get a link" to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
 
 The valid values are:
 
@@ -909,7 +909,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -929,7 +929,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenItemsReshared
 
-When this parameter is set to $true and another user re-shares a document from a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and another user re-shares a document from a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -1165,7 +1165,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1183,7 +1183,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”.
+Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 

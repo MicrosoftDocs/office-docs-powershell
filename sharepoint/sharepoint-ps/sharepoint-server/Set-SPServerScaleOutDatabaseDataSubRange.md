@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSubRangePointOnBoundary
-Specifies whether to complete without any errors if the new subrange’s start and end points are the same. If this parameter is specified, no errors are displayed.
+Specifies whether to complete without any errors if the new subrange's start and end points are the same. If this parameter is specified, no errors are displayed.
 
 
 ```yaml

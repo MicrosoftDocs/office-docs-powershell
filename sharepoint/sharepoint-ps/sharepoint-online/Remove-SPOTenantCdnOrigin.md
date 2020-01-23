@@ -89,7 +89,7 @@ Relative-Relative path depends on the OriginScope. If the originScope is Tenant,
 
 Any asset stored under the path provided (in the container itself or any of its subfolders) will be exposed via CDN
 
-Mask - Mask allows to configure a partial URL match. It must start with */, and must not include * anywhere else. I.e. an origin “*/masterpages” will expose all the assets under all the masterpages libraries, either under the tenant root (means, anywhere in the tenancy) or in the given site collection, depends on the OriginScope parameter. Equally, */masterpages/subfolder will enable items in “subfolder” and below.
+Mask - Mask allows to configure a partial URL match. It must start with */, and must not include * anywhere else. I.e. an origin "*/masterpages" will expose all the assets under all the masterpages libraries, either under the tenant root (means, anywhere in the tenancy) or in the given site collection, depends on the OriginScope parameter. Equally, */masterpages/subfolder will enable items in "subfolder" and below.
 
 ```yaml
 Type: String

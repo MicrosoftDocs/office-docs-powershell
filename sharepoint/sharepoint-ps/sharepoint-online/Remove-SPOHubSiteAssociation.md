@@ -30,7 +30,7 @@ Use this cmdlet to remove an association between a site and a hub site.
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site or hub site doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
 

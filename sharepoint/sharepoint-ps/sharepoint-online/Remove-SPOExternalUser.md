@@ -39,7 +39,7 @@ $user = Get-SPOExternalUser -Filter someone@example.com
 Remove-SPOExternalUser -UniqueIDs @($user.UniqueId)
 ```
 
-This example removes a specific external user who has the address “someone@example.com”. Organization members may still see the external user name displayed in the Shared With dialog, but the external user will not be able to sign in and will not be able to access any tenant resources.
+This example removes a specific external user who has the address "someone@example.com". Organization members may still see the external user name displayed in the Shared With dialog, but the external user will not be able to sign in and will not be able to access any tenant resources.
 
 ## PARAMETERS
 

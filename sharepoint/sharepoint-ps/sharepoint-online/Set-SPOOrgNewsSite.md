@@ -25,7 +25,7 @@ Set-SPOOrgNewsSite -OrgNewsSiteUrl <string> [<CommonParameters>]
 
 Use this cmdlet to mark a site as an organizational authoritative news site. Such sites get primary treatment in the SharePoint user interface.
 
-If a site with specified URL doesn’t exist, this cmdlet returns a “File not found” error.
+If a site with specified URL doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
 
