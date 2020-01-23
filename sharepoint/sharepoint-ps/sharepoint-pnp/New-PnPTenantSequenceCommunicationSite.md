@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequencecommunicationsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPTenantSequenceCommunicationSite
 
 ## SYNOPSIS
 Creates a communication site object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPTenantSequenceCommunicationSite -Url <String>

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-sposite
 applicable: SharePoint Online
 title: Get-SPOSite
 schema: 2.0.0
@@ -33,7 +35,7 @@ Get-SPOSite [-Identity] <SpoSitePipeBind> [-DisableSharingForNonOwnersStatus] [<
 ```
 
 ## DESCRIPTION
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets. 
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
 
 The `Get-SPOSite` cmdlet retrieves and returns properties of all site collections that match the given criteria.
 
@@ -45,15 +47,15 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 
 Currently, Filter parameter is not functional.
 
-> [!NOTE] 
-> Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
+> [!NOTE]
+> Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.
 
 You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832.
 
-> [!NOTE] 
-> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> [!NOTE]
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
 
 
 ## EXAMPLES
@@ -66,7 +68,7 @@ Example 1 returns all site collections.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-Get-SPOSite -Identity https://contoso.sharepoint.com 
+Get-SPOSite -Identity https://contoso.sharepoint.com
 ```
 Example 2 lists the site collection with detailed properties.
 
@@ -118,7 +120,7 @@ The following properties are returned:
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet1, ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -131,14 +133,14 @@ Accept wildcard characters: False
 ### -DisableSharingForNonOwnersStatus
 This parameter prevents non-owners from sharing.
 
-> [!NOTE] 
-> This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.  
+> [!NOTE]
+> This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet3
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -151,14 +153,14 @@ Accept wildcard characters: False
 ### -Filter
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form {$_PropertyName <operator> "filterValue"}. Valid operators are as follows: eq, ne, like, notlike.
 
-> [!NOTE] 
-> The operator values are case-sensitive.  
+> [!NOTE]
+> The operator values are case-sensitive.
 
 
 ```yaml
 Type: String
 Parameter Sets: ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -175,7 +177,7 @@ Specifies the URL of the site collection.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: ParamSet1
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -194,7 +196,7 @@ The values are $true and $false. By default, the value is $false which means no 
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -211,7 +213,7 @@ Specifies the maximum number of site collections to return. It can be any number
 ```yaml
 Type: String
 Parameter Sets: ParamSet1, ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -228,7 +230,7 @@ Displays sites of a specific template. For example, STS, STS#0 or STS#1.
 ```yaml
 Type: String
 Parameter Sets: ParamSet2
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

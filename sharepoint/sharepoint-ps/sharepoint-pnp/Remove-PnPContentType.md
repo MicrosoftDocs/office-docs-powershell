@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpcontenttype
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPContentType
 
 ## SYNOPSIS
 Removes a content type from a web
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPContentType -Identity <ContentTypePipeBind>

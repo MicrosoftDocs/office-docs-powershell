@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spogeoadministrator
 applicable: SharePoint Online
 title: Add-SPOGeoAdministrator
 schema: 2.0.0
@@ -26,7 +28,7 @@ Add-SPOGeoAdministrator
 ```
 
 ## DESCRIPTION
-This cmdlet requires a connection to a multi-geo tenant to run correctly. 
+This cmdlet requires a connection to a multi-geo tenant to run correctly.
 You must be a SharePoint Online global Administrator to run this cmdlet.
 
 
@@ -48,7 +50,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: Group
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -65,7 +67,7 @@ PARAMVALUE: Guid
 ```yaml
 Type: Guid
 Parameter Sets: ObjectId
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -81,7 +83,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: User
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

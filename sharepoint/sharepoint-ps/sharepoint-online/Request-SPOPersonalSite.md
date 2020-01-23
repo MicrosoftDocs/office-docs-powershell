@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/request-spopersonalsite
 applicable: SharePoint Online
 title: Request-SPOPersonalSite
 schema: 2.0.0
@@ -23,14 +25,14 @@ Request-SPOPersonalSite [-NoWait] -UserEmails <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueued so that a Personal Site be created for each. The actual Personal site is created by a Timer Job later.
 
-> [!NOTE] 
+> [!NOTE]
 > You must specify a string array of user logins that contains one or more valid user email (logins) and cannot contain any empty fields. The command will stop if it encounters any empty strings in the array. A maximum of 200 users can be specified.
 
-> [!NOTE] 
+> [!NOTE]
 > The actor executing this cmdlet must be at least assigned the SharePoint Online administrator role and have been assigned a SharePoint Online license to be able to provision the OneDrive for Business sites. The users who the sites will be provisioned for must also have a SharePoint license assigned.
 
 > [!NOTE]
-> This commandlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this commandlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample: 
+> This commandlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this commandlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample:
 get-MSOLUser | Where {$_.PreferredDataLocation -eq "EUR"]
 
 ## EXAMPLES
@@ -47,7 +49,7 @@ This example requests that two users to be enqueued for the creation of a Person
 ```
 Request-SPOPersonalSite –UserEmails $emails
 ```
-This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. 
+This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails.
 
 
 ## PARAMETERS
@@ -59,7 +61,7 @@ Continues without the status being polled. Polling the action can slow it’s pr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -71,14 +73,14 @@ Accept wildcard characters: False
 
 ### -UserEmails
 Specifies one or more user logins to be enqueued for the creation of a Personal Site. The Personal site is created by a Timer Job later. You can specify between 1 and 200 users.
-> [!NOTE] 
+> [!NOTE]
 > If you are Pre-Provisioning OneDrive for Many Users, it might take up to 24 hours for the OneDrive locations to be created. If a user's OneDrive isn't ready after 24 hours, please contact Support.
 
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -99,6 +101,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-## NOTES 
+## NOTES
 
 ## RELATED LINKS

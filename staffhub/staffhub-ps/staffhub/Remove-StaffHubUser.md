@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-online version:
+online version: https://docs.microsoft.com/powershell/module/staffhub/remove-staffhubuser
 applicable: Microsoft StaffHub
 title: Remote-StaffHubUser
 schema: 2.0.0
@@ -24,12 +24,12 @@ Remove-StaffHubUser [-UserId] <String>
 
 ## DESCRIPTION
 Removes the specified user from StaffHub.
-Pre-requisite is to delete the user from AAD. 
+Pre-requisite is to delete the user from AAD.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-StaffHubUser -UserId "USER_1234"
 ```
 

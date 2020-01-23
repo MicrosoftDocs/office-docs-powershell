@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenanttaxonomyreplicationparameters
 applicable: SharePoint Online
 title: Get-SPOTenantTaxonomyReplicationParameters
 schema: 2.0.0
@@ -30,9 +32,9 @@ Get the sites to be replicated in a Multi-Geo taxonomy replication.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
-Get-SPOTenantTaxonomyReplicationParameters 
+Get-SPOTenantTaxonomyReplicationParameters
 ```
 
 Gets the replication groups that are being replicated on the current tenant.

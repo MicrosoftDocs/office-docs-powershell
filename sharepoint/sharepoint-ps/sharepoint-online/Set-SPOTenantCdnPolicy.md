@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantcdnpolicy
 applicable: SharePoint Online
 title: Set-SPOTenantCdnPolicy
 schema: 2.0.0
@@ -54,7 +56,7 @@ This example sets a CDN to a public type with a policy value of valid site class
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private
 Applicable: SharePoint Online
 
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SPOTenantCdnPolicyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: IncludeFileExtensions, ExcludeRestrictedSiteClassifications, ExcludeIfNoScriptDisabled
 Applicable: SharePoint Online
 
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spogeostoragequota
 applicable: SharePoint Online
 title: Get-SPOGeoStorageQuota
 schema: 2.0.0
@@ -32,11 +34,11 @@ This Cmdlet requires a connection to a multi-geo tenant to run correctly. You mu
 ```Powershell
 Get-SPOGeoStorageQuota -AllLocations
 ```
-Get the storage size quota of all locations. 
+Get the storage size quota of all locations.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```Powershell
-Get-SPOGeoStorageQuota 
+Get-SPOGeoStorageQuota
 ```
 Get the storage size quota of the current location.
 
@@ -50,7 +52,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpdefaultcolumnvalues
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPDefaultColumnValues
 
 ## SYNOPSIS
 Sets default column values for a document library
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPDefaultColumnValues -List <ListPipeBind>

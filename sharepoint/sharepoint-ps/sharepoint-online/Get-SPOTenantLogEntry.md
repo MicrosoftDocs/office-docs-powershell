@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantlogentry
 applicable: SharePoint Online
 title: Get-SPOTenantLogEntry
 schema: 2.0.0
@@ -41,8 +43,8 @@ The `Get-SPOTenantLogEntry` cmdlet cannot retrieve all SharePoint Online errors.
 
 For Beta 2, the only company logs available are for Business Connectivity Services (BCS).
 
-> [!NOTE] 
-> If you do not use any parameter, the first 1000 rows in descending time range are returned.  
+> [!NOTE]
+> If you do not use any parameter, the first 1000 rows in descending time range are returned.
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
@@ -92,7 +94,7 @@ Specifies the Correlation ID as a filter.
 ```yaml
 Type: Guid
 Parameter Sets: CorrelationId
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -109,7 +111,7 @@ Specifies the end time in UTC to search for logs.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -126,7 +128,7 @@ Specifies the maximum number of rows in the descending order of timestamp. The v
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -143,7 +145,7 @@ Specifies the component that logs the errors.
 ```yaml
 Type: Int32
 Parameter Sets: Source
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -160,7 +162,7 @@ Specifies the start time in Coordinated Universal Time (UTC) to search for the l
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -177,7 +179,7 @@ Specifies the log-on identity as a filter.
 ```yaml
 Type: String
 Parameter Sets: User
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

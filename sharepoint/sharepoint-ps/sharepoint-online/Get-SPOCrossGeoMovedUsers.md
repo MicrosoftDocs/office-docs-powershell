@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovedusers
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMovedUsers
 schema: 2.0.0
@@ -47,7 +49,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: MoveIn, MoveOut
 Applicable: SharePoint Online
 

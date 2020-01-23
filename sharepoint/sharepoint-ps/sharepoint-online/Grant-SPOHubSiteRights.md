@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/grant-spohubsiterights
 applicable: SharePoint Online
 title: Grant-SPOHubSiteRights
 schema: 2.0.0
@@ -31,8 +33,8 @@ To view which users or groups have permissions to a site, use the [Get-SPOHubSit
 
 ```
 Grant-SPOHubSiteRights https://contoso.sharepoint.com/sites/Marketing
--Principals nestorw@contoso.onmicrosoft.com 
--Rights Join 
+-Principals nestorw@contoso.onmicrosoft.com
+-Rights Join
 ```
 
 This example shows how to grant rights to Nestor (a user at the fictional Contoso site) to associate his sites with the marketing hub site.
@@ -46,7 +48,7 @@ URL of the hub site.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -63,7 +65,7 @@ One or more principles to add permissions for.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -80,7 +82,7 @@ Always set to the value **Join**. Any user or group with **Join** permissions ca
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

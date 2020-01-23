@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoapperrors
 applicable: SharePoint Online
 title: Get-SPOAppErrors
 schema: 2.0.0
@@ -51,7 +53,7 @@ Specifies the end time in UTC to search for monitoring errors. If no end time is
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -67,7 +69,7 @@ Specifies the application’s GUID.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -83,7 +85,7 @@ Specifies the start time in UTC to search for monitoring errors — for example,
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

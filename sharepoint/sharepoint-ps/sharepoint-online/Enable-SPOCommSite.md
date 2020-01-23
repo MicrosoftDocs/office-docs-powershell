@@ -1,11 +1,13 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/enable-spocommsite
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
 author: trent-green
 ms.author: trgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Enable-SPOCommSite
@@ -22,7 +24,7 @@ Enables the modern communication site experience on an existing site.
 ## SYNTAX
 
 ```
-Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID> 
+Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ```
 
 ## DESCRIPTION
@@ -53,7 +55,7 @@ Use this cmdlet to enable the modern communication site experience at the classi
 Enable-SPOCommSite -SiteUrl https://contoso.sharepoint.com
 ```
 
-This example enables the communication site experience at this https://contoso.sharepoint.com site. 
+This example enables the communication site experience at this https://contoso.sharepoint.com site.
 
 ### Example 2
 
@@ -70,7 +72,7 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 2. Make sure you have the SharePoint admin credentials for the tenant
 3. Make sure you have the correct root site URL. Typically its https://\<tenantname\>.sharepoint.com
 4. Copy the above PowerShell command(s) into a notepad and fill in the missing details denoted by <>
-5. Open SharePoint Online Management Shell from your computer 
+5. Open SharePoint Online Management Shell from your computer
 6. Execute the PowerShell commands from your notepad
 
 
@@ -112,7 +114,7 @@ URL of the site for enabling the modern communication site experience. **This is
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -132,7 +134,7 @@ GUID identifying the [communication site design](https://support.office.com/arti
 ```yaml
 Type: GUID
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

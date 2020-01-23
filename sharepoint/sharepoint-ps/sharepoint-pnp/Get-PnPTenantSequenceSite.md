@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantsequencesite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPTenantSequenceSite
 
 ## SYNOPSIS
 Returns one ore more sites from a tenant template
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPTenantSequenceSite -Sequence <ProvisioningSequence>

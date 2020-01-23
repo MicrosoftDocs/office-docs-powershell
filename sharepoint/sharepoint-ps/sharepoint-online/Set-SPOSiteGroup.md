@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositegroup
 applicable: SharePoint Online
 title: Set-SPOSiteGroup
 schema: 2.0.0
@@ -53,7 +55,7 @@ Specifies the name of the group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -70,7 +72,7 @@ Specifies the new name of the group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -87,7 +89,7 @@ Specifies the owner (individual or a security group) of the group to be created.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -100,14 +102,14 @@ Accept wildcard characters: False
 ### -PermissionLevelsToAdd
 Specifies the permission levels to grant to the group.
 
-> [!NOTE] 
-> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> [!NOTE]
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.
 
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -120,14 +122,14 @@ Accept wildcard characters: False
 ### -PermissionLevelsToRemove
 Specifies the permission levels to remove from the group.
 
-> [!NOTE] 
-> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> [!NOTE]
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.
 
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -144,7 +146,7 @@ Specifies the site collection the group belongs to.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

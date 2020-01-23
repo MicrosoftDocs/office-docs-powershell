@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/upgrade-sposite
 applicable: SharePoint Online
 title: Upgrade-SPOSite
 schema: 2.0.0
@@ -77,7 +79,7 @@ Specifies the SharePoint Online site collection to upgrade.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -94,7 +96,7 @@ Specifies that the system not send the requester and site collection administrat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -111,7 +113,7 @@ Adds the site collection to the upgrade queue. The upgrade does not occur immedi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -128,7 +130,7 @@ Specifies whether to perform a version-to-version upgrade on the site collection
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False

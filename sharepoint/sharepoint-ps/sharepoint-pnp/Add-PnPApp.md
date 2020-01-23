@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Add-PnPApp
 
 ## SYNOPSIS
 Add/uploads an available app to the app catalog
 
-## SYNTAX 
+## SYNTAX
 
 ### Add only
 ```powershell
