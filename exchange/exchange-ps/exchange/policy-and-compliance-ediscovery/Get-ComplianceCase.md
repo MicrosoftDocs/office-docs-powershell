@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Get-ComplianceCase
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Get-ComplianceCase cmdlet to view eDiscovery cases and DSR (data subject request) cases in the Security & Compliance Center. You use eDiscovery cases to control who can create, access, and manage compliance searches in your organization.
 
