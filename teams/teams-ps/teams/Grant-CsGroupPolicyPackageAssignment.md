@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet applies a policy package to a security group in a tenant.
+This cmdlet applies a policy package to a group in a tenant.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Grant-CsUserPolicyPackage -Identity <String> -PackageName <String> [-Priority <S
 
 ## DESCRIPTION
 
-This cmdlet applies a policy package to a security group in a tenant. Provide a group identity to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Priority can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If priority is not specified, the group's package assignment will be ranked last in priority. If a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on priority and group policy assignments, please review [this section](New-CsGroupPolicyAssignment.md#description). For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+This cmdlet applies a policy package to a group in a tenant. Provide a group identity to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Priority can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If priority is not specified, the group's package assignment will be ranked last in priority. If a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on priority and group policy assignments, please review [this section](New-CsGroupPolicyAssignment.md#description). For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
 
 ## EXAMPLES
 
