@@ -1148,7 +1148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing withing the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing rules in the policy. For example, if there are 8 existing rules:
 
