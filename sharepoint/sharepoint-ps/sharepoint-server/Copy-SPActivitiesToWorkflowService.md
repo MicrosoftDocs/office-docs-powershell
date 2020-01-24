@@ -26,7 +26,7 @@ Copy-SPActivitiesToWorkflowService [-ActivityName <String>] [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-Copies Workflow activites from SharePoint Server to Workflow Manager.
+Copies Workflow activities from SharePoint Server to Workflow Manager.
 
 ## EXAMPLES
 
