@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ### -Force
 If the Force parameter is specified, the server is failed over without verifying the pool's capacity to absorb the failed over server's workload.
 
-**Note:** If you run this parameter toghether with -WhatIf parameter, it will be ignored and a server failover will be started.
+**Note:** If you run this parameter together with -WhatIf parameter, it will be ignored and a server failover will be started.
 
 ```yaml
 Type: SwitchParameter
