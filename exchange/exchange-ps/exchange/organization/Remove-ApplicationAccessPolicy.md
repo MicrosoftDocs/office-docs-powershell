@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes may take upto 30 minutes to go live.
+Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes may take up to 30 minutes to go live.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 

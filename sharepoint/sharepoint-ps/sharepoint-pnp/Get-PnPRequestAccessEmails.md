@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnprequestaccessemails
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPRequestAccessEmails
 
 ## SYNOPSIS
 Returns the request access e-mail addresses
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPRequestAccessEmails [-Web <WebPipeBind>]

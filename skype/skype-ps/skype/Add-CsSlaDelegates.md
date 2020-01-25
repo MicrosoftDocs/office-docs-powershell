@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/add-cssladelegates
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Add-CsSlaDelegates
 schema: 2.0.0
@@ -39,7 +40,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Add-CsSlaDelegates"}
 Add-CsSlaDelegates -Identity emergency -Delegate sip:delegate_1@contosohealth.com
 ```
 
-This example adds a delegate “delegate_1@contosohealth.com” to an SLA configuration identified by “emergency”.
+This example adds a delegate "delegate_1@contosohealth.com" to an SLA configuration identified by "emergency".
 
 ## PARAMETERS
 

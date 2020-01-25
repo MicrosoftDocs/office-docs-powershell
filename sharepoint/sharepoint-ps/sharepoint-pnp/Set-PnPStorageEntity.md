@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpstorageentity
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPStorageEntity
 
 ## SYNOPSIS
 Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPStorageEntity -Key <String>

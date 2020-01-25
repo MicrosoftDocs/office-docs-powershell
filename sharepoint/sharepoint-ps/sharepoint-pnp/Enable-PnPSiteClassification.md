@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Enable-PnPSiteClassification
 
 ## SYNOPSIS
 Enables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Enable-PnPSiteClassification -Classifications <String>

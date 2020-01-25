@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-sposite
 applicable: SharePoint Online
 title: Remove-SPOSite
 schema: 2.0.0
@@ -11,16 +13,17 @@ ms.reviewer:
 # Remove-SPOSite
 
 ## SYNOPSIS
-Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.
 
+Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOSite [-Confirm] -Identity <SpoSitePipeBind> [-NoWait] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Remove-SPOSite` cmdlet does not delete a site collection from the site collections list permanently.
 Instead, the removed site collection is moved to the Recycle Bin.
 You can use the `Restore-SPODeletedSite`cmdlet to restore a site collection from the Recycle Bin.
@@ -28,24 +31,23 @@ To delete a site collection permanently, first move the site collection to the R
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+
+```powershell
 Remove-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -NoWait
 ```
 
-This example immediately removes the site collection named https://contoso.sharepoint.com/sites/site1 from the site collections list and moves it to the Recycle Bin. 
-
+This example immediately removes the site collection named <https://contoso.sharepoint.com/sites/site1> from the site collections list and moves it to the Recycle Bin.
 
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
 
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -61,13 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies the URL of the site collection to remove.
 
+Specifies the URL of the site collection to remove.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -78,13 +80,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-Specifies to continue executing script immediately.
 
+Specifies to continue executing script immediately.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -95,9 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
-
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spohubtohubassociation
 applicable: SharePoint Online
 title: Remove-SPOHubToHubAssociation
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -32,7 +34,7 @@ Use this cmdlet to remove the selected hub site from its parent hub.
 Remove-SPOHubToHubAssociation -HubSite https://contoso.sharepoint.com/sites/Research
 ```
 
-This example removes https://contoso.sharepoint.com/sites/Research from its parent Hub.
+This example removes <https://contoso.sharepoint.com/sites/Research> from its parent Hub.
 
 ## PARAMETERS
 
@@ -43,7 +45,7 @@ Url of the Hub site to be removed from its parent Hub.
 ```yaml
 Type: SpoHubSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1

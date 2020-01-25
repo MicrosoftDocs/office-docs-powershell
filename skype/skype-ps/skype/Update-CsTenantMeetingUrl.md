@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/update-cstenantmeetingurl
 applicable: Skype for Business Online
 title: Update-CsTenantMeetingUrl
 schema: 2.0.0

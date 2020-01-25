@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Register-SPODataEncryptionPolicy
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -12,7 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Cmdlet to register customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
@@ -22,28 +25,29 @@ Register-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultN
 
 ## DESCRIPTION
 
-.
+Use the Update-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Register-SPODataEncryptionPolicy -Identity https://contoso.sharepoint.com -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <KeyVersion>
 ```
 
-This example...
+This example registers the DEP used with SharePoint Online and OneDrive for Business to start using the given primary key
 
 ## PARAMETERS
 
 ### -Identity
 
-.
+Specifies the URL of the admin site collection.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: 1
@@ -54,12 +58,12 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVaultName
 
-.
+The name of the primary key vault
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -70,12 +74,12 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyName
 
-.
+The name of the primary key
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -86,12 +90,12 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
-.
+The version of the primary key
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -102,12 +106,12 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
-.
+The name of the secondary key vault
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -118,12 +122,12 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
-.
+The name of the secondary key
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -134,12 +138,12 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
-.
+The version of the secondary key
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -147,7 +151,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WhatIf
 
@@ -166,6 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.

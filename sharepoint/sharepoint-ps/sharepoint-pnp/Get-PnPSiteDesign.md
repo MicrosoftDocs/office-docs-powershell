@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPSiteDesign
 
 ## SYNOPSIS
 Retrieve Site Designs that have been registered on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSiteDesign [-Identity <TenantSiteDesignPipeBind>]

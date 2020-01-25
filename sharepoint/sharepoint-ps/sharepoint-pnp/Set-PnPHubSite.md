@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnphubsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPHubSite
 
 ## SYNOPSIS
 Sets hubsite properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPHubSite [-SiteDesignId <GuidPipeBind>]

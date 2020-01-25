@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsitescript
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPSiteScript
 
 ## SYNOPSIS
 Updates an existing Site Script on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPSiteScript -Identity <TenantSiteScriptPipeBind>
@@ -30,7 +32,7 @@ Updates an existing Site Script and changes the title.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$script = Get-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f 
+$script = Get-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f
 Set-PnPSiteScript -Identity $script -Title "My Site Script"
 ```
 

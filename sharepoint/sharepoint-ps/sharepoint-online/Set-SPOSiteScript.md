@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositescript
 applicable: SharePoint Online
 title: Set-SPOSiteScript
 schema: 2.0.0
@@ -16,7 +18,7 @@ Updates a previously uploaded site script.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOSiteScript
   -Identity <SPOSiteScriptPipeBind>
   -Title <string>
@@ -32,11 +34,11 @@ Updates a previously uploaded site script.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 
-This example updates a previously created site script. Any site designs referencing it execute the updated script. 
+This example updates a previously created site script. Any site designs referencing it execute the updated script.
 
-```
+```powershell
 $newnavscript = @'
 {
     "$schema": "schema.json",
@@ -76,13 +78,13 @@ The id of the site design.
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -92,13 +94,13 @@ The display name of the site design.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -Content
@@ -108,13 +110,13 @@ The JSON value that describes the script. For more information, see the [JSON re
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -124,14 +126,15 @@ A description of the script.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
+
 ### -Version
 
 A version number of the script.
@@ -139,20 +142,17 @@ A version number of the script.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
-
 
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
-
-

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpuser
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPUser
 
 ## SYNOPSIS
 Adds a user to the built-in Site User Info List and returns a user object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPUser -LoginName <String>

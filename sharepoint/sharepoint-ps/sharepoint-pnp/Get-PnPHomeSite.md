@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphomesite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPHomeSite
 
 ## SYNOPSIS
 Returns the home site url for your tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPHomeSite [-Connection <SPOnlineConnection>]

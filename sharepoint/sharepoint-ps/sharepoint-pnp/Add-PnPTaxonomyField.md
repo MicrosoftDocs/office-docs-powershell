@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptaxonomyfield
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPTaxonomyField
 
 ## SYNOPSIS
 Add a taxonomy field
 
-## SYNTAX 
+## SYNTAX
 
 ### Id
 ```powershell

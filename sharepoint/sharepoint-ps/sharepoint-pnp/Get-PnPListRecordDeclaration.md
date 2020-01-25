@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplistrecorddeclaration
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPListRecordDeclaration
 
 ## SYNOPSIS
 Returns the manual record declaration settings for a list
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPListRecordDeclaration -List <ListPipeBind>

@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spobuiltindesignpackagevisibility
 applicable: SharePoint Online
 title: Get-SPOBuiltInDesignPackageVisibility
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -12,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Gets the visibility of the available built-in Design Packages.
 
 ## SYNTAX
 
@@ -22,28 +24,40 @@ Get-SPOBuiltInDesignPackageVisibility [-DesignPackage <DesignPackageType>] [<Com
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use this cmdlet to retrieve the current visibility state of each built-in design package.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Get-SPOBuiltInDesignPackageVisibility -DesignPackage Showcase
 ```
 
-This example .
+This example retrieves the current visibility state of Showcase built-in design package.
+
+### Example 2
+
+```powershell
+Get-SPOBuiltInDesignPackageVisibility
+```
+
+This example retrieves the current visibility state of each built-in design package.
 
 ## PARAMETERS
 
 ### -DesignPackage
 
-.
+Name of the design package, available names are
+- Topic
+- Showcase
+- Blank
+- TeamSite
 
 ```yaml
 Type: DesignPackageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

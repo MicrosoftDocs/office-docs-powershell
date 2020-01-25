@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnppropertybagvalue
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPPropertyBagValue
 
 ## SYNOPSIS
 Sets a property bag value
 
-## SYNTAX 
+## SYNTAX
 
 ### Folder
 ```powershell
@@ -94,7 +96,7 @@ Accept pipeline input: False
 
 ```yaml
 Type: String
-Parameter Sets: Web, Folder, 
+Parameter Sets: Web, Folder,
 
 Required: True
 Position: Named

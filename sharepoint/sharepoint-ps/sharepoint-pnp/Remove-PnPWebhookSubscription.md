@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpwebhooksubscription
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPWebhookSubscription
 
 ## SYNOPSIS
 Removes a Webhook subscription from the resource
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPWebhookSubscription -Identity <WebhookSubscriptionPipeBind>

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/debug-csunifiedcontactstore
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsUnifiedContactStore
 schema: 2.0.0
