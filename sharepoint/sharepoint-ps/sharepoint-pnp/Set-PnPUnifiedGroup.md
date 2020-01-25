@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPUnifiedGroup
 
 ## SYNOPSIS
 Sets Office 365 Group (aka Unified Group) properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>

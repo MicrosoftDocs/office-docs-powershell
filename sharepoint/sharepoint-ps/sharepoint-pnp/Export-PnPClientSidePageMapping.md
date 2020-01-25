@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/export-pnpclientsidepagemapping
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Export-PnPClientSidePageMapping
 
 ## SYNOPSIS
 Get's the built-in maping files or a custom mapping file for your publishing portal page layouts. These mapping files are used to tailor the page transformation experience.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Export-PnPClientSidePageMapping [-BuiltInWebPartMapping [<SwitchParameter>]]

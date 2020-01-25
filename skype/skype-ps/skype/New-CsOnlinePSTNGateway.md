@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinepstngateway
 applicable: Skype for Business Online
 title: New-CsOnlinePSTNGateway
 schema: 2.0.0

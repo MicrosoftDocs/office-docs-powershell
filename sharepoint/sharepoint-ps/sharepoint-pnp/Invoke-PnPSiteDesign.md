@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/invoke-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Invoke-PnPSiteDesign
 
 ## SYNOPSIS
 Apply a Site Design to an existing site. * Requires Tenant Administration Rights *
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Invoke-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

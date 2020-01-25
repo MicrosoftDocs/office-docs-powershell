@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spodeletedsite
 applicable: SharePoint Online
 title: Remove-SPODeletedSite
 schema: 2.0.0
@@ -11,38 +13,39 @@ ms.reviewer:
 # Remove-SPODeletedSite
 
 ## SYNOPSIS
-Removes a SharePoint Online deleted site collection from the Recycle Bin.
 
+Removes a SharePoint Online deleted site collection from the Recycle Bin.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPODeletedSite [-Confirm] -Identity <SpoSitePipeBind> [-NoWait] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Remove-SPODeletedSite` cmdlet permanently removes a SharePoint Online deleted site collection from the Recycle Bin.
 
 You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251832 (https://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 **Note**: As of today, the modern admin center UI does not allow permanent deletion of group connected site, but the use of this cmdlet does allow the deletion, but when this occurs it does not delete the associated group, just the site.
-
-
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
+
+```powershell
 Remove-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/sitetoremove
 ```
-This example removes a SharePoint Online deleted site collection named https://contoso.sharepoint.com/sites/sitetoremove from the Recycle Bin and deletes it permanently.
 
+This example removes a SharePoint Online deleted site collection named <https://contoso.sharepoint.com/sites/sitetoremove> from the Recycle Bin and deletes it permanently.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -59,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
 Specifies the URL of the site collection to remove.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -75,12 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -91,6 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -108,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csaddressbooknormalizationrule
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsAddressBookNormalizationRule
 schema: 2.0.0

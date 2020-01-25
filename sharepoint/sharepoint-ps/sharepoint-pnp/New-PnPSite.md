@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPSite
 
 ## SYNOPSIS
 Creates a new site collection
 
-## SYNTAX 
+## SYNTAX
 
 ### Communication Site with Built-In Site Design
 ```powershell

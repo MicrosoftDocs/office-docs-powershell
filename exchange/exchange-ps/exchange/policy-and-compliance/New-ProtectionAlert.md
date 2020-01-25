@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-ProtectionAlert
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-ProtectionAlert cmdlet to create alert policies in the Security & Compliance Center. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Security & Compliance Center.
 

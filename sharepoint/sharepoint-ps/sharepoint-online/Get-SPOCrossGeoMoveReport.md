@@ -1,10 +1,12 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovereport
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMoveReport
 schema: 2.0.0
-author: 
-ms.author: 
+author:
+ms.author:
 ms.reviewer:
 ---
 
@@ -21,6 +23,7 @@ Get-SPOCrossGeoMoveReport -MoveJobType <JobType> [-Limit <uint32>] [-MoveStartTi
 ```
 
 ## DESCRIPTION
+
 Use this cmdlet to .
 
 ## EXAMPLES
@@ -42,7 +45,7 @@ This example .
 ```yaml
 Type: JobType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -56,9 +59,73 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: SpoSitePipeBind
+Type: uint32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveStartTime
+
+.
+
+```yaml
+Type: datetime
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveEndTime
+
+.
+
+```yaml
+Type: datetime
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveState
+
+.
+
+```yaml
+Type: MoveState
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveDirection
+
+.
+
+```yaml
+Type: MoveDirection
+Parameter Sets: (All)
+Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named

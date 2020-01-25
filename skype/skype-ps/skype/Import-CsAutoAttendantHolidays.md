@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/import-csautoattendantholidays
 applicable: Skype for Business Online
 title: Import-CsAutoAttendantHolidays
 schema: 2.0.0
@@ -28,7 +29,7 @@ The Export-CsAutoAttendantHolidays cmdlet returns the holiday schedule informati
 **NOTE**
 - Each line in the CSV file used by Export-CsAutoAttendantHolidays and Import-CsAutoAttendantHolidays cmdlet should be of the following format:
 
-   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,…,StartDateTime10,EndDateTime10`
+   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 
     where
     - HolidayName is the name of the holiday to be imported.
@@ -46,7 +47,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsAutoAttendantHolidays -Identity 6abea1cd-904b-520b-be96-1092cc096432 -Input $bytes
 ```
 
-In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432.
+In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path "C:\Imports\Holidays.csv" to an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -54,7 +55,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsAutoAttendantHolidays -Identity 6abea1cd-904b-520b-be96-1092cc096432 -Input $bytes | Format-Table -Wrap -AutoSize
 ```
 
-In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432. The result of the import process is formatted as a table.
+In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path "C:\Imports\Holidays.csv" to an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432. The result of the import process is formatted as a table.
 
 ## PARAMETERS
 

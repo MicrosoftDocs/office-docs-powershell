@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Add-ComplianceCaseMember
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Add-ComplianceCaseMember cmdlet to add an individual member to an eDiscovery case in the Security & Compliance Center. To replace all existing members, use the Update-ComplianceCaseMember cmdlet.
 
