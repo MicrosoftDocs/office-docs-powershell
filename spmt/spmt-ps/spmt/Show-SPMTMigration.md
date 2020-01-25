@@ -17,8 +17,8 @@ If the user starts the migration with -NoShow parameter, running the ‘Show-SPM
 
 ## SYNTAX
 
-```
-Show-SPMTMigration
+```powershell
+Show-SPMTMigration  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ If the user starts the migration with -NoShow parameter, running the ‘Show-SPM
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
 #Define SharePoint 2013 data source#
 
@@ -62,18 +62,16 @@ Start-SPMTMigration -NoShow
 Show-SPMTMigration
 ```
 
-First, start a migration with -NoShow parameter, then run ‘Show-SPMTMigration’, the migration task ID, data source location, target location and migration status will show up in the console.
+This example, first, starts a migration with -NoShow parameter, then run ‘Show-SPMTMigration’, the migration task ID, data source location, target location and migration status will show up in the console.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
