@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantfederationconfiguration
 applicable: Skype for Business Online
 title: Set-CsTenantFederationConfiguration
 schema: 2.0.0
@@ -107,6 +108,17 @@ Example 5 shows how you can remove all the domains assigned to the blocked domai
 To do this, simply include the BlockedDomains parameter and set the parameter value to null ($Null).
 When this command completes, the blocked domain list will be cleared.
 
+### -------------------------- Example 6 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -AllowedDomainsAsAList $list
+```
+
+Example 6 shows how you can add domains to the Allowed Domains using a List collection object.
+First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
+When this command completes, the allowed domain list will be filled with those domains.
 
 ## PARAMETERS
 
@@ -302,6 +314,22 @@ The default value is False ($False).
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedDomainsAsAList
+You can specify allowed domains using a List object that contains the domains that users are allowed to communicate with. See Examples section.
+
+```yaml
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

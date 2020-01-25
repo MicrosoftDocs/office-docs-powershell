@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-RetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Remove-HoldCompliancePolicy cmdlet to remove retention policies from the Security & Compliance Center. This cmdlet also removes the corresponding retention rule.
 

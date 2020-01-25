@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamstranslationrule
 applicable: Skype for Business Online
 title: Remove-CsTeamsTranslationRule
 schema: 2.0.0
@@ -30,7 +31,7 @@ You can use this cmdlet to remove an existing number manipulation rule (or list 
 PS C:\> Remove-CsTeamsTranslationRule -Identity AddPlus1 
 ```
 
-This example removes the “AddPlus1” translation rule. As the rule can be used in some places, integrity check is preformed to ensure that the rule is not in use. If the rule is in use an error thrown with specifying which SBC use this rule.
+This example removes the "AddPlus1" translation rule. As the rule can be used in some places, integrity check is preformed to ensure that the rule is not in use. If the rule is in use an error thrown with specifying which SBC use this rule.
 
 
 

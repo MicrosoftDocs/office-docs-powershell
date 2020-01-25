@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserverscaleoutdatabasedatasubrange
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPServerScaleOutDatabaseDataSubRange
 schema: 2.0.0
@@ -175,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSubRangePointOnBoundary
-Specifies whether to complete without any errors if the new subrange’s start and end points are the same. If this parameter is specified, no errors are displayed.
+Specifies whether to complete without any errors if the new subrange's start and end points are the same. If this parameter is specified, no errors are displayed.
 
 
 ```yaml

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnphubsiteassociation
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPHubSiteAssociation
 
 ## SYNOPSIS
 Connects a site to a hubsite.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPHubSiteAssociation -Site <SitePipeBind>

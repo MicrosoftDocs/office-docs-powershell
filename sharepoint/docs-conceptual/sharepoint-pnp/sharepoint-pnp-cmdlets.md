@@ -67,7 +67,7 @@ Get-Module SharePointPnPPowerShell* -ListAvailable | Select-Object Name,Version 
 To use the library you first need to connect to your tenant:
 
 ```powershell
-Connect-PnPOnline –Url https://yoursite.sharepoint.com –Credentials (Get-Credential)
+Connect-PnPOnline -Url https://yoursite.sharepoint.com -Credentials (Get-Credential)
 ```
 
 Notice: if you use multi-factor authentication on your tenant, use 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradestatus
 applicable: Skype for Business Online
 title: Get-CsTeamsUpgradeStatus
 schema: 2.0.0
@@ -57,18 +58,18 @@ For more information on the results from the above example please reference the 
 	
 *   State:      Tenant is scheduled to be upgraded via automated upgrade on the date returned.
 *   OptInEligbleDate:      Tenant is OptInEligible since 2018-04-12 18:06:36Z. (tenant admin can upgrade users on own since 2018-04-12 18:06:36Z)
-*   UpgradeScheduledDate:     Tenant’s upgrade is/was scheduled to start at 2018-06-15 00:00:00Z. (When the tenant was first notified of the upgrade via the M365 Message Center)
-*   UserNotificationDate:   Tenant’s end users will be/were notified starting 2018-07-05 00:00:00Z via SfB Client. 
+*   UpgradeScheduledDate:     Tenant's upgrade is/was scheduled to start at 2018-06-15 00:00:00Z. (When the tenant was first notified of the upgrade via the M365 Message Center)
+*   UserNotificationDate:   Tenant's end users will be/were notified starting 2018-07-05 00:00:00Z via SfB Client. 
 *   UpgradeDate:     Tenant will be/was upgraded by Microsoft at 2018-07-10 00:00:00Z
-*   LastStateChangeDate:  Tenant’s state was last changed at 2018-06-06 22:52:21Z. 
+*   LastStateChangeDate:  Tenant's state was last changed at 2018-06-06 22:52:21Z. 
 
-For more information on the various upgrade “States” please reference the table below: 
+For more information on the various upgrade "States" please reference the table below: 
 
-*   Null – Tenant isn't yet in the automated upgrade system.
-*   OptInEligible – Tenant will be invited to a Microsoft driven upgrade at some point in the future.  
-*   ScheduledForUpgrade – Tenant is scheduled to be upgraded via automated upgrade on the date returned. This refers to the date that the tenant was first scheduled. Admins who click the Postpone button in the Teams Admin Portal will see the UpgradeDate move out 30 days but will not see a change in the Upgrade ScheduledDate field nor the OptInEligibleDate field.
-*   Upgraded – Date that Tenant will be or has been upgraded.
-*   Exempt – Tenant is exempt from Microsoft driven upgrade currently.
+*   Null - Tenant isn't yet in the automated upgrade system.
+*   OptInEligible - Tenant will be invited to a Microsoft driven upgrade at some point in the future.  
+*   ScheduledForUpgrade - Tenant is scheduled to be upgraded via automated upgrade on the date returned. This refers to the date that the tenant was first scheduled. Admins who click the Postpone button in the Teams Admin Portal will see the UpgradeDate move out 30 days but will not see a change in the Upgrade ScheduledDate field nor the OptInEligibleDate field.
+*   Upgraded - Date that Tenant will be or has been upgraded.
+*   Exempt - Tenant is exempt from Microsoft driven upgrade currently.
 
 
 ## PARAMETERS

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsemergencycallroutingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsEmergencyCallRoutingPolicy
 author: danny-levin
@@ -29,7 +30,7 @@ Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 ```
 
 ## DESCRIPTION
- This cmdlet modifies an existing Teams Emergency Call Routing Policy. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration
+ This cmdlet modifies an existing Teams Emergency Call Routing Policy. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
 
 ## EXAMPLES
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/disable-csonlinesipdomain
 applicable: Skype for Business Online
 title: Disable-CsOnlineSipDomain
 schema: 2.0.0
@@ -28,21 +29,22 @@ Disable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameter
 This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant. When an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
 
 This cmdlet facilitates consolidation of multiple Skype for Business Server deployments into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, **provided the following key requirements are met**:
- - There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.
- - At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
- - If 1 deployment is in hybrid mode, all sip domains from any other SfB forests must be disabled using this cmdlet before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises.
- - Organizations must fully migrate each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the “hybrid” deployment, *before* moving on to migrate the next on-premises SfB deployment. 
+
+- There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.
+- At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
+- If 1 deployment is in hybrid mode, all sip domains from any other SfB forests must be disabled using this cmdlet before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises.
+- Organizations must fully migrate each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
 
 
 This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Azure AD Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision online any users with an assigned Skype for Business license, despite there being users on-premises. While the correct fix is to update the configuration for Azure AD Connect to sync those attributes, using Disable-CsOnlineSipDomain can also mitigate the problem until that configuration change can be made. If this cmdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
 
 **IMPORTANT**
 This cmdlet should not be run for domains that contain users hosted in Skype for Business Online. Any users in a sip domain that are already provisioned *online* will cease to function if you disable the online sip domain:
- - Their SIP addresses will be removed.
- - All contacts and meetings for these users hosted in Skype for Business Online will be deleted.
- - These users will no longer be able to login to the Skype for Business Online environment.
- - If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
+- Their SIP addresses will be removed.
+- All contacts and meetings for these users hosted in Skype for Business Online will be deleted.
+- These users will no longer be able to login to the Skype for Business Online environment.
+- If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
 ## EXAMPLES
 
@@ -62,7 +64,7 @@ The SIP domain to be disabled for online provisioning in Skype for Business Onli
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +94,7 @@ Suppresses all confirmation prompts that might occur when running the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None

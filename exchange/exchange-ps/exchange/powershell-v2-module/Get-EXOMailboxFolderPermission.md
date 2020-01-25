@@ -33,7 +33,7 @@ Get-EXOMailboxFolderPermission
 ```
 
 ## DESCRIPTION
-Use this cmdlet to retreive folder level permission in the mailbox. 
+Use this cmdlet to retrieve folder level permission in the mailbox. 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you.
 
 ## EXAMPLES

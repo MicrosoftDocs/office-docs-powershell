@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpalert
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Add-PnPAlert
 
 ## SYNOPSIS
 Adds an alert for a user to a list
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPAlert -List <ListPipeBind>

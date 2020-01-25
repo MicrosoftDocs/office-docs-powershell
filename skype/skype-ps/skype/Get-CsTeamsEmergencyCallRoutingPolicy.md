@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsemergencycallroutingpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsEmergencyCallRoutingPolicy
 author: danny-levin
@@ -28,7 +29,7 @@ Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-Filter <String>]
 ```
 
 ## DESCRIPTION
- This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing – emergency numbers and routing configuration
+ This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
 
 ## EXAMPLES
 

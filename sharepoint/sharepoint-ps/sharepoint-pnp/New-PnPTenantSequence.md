@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequence
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPTenantSequence
 
 ## SYNOPSIS
 Creates a new tenant sequence object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPTenantSequence [-Id <String>]

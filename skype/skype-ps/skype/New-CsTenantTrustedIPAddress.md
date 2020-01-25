@@ -1,7 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_rf3olqzj.wbj
-online version:
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -29,7 +28,7 @@ New-CsTenantTrustedIPAddress [-Tenant <System.Guid>] -IPAddress <String> [-MaskB
 ```
 
 ## DESCRIPTION
-External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user’s endpoint is inside the corporate network before checking for a specific site match. If the user’s external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user’s endpoint is located. If the user’s external IP doesn’t match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
+External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user's endpoint is inside the corporate network before checking for a specific site match. If the user's external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user's endpoint is located. If the user's external IP doesn't match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
 
 Both IPv4 and IPv6 trusted IP addresses are supported.
 

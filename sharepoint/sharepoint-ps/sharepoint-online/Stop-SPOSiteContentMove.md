@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/stop-spositecontentmove
 applicable: SharePoint Online
 title: Stop-SPOSiteContentMove
 schema: 2.0.0
@@ -44,7 +46,6 @@ This example stops the move job for the specified site.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: 0
 Default value: None

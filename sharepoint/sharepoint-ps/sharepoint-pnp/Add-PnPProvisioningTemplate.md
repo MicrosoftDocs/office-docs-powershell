@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpprovisioningtemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPProvisioningTemplate
 
 ## SYNOPSIS
 Adds a PnP Provisioning Template object to a tenant template
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPProvisioningTemplate -SiteTemplate <ProvisioningTemplate>

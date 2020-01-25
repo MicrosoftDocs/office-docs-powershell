@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: SkypeForBusiness
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsupgradepolicy
 applicable: Skype for Business Server 2019
 title: New-CsTeamsUpgradePolicy
 schema: 2.0.0

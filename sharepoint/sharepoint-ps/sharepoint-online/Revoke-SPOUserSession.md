@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spousersession
 applicable: SharePoint Online
 title: Revoke-SPOUserSession
 schema: 2.0.0
@@ -14,10 +16,9 @@ ms.reviewer:
 
 Provides IT administrators the ability to invalidate a particular users' O365 sessions across all their devices.
 
-
 ## SYNTAX
 
-```
+```powershell
 Revoke-SPOUserSession [-User] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,11 +51,13 @@ The cmdlet will be available in the future, but it isn't ready for use in your o
 ```powershell
 Revoke-SPOUserSession -User user1@contoso.com
 ```
+
 This example signs out user1 in the contoso tenancy from all devices.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -73,7 +76,6 @@ Accept wildcard characters: False
 ### -User
 
 Specifies a user name. For example, user1@contoso.com
-
 
 ```yaml
 Type: String
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

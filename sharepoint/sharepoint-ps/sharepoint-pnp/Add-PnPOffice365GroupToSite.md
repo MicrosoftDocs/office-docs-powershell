@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpoffice365grouptosite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPOffice365GroupToSite
 
 ## SYNOPSIS
 Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPOffice365GroupToSite -Url <String>

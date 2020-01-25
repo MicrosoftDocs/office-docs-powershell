@@ -1,5 +1,7 @@
 ---
 external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-speduclassmember
 applicable: SharePoint Server 2013
 title: Add-SPEduClassMember
 schema: 2.0.0

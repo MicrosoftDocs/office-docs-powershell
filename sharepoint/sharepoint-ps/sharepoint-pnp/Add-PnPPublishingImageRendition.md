@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnppublishingimagerendition
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPPublishingImageRendition
 
 ## SYNOPSIS
 Adds an Image Rendition if the Name of the Image Rendition does not already exist. This prevents creating two Image Renditions that share the same name.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPPublishingImageRendition -Name <String>

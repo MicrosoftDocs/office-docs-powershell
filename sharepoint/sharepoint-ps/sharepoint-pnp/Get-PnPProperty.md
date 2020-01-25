@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpproperty
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPProperty
 
 ## SYNOPSIS
 Returns a previously not loaded property of a ClientObject
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPProperty -ClientObject <ClientObject>
