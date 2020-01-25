@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/install-pnpsolution
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Install-PnPSolution
 
 ## SYNOPSIS
 Installs a sandboxed solution to a site collection. WARNING! This method can delete your composed look gallery due to the method used to activate the solution. We recommend you to only to use this cmdlet if you are okay with that.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Install-PnPSolution -PackageId <GuidPipeBind>

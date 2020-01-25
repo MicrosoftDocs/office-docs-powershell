@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csdiagnosticconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsDiagnosticConfiguration
 schema: 2.0.0
@@ -413,8 +414,6 @@ The New-CsDiagnosticConfiguration cmdlet creates new instances of the Microsoft.
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.14).aspx)
-
 [Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
 [New-CsDiagnosticsFilter](New-CsDiagnosticsFilter.md)
@@ -422,9 +421,3 @@ The New-CsDiagnosticConfiguration cmdlet creates new instances of the Microsoft.
 [Remove-CsDiagnosticConfiguration](Remove-CsDiagnosticConfiguration.md)
 
 [Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.15).aspx)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.16).aspx)
-
-

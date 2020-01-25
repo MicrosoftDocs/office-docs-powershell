@@ -1,16 +1,17 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/measure-pnplist
 applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Measure-PnPList
 
 ## SYNOPSIS
 Returns statistics on the list object
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
 Measure-PnPList -Identity <ListPipeBind>
                 [-Includes <String[]>]

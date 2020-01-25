@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscallqueue
 applicable: Skype for Business Online
 title: Get-CsCallQueue
 schema: 2.0.0

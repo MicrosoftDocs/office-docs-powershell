@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/submit-pnpsearchquery
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Submit-PnPSearchQuery
 
 ## SYNOPSIS
 Executes an arbitrary search query against the SharePoint search index
 
-## SYNTAX 
+## SYNTAX
 
 ### Limit
 ```powershell
@@ -184,7 +186,7 @@ Accept pipeline input: False
 ```
 
 ### -HiddenConstraints
-The keyword query’s hidden constraints.
+The keyword query's hidden constraints.
 
 ```yaml
 Type: String

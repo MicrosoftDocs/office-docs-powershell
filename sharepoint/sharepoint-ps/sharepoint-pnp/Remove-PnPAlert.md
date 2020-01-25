@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpalert
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Remove-PnPAlert
 
 ## SYNOPSIS
 Removes an alert for a user
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPAlert -Identity <AlertPipeBind>

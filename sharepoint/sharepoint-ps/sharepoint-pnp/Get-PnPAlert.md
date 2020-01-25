@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpalert
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Get-PnPAlert
 
 ## SYNOPSIS
 Returns registered alerts for a user.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPAlert [-List <ListPipeBind>]

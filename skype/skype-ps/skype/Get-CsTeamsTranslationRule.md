@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamstranslationrule
 applicable: Skype for Business Online
 title: Get-CsTeamsTranslationRule
 schema: 2.0.0
@@ -37,7 +38,7 @@ This command will show all translation rules that exist in the tenant. Identity,
 PS C:\> Get-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
-This command will show Identity, Description, Pattern and Translation parameters for “AddPlus1” rule
+This command will show Identity, Description, Pattern and Translation parameters for "AddPlus1" rule
 
 
 ## PARAMETERS

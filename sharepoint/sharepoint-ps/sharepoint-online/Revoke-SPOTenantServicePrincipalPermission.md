@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spotenantserviceprincipalpermission
 applicable: SharePoint Online
 schema: 2.0.0
 author: trent-green
@@ -38,7 +40,7 @@ if ($grantToRemove -ne $null)
 }
 ```
 
-Revokes the permission associated with the 'Office 365 SharePoint Online' resource and with scope claim 'MyFiles.Read'. 
+Revokes the permission associated with the 'Office 365 SharePoint Online' resource and with scope claim 'MyFiles.Read'.
 If there is no permission with those properties, then no revoke action will be taken.
 
 ## PARAMETERS

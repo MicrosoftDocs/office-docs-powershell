@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csuser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUser
 schema: 2.0.0
@@ -62,7 +63,7 @@ That information is then piped to the `Set-CsUser` cmdlet, which enables Enterpr
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-CsUser -Identity "Pilar Ackerman" –LineUri "tel:+123456789"
+Set-CsUser -Identity "Pilar Ackerman" -LineUri "tel:+123456789"
 ```
 
 In Example 3, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.

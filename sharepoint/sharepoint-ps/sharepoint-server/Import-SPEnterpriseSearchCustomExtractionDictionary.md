@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchcustomextractiondictionary
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPEnterpriseSearchCustomExtractionDictionary
 schema: 2.0.0

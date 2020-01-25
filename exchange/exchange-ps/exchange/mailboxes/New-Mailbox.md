@@ -1420,7 +1420,7 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch is required to create auxillary audit log mailboxes. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to create auxiliary audit log mailboxes. You don't need to specify a value with this switch.
 
 Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 

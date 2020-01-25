@@ -1,5 +1,7 @@
 ---
 external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spprojectgeneratewsdl
 applicable: Project Server 2016, Project Server 2019
 title: Start-SPProjectGenerateWsdl
 schema: 2.0.0
