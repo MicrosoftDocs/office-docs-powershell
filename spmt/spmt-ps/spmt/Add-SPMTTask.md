@@ -74,37 +74,37 @@ This example adds one File Share migration task and one SharePoint 2013 migratio
 
 ### EXAMPLE 2
 
-Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv:
-
-
 ```powershell
+
+# Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv
+
     $csvItems = import-csv "C:\spmt.csv" -Header c1,c2,c3,c4,c5,c6
     ForEach ($item in $csvItems)
     {
         Write-Host $item.c1
         Add-SPMTTask -FileShareSource $item.c1 -TargetSiteUrl $item.c4 -TargetList $item.c5 -TargetListRelativePath $item.c6
     }
-```
-Two migration tasks are defined in the file spmt.csv
 
-```powershell
+# Two migration tasks are defined in the file spmt.csv
+
+
 D:\MigrationTest\Files\Average_1M\c,,,https://SPOSite.sharepoint.com,Documents,Test
 C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibrary_SubfolderName
-```
-Code snippets for bulk migration by loading one JSON file:
+
+# Code snippets for bulk migration by loading one JSON file:
 
 
-```powershell
+
     $jsonItems = Get-Content -Raw -Path  "C:\spmt.json" | ConvertFrom-Json
     ForEach ($taskItem in $jsonItems.Tasks)
     {
         $jsonString = ConvertTo-Json $taskItem -Depth 100
         Add-SPMTTask -JsonDefinition $jsonString -SharePointSourceCredential $onpremCredential
     }
-```
-Three migration tasks are defined in the file spmt.json.
 
-```
+# Three migration tasks are defined in the file spmt.json.
+
+
 {
    "Tasks":[
       {
