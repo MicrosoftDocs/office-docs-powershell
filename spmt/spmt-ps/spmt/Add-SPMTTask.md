@@ -87,7 +87,7 @@ Code snippets for bulk migration by loading the sample CSV with the name of spmt
 ```
 Two migration tasks are defined in the file spmt.csv
 
-```
+```powershell
 D:\MigrationTest\Files\Average_1M\c,,,https://SPOSite.sharepoint.com,Documents,Test
 C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibrary_SubfolderName
 ```
