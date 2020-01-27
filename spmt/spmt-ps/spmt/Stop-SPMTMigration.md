@@ -17,8 +17,8 @@ Cancel the current migration session.
 
 ## SYNTAX
 
-```
-Stop-SPMTMigration
+```powershell
+Stop-SPMTMigration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Cancel the current migration session.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
 #Define SharePoint 2013 data source#
 
@@ -64,17 +64,16 @@ Start-SPMTMigration -NoShow
 Stop-SPMTMigration
 ```
 
-Start a migration first, then run "Stop-SPMTMigration" to cancel the migration.
+This example starts a migration first, then run "Stop-SPMTMigration" to cancel the migration.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
