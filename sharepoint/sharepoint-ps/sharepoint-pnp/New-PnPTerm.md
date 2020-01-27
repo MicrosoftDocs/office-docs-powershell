@@ -34,6 +34,17 @@ New-PnPTerm -TermSet "Departments" -TermGroup "Corporate" -Name "Finance"
 
 Creates a new taxonomy term named "Finance" in the termset Departments which is located in the "Corporate" termgroup
 
+### ------------------EXAMPLE 2------------------
+```powershell
+$context = Get-PnPContext
+$term = New-PnPTerm -Name "Finance" -TermSet "Departments" -TermGroup "Corporate" -LCID 1033
+$createLabel = $term.CreateLabel("Finanzwesen", 1031, $true)
+$context.Load($term)
+Invoke-PnPQuery
+```
+
+This example creates a new English taxonomy term named "Finance" in the termset "Departments" which is located in the "Corporate" termgroup and adds a German default label for the newly created English term by means of the **[CreateLabel](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.taxonomy.term.createlabel)** method.
+
 ## PARAMETERS
 
 ### -CustomProperties
