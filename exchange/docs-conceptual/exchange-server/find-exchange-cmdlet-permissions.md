@@ -112,7 +112,7 @@ What if there are no results?
 - To see all users who are assigned a specific role, run the following command:
 
   ```PowerShell
-  Get-ManagementRoleAssignment -Role "<Role name>"  -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
+  Get-ManagementRoleAssignment -Role "<Role name>" -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
   ```
 
   For example:
