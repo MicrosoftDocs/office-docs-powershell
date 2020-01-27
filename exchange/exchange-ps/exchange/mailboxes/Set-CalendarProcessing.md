@@ -413,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies users or groups who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the Exchange Online object. For example:
+The BookInPolicy parameter specifies users or groups who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
 
