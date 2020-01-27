@@ -17,8 +17,8 @@ Remove the SPMT migration session created.
 
 ## SYNTAX
 
-```
-Unregister-SPMTMigration
+```powershell
+Unregister-SPMTMigration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Remove the SPMT migration session created.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
 #Define SharePoint 2013 data source#
 
@@ -64,17 +64,16 @@ Stop-SPMTMigration
 Unregister-SPMTMigration
 ```
 
-Cancel the started migration and unregister the migration session.
+This example cancels the started migration and unregister the migration session.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

@@ -41,10 +41,10 @@ Use the Set-CsVideoInteropServiceProvider to update information about a supporte
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsVideoInteropServiceProvider -Identity cviprovider -AllowAppGuestJoinsAsAuthenticated $true
 ```
 
-{{ Add example description here }}
+This example enables a VTC device joining anonymously to shown in the meeting as authenticated, for a supported CVI partner your organization uses.
 
 ## PARAMETERS
 
