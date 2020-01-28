@@ -79,6 +79,13 @@ Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 
 This example returns detailed information about the Office 365 Group named Marketing Department.
 
+### Example 4
+```powershell
+Get-UnifiedGroup -IncludeSoftDeletedGroups |?{$_.ManagedBy -eq $null}
+```
+
+This example returns Office 365 Groups that do not have an owner.
+
 ## PARAMETERS
 
 ### -Anr
