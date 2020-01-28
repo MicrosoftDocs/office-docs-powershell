@@ -277,7 +277,17 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Version 0.3527.3 (planned release date: January 20, 2020)
+### Version 0.3555.1 (Current release) : 
+    1. Fixed a bug where piped cmdlets were failing with below error due to authentication issue. Error thrown by module was - "Cannot invoke the pipeline because the runspace is not in the Opened state. Current state of the runspace is 'Closed'." This issue is resolved as of now
+
+Previous Releases:
+
+### Version 0.3527.4 :
+    1. Updated Get-Help content
+    2. Fixed an issue in Get-Help where "-Online" parameter was redirecting to a non-existent page with error code 400.
+
+
+### Version 0.3527.3
 
 [Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
 
